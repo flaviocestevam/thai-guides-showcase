@@ -54,6 +54,22 @@ export default {
         gold: "hsl(var(--gold))",
         "gold-dark": "hsl(var(--gold-dark))",
         "warm-white": "hsl(var(--warm-white))",
+        forest: {
+          DEFAULT: "hsl(150 30% 25%)",
+          dark: "hsl(150 35% 15%)",
+        },
+        earth: "hsl(25 30% 30%)",
+        cream: "hsl(40 30% 97%)",
+        "elephant-bg": "hsl(40 30% 97%)",
+        "elephant-fg": "hsl(30 10% 15%)",
+        "elephant-card": "hsl(40 25% 95%)",
+        "elephant-border": "hsl(35 20% 85%)",
+        "elephant-muted-fg": "hsl(30 8% 45%)",
+        "elephant-cream": "hsl(40 30% 97%)",
+        "elephant-gold": {
+          DEFAULT: "hsl(38 80% 50%)",
+          fg: "hsl(30 10% 10%)",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
