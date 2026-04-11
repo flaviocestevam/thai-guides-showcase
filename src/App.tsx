@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
 import FestivalDasLanternas from "./pages/FestivalDasLanternas.tsx";
+import SantuariosDeElefantes from "./pages/SantuariosDeElefantes.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
