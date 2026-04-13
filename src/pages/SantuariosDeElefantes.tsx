@@ -270,6 +270,7 @@ const SantuariosDeElefantes = () => {
     <div className="min-h-screen bg-elephant-bg font-body text-elephant-fg">
       <StickyUrgencyBar />
       <SocialProofPopup />
+      <FloatingBottomCTA />
 
       {/* HERO */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
