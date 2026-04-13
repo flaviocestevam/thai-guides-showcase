@@ -9,6 +9,7 @@ import SantuariosDeElefantes from "./pages/SantuariosDeElefantes.tsx";
 import LanternFestival from "./pages/LanternFestival.tsx";
 import MuayThai from "./pages/MuayThai.tsx";
 import MuayThai5645 from "./pages/MuayThai5645.tsx";
+import Festas from "./pages/Festas.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
