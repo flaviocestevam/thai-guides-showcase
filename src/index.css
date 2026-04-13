@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800;900&family=Source+Sans+3:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:wght@400;600;700;800;900&family=Source+Sans+3:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -139,4 +139,42 @@
 
 .animate-pulse-subtle {
   animation: pulse-subtle 2s ease-in-out infinite;
+}
+
+/* Muay Thai utilities */
+.bg-gradient-fire {
+  background: linear-gradient(135deg, hsl(0, 85%, 50%), hsl(30, 100%, 50%));
+}
+
+.text-gradient-fire {
+  background: linear-gradient(135deg, hsl(0, 85%, 50%), hsl(30, 100%, 50%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bg-gradient-gold {
+  background: linear-gradient(135deg, hsl(40, 90%, 55%), hsl(30, 100%, 60%));
+}
+
+.shadow-fire {
+  box-shadow: 0 8px 32px -8px hsla(0, 85%, 50%, 0.4);
+}
+
+.animate-ticker {
+  animation: ticker 30s linear infinite;
+}
+
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes mt-pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px hsla(0, 85%, 50%, 0.3); }
+  50% { box-shadow: 0 0 40px hsla(0, 85%, 50%, 0.6); }
+}
+
+.animate-pulse-glow {
+  animation: mt-pulse-glow 2s ease-in-out infinite;
 }
