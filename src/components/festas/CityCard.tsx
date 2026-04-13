@@ -42,7 +42,7 @@ const CityCard = ({ city }: CityCardProps) => {
           ))}
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
