@@ -44,6 +44,7 @@ const guides: GuideCard[] = [
       "Descubra os melhores santuários éticos, como evitar armadilhas turísticas e viver momentos inesquecíveis com os elefantes tailandeses.",
     path: "/santuariosdeelefantes",
     emoji: "🐘",
+    image: elephantImg,
     badge: "⚡ NOVO",
     urgency: "87% dos turistas visitam o santuário errado!",
     socialProof: "1.800+ viajantes já compraram",
