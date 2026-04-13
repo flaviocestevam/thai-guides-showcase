@@ -178,3 +178,121 @@
 .animate-pulse-glow {
   animation: mt-pulse-glow 2s ease-in-out infinite;
 }
+
+/* Guide page styles */
+.guide-section-label {
+  @apply text-sm font-semibold tracking-[0.2em] uppercase;
+  color: hsl(var(--gold));
+}
+
+.guide-gym-card {
+  @apply rounded-lg overflow-hidden border border-border;
+  background: hsl(var(--card));
+}
+
+.guide-gym-badge {
+  @apply text-xs font-bold tracking-wider uppercase px-3 py-1 rounded-full;
+  background: hsl(var(--destructive));
+  color: hsl(var(--destructive-foreground));
+}
+
+.guide-gym-badge-gold {
+  @apply text-xs font-bold tracking-wider uppercase px-3 py-1 rounded-full;
+  background: hsl(var(--gold));
+  color: hsl(0 0% 7%);
+}
+
+.guide-info-grid-item {
+  @apply py-3 border-b border-border;
+}
+
+.guide-info-label {
+  @apply text-xs font-semibold uppercase tracking-wider;
+  color: hsl(var(--muted-foreground));
+}
+
+.guide-info-value {
+  @apply text-sm font-medium mt-0.5;
+  color: hsl(var(--foreground));
+}
+
+.guide-activity-tag {
+  @apply text-xs font-medium px-3 py-1.5 rounded-full;
+  background: hsl(var(--muted));
+  color: hsl(var(--foreground));
+}
+
+.guide-hero-overlay {
+  background: linear-gradient(180deg,
+    hsla(20, 10%, 8%, 0.3) 0%,
+    hsla(20, 10%, 8%, 0.6) 50%,
+    hsla(20, 10%, 8%, 0.95) 100%
+  );
+}
+
+.guide-section-divider {
+  @apply w-16 h-0.5 mx-auto;
+  background: hsl(var(--gold));
+}
+
+.guide-review-card {
+  @apply p-5 rounded-lg;
+  background: hsl(var(--muted));
+}
+
+.guide-cost-table {
+  @apply w-full;
+}
+
+.guide-cost-table th {
+  @apply text-left py-3 px-4 text-xs font-semibold uppercase tracking-wider;
+  color: hsl(var(--gold));
+  background: hsl(var(--muted));
+}
+
+.guide-cost-table td {
+  @apply py-3 px-4 text-sm border-b border-border;
+}
+
+.guide-step-number {
+  @apply w-10 h-10 rounded-full flex items-center justify-center text-lg font-bold flex-shrink-0;
+  background: hsl(var(--destructive));
+  color: hsl(var(--destructive-foreground));
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.guide-link-button {
+  @apply inline-flex items-center gap-1.5 text-sm font-medium px-4 py-2 rounded-lg transition-colors;
+  background: hsl(var(--muted));
+  color: hsl(var(--foreground));
+}
+
+.guide-link-button:hover {
+  background: hsl(var(--border));
+}
+
+.guide-cta-button {
+  @apply inline-flex items-center justify-center px-8 py-3 rounded-lg text-base font-semibold transition-all;
+  background: hsl(var(--destructive));
+  color: hsl(var(--destructive-foreground));
+}
+
+.guide-cta-button:hover {
+  opacity: 0.9;
+}
+
+.guide-cta-button-outline {
+  @apply inline-flex items-center justify-center px-8 py-3 rounded-lg text-base font-semibold transition-all border;
+  border-color: hsl(var(--gold));
+  color: hsl(var(--gold));
+}
+
+.guide-cta-button-outline:hover {
+  background: hsl(var(--gold) / 0.1);
+}
+
+.guide-itinerary-card {
+  @apply rounded-lg overflow-hidden;
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+}
