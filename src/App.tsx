@@ -7,6 +7,7 @@ import Index from "./pages/Index.tsx";
 import FestivalDasLanternas from "./pages/FestivalDasLanternas.tsx";
 import SantuariosDeElefantes from "./pages/SantuariosDeElefantes.tsx";
 import LanternFestival from "./pages/LanternFestival.tsx";
+import MuayThai from "./pages/MuayThai.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -22,6 +23,7 @@ const App = () => (
           <Route path="/festivaldaslanternas" element={<FestivalDasLanternas />} />
           <Route path="/santuariosdeelefantes" element={<SantuariosDeElefantes />} />
           <Route path="/lanternfestival" element={<LanternFestival />} />
+          <Route path="/muaythai" element={<MuayThai />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
