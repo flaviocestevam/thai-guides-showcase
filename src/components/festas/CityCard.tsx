@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { type City } from "@/data/festas";
 
 interface CityCardProps {
@@ -6,7 +7,7 @@ interface CityCardProps {
 
 const CityCard = ({ city }: CityCardProps) => {
   return (
-    <div className="group relative rounded-2xl overflow-hidden border border-border bg-card transition-all duration-500 hover:scale-[1.02] hover:border-primary/40 hover:shadow-[0_0_40px_hsl(var(--primary)/0.15)]">
+    <Link to={`/festas/${city.id}`} className="group relative rounded-2xl overflow-hidden border border-border bg-card transition-all duration-500 hover:scale-[1.02] hover:border-primary/40 hover:shadow-[0_0_40px_hsl(var(--primary)/0.15)] block">
       <div className="relative h-52 overflow-hidden">
         <img
           src={city.image}
@@ -41,7 +42,7 @@ const CityCard = ({ city }: CityCardProps) => {
           ))}
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
