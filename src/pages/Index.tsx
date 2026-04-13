@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { MapPin, ArrowRight, Users, Star, Clock, TrendingUp, ShieldCheck, Flame } from "lucide-react";
 import { useState, useEffect } from "react";
 import heroImg from "@/assets/hero-lanterns.jpg";
+import elephantImg from "@/assets/hero-elephants.jpg";
 
 interface GuideCard {
   title: string;
@@ -43,6 +44,7 @@ const guides: GuideCard[] = [
       "Descubra os melhores santuários éticos, como evitar armadilhas turísticas e viver momentos inesquecíveis com os elefantes tailandeses.",
     path: "/santuariosdeelefantes",
     emoji: "🐘",
+    image: elephantImg,
     badge: "⚡ NOVO",
     urgency: "87% dos turistas visitam o santuário errado!",
     socialProof: "1.800+ viajantes já compraram",
