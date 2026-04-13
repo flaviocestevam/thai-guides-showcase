@@ -124,6 +124,40 @@ const StickyUrgencyBar = () => {
   );
 };
 
+/* ─── FLOATING BOTTOM CTA ─── */
+const FloatingBottomCTA = () => {
+  const [visible, setVisible] = useState(false);
+  useEffect(() => {
+    const onScroll = () => setVisible(window.scrollY > 600);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  if (!visible) return null;
+
+  return (
+    <div className="fixed bottom-0 left-0 right-0 z-40 bg-forest-dark/95 backdrop-blur-md border-t border-elephant-gold/20 py-3 px-4 animate-fade-in">
+      <div className="max-w-4xl mx-auto flex items-center justify-between gap-4">
+        <div className="hidden sm:block">
+          <p className="text-sm text-elephant-cream/70">
+            <span className="line-through">R$ 197</span>{" "}
+            <span className="text-2xl font-display font-bold text-elephant-gold">R$ 97</span>{" "}
+            <span className="text-xs">ou 6x de R$ 18,50</span>
+          </p>
+        </div>
+        <a
+          href={CAKTO_LINK}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 bg-elephant-gold text-elephant-gold-fg font-bold px-6 py-3 rounded-lg hover:scale-105 transition-transform animate-pulse-subtle text-sm whitespace-nowrap"
+        >
+          🐘 QUERO MEU GUIA AGORA
+        </a>
+      </div>
+    </div>
+  );
+};
+
 /* ─── SPOTS LEFT COUNTER ─── */
 const SpotsCounter = () => {
   const [spots, setSpots] = useState(23);
