@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { MapPin, ArrowRight, Users, Star, Clock, TrendingUp, ShieldCheck, Flame } from "lucide-react";
 import { useState, useEffect } from "react";
 import heroImg from "@/assets/hero-lanterns.jpg";
+import elephantImg from "@/assets/hero-elephants.jpg";
 
 interface GuideCard {
   title: string;
