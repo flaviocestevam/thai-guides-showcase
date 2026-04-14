@@ -11,7 +11,7 @@ const VideoSection = () => (
 
       <div className="relative rounded-2xl overflow-hidden border-glow glow-gold aspect-video">
         <iframe
-          src="https://www.youtube.com/embed/8BMBqyANR5Y"
+          src="https://www.youtube.com/embed/QkT51OFGVsg"
           title="Festival das Lanternas - Chiang Mai"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
