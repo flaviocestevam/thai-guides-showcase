@@ -22,14 +22,60 @@ const CONCURRENCY = 8;
 // ---------- 1. Parse trilhas.ts ----------
 const src = fs.readFileSync(DATA_FILE, "utf8");
 
-// Extrai cada bloco de objeto Trail (id: "...", ... mapsUrl: "...")
+// Extrai cada bloco de objeto Trail usando contagem de chaves balanceadas.
+// Localiza cada `id: "..."` e expande do `{` anterior até o `}` correspondente.
 const trails = [];
-const trailRegex = /\{\s*id:\s*"([^"]+)"[\s\S]*?mapsUrl:\s*"([^"]+)"[\s\S]*?\n\s{2}\}/g;
+const idRegex = /\bid:\s*"([^"]+)"/g;
 let m;
-while ((m = trailRegex.exec(src)) !== null) {
-  const block = m[0];
+while ((m = idRegex.exec(src)) !== null) {
+  // Encontra a `{` que abre este objeto (varre para trás)
+  let openIdx = -1;
+  for (let i = m.index; i >= 0; i--) {
+    if (src[i] === "{") {
+      openIdx = i;
+      break;
+    }
+    if (src[i] === "}") break; // não está dentro de um objeto válido
+  }
+  if (openIdx === -1) continue;
+
+  // Encontra o `}` correspondente respeitando aninhamento e strings
+  let depth = 0;
+  let closeIdx = -1;
+  let inStr = false;
+  let strCh = "";
+  for (let i = openIdx; i < src.length; i++) {
+    const ch = src[i];
+    const prev = src[i - 1];
+    if (inStr) {
+      if (ch === strCh && prev !== "\\") inStr = false;
+      continue;
+    }
+    if (ch === '"' || ch === "'" || ch === "`") {
+      inStr = true;
+      strCh = ch;
+      continue;
+    }
+    if (ch === "{") depth++;
+    else if (ch === "}") {
+      depth--;
+      if (depth === 0) {
+        closeIdx = i;
+        break;
+      }
+    }
+  }
+  if (closeIdx === -1) continue;
+
+  const block = src.slice(openIdx, closeIdx + 1);
   const id = m[1];
-  const mapsUrl = m[2];
+
+  // Só considera blocos que parecem Trail (têm mapsUrl)
+  const mapsUrlMatch = block.match(/mapsUrl:\s*"([^"]+)"/);
+  if (!mapsUrlMatch) continue;
+
+  // Evita duplicar: se já temos esse id, pula
+  if (trails.some((t) => t.id === id)) continue;
 
   const titleMatch = block.match(/title:\s*"([^"]+)"/);
   const locationMatch = block.match(/location:\s*"([^"]+)"/);
@@ -40,7 +86,7 @@ while ((m = trailRegex.exec(src)) !== null) {
     id,
     title: titleMatch?.[1] ?? "(sem título)",
     location: locationMatch?.[1] ?? "(sem local)",
-    mapsUrl,
+    mapsUrl: mapsUrlMatch[1],
     imageVar: imageMatch?.[1] ?? null,
     bookUrl: bookUrlMatch?.[1] ?? null,
   });
