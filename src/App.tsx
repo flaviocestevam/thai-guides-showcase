@@ -11,6 +11,7 @@ import MuayThai from "./pages/MuayThai.tsx";
 import MuayThai5645 from "./pages/MuayThai5645.tsx";
 import Festas from "./pages/Festas.tsx";
 import CityPage from "./pages/CityPage.tsx";
+import GuiaTrilhasThai44 from "./pages/GuiaTrilhasThai44.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
