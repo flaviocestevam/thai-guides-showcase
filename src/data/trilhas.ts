@@ -311,7 +311,7 @@ export const cities: CitySection[] = [
           description: "Tours de dia inteiro saindo de Bangkok incluem transporte, guia, almoço e visita à Ponte do Rio Kwai.",
           price: "1.500-2.500 THB (~R$ 255-425) tour completo",
           where: "Tours de Bangkok via Klook, GetYourGuide, agências em Khao San Road",
-          bookUrl: "https://www.klook.com/en-TH/activity/2078-erawan-waterfall-kanchanaburi/",
+          bookUrl: "https://www.getyourguide.com/s/?q=erawan+waterfall+kanchanaburi",
         },
         tags: ["Cachoeira", "Banho", "Turquesa", "Day Trip", "Top Tailândia", "Família"],
         reviews: [
@@ -935,8 +935,7 @@ export const cities: CitySection[] = [
         guide: {
           description: "Guias locais altamente recomendados por segurança. Trilha mal sinalizada torna guia quase essencial.",
           price: "1.000-1.800 THB (~R$ 170-310) por grupo até 4 pessoas",
-          where: "Hostels de Thong Sala ou Baan Tai. Eco Phangan Adventures",
-          bookUrl: "https://www.ecophangan.com/",
+          where: "Reserve direto em hostels de Thong Sala ou Baan Tai (peça por 'Khao Ra trekking guide'). Pergunte na recepção do seu hotel.",
         },
         tags: ["Montanha", "Desafio", "Grátis", "Vista Panorâmica", "Aventura", "Difícil"],
         reviews: [
@@ -1249,7 +1248,7 @@ export const cities: CitySection[] = [
           description: "Tours de dia inteiro de Phi Phi incluem Bamboo, Maya Bay, Pileh Lagoon e snorkeling.",
           price: "1.500-2.500 THB (~R$ 255-425) por pessoa",
           where: "Agências em Tonsai Village, Klook, GetYourGuide",
-          bookUrl: "https://www.klook.com/en-TH/activity/1969-phi-phi-islands-day-trip-phuket/",
+          bookUrl: "https://www.getyourguide.com/s/?q=phi+phi+islands+day+trip",
         },
         tags: ["Praia", "Ilha", "Snorkeling", "Paraíso", "Fácil"],
         reviews: ["A ilha mais paradisíaca que já vi. Areia branca pura, água azul-bebê, snorkeling com tubarões. Sonho realizado.", "Pure paradise. Skipped all the famous spots — Bamboo Island is the real treasure."],
@@ -1347,7 +1346,7 @@ export const cities: CitySection[] = [
           description: "Tours de barco com guia incluem Maya Bay, Pileh Lagoon e snorkeling.",
           price: "700-1.500 THB (~R$ 120-255) por pessoa (tour completo)",
           where: "Agências em Tonsai Village, Klook, GetYourGuide",
-          bookUrl: "https://www.klook.com/en-TH/activity/1969-phi-phi-islands-day-trip-phuket/",
+          bookUrl: "https://www.getyourguide.com/s/?q=maya+bay+phi+phi",
         },
         tags: ["Filme", "Praia", "Tubarões", "Barco", "Icônico"],
         reviews: [
@@ -1561,7 +1560,7 @@ export const cities: CitySection[] = [
           description: "Tours de dia inteiro combinam Emerald Pool + Hot Springs + Tiger Cave.",
           price: "1.200-1.800 THB (~R$ 200-310) tour completo",
           where: "Agências em Ao Nang e Krabi Town, Klook, GetYourGuide",
-          bookUrl: "https://www.klook.com/en-TH/activity/7587-emerald-pool-hot-spring-tiger-cave-temple-krabi/",
+          bookUrl: "https://www.getyourguide.com/s/?q=emerald+pool+krabi",
         },
         tags: ["Piscina Natural", "Termal", "Fácil", "Banho", "Selva"],
         reviews: [
@@ -2576,7 +2575,7 @@ export const secretTrails: Trail[] = [
       description: "Tours de barco para Emerald Cave incluem snorkeling e almoço. Trilha da cachoeira é autoguiada.",
       price: "800-1.200 THB (~R$ 135-205) tour de barco Emerald Cave",
       where: "Agências em Saladan ou resorts da praia",
-      bookUrl: "https://www.klook.com/en-TH/activity/22133-koh-lanta-4-islands-tour/",
+      bookUrl: "https://www.getyourguide.com/s/?q=koh+lanta+4+islands+tour",
     },
     tags: ["Cachoeira", "Caverna", "Selva", "Banho", "Aventura"],
     reviews: [
