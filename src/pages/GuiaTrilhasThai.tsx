@@ -9,7 +9,7 @@ import heroTrekking from "@/assets/trilhas/hero-trekking.jpg";
 import krabiRailay from "@/assets/trilhas/krabi-railay-lagoon.jpg";
 import kohPhiPhi from "@/assets/trilhas/koh-phi-phi.jpg";
 
-const CAKTO_LINK = "https://pay.cakto.com.br/dxfjjfs_830176"; // TODO: trocar pelo link específico do guia de trilhas
+const CAKTO_LINK = "https://pay.cakto.com.br/3c2xdpb";
 
 /* ─── SOCIAL PROOF POPUP ─── */
 const recentBuyers = [
