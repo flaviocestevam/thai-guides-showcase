@@ -511,8 +511,94 @@ const GuiaTrilhasThai = () => {
         </div>
       </section>
 
-      {/* TESTIMONIALS */}
+      {/* COMPARISON — COM vs SEM o GUIA */}
       <section className="py-20 px-6 bg-elephant-bg">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <span className="text-elephant-gold font-semibold text-sm uppercase tracking-wider">
+              A Diferença é Brutal
+            </span>
+            <h2 className="font-display text-3xl md:text-5xl font-bold text-elephant-fg mt-2 mb-4">
+              Dois Trilheiros. Duas Viagens Completamente Diferentes.
+            </h2>
+            <p className="text-elephant-muted-fg max-w-2xl mx-auto">
+              Veja o que muda na prática entre quem sobe a trilha preparado e quem vai "na sorte".
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* SEM O GUIA */}
+            <div className="bg-elephant-card/60 border border-destructive/30 rounded-2xl p-7">
+              <div className="text-center mb-6">
+                <span className="inline-flex items-center gap-2 bg-destructive/10 text-destructive font-semibold text-sm px-4 py-2 rounded-full">
+                  <Ban className="w-4 h-4" /> SEM O GUIA
+                </span>
+                <p className="font-display font-bold text-xl text-elephant-fg mt-3">Trilheiro Despreparado</p>
+                <p className="text-elephant-muted-fg text-sm mt-1">"Vou ver lá quando chegar..."</p>
+              </div>
+              <ul className="space-y-3">
+                {[
+                  "Perde dias inteiros pesquisando trilhas em fóruns desatualizados",
+                  "Encara cachoeiras lotadas de turistas sem saber dos atalhos secretos",
+                  "Paga R$ 400+ em tours de agência por trilhas que daria pra fazer sozinho por R$ 30",
+                  "Se perde no transporte público sem entender Songthaew, Grab e horários",
+                  "Compra o equipamento errado e sofre com bolhas, sol e chuva",
+                  "Vai pro destino na época errada — encontra trilha fechada ou monção",
+                  "Subestima a dificuldade e desiste no meio do caminho",
+                  "Volta sentindo que viu só o óbvio — não viveu a Tailândia de verdade",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-sm text-elephant-muted-fg">
+                    <X className="w-5 h-5 text-destructive/80 shrink-0 mt-0.5" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* COM O GUIA */}
+            <div className="bg-elephant-card border-2 border-forest rounded-2xl p-7 shadow-2xl relative">
+              <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-elephant-gold text-elephant-gold-fg text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider shadow-lg">
+                Recomendado
+              </span>
+              <div className="text-center mb-6">
+                <span className="inline-flex items-center gap-2 bg-forest/15 text-forest font-semibold text-sm px-4 py-2 rounded-full">
+                  <CircleCheck className="w-4 h-4" /> COM O GUIA
+                </span>
+                <p className="font-display font-bold text-xl text-elephant-fg mt-3">Trilheiro Preparado</p>
+                <p className="text-elephant-muted-fg text-sm mt-1">"Sei exatamente onde vou e o que esperar."</p>
+              </div>
+              <ul className="space-y-3">
+                {[
+                  "Abre o guia, escolhe a trilha ideal pro seu nível e parte no mesmo dia",
+                  "Chega cedo nos pontos certos e tem a cachoeira só pra você",
+                  "Faz a mesma trilha por R$ 30 com transporte público explicado passo a passo",
+                  "Usa Grab, Songthaew e mapas offline como um local",
+                  "Tem checklist completo de equipamento testado em campo",
+                  "Sabe a melhor época de cada região e evita monção e fechamentos",
+                  "Conhece a dificuldade real, tempo e desnível de cada trilha antes de ir",
+                  "Volta com a sensação de ter vivido a Tailândia que poucos turistas veem",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-sm text-elephant-fg">
+                    <Check className="w-5 h-5 text-forest shrink-0 mt-0.5" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <p className="text-elephant-muted-fg mb-5 text-lg">
+              Por menos de <strong className="text-elephant-fg">R$ 0,50/dia</strong> da sua viagem,
+              você decide de que lado quer estar.
+            </p>
+            <CTAButton large />
+          </div>
+        </div>
+      </section>
+
+      {/* TESTIMONIALS */}
+      <section className="py-20 px-6 bg-elephant-card">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-elephant-fg mb-4">
