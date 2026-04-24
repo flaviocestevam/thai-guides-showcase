@@ -72,14 +72,14 @@ const SocialProofPopup = () => {
 };
 
 const LiveViewers = () => {
-  const [count, setCount] = useState(34);
+  const [count, setCount] = useState(8);
   useEffect(() => {
     const interval = setInterval(() => {
-      setCount((p) => p + Math.floor(Math.random() * 5) - 2);
-    }, 4000);
+      setCount((p) => p + Math.floor(Math.random() * 3) - 1);
+    }, 5000);
     return () => clearInterval(interval);
   }, []);
-  const displayed = Math.max(26, Math.min(48, count));
+  const displayed = Math.max(5, Math.min(13, count));
   return (
     <div className="flex items-center gap-2 text-sm">
       <span className="relative flex h-2.5 w-2.5">
