@@ -9,7 +9,7 @@ import heroTrekking from "@/assets/trilhas/hero-trekking.jpg";
 import krabiRailay from "@/assets/trilhas/krabi-railay-lagoon.jpg";
 import kohPhiPhi from "@/assets/trilhas/koh-phi-phi.jpg";
 
-const CAKTO_LINK = "https://pay.cakto.com.br/3c2xdpb";
+const CAKTO_LINK = "https://pay.cakto.com.br/au9fmx4";
 
 /* ─── SOCIAL PROOF POPUP ─── */
 const recentBuyers = [
