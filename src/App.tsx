@@ -12,6 +12,7 @@ import MuayThai5645 from "./pages/MuayThai5645.tsx";
 import Festas from "./pages/Festas.tsx";
 import CityPage from "./pages/CityPage.tsx";
 import GuiaTrilhasThai44 from "./pages/GuiaTrilhasThai44.tsx";
+import GuiaTrilhasThai from "./pages/GuiaTrilhasThai.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -32,6 +33,7 @@ const App = () => (
           <Route path="/festas" element={<Festas />} />
           <Route path="/festas/:cityId" element={<CityPage />} />
           <Route path="/guiatrilhasthai44" element={<GuiaTrilhasThai44 />} />
+          <Route path="/guiatrilhasthai" element={<GuiaTrilhasThai />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
