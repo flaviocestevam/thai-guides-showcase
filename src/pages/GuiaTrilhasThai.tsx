@@ -47,7 +47,7 @@ const SocialProofPopup = () => {
 
   return (
     <div
-      className={`fixed bottom-4 left-4 z-50 bg-elephant-cream border border-elephant-border rounded-xl shadow-2xl p-4 max-w-[320px] transition-all duration-500 ${
+      className={`hidden sm:block fixed bottom-24 left-4 z-30 bg-elephant-cream border border-elephant-border rounded-xl shadow-2xl p-4 max-w-[320px] transition-all duration-500 ${
         visible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0 pointer-events-none"
       }`}
     >
