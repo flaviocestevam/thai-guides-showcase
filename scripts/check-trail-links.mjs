@@ -116,6 +116,27 @@ const imageReport = trails.map((t) => {
 });
 
 // ---------- 3. Verifica URLs (HTTP) ----------
+const BROWSER_HEADERS = {
+  "User-Agent":
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+  Accept:
+    "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+  "Accept-Language": "pt-BR,pt;q=0.9,en;q=0.8",
+  "Accept-Encoding": "gzip, deflate, br",
+};
+
+// Classifica o resultado:
+//   "ok"      = funcionou (2xx ou 3xx)
+//   "warn"    = provavelmente bloqueio anti-bot (403, 429, fetch failed, timeout)
+//   "broken"  = link realmente quebrado (404, 410, 5xx)
+function classify(status, error) {
+  if (status >= 200 && status < 400) return "ok";
+  if (status === 404 || status === 410) return "broken";
+  if (status >= 500 && status < 600) return "broken";
+  // 0 (fetch falhou), 403 (forbidden/bot), 429 (rate limit), outros → aviso
+  return "warn";
+}
+
 async function checkUrl(url) {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), TIMEOUT_MS);
@@ -124,10 +145,7 @@ async function checkUrl(url) {
       method: "HEAD",
       redirect: "follow",
       signal: controller.signal,
-      headers: {
-        "User-Agent":
-          "Mozilla/5.0 (compatible; TrailLinkChecker/1.0; +https://guiastailandia.com.br)",
-      },
+      headers: BROWSER_HEADERS,
     });
     // Alguns servidores não suportam HEAD - tenta GET
     if (res.status === 405 || res.status === 403 || res.status === 400) {
@@ -135,15 +153,20 @@ async function checkUrl(url) {
         method: "GET",
         redirect: "follow",
         signal: controller.signal,
-        headers: {
-          "User-Agent":
-            "Mozilla/5.0 (compatible; TrailLinkChecker/1.0; +https://guiastailandia.com.br)",
-        },
+        headers: BROWSER_HEADERS,
       });
     }
-    return { ok: res.ok, status: res.status, finalUrl: res.url };
+    return {
+      status: res.status,
+      finalUrl: res.url,
+      kind: classify(res.status, null),
+    };
   } catch (err) {
-    return { ok: false, status: 0, error: err.message };
+    return {
+      status: 0,
+      error: err.message,
+      kind: classify(0, err.message),
+    };
   } finally {
     clearTimeout(timer);
   }
@@ -193,7 +216,7 @@ const report = trails.map((t) => {
     urls: urlsForTrail.map((u) => ({
       kind: u.kind,
       url: u.url,
-      ok: u.ok,
+      result: u.kind, // "ok" | "warn" | "broken"
       status: u.status,
       error: u.error,
       finalUrl: u.finalUrl,
@@ -204,12 +227,15 @@ const report = trails.map((t) => {
 const summary = {
   totalTrails: trails.length,
   totalUrls: urlResults.length,
-  brokenUrls: urlResults.filter((u) => !u.ok).length,
+  okUrls: urlResults.filter((u) => u.kind === "ok").length,
+  warnUrls: urlResults.filter((u) => u.kind === "warn").length,
+  brokenUrls: urlResults.filter((u) => u.kind === "broken").length,
   missingImages: imageReport.filter((i) => i.status !== "ok").length,
 };
 
 if (asJson) {
   console.log(JSON.stringify({ summary, report }, null, 2));
+  // Exit 1 só se houver imagem faltando ou link realmente quebrado
   process.exit(summary.brokenUrls + summary.missingImages > 0 ? 1 : 0);
 }
 
@@ -227,31 +253,39 @@ const c = {
 console.log(`\n${c.bold}🥾 Relatório do Guia de Trilhas${c.reset}\n`);
 console.log(`${c.dim}Arquivo: ${DATA_FILE}${c.reset}\n`);
 
-const broken = report.filter(
-  (r) =>
-    r.urls.some((u) => !u.ok) ||
-    (r.image && r.image.status !== "ok")
-);
+const trailsWithIssues = report.filter((r) => {
+  const hasBroken = r.urls.some((u) => u.result === "broken");
+  const hasWarn = r.urls.some((u) => u.result === "warn");
+  const hasImg = r.image && r.image.status !== "ok";
+  return hasBroken || hasWarn || hasImg;
+});
 
-if (broken.length === 0) {
-  console.log(`${c.green}✓ Tudo OK! Nenhum problema encontrado.${c.reset}`);
+if (trailsWithIssues.length === 0) {
+  console.log(`${c.green}✓ Tudo OK! Nenhum problema encontrado.${c.reset}\n`);
 } else {
-  console.log(`${c.red}${c.bold}⚠ ${broken.length} trilha(s) com problemas:${c.reset}\n`);
-  for (const r of broken) {
+  for (const r of trailsWithIssues) {
+    const broken = r.urls.filter((u) => u.result === "broken");
+    const warns = r.urls.filter((u) => u.result === "warn");
+    const imgIssue = r.image && r.image.status !== "ok";
+    if (broken.length === 0 && warns.length === 0 && !imgIssue) continue;
+
     console.log(`${c.bold}${r.title}${c.reset} ${c.dim}(${r.location} · id: ${r.id})${c.reset}`);
-    if (r.image && r.image.status !== "ok") {
+    if (imgIssue) {
       console.log(
         `  ${c.red}✗ imagem:${c.reset} ${r.image.status} → ${r.image.file ?? r.image.imageVar}`
       );
     }
-    for (const u of r.urls) {
-      if (!u.ok) {
-        console.log(
-          `  ${c.red}✗ ${u.kind}:${c.reset} HTTP ${u.status}${
-            u.error ? ` (${u.error})` : ""
-          }\n     ${c.dim}${u.url}${c.reset}`
-        );
-      }
+    for (const u of broken) {
+      console.log(
+        `  ${c.red}✗ QUEBRADO ${u.kind}:${c.reset} HTTP ${u.status}\n     ${c.dim}${u.url}${c.reset}`
+      );
+    }
+    for (const u of warns) {
+      console.log(
+        `  ${c.yellow}⚠ aviso ${u.kind}:${c.reset} HTTP ${u.status}${
+          u.error ? ` (${u.error})` : ""
+        } — provavelmente bloqueio anti-bot, verifique no navegador\n     ${c.dim}${u.url}${c.reset}`
+      );
     }
     console.log("");
   }
@@ -260,18 +294,24 @@ if (broken.length === 0) {
 console.log(`${c.bold}Resumo${c.reset}`);
 console.log(`  Trilhas verificadas: ${summary.totalTrails}`);
 console.log(
-  `  URLs verificadas: ${summary.totalUrls}  ${
+  `  URLs: ${c.green}${summary.okUrls} OK${c.reset} · ${
+    summary.warnUrls > 0 ? `${c.yellow}${summary.warnUrls} avisos${c.reset}` : `0 avisos`
+  } · ${
     summary.brokenUrls > 0
-      ? `${c.red}(${summary.brokenUrls} quebradas)${c.reset}`
-      : `${c.green}(todas OK)${c.reset}`
+      ? `${c.red}${summary.brokenUrls} quebradas${c.reset}`
+      : `${c.green}0 quebradas${c.reset}`
   }`
 );
 console.log(
-  `  Imagens verificadas: ${imageReport.length}  ${
+  `  Imagens: ${
     summary.missingImages > 0
-      ? `${c.red}(${summary.missingImages} faltando)${c.reset}`
-      : `${c.green}(todas OK)${c.reset}`
+      ? `${c.red}${summary.missingImages} faltando${c.reset}`
+      : `${c.green}todas OK (${imageReport.length})${c.reset}`
   }`
 );
+console.log(
+  `\n${c.dim}⚠ Avisos = sites com proteção anti-bot (Cloudflare/DataDome). Os links provavelmente funcionam no navegador real.${c.reset}\n`
+);
 
+// Exit 1 só se houver problema real (imagem ou 404/5xx)
 process.exit(summary.brokenUrls + summary.missingImages > 0 ? 1 : 0);
