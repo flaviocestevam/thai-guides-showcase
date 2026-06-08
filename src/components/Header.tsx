@@ -22,7 +22,7 @@ export const Header = () => {
     { label: "Muay Thai", path: "/muaythai" },
     { label: "Trilhas", path: "/guiatrilhasthai" },
     { label: "Festas", path: "/festas" },
-    { label: "Voluntariado", path: "/guia-voluntariado-tailandia" },
+    { label: "Voluntariado", path: "/voluntariado-tailandia" },
     { label: "FAQ", path: "/#faq" },
   ];
 
