@@ -161,6 +161,8 @@ const Index = () => {
             <MapPin className="w-4 h-4" />
             Experiências na Tailândia
           </span>
+        </div>
+      </header>
 
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-display font-black leading-tight">
             Explore a Tailândia{" "}
