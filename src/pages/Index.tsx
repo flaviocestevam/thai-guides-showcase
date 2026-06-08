@@ -3,6 +3,9 @@ import { MapPin, ArrowRight, Users, Star, Clock, TrendingUp, ShieldCheck, Flame,
 import { useState, useEffect } from "react";
 import { SEO } from "@/components/SEO";
 import { StructuredData } from "@/components/StructuredData";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+
 import heroImg from "@/assets/hero-lanterns.jpg";
 import elephantImg from "@/assets/hero-elephants.jpg";
 
@@ -152,9 +155,11 @@ const Index = () => {
       />
       <StructuredData data={webSiteSchema} />
       <StructuredData data={orgSchema} />
+      <Header />
 
       {/* Hero */}
-      <header className="relative py-20 md:py-32 px-4 overflow-hidden">
+      <header className="relative pt-32 pb-20 md:pt-48 md:pb-32 px-4 overflow-hidden">
+
         <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent pointer-events-none" />
         <div className="relative z-10 max-w-5xl mx-auto text-center space-y-6">
           <span className="inline-flex items-center gap-2 bg-primary/15 border-glow text-primary font-body font-semibold text-sm px-5 py-2 rounded-full tracking-wider uppercase">
@@ -369,19 +374,10 @@ const Index = () => {
         </section>
       </main>
 
-      {/* Footer */}
-      <footer className="py-12 text-center text-muted-foreground text-xs font-body border-t border-border">
-        <div className="max-w-5xl mx-auto px-4 space-y-4">
-          <p>© Thailand Guides & Guia Tailândia para Brasileiros. Todos os direitos reservados.</p>
-          <div className="flex justify-center gap-6">
-            <Link to="/" className="hover:text-primary">Home</Link>
-            <Link to="/festivaldaslanternas" className="hover:text-primary">Festival das Lanternas</Link>
-            <Link to="/muaythai" className="hover:text-primary">Muay Thai</Link>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
 
 export default Index;
+
