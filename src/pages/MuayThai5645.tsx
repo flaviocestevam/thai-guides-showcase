@@ -2,10 +2,16 @@ import Navbar from "@/components/muaythai5645/Navbar";
 import HeroSection from "@/components/muaythai5645/HeroSection";
 import GymCard from "@/components/muaythai5645/GymCard";
 import { citiesData, stadiumImage } from "@/data/gyms";
+import { SEO } from "@/components/SEO";
 
 const MuayThai5645 = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Onde treinar Muay Thai na Tailândia — Guia Completo"
+        description="Descubra os melhores camps de Muay Thai na Tailândia: Bangkok, Phuket, Chiang Mai e mais. Custos, dicas e roteiros."
+        canonicalPath="/muaythai5645"
+      />
       <Navbar />
       <HeroSection />
 
