@@ -1,3 +1,5 @@
+import { SEO } from "@/components/SEO";
+import { StructuredData } from "@/components/StructuredData";
 import { Check, Shield, Clock, Star, MapPin, AlertTriangle, ChevronDown, Users, BookOpen, Zap, Heart, ArrowRight, Eye, TrendingUp, X, ThumbsDown, ThumbsUp, Quote, Sparkles, Ban, CircleCheck } from "lucide-react";
 import { useState, useEffect, useCallback } from "react";
 
@@ -266,8 +268,22 @@ const FAQItem = ({ q, a }: { q: string; a: string }) => {
 };
 
 const SantuariosDeElefantes = () => {
+  const productSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Guia Santuários de Elefantes na Tailândia",
+    "brand": { "@type": "Brand", "name": "Guia Tailândia" },
+    "offers": { "@type": "Offer", "price": "97.00", "priceCurrency": "BRL" }
+  };
+
   return (
     <div className="min-h-screen bg-elephant-bg font-body text-elephant-fg">
+      <SEO 
+        title="Santuários de Elefantes na Tailândia — Guia Ético"
+        description="Como escolher um santuário de elefantes ético na Tailândia? Guia completo com avaliações, custos e o que ninguém te conta para evitar maus-tratos."
+        canonicalPath="/santuariosdeelefantes"
+      />
+      <StructuredData data={productSchema} />
       <StickyUrgencyBar />
       <SocialProofPopup />
       <FloatingBottomCTA />
