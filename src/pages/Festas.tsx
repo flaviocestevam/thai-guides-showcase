@@ -1,3 +1,5 @@
+import { SEO } from "@/components/SEO";
+import { StructuredData } from "@/components/StructuredData";
 import { ArrowDown } from "lucide-react";
 import heroImg from "@/assets/festas/hero-thailand.jpg";
 import { cities, survivalTips } from "@/data/festas";
@@ -7,11 +9,16 @@ import TipCard from "@/components/festas/TipCard";
 const Festas = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <SEO 
+        title="Guia de Festas na Tailândia — Baladas e Noite"
+        description="Onde sair na Tailândia? Guia completo com as melhores festas, baladas e dicas de sobrevivência em 7 cidades incríveis."
+        canonicalPath="/festas"
+      />
       {/* Hero */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <img
           src={heroImg}
-          alt="Thailand beach party at night"
+          alt="Festa na praia na Tailândia durante a noite"
           className="absolute inset-0 w-full h-full object-cover"
           width={1920}
           height={1080}
@@ -38,39 +45,41 @@ const Festas = () => {
         </div>
       </section>
 
-      {/* Cities */}
-      <section id="cities" className="py-20 md:py-28 px-4">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-display font-bold text-center mb-3">
-            7 Cidades, Infinitas Noites
-          </h2>
-          <p className="text-center text-muted-foreground mb-14 max-w-xl mx-auto">
-            Clique em uma cidade para descobrir os melhores bares, clubes e dicas exclusivas
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {cities.map((city) => (
-              <CityCard key={city.id} city={city} />
-            ))}
+      <main>
+        {/* Cities */}
+        <section id="cities" className="py-20 md:py-28 px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl md:text-5xl font-display font-bold text-center mb-3">
+              7 Cidades, Infinitas Noites
+            </h2>
+            <p className="text-center text-muted-foreground mb-14 max-w-xl mx-auto">
+              Clique em uma cidade para descobrir os melhores bares, clubes e dicas exclusivas
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {cities.map((city) => (
+                <CityCard key={city.id} city={city} />
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Survival Tips */}
-      <section className="py-20 md:py-28 px-4">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-display font-bold text-center mb-3">
-            Dicas de Sobrevivência
-          </h2>
-          <p className="text-center text-muted-foreground mb-14 max-w-xl mx-auto">
-            O que todo turista precisa saber antes de cair na noite tailandesa
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {survivalTips.map((tip) => (
-              <TipCard key={tip.title} tip={tip} />
-            ))}
+        {/* Survival Tips */}
+        <section className="py-20 md:py-28 px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl md:text-5xl font-display font-bold text-center mb-3">
+              Dicas de Sobrevivência
+            </h2>
+            <p className="text-center text-muted-foreground mb-14 max-w-xl mx-auto">
+              O que todo turista precisa saber antes de cair na noite tailandesa
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {survivalTips.map((tip) => (
+                <TipCard key={tip.title} tip={tip} />
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </main>
 
       {/* Footer */}
       <footer className="border-t border-border py-12 px-4">

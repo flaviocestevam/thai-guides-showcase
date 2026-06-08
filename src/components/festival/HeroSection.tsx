@@ -7,7 +7,7 @@ const HeroSection = () => (
   <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
     <img
       src={heroImg}
-      alt="Festival das Lanternas em Chiang Mai"
+      alt="Milhares de lanternas flutuando no céu de Chiang Mai durante o Festival Yi Peng"
       className="absolute inset-0 w-full h-full object-cover"
       width={1920}
       height={1080}

@@ -10,7 +10,7 @@ const HeroSection = () => {
       <div className="absolute inset-0">
         <img
           src={heroImage}
-          alt="Treino de Muay Thai na Tailândia"
+          alt="Lutadores treinando Muay Thai em um camp tradicional na Tailândia"
           className="w-full h-full object-cover"
           width={1920}
           height={1080}
