@@ -18,14 +18,6 @@ import {
 } from "@/data/trilhas";
 
 const GuiaTrilhasThai44 = () => {
-  return (
-    <div className="min-h-screen bg-background text-foreground">
-      <SEO 
-        title="Guia Trilhas Tailândia — Trekking, Roteiros e Custos"
-        description="Guia completo de trilhas e trekking na Tailândia: 30+ rotas, roteiros prontos, custos e dicas práticas para cada nível."
-        canonicalPath="/guiatrilhasthai44"
-      />
-
   const tips = [
     { title: "Melhor época", text: "Novembro a Fevereiro: seca, fresca e céu limpo. Março-Maio: muito quente (35-40°C). Junho-Outubro: chuvas intensas — muitas trilhas fecham." },
     { title: "Clima e altitude", text: "No norte (Chiang Mai/Chiang Rai) as noites podem chegar a 5°C em dezembro. No sul, sempre quente e úmido. Trilhas em altitude são mais frescas." },
@@ -37,6 +29,11 @@ const GuiaTrilhasThai44 = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <SEO 
+        title="Guia Trilhas Tailândia — Trekking, Roteiros e Custos"
+        description="Guia completo de trilhas e trekking na Tailândia: 30+ rotas, roteiros prontos, custos e dicas práticas para cada nível."
+        canonicalPath="/guiatrilhasthai44"
+      />
       {/* NAV */}
       <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/70 border-b border-border/50">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
