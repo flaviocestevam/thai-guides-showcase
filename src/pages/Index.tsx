@@ -10,6 +10,9 @@ import { Button } from "@/components/ui/button";
 
 import heroImg from "@/assets/hero-lanterns.jpg";
 import elephantImg from "@/assets/hero-elephants.jpg";
+import muayThaiImg from "@/assets/muay-thai-hero.jpg";
+import trilhasImg from "@/assets/trilhas/hero-trekking.jpg";
+import festasImg from "@/assets/festas/hero-thailand.jpg";
 
 interface ProductCard {
   title: string;
@@ -68,7 +71,7 @@ const salesPages: ProductCard[] = [
     path: "/muaythai",
     emoji: "🥊",
     badge: "🔥 POPULAR",
-    image: "/src/assets/muay-thai-hero.jpg",
+    image: muayThaiImg,
     urgency: "Últimas horas — 51% de desconto!",
     socialProof: "1.800+ lutadores já compraram",
     originalPrice: "R$ 197",
@@ -84,7 +87,7 @@ const salesPages: ProductCard[] = [
     path: "/guiatrilhasthai",
     emoji: "🥾",
     badge: "⚡ LANÇAMENTO",
-    image: "/src/assets/trilhas/hero-trekking.jpg",
+    image: trilhasImg,
     urgency: "Oferta de lançamento: 50% de desconto acaba hoje!",
     socialProof: "1.400+ trilheiros já compraram",
     originalPrice: "R$ 197",
@@ -100,7 +103,7 @@ const salesPages: ProductCard[] = [
     path: "/festas",
     emoji: "🔥",
     badge: "✨ COMPLETO",
-    image: "/src/assets/festas/hero-thailand.jpg",
+    image: festasImg,
     urgency: "Saiba onde estão as melhores noites de 2025!",
     socialProof: "Vivido por milhares de viajantes",
     originalPrice: "R$ 0",
