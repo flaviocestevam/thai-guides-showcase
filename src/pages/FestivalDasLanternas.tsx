@@ -1,3 +1,5 @@
+import { SEO } from "@/components/SEO";
+import { StructuredData } from "@/components/StructuredData";
 import HeroSection from "@/components/festival/HeroSection";
 import SocialProofPopup from "@/components/festival/SocialProofPopup";
 import VideoSection from "@/components/festival/VideoSection";
@@ -17,8 +19,22 @@ import TargetAudienceSection from "@/components/festival/TargetAudienceSection";
 import FloatingCTA from "@/components/festival/FloatingCTA";
 
 const FestivalDasLanternas = () => {
+  const productSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Guia do Festival das Lanternas",
+    "brand": { "@type": "Brand", "name": "Guia Tailândia" },
+    "offers": { "@type": "Offer", "price": "47.00", "priceCurrency": "BRL" }
+  };
+
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
+      <SEO 
+        title="Guia do Festival das Lanternas Chiang Mai"
+        description="Guia completo para o Festival das Lanternas Yi Peng e Loy Krathong em Chiang Mai: ingressos, onde assistir e roteiro."
+        canonicalPath="/festivaldaslanternas"
+      />
+      <StructuredData data={productSchema} />
       <HeroSection />
       <CountdownTimer />
       <VideoSection />
