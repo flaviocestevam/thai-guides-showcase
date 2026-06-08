@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { TrailCard } from "@/components/trilhas/TrailCard";
+import { SEO } from "@/components/SEO";
 import {
   cities,
   secretTrails,
@@ -17,18 +18,13 @@ import {
 } from "@/data/trilhas";
 
 const GuiaTrilhasThai44 = () => {
-  useEffect(() => {
-    document.title = "Guia Trilhas Tailândia — Trekking, Roteiros e Custos";
-    const meta = document.querySelector('meta[name="description"]');
-    const desc = "Guia completo de trilhas e trekking na Tailândia: 30+ rotas, roteiros prontos, custos e dicas práticas para cada nível.";
-    if (meta) meta.setAttribute("content", desc);
-    else {
-      const m = document.createElement("meta");
-      m.name = "description";
-      m.content = desc;
-      document.head.appendChild(m);
-    }
-  }, []);
+  return (
+    <div className="min-h-screen bg-background text-foreground">
+      <SEO 
+        title="Guia Trilhas Tailândia — Trekking, Roteiros e Custos"
+        description="Guia completo de trilhas e trekking na Tailândia: 30+ rotas, roteiros prontos, custos e dicas práticas para cada nível."
+        canonicalPath="/guiatrilhasthai44"
+      />
 
   const tips = [
     { title: "Melhor época", text: "Novembro a Fevereiro: seca, fresca e céu limpo. Março-Maio: muito quente (35-40°C). Junho-Outubro: chuvas intensas — muitas trilhas fecham." },

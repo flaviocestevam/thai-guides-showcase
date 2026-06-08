@@ -24,4 +24,52 @@
     <loc>https://guiastailandia.com.br/festas</loc>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://guiastailandia.com.br/festas/bangkok</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://guiastailandia.com.br/festas/phuket</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://guiastailandia.com.br/festas/pattaya</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://guiastailandia.com.br/festas/kohphangan</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://guiastailandia.com.br/festas/phiphi</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://guiastailandia.com.br/festas/krabi</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://guiastailandia.com.br/festas/chiangmai</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://guiastailandia.com.br/festas/kohsamui</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://guiastailandia.com.br/festas/kohlipe</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://guiastailandia.com.br/guiatrilhasthai44</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://guiastailandia.com.br/muaythai5645</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://guiastailandia.com.br/lanternfestival</loc>
+    <priority>0.7</priority>
+  </url>
 </urlset>

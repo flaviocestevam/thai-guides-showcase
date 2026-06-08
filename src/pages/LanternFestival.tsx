@@ -15,10 +15,16 @@ import FAQSection from "@/components/lantern/FAQSection";
 import FinalCTASection from "@/components/lantern/FinalCTASection";
 import TargetAudienceSection from "@/components/lantern/TargetAudienceSection";
 import FloatingCTA from "@/components/lantern/FloatingCTA";
+import { SEO } from "@/components/SEO";
 
 const LanternFestival = () => {
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
+      <SEO 
+        title="Lantern Festival Chiang Mai Guide — Yi Peng & Loy Krathong"
+        description="Complete guide to the Lantern Festival in Chiang Mai: tickets, locations, and itineraries for Yi Peng and Loy Krathong."
+        canonicalPath="/lanternfestival"
+      />
       <HeroSection />
       <CountdownTimer />
       <VideoSection />
