@@ -8,10 +8,10 @@ const PainSection = () => (
 
       <div className="space-y-6 text-muted-foreground font-body text-base md:text-lg leading-relaxed text-left">
         <p>
-          Imagina gastar <strong className="text-foreground">milhares de reais</strong> em passagens, hospedagem e ingressos... só para descobrir na hora que o lugar que você escolheu para ver as lanternas é <strong className="text-destructive">proibido</strong>. Que o ingresso que você comprou é <strong className="text-destructive">falso</strong>. Que a hospedagem que parecia boa fica a <strong className="text-destructive">1 hora do festival</strong>.
+          Imagina gastar <strong className="text-foreground">milhares de reais</strong> em passagens, hospedagem e ingressos... só para descobrir na hora que o lugar que você escolheu para ver as lanternas em Chiang Mai é <strong className="text-destructive">proibido</strong>. Que o ingresso que você comprou é <strong className="text-destructive">falso</strong>. Que a hospedagem que parecia boa fica a <strong className="text-destructive">1 hora do festival</strong>.
         </p>
         <p>
-          Isso acontece <strong className="text-foreground">todos os anos</strong> com dezenas de brasileiros. Eles chegam em Chiang Mai baseados em dicas de vídeos do YouTube, posts desatualizados e "influenciadores" que passaram <strong className="text-foreground">2 dias</strong> na cidade e já se acham especialistas.
+          Isso acontece <strong className="text-foreground">todos os anos</strong> com dezenas de brasileiros. Eles chegam na Tailândia baseados em dicas de vídeos do YouTube, posts desatualizados e "influenciadores" que passaram <strong className="text-foreground">2 dias</strong> na cidade e já se acham especialistas.
         </p>
         <p>
           A verdade é cruel: <strong className="text-primary">informação errada custa caro</strong>. Custa dinheiro, custa tempo, custa as memórias que você nunca vai ter. Soltar lanternas em áreas proibidas pode gerar multa. Comprar ingressos de vendedores ambulantes é jogar dinheiro fora. Não entender a etiqueta cultural é passar vergonha em um templo sagrado.
@@ -23,7 +23,7 @@ const PainSection = () => (
 
       <div className="mt-12 bg-card border-glow rounded-2xl p-8 glow-orange">
         <p className="text-lg md:text-xl font-display font-semibold text-foreground">
-          ⚠️ A diferença entre uma viagem "ok" e uma viagem <span className="text-primary">inesquecível</span> não é sorte — é <span className="text-primary">preparo</span>. E esse preparo está a um clique de distância.
+          ⚠️ A diferença entre uma viagem "ok" e uma viagem <span className="text-primary">inesquecível</span> não é sorte — é <span className="text-primary">preparo</span>. E esse preparo está a um clique de distância com o nosso Guia Tailândia para Brasileiros.
         </p>
       </div>
     </div>
