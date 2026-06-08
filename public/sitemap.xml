@@ -2,77 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://guiastailandia.com.br/</loc>
-    <lastmod>2024-06-08</lastmod>
+    <lastmod>2024-03-20</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://guiastailandia.com.br/festivaldaslanternas</loc>
-    <lastmod>2024-06-08</lastmod>
-    <priority>0.9</priority>
+    <lastmod>2024-03-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://guiastailandia.com.br/santuariosdeelefantes</loc>
-    <lastmod>2024-06-08</lastmod>
-    <priority>0.9</priority>
+    <lastmod>2024-03-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://guiastailandia.com.br/muaythai</loc>
-    <lastmod>2024-06-08</lastmod>
-    <priority>0.9</priority>
+    <lastmod>2024-03-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://guiastailandia.com.br/guiatrilhasthai</loc>
-    <lastmod>2024-06-08</lastmod>
-    <priority>0.9</priority>
+    <lastmod>2024-03-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://guiastailandia.com.br/festas</loc>
-    <lastmod>2024-06-08</lastmod>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://guiastailandia.com.br/festas/bangkok</loc>
-    <lastmod>2024-06-08</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://guiastailandia.com.br/festas/phuket</loc>
-    <lastmod>2024-06-08</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://guiastailandia.com.br/festas/pattaya</loc>
-    <lastmod>2024-06-08</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://guiastailandia.com.br/festas/kohphangan</loc>
-    <lastmod>2024-06-08</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://guiastailandia.com.br/festas/phiphi</loc>
-    <lastmod>2024-06-08</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://guiastailandia.com.br/festas/krabi</loc>
-    <lastmod>2024-06-08</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://guiastailandia.com.br/festas/chiangmai</loc>
-    <lastmod>2024-06-08</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://guiastailandia.com.br/festas/kohsamui</loc>
-    <lastmod>2024-06-08</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://guiastailandia.com.br/festas/kohlipe</loc>
-    <lastmod>2024-06-08</lastmod>
+    <lastmod>2024-03-20</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 </urlset>
