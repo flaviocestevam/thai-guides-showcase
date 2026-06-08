@@ -54,6 +54,22 @@ const guides: GuideCard[] = [
     viewers: 14,
   },
   {
+    title: "Guia Muay Thai na Tailândia",
+    subtitle: "Treine no lugar certo, pelo preço certo",
+    description:
+      "Descubra exatamente onde treinar, quanto custa, como chegar e roteiros prontos para cada nível. Não caia em armadilhas turísticas.",
+    path: "/muaythai",
+    emoji: "🥊",
+    badge: "🔥 POPULAR",
+    image: "/src/assets/muay-thai-hero.jpg",
+    urgency: "Últimas horas — 51% de desconto!",
+    socialProof: "1.800+ lutadores já compraram",
+    originalPrice: "R$ 197",
+    price: "R$ 97",
+    highlight: "3.000+ academias mapeadas",
+    viewers: 42,
+  },
+  {
     title: "Guia Trilhas Tailândia",
     subtitle: "30+ Trekkings, Roteiros e Custos Reais",
     description:
