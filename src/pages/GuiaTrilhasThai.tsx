@@ -263,21 +263,22 @@ const FAQItem = ({ q, a }: { q: string; a: string }) => {
 };
 
 const GuiaTrilhasThai = () => {
-  useEffect(() => {
-    document.title = "Guia Trilhas Tailândia — 30+ Trekkings, Roteiros e Custos Reais";
-    const existing = document.querySelector('meta[name="description"]');
-    const desc = "O guia definitivo de trekking na Tailândia: 30+ trilhas testadas em 10 regiões, roteiros prontos por nível, custos em R$ e dicas que economizam horas de pesquisa.";
-    if (existing) existing.setAttribute("content", desc);
-    else {
-      const m = document.createElement("meta");
-      m.name = "description";
-      m.content = desc;
-      document.head.appendChild(m);
-    }
-  }, []);
+  const productSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Guia Trilhas Tailândia",
+    "brand": { "@type": "Brand", "name": "Guia Tailândia" },
+    "offers": { "@type": "Offer", "price": "97.00", "priceCurrency": "BRL" }
+  };
 
   return (
     <div className="min-h-screen bg-elephant-bg font-body text-elephant-fg">
+      <SEO 
+        title="Guia Trilhas Tailândia — 30+ Trekkings e Roteiros"
+        description="Descubra a Tailândia real com nosso guia de trilhas: 30+ trekkings testados, roteiros por nível e custos detalhados."
+        canonicalPath="/guiatrilhasthai"
+      />
+      <StructuredData data={productSchema} />
       <StickyUrgencyBar />
       <SocialProofPopup />
       <FloatingBottomCTA />
