@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import heroImg from "@/assets/hero-lanterns.jpg";
 import elephantImg from "@/assets/hero-elephants.jpg";
 
-interface GuideCard {
+interface ProductCard {
   title: string;
   subtitle: string;
   description: string;
@@ -20,7 +20,7 @@ interface GuideCard {
   viewers?: number;
 }
 
-const guides: GuideCard[] = [
+const salesPages: ProductCard[] = [
   {
     title: "Festival das Lanternas",
     subtitle: "Yi Peng & Loy Krathong — Chiang Mai",
@@ -133,7 +133,7 @@ const Index = () => {
         <div className="relative z-10 max-w-5xl mx-auto text-center space-y-6">
           <span className="inline-flex items-center gap-2 bg-primary/15 border-glow text-primary font-body font-semibold text-sm px-5 py-2 rounded-full tracking-wider uppercase">
             <MapPin className="w-4 h-4" />
-            Guias de Viagem — Tailândia
+            Experiências na Tailândia
           </span>
 
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-display font-black leading-tight">
@@ -142,7 +142,7 @@ const Index = () => {
           </h1>
 
           <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed font-body">
-            Guias completos, testados por viajantes reais, para você viver experiências autênticas e inesquecíveis sem desperdiçar tempo nem dinheiro.
+            Encontre guias completos e informações testadas por viajantes reais para viver experiências autênticas sem desperdiçar tempo nem dinheiro.
           </p>
 
           {/* Trust bar */}
@@ -164,76 +164,76 @@ const Index = () => {
       <div className="bg-destructive/10 border-y border-destructive/20 py-3 px-4">
         <p className="text-center font-body text-sm text-foreground max-w-3xl mx-auto">
           <Flame className="w-4 h-4 inline text-destructive mr-1" />
-          <strong>Oferta por tempo limitado:</strong> preços especiais de lançamento podem acabar a qualquer momento. Garanta seu guia agora!
+          <strong>Oferta por tempo limitado:</strong> preços especiais de lançamento podem acabar a qualquer momento. Garanta seu acesso agora!
         </p>
       </div>
 
-      {/* Guides Grid */}
+      {/* Sales Pages Grid */}
       <section className="px-4 py-16 md:py-24">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-display font-bold text-center mb-4">
-            Escolha o seu <span className="text-gradient-gold">guia</span>
+            Escolha sua <span className="text-gradient-gold">experiência</span>
           </h2>
           <p className="text-muted-foreground text-center font-body mb-12 max-w-xl mx-auto">
-            Cada guia foi criado para resolver problemas reais que viajantes enfrentam. Clique para saber mais.
+            Cada página de venda oferece uma solução completa para problemas reais que viajantes enfrentam. Clique para saber mais.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            {guides.map((guide) => (
+            {salesPages.map((page) => (
               <Link
-                key={guide.path}
-                to={guide.path}
+                key={page.path}
+                to={page.path}
                 className="group bg-card border-glow rounded-2xl overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:glow-gold relative"
               >
                 {/* Card Image / Emoji Fallback */}
                 <div className="relative h-48 md:h-56 bg-gradient-card flex items-center justify-center overflow-hidden">
-                  {guide.image ? (
+                  {page.image ? (
                     <img
-                      src={guide.image}
-                      alt={guide.title}
+                      src={page.image}
+                      alt={page.title}
                       className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-300"
                     />
                   ) : (
                     <span className="text-7xl md:text-8xl opacity-60 group-hover:opacity-90 transition-opacity duration-300">
-                      {guide.emoji}
+                      {page.emoji}
                     </span>
                   )}
 
-                  {guide.badge && (
+                  {page.badge && (
                     <span className="absolute top-4 right-4 bg-primary text-primary-foreground font-body font-bold text-xs px-3 py-1.5 rounded-full pulse-glow">
-                      {guide.badge}
+                      {page.badge}
                     </span>
                   )}
 
                   {/* Live viewers */}
                   <div className="absolute bottom-4 left-4 bg-background/80 backdrop-blur-sm rounded-full px-3 py-1.5">
-                    <LiveViewers base={guide.viewers ?? 10} />
+                    <LiveViewers base={page.viewers ?? 10} />
                   </div>
                 </div>
 
                 {/* Card Content */}
                 <div className="p-6 md:p-8 space-y-3">
                   <div className="flex items-start gap-3">
-                    <span className="text-2xl">{guide.emoji}</span>
+                    <span className="text-2xl">{page.emoji}</span>
                     <div>
                       <h3 className="text-xl md:text-2xl font-display font-bold group-hover:text-primary transition-colors">
-                        {guide.title}
+                        {page.title}
                       </h3>
                       <p className="text-sm text-muted-foreground font-body">
-                        {guide.subtitle}
+                        {page.subtitle}
                       </p>
                     </div>
                   </div>
 
                   <p className="text-muted-foreground font-body text-sm leading-relaxed">
-                    {guide.description}
+                    {page.description}
                   </p>
 
                   {/* Urgency trigger */}
                   <div className="bg-destructive/10 rounded-lg px-3 py-2 flex items-center gap-2">
                     <Clock className="w-4 h-4 text-destructive flex-shrink-0" />
                     <p className="text-xs font-body text-destructive font-semibold">
-                      {guide.urgency}
+                      {page.urgency}
                     </p>
                   </div>
 
@@ -241,15 +241,17 @@ const Index = () => {
                   <div className="flex items-center justify-between pt-2">
                     <div className="space-y-1">
                       <p className="text-xs text-muted-foreground font-body flex items-center gap-1">
-                        <Users className="w-3 h-3" /> {guide.socialProof}
+                        <Users className="w-3 h-3" /> {page.socialProof}
                       </p>
                       <p className="font-body text-xs">
-                        <span className="line-through text-muted-foreground">{guide.originalPrice}</span>{" "}
-                        <span className="text-lg font-display font-black text-gradient-gold">{guide.price}</span>
+                        {page.originalPrice !== "R$ 0" && (
+                          <span className="line-through text-muted-foreground mr-1">{page.originalPrice}</span>
+                        )}
+                        <span className="text-lg font-display font-black text-gradient-gold">{page.price}</span>
                       </p>
                     </div>
                     <div className="flex items-center gap-2 text-primary font-body font-semibold text-sm group-hover:gap-3 transition-all">
-                      Ver guia
+                      Saiba mais
                       <ArrowRight className="w-4 h-4" />
                     </div>
                   </div>
@@ -258,7 +260,7 @@ const Index = () => {
                   <div className="flex items-center gap-2 bg-primary/10 rounded-lg px-3 py-2">
                     <TrendingUp className="w-4 h-4 text-primary flex-shrink-0" />
                     <p className="text-xs font-body text-primary font-semibold">
-                      {guide.highlight}
+                      {page.highlight}
                     </p>
                   </div>
                 </div>
@@ -269,7 +271,7 @@ const Index = () => {
           {/* Coming soon placeholder */}
           <div className="mt-16 text-center space-y-4">
             <p className="text-muted-foreground font-body text-sm">
-              🌏 Mais guias em breve — Bangkok, ilhas do sul, norte da Tailândia e muito mais.
+              🌏 Mais experiências em breve — Bangkok, ilhas do sul, norte da Tailândia e muito mais.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-6 text-xs text-muted-foreground font-body">
               <span>✅ Pagamento 100% seguro</span>
