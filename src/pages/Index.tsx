@@ -53,6 +53,38 @@ const guides: GuideCard[] = [
     highlight: "Evite armadilhas que custam caro",
     viewers: 14,
   },
+  {
+    title: "Guia Muay Thai na Tailândia",
+    subtitle: "Treine no lugar certo, pelo preço certo",
+    description:
+      "Descubra exatamente onde treinar, quanto custa, como chegar e roteiros prontos para cada nível. Não caia em armadilhas turísticas.",
+    path: "/muaythai",
+    emoji: "🥊",
+    badge: "🔥 POPULAR",
+    image: "/src/assets/muay-thai-hero.jpg",
+    urgency: "Últimas horas — 51% de desconto!",
+    socialProof: "1.800+ lutadores já compraram",
+    originalPrice: "R$ 197",
+    price: "R$ 97",
+    highlight: "3.000+ academias mapeadas",
+    viewers: 42,
+  },
+  {
+    title: "Guia Trilhas Tailândia",
+    subtitle: "30+ Trekkings, Roteiros e Custos Reais",
+    description:
+      "Saia da rota turística comum e descubra a Tailândia real. 30+ trilhas testadas, roteiros por nível e custos detalhados para experiências inesquecíveis.",
+    path: "/guiatrilhasthai",
+    emoji: "🥾",
+    badge: "⚡ LANÇAMENTO",
+    image: "/src/assets/trilhas/hero-trekking.jpg",
+    urgency: "Oferta de lançamento: 50% de desconto acaba hoje!",
+    socialProof: "1.400+ trilheiros já compraram",
+    originalPrice: "R$ 197",
+    price: "R$ 97",
+    highlight: "30+ trilhas exclusivas testadas",
+    viewers: 8,
+  },
 ];
 
 const LiveViewers = ({ base }: { base: number }) => {
@@ -130,7 +162,7 @@ const Index = () => {
             Cada guia foi criado para resolver problemas reais que viajantes enfrentam. Clique para saber mais.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {guides.map((guide) => (
               <Link
                 key={guide.path}
