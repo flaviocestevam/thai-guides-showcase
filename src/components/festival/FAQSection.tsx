@@ -1,3 +1,4 @@
+import { StructuredData } from "@/components/StructuredData";
 import {
   Accordion,
   AccordionContent,
@@ -16,35 +17,51 @@ const faqs = [
   { q: "E se eu não gostar do guia?", a: "Você tem 7 dias de garantia incondicional. Se por qualquer motivo não ficar satisfeito, devolvemos 100% do seu dinheiro. Sem perguntas, sem burocracia. O risco é ZERO." },
 ];
 
-const FAQSection = () => (
-  <section className="py-20 md:py-28 px-4">
-    <div className="max-w-3xl mx-auto">
-      <h2 className="text-3xl md:text-5xl font-display font-bold text-center mb-4">
-        Perguntas{" "}
-        <span className="text-gradient-gold">Frequentes</span>
-      </h2>
-      <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12 font-body">
-        Tire todas as suas dúvidas antes de garantir o seu guia.
-      </p>
+const FAQSection = () => {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.q,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.a
+      }
+    }))
+  };
 
-      <Accordion type="single" collapsible className="space-y-3">
-        {faqs.map((faq, i) => (
-          <AccordionItem
-            key={i}
-            value={`faq-${i}`}
-            className="bg-card border-glow rounded-xl px-6 border-b-0"
-          >
-            <AccordionTrigger className="font-display font-semibold text-left text-base hover:no-underline hover:text-primary transition-colors">
-              {faq.q}
-            </AccordionTrigger>
-            <AccordionContent className="text-muted-foreground font-body text-sm leading-relaxed">
-              {faq.a}
-            </AccordionContent>
-          </AccordionItem>
-        ))}
-      </Accordion>
-    </div>
-  </section>
-);
+  return (
+    <section className="py-20 md:py-28 px-4">
+      <StructuredData data={faqSchema} />
+      <div className="max-w-3xl mx-auto">
+        <h2 className="text-3xl md:text-5xl font-display font-bold text-center mb-4">
+          Perguntas{" "}
+          <span className="text-gradient-gold">Frequentes</span>
+        </h2>
+        <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12 font-body">
+          Tire todas as suas dúvidas antes de garantir o seu guia.
+        </p>
+
+        <Accordion type="single" collapsible className="space-y-3">
+          {faqs.map((faq, i) => (
+            <AccordionItem
+              key={i}
+              value={`faq-${i}`}
+              className="bg-card border-glow rounded-xl px-6 border-b-0"
+            >
+              <AccordionTrigger className="font-display font-semibold text-left text-base hover:no-underline hover:text-primary transition-colors">
+                {faq.q}
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground font-body text-sm leading-relaxed">
+                {faq.a}
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
+      </div>
+    </section>
+  );
+};
 
 export default FAQSection;
