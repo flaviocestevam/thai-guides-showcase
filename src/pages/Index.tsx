@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
-import { MapPin, ArrowRight, Users, Star, Clock, TrendingUp, ShieldCheck, Flame } from "lucide-react";
+import { MapPin, ArrowRight, Users, Star, Clock, TrendingUp, ShieldCheck, Flame, BookOpen, CheckCircle2, DollarSign, HeartHandshake } from "lucide-react";
 import { useState, useEffect } from "react";
+import { SEO } from "@/components/SEO";
+import { StructuredData } from "@/components/StructuredData";
 import heroImg from "@/assets/hero-lanterns.jpg";
 import elephantImg from "@/assets/hero-elephants.jpg";
 
@@ -125,10 +127,34 @@ const LiveViewers = ({ base }: { base: number }) => {
 };
 
 const Index = () => {
+  const webSiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Guia Tailândia para Brasileiros",
+    "url": "https://guiastailandia.com.br/",
+    "description": "Guias completos e experiências autênticas na Tailândia para viajantes brasileiros."
+  };
+
+  const orgSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Guia Tailândia",
+    "url": "https://guiastailandia.com.br/",
+    "logo": "https://guiastailandia.com.br/logo.png"
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Guias de Viagem Tailândia — Explore como um Local"
+        description="Encontre os melhores guias de viagem para a Tailândia. Festival das Lanternas, Muay Thai, Santuários de Elefantes, Trilhas e Vida Noturna. Planeje sua viagem sem perrengues."
+        canonicalPath="/"
+      />
+      <StructuredData data={webSiteSchema} />
+      <StructuredData data={orgSchema} />
+
       {/* Hero */}
-      <section className="relative py-20 md:py-32 px-4 overflow-hidden">
+      <header className="relative py-20 md:py-32 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent pointer-events-none" />
         <div className="relative z-10 max-w-5xl mx-auto text-center space-y-6">
           <span className="inline-flex items-center gap-2 bg-primary/15 border-glow text-primary font-body font-semibold text-sm px-5 py-2 rounded-full tracking-wider uppercase">
@@ -158,133 +184,201 @@ const Index = () => {
             </span>
           </div>
         </div>
-      </section>
+      </header>
 
       {/* Urgency Banner */}
-      <div className="bg-destructive/10 border-y border-destructive/20 py-3 px-4">
+      <aside className="bg-destructive/10 border-y border-destructive/20 py-3 px-4">
         <p className="text-center font-body text-sm text-foreground max-w-3xl mx-auto">
           <Flame className="w-4 h-4 inline text-destructive mr-1" />
           <strong>Oferta por tempo limitado:</strong> preços especiais de lançamento podem acabar a qualquer momento. Garanta seu acesso agora!
         </p>
-      </div>
+      </aside>
 
-      {/* Sales Pages Grid */}
-      <section className="px-4 py-16 md:py-24">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-display font-bold text-center mb-4">
-            Escolha sua <span className="text-gradient-gold">experiência</span>
-          </h2>
-          <p className="text-muted-foreground text-center font-body mb-12 max-w-xl mx-auto">
-            Cada página de venda oferece uma solução completa para problemas reais que viajantes enfrentam. Clique para saber mais.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            {salesPages.map((page) => (
-              <Link
-                key={page.path}
-                to={page.path}
-                className="group bg-card border-glow rounded-2xl overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:glow-gold relative"
-              >
-                {/* Card Image / Emoji Fallback */}
-                <div className="relative h-48 md:h-56 bg-gradient-card flex items-center justify-center overflow-hidden">
-                  {page.image ? (
-                    <img
-                      src={page.image}
-                      alt={page.title}
-                      className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-300"
-                    />
-                  ) : (
-                    <span className="text-7xl md:text-8xl opacity-60 group-hover:opacity-90 transition-opacity duration-300">
-                      {page.emoji}
-                    </span>
-                  )}
-
-                  {page.badge && (
-                    <span className="absolute top-4 right-4 bg-primary text-primary-foreground font-body font-bold text-xs px-3 py-1.5 rounded-full pulse-glow">
-                      {page.badge}
-                    </span>
-                  )}
-
-                  {/* Live viewers */}
-                  <div className="absolute bottom-4 left-4 bg-background/80 backdrop-blur-sm rounded-full px-3 py-1.5">
-                    <LiveViewers base={page.viewers ?? 10} />
-                  </div>
+      {/* Main Content Sections for SEO & UX */}
+      <main>
+        {/* Who is it for */}
+        <section className="py-16 md:py-24 px-4 bg-primary/5">
+          <div className="max-w-5xl mx-auto text-center space-y-12">
+            <h2 className="text-3xl md:text-4xl font-display font-bold">Para quem são estes <span className="text-gradient-gold">guias?</span></h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="p-6 bg-card rounded-2xl border-glow">
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Clock className="text-primary" />
                 </div>
-
-                {/* Card Content */}
-                <div className="p-6 md:p-8 space-y-3">
-                  <div className="flex items-start gap-3">
-                    <span className="text-2xl">{page.emoji}</span>
-                    <div>
-                      <h3 className="text-xl md:text-2xl font-display font-bold group-hover:text-primary transition-colors">
-                        {page.title}
-                      </h3>
-                      <p className="text-sm text-muted-foreground font-body">
-                        {page.subtitle}
-                      </p>
-                    </div>
-                  </div>
-
-                  <p className="text-muted-foreground font-body text-sm leading-relaxed">
-                    {page.description}
-                  </p>
-
-                  {/* Urgency trigger */}
-                  <div className="bg-destructive/10 rounded-lg px-3 py-2 flex items-center gap-2">
-                    <Clock className="w-4 h-4 text-destructive flex-shrink-0" />
-                    <p className="text-xs font-body text-destructive font-semibold">
-                      {page.urgency}
-                    </p>
-                  </div>
-
-                  {/* Social proof + price */}
-                  <div className="flex items-center justify-between pt-2">
-                    <div className="space-y-1">
-                      <p className="text-xs text-muted-foreground font-body flex items-center gap-1">
-                        <Users className="w-3 h-3" /> {page.socialProof}
-                      </p>
-                      <p className="font-body text-xs">
-                        {page.originalPrice !== "R$ 0" && (
-                          <span className="line-through text-muted-foreground mr-1">{page.originalPrice}</span>
-                        )}
-                        <span className="text-lg font-display font-black text-gradient-gold">{page.price}</span>
-                      </p>
-                    </div>
-                    <div className="flex items-center gap-2 text-primary font-body font-semibold text-sm group-hover:gap-3 transition-all">
-                      Saiba mais
-                      <ArrowRight className="w-4 h-4" />
-                    </div>
-                  </div>
-
-                  {/* Highlight */}
-                  <div className="flex items-center gap-2 bg-primary/10 rounded-lg px-3 py-2">
-                    <TrendingUp className="w-4 h-4 text-primary flex-shrink-0" />
-                    <p className="text-xs font-body text-primary font-semibold">
-                      {page.highlight}
-                    </p>
-                  </div>
+                <h3 className="text-xl font-bold mb-2">Quem tem pouco tempo</h3>
+                <p className="text-muted-foreground text-sm">Não perca horas em fóruns. Receba roteiros prontos e testados.</p>
+              </div>
+              <div className="p-6 bg-card rounded-2xl border-glow">
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <HeartHandshake className="text-primary" />
                 </div>
-              </Link>
-            ))}
-          </div>
-
-          {/* Coming soon placeholder */}
-          <div className="mt-16 text-center space-y-4">
-            <p className="text-muted-foreground font-body text-sm">
-              🌏 Mais experiências em breve — Bangkok, ilhas do sul, norte da Tailândia e muito mais.
-            </p>
-            <div className="flex flex-wrap items-center justify-center gap-6 text-xs text-muted-foreground font-body">
-              <span>✅ Pagamento 100% seguro</span>
-              <span>✅ Entrega imediata</span>
-              <span>✅ Garantia incondicional de 7 dias</span>
+                <h3 className="text-xl font-bold mb-2">Viajantes éticos</h3>
+                <p className="text-muted-foreground text-sm">Saiba onde ir para apoiar causas reais e evitar maus-tratos animais.</p>
+              </div>
+              <div className="p-6 bg-card rounded-2xl border-glow">
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <DollarSign className="text-primary" />
+                </div>
+                <h3 className="text-xl font-bold mb-2">Quem quer economizar</h3>
+                <p className="text-muted-foreground text-sm">Evite armadilhas para turistas e economize milhares de reais.</p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+
+        {/* Sales Pages Grid */}
+        <section className="px-4 py-16 md:py-24" id="guias">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-center mb-4">
+              Escolha sua <span className="text-gradient-gold">experiência</span>
+            </h2>
+            <p className="text-muted-foreground text-center font-body mb-12 max-w-xl mx-auto">
+              Cada página de venda oferece uma solução completa para problemas reais que viajantes enfrentam na Tailândia.
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+              {salesPages.map((page) => (
+                <article key={page.path}>
+                  <Link
+                    to={page.path}
+                    className="group flex flex-col h-full bg-card border-glow rounded-2xl overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:glow-gold relative"
+                  >
+                    {/* Card Image / Emoji Fallback */}
+                    <div className="relative h-48 md:h-56 bg-gradient-card flex items-center justify-center overflow-hidden">
+                      {page.image ? (
+                        <img
+                          src={page.image}
+                          alt={`Imagem ilustrativa de ${page.title}`}
+                          className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-300"
+                        />
+                      ) : (
+                        <span className="text-7xl md:text-8xl opacity-60 group-hover:opacity-90 transition-opacity duration-300">
+                          {page.emoji}
+                        </span>
+                      )}
+
+                      {page.badge && (
+                        <span className="absolute top-4 right-4 bg-primary text-primary-foreground font-body font-bold text-xs px-3 py-1.5 rounded-full pulse-glow">
+                          {page.badge}
+                        </span>
+                      )}
+
+                      {/* Live viewers */}
+                      <div className="absolute bottom-4 left-4 bg-background/80 backdrop-blur-sm rounded-full px-3 py-1.5">
+                        <LiveViewers base={page.viewers ?? 10} />
+                      </div>
+                    </div>
+
+                    {/* Card Content */}
+                    <div className="p-6 md:p-8 space-y-3 flex-grow flex flex-col">
+                      <div className="flex items-start gap-3">
+                        <span className="text-2xl" role="img" aria-label="ícone">{page.emoji}</span>
+                        <div>
+                          <h3 className="text-xl md:text-2xl font-display font-bold group-hover:text-primary transition-colors">
+                            {page.title}
+                          </h3>
+                          <p className="text-sm text-muted-foreground font-body">
+                            {page.subtitle}
+                          </p>
+                        </div>
+                      </div>
+
+                      <p className="text-muted-foreground font-body text-sm leading-relaxed flex-grow">
+                        {page.description}
+                      </p>
+
+                      {/* Urgency trigger */}
+                      <div className="bg-destructive/10 rounded-lg px-3 py-2 flex items-center gap-2">
+                        <Clock className="w-4 h-4 text-destructive flex-shrink-0" />
+                        <p className="text-xs font-body text-destructive font-semibold">
+                          {page.urgency}
+                        </p>
+                      </div>
+
+                      {/* Social proof + price */}
+                      <div className="flex items-center justify-between pt-2">
+                        <div className="space-y-1">
+                          <p className="text-xs text-muted-foreground font-body flex items-center gap-1">
+                            <Users className="w-3 h-3" /> {page.socialProof}
+                          </p>
+                          <p className="font-body text-xs">
+                            {page.originalPrice !== "R$ 0" && (
+                              <span className="line-through text-muted-foreground mr-1">{page.originalPrice}</span>
+                            )}
+                            <span className="text-lg font-display font-black text-gradient-gold">{page.price}</span>
+                          </p>
+                        </div>
+                        <div className="flex items-center gap-2 text-primary font-body font-semibold text-sm group-hover:gap-3 transition-all">
+                          Ver Detalhes
+                          <ArrowRight className="w-4 h-4" />
+                        </div>
+                      </div>
+
+                      {/* Highlight */}
+                      <div className="flex items-center gap-2 bg-primary/10 rounded-lg px-3 py-2">
+                        <TrendingUp className="w-4 h-4 text-primary flex-shrink-0" />
+                        <p className="text-xs font-body text-primary font-semibold">
+                          {page.highlight}
+                        </p>
+                      </div>
+                    </div>
+                  </Link>
+                </article>
+              ))}
+            </div>
+
+            {/* Coming soon placeholder */}
+            <div className="mt-16 text-center space-y-4">
+              <p className="text-muted-foreground font-body text-sm">
+                🌏 Mais experiências em breve — Bangkok, ilhas do sul, norte da Tailândia e muito mais.
+              </p>
+              <div className="flex flex-wrap items-center justify-center gap-6 text-xs text-muted-foreground font-body">
+                <span className="flex items-center gap-1"><CheckCircle2 className="w-3 h-3 text-primary" /> Pagamento 100% seguro</span>
+                <span className="flex items-center gap-1"><CheckCircle2 className="w-3 h-3 text-primary" /> Entrega imediata</span>
+                <span className="flex items-center gap-1"><CheckCircle2 className="w-3 h-3 text-primary" /> Garantia incondicional de 7 dias</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-16 md:py-24 px-4 bg-primary/5">
+          <div className="max-w-4xl mx-auto space-y-12">
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-center">Por que nossos <span className="text-gradient-gold">viajantes confiam?</span></h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+              <div className="flex gap-4">
+                <div className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center shrink-0">
+                  <CheckCircle2 className="text-primary" />
+                </div>
+                <div>
+                  <h4 className="font-bold">Informação em Português</h4>
+                  <p className="text-sm text-muted-foreground">Tudo detalhado na sua língua, por quem conhece a cultura local.</p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <div className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center shrink-0">
+                  <BookOpen className="text-primary" />
+                </div>
+                <div>
+                  <h4 className="font-bold">Roteiros Passo a Passo</h4>
+                  <p className="text-sm text-muted-foreground">Não te damos só a lista, te dizemos como chegar e o que fazer.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
 
       {/* Footer */}
-      <footer className="py-8 text-center text-muted-foreground text-xs font-body border-t border-border">
-        <p>© Thailand Guides. Todos os direitos reservados.</p>
+      <footer className="py-12 text-center text-muted-foreground text-xs font-body border-t border-border">
+        <div className="max-w-5xl mx-auto px-4 space-y-4">
+          <p>© Thailand Guides & Guia Tailândia para Brasileiros. Todos os direitos reservados.</p>
+          <div className="flex justify-center gap-6">
+            <Link to="/" className="hover:text-primary">Home</Link>
+            <Link to="/festivaldaslanternas" className="hover:text-primary">Festival das Lanternas</Link>
+            <Link to="/muaythai" className="hover:text-primary">Muay Thai</Link>
+          </div>
+        </div>
       </footer>
     </div>
   );
