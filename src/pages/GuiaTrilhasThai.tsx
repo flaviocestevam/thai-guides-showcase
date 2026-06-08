@@ -938,14 +938,17 @@ const GuiaTrilhasThai = () => {
         </div>
       </section>
 
-      {/* FOOTER */}
-      <footer className="py-8 px-6 bg-forest-dark border-t border-elephant-border/30 text-center">
-        <p className="text-elephant-cream/50 text-sm">
-          © {new Date().getFullYear()} Guia Trilhas Tailândia. Todos os direitos reservados.
-        </p>
-      </footer>
+      <ConversionBlock 
+        title="Explore a Tailândia que ninguém vê"
+        subtitle="Saia do roteiro comum. Receba 30+ trilhas detalhadas com mapas e custos reais."
+      />
+      <InternalLinksSection currentPath="/guiatrilhasthai" />
+      <BackToHomeFooter />
+      </main>
+      <Footer />
     </div>
   );
 };
 
 export default GuiaTrilhasThai;
+
