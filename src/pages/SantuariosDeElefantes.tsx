@@ -817,14 +817,17 @@ const SantuariosDeElefantes = () => {
         </div>
       </section>
 
-      {/* FOOTER */}
-      <footer className="py-8 px-6 bg-forest-dark border-t border-elephant-border text-center">
-        <p className="text-elephant-cream/50 text-sm">
-          © 2026 Guia Santuários de Elefantes na Tailândia. Todos os direitos reservados.
-        </p>
-      </footer>
+      <ConversionBlock 
+        title="Garanta sua experiência ética"
+        subtitle="Não arrisque financiar maus-tratos. Saiba exatamente onde ir com nosso guia testado."
+      />
+      <InternalLinksSection currentPath="/santuariosdeelefantes" />
+      <BackToHomeFooter />
+      </main>
+      <Footer />
     </div>
   );
 };
 
 export default SantuariosDeElefantes;
+
