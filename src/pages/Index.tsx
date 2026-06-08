@@ -53,6 +53,22 @@ const guides: GuideCard[] = [
     highlight: "Evite armadilhas que custam caro",
     viewers: 14,
   },
+  {
+    title: "Guia Trilhas Tailândia",
+    subtitle: "30+ Trekkings, Roteiros e Custos Reais",
+    description:
+      "Saia da rota turística comum e descubra a Tailândia real. 30+ trilhas testadas, roteiros por nível e custos detalhados para experiências inesquecíveis.",
+    path: "/guiatrilhasthai",
+    emoji: "🥾",
+    badge: "⚡ LANÇAMENTO",
+    image: "/src/assets/trilhas/hero-trekking.jpg",
+    urgency: "Oferta de lançamento: 50% de desconto acaba hoje!",
+    socialProof: "1.400+ trilheiros já compraram",
+    originalPrice: "R$ 197",
+    price: "R$ 97",
+    highlight: "30+ trilhas exclusivas testadas",
+    viewers: 8,
+  },
 ];
 
 const LiveViewers = ({ base }: { base: number }) => {
