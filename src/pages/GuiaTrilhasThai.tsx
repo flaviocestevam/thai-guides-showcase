@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import { SEO } from "@/components/SEO";
+import { StructuredData } from "@/components/StructuredData";
 import {
   Check, Shield, Clock, Star, MapPin, AlertTriangle, ChevronDown,
   Users, BookOpen, Zap, Heart, ArrowRight, TrendingUp, X,
