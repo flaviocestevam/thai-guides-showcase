@@ -1,6 +1,8 @@
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft, MapPin, Calendar, DollarSign } from "lucide-react";
 import { cityDetails } from "@/data/cityDetails";
+import { SEO } from "@/components/SEO";
+import { StructuredData } from "@/components/StructuredData";
 
 const CityPage = () => {
   const { cityId } = useParams<{ cityId: string }>();
@@ -17,13 +19,44 @@ const CityPage = () => {
     );
   }
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://guiastailandia.com.br/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Guia de Festas",
+        "item": "https://guiastailandia.com.br/festas"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": city.name,
+        "item": `https://guiastailandia.com.br/festas/${cityId}`
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <SEO 
+        title={`Vida Noturna em ${city.name} — Guia de Festas`}
+        description={`Descubra a melhor vida noturna em ${city.name}: os melhores bares, clubes, preços e dicas de quem conhece a Tailândia.`}
+        canonicalPath={`/festas/${cityId}`}
+      />
+      <StructuredData data={breadcrumbSchema} />
       {/* Hero */}
       <section className="relative h-[60vh] md:h-[70vh] flex items-end overflow-hidden">
         <img
           src={city.image}
-          alt={`Nightlife in ${city.name}`}
+          alt={`Vida noturna e baladas em ${city.name}, Tailândia`}
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
