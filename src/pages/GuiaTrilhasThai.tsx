@@ -1,12 +1,18 @@
 import { useState, useEffect } from "react";
 import { SEO } from "@/components/SEO";
 import { StructuredData } from "@/components/StructuredData";
+import { Header } from "@/components/Header";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { Footer } from "@/components/Footer";
+import { BackToHome, BackToHomeFooter } from "@/components/NavigationButtons";
+import { InternalLinksSection, ConversionBlock } from "@/components/ConversionSections";
 import {
   Check, Shield, Clock, Star, MapPin, AlertTriangle, ChevronDown,
   Users, BookOpen, Zap, Heart, ArrowRight, TrendingUp, X,
   Quote, Sparkles, Ban, CircleCheck, Mountain, Compass, Map as MapIcon,
   Camera, Footprints, Calendar,
 } from "lucide-react";
+
 import heroTrekking from "@/assets/trilhas/hero-trekking.jpg";
 import krabiRailay from "@/assets/trilhas/krabi-railay-lagoon.jpg";
 import kohPhiPhi from "@/assets/trilhas/koh-phi-phi.jpg";
@@ -279,11 +285,18 @@ const GuiaTrilhasThai = () => {
         canonicalPath="/guiatrilhasthai"
       />
       <StructuredData data={productSchema} />
-      <StickyUrgencyBar />
-      <SocialProofPopup />
-      <FloatingBottomCTA />
+      <Header />
+      <main className="pt-20">
+        <Breadcrumbs />
+        <div className="max-w-7xl mx-auto px-4">
+          <BackToHome />
+        </div>
+        <StickyUrgencyBar />
+        <SocialProofPopup />
+        <FloatingBottomCTA />
 
-      {/* HERO */}
+        {/* HERO */}
+
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <img src={heroTrekking} alt="Trilha de trekking na selva tailandesa" className="absolute inset-0 w-full h-full object-cover" width={1920} height={1080} />
         <div className="absolute inset-0 bg-gradient-to-b from-forest-dark/85 via-forest-dark/60 to-forest-dark/95" />
@@ -925,14 +938,17 @@ const GuiaTrilhasThai = () => {
         </div>
       </section>
 
-      {/* FOOTER */}
-      <footer className="py-8 px-6 bg-forest-dark border-t border-elephant-border/30 text-center">
-        <p className="text-elephant-cream/50 text-sm">
-          © {new Date().getFullYear()} Guia Trilhas Tailândia. Todos os direitos reservados.
-        </p>
-      </footer>
+      <ConversionBlock 
+        title="Explore a Tailândia que ninguém vê"
+        subtitle="Saia do roteiro comum. Receba 30+ trilhas detalhadas com mapas e custos reais."
+      />
+      <InternalLinksSection currentPath="/guiatrilhasthai" />
+      <BackToHomeFooter />
+      </main>
+      <Footer />
     </div>
   );
 };
 
 export default GuiaTrilhasThai;
+

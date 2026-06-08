@@ -1,5 +1,10 @@
 import { SEO } from "@/components/SEO";
 import { StructuredData } from "@/components/StructuredData";
+import { Header } from "@/components/Header";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { Footer } from "@/components/Footer";
+import { BackToHome, BackToHomeFooter } from "@/components/NavigationButtons";
+import { InternalLinksSection, ConversionBlock } from "@/components/ConversionSections";
 import HeroSection from "@/components/festival/HeroSection";
 import SocialProofPopup from "@/components/festival/SocialProofPopup";
 import VideoSection from "@/components/festival/VideoSection";
@@ -18,6 +23,7 @@ import FinalCTASection from "@/components/festival/FinalCTASection";
 import TargetAudienceSection from "@/components/festival/TargetAudienceSection";
 import FloatingCTA from "@/components/festival/FloatingCTA";
 
+
 const FestivalDasLanternas = () => {
   const productSchema = {
     "@context": "https://schema.org",
@@ -35,27 +41,42 @@ const FestivalDasLanternas = () => {
         canonicalPath="/festivaldaslanternas"
       />
       <StructuredData data={productSchema} />
-      <HeroSection />
-      <CountdownTimer />
-      <VideoSection />
-      <FeaturesSection />
-      <TargetAudienceSection />
-      <PainSection />
-      <RiskSection />
-      <ComparisonSection />
-      <AuthoritySection />
-      <ContentSection />
-      <BonusSection />
-      <TestimonialsSection />
-      <PricingSection />
-      <FAQSection />
-      <FinalCTASection />
-
-      <footer className="py-8 text-center text-muted-foreground text-xs font-body border-t border-border pb-20">
-        <p>© Guias da Tailândia. Todos os direitos reservados.</p>
-      </footer>
+      <Header />
+      <main className="pt-20">
+        <Breadcrumbs />
+        <div className="max-w-7xl mx-auto px-4">
+          <BackToHome />
+        </div>
+        <HeroSection />
+        <ConversionBlock 
+          title="Quer economizar até R$ 800?" 
+          subtitle="No nosso guia você descobre como comprar ingressos oficiais e evitar armadilhas que custam caro."
+        />
+        <CountdownTimer />
+        <VideoSection />
+        <FeaturesSection />
+        <TargetAudienceSection />
+        <PainSection />
+        <RiskSection />
+        <ComparisonSection />
+        <AuthoritySection />
+        <ConversionBlock 
+          title="Tudo o que você precisa em um só lugar"
+          subtitle="O passo a passo completo de Bangkok a Chiang Mai, onde se hospedar e como se locomover."
+        />
+        <ContentSection />
+        <BonusSection />
+        <TestimonialsSection />
+        <PricingSection />
+        <FAQSection />
+        <FinalCTASection />
+        <InternalLinksSection currentPath="/festivaldaslanternas" />
+        <BackToHomeFooter />
+      </main>
+      <Footer />
       <SocialProofPopup />
       <FloatingCTA />
+
     </div>
   );
 };

@@ -1,10 +1,16 @@
 import { SEO } from "@/components/SEO";
 import { StructuredData } from "@/components/StructuredData";
+import { Header } from "@/components/Header";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { Footer } from "@/components/Footer";
+import { BackToHome, BackToHomeFooter } from "@/components/NavigationButtons";
+import { InternalLinksSection, ConversionBlock } from "@/components/ConversionSections";
 import { ArrowDown } from "lucide-react";
 import heroImg from "@/assets/festas/hero-thailand.jpg";
 import { cities, survivalTips } from "@/data/festas";
 import CityCard from "@/components/festas/CityCard";
 import TipCard from "@/components/festas/TipCard";
+
 
 const Festas = () => {
   return (
@@ -14,7 +20,15 @@ const Festas = () => {
         description="Onde sair na Tailândia? Guia completo com as melhores festas, baladas e dicas de sobrevivência em 7 cidades incríveis."
         canonicalPath="/festas"
       />
-      {/* Hero */}
+      {/* Header */}
+      <Header />
+      <main className="pt-20">
+        <Breadcrumbs />
+        <div className="max-w-7xl mx-auto px-4">
+          <BackToHome />
+        </div>
+        {/* Hero */}
+
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <img
           src={heroImg}
@@ -81,19 +95,17 @@ const Festas = () => {
         </section>
       </main>
 
-      {/* Footer */}
-      <footer className="border-t border-border py-12 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h3 className="text-2xl font-display font-bold mb-2">
-            Guia de Festas na Tailândia
-          </h3>
-          <p className="text-sm text-muted-foreground">
-            Feito com 🔥 para quem quer viver a melhor vida noturna do Sudeste Asiático
-          </p>
-        </div>
-      </footer>
+      <ConversionBlock 
+        title="Quer aproveitar a noite sem perrengues?"
+        subtitle="Nosso guia te ensina a evitar ciladas comuns e aproveitar o melhor de 7 cidades."
+      />
+      <InternalLinksSection currentPath="/festas" />
+      <BackToHomeFooter />
+      </main>
+      <Footer />
     </div>
   );
 };
+
 
 export default Festas;

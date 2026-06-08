@@ -1,6 +1,12 @@
 import { SEO } from "@/components/SEO";
 import { StructuredData } from "@/components/StructuredData";
+import { Header } from "@/components/Header";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { Footer } from "@/components/Footer";
+import { BackToHome, BackToHomeFooter } from "@/components/NavigationButtons";
+import { InternalLinksSection, ConversionBlock } from "@/components/ConversionSections";
 import { Check, Shield, Clock, Star, MapPin, AlertTriangle, ChevronDown, Users, BookOpen, Zap, Heart, ArrowRight, Eye, TrendingUp, X, ThumbsDown, ThumbsUp, Quote, Sparkles, Ban, CircleCheck } from "lucide-react";
+
 import { useState, useEffect, useCallback } from "react";
 
 const HERO_IMG = "https://guia-elefantes.lovable.app/assets/elephant_hero-DuOZkqXt.jpg";
@@ -284,11 +290,18 @@ const SantuariosDeElefantes = () => {
         canonicalPath="/santuariosdeelefantes"
       />
       <StructuredData data={productSchema} />
-      <StickyUrgencyBar />
-      <SocialProofPopup />
-      <FloatingBottomCTA />
+      <Header />
+      <main className="pt-20">
+        <Breadcrumbs />
+        <div className="max-w-7xl mx-auto px-4">
+          <BackToHome />
+        </div>
+        <StickyUrgencyBar />
+        <SocialProofPopup />
+        <FloatingBottomCTA />
 
-      {/* HERO */}
+        {/* HERO */}
+
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <img src={HERO_IMG} alt="Elefante em santuário na Tailândia" className="absolute inset-0 w-full h-full object-cover" width={1920} height={1080} />
         <div className="absolute inset-0 bg-gradient-to-b from-forest-dark/80 via-forest-dark/60 to-forest-dark/90" />
@@ -804,14 +817,17 @@ const SantuariosDeElefantes = () => {
         </div>
       </section>
 
-      {/* FOOTER */}
-      <footer className="py-8 px-6 bg-forest-dark border-t border-elephant-border text-center">
-        <p className="text-elephant-cream/50 text-sm">
-          © 2026 Guia Santuários de Elefantes na Tailândia. Todos os direitos reservados.
-        </p>
-      </footer>
+      <ConversionBlock 
+        title="Garanta sua experiência ética"
+        subtitle="Não arrisque financiar maus-tratos. Saiba exatamente onde ir com nosso guia testado."
+      />
+      <InternalLinksSection currentPath="/santuariosdeelefantes" />
+      <BackToHomeFooter />
+      </main>
+      <Footer />
     </div>
   );
 };
 
 export default SantuariosDeElefantes;
+
