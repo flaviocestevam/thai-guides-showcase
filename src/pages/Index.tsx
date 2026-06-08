@@ -5,6 +5,8 @@ import { SEO } from "@/components/SEO";
 import { StructuredData } from "@/components/StructuredData";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { Button } from "@/components/ui/button";
+
 
 import heroImg from "@/assets/hero-lanterns.jpg";
 import elephantImg from "@/assets/hero-elephants.jpg";
@@ -191,6 +193,13 @@ const Index = () => {
         </div>
       </header>
 
+      <section className="max-w-5xl mx-auto px-4 pb-12 text-center">
+        <Button asChild size="lg" className="rounded-full px-10 py-8 text-xl font-black shadow-2xl hover:scale-105 transition-transform bg-primary text-primary-foreground">
+          <a href="#guias">QUERO MEU GUIA AGORA</a>
+        </Button>
+      </section>
+
+
       {/* Urgency Banner */}
       <aside className="bg-destructive/10 border-y border-destructive/20 py-3 px-4">
         <p className="text-center font-body text-sm text-foreground max-w-3xl mx-auto">
@@ -346,6 +355,19 @@ const Index = () => {
           </div>
         </section>
 
+        <section className="py-16 px-4 text-center">
+          <div className="max-w-4xl mx-auto bg-primary/5 border border-primary/10 rounded-3xl p-8 md:p-12">
+            <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">Pronto para transformar sua viagem?</h2>
+            <p className="text-muted-foreground font-body mb-8 max-w-2xl mx-auto">
+              Não perca tempo com informações desatualizadas. Garanta agora seus guias completos e viaje com segurança.
+            </p>
+            <Button asChild size="lg" className="rounded-full px-10 py-8 text-xl font-black shadow-2xl hover:scale-105 transition-transform">
+              <a href="#guias">ESCOLHER MEU GUIA</a>
+            </Button>
+          </div>
+        </section>
+
+
         {/* Benefits Section */}
         <section className="py-16 md:py-24 px-4 bg-primary/5">
           <div className="max-w-4xl mx-auto space-y-12">
@@ -372,6 +394,28 @@ const Index = () => {
             </div>
           </div>
         </section>
+        
+        <section className="py-20 px-4 text-center bg-card border-t border-border" id="faq">
+           <div className="max-w-3xl mx-auto">
+             <h2 className="text-3xl md:text-4xl font-display font-bold mb-12">Dúvidas Frequentes</h2>
+             <div className="space-y-4 text-left">
+               <div className="p-6 bg-background rounded-2xl border border-border">
+                 <h4 className="font-bold mb-2">Como recebo o guia?</h4>
+                 <p className="text-muted-foreground text-sm">O acesso é imediato após a confirmação do pagamento via e-mail.</p>
+               </div>
+               <div className="p-6 bg-background rounded-2xl border border-border">
+                 <h4 className="font-bold mb-2">Por quanto tempo tenho acesso?</h4>
+                 <p className="text-muted-foreground text-sm">O acesso é vitalício, incluindo todas as atualizações futuras.</p>
+               </div>
+             </div>
+             <div className="mt-12">
+               <Button asChild size="lg" className="rounded-full px-10 py-8 text-xl font-black shadow-2xl hover:scale-105 transition-transform">
+                 <a href="#guias">QUERO MEU GUIA AGORA</a>
+               </Button>
+             </div>
+           </div>
+        </section>
+
       </main>
 
       <Footer />

@@ -17,11 +17,14 @@ export const Header = () => {
 
   const menuItems = [
     { label: "Home", path: "/" },
-    { label: "Roteiros", path: "/#guias" },
-    { label: "Destinos", path: "/#destinos" },
-    { label: "Bônus", path: "/#bonus" },
+    { label: "Festival", path: "/festivaldaslanternas" },
+    { label: "Elefantes", path: "/santuariosdeelefantes" },
+    { label: "Muay Thai", path: "/muaythai" },
+    { label: "Trilhas", path: "/guiatrilhasthai" },
+    { label: "Festas", path: "/festas" },
     { label: "FAQ", path: "/#faq" },
   ];
+
 
   return (
     <header
