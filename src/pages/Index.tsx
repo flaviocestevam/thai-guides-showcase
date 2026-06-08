@@ -47,11 +47,11 @@ const guides: GuideCard[] = [
     image: elephantImg,
     badge: "⚡ NOVO",
     urgency: "87% dos turistas visitam o santuário errado!",
-    socialProof: "1.800+ viajantes já compraram",
-    originalPrice: "R$ 147",
-    price: "R$ 37",
+    socialProof: "2.800+ viajantes já compraram",
+    originalPrice: "R$ 197",
+    price: "R$ 97",
     highlight: "Evite armadilhas que custam caro",
-    viewers: 14,
+    viewers: 37,
   },
   {
     title: "Guia Muay Thai na Tailândia",
@@ -84,6 +84,22 @@ const guides: GuideCard[] = [
     price: "R$ 97",
     highlight: "30+ trilhas exclusivas testadas",
     viewers: 8,
+  },
+  {
+    title: "Guia de Festas na Tailândia",
+    subtitle: "7 Cidades, Infinitas Noites",
+    description:
+      "Tudo que você precisa saber sobre as melhores festas, baladas e experiências noturnas. Bares, clubes e dicas de sobrevivência exclusivas.",
+    path: "/festas",
+    emoji: "🔥",
+    badge: "✨ COMPLETO",
+    image: "/src/assets/festas/hero-thailand.jpg",
+    urgency: "Saiba onde estão as melhores noites de 2025!",
+    socialProof: "Vivido por milhares de viajantes",
+    originalPrice: "R$ 0",
+    price: "GRÁTIS",
+    highlight: "Roteiro noturno por 7 cidades",
+    viewers: 15,
   },
 ];
 
