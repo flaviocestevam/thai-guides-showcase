@@ -111,6 +111,21 @@ const salesPages: ProductCard[] = [
     highlight: "Roteiro noturno por 7 cidades",
     viewers: 15,
   },
+  {
+    title: "Guia de Voluntariado",
+    subtitle: "Viva a Tailândia por dentro",
+    description:
+      "O guia completo em português para encontrar, se inscrever e se preparar para fazer voluntariado com elefantes, crianças ou comunidades.",
+    path: "/guia-voluntariado-tailandia",
+    emoji: "🌿",
+    badge: "✨ INÉDITO",
+    urgency: "Descubra como ajudar causas reais com segurança!",
+    socialProof: "Novidade para brasileiros",
+    originalPrice: "R$ 197",
+    price: "R$ 67",
+    highlight: "Modelos de inscrição inclusos",
+    viewers: 12,
+  },
 ];
 
 const LiveViewers = ({ base }: { base: number }) => {

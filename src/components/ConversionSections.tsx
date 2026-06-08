@@ -13,6 +13,7 @@ export const InternalLinksSection = ({ currentPath }: InternalLinksSectionProps)
     { label: "Muay Thai na Tailândia", path: "/muaythai", icon: "🥊" },
     { label: "Trilhas e Trekkings", path: "/guiatrilhasthai", icon: "🥾" },
     { label: "Guia de Festas", path: "/festas", icon: "🔥" },
+    { label: "Voluntariado", path: "/guia-voluntariado-tailandia", icon: "🌿" },
   ];
 
   const filteredLinks = links.filter(link => link.path !== currentPath);
