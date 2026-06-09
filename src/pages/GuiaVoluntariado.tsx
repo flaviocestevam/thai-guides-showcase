@@ -7,7 +7,7 @@ import {
   Check, Shield, Clock, ChevronDown, 
   BookOpen, Zap, ArrowRight, Sparkles, 
   CircleCheck, GraduationCap, PawPrint, Leaf, Home, 
-  Smile, Globe, Compass, AlertTriangle
+  Smile, Globe, Compass, AlertTriangle, X, Quote
 } from "lucide-react";
 import { useState } from "react";
 
@@ -227,53 +227,220 @@ const GuiaVoluntariado = () => {
           </div>
         </section>
 
-        {/* MANTENDO O RESTANTE PARA ETAPA POSTERIOR (PREÇO/FAQ ORIGINAIS) */}
-        {/* PRICING BLOCK - STANDARDIZED WITH SITE */}
-        <section className="py-24 px-4 bg-primary/5">
-          <div className="max-w-4xl mx-auto bg-card border border-primary/20 rounded-[2rem] overflow-hidden shadow-2xl relative">
-            <div className="absolute top-0 right-0 bg-primary text-primary-foreground px-10 py-2 font-bold text-sm rotate-0 translate-x-0">OFERTA DE LANÇAMENTO</div>
-            <div className="p-8 md:p-16 text-center">
-              <h2 className="text-3xl md:text-5xl font-display font-black mb-6">Guia Completo de Voluntariado</h2>
-              <div className="flex items-center justify-center gap-2 mb-8">
-                <span className="text-muted-foreground line-through text-xl">R$ 197</span>
-                <span className="text-5xl md:text-7xl font-black text-primary">R$ 67</span>
-              </div>
-              <p className="text-lg text-muted-foreground mb-10 max-w-xl mx-auto font-body">
-                Economize dezenas de horas de pesquisa e evite taxas desnecessárias de agências intermediárias.
-              </p>
-              <CTAButton large />
-              <p className="mt-8 text-sm text-muted-foreground font-semibold flex items-center justify-center gap-2 uppercase tracking-widest">
-                <Shield className="w-4 h-4" /> Pagamento Único · Acesso Vitalício
-              </p>
+        {/* 6. PARA QUEM É ESTE GUIA */}
+        <section className="py-24 px-4 bg-background">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-display font-bold mb-16 text-center">
+              Este guia é para você se...
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {[
+                { icon: "🙋", text: "Você sempre quis fazer algo significativo viajando, mas não sabia como transformar isso em realidade." },
+                { icon: "🐘", text: "Sonha em cuidar de elefantes de perto, mas quer ter certeza de que o projeto é ético." },
+                { icon: "✈️", text: "Está planejando uma viagem longa para a Tailândia e quer combinar turismo com uma experiência real." },
+                { icon: "📚", text: "Quer adicionar uma experiência internacional ao currículo ou portfólio." },
+                { icon: "🌍", text: "Está pensando em um ano sabático ou pausa na carreira e quer fazer isso com propósito." },
+                { icon: "💸", text: "Tem orçamento limitado e precisa entender exatamente quanto vai gastar antes de decidir." },
+                { icon: "🇧🇷", text: "É brasileiro, não fala inglês fluente e quer um conteúdo em português explicando tudo." }
+              ].map((item, i) => (
+                <div key={i} className="flex gap-4 items-start bg-card p-6 rounded-2xl border border-border shadow-sm">
+                  <span className="text-2xl">{item.icon}</span>
+                  <p className="text-foreground/90 font-body">{item.text}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* FAQ - EXTENDED */}
-        <section className="py-24 px-4">
+        {/* 7. PARA QUEM NÃO É */}
+        <section className="py-24 px-4 bg-muted/20">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-display font-bold mb-12">
+              Este guia não é para você se...
+            </h2>
+            <div className="max-w-2xl mx-auto space-y-4">
+              {[
+                "Você está buscando emprego remunerado na Tailândia. Voluntariado não é trabalho pago.",
+                "Você quer apenas um roteiro turístico genérico de Bangkok, Phuket ou ilhas.",
+                "Você não tem interesse em ajudar, respeitar a cultura local ou seguir regras do projeto."
+              ].map((text, i) => (
+                <div key={i} className="flex gap-4 items-center bg-card p-4 rounded-xl border border-border shadow-sm">
+                  <X className="w-5 h-5 text-destructive shrink-0" />
+                  <p className="text-muted-foreground font-body">{text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* 8. DEPOIMENTOS */}
+        <section className="py-24 px-4 bg-background">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-display font-bold mb-16 text-center">
+              Quem já foi conta
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="p-8 bg-card border border-border rounded-3xl shadow-lg relative">
+                <Quote className="w-10 h-10 text-primary/20 absolute top-6 right-6" />
+                <p className="text-muted-foreground italic mb-6 leading-relaxed relative z-10">
+                  “Eu tinha muita vontade de fazer voluntariado com elefantes, mas achava que era caro demais e complicado demais para organizar do Brasil. Com o guia entendi que era muito mais acessível do que eu imaginava. Fui por 3 semanas para Chiang Mai e foi a melhor experiência da minha vida.”
+                </p>
+                <div>
+                  <p className="font-bold text-lg">Marina S., São Paulo</p>
+                  <p className="text-primary text-sm font-semibold">Voluntária em Chiang Mai</p>
+                </div>
+              </div>
+
+              <div className="p-8 bg-card border border-border rounded-3xl shadow-lg relative">
+                <Quote className="w-10 h-10 text-primary/20 absolute top-6 right-6" />
+                <p className="text-muted-foreground italic mb-6 leading-relaxed relative z-10">
+                  “O que mais me travava era o medo de chegar lá e não saber o que fazer. O guia me deu segurança em cada etapa — do visto às vacinas, da inscrição ao primeiro dia no projeto. Não tive nenhuma surpresa negativa.”
+                </p>
+                <div>
+                  <p className="font-bold text-lg">Rodrigo M., Belo Horizonte</p>
+                  <p className="text-primary text-sm font-semibold">Voluntário em projeto de ensino</p>
+                </div>
+              </div>
+
+              <div className="p-8 bg-card border border-border rounded-3xl shadow-lg relative">
+                <Quote className="w-10 h-10 text-primary/20 absolute top-6 right-6" />
+                <p className="text-muted-foreground italic mb-6 leading-relaxed relative z-10">
+                  “Tentei pesquisar sozinho por meses e só encontrava sites em inglês cheios de taxas escondidas. O guia me mostrou como chegar direto nos projetos sem intermediário e economizei muito. Valeu cada centavo.”
+                </p>
+                <div>
+                  <p className="font-bold text-lg">Camila F., Rio de Janeiro</p>
+                  <p className="text-primary text-sm font-semibold">Voluntária em projeto ambiental em Koh Tao</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 9. GARANTIA */}
+        <section className="py-24 px-4 bg-primary/5 text-center">
+          <div className="max-w-4xl mx-auto">
+            <div className="inline-flex items-center justify-center p-4 bg-primary/10 rounded-full mb-8">
+              <Shield className="w-12 h-12 text-primary" />
+            </div>
+            <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">Garantia de 7 dias</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed font-body mb-8">
+              Se você comprar o guia, ler o conteúdo e achar que ele não vale o que pagou, basta enviar um e-mail em até 7 dias corridos após a compra e devolvemos 100% do seu dinheiro.
+            </p>
+            <p className="text-lg font-bold text-foreground font-body">
+              Sem burocracia. Sem perguntas.
+            </p>
+          </div>
+        </section>
+
+        {/* 10. BLOCO DE PREÇO */}
+        <section className="py-24 px-4 bg-background">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
+              Invista R$ 67 para não errar numa experiência que pode custar muito mais
+            </h2>
+            <p className="text-xl text-muted-foreground mb-12 font-body">
+              Menos que um jantar fora. Pagamento único. Acesso para sempre.
+            </p>
+
+            <div className="bg-card border border-primary/20 rounded-[2rem] overflow-hidden shadow-2xl relative text-left">
+              <div className="absolute top-0 right-0 bg-primary text-primary-foreground px-10 py-2 font-bold text-sm">OFERTA ESPECIAL</div>
+              <div className="p-8 md:p-12">
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 mb-12 border-b border-border pb-8">
+                  <div>
+                    <h3 className="text-2xl font-display font-bold mb-2">Guia Completo de Voluntariado na Tailândia</h3>
+                    <p className="text-muted-foreground font-body">Pagamento único, sem mensalidade.</p>
+                  </div>
+                  <div className="text-center md:text-right">
+                    <p className="text-muted-foreground line-through text-lg">R$ 197</p>
+                    <p className="text-5xl md:text-6xl font-black text-primary">R$ 67,00</p>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
+                  {[
+                    "Guia digital completo em PDF",
+                    "Explicação sobre tipos de voluntariado",
+                    "Plataformas e projetos para encontrar vagas",
+                    "Custos reais e simulações",
+                    "Checklist de documentos, vacinas e preparação",
+                    "Modelo de carta de motivação em inglês"
+                  ].map((item, i) => (
+                    <div key={i} className="flex gap-3 items-center">
+                      <CircleCheck className="w-5 h-5 text-primary shrink-0" />
+                      <span className="font-body font-medium">{item}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="text-center">
+                  <CTAButton large text="Quero o Guia Agora por R$ 67" />
+                  <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground font-semibold uppercase tracking-widest">
+                    <span className="flex items-center gap-2">🔒 Pagamento seguro</span>
+                    <span className="flex items-center gap-2">📲 Acesso imediato</span>
+                    <span className="flex items-center gap-2">💳 Cartão, Pix ou boleto</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 11. FAQ */}
+        <section className="py-24 px-4 bg-muted/20">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-display font-bold text-center mb-16">Dúvidas <span className="text-primary">Comuns</span></h2>
+            <h2 className="text-3xl font-display font-bold text-center mb-16">Dúvidas frequentes</h2>
             <div className="space-y-2">
               <FAQItem 
-                q="Como vou receber o guia?" 
-                a="Imediatamente após a confirmação do pagamento, você receberá um e-mail com o link de download do guia em PDF. Você poderá ler no celular, tablet ou computador." 
+                q="Como recebo o guia após a compra?" 
+                a="Imediatamente após a confirmação do pagamento, você recebe um e-mail com o link para download do PDF. O acesso é instantâneo, 24 horas por dia." 
               />
               <FAQItem 
-                q="Precisa falar inglês fluente?" 
-                a="Para a maioria dos projetos de animais e ambiente, o inglês básico/intermediário é suficiente para seguir instruções. No guia, fornecemos modelos de carta em inglês para te ajudar na inscrição." 
+                q="Precisa falar inglês para fazer voluntariado na Tailândia?" 
+                a="Não é obrigatório ter inglês fluente, mas é recomendado ter pelo menos inglês básico para se comunicar com a equipe local e outros voluntários internacionais. O guia inclui orientações para quem tem inglês limitado e um modelo de carta de motivação em inglês." 
               />
               <FAQItem 
-                q="Vou ter que pagar para ser voluntário?" 
-                a="Na Tailândia, projetos que oferecem alojamento e comida geralmente cobram uma taxa simbólica para cobrir seus custos operacionais. O guia explica como encontrar os projetos com as melhores taxas e como fugir de agências que cobram fortunas." 
+                q="Quanto tempo preciso ter disponível?" 
+                a="A maioria dos programas aceita voluntários a partir de 1 semana. O tempo ideal costuma ser de 2 a 4 semanas para ter uma experiência mais completa sem gastar tanto." 
               />
               <FAQItem 
-                q="O guia inclui as vacinas?" 
-                a="Sim! Temos um checklist completo de vacinas obrigatórias (como Febre Amarela) e recomendadas para brasileiros que viajam para áreas rurais da Tailândia." 
+                q="Precisa ter experiência prévia?" 
+                a="Na maioria dos programas, não. Muitos aceitam voluntários sem experiência, desde que a pessoa tenha disposição, respeito, responsabilidade e comprometimento." 
               />
               <FAQItem 
-                q="Tem suporte se eu tiver dúvidas?" 
-                a="Sim! Ao adquirir o guia, você terá acesso ao nosso canal de suporte por e-mail para tirar dúvidas pontuais sobre sua viagem e planejamento." 
+                q="Precisa de visto especial?" 
+                a="Depende do tempo de permanência e do tipo de programa. O guia explica quando a entrada como turista pode ser suficiente, quando é necessário verificar outro tipo de visto e quais cuidados tomar antes da viagem." 
               />
+              <FAQItem 
+                q="O guia funciona para qualquer tipo de voluntariado?" 
+                a="Sim. O guia cobre os principais tipos: animais e elefantes, crianças e ensino, meio ambiente e comunidades rurais." 
+              />
+              <FAQItem 
+                q="Tem garantia?" 
+                a="Sim. Você tem 7 dias de garantia. Se não ficar satisfeito, pode pedir o reembolso dentro do prazo." 
+              />
+              <FAQItem 
+                q="Posso fazer voluntariado em qualquer época do ano?" 
+                a="Muitos programas aceitam voluntários durante o ano inteiro, mas a melhor época pode variar conforme a região e o tipo de projeto. O guia explica esses detalhes." 
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* 12. CTA FINAL */}
+        <section className="py-24 px-4 bg-background text-center">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
+              Você está a um passo de uma experiência que pode mudar sua forma de viajar.
+            </h2>
+            <p className="text-xl text-muted-foreground mb-12 font-body max-w-2xl mx-auto">
+              Pare de pesquisar em círculos. Tenha tudo que precisa em português, num único lugar, por R$ 67.
+            </p>
+            <CTAButton large text="Quero o Guia Agora" />
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground font-semibold uppercase tracking-widest">
+              <span className="flex items-center gap-2">🔒 Compra segura</span>
+              <span className="flex items-center gap-2">📲 Acesso imediato</span>
+              <span className="flex items-center gap-2">💳 Cartão, Pix ou boleto</span>
+              <span className="flex items-center gap-2">✅ Garantia de 7 dias</span>
             </div>
           </div>
         </section>
