@@ -252,7 +252,9 @@ const Festas = () => {
 
       <ConversionBlock 
         title="Quer aproveitar a noite sem perrengues?"
-        subtitle="Nosso guia te ensina a evitar ciladas comuns e aproveitar o melhor de 7 cidades."
+        subtitle="Nosso guia te ensina a evitar ciladas comuns e aproveitar o melhor de 9 cidades."
+        ctaText="Garantir Meu Guia de Festas"
+        ctaLink="https://pay.kiwify.com.br/xxxxx" // Placeholder for actual sales link if different
       />
       <InternalLinksSection currentPath="/festas" />
       <BackToHomeFooter />
