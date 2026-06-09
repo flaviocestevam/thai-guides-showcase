@@ -20,6 +20,30 @@ const Festas = () => {
         description="Onde sair na Tailândia? Guia completo com as melhores festas, baladas e dicas de sobrevivência em 9 cidades incríveis."
         canonicalPath="/festas"
       />
+      <StructuredData data={{
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Guia de Festas na Tailândia",
+        "description": "Guia completo com as melhores festas, baladas e dicas de sobrevivência em 9 cidades incríveis da Tailândia.",
+        "breadcrumb": {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://guiastailandia.com.br/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Festas",
+              "item": "https://guiastailandia.com.br/festas"
+            }
+          ]
+        }
+      }} />
       {/* Header */}
       <Header />
       <main className="pt-20">
