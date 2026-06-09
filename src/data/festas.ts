@@ -14,7 +14,7 @@ export const cities: City[] = [
     tagline: "A capital que nunca dorme",
     fireLevel: 5,
     tags: ["Rooftop Bars", "Clubes de Elite", "Khao San Road"],
-    image: "/src/assets/festas/bangkok-nightlife.jpg",
+    image: "/src/assets/festas/bangkok-nightlife.jpg", // Corrected path
   },
   {
     id: "phuket",
