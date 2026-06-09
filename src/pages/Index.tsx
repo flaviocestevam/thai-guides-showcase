@@ -122,7 +122,7 @@ const salesPages: ProductCard[] = [
     urgency: "Descubra como ajudar causas reais com segurança!",
     socialProof: "Novidade para brasileiros",
     originalPrice: "R$ 197",
-    price: "R$ 67",
+    price: "R$ 97",
     highlight: "Modelos de inscrição inclusos",
     viewers: 12,
   },
