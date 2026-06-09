@@ -38,7 +38,7 @@ export const Header = () => {
       <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 group">
           <span className="text-xl md:text-2xl font-display font-black tracking-tighter">
-            GUIA <span className="text-primary group-hover:text-gradient-gold transition-all duration-300">TAILÂNDIA</span>
+            GUIAS <span className="text-primary group-hover:text-gradient-gold transition-all duration-300">TAILANDIA</span>
           </span>
         </Link>
 
