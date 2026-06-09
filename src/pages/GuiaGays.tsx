@@ -8,7 +8,7 @@ import { CTAButton } from "@/components/festival/CTAButton";
 import { Shield, Zap, RotateCcw, Check, X, MapPin, Hotel, Plane, Star, Clock, CheckCircle2, Heart, Smile, ShieldCheck, Globe, Navigation, MessageSquare } from "lucide-react";
 import heroImg from "@/assets/festas/bangkok-nightlife.jpg";
 import imageAfterPain from "@/assets/trilhas/koh-lipe-sunrise.jpg";
-import imageBeforePrice from "@/assets/festas/hero-thailand.jpg";
+import imageBeforePrice from "@/assets/hero-elephants.jpg";
 import imageFinalCTA from "@/assets/trilhas/phi-phi-bamboo.jpg";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 

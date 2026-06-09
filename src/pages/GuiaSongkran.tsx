@@ -7,7 +7,7 @@ import { CTAButton } from "@/components/festival/CTAButton";
 import { Shield, Zap, RotateCcw, Check, X, MapPin, Hotel, Calendar, Clock, CheckCircle2, ShieldCheck, Droplets, PartyPopper, Waves, Utensils, MessageSquare } from "lucide-react";
 import heroImg from "@/assets/festas/chiangmai-nightlife.jpg"; // Placeholder for Songkran (high energy)
 import imageAfterPain from "@/assets/festas/bangkok-nightlife.jpg";
-import imageBeforePrice from "@/assets/hero-thailand.jpg";
+import imageBeforePrice from "@/assets/hero-lanterns.jpg";
 import imageFinalCTA from "@/assets/trilhas/phi-phi-bamboo.jpg";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
