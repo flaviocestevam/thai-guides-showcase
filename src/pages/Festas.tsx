@@ -17,12 +17,12 @@ const Festas = () => {
     <div className="min-h-screen bg-background text-foreground">
       <SEO 
         title="Guia de Festas na Tailândia — Baladas e Noite"
-        description="Onde sair na Tailândia? Guia completo com as melhores festas, baladas e dicas de sobrevivência em 7 cidades incríveis."
+        description="Onde sair na Tailândia? Guia completo com as melhores festas, baladas e dicas de sobrevivência em 9 cidades incríveis."
         canonicalPath="/festas"
       />
       {/* Header */}
       <Header />
-      <main>
+      <main className="pt-20">
         <Breadcrumbs />
         <div className="max-w-7xl mx-auto px-4">
           <BackToHome />
@@ -58,8 +58,6 @@ const Festas = () => {
           </a>
         </div>
       </section>
-
-      <main>
         {/* Dor e Problema */}
         <section className="py-20 px-4 bg-muted/20">
           <div className="max-w-4xl mx-auto text-center">
@@ -248,7 +246,7 @@ const Festas = () => {
             </div>
           </div>
         </section>
-      </main>
+      
 
       <ConversionBlock 
         title="Quer aproveitar a noite sem perrengues?"
