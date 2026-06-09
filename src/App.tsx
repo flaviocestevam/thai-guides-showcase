@@ -10,7 +10,7 @@ import LanternFestival from "./pages/LanternFestival.tsx";
 import MuayThai from "./pages/MuayThai.tsx";
 import MuayThai5645 from "./pages/MuayThai5645.tsx";
 import Festas from "./pages/Festas.tsx";
-import CityPage from "./pages/CityPage.tsx";
+
 import GuiaTrilhasThai44 from "./pages/GuiaTrilhasThai44.tsx";
 import GuiaTrilhasThai from "./pages/GuiaTrilhasThai.tsx";
 import GuiaVoluntariado from "./pages/GuiaVoluntariado.tsx";
