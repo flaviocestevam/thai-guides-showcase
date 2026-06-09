@@ -6,7 +6,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Footer } from "@/components/Footer";
 import { BackToHome, BackToHomeFooter } from "@/components/NavigationButtons";
 import { InternalLinksSection, ConversionBlock } from "@/components/ConversionSections";
-import { ArrowDown, Flame, ShieldAlert, Sparkles, Gem, Clock, Ban, CheckCircle, Wallet, PartyPopper, AlertTriangle, Beer, Smartphone, Ghost, EyeOff, MapPinOff, MapPin } from "lucide-react";
+import { ArrowDown, Flame, ShieldAlert, Sparkles, Gem, Clock, Ban, CheckCircle, Wallet, PartyPopper, AlertTriangle, Beer, Smartphone, Ghost, EyeOff, MapPinOff, MapPin, Star } from "lucide-react";
 import heroImg from "@/assets/festas/hero-thailand.jpg";
 import { cities, survivalTips } from "@/data/festas";
 import CityCard from "@/components/festas/CityCard";
@@ -114,6 +114,44 @@ const Festas = () => {
           </div>
         </section>
 
+        {/* Seção Latina - Especial para Brasileiros */}
+        <section className="py-20 px-4 bg-primary/5">
+          <div className="max-w-6xl mx-auto">
+            <div className="flex flex-col items-center text-center mb-12">
+              <div className="flex gap-2 mb-4">
+                <span className="text-2xl">🇧🇷</span>
+                <span className="text-2xl">💃</span>
+                <span className="text-2xl">🇲🇽</span>
+              </div>
+              <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">Saudade de um Reggaeton?</h2>
+              <p className="text-muted-foreground max-w-2xl">
+                Sabemos que depois de algumas semanas ouvindo música tailandesa e EDM, o brasileiro sente falta de um tempero latino. Listamos os melhores picos de Salsa, Bachata e Reggaeton.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="bg-card border border-primary/20 p-8 rounded-3xl flex gap-6 items-start hover:shadow-lg transition-all">
+                <div className="bg-primary/10 p-4 rounded-2xl text-primary font-black text-2xl">01</div>
+                <div>
+                  <h3 className="text-xl font-bold mb-2">Havana Social (Bangkok)</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    O segredo mais bem guardado de Bangkok. Você entra por uma cabine telefônica antiga usando um código secreto e cai direto em Cuba nos anos 40. Salsa e drinks de primeira.
+                  </p>
+                </div>
+              </div>
+              <div className="bg-card border border-primary/20 p-8 rounded-3xl flex gap-6 items-start hover:shadow-lg transition-all">
+                <div className="bg-primary/10 p-4 rounded-2xl text-primary font-black text-2xl">02</div>
+                <div>
+                  <h3 className="text-xl font-bold mb-2">Revolucion Cocktail (BKK & Phuket)</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    Vibe latina raiz com bartenders que fazem shows com fogo e música que vai do Reggaeton clássico aos hits atuais. O ponto de encontro oficial dos latinos na ilha.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Experiências Únicas e Secretas */}
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
@@ -145,6 +183,13 @@ const Festas = () => {
                 </div>
                 <h3 className="text-2xl font-bold mb-4">Rooftops Escondidos</h3>
                 <p className="text-muted-foreground">A vista mais incrível da cidade sem precisar pagar fortunas ou enfrentar filas imensas de turistas.</p>
+              </div>
+              <div className="relative group overflow-hidden rounded-3xl bg-card border border-border p-8 hover:border-primary/50 transition-all">
+                <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                  <Star className="w-16 h-16" />
+                </div>
+                <h3 className="text-2xl font-bold mb-4">Festas de Lua Nova (Black Moon)</h3>
+                <p className="text-muted-foreground">O lado B de Koh Phangan. Enquanto a Full Moon é comercial, a Black Moon é underground, no meio da selva e com uma vibe muito mais autêntica.</p>
               </div>
             </div>
           </div>
@@ -432,10 +477,10 @@ const Festas = () => {
       
 
       <ConversionBlock 
-        title="Quer aproveitar a noite sem perrengues?"
-        subtitle="Nosso guia te ensina a evitar ciladas comuns e aproveitar o melhor de 9 cidades."
-        ctaText="Garantir Meu Guia de Festas"
-        ctaLink="https://pay.kiwify.com.br/xxxxx" // Placeholder for actual sales link if different
+        title="Chega de perder tempo (e dinheiro) na noite!"
+        subtitle="Acesse agora o guia que já ajudou centenas de brasileiros a curtirem o melhor da Tailândia com segurança e economia real."
+        ctaText="QUERO O GUIA DE FESTAS COMPLETO"
+        ctaLink="https://pay.kiwify.com.br/xxxxx" 
       />
       <InternalLinksSection currentPath="/festas" />
       <BackToHomeFooter />
