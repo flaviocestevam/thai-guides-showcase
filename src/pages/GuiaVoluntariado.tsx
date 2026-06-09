@@ -9,6 +9,8 @@ import {
   CircleCheck, GraduationCap, PawPrint, Leaf, Home, 
   Smile, Globe, Compass, AlertTriangle, X, Quote
 } from "lucide-react";
+import { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import { useState } from "react";
 
 const CAKTO_LINK = "[LINK_DE_PAGAMENTO]";
@@ -43,8 +45,19 @@ const FAQItem = ({ q, a }: { q: string; a: string }) => {
 };
 
 const GuiaVoluntariado = () => {
+  useEffect(() => {
+    // Force audit marker in console for external verification
+    console.log("AUDIT_VERSION_VOLUNTARIADO_TAILANDIA_R67");
+  }, []);
+
   return (
     <div className="min-h-screen bg-background font-body">
+      <Helmet>
+        <meta name="audit-version" content="AUDIT_VERSION_VOLUNTARIADO_TAILANDIA_R67" />
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Expires" content="0" />
+      </Helmet>
       <SEO 
         title="Guia de Voluntariado na Tailândia | Guias Tailândia"
         description="Guia completo em português para brasileiros que querem fazer voluntariado na Tailândia. Com elefantes, crianças, meio ambiente e comunidades. Por R$ 67."
@@ -450,6 +463,7 @@ const GuiaVoluntariado = () => {
         </div>
       </main>
       <Footer />
+      {/* AUDIT_VERSION_VOLUNTARIADO_TAILANDIA_R67 */}
     </div>
   );
 };
