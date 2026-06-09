@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { SEO } from "@/components/SEO";
 import { StructuredData } from "@/components/StructuredData";
 import { Header } from "@/components/Header";
@@ -13,6 +14,8 @@ import TipCard from "@/components/festas/TipCard";
 
 
 const Festas = () => {
+  const [activeTab, setActiveTab] = useState<'cities' | 'survival'>('cities');
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SEO 
@@ -237,16 +240,40 @@ const Festas = () => {
           </div>
         </section>
 
+        {/* Navigation Tabs for better UX */}
+        <section className="sticky top-20 z-50 bg-background/80 backdrop-blur-xl border-y border-border py-4">
+          <div className="max-w-4xl mx-auto px-4 flex gap-4">
+            <button 
+              onClick={() => {
+                setActiveTab('cities');
+                document.getElementById('cities')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }}
+              className={`flex-1 py-3 rounded-2xl font-bold transition-all flex items-center justify-center gap-2 ${activeTab === 'cities' ? 'bg-primary text-primary-foreground shadow-lg' : 'bg-muted hover:bg-muted/80'}`}
+            >
+              <PartyPopper className="w-4 h-4" /> 9 Cidades
+            </button>
+            <button 
+              onClick={() => {
+                setActiveTab('survival');
+                document.getElementById('survival')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }}
+              className={`flex-1 py-3 rounded-2xl font-bold transition-all flex items-center justify-center gap-2 ${activeTab === 'survival' ? 'bg-primary text-primary-foreground shadow-lg' : 'bg-muted hover:bg-muted/80'}`}
+            >
+              <ShieldAlert className="w-4 h-4" /> Dicas de Sobrevivência
+            </button>
+          </div>
+        </section>
+
         {/* Cities */}
         <section id="cities" className="py-20 md:py-28 px-4 bg-muted/10">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-display font-bold text-center mb-3">
-              9 Cidades, Infinitas Noites
+              Onde a Noite Acontece
             </h2>
             <p className="text-center text-muted-foreground mb-14 max-w-xl mx-auto">
-              Clique em uma cidade para descobrir os melhores bares, clubes e dicas exclusivas
+              Clique nas imagens para abrir os detalhes de cada cidade sem sair da página
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {cities.map((city) => (
                 <CityCard key={city.id} city={city} />
               ))}
@@ -255,7 +282,7 @@ const Festas = () => {
         </section>
 
         {/* Survival Tips */}
-        <section className="py-20 md:py-28 px-4">
+        <section id="survival" className="py-20 md:py-28 px-4 border-t border-border">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-display font-bold text-center mb-3">
               Dicas de Sobrevivência
