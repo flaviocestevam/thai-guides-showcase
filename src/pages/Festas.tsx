@@ -6,7 +6,7 @@ import { Footer } from "@/components/Footer";
 import { BackToHome, BackToHomeFooter } from "@/components/NavigationButtons";
 import { InternalLinksSection, ConversionBlock } from "@/components/ConversionSections";
 import { ArrowDown, Flame, ShieldAlert, Sparkles, Gem, Clock, Ban, CheckCircle, Wallet, PartyPopper } from "lucide-react";
-
+import heroImg from "../assets/festas/hero-thailand.jpg";
 import { cities, survivalTips } from "@/data/festas";
 import CityCard from "@/components/festas/CityCard";
 import TipCard from "@/components/festas/TipCard";
@@ -55,7 +55,7 @@ const Festas = () => {
 
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <img
-          src="/assets/festas/hero-thailand.jpg"
+          src={heroImg}
           alt="Festa na praia na Tailândia durante a noite"
           className="absolute inset-0 w-full h-full object-cover"
           width={1920}
