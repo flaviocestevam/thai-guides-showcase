@@ -51,7 +51,7 @@ const GuiaVoluntariado = () => {
       <SEO 
         title="Guia de Voluntariado na Tailândia | Guias Tailândia"
         description="Guia completo em português para brasileiros que querem fazer voluntariado na Tailândia. Com elefantes, crianças, meio ambiente e comunidades. Por R$ 67."
-        canonicalPath="/voluntariado-tailandia"
+        canonicalPath="/guia-voluntariado-tailandia"
       />
       <Header />
       <main className="pt-20">
