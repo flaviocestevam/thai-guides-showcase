@@ -116,7 +116,7 @@ const salesPages: ProductCard[] = [
     subtitle: "Viva a Tailândia por dentro",
     description:
       "O guia completo em português para encontrar, se inscrever e se preparar para fazer voluntariado com elefantes, crianças ou comunidades.",
-    path: "/guia-voluntariado-tailandia",
+    path: "/voluntariado-tailandia",
     emoji: "🌿",
     badge: "✨ INÉDITO",
     urgency: "Descubra como ajudar causas reais com segurança!",
