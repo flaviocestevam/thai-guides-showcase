@@ -14,6 +14,9 @@ export const InternalLinksSection = ({ currentPath }: InternalLinksSectionProps)
     { label: "Trilhas e Trekkings", path: "/guiatrilhasthai", icon: "🥾" },
     { label: "Guia de Festas", path: "/festas", icon: "🔥" },
     { label: "Voluntariado", path: "/voluntariado-tailandia", icon: "🌿" },
+    { label: "Tailândia para Gays", path: "/tailandia-para-gays", icon: "🏳️‍🌈" },
+    { label: "Guia Songkran", path: "/songkran-ano-novo-tailandes", icon: "💦" },
+    { label: "Lua de Mel", path: "/lua-de-mel-tailandia", icon: "💍" },
   ];
 
   const filteredLinks = links.filter(link => link.path !== currentPath);
