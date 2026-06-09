@@ -6,7 +6,7 @@ import { Footer } from "@/components/Footer";
 import { BackToHome, BackToHomeFooter } from "@/components/NavigationButtons";
 import { InternalLinksSection, ConversionBlock } from "@/components/ConversionSections";
 import { ArrowDown, Flame, ShieldAlert, Sparkles, Gem, Clock, Ban, CheckCircle, Wallet, PartyPopper } from "lucide-react";
-import heroImg from "@/assets/festas/hero-thailand.jpg";
+
 import { cities, survivalTips } from "@/data/festas";
 import CityCard from "@/components/festas/CityCard";
 import TipCard from "@/components/festas/TipCard";
@@ -22,7 +22,7 @@ const Festas = () => {
       />
       {/* Header */}
       <Header />
-      <main className="pt-20">
+      <main>
         <Breadcrumbs />
         <div className="max-w-7xl mx-auto px-4">
           <BackToHome />
@@ -258,7 +258,6 @@ const Festas = () => {
       />
       <InternalLinksSection currentPath="/festas" />
       <BackToHomeFooter />
-      </main>
       <Footer />
     </div>
   );
