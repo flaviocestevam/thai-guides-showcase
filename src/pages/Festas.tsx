@@ -6,7 +6,7 @@ import { Footer } from "@/components/Footer";
 import { BackToHome, BackToHomeFooter } from "@/components/NavigationButtons";
 import { InternalLinksSection, ConversionBlock } from "@/components/ConversionSections";
 import { ArrowDown, Flame, ShieldAlert, Sparkles, Gem, Clock, Ban, CheckCircle, Wallet, PartyPopper } from "lucide-react";
-import heroImg from "../assets/festas/hero-thailand.jpg";
+import heroImg from "@/assets/festas/hero-thailand.jpg";
 import { cities, survivalTips } from "@/data/festas";
 import CityCard from "@/components/festas/CityCard";
 import TipCard from "@/components/festas/TipCard";
