@@ -3,52 +3,53 @@ import { Header } from "@/components/Header";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Footer } from "@/components/Footer";
 import { BackToHome, BackToHomeFooter } from "@/components/NavigationButtons";
-import { InternalLinksSection, ConversionBlock } from "@/components/ConversionSections";
-import HeroSection from "@/components/festival/HeroSection";
-import SocialProofPopup from "@/components/festival/SocialProofPopup";
-import FeaturesSection from "@/components/festival/FeaturesSection";
-import PainSection from "@/components/festival/PainSection";
-import RiskSection from "@/components/festival/RiskSection";
-import ComparisonSection from "@/components/festival/ComparisonSection";
-import AuthoritySection from "@/components/festival/AuthoritySection";
-import ContentSection from "@/components/festival/ContentSection";
-import BonusSection from "@/components/festival/BonusSection";
-import TestimonialsSection from "@/components/festival/TestimonialsSection";
-import PricingSection from "@/components/festival/PricingSection";
-import FAQSection from "@/components/festival/FAQSection";
-import FinalCTASection from "@/components/festival/FinalCTASection";
-import TargetAudienceSection from "@/components/festival/TargetAudienceSection";
-import FloatingCTA from "@/components/festival/FloatingCTA";
+import { CTAButton } from "@/components/festival/CTAButton";
+import heroImg from "@/assets/trilhas/koh-phangan-bottle-beach.jpg";
+
+const LINK_PAGAMENTO = "[LINK_DE_PAGAMENTO_LUA_DE_MEL]";
 
 const GuiaLuaDeMel = () => {
   return (
-    <div className="min-h-screen bg-background overflow-x-hidden">
+    <div className="min-h-screen bg-background">
       <SEO 
-        title="Guia Lua de Mel na Tailândia | Guias Tailandia"
-        description="Guia em português para planejar uma lua de mel inesquecível na Tailândia. Escolha ilhas, hotéis, experiências românticas e evite erros que custam caro."
+        title="Guia Lua de Mel na Tailândia | Guias Tailândia"
+        description="Planeje sua lua de mel inesquecível na Tailândia. Escolha as melhores ilhas, hotéis e experiências românticas."
         canonicalPath="/lua-de-mel-tailandia"
       />
       <Header />
       <main className="pt-20">
         <Breadcrumbs />
-        <HeroSection />
-        <FeaturesSection />
-        <TargetAudienceSection />
-        <PainSection />
-        <RiskSection />
-        <ComparisonSection />
-        <AuthoritySection />
-        <ContentSection />
-        <BonusSection />
-        <PricingSection />
-        <FAQSection />
-        <FinalCTASection />
-        <InternalLinksSection currentPath="/lua-de-mel-tailandia" />
-        <BackToHomeFooter />
+        
+        {/* HERO */}
+        <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
+          <img src={heroImg} alt="Lua de mel Tailândia" className="absolute inset-0 w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/40 to-background" />
+          <div className="relative z-10 text-center px-4 max-w-4xl mx-auto space-y-6">
+            <h1 className="text-4xl md:text-7xl font-display font-black leading-tight">Sua <span className="text-gradient-gold">Lua de Mel</span> na Tailândia</h1>
+            <p className="text-xl text-muted-foreground">O roteiro romântico que transforma sua viagem em uma experiência inesquecível e sem estresse.</p>
+            <CTAButton href={LINK_PAGAMENTO} size="lg">QUERO MEU GUIA POR R$ 97</CTAButton>
+          </div>
+        </section>
+
+        {/* DECISOES */}
+        <section className="py-20 px-4">
+          <div className="max-w-5xl mx-auto text-center">
+            <h2 className="text-4xl font-bold mb-12">Escolhas que definem uma viagem inesquecível</h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              {["A Ilha Certa", "Hotéis Românticos", "Experiências Especiais"].map(item => (
+                <div key={item} className="bg-card border-glow p-8 rounded-2xl font-bold">{item}</div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* PRECO */}
+        <section className="py-20 text-center">
+          <p className="text-6xl font-black text-primary my-4">R$ 97</p>
+          <CTAButton href={LINK_PAGAMENTO} size="lg">QUERO MEU GUIA AGORA</CTAButton>
+        </section>
       </main>
       <Footer />
-      <SocialProofPopup />
-      <FloatingCTA />
     </div>
   );
 };
