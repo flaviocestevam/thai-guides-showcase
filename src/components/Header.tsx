@@ -23,6 +23,9 @@ export const Header = () => {
     { label: "Trilhas", path: "/guiatrilhasthai" },
     { label: "Festas", path: "/festas" },
     { label: "Voluntariado", path: "/voluntariado-tailandia" },
+    { label: "Gays", path: "/tailandia-para-gays" },
+    { label: "Songkran", path: "/songkran-ano-novo-tailandes" },
+    { label: "Lua de Mel", path: "/lua-de-mel-tailandia" },
     { label: "FAQ", path: "/#faq" },
   ];
 
