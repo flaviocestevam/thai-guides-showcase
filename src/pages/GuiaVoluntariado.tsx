@@ -53,7 +53,7 @@ const GuiaVoluntariado = () => {
   return (
     <div className="min-h-screen bg-background font-body">
       <Helmet>
-        <meta name="audit-version" content="AUDIT_VERSION_VOLUNTARIADO_TAILANDIA_R67" />
+        <meta name="audit-version" content="VOLUNTARIADO_TAILANDIA_R67_NOVA_VERSAO" />
         <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
         <meta http-equiv="Pragma" content="no-cache" />
         <meta http-equiv="Expires" content="0" />
@@ -463,7 +463,7 @@ const GuiaVoluntariado = () => {
         </div>
       </main>
       <Footer />
-      {/* AUDIT_VERSION_VOLUNTARIADO_TAILANDIA_R67 */}
+      {/* VOLUNTARIADO_TAILANDIA_R67_NOVA_VERSAO */}
     </div>
   );
 };
