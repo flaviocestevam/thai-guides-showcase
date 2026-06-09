@@ -1,12 +1,12 @@
-import bangkokImg from "@/assets/festas/bangkok-nightlife.jpg";
-import phuketImg from "@/assets/festas/phuket-nightlife.jpg";
-import pattayaImg from "@/assets/festas/pattaya-nightlife.jpg";
-import kohphanganImg from "@/assets/festas/kohphangan-nightlife.jpg";
-import phiphiImg from "@/assets/festas/phiphi-nightlife.jpg";
-import krabiImg from "@/assets/festas/krabi-nightlife.jpg";
-import chiangmaiImg from "@/assets/festas/chiangmai-nightlife.jpg";
-import kohsamuiImg from "@/assets/festas/kohsamui-nightlife.jpg";
-import kohlipeImg from "@/assets/festas/kohlipe-nightlife.jpg";
+const bangkokImg = "/assets/festas/bangkok-nightlife.jpg";
+const phuketImg = "/assets/festas/phuket-nightlife.jpg";
+const pattayaImg = "/assets/festas/pattaya-nightlife.jpg";
+const kohphanganImg = "/assets/festas/kohphangan-nightlife.jpg";
+const phiphiImg = "/assets/festas/phiphi-nightlife.jpg";
+const krabiImg = "/assets/festas/krabi-nightlife.jpg";
+const chiangmaiImg = "/assets/festas/chiangmai-nightlife.jpg";
+const kohsamuiImg = "/assets/festas/kohsamui-nightlife.jpg";
+const kohlipeImg = "/assets/festas/kohlipe-nightlife.jpg";
 
 export interface Venue {
   name: string;
