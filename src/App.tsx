@@ -14,6 +14,9 @@ import Festas from "./pages/Festas.tsx";
 import GuiaTrilhasThai44 from "./pages/GuiaTrilhasThai44.tsx";
 import GuiaTrilhasThai from "./pages/GuiaTrilhasThai.tsx";
 import GuiaVoluntariado from "./pages/GuiaVoluntariado.tsx";
+import GuiaGays from "./pages/GuiaGays.tsx";
+import GuiaSongkran from "./pages/GuiaSongkran.tsx";
+import GuiaLuaDeMel from "./pages/GuiaLuaDeMel.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -36,6 +39,9 @@ const App = () => (
           <Route path="/guiatrilhasthai44" element={<GuiaTrilhasThai44 />} />
           <Route path="/guiatrilhasthai" element={<GuiaTrilhasThai />} />
           <Route path="/voluntariado-tailandia" element={<GuiaVoluntariado />} />
+          <Route path="/tailandia-para-gays" element={<GuiaGays />} />
+          <Route path="/songkran-ano-novo-tailandes" element={<GuiaSongkran />} />
+          <Route path="/lua-de-mel-tailandia" element={<GuiaLuaDeMel />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
