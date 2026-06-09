@@ -48,7 +48,7 @@ const Festas = () => {
             </span>
           </h1>
           <p className="text-base md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10">
-            Tudo que você precisa saber sobre as melhores festas, baladas e experiências noturnas em 7 cidades incríveis
+            Tudo que você precisa saber sobre as melhores festas, baladas e experiências noturnas em 9 cidades incríveis
           </p>
           <a
             href="#cities"
