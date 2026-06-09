@@ -256,6 +256,7 @@ const Festas = () => {
       />
       <InternalLinksSection currentPath="/festas" />
       <BackToHomeFooter />
+      </main>
       <Footer />
     </div>
   );
