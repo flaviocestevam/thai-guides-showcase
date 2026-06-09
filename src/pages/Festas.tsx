@@ -6,7 +6,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Footer } from "@/components/Footer";
 import { BackToHome, BackToHomeFooter } from "@/components/NavigationButtons";
 import { InternalLinksSection, ConversionBlock } from "@/components/ConversionSections";
-import { ArrowDown, Flame, ShieldAlert, Sparkles, Gem, Clock, Ban, CheckCircle, Wallet, PartyPopper } from "lucide-react";
+import { ArrowDown, Flame, ShieldAlert, Sparkles, Gem, Clock, Ban, CheckCircle, Wallet, PartyPopper, AlertTriangle, Beer, Smartphone, Ghost, EyeOff, MapPinOff } from "lucide-react";
 import heroImg from "@/assets/festas/hero-thailand.jpg";
 import { cities, survivalTips } from "@/data/festas";
 import CityCard from "@/components/festas/CityCard";
@@ -14,7 +14,7 @@ import TipCard from "@/components/festas/TipCard";
 
 
 const Festas = () => {
-  const [activeTab, setActiveTab] = useState<'cities' | 'survival'>('cities');
+  const [activeTab, setActiveTab] = useState<'cities' | 'survival' | 'golpes'>('cities');
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -261,6 +261,89 @@ const Festas = () => {
             >
               <ShieldAlert className="w-4 h-4" /> Dicas de Sobrevivência
             </button>
+            <button 
+              onClick={() => {
+                setActiveTab('golpes');
+                document.getElementById('golpes')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }}
+              className={`flex-1 py-3 rounded-2xl font-bold transition-all flex items-center justify-center gap-2 ${activeTab === 'golpes' ? 'bg-destructive text-destructive-foreground shadow-lg' : 'bg-muted hover:bg-muted/80'}`}
+            >
+              <AlertTriangle className="w-4 h-4" /> Alerta de Golpes
+            </button>
+          </div>
+        </section>
+
+        {/* Módulo de Golpes e +18 */}
+        <section id="golpes" className="py-20 md:py-28 px-4 bg-destructive/5 border-t border-destructive/10">
+          <div className="max-w-6xl mx-auto">
+            <div className="flex flex-col items-center text-center mb-16">
+              <div className="bg-destructive/10 p-3 rounded-full mb-4">
+                <AlertTriangle className="w-8 h-8 text-destructive animate-pulse" />
+              </div>
+              <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">
+                Cuidado: Golpes e Noite +18
+              </h2>
+              <p className="text-muted-foreground max-w-2xl">
+                A noite tailandesa é incrível, mas esconde armadilhas projetadas especificamente para turistas desavisados. Saiba como identificar e fugir.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {/* Golpe 1 */}
+              <div className="bg-card border border-destructive/20 p-8 rounded-3xl relative overflow-hidden group">
+                <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+                  <Beer className="w-20 h-20 text-destructive" />
+                </div>
+                <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+                  <Ghost className="w-5 h-5 text-destructive" /> O Golpe do "Menu Amigo"
+                </h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Em Gogo Bars e casas de strip, garçons podem te oferecer um drink com preço fixo, mas na hora da conta, taxas "escondidas" e "drinks para as moças" triplicam o valor.
+                </p>
+                <div className="mt-6 p-3 bg-destructive/10 rounded-xl text-destructive text-xs font-bold uppercase tracking-wider text-center">
+                  Como fugir: Pague cada drink na hora
+                </div>
+              </div>
+
+              {/* Golpe 2 */}
+              <div className="bg-card border border-destructive/20 p-8 rounded-3xl relative overflow-hidden group">
+                <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+                  <EyeOff className="w-20 h-20 text-destructive" />
+                </div>
+                <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+                  <MapPinOff className="w-5 h-5 text-destructive" /> Ping Pong Shows
+                </h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Promessas de shows "gratuitos" ou baratos em ruas secundárias. Ao entrar, seguranças bloqueiam a saída e exigem pagamentos exorbitantes por uma única cerveja.
+                </p>
+                <div className="mt-6 p-3 bg-destructive/10 rounded-xl text-destructive text-xs font-bold uppercase tracking-wider text-center">
+                  Como fugir: Nunca siga "promoters" de rua
+                </div>
+              </div>
+
+              {/* Golpe 3 */}
+              <div className="bg-card border border-destructive/20 p-8 rounded-3xl relative overflow-hidden group">
+                <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+                  <Smartphone className="w-20 h-20 text-destructive" />
+                </div>
+                <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+                  <AlertTriangle className="w-5 h-5 text-destructive" /> Ladyboys e Furtos
+                </h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Infelizmente, em áreas como Sukhumvit e Bangla Road, grupos podem se aproximar de forma carinhosa para furtar correntes, relógios e celulares de turistas distraídos.
+                </p>
+                <div className="mt-6 p-3 bg-destructive/10 rounded-xl text-destructive text-xs font-bold uppercase tracking-wider text-center">
+                  Como fugir: Mantenha distância e evite contato físico
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-12 bg-destructive/10 border border-destructive/20 rounded-3xl p-8 md:p-12 text-center">
+              <h3 className="text-2xl font-bold mb-4">A Regra de Ouro para Gogo Bars e Strip</h3>
+              <p className="text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                Se você decidir visitar distritos como Nana Plaza, Soi Cowboy (Bangkok) ou Walking Street (Pattaya), lembre-se: <strong>Estabelecimentos oficiais raramente usam pessoas na rua para te puxar.</strong> Se alguém te abordar com "show grátis", é cilada. Vá apenas em locais conhecidos e pague cada rodada conforme ela chegar.
+              </p>
+            </div>
           </div>
         </section>
 
