@@ -19,14 +19,14 @@ const Festas = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SEO 
-        title="Guia de Festas na Tailândia — Baladas e Noite"
+        title="Guias Tailandia de Festas na Tailândia — Baladas e Noite"
         description="Onde sair na Tailândia? Guia completo com as melhores festas, baladas e dicas de sobrevivência em 9 cidades incríveis."
         canonicalPath="/festas"
       />
       <StructuredData data={{
         "@context": "https://schema.org",
         "@type": "WebPage",
-        "name": "Guia de Festas na Tailândia",
+        "name": "Guias Tailandia de Festas na Tailândia",
         "description": "Guia completo com as melhores festas, baladas e dicas de sobrevivência em 9 cidades incríveis da Tailândia.",
         "breadcrumb": {
           "@context": "https://schema.org",
@@ -107,7 +107,7 @@ const Festas = () => {
                   <h3 className="text-xl font-bold">A Solução Ideal</h3>
                 </div>
                 <p className="text-muted-foreground leading-relaxed">
-                  Com o nosso Guia de Festas, você vai direto aos lugares que valem a pena. Economize tempo e dinheiro sabendo exatamente onde ir, o que pedir e como evitar os erros clássicos de quem viaja pela primeira vez.
+                  Com o nosso Guias Tailandia de Festas, você vai direto aos lugares que valem a pena. Economize tempo e dinheiro sabendo exatamente onde ir, o que pedir e como evitar os erros clássicos de quem viaja pela primeira vez.
                 </p>
               </div>
             </div>
@@ -204,7 +204,7 @@ const Festas = () => {
                   Não jogue seu dinheiro fora com ciladas turísticas
                 </h2>
                 <p className="text-lg text-muted-foreground">
-                  Viajar para a Tailândia é um investimento. O Guia de Festas se paga sozinho na primeira noite ao te ensinar a economizar com transporte e bebidas, sem perder a qualidade da experiência.
+                  Viajar para a Tailândia é um investimento. O Guias Tailandia de Festas se paga sozinho na primeira noite ao te ensinar a economizar com transporte e bebidas, sem perder a qualidade da experiência.
                 </p>
                 <ul className="space-y-4">
                   <li className="flex items-center gap-3 font-medium">

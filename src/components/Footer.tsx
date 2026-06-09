@@ -7,7 +7,7 @@ export const Footer = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
         <div className="space-y-4">
           <Link to="/" className="text-2xl font-display font-black tracking-tighter">
-            GUIA <span className="text-primary">TAILÂNDIA</span>
+            GUIAS <span className="text-primary">TAILANDIA</span>
           </Link>
           <p className="text-sm text-muted-foreground font-body leading-relaxed">
             O guia mais completo em português para viajantes brasileiros que querem explorar a Tailândia com autenticidade, economia e segurança.
@@ -61,7 +61,7 @@ export const Footer = () => {
       </div>
 
       <div className="max-w-7xl mx-auto pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-body text-muted-foreground">
-        <p>© 2026 Guia Tailândia para Brasileiros. Todos os direitos reservados.</p>
+        <p>© 2026 Guias Tailandia para Brasileiros. Todos os direitos reservados.</p>
         <p>Desenvolvido com ❤️ para viajantes autênticos.</p>
       </div>
     </footer>
