@@ -31,7 +31,7 @@ const Festas = () => {
 
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <img
-          src={heroImg}
+          src="/assets/festas/hero-thailand.jpg"
           alt="Festa na praia na Tailândia durante a noite"
           className="absolute inset-0 w-full h-full object-cover"
           width={1920}
