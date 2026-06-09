@@ -14,7 +14,7 @@ export const cities: City[] = [
     tagline: "A capital que nunca dorme",
     fireLevel: 5,
     tags: ["Rooftop Bars", "Clubes de Elite", "Khao San Road"],
-    image: "/src/assets/festas/bangkok-nightlife.jpg",
+    image: "/assets/festas/bangkok-nightlife.jpg",
   },
   {
     id: "phuket",
@@ -22,7 +22,7 @@ export const cities: City[] = [
     tagline: "Praia, pool parties e muito mais",
     fireLevel: 4,
     tags: ["Pool Parties", "Beach Clubs", "Bangla Road"],
-    image: "/src/assets/festas/phuket-nightlife.jpg",
+    image: "/assets/festas/phuket-nightlife.jpg",
   },
   {
     id: "pattaya",
@@ -30,7 +30,7 @@ export const cities: City[] = [
     tagline: "A cidade que nunca para",
     fireLevel: 5,
     tags: ["Walking Street", "Cabarés", "Bares à Beira-Mar"],
-    image: "/src/assets/festas/pattaya-nightlife.jpg",
+    image: "/assets/festas/pattaya-nightlife.jpg",
   },
   {
     id: "kohphangan",
@@ -38,7 +38,7 @@ export const cities: City[] = [
     tagline: "Onde nasceu a Full Moon Party",
     fireLevel: 5,
     tags: ["Full Moon Party", "Half Moon Festival", "Festas na Praia"],
-    image: "/src/assets/festas/kohphangan-nightlife.jpg",
+    image: "/assets/festas/kohphangan-nightlife.jpg",
   },
   {
     id: "phiphi",
@@ -46,7 +46,7 @@ export const cities: City[] = [
     tagline: "Paraíso com festa garantida",
     fireLevel: 4,
     tags: ["Festas na Praia", "Fire Shows", "Bares Reggae"],
-    image: "/src/assets/festas/phiphi-nightlife.jpg",
+    image: "/assets/festas/phiphi-nightlife.jpg",
   },
   {
     id: "krabi",
@@ -54,7 +54,7 @@ export const cities: City[] = [
     tagline: "Festas com cenário de cinema",
     fireLevel: 3,
     tags: ["Bares de Praia", "Ao Nang", "Railay Beach"],
-    image: "/src/assets/festas/krabi-nightlife.jpg",
+    image: "/assets/festas/krabi-nightlife.jpg",
   },
   {
     id: "chiangmai",
@@ -62,7 +62,7 @@ export const cities: City[] = [
     tagline: "A joia do norte tailandês",
     fireLevel: 3,
     tags: ["Night Bazaar", "Bares Artesanais", "Reggae Bars"],
-    image: "/src/assets/festas/chiangmai-nightlife.jpg",
+    image: "/assets/festas/chiangmai-nightlife.jpg",
   },
   {
     id: "kohsamui",
@@ -70,7 +70,7 @@ export const cities: City[] = [
     tagline: "Ilha tropical com noites eletrizantes",
     fireLevel: 4,
     tags: ["Chaweng Beach", "Beach Clubs", "Cabarés"],
-    image: "/src/assets/festas/kohsamui-nightlife.jpg",
+    image: "/assets/festas/kohsamui-nightlife.jpg",
   },
   {
     id: "kohlipe",
@@ -78,7 +78,7 @@ export const cities: City[] = [
     tagline: "As Maldivas da Tailândia com festa na areia",
     fireLevel: 3,
     tags: ["Bares de Praia", "Festas na Areia", "Reggae Bars"],
-    image: "/src/assets/festas/kohlipe-nightlife.jpg",
+    image: "/assets/festas/kohlipe-nightlife.jpg",
   },
 ];
 
