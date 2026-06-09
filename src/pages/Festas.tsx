@@ -6,7 +6,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Footer } from "@/components/Footer";
 import { BackToHome, BackToHomeFooter } from "@/components/NavigationButtons";
 import { InternalLinksSection, ConversionBlock } from "@/components/ConversionSections";
-import { ArrowDown, Flame, ShieldAlert, Sparkles, Gem, Clock, Ban, CheckCircle, Wallet, PartyPopper, AlertTriangle, Beer, Smartphone, Ghost, EyeOff, MapPinOff } from "lucide-react";
+import { ArrowDown, Flame, ShieldAlert, Sparkles, Gem, Clock, Ban, CheckCircle, Wallet, PartyPopper, AlertTriangle, Beer, Smartphone, Ghost, EyeOff, MapPinOff, MapPin } from "lucide-react";
 import heroImg from "@/assets/festas/hero-thailand.jpg";
 import { cities, survivalTips } from "@/data/festas";
 import CityCard from "@/components/festas/CityCard";
