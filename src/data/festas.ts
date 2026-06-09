@@ -23,7 +23,7 @@ export const cities: City[] = [
     name: "Bangkok",
     tagline: "A capital que nunca dorme",
     fireLevel: 5,
-    tags: ["Rooftop Bars", "Clubes de Elite", "Khao San Road"],
+    tags: ["Rooftop Bars", "Clubes de Elite", "Bares Latinos"],
     image: bangkokImg,
   },
   {
@@ -31,7 +31,7 @@ export const cities: City[] = [
     name: "Phuket",
     tagline: "Praia, pool parties e muito mais",
     fireLevel: 4,
-    tags: ["Pool Parties", "Beach Clubs", "Bangla Road"],
+    tags: ["Beach Clubs", "Bangla Road", "Bares Latinos"],
     image: phuketImg,
   },
   {
