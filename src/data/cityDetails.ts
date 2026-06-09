@@ -47,6 +47,8 @@ export const cityDetails: Record<string, CityDetail> = {
       { name: "RCA (Royal City Avenue)", type: "Rua de Clubes", description: "Área popular entre tailandeses jovens com grandes clubes de EDM e hip-hop.", priceRange: "$$" },
       { name: "Sky Bar (Lebua)", type: "Rooftop Bar", description: "Um dos rooftop bars mais icônicos do mundo com vista espetacular do rio Chao Phraya.", priceRange: "$$$$" },
       { name: "Thonglor", type: "Bairro Trendy", description: "Bares artesanais, restaurantes descolados e uma vibe mais sofisticada.", priceRange: "$$$" },
+      { name: "Havana Social", type: "Bar Latino", description: "O melhor speakeasy latino de Bangkok. Entre por uma cabine telefônica e dance salsa e reggaeton.", priceRange: "$$$" },
+      { name: "Revolucion Cocktail", type: "Bar Latino", description: "Famoso bar latino com ótimos coquetéis e noites de música latina animadas.", priceRange: "$$$" },
     ],
     tips: [
       "O BTS (metrô aéreo) funciona até meia-noite — depois, use Grab",
@@ -71,6 +73,7 @@ export const cityDetails: Record<string, CityDetail> = {
       { name: "Café del Mar", type: "Beach Club", description: "Pool party à beira-mar com DJs internacionais e pôr do sol incrível.", priceRange: "$$$" },
       { name: "Illuzion", type: "Mega Club", description: "O maior clube de Phuket com shows de luz impressionantes e DJs de EDM.", priceRange: "$$$" },
       { name: "Catch Beach Club", type: "Beach Club", description: "Beach club premium em Surin Beach, perfeito para festas diurnas.", priceRange: "$$$$" },
+      { name: "Revolucion Cocktail Phuket", type: "Bar Latino", description: "Extensão do famoso bar de Bangkok, trazendo a vibe latina para a praia.", priceRange: "$$$" },
     ],
     tips: [
       "Bangla Road fecha para carros à noite — vá a pé",
@@ -190,6 +193,7 @@ export const cityDetails: Record<string, CityDetail> = {
       { name: "Night Bazaar", type: "Mercado Noturno", description: "Mercado noturno com comida de rua, artesanato e bares ao redor.", priceRange: "$" },
       { name: "Zoe in Yellow", type: "Complexo de Bares", description: "Complexo de bares populares entre turistas e estudantes, aberto até tarde.", priceRange: "$" },
       { name: "THC Rooftop Bar", type: "Rooftop Bar", description: "Vista panorâmica de Chiang Mai com drinks artesanais e vibes relaxadas.", priceRange: "$$" },
+      { name: "Zoe in Yellow (Latin Room)", type: "Bar Latino", description: "Complexo de bares onde uma das salas foca exclusivamente em Reggaeton e música latina.", priceRange: "$" },
     ],
     tips: [
       "Songthaews vermelhos são o transporte mais barato (20-40 THB)",

@@ -259,7 +259,16 @@ const Festas = () => {
               }}
               className={`flex-1 py-3 rounded-2xl font-bold transition-all flex items-center justify-center gap-2 ${activeTab === 'survival' ? 'bg-primary text-primary-foreground shadow-lg' : 'bg-muted hover:bg-muted/80'}`}
             >
-              <ShieldAlert className="w-4 h-4" /> Dicas de Sobrevivência
+              <ShieldAlert className="w-4 h-4" /> Sobrevivência
+            </button>
+            <button 
+              onClick={() => {
+                setActiveTab('golpes');
+                document.getElementById('golpes')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }}
+              className={`flex-1 py-3 rounded-2xl font-bold transition-all flex items-center justify-center gap-2 ${activeTab === 'golpes' ? 'bg-destructive text-destructive-foreground shadow-lg' : 'bg-muted hover:bg-muted/80'}`}
+            >
+              <Flame className="w-4 h-4" /> Noite +18 & Golpes
             </button>
             <button 
               onClick={() => {
@@ -281,11 +290,51 @@ const Festas = () => {
                 <AlertTriangle className="w-8 h-8 text-destructive animate-pulse" />
               </div>
               <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">
-                Cuidado: Golpes e Noite +18
+                Guia Noite +18: Distritos e Segurança
               </h2>
-              <p className="text-muted-foreground max-w-2xl">
-                A noite tailandesa é incrível, mas esconde armadilhas projetadas especificamente para turistas desavisados. Saiba como identificar e fugir.
+              <p className="text-muted-foreground max-w-2xl text-lg">
+                Se você busca a famosa "Adult Nightlife" da Tailândia, precisa saber onde estão os distritos oficiais e como não ser extorquido.
               </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+              {/* Distrito 1 */}
+              <div className="bg-card border border-primary/20 p-8 rounded-3xl relative overflow-hidden group">
+                <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+                  <MapPin className="w-5 h-5 text-primary" /> Nana Plaza & Soi Cowboy
+                </h3>
+                <p className="text-sm text-muted-foreground mb-4">
+                  Os dois maiores distritos de Bangkok. Nana é um complexo fechado de 3 andares, enquanto Cowboy é uma rua neon icônica. 
+                </p>
+                <span className="text-xs font-bold text-primary">Melhor para: Gogo Bars e Shows</span>
+              </div>
+
+              {/* Distrito 2 */}
+              <div className="bg-card border border-primary/20 p-8 rounded-3xl relative overflow-hidden group">
+                <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+                  <MapPin className="w-5 h-5 text-primary" /> Walking Street (Pattaya)
+                </h3>
+                <p className="text-sm text-muted-foreground mb-4">
+                  A capital mundial da noite adulta. Centenas de clubes de strip e bares de gogo concentrados em 1km de pura luz neon.
+                </p>
+                <span className="text-xs font-bold text-primary">Melhor para: Festas Intensas</span>
+              </div>
+
+              {/* Distrito 3 */}
+              <div className="bg-card border border-primary/20 p-8 rounded-3xl relative overflow-hidden group">
+                <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+                  <MapPin className="w-5 h-5 text-primary" /> Bangla Road (Phuket)
+                </h3>
+                <p className="text-sm text-muted-foreground mb-4">
+                  Onde a noite de Patong acontece. Os becos (Sois) escondem dezenas de bares com pole dance e shows variados.
+                </p>
+                <span className="text-xs font-bold text-primary">Melhor para: Mix de Praia e Balada</span>
+              </div>
+            </div>
+
+            <div className="flex flex-col items-center text-center mb-10">
+              <h3 className="text-2xl font-bold mb-2">Alerta de Golpes Comuns</h3>
+              <p className="text-muted-foreground">O que acontece se você não seguir o guia</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
