@@ -463,6 +463,7 @@ const GuiaVoluntariado = () => {
         </div>
       </main>
       <Footer />
+      {/* AUDIT_VERSION_VOLUNTARIADO_TAILANDIA_R67 */}
     </div>
   );
 };
