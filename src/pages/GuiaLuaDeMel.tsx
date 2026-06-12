@@ -262,7 +262,7 @@ const GuiaLuaDeMel = () => {
                     "Hotéis testados, com o melhor custo-benefício real",
                     "A mesma viagem por R$ 18k a R$ 28k o casal",
                     "Liberdade total para improvisar",
-                    "Suporte por Telegram durante a viagem",
+                    "Atualizações constantes para 2026",
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-3">
                       <Check className="flex-shrink-0 mt-1" size={20} />
