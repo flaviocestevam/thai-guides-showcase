@@ -13,6 +13,10 @@ import elephantImg from "@/assets/hero-elephants.jpg";
 import muayThaiImg from "@/assets/muay-thai-hero.jpg";
 import trilhasImg from "@/assets/trilhas/hero-trekking.jpg";
 import festasImg from "@/assets/festas/hero-thailand.jpg";
+import voluntariadoImg from "@/assets/voluntariado-hero.jpg";
+import gaysImg from "@/assets/gays-hero.jpg";
+import songkranImg from "@/assets/songkran-hero.jpg";
+import luaDeMelImg from "@/assets/luademel-hero.jpg";
 
 interface ProductCard {
   title: string;
@@ -119,6 +123,7 @@ const salesPages: ProductCard[] = [
     path: "/voluntariado-tailandia",
     emoji: "🌿",
     badge: "✨ INÉDITO",
+    image: voluntariadoImg,
     urgency: "Descubra como ajudar causas reais com segurança!",
     socialProof: "Novidade para brasileiros",
     originalPrice: "R$ 197",
@@ -134,7 +139,7 @@ const salesPages: ProductCard[] = [
     path: "/tailandia-para-gays",
     emoji: "🏳️‍🌈",
     badge: "✨ EXCLUSIVO",
-    image: festasImg,
+    image: gaysImg,
     urgency: "Viaje com segurança e orgulho!",
     socialProof: "Indispensável para o público",
     originalPrice: "R$ 197",
@@ -150,7 +155,7 @@ const salesPages: ProductCard[] = [
     path: "/songkran-ano-novo-tailandes",
     emoji: "💦",
     badge: "🔥 ESSENCIAL",
-    image: heroImg,
+    image: songkranImg,
     urgency: "Hospedagem esgota rápido para abril!",
     socialProof: "Planejamento para o festival",
     originalPrice: "R$ 197",
@@ -166,7 +171,7 @@ const salesPages: ProductCard[] = [
     path: "/lua-de-mel-tailandia",
     emoji: "💍",
     badge: "✨ ROMÂNTICO",
-    image: trilhasImg,
+    image: luaDeMelImg,
     urgency: "Não arrisque o momento mais importante!",
     socialProof: "Favorito dos casais",
     originalPrice: "R$ 197",
