@@ -43,7 +43,7 @@ const salesPages: ProductCard[] = [
     urgency: "Hotéis esgotam 3 meses antes do festival!",
     socialProof: "4.200+ viajantes já compraram",
     originalPrice: "R$ 197",
-    price: "R$ 47",
+    price: "R$ 97",
     highlight: "Economize até R$ 800 na viagem",
     viewers: 23,
   },
