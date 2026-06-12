@@ -376,7 +376,7 @@ const GuiaLuaDeMel = () => {
               {[
                 { name: "Bianca & Marcos", city: "Curitiba", text: "Economizamos R$ 22 mil no orçamento e ainda tivemos a viagem dos sonhos. As dicas de jantar pé na areia em Koh Yao foram um sonho." },
                 { name: "Ana & Renato", city: "Rio de Janeiro", text: "Estávamos quase fechando com agência por R$ 60k. Compramos o guia, montamos sozinhos por R$ 30k e foi PERFEITO." },
-                { name: "Letícia & Caio", city: "Recife", text: "Roteiro de 14 dias inteiro foi cumprido sem nenhum perrengue. O suporte no Telegram salvou a gente num imprevisto em Krabi." },
+                { name: "Letícia & Caio", city: "Recife", text: "Roteiro de 14 dias inteiro foi cumprido sem nenhum perrengue. O guia salvou a gente num imprevisto de transporte em Krabi." },
               ].map((d, i) => (
                 <div key={i} className="bg-white p-8 rounded-3xl shadow-sm">
                   <div className="flex gap-1 mb-4" style={{ color: GOLD }}>
@@ -404,13 +404,12 @@ const GuiaLuaDeMel = () => {
               <div className="bg-[#FFF7F9] p-6 rounded-2xl mb-8 text-left text-sm space-y-2">
                 <div className="flex justify-between"><span>Guia Lua de Mel (120+ páginas)</span><span className="font-bold">R$197</span></div>
                 <div className="flex justify-between text-gray-500"><span>+ Planilha de orçamento</span><span>R$57</span></div>
-                <div className="flex justify-between text-gray-500"><span>+ Grupo VIP Telegram</span><span>R$97</span></div>
                 <div className="flex justify-between text-gray-500"><span>+ Templates de surpresa</span><span>R$47</span></div>
-                <div className="border-t border-pink-200 pt-2 flex justify-between font-bold"><span>Valor real</span><span className="line-through">R$398</span></div>
+                <div className="border-t border-pink-200 pt-2 flex justify-between font-bold"><span>Valor real</span><span className="line-through">R$301</span></div>
               </div>
 
               <div className="space-y-2 mb-10">
-                <span className="text-xl text-gray-400 line-through font-medium">De R$398</span>
+                <span className="text-xl text-gray-400 line-through font-medium">De R$301</span>
                 <div className="text-6xl md:text-8xl font-black" style={{ color: ROSE }}>R$97</div>
                 <span className="block text-sm font-bold text-gray-400 tracking-widest uppercase">Pagamento Único</span>
               </div>
