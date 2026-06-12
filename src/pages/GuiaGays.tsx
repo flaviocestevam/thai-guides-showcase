@@ -254,12 +254,12 @@ const GuiaGays = () => {
             <div className="grid md:grid-cols-[1fr_2fr] gap-12 items-center">
               <div className="relative">
                 <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600"
-                  alt="Autor do guia"
+                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=600"
+                  alt="Especialistas do guia"
                   className="rounded-3xl shadow-2xl aspect-square object-cover"
                 />
                 <div className="absolute -bottom-4 -right-4 px-4 py-2 rounded-full text-white text-xs font-bold shadow-lg" style={{ backgroundColor: PURPLE }}>
-                  <Award className="inline w-4 h-4 mr-1" /> Mora em Phuket
+                  <Award className="inline w-4 h-4 mr-1" /> Especialistas locais
                 </div>
               </div>
               <div className="space-y-5">
@@ -268,13 +268,13 @@ const GuiaGays = () => {
                 </h2>
                 <div className="w-20 h-1.5 rounded-full" style={{ backgroundColor: GOLD }}></div>
                 <p className="text-gray-600 text-lg leading-relaxed">
-                  Sou brasileiro, gay, moro na Tailândia há mais de 4 anos e atendi diretamente centenas de viajantes brasileiros LGBTQIA+ por aqui.
+                  Somos uma equipe de brasileiros apaixonados e especialistas na Tailândia. Unimos nossa experiência prática de quem vive no país e conhece cada detalhe do cotidiano e da cultura local para criar o material mais completo em português.
                 </p>
                 <p className="text-gray-600 text-lg leading-relaxed">
-                  Esse guia é o resultado de cada erro que vi turista cometendo — e cada acerto que custou caro para mim descobrir. Sem firula, direto ao ponto.
+                  Esse guia é o resultado de cada erro que vimos viajantes cometerem — e cada acerto que custou caro descobrir. Sem enrolação, direto ao ponto e com foco no que realmente importa para a sua liberdade e segurança.
                 </p>
                 <div className="flex flex-wrap gap-3 pt-2">
-                  {["4 anos morando", "12 países visitados", "300+ leitores atendidos"].map((t, i) => (
+                  {["4 anos morando", "12 países visitados", "300+ leitores"].map((t, i) => (
                     <span key={i} className="px-4 py-2 rounded-full text-sm font-semibold text-white" style={{ backgroundColor: PURPLE }}>{t}</span>
                   ))}
                 </div>
@@ -321,10 +321,9 @@ const GuiaGays = () => {
               Bônus <span style={{ color: GOLD }}>Inclusos</span>
             </h2>
             <p className="text-center text-gray-500 mb-16">Levados juntos com o guia, sem custo extra.</p>
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
               {[
                 { icon: BookOpen, title: "E-book: 'Sobrevivendo a Songkran'", value: "R$47" },
-                { icon: MessageCircle, title: "Grupo VIP no Telegram com leitores", value: "R$97" },
                 { icon: Gift, title: "Atualizações grátis durante 2026", value: "R$57" },
               ].map((b, i) => (
                 <div key={i} className="bg-gradient-to-br from-white to-[#FFF5F8] p-8 rounded-3xl shadow-lg border-2 border-pink-100 text-center">
@@ -378,13 +377,12 @@ const GuiaGays = () => {
               <div className="bg-[#FFF5F8] p-6 rounded-2xl mb-8 text-left text-sm space-y-2">
                 <div className="flex justify-between"><span>Guia completo (90+ páginas)</span><span className="font-bold">R$197</span></div>
                 <div className="flex justify-between text-gray-500"><span>+ E-book Songkran</span><span>R$47</span></div>
-                <div className="flex justify-between text-gray-500"><span>+ Grupo VIP Telegram</span><span>R$97</span></div>
                 <div className="flex justify-between text-gray-500"><span>+ Atualizações 2026</span><span>R$57</span></div>
-                <div className="border-t border-pink-200 pt-2 flex justify-between font-bold"><span>Valor real</span><span className="line-through">R$398</span></div>
+                <div className="border-t border-pink-200 pt-2 flex justify-between font-bold"><span>Valor real</span><span className="line-through">R$301</span></div>
               </div>
 
               <div className="space-y-2 mb-10">
-                <span className="text-xl text-gray-400 line-through font-medium">De R$398</span>
+                <span className="text-xl text-gray-400 line-through font-medium">De R$301</span>
                 <div className="text-6xl md:text-8xl font-black" style={{ color: PINK }}>R$97</div>
                 <span className="block text-sm font-bold text-gray-400 tracking-widest uppercase">Pagamento Único</span>
               </div>

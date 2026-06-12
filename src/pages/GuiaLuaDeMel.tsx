@@ -262,7 +262,7 @@ const GuiaLuaDeMel = () => {
                     "Hotéis testados, com o melhor custo-benefício real",
                     "A mesma viagem por R$ 18k a R$ 28k o casal",
                     "Liberdade total para improvisar",
-                    "Suporte por Telegram durante a viagem",
+                    "Atualizações constantes para 2026",
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-3">
                       <Check className="flex-shrink-0 mt-1" size={20} />
@@ -281,12 +281,12 @@ const GuiaLuaDeMel = () => {
             <div className="grid md:grid-cols-[1fr_2fr] gap-12 items-center">
               <div className="relative">
                 <img
-                  src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=600"
-                  alt="Autor do guia"
+                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=600"
+                  alt="Especialistas do guia"
                   className="rounded-3xl shadow-2xl aspect-square object-cover"
                 />
                 <div className="absolute -bottom-4 -right-4 px-4 py-2 rounded-full text-white text-xs font-bold shadow-lg" style={{ backgroundColor: ROSE }}>
-                  <Award className="inline w-4 h-4 mr-1" /> Mora em Phuket
+                  <Award className="inline w-4 h-4 mr-1" /> Especialistas locais
                 </div>
               </div>
               <div className="space-y-5">
@@ -295,13 +295,13 @@ const GuiaLuaDeMel = () => {
                 </h2>
                 <div className="w-20 h-1.5 rounded-full" style={{ backgroundColor: GOLD }}></div>
                 <p className="text-gray-600 text-lg leading-relaxed">
-                  Brasileiros morando na Tailândia há mais de 4 anos. Atendemos pessoalmente mais de 200 casais brasileiros em lua de mel, conhecemos cada ilha do país e os bastidores de cada resort.
+                  Somos uma equipe de brasileiros apaixonados e especialistas na Tailândia. Unimos nossa experiência prática de quem vive no país e conhece cada detalhe do cotidiano e da cultura local para criar o material mais completo em português.
                 </p>
                 <p className="text-gray-600 text-lg leading-relaxed">
-                  Esse guia é o que a gente entrega para os clientes premium da consultoria — agora disponível pra todo casal que quer planejar sozinho com segurança.
+                  Esse guia é o resultado de cada erro que vimos viajantes cometerem — e cada acerto que custou caro descobrir. Sem enrolação, direto ao ponto e com foco no que realmente importa para que você planeje sua viagem com segurança.
                 </p>
                 <div className="flex flex-wrap gap-3 pt-2">
-                  {["4 anos morando", "200+ casais atendidos", "30 ilhas visitadas"].map((t, i) => (
+                  {["4 anos morando", "12 países visitados", "300+ leitores"].map((t, i) => (
                     <span key={i} className="px-4 py-2 rounded-full text-sm font-semibold text-white" style={{ backgroundColor: ROSE }}>{t}</span>
                   ))}
                 </div>
@@ -348,10 +348,9 @@ const GuiaLuaDeMel = () => {
               Bônus <span style={{ color: GOLD }}>Inclusos</span>
             </h2>
             <p className="text-center text-gray-500 mb-16">Sem custo extra. Já vêm junto com o PDF.</p>
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
               {[
                 { icon: BookOpen, title: "Planilha de Orçamento (Excel)", value: "R$57" },
-                { icon: MessageCircle, title: "Grupo VIP no Telegram com a autora", value: "R$97" },
                 { icon: Gift, title: "Templates de surpresa para o(a) cônjuge", value: "R$47" },
               ].map((b, i) => (
                 <div key={i} className="bg-gradient-to-br from-white to-[#FFF7F9] p-8 rounded-3xl shadow-lg border-2 border-pink-100 text-center">
@@ -377,7 +376,7 @@ const GuiaLuaDeMel = () => {
               {[
                 { name: "Bianca & Marcos", city: "Curitiba", text: "Economizamos R$ 22 mil no orçamento e ainda tivemos a viagem dos sonhos. As dicas de jantar pé na areia em Koh Yao foram um sonho." },
                 { name: "Ana & Renato", city: "Rio de Janeiro", text: "Estávamos quase fechando com agência por R$ 60k. Compramos o guia, montamos sozinhos por R$ 30k e foi PERFEITO." },
-                { name: "Letícia & Caio", city: "Recife", text: "Roteiro de 14 dias inteiro foi cumprido sem nenhum perrengue. O suporte no Telegram salvou a gente num imprevisto em Krabi." },
+                { name: "Letícia & Caio", city: "Recife", text: "Roteiro de 14 dias inteiro foi cumprido sem nenhum perrengue. O guia salvou a gente num imprevisto de transporte em Krabi." },
               ].map((d, i) => (
                 <div key={i} className="bg-white p-8 rounded-3xl shadow-sm">
                   <div className="flex gap-1 mb-4" style={{ color: GOLD }}>
@@ -405,13 +404,12 @@ const GuiaLuaDeMel = () => {
               <div className="bg-[#FFF7F9] p-6 rounded-2xl mb-8 text-left text-sm space-y-2">
                 <div className="flex justify-between"><span>Guia Lua de Mel (120+ páginas)</span><span className="font-bold">R$197</span></div>
                 <div className="flex justify-between text-gray-500"><span>+ Planilha de orçamento</span><span>R$57</span></div>
-                <div className="flex justify-between text-gray-500"><span>+ Grupo VIP Telegram</span><span>R$97</span></div>
                 <div className="flex justify-between text-gray-500"><span>+ Templates de surpresa</span><span>R$47</span></div>
-                <div className="border-t border-pink-200 pt-2 flex justify-between font-bold"><span>Valor real</span><span className="line-through">R$398</span></div>
+                <div className="border-t border-pink-200 pt-2 flex justify-between font-bold"><span>Valor real</span><span className="line-through">R$301</span></div>
               </div>
 
               <div className="space-y-2 mb-10">
-                <span className="text-xl text-gray-400 line-through font-medium">De R$398</span>
+                <span className="text-xl text-gray-400 line-through font-medium">De R$301</span>
                 <div className="text-6xl md:text-8xl font-black" style={{ color: ROSE }}>R$97</div>
                 <span className="block text-sm font-bold text-gray-400 tracking-widest uppercase">Pagamento Único</span>
               </div>
