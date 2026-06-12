@@ -122,20 +122,23 @@ const GuiaGays = () => {
           </div>
         </section>
 
-        {/* SEÇÃO 3: BAIRROS */}
+        {/* SEÇÃO 3: TEASER CIDADES */}
         <section className="py-24 px-6 bg-white">
           <div className="container mx-auto max-w-6xl">
-            <h2 className="text-3xl md:text-5xl font-bold text-center mb-16">
-              Os Bairros <span style={{ color: PURPLE }}>Gay</span> que Você Precisa Conhecer
+            <h2 className="text-3xl md:text-5xl font-bold text-center mb-4">
+              Por Onde Você Vai <span style={{ color: PURPLE }}>Realmente</span> Curtir
             </h2>
+            <p className="text-center text-gray-500 mb-16 max-w-2xl mx-auto">
+              Cada cidade tem uma cena. Te mostramos onde ela acontece de verdade — sem cair em "bar gay para turista" disfarçado.
+            </p>
             <div className="grid md:grid-cols-3 gap-8">
               {[
-                { area: "Silom Soi 4 (Bangkok)", title: "O coração da cena", desc: "Bares, drag shows e baladas até de manhã. Telephone Pub, Stranger Bar, G.O.D.", color: PINK },
-                { area: "Silom Soi 2 (Bangkok)", title: "Mais clubber", desc: "DJ Station e ICK Bangkok. Pista lotada de quinta a domingo, entrada com 1 drink.", color: PURPLE },
-                { area: "Chiang Mai (Nimman)", title: "Vibe relax", desc: "Cafés gay-owned, Adam's Apple Club, bares pé-no-chão. Cidade mais tranquila.", color: TEAL },
-                { area: "Phuket (Paradise Complex)", title: "Praia + festa", desc: "O complexo gay de Patong: cabarés, bares e shows todas as noites.", color: GOLD },
-                { area: "Koh Samui (Chaweng)", title: "Ilha gay-friendly", desc: "Bares e hotéis acolhedores na praia mais movimentada da ilha.", color: PINK },
-                { area: "Pattaya (Boyztown)", title: "Cena adulta", desc: "Concentração de bares gay 18+, cabarés e shows. Atitude liberal.", color: PURPLE },
+                { area: "Bangkok", title: "A capital da night gay asiática", desc: "Te entregamos os 2 bairros certos, a diferença entre eles e em que dia da semana cada um bomba.", color: PINK },
+                { area: "Chiang Mai", title: "A bolha calma do Norte", desc: "Cidade pequena, cena descolada e segura. Mostramos os endereços queridos da comunidade local.", color: TEAL },
+                { area: "Phuket / Patong", title: "Praia + festa sem parar", desc: "O complexo gay mais conhecido do país — e o que evitar dentro dele. Mapa de bolso incluído.", color: GOLD },
+                { area: "Koh Samui", title: "Ilha romântica gay-friendly", desc: "Onde casais conseguem hospedagem boutique sem cara feia na recepção.", color: PURPLE },
+                { area: "Pattaya", title: "Cena adulta 18+", desc: "Honesto sobre o que rola: o que vale ir, o que é cilada turística e como se proteger.", color: PINK },
+                { area: "Surpresa do guia", title: "A cidade que ninguém comenta", desc: "Um destino fora do óbvio com vida LGBTQ+ vibrante. Revelado dentro do material.", color: TEAL },
               ].map((item, i) => (
                 <div key={i} className="bg-white p-10 rounded-3xl shadow-lg border-t-8 transition-transform hover:-translate-y-2" style={{ borderTopColor: item.color }}>
                   <div className="text-sm font-black mb-2 uppercase tracking-wider" style={{ color: item.color }}>{item.area}</div>
@@ -147,33 +150,30 @@ const GuiaGays = () => {
           </div>
         </section>
 
-        {/* SEÇÃO 4: HOTÉIS */}
+        {/* SEÇÃO 4: TEASER HOTÉIS */}
         <section className="py-24 px-6 bg-[#F8FAFC]">
           <div className="container mx-auto max-w-6xl">
             <h2 className="text-3xl md:text-5xl font-bold text-center mb-4">
-              Hotéis <span style={{ color: PINK }}>Gay-Friendly</span> Recomendados
+              Hospedagem Sem <span style={{ color: PINK }}>Constrangimento</span>
             </h2>
-            <p className="text-center text-gray-500 mb-16 max-w-2xl mx-auto">Endereços testados, sem julgamento na recepção, perto da cena.</p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <p className="text-center text-gray-500 mb-16 max-w-2xl mx-auto">
+              30+ endereços pré-aprovados pela comunidade — do hostel descolado ao 5★. Recepção que não te olha de cima quando você pede cama de casal.
+            </p>
+            <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
               {[
-                { city: "Bangkok", img: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800", name: "Babylon Bangkok", note: "Lendário hotel/sauna gay em Sathorn." },
-                { city: "Bangkok", img: "https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=800", name: "W Bangkok", note: "Luxo no coração de Silom, equipe inclusiva." },
-                { city: "Chiang Mai", img: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=800", name: "Adam's Apple Resort", note: "Boutique 100% gay em Nimman." },
-                { city: "Phuket", img: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=800", name: "Connect Guesthouse", note: "Pequeno, gay-owned, dentro do Paradise Complex." },
-                { city: "Koh Samui", img: "https://images.unsplash.com/photo-1540541338287-41700207dee6?q=80&w=800", name: "The Sea Koh Samui", note: "Boutique adults-only com praia privativa." },
-                { city: "Pattaya", img: "https://images.unsplash.com/photo-1561501900-3701fa6a0864?q=80&w=800", name: "Lone Star Boutique", note: "Coração de Boyztown, ótimo custo." },
-              ].map((item, i) => (
-                <div key={i} className="group relative overflow-hidden rounded-3xl aspect-[4/5] shadow-xl">
-                  <img src={item.img} alt={item.name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent p-8 flex flex-col justify-end text-left text-white">
-                    <span className="text-xs font-bold uppercase tracking-wider" style={{ color: PINK }}>{item.city}</span>
-                    <h3 className="text-2xl font-bold mb-2 mt-1">{item.name}</h3>
-                    <p className="text-sm text-gray-300">{item.note}</p>
-                  </div>
+                { num: "30+", label: "Hotéis testados pessoalmente" },
+                { num: "6", label: "Cidades cobertas" },
+                { num: "3", label: "Faixas de preço (econômico, médio, luxo)" },
+              ].map((s, i) => (
+                <div key={i} className="bg-white p-8 rounded-3xl text-center shadow-md">
+                  <div className="text-5xl font-black mb-2" style={{ color: PINK }}>{s.num}</div>
+                  <div className="text-gray-600 text-sm">{s.label}</div>
                 </div>
               ))}
             </div>
-            <p className="text-center text-gray-500 mt-12 text-sm">+ 24 outros endereços completos no guia, com preços médios em ฿ e R$.</p>
+            <p className="text-center text-gray-500 mt-12 text-sm italic">
+              A lista completa, com fotos, preços e link de reserva, está dentro do guia.
+            </p>
           </div>
         </section>
 
@@ -222,18 +222,21 @@ const GuiaGays = () => {
           </div>
         </section>
 
-        {/* SEÇÃO 6: SEGURANÇA */}
+        {/* SEÇÃO 6: SEGURANÇA — teaser */}
         <section className="py-24 px-6 bg-[#1A1A1A] text-white">
           <div className="container mx-auto max-w-5xl">
-            <h2 className="text-3xl md:text-5xl font-bold text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold text-center mb-4">
               Segurança & <span style={{ color: PINK }}>Etiqueta Local</span>
             </h2>
+            <p className="text-center text-gray-400 mb-16 max-w-2xl mx-auto">
+              Um capítulo inteiro só sobre o que ninguém te conta em fórum de viagem.
+            </p>
             <div className="grid md:grid-cols-2 gap-8">
               {[
-                { icon: Shield, title: "PDA com bom senso", desc: "Casamento é legal, mas demonstrações intensas em público fora dos bairros gay ainda chamam atenção." },
-                { icon: MapPin, title: "Cuidado nos templos", desc: "Ombros cobertos e silêncio. Sem PDA dentro de templos budistas, é uma questão de respeito." },
-                { icon: Martini, title: "Bebidas em bares", desc: "Em alguns bares de 'show' a conta surpreende. Lista de casas honestas no guia." },
-                { icon: Users, title: "Apps de paquera", desc: "Grindr, Hornet e Blued bombam. Cuidado com perfis pedindo Pin/transferência adiantada." },
+                { icon: Shield, title: "Demonstrações de afeto", desc: "Onde rola tranquilo, onde é melhor segurar a mão dentro do hotel — mapeado por região." },
+                { icon: MapPin, title: "Templos e locais sagrados", desc: "As regras que parecem óbvias mas custam multa pesada para quem ignora." },
+                { icon: Martini, title: "Bares com conta inflada", desc: "A lista negra dos lugares que cobram 4x do gringo — e como reconhecer um na entrada." },
+                { icon: Users, title: "Golpes em apps de paquera", desc: "Os 5 padrões de golpe mais aplicados em brasileiros. Como sair sem prejuízo." },
               ].map((item, i) => (
                 <div key={i} className="bg-white/5 p-10 rounded-3xl border border-white/10 hover:border-[#EC4899]/50 transition-colors">
                   <item.icon className="mb-4" size={36} style={{ color: PINK }} />
@@ -292,7 +295,7 @@ const GuiaGays = () => {
                 { icon: Hotel, title: "Hotéis testados", desc: "30+ endereços gay-friendly" },
                 { icon: Martini, title: "Mapa da night", desc: "Bares, baladas e cabarés" },
                 { icon: Heart, title: "Saunas & spas", desc: "Os 10 melhores do país" },
-                { icon: Plane, title: "Roteiro 14 dias", desc: "Bangkok → Chiang Mai → ilhas" },
+                { icon: Plane, title: "Roteiro 14 dias", desc: "Pronto, dia a dia, gay-friendly" },
                 { icon: Sparkles, title: "Eventos & Prides", desc: "Calendário 2026 completo" },
                 { icon: Languages, title: "Frases em tailandês", desc: "Para flertar e se virar" },
                 { icon: Map, title: "Mapas por bairro", desc: "Silom, Nimman, Patong" },
