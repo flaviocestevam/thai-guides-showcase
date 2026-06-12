@@ -321,10 +321,9 @@ const GuiaGays = () => {
               Bônus <span style={{ color: GOLD }}>Inclusos</span>
             </h2>
             <p className="text-center text-gray-500 mb-16">Levados juntos com o guia, sem custo extra.</p>
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
               {[
                 { icon: BookOpen, title: "E-book: 'Sobrevivendo a Songkran'", value: "R$47" },
-                { icon: MessageCircle, title: "Grupo VIP no Telegram com leitores", value: "R$97" },
                 { icon: Gift, title: "Atualizações grátis durante 2026", value: "R$57" },
               ].map((b, i) => (
                 <div key={i} className="bg-gradient-to-br from-white to-[#FFF5F8] p-8 rounded-3xl shadow-lg border-2 border-pink-100 text-center">
