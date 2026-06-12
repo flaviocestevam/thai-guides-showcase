@@ -295,7 +295,7 @@ const GuiaGays = () => {
                 { icon: Hotel, title: "Hotéis testados", desc: "30+ endereços gay-friendly" },
                 { icon: Martini, title: "Mapa da night", desc: "Bares, baladas e cabarés" },
                 { icon: Heart, title: "Saunas & spas", desc: "Os 10 melhores do país" },
-                { icon: Plane, title: "Roteiro 14 dias", desc: "Bangkok → Chiang Mai → ilhas" },
+                { icon: Plane, title: "Roteiro 14 dias", desc: "Pronto, dia a dia, gay-friendly" },
                 { icon: Sparkles, title: "Eventos & Prides", desc: "Calendário 2026 completo" },
                 { icon: Languages, title: "Frases em tailandês", desc: "Para flertar e se virar" },
                 { icon: Map, title: "Mapas por bairro", desc: "Silom, Nimman, Patong" },
