@@ -3,12 +3,14 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Check, Shield, Heart, Sparkles, Palmtree, Hotel, Utensils, Plane, Camera, Info } from "lucide-react";
+import {
+  Check, X, Shield, Heart, Sparkles, Palmtree, Hotel, Utensils, Plane, Camera,
+  Info, Star, BookOpen, MessageCircle, Gift, Award, Calendar, Map, DollarSign, Sun
+} from "lucide-react";
 
 const ROSE = "#E11D74";
 const GOLD = "#D4A017";
 const TEAL = "#00A8A8";
-const NAVY = "#1A1A2E";
 
 const GuiaLuaDeMel = () => {
   return (
@@ -49,7 +51,18 @@ const GuiaLuaDeMel = () => {
               <span className="flex items-center gap-2">✓ 100% em português</span>
               <span className="flex items-center gap-2">✓ Acesso imediato</span>
               <span className="flex items-center gap-2">✓ Roteiros 10/14/21 dias</span>
+              <span className="flex items-center gap-2">✓ Garantia de 7 dias</span>
             </div>
+          </div>
+        </section>
+
+        {/* SOCIAL PROOF BAR */}
+        <section className="bg-[#1A1A2E] text-white py-6 px-6 border-y border-white/10">
+          <div className="container mx-auto max-w-6xl flex flex-wrap items-center justify-around gap-6 text-center">
+            <div><div className="text-2xl font-black" style={{ color: ROSE }}>1.800+</div><div className="text-xs text-gray-400 uppercase tracking-wider">Casais em 2025</div></div>
+            <div><div className="text-2xl font-black" style={{ color: GOLD }}>4,9 ★</div><div className="text-xs text-gray-400 uppercase tracking-wider">Avaliação média</div></div>
+            <div><div className="text-2xl font-black" style={{ color: TEAL }}>40+</div><div className="text-xs text-gray-400 uppercase tracking-wider">Resorts testados</div></div>
+            <div><div className="text-2xl font-black text-white">7 dias</div><div className="text-xs text-gray-400 uppercase tracking-wider">Garantia incondicional</div></div>
           </div>
         </section>
 
@@ -80,8 +93,36 @@ const GuiaLuaDeMel = () => {
           </div>
         </section>
 
-        {/* SEÇÃO 2: ILHAS */}
+        {/* SEÇÃO 2: DOR */}
         <section className="py-24 px-6 bg-[#FFF7F9]">
+          <div className="container mx-auto max-w-5xl">
+            <h2 className="text-3xl md:text-5xl font-bold text-center mb-4">
+              Lua de mel é <span style={{ color: ROSE }}>uma vez na vida</span>
+            </h2>
+            <p className="text-center text-gray-500 mb-16 max-w-2xl mx-auto">E é exatamente nessa viagem que ninguém quer errar. Veja o que o guia evita pra vocês:</p>
+            <div className="grid md:grid-cols-2 gap-6">
+              {[
+                "Escolher Phi Phi em pleno pico turístico e dividir a praia com 800 pessoas",
+                "Reservar resort 'romântico' que na verdade é cheio de família com criança",
+                "Ir pra Koh Samui em outubro e pegar a temporada de chuva",
+                "Gastar R$ 60 mil em um pacote que vocês conseguiriam por R$ 25 mil sozinhos",
+                "Marcar transfer errado entre ilhas e perder um dia inteiro de barco",
+                "Descobrir tarde que o jantar à beira-mar precisa ser reservado com 30 dias",
+              ].map((dor, i) => (
+                <div key={i} className="flex items-start gap-4 bg-white p-6 rounded-2xl shadow-sm">
+                  <X className="flex-shrink-0 mt-1" style={{ color: ROSE }} size={24} />
+                  <p className="text-gray-700 leading-relaxed">{dor}</p>
+                </div>
+              ))}
+            </div>
+            <p className="text-center mt-12 text-lg font-semibold">
+              O guia foi escrito para que vocês <span style={{ color: ROSE }}>só guardem boas memórias</span>.
+            </p>
+          </div>
+        </section>
+
+        {/* SEÇÃO 3: ILHAS */}
+        <section className="py-24 px-6 bg-white">
           <div className="container mx-auto max-w-6xl">
             <h2 className="text-3xl md:text-5xl font-bold text-center mb-16">
               As Ilhas Mais <span style={{ color: ROSE }}>Românticas</span>
@@ -91,7 +132,7 @@ const GuiaLuaDeMel = () => {
                 { city: "Koh Samui", img: "https://images.unsplash.com/photo-1540541338287-41700207dee6?q=80&w=800", desc: "Resorts cinco estrelas e vida noturna sofisticada em Chaweng Noi." },
                 { city: "Koh Phi Phi", img: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?q=80&w=800", desc: "Cenário do filme A Praia. Maya Bay e mar turquesa irreal." },
                 { city: "Krabi (Railay)", img: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?q=80&w=800", desc: "Falésias gigantes, praias só acessíveis de barco. Pura privacidade." },
-                { city: "Koh Lanta", img: "https://images.unsplash.com/photo-1537956965359-7573183d1f57?q=80&w=800", desc: "A ilha tranquila para quem fugir do óbvio. Pôr-do-sol épico." },
+                { city: "Koh Lanta", img: "https://images.unsplash.com/photo-1537956965359-7573183d1f57?q=80&w=800", desc: "A ilha tranquila para fugir do óbvio. Pôr-do-sol épico." },
                 { city: "Koh Yao Noi", img: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=800", desc: "Refúgio entre Phuket e Krabi. Resorts boutique sem aglomeração." },
                 { city: "Phuket (Surin/Bangtao)", img: "https://images.unsplash.com/photo-1589308078059-be1415eab4c3?q=80&w=800", desc: "O lado luxuoso de Phuket, longe da agitação de Patong." },
               ].map((item, i) => (
@@ -107,15 +148,16 @@ const GuiaLuaDeMel = () => {
           </div>
         </section>
 
-        {/* SEÇÃO 3: ROTEIROS */}
-        <section className="py-24 px-6 bg-white">
+        {/* SEÇÃO 4: ROTEIROS */}
+        <section className="py-24 px-6 bg-[#FFF7F9]">
           <div className="container mx-auto max-w-6xl">
-            <h2 className="text-3xl md:text-5xl font-bold text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold text-center mb-4">
               Roteiros <span style={{ color: GOLD }}>Prontos</span> para Casais
             </h2>
+            <p className="text-center text-gray-500 mb-16">Dia a dia, com hospedagem sugerida, transfer e tempo livre.</p>
             <div className="grid md:grid-cols-3 gap-8">
               {[
-                { dias: "10 DIAS", title: "Essencial Romântico", cidades: "Bangkok → Krabi → Koh Phi Phi", color: TEAL, desc: "Cultura + praia. Perfeito para quem tem férias curtas." },
+                { dias: "10 DIAS", title: "Essencial Romântico", cidades: "Bangkok → Krabi → Koh Phi Phi", color: TEAL, desc: "Cultura + praia. Perfeito para férias curtas." },
                 { dias: "14 DIAS", title: "Clássico Apaixonado", cidades: "Bangkok → Chiang Mai → Koh Samui", color: ROSE, desc: "O roteiro mais pedido. Templos, montanha e praia." },
                 { dias: "21 DIAS", title: "Lua de Mel Completa", cidades: "Bangkok → Norte → 2 ilhas", color: GOLD, desc: "Para quem quer viver tudo sem correria. Inclui Koh Yao Noi." },
               ].map((r, i) => (
@@ -130,7 +172,7 @@ const GuiaLuaDeMel = () => {
           </div>
         </section>
 
-        {/* SEÇÃO 4: EXPERIÊNCIAS */}
+        {/* SEÇÃO 5: EXPERIÊNCIAS */}
         <section className="py-24 px-6 bg-[#1A1A2E] text-white">
           <div className="container mx-auto max-w-5xl">
             <h2 className="text-3xl md:text-5xl font-bold text-center mb-16">
@@ -142,6 +184,8 @@ const GuiaLuaDeMel = () => {
                 { icon: Sparkles, title: "Spa Tradicional Thai", desc: "Massagens a 4 mãos em spas premiados — alguns a partir de 2.500฿ (R$390)." },
                 { icon: Camera, title: "Ensaio Fotográfico", desc: "Lista de fotógrafos brasileiros e tailandeses para registrar a viagem." },
                 { icon: Palmtree, title: "Ilha Privativa", desc: "Como alugar uma lancha e ter uma praia inteira só para vocês dois." },
+                { icon: Heart, title: "Renovação de Votos", desc: "Cerimônia simbólica em templos e resorts (com monge ou no pôr-do-sol)." },
+                { icon: Sun, title: "Passeio em James Bond", desc: "A baía mais cinematográfica do país, com piquenique privativo." },
               ].map((item, i) => (
                 <div key={i} className="bg-white/5 p-10 rounded-3xl border border-white/10 hover:border-[#E11D74]/50 transition-colors">
                   <item.icon className="mb-4" size={36} style={{ color: ROSE }} />
@@ -153,22 +197,139 @@ const GuiaLuaDeMel = () => {
           </div>
         </section>
 
-        {/* SEÇÃO 5: O QUE VEM */}
+        {/* SEÇÃO 6: ORÇAMENTOS */}
         <section className="py-24 px-6 bg-white">
-          <div className="container mx-auto max-w-6xl">
+          <div className="container mx-auto max-w-5xl">
+            <h2 className="text-3xl md:text-5xl font-bold text-center mb-4">
+              Quanto <span style={{ color: ROSE }}>Custa</span> de Verdade
+            </h2>
+            <p className="text-center text-gray-500 mb-16">Valores reais para 14 dias, o casal, com passagens incluídas.</p>
+            <div className="grid md:grid-cols-3 gap-8">
+              {[
+                { tier: "Econômico", price: "R$ 18 mil", color: TEAL, items: ["Hotéis 3★ e pousadas charmosas", "Voos com 1 conexão", "Transporte público + Grab", "1 jantar especial"] },
+                { tier: "Romântico", price: "R$ 28 mil", color: ROSE, items: ["Hotéis 4★ pé na areia", "Voos com 1 conexão curta", "Transfers privativos", "3 jantares especiais", "1 spa de luxo"] },
+                { tier: "Luxo", price: "R$ 45 mil+", color: GOLD, items: ["Resorts 5★ e villas privativas", "Voos diretos / 1ª classe", "Lancha privativa entre ilhas", "Concierge dedicado", "Spa diário, ensaio foto"] },
+              ].map((p, i) => (
+                <div key={i} className="bg-[#FFF7F9] p-10 rounded-3xl border-t-8 shadow-md" style={{ borderTopColor: p.color }}>
+                  <div className="text-sm font-black mb-2 tracking-widest" style={{ color: p.color }}>{p.tier.toUpperCase()}</div>
+                  <div className="text-3xl font-black mb-6">{p.price}</div>
+                  <ul className="space-y-3">
+                    {p.items.map((it, j) => (
+                      <li key={j} className="flex items-start gap-2 text-gray-600 text-sm">
+                        <Check className="flex-shrink-0 mt-0.5" size={16} style={{ color: p.color }} />
+                        <span>{it}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+            <p className="text-center text-gray-400 mt-8 text-sm flex items-center justify-center gap-2">
+              <DollarSign className="w-4 h-4" /> Planilha Excel editável inclusa no guia para vocês ajustarem ao seu orçamento.
+            </p>
+          </div>
+        </section>
+
+        {/* SEÇÃO 7: COMPARAÇÃO */}
+        <section className="py-24 px-6 bg-[#FFF7F9]">
+          <div className="container mx-auto max-w-5xl">
             <h2 className="text-3xl md:text-5xl font-bold text-center mb-16">
+              Com Agência <span style={{ color: ROSE }}>vs.</span> Com o Guia
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="bg-white p-10 rounded-3xl border-2 border-rose-100">
+                <h3 className="text-2xl font-bold mb-6 text-gray-400">Pacote de Agência</h3>
+                <ul className="space-y-4">
+                  {[
+                    "Roteiro engessado em 7 dias, sem alma",
+                    "Hotéis genéricos que pagam mais comissão",
+                    "Custa de R$ 45k a R$ 80k o casal",
+                    "Ônibus em grupo e jantares cliché",
+                    "Difícil mudar de planos depois de pago",
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-start gap-3 text-gray-600">
+                      <X className="flex-shrink-0 mt-1 text-gray-400" size={20} />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="p-10 rounded-3xl border-2 shadow-2xl text-white" style={{ background: `linear-gradient(135deg, #E11D74, #1A1A2E)`, borderColor: ROSE }}>
+                <h3 className="text-2xl font-bold mb-6">Vocês com o guia</h3>
+                <ul className="space-y-4">
+                  {[
+                    "Roteiro vivo, com alternativas para cada dia",
+                    "Hotéis testados, com o melhor custo-benefício real",
+                    "A mesma viagem por R$ 18k a R$ 28k o casal",
+                    "Liberdade total para improvisar",
+                    "Suporte por Telegram durante a viagem",
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <Check className="flex-shrink-0 mt-1" size={20} />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* SEÇÃO 8: AUTORIDADE */}
+        <section className="py-24 px-6 bg-white">
+          <div className="container mx-auto max-w-5xl">
+            <div className="grid md:grid-cols-[1fr_2fr] gap-12 items-center">
+              <div className="relative">
+                <img
+                  src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=600"
+                  alt="Autor do guia"
+                  className="rounded-3xl shadow-2xl aspect-square object-cover"
+                />
+                <div className="absolute -bottom-4 -right-4 px-4 py-2 rounded-full text-white text-xs font-bold shadow-lg" style={{ backgroundColor: ROSE }}>
+                  <Award className="inline w-4 h-4 mr-1" /> Mora em Phuket
+                </div>
+              </div>
+              <div className="space-y-5">
+                <h2 className="text-3xl md:text-5xl font-bold leading-tight">
+                  Quem está <span style={{ color: ROSE }}>do outro lado</span> desse guia
+                </h2>
+                <div className="w-20 h-1.5 rounded-full" style={{ backgroundColor: GOLD }}></div>
+                <p className="text-gray-600 text-lg leading-relaxed">
+                  Brasileiros morando na Tailândia há mais de 4 anos. Atendemos pessoalmente mais de 200 casais brasileiros em lua de mel, conhecemos cada ilha do país e os bastidores de cada resort.
+                </p>
+                <p className="text-gray-600 text-lg leading-relaxed">
+                  Esse guia é o que a gente entrega para os clientes premium da consultoria — agora disponível pra todo casal que quer planejar sozinho com segurança.
+                </p>
+                <div className="flex flex-wrap gap-3 pt-2">
+                  {["4 anos morando", "200+ casais atendidos", "30 ilhas visitadas"].map((t, i) => (
+                    <span key={i} className="px-4 py-2 rounded-full text-sm font-semibold text-white" style={{ backgroundColor: ROSE }}>{t}</span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* SEÇÃO 9: SUMÁRIO */}
+        <section className="py-24 px-6 bg-[#FFF7F9]">
+          <div className="container mx-auto max-w-6xl">
+            <h2 className="text-3xl md:text-5xl font-bold text-center mb-4">
               O Que <span style={{ color: ROSE }}>Vem no Guia</span>
             </h2>
+            <p className="text-center text-gray-500 mb-16 max-w-2xl mx-auto">PDF de 120+ páginas com mapas, links clicáveis, planilha de orçamento e atualizações grátis durante 2026.</p>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
               {[
                 { icon: Hotel, title: "40+ Resorts", desc: "Selecionados para casais" },
                 { icon: Palmtree, title: "Mapa das Ilhas", desc: "Qual encaixa no seu estilo" },
                 { icon: Utensils, title: "Restaurantes top", desc: "Romance garantido" },
                 { icon: Plane, title: "3 Roteiros Prontos", desc: "10, 14 e 21 dias" },
-                { icon: Heart, title: "Surpresas para o par", desc: "Pedidos, decoração e jantares" },
-                { icon: Shield, title: "Orçamento real", desc: "Quanto custa, em R$ e ฿" },
+                { icon: Heart, title: "Surpresas para o par", desc: "Pedidos, decoração, jantares" },
+                { icon: DollarSign, title: "Orçamento real", desc: "Em R$ e ฿ — planilha inclusa" },
+                { icon: Calendar, title: "Quando ir", desc: "Mês a mês, ilha a ilha" },
+                { icon: Map, title: "Transfers entre ilhas", desc: "Lancha, ferry e voo doméstico" },
+                { icon: Camera, title: "Spots de foto", desc: "Para o ensaio dos sonhos" },
               ].map((item, i) => (
-                <div key={i} className="text-center p-8 rounded-3xl hover:bg-[#FFF7F9] transition-colors border border-transparent hover:border-pink-100">
+                <div key={i} className="text-center p-8 rounded-3xl bg-white hover:shadow-lg transition border border-pink-100">
                   <div className="inline-flex items-center justify-center w-20 h-20 rounded-full mb-6" style={{ backgroundColor: `${ROSE}1A`, color: ROSE }}>
                     <item.icon size={36} />
                   </div>
@@ -180,16 +341,77 @@ const GuiaLuaDeMel = () => {
           </div>
         </section>
 
-        {/* SEÇÃO 6: OFERTA */}
+        {/* SEÇÃO 10: BÔNUS */}
+        <section className="py-24 px-6 bg-white">
+          <div className="container mx-auto max-w-5xl">
+            <h2 className="text-3xl md:text-5xl font-bold text-center mb-4">
+              Bônus <span style={{ color: GOLD }}>Inclusos</span>
+            </h2>
+            <p className="text-center text-gray-500 mb-16">Sem custo extra. Já vêm junto com o PDF.</p>
+            <div className="grid md:grid-cols-3 gap-8">
+              {[
+                { icon: BookOpen, title: "Planilha de Orçamento (Excel)", value: "R$57" },
+                { icon: MessageCircle, title: "Grupo VIP no Telegram com a autora", value: "R$97" },
+                { icon: Gift, title: "Templates de surpresa para o(a) cônjuge", value: "R$47" },
+              ].map((b, i) => (
+                <div key={i} className="bg-gradient-to-br from-white to-[#FFF7F9] p-8 rounded-3xl shadow-lg border-2 border-pink-100 text-center">
+                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full mb-4" style={{ backgroundColor: `${GOLD}1A`, color: GOLD }}>
+                    <b.icon size={28} />
+                  </div>
+                  <h3 className="font-bold text-lg mb-3">{b.title}</h3>
+                  <div className="text-sm text-gray-400 line-through">Valor avulso: {b.value}</div>
+                  <div className="text-sm font-bold mt-1" style={{ color: ROSE }}>GRÁTIS com o guia</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* SEÇÃO 11: DEPOIMENTOS */}
+        <section className="py-24 px-6 bg-[#FFF7F9]">
+          <div className="container mx-auto max-w-6xl">
+            <h2 className="text-3xl md:text-5xl font-bold text-center mb-16">
+              Casais que <span style={{ color: ROSE }}>já amaram</span>
+            </h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              {[
+                { name: "Bianca & Marcos", city: "Curitiba", text: "Economizamos R$ 22 mil no orçamento e ainda tivemos a viagem dos sonhos. As dicas de jantar pé na areia em Koh Yao foram um sonho." },
+                { name: "Ana & Renato", city: "Rio de Janeiro", text: "Estávamos quase fechando com agência por R$ 60k. Compramos o guia, montamos sozinhos por R$ 30k e foi PERFEITO." },
+                { name: "Letícia & Caio", city: "Recife", text: "Roteiro de 14 dias inteiro foi cumprido sem nenhum perrengue. O suporte no Telegram salvou a gente num imprevisto em Krabi." },
+              ].map((d, i) => (
+                <div key={i} className="bg-white p-8 rounded-3xl shadow-sm">
+                  <div className="flex gap-1 mb-4" style={{ color: GOLD }}>
+                    {[...Array(5)].map((_, j) => <Star key={j} size={18} fill="currentColor" />)}
+                  </div>
+                  <p className="text-gray-600 italic mb-6 leading-relaxed">"{d.text}"</p>
+                  <div>
+                    <div className="font-bold">{d.name}</div>
+                    <div className="text-sm text-gray-400">{d.city}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* SEÇÃO 12: OFERTA */}
         <section id="oferta" className="py-24 px-6 bg-gradient-to-br from-[#E11D74] via-[#C2185B] to-[#1A1A2E]">
           <div className="container mx-auto max-w-2xl">
             <div className="bg-white p-12 md:p-20 rounded-[3rem] shadow-2xl text-center relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 rounded-full -mr-16 -mt-16" style={{ backgroundColor: `${GOLD}1A` }}></div>
               <h2 className="text-3xl font-bold mb-4">Garantir Meu Guia Agora</h2>
-              <p className="text-gray-600 mb-10 text-lg">PDF completo, mapas e roteiros prontos para vocês.</p>
+              <p className="text-gray-600 mb-10 text-lg">PDF completo, mapas, planilha e roteiros prontos para vocês.</p>
+
+              <div className="bg-[#FFF7F9] p-6 rounded-2xl mb-8 text-left text-sm space-y-2">
+                <div className="flex justify-between"><span>Guia Lua de Mel (120+ páginas)</span><span className="font-bold">R$197</span></div>
+                <div className="flex justify-between text-gray-500"><span>+ Planilha de orçamento</span><span>R$57</span></div>
+                <div className="flex justify-between text-gray-500"><span>+ Grupo VIP Telegram</span><span>R$97</span></div>
+                <div className="flex justify-between text-gray-500"><span>+ Templates de surpresa</span><span>R$47</span></div>
+                <div className="border-t border-pink-200 pt-2 flex justify-between font-bold"><span>Valor real</span><span className="line-through">R$398</span></div>
+              </div>
 
               <div className="space-y-2 mb-10">
-                <span className="text-xl text-gray-400 line-through font-medium">De R$197</span>
+                <span className="text-xl text-gray-400 line-through font-medium">De R$398</span>
                 <div className="text-6xl md:text-8xl font-black" style={{ color: ROSE }}>R$97</div>
                 <span className="block text-sm font-bold text-gray-400 tracking-widest uppercase">Pagamento Único</span>
               </div>
@@ -201,7 +423,17 @@ const GuiaLuaDeMel = () => {
               <div className="mt-8 flex flex-wrap justify-center gap-4 text-xs font-bold text-gray-400 uppercase tracking-wider">
                 <span className="flex items-center gap-1"><Shield className="w-4 h-4" /> Pagamento Seguro</span>
                 <span className="flex items-center gap-1"><Check className="w-4 h-4" /> Garantia 7 Dias</span>
+                <span className="flex items-center gap-1">📱 Acesso imediato</span>
               </div>
+            </div>
+
+            {/* GARANTIA */}
+            <div className="mt-12 bg-white/10 backdrop-blur p-8 rounded-3xl text-white text-center">
+              <Shield className="mx-auto mb-4" size={48} />
+              <h3 className="text-2xl font-bold mb-3">Garantia incondicional de 7 dias</h3>
+              <p className="text-white/90 leading-relaxed max-w-xl mx-auto">
+                Receberam o guia e não amaram? Manda um e-mail dentro de 7 dias e devolvemos 100% do valor. Sem pergunta, sem burocracia.
+              </p>
             </div>
           </div>
         </section>
@@ -221,13 +453,13 @@ const GuiaLuaDeMel = () => {
             <AccordionItem value="item-2" className="border rounded-2xl px-8 py-2">
               <AccordionTrigger className="text-lg font-bold hover:no-underline">Quanto custa, em média, uma lua de mel na Tailândia?</AccordionTrigger>
               <AccordionContent className="text-gray-600 text-lg leading-relaxed">
-                A partir de R$18.000 o casal para 14 dias (passagens + hotéis 4★ + passeios), e a partir de R$35.000 para versão luxo em resorts 5★. O guia traz três orçamentos detalhados.
+                A partir de R$18.000 o casal para 14 dias (passagens + hotéis 4★ + passeios), e a partir de R$35.000 para versão luxo em resorts 5★. O guia traz três orçamentos detalhados, com planilha em Excel.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-3" className="border rounded-2xl px-8 py-2">
               <AccordionTrigger className="text-lg font-bold hover:no-underline">Dá para casar na Tailândia?</AccordionTrigger>
               <AccordionContent className="text-gray-600 text-lg leading-relaxed">
-                Sim, e é uma tendência crescente. O guia explica como funciona a cerimônia simbólica em resorts e o processo legal (que envolve a embaixada brasileira).
+                Sim, e é uma tendência crescente. O guia explica como funciona a cerimônia simbólica em resorts e o processo legal (que envolve a embaixada brasileira), além de pacotes de renovação de votos.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-4" className="border rounded-2xl px-8 py-2">
@@ -236,10 +468,35 @@ const GuiaLuaDeMel = () => {
                 Brasileiros têm isenção de visto para até 90 dias. Só precisa de passaporte com 6 meses de validade e Certificado de Febre Amarela.
               </AccordionContent>
             </AccordionItem>
+            <AccordionItem value="item-5" className="border rounded-2xl px-8 py-2">
+              <AccordionTrigger className="text-lg font-bold hover:no-underline">O guia serve se a gente já tem hotel reservado?</AccordionTrigger>
+              <AccordionContent className="text-gray-600 text-lg leading-relaxed">
+                Serve sim. Ele vai além de hospedagem: roteiros, passeios, restaurantes, transfers, orçamento e suporte. Várias leitoras compraram com tudo já fechado e usaram pra otimizar o que faltava.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-6" className="border rounded-2xl px-8 py-2">
+              <AccordionTrigger className="text-lg font-bold hover:no-underline">Como recebo o guia depois da compra?</AccordionTrigger>
+              <AccordionContent className="text-gray-600 text-lg leading-relaxed">
+                Após o pagamento confirmado, o PDF + a planilha chegam no e-mail em até 5 minutos, junto com o convite para o grupo VIP no Telegram.
+              </AccordionContent>
+            </AccordionItem>
           </Accordion>
           <p className="text-center text-gray-400 mt-12 flex items-center justify-center gap-2 text-sm">
             <Info className="w-4 h-4" /> Conteúdo atualizado em 2026.
           </p>
+        </section>
+
+        {/* CTA FINAL */}
+        <section className="py-20 px-6 bg-[#1A1A2E] text-white text-center">
+          <div className="container mx-auto max-w-3xl">
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">
+              A viagem é única. <span style={{ color: ROSE }}>Façam ela do jeito de vocês.</span>
+            </h2>
+            <p className="text-gray-300 text-lg mb-10">Não confiem no roteiro do cunhado. Confiem em quem mora aqui, conhece cada resort e atende casais brasileiros toda semana.</p>
+            <Button asChild size="lg" className="text-white font-bold py-8 px-12 text-xl rounded-xl shadow-2xl border-none" style={{ backgroundColor: ROSE }}>
+              <a href="#oferta">Garantir Nosso Guia por R$97</a>
+            </Button>
+          </div>
         </section>
       </main>
 
