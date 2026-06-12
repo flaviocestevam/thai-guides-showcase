@@ -83,9 +83,9 @@ const GuiaLuaDeMel = () => {
               </div>
               <div className="relative">
                 <img
-                  src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?q=80&w=800"
-                  alt="Bangalô sobre a água na Tailândia"
-                  className="rounded-3xl shadow-2xl z-10 relative"
+                  src="https://images.unsplash.com/photo-1528181304800-259b08848526?q=80&w=800"
+                  alt="Resort de praia romântico na Tailândia"
+                  className="rounded-3xl shadow-2xl z-10 relative aspect-[4/5] object-cover"
                 />
                 <div className="absolute -bottom-6 -right-6 w-32 h-32 rounded-full z-0 blur-2xl" style={{ backgroundColor: `${ROSE}33` }}></div>
               </div>
@@ -132,12 +132,12 @@ const GuiaLuaDeMel = () => {
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
-                "https://images.unsplash.com/photo-1540541338287-41700207dee6?q=80&w=800",
                 "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?q=80&w=800",
-                "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?q=80&w=800",
+                "https://images.unsplash.com/photo-1540541338287-41700207dee6?q=80&w=800",
+                "https://images.unsplash.com/photo-1504214208698-ea1916a2195a?q=80&w=800",
+                "https://images.unsplash.com/photo-1528181304800-259b08848526?q=80&w=800",
+                "https://images.unsplash.com/photo-1506929562872-bb421503ef21?q=80&w=800",
                 "https://images.unsplash.com/photo-1537956965359-7573183d1f57?q=80&w=800",
-                "https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=800",
-                "https://images.unsplash.com/photo-1589308078059-be1415eab4c3?q=80&w=800",
               ].map((img, i) => (
                 <div key={i} className="relative overflow-hidden rounded-3xl aspect-[4/5] shadow-xl group">
                   <img src={img} alt="Ilha paradisíaca na Tailândia" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
@@ -281,8 +281,8 @@ const GuiaLuaDeMel = () => {
             <div className="grid md:grid-cols-[1fr_2fr] gap-12 items-center">
               <div className="relative">
                 <img
-                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=600"
-                  alt="Especialistas do guia"
+                  src="https://images.unsplash.com/photo-1504214208698-ea1916a2195a?q=80&w=600"
+                  alt="Pôr do sol em Krabi com barco longtail — expertise local na Tailândia"
                   className="rounded-3xl shadow-2xl aspect-square object-cover"
                 />
                 <div className="absolute -bottom-4 -right-4 px-4 py-2 rounded-full text-white text-xs font-bold shadow-lg" style={{ backgroundColor: ROSE }}>

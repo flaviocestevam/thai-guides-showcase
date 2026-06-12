@@ -84,9 +84,9 @@ const GuiaGays = () => {
               </div>
               <div className="relative">
                 <img
-                  src="https://images.unsplash.com/photo-1583416750470-965b2707b355?q=80&w=800"
-                  alt="Bandeira LGBTQIA+ na Tailândia"
-                  className="rounded-3xl shadow-2xl z-10 relative"
+                  src="https://images.unsplash.com/photo-1561361513-2d000a50f0dc?q=80&w=800"
+                  alt="Bandeira do orgulho LGBTQIA+ em parada"
+                  className="rounded-3xl shadow-2xl z-10 relative aspect-[4/5] object-cover"
                 />
                 <div className="absolute -bottom-6 -right-6 w-32 h-32 rounded-full z-0 blur-2xl" style={{ backgroundColor: `${PINK}33` }}></div>
               </div>
@@ -254,8 +254,8 @@ const GuiaGays = () => {
             <div className="grid md:grid-cols-[1fr_2fr] gap-12 items-center">
               <div className="relative">
                 <img
-                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=600"
-                  alt="Especialistas do guia"
+                  src="https://images.unsplash.com/photo-1563492065599-3520f775eeed?q=80&w=600"
+                  alt="Templo Wat Arun em Bangkok — expertise local na Tailândia"
                   className="rounded-3xl shadow-2xl aspect-square object-cover"
                 />
                 <div className="absolute -bottom-4 -right-4 px-4 py-2 rounded-full text-white text-xs font-bold shadow-lg" style={{ backgroundColor: PURPLE }}>
