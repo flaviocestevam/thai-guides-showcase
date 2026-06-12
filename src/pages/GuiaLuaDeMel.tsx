@@ -121,26 +121,29 @@ const GuiaLuaDeMel = () => {
           </div>
         </section>
 
-        {/* SEÇÃO 3: ILHAS */}
+        {/* SEÇÃO 3: ILHAS — teaser visual */}
         <section className="py-24 px-6 bg-white">
           <div className="container mx-auto max-w-6xl">
-            <h2 className="text-3xl md:text-5xl font-bold text-center mb-16">
-              As Ilhas Mais <span style={{ color: ROSE }}>Românticas</span>
+            <h2 className="text-3xl md:text-5xl font-bold text-center mb-4">
+              As Ilhas Mais <span style={{ color: ROSE }}>Românticas</span> da Tailândia
             </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <p className="text-center text-gray-500 mb-16 max-w-2xl mx-auto">
+              São mais de 1.400 ilhas. Vocês não vão precisar pesquisar uma por uma — entregamos as 6 perfeitas para casais, com prós, contras e melhor época de cada uma.
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
-                { city: "Koh Samui", img: "https://images.unsplash.com/photo-1540541338287-41700207dee6?q=80&w=800", desc: "Resorts cinco estrelas e vida noturna sofisticada em Chaweng Noi." },
-                { city: "Koh Phi Phi", img: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?q=80&w=800", desc: "Cenário do filme A Praia. Maya Bay e mar turquesa irreal." },
-                { city: "Krabi (Railay)", img: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?q=80&w=800", desc: "Falésias gigantes, praias só acessíveis de barco. Pura privacidade." },
-                { city: "Koh Lanta", img: "https://images.unsplash.com/photo-1537956965359-7573183d1f57?q=80&w=800", desc: "A ilha tranquila para fugir do óbvio. Pôr-do-sol épico." },
-                { city: "Koh Yao Noi", img: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=800", desc: "Refúgio entre Phuket e Krabi. Resorts boutique sem aglomeração." },
-                { city: "Phuket (Surin/Bangtao)", img: "https://images.unsplash.com/photo-1589308078059-be1415eab4c3?q=80&w=800", desc: "O lado luxuoso de Phuket, longe da agitação de Patong." },
-              ].map((item, i) => (
-                <div key={i} className="group relative overflow-hidden rounded-3xl aspect-[4/5] shadow-xl">
-                  <img src={item.img} alt={item.city} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent p-8 flex flex-col justify-end text-left text-white">
-                    <h3 className="text-2xl font-bold mb-2">{item.city}</h3>
-                    <p className="text-sm text-gray-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300">{item.desc}</p>
+                "https://images.unsplash.com/photo-1540541338287-41700207dee6?q=80&w=800",
+                "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?q=80&w=800",
+                "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?q=80&w=800",
+                "https://images.unsplash.com/photo-1537956965359-7573183d1f57?q=80&w=800",
+                "https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=800",
+                "https://images.unsplash.com/photo-1589308078059-be1415eab4c3?q=80&w=800",
+              ].map((img, i) => (
+                <div key={i} className="relative overflow-hidden rounded-3xl aspect-[4/5] shadow-xl group">
+                  <img src={img} alt="Ilha paradisíaca na Tailândia" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
+                  <div className="absolute bottom-6 left-6 text-white font-bold text-sm uppercase tracking-wider" style={{ color: ROSE }}>
+                    Revelada no guia
                   </div>
                 </div>
               ))}
@@ -148,23 +151,24 @@ const GuiaLuaDeMel = () => {
           </div>
         </section>
 
-        {/* SEÇÃO 4: ROTEIROS */}
+        {/* SEÇÃO 4: ROTEIROS — teaser */}
         <section className="py-24 px-6 bg-[#FFF7F9]">
           <div className="container mx-auto max-w-6xl">
             <h2 className="text-3xl md:text-5xl font-bold text-center mb-4">
-              Roteiros <span style={{ color: GOLD }}>Prontos</span> para Casais
+              3 Roteiros <span style={{ color: GOLD }}>Prontos</span> para Casais
             </h2>
-            <p className="text-center text-gray-500 mb-16">Dia a dia, com hospedagem sugerida, transfer e tempo livre.</p>
+            <p className="text-center text-gray-500 mb-16 max-w-2xl mx-auto">
+              Vocês escolhem o tempo de viagem, abrem o PDF e seguem. Dia a dia, com hospedagem indicada, transfer e tempo livre planejado.
+            </p>
             <div className="grid md:grid-cols-3 gap-8">
               {[
-                { dias: "10 DIAS", title: "Essencial Romântico", cidades: "Bangkok → Krabi → Koh Phi Phi", color: TEAL, desc: "Cultura + praia. Perfeito para férias curtas." },
-                { dias: "14 DIAS", title: "Clássico Apaixonado", cidades: "Bangkok → Chiang Mai → Koh Samui", color: ROSE, desc: "O roteiro mais pedido. Templos, montanha e praia." },
-                { dias: "21 DIAS", title: "Lua de Mel Completa", cidades: "Bangkok → Norte → 2 ilhas", color: GOLD, desc: "Para quem quer viver tudo sem correria. Inclui Koh Yao Noi." },
+                { dias: "10 DIAS", title: "Essencial Romântico", color: TEAL, desc: "Para férias mais curtas. Mix de cultura + uma ilha selecionada a dedo." },
+                { dias: "14 DIAS", title: "Clássico Apaixonado", color: ROSE, desc: "O roteiro mais pedido. Cidade, montanha e praia em ritmo de lua de mel." },
+                { dias: "21 DIAS", title: "Lua de Mel Completa", color: GOLD, desc: "Para quem quer viver tudo sem correria. Duas ilhas e tempo de respirar." },
               ].map((r, i) => (
                 <div key={i} className="bg-white p-10 rounded-3xl shadow-lg border-t-8 transition-transform hover:-translate-y-2" style={{ borderTopColor: r.color }}>
                   <div className="text-sm font-black mb-2 tracking-widest" style={{ color: r.color }}>{r.dias}</div>
                   <h3 className="text-2xl font-bold mb-3">{r.title}</h3>
-                  <p className="text-gray-500 text-sm mb-4 font-semibold">{r.cidades}</p>
                   <p className="text-gray-600 leading-relaxed">{r.desc}</p>
                 </div>
               ))}
@@ -172,20 +176,21 @@ const GuiaLuaDeMel = () => {
           </div>
         </section>
 
-        {/* SEÇÃO 5: EXPERIÊNCIAS */}
+        {/* SEÇÃO 5: EXPERIÊNCIAS — teaser */}
         <section className="py-24 px-6 bg-[#1A1A2E] text-white">
           <div className="container mx-auto max-w-5xl">
-            <h2 className="text-3xl md:text-5xl font-bold text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold text-center mb-4">
               Experiências para <span style={{ color: ROSE }}>Inesquecer</span>
             </h2>
+            <p className="text-center text-gray-400 mb-16">As experiências românticas que entregamos prontas — onde reservar, quanto custa, o que evitar.</p>
             <div className="grid md:grid-cols-2 gap-8">
               {[
-                { icon: Utensils, title: "Jantar Pé na Areia", desc: "Os 7 melhores restaurantes à beira-mar, com mesa privativa e velas." },
-                { icon: Sparkles, title: "Spa Tradicional Thai", desc: "Massagens a 4 mãos em spas premiados — alguns a partir de 2.500฿ (R$390)." },
-                { icon: Camera, title: "Ensaio Fotográfico", desc: "Lista de fotógrafos brasileiros e tailandeses para registrar a viagem." },
-                { icon: Palmtree, title: "Ilha Privativa", desc: "Como alugar uma lancha e ter uma praia inteira só para vocês dois." },
-                { icon: Heart, title: "Renovação de Votos", desc: "Cerimônia simbólica em templos e resorts (com monge ou no pôr-do-sol)." },
-                { icon: Sun, title: "Passeio em James Bond", desc: "A baía mais cinematográfica do país, com piquenique privativo." },
+                { icon: Utensils, title: "Jantar Pé na Areia", desc: "Os melhores endereços à beira-mar, com mesa privativa e velas." },
+                { icon: Sparkles, title: "Spa Tradicional Thai", desc: "Spas premiados que cabem no bolso — e os que valem o luxo." },
+                { icon: Camera, title: "Ensaio Fotográfico", desc: "Fotógrafos brasileiros e tailandeses para registrar a viagem." },
+                { icon: Palmtree, title: "Ilha Privativa", desc: "Como ter uma praia inteira só para vocês dois por algumas horas." },
+                { icon: Heart, title: "Renovação de Votos", desc: "Cerimônia simbólica em templos e resorts — passo a passo." },
+                { icon: Sun, title: "Passeio em James Bond", desc: "A baía mais cinematográfica do país, sem cair em tour cheio." },
               ].map((item, i) => (
                 <div key={i} className="bg-white/5 p-10 rounded-3xl border border-white/10 hover:border-[#E11D74]/50 transition-colors">
                   <item.icon className="mb-4" size={36} style={{ color: ROSE }} />
@@ -197,35 +202,30 @@ const GuiaLuaDeMel = () => {
           </div>
         </section>
 
-        {/* SEÇÃO 6: ORÇAMENTOS */}
+        {/* SEÇÃO 6: FAIXAS DE ORÇAMENTO — sem entregar a planilha */}
         <section className="py-24 px-6 bg-white">
           <div className="container mx-auto max-w-5xl">
             <h2 className="text-3xl md:text-5xl font-bold text-center mb-4">
               Quanto <span style={{ color: ROSE }}>Custa</span> de Verdade
             </h2>
-            <p className="text-center text-gray-500 mb-16">Valores reais para 14 dias, o casal, com passagens incluídas.</p>
+            <p className="text-center text-gray-500 mb-16">
+              Três faixas reais para 14 dias, o casal — passagens, hospedagem e passeios. A planilha detalhada por dia vem dentro do guia.
+            </p>
             <div className="grid md:grid-cols-3 gap-8">
               {[
-                { tier: "Econômico", price: "R$ 18 mil", color: TEAL, items: ["Hotéis 3★ e pousadas charmosas", "Voos com 1 conexão", "Transporte público + Grab", "1 jantar especial"] },
-                { tier: "Romântico", price: "R$ 28 mil", color: ROSE, items: ["Hotéis 4★ pé na areia", "Voos com 1 conexão curta", "Transfers privativos", "3 jantares especiais", "1 spa de luxo"] },
-                { tier: "Luxo", price: "R$ 45 mil+", color: GOLD, items: ["Resorts 5★ e villas privativas", "Voos diretos / 1ª classe", "Lancha privativa entre ilhas", "Concierge dedicado", "Spa diário, ensaio foto"] },
+                { tier: "Econômico", price: "A partir de R$ 18 mil", color: TEAL, line: "Para casais que querem charme sem extravagância." },
+                { tier: "Romântico", price: "A partir de R$ 28 mil", color: ROSE, line: "Hotéis pé na areia, transfers privativos, jantares especiais." },
+                { tier: "Luxo", price: "A partir de R$ 45 mil", color: GOLD, line: "Resorts 5★, lanchas privativas e concierge dedicado." },
               ].map((p, i) => (
-                <div key={i} className="bg-[#FFF7F9] p-10 rounded-3xl border-t-8 shadow-md" style={{ borderTopColor: p.color }}>
+                <div key={i} className="bg-[#FFF7F9] p-10 rounded-3xl border-t-8 shadow-md text-center" style={{ borderTopColor: p.color }}>
                   <div className="text-sm font-black mb-2 tracking-widest" style={{ color: p.color }}>{p.tier.toUpperCase()}</div>
-                  <div className="text-3xl font-black mb-6">{p.price}</div>
-                  <ul className="space-y-3">
-                    {p.items.map((it, j) => (
-                      <li key={j} className="flex items-start gap-2 text-gray-600 text-sm">
-                        <Check className="flex-shrink-0 mt-0.5" size={16} style={{ color: p.color }} />
-                        <span>{it}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  <div className="text-2xl font-black mb-4">{p.price}</div>
+                  <p className="text-gray-600 leading-relaxed">{p.line}</p>
                 </div>
               ))}
             </div>
             <p className="text-center text-gray-400 mt-8 text-sm flex items-center justify-center gap-2">
-              <DollarSign className="w-4 h-4" /> Planilha Excel editável inclusa no guia para vocês ajustarem ao seu orçamento.
+              <DollarSign className="w-4 h-4" /> Planilha Excel editável dentro do guia, para vocês ajustarem ao seu orçamento.
             </p>
           </div>
         </section>
