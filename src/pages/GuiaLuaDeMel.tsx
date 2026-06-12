@@ -348,10 +348,9 @@ const GuiaLuaDeMel = () => {
               Bônus <span style={{ color: GOLD }}>Inclusos</span>
             </h2>
             <p className="text-center text-gray-500 mb-16">Sem custo extra. Já vêm junto com o PDF.</p>
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
               {[
                 { icon: BookOpen, title: "Planilha de Orçamento (Excel)", value: "R$57" },
-                { icon: MessageCircle, title: "Grupo VIP no Telegram com a autora", value: "R$97" },
                 { icon: Gift, title: "Templates de surpresa para o(a) cônjuge", value: "R$47" },
               ].map((b, i) => (
                 <div key={i} className="bg-gradient-to-br from-white to-[#FFF7F9] p-8 rounded-3xl shadow-lg border-2 border-pink-100 text-center">
