@@ -222,18 +222,21 @@ const GuiaGays = () => {
           </div>
         </section>
 
-        {/* SEÇÃO 6: SEGURANÇA */}
+        {/* SEÇÃO 6: SEGURANÇA — teaser */}
         <section className="py-24 px-6 bg-[#1A1A1A] text-white">
           <div className="container mx-auto max-w-5xl">
-            <h2 className="text-3xl md:text-5xl font-bold text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold text-center mb-4">
               Segurança & <span style={{ color: PINK }}>Etiqueta Local</span>
             </h2>
+            <p className="text-center text-gray-400 mb-16 max-w-2xl mx-auto">
+              Um capítulo inteiro só sobre o que ninguém te conta em fórum de viagem.
+            </p>
             <div className="grid md:grid-cols-2 gap-8">
               {[
-                { icon: Shield, title: "PDA com bom senso", desc: "Casamento é legal, mas demonstrações intensas em público fora dos bairros gay ainda chamam atenção." },
-                { icon: MapPin, title: "Cuidado nos templos", desc: "Ombros cobertos e silêncio. Sem PDA dentro de templos budistas, é uma questão de respeito." },
-                { icon: Martini, title: "Bebidas em bares", desc: "Em alguns bares de 'show' a conta surpreende. Lista de casas honestas no guia." },
-                { icon: Users, title: "Apps de paquera", desc: "Grindr, Hornet e Blued bombam. Cuidado com perfis pedindo Pin/transferência adiantada." },
+                { icon: Shield, title: "Demonstrações de afeto", desc: "Onde rola tranquilo, onde é melhor segurar a mão dentro do hotel — mapeado por região." },
+                { icon: MapPin, title: "Templos e locais sagrados", desc: "As regras que parecem óbvias mas custam multa pesada para quem ignora." },
+                { icon: Martini, title: "Bares com conta inflada", desc: "A lista negra dos lugares que cobram 4x do gringo — e como reconhecer um na entrada." },
+                { icon: Users, title: "Golpes em apps de paquera", desc: "Os 5 padrões de golpe mais aplicados em brasileiros. Como sair sem prejuízo." },
               ].map((item, i) => (
                 <div key={i} className="bg-white/5 p-10 rounded-3xl border border-white/10 hover:border-[#EC4899]/50 transition-colors">
                   <item.icon className="mb-4" size={36} style={{ color: PINK }} />
