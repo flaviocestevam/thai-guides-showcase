@@ -18,6 +18,11 @@ export const Breadcrumbs = ({ items }: BreadcrumbsProps) => {
       muaythai: "Muay Thai",
       guiatrilhasthai: "Trilhas na Tailândia",
       festas: "Festas na Tailândia",
+      "voluntariado-tailandia": "Voluntariado na Tailândia",
+      "tailandia-para-gays": "Tailândia para Gays",
+      "songkran-ano-novo-tailandes": "Songkran — Ano Novo Tailandês",
+      "lua-de-mel-tailandia": "Lua de Mel na Tailândia",
+      lanternfestival: "Lantern Festival",
     };
     return labels[path] || path;
   };

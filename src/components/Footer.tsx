@@ -32,6 +32,9 @@ export const Footer = () => {
             <li><Link to="/guiatrilhasthai" className="hover:text-primary transition-colors">Trilhas e Trekkings</Link></li>
             <li><Link to="/festas" className="hover:text-primary transition-colors">Guia de Festas</Link></li>
             <li><Link to="/voluntariado-tailandia" className="hover:text-primary transition-colors">Voluntariado na Tailândia</Link></li>
+            <li><Link to="/tailandia-para-gays" className="hover:text-primary transition-colors">Tailândia para Gays</Link></li>
+            <li><Link to="/songkran-ano-novo-tailandes" className="hover:text-primary transition-colors">Songkran — Ano Novo Tailandês</Link></li>
+            <li><Link to="/lua-de-mel-tailandia" className="hover:text-primary transition-colors">Lua de Mel na Tailândia</Link></li>
           </ul>
         </div>
 
@@ -52,7 +55,7 @@ export const Footer = () => {
             Destino Seguro
           </h4>
           <p className="text-sm text-muted-foreground font-body mb-4">
-            Planeje sua viagem para https://guiastailandia.com.br/ sem erros e sem perrengues.
+            Planeje sua viagem para a Tailândia sem erros e sem perrengues.
           </p>
           <Link to="/#guias" className="text-primary font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all">
             Ver todos os guias <ArrowRight className="w-4 h-4" />
