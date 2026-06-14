@@ -32,6 +32,9 @@ export const Footer = () => {
             <li><Link to="/guiatrilhasthai" className="hover:text-primary transition-colors">Trilhas e Trekkings</Link></li>
             <li><Link to="/festas" className="hover:text-primary transition-colors">Guia de Festas</Link></li>
             <li><Link to="/voluntariado-tailandia" className="hover:text-primary transition-colors">Voluntariado na Tailândia</Link></li>
+            <li><Link to="/tailandia-para-gays" className="hover:text-primary transition-colors">Tailândia para Gays</Link></li>
+            <li><Link to="/songkran-ano-novo-tailandes" className="hover:text-primary transition-colors">Songkran — Ano Novo Tailandês</Link></li>
+            <li><Link to="/lua-de-mel-tailandia" className="hover:text-primary transition-colors">Lua de Mel na Tailândia</Link></li>
           </ul>
         </div>
 
