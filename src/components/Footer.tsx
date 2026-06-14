@@ -55,7 +55,7 @@ export const Footer = () => {
             Destino Seguro
           </h4>
           <p className="text-sm text-muted-foreground font-body mb-4">
-            Planeje sua viagem para https://guiastailandia.com.br/ sem erros e sem perrengues.
+            Planeje sua viagem para a Tailândia sem erros e sem perrengues.
           </p>
           <Link to="/#guias" className="text-primary font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all">
             Ver todos os guias <ArrowRight className="w-4 h-4" />
