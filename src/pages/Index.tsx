@@ -264,11 +264,6 @@ const Index = () => {
         </div>
       </header>
 
-      <section className="max-w-5xl mx-auto px-4 pb-12 text-center">
-        <Button asChild size="lg" className="rounded-full px-10 py-8 text-xl font-black shadow-2xl hover:scale-105 transition-transform bg-primary text-primary-foreground">
-          <a href="#guias">QUERO MEU GUIA AGORA</a>
-        </Button>
-      </section>
 
 
       {/* Urgency Banner */}
