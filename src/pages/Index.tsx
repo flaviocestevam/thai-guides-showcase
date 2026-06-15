@@ -235,10 +235,13 @@ const Index = () => {
 
         <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent pointer-events-none" />
         <div className="relative z-10 max-w-5xl mx-auto text-center space-y-6">
-          <span className="inline-flex items-center gap-2 bg-primary/15 border-glow text-primary font-body font-semibold text-sm px-5 py-2 rounded-full tracking-wider uppercase">
-            <MapPin className="w-4 h-4" />
-            Experiências na Tailândia
-          </span>
+          <div className="flex flex-col items-center gap-2">
+            <span className="text-xl font-bold text-primary animate-pulse font-display">Oi! 👋</span>
+            <span className="inline-flex items-center gap-2 bg-primary/15 border-glow text-primary font-body font-semibold text-sm px-5 py-2 rounded-full tracking-wider uppercase">
+              <MapPin className="w-4 h-4" />
+              Experiências na Tailândia
+            </span>
+          </div>
 
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-display font-black leading-tight">
             Explore a Tailândia{" "}
