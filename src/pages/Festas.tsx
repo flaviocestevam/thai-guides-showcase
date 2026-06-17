@@ -590,5 +590,75 @@ const Festas = () => {
   );
 };
 
+const CountdownSection = () => {
+  const [t, setT] = useState({ d: 0, h: 0, m: 0, s: 0 });
+
+  useEffect(() => {
+    const target = new Date();
+    target.setDate(target.getDate() + 3);
+    target.setHours(23, 59, 59, 0);
+    const tick = () => {
+      const diff = Math.max(0, target.getTime() - Date.now());
+      setT({
+        d: Math.floor(diff / 86400000),
+        h: Math.floor((diff / 3600000) % 24),
+        m: Math.floor((diff / 60000) % 60),
+        s: Math.floor((diff / 1000) % 60),
+      });
+    };
+    tick();
+    const id = setInterval(tick, 1000);
+    return () => clearInterval(id);
+  }, []);
+
+  const Box = ({ v, l }: { v: number; l: string }) => (
+    <div className="bg-card border border-primary/30 rounded-xl px-4 py-3 md:px-6 md:py-4 min-w-[72px] md:min-w-[96px]">
+      <div className="text-3xl md:text-5xl font-display font-bold text-primary tabular-nums">
+        {String(v).padStart(2, "0")}
+      </div>
+      <div className="text-[10px] md:text-xs uppercase tracking-wider text-muted-foreground mt-1">{l}</div>
+    </div>
+  );
+
+  return (
+    <section className="py-16 px-4 border-t border-border">
+      <div className="max-w-3xl mx-auto text-center">
+        <span className="inline-flex items-center gap-2 text-primary text-sm font-semibold tracking-[0.2em] uppercase mb-3">
+          <Clock className="w-4 h-4" /> Atualização em breve
+        </span>
+        <h2 className="text-2xl md:text-4xl font-display font-bold mb-6">
+          Próxima revisão do guia em
+        </h2>
+        <div className="flex items-center justify-center gap-2 md:gap-4">
+          <Box v={t.d} l="Dias" />
+          <Box v={t.h} l="Horas" />
+          <Box v={t.m} l="Min" />
+          <Box v={t.s} l="Seg" />
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const FaqItem = ({ q, a }: { q: string; a: string }) => {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="bg-card border border-border rounded-xl overflow-hidden">
+      <button
+        onClick={() => setOpen((v) => !v)}
+        className="w-full flex items-center justify-between gap-4 text-left px-5 py-4 hover:bg-card/70 transition-colors"
+      >
+        <span className="font-display font-semibold text-base md:text-lg">{q}</span>
+        <ArrowDown
+          className={`w-5 h-5 text-primary flex-shrink-0 transition-transform ${open ? "rotate-180" : ""}`}
+        />
+      </button>
+      {open && (
+        <div className="px-5 pb-5 text-sm text-muted-foreground leading-relaxed">{a}</div>
+      )}
+    </div>
+  );
+};
 
 export default Festas;
+
