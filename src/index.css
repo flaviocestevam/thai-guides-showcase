@@ -296,3 +296,116 @@
   background: hsl(var(--card));
   border: 1px solid hsl(var(--border));
 }
+/* ============================================================
+   PREMIUM SALES PAGE TOKENS & UTILITIES
+   ============================================================ */
+:root {
+  --ease-premium: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-out-soft: cubic-bezier(0.16, 1, 0.3, 1);
+  --shadow-soft: 0 1px 2px hsl(0 0% 0% / 0.04),
+                 0 8px 24px hsl(0 0% 0% / 0.08),
+                 0 24px 64px hsl(0 0% 0% / 0.12);
+  --shadow-premium: 0 10px 30px -10px hsl(var(--primary) / 0.35),
+                    0 30px 80px -20px hsl(var(--accent) / 0.25);
+  --gradient-mesh: radial-gradient(at 20% 10%, hsl(var(--primary) / 0.18) 0px, transparent 50%),
+                   radial-gradient(at 80% 20%, hsl(var(--accent) / 0.14) 0px, transparent 50%),
+                   radial-gradient(at 50% 90%, hsl(var(--gold) / 0.12) 0px, transparent 50%);
+  --gradient-hairline: linear-gradient(90deg, transparent, hsl(var(--primary) / 0.5), transparent);
+}
+
+@layer utilities {
+  .glass-card {
+    background: linear-gradient(180deg, hsl(var(--card) / 0.7), hsl(var(--card) / 0.4));
+    backdrop-filter: blur(14px) saturate(140%);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+    border: 1px solid hsl(var(--foreground) / 0.08);
+    box-shadow: var(--shadow-soft);
+  }
+  .glass-soft {
+    background: hsl(var(--card) / 0.55);
+    backdrop-filter: blur(10px);
+    border: 1px solid hsl(var(--foreground) / 0.06);
+  }
+  .shadow-soft { box-shadow: var(--shadow-soft); }
+  .shadow-premium { box-shadow: var(--shadow-premium); }
+  .bg-mesh { background-image: var(--gradient-mesh); }
+  .hairline {
+    height: 1px;
+    background: var(--gradient-hairline);
+    border: 0;
+  }
+  .text-balance { text-wrap: balance; }
+  .text-pretty { text-wrap: pretty; }
+  .tracking-editorial { letter-spacing: -0.022em; }
+  .ease-premium { transition-timing-function: var(--ease-premium); }
+
+  .premium-cta {
+    position: relative;
+    isolation: isolate;
+    transition: transform 0.5s var(--ease-premium),
+                box-shadow 0.5s var(--ease-premium),
+                filter 0.4s var(--ease-premium);
+  }
+  .premium-cta::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, hsl(var(--warm-white) / 0.5), transparent 40%, hsl(var(--warm-white) / 0.2));
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    pointer-events: none;
+  }
+  .premium-cta::after {
+    content: "";
+    position: absolute;
+    top: 0; left: -120%;
+    width: 60%; height: 100%;
+    background: linear-gradient(110deg, transparent, hsl(var(--warm-white) / 0.35), transparent);
+    transform: skewX(-20deg);
+    transition: left 0.9s var(--ease-premium);
+    pointer-events: none;
+  }
+  .premium-cta:hover {
+    transform: translateY(-2px) scale(1.01);
+    box-shadow: var(--shadow-premium);
+    filter: brightness(1.06);
+  }
+  .premium-cta:hover::after { left: 130%; }
+
+  .card-lift {
+    transition: transform 0.5s var(--ease-premium),
+                border-color 0.5s var(--ease-premium),
+                box-shadow 0.5s var(--ease-premium),
+                background 0.5s var(--ease-premium);
+  }
+  .card-lift:hover {
+    transform: translateY(-4px);
+    border-color: hsl(var(--primary) / 0.4);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.9s var(--ease-out-soft), transform 0.9s var(--ease-out-soft);
+    will-change: opacity, transform;
+  }
+  .reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+  .orb {
+    position: absolute;
+    border-radius: 9999px;
+    filter: blur(80px);
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .premium-cta, .card-lift { transition: none; }
+}
