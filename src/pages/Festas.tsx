@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { SEO } from "@/components/SEO";
 import { StructuredData } from "@/components/StructuredData";
 import { Header } from "@/components/Header";
@@ -474,6 +474,106 @@ const Festas = () => {
             </div>
           </div>
         </section>
+
+        {/* Countdown */}
+        <CountdownSection />
+
+        {/* Bônus */}
+        <section className="py-20 md:py-28 px-4 border-t border-border bg-card/30">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-14">
+              <span className="inline-block text-primary text-sm font-semibold tracking-[0.2em] uppercase mb-3">
+                Bônus exclusivos
+              </span>
+              <h2 className="text-3xl md:text-5xl font-display font-bold mb-3">
+                Vai muito além do guia
+              </h2>
+              <p className="text-muted-foreground max-w-xl mx-auto">
+                Tudo que você precisa para curtir a noite tailandesa sem dor de cabeça
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                { icon: MapPin, title: "Mapa interativo das baladas", desc: "Localização exata, horários de pico e como chegar de táxi/Grab por cidade." },
+                { icon: Wallet, title: "Tabela de preços real", desc: "Quanto custa cada cerveja, drink, entrada e couvert em Bangkok, Phuket e Pattaya." },
+                { icon: ShieldAlert, title: "Lista negra de golpes", desc: "Os 17 golpes mais comuns na noite tailandesa e como identificar antes de cair." },
+                { icon: Smartphone, title: "Apps essenciais", desc: "Grab, Bolt, Google Translate e os apps de delivery 24h que salvam sua noite." },
+                { icon: Beer, title: "Glossário de drinks tailandeses", desc: "O que pedir, o que evitar e os drinks que só existem aqui." },
+                { icon: PartyPopper, title: "Calendário de eventos", desc: "Festivais, full moon parties e datas que não podem ficar de fora do seu roteiro." },
+              ].map((b) => (
+                <div key={b.title} className="bg-card border border-border rounded-xl p-6 hover:border-primary/40 transition-colors">
+                  <b.icon className="w-10 h-10 text-primary mb-4" />
+                  <h3 className="font-display font-bold text-lg mb-2">{b.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{b.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Depoimentos */}
+        <section className="py-20 md:py-28 px-4 border-t border-border">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-14">
+              <span className="inline-block text-primary text-sm font-semibold tracking-[0.2em] uppercase mb-3">
+                Quem já curtiu
+              </span>
+              <h2 className="text-3xl md:text-5xl font-display font-bold mb-3">
+                Brasileiros que economizaram (e curtiram muito)
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {[
+                { name: "Rafael M.", city: "São Paulo", text: "Economizei mais de R$ 800 só não caindo nos golpes de táxi em Bangkok. O guia se pagou na primeira noite.", stars: 5 },
+                { name: "Juliana T.", city: "Rio de Janeiro", text: "Fui sozinha pra Phuket e me senti segura porque sabia exatamente onde ir e o que evitar. Recomendo demais.", stars: 5 },
+                { name: "Diego F.", city: "Florianópolis", text: "A lista de baladas em Pattaya é cirúrgica. Acertei todas as escolhas e não perdi tempo em lugar ruim.", stars: 5 },
+                { name: "Camila R.", city: "Belo Horizonte", text: "As dicas de sobrevivência salvaram minha viagem. Eu não fazia ideia de metade das coisas que tem aqui.", stars: 5 },
+                { name: "Thiago L.", city: "Curitiba", text: "Achei que ia ser mais um guia genérico, mas é detalhado de verdade. Preços, endereços, tudo bate.", stars: 5 },
+                { name: "Larissa S.", city: "Recife", text: "Full moon party em Koh Phangan com o roteiro pronto foi outro nível. Sem stress, sem perrengue.", stars: 5 },
+              ].map((t) => (
+                <div key={t.name} className="bg-card border border-border rounded-xl p-6">
+                  <div className="flex gap-1 mb-3">
+                    {Array.from({ length: t.stars }).map((_, i) => (
+                      <Star key={i} className="w-4 h-4 fill-primary text-primary" />
+                    ))}
+                  </div>
+                  <p className="text-sm text-foreground/90 leading-relaxed mb-4">"{t.text}"</p>
+                  <div className="text-xs text-muted-foreground">
+                    <strong className="text-foreground">{t.name}</strong> — {t.city}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section className="py-20 md:py-28 px-4 border-t border-border bg-card/30">
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-14">
+              <span className="inline-block text-primary text-sm font-semibold tracking-[0.2em] uppercase mb-3">
+                Dúvidas frequentes
+              </span>
+              <h2 className="text-3xl md:text-5xl font-display font-bold">
+                Perguntas que todo mundo faz
+              </h2>
+            </div>
+            <div className="space-y-3">
+              {[
+                { q: "O guia serve para quem nunca foi à Tailândia?", a: "Sim. Ele foi escrito pensando especificamente em brasileiros indo pela primeira vez. Tudo é explicado do zero, sem assumir nenhum conhecimento prévio." },
+                { q: "Preciso falar inglês ou tailandês?", a: "Não. O guia traz frases prontas em tailandês com pronúncia e dicas de comunicação em locais onde nem inglês funciona." },
+                { q: "É seguro sair à noite na Tailândia?", a: "Em geral sim, mas existem áreas e situações específicas para evitar. A seção de sobrevivência cobre tudo isso com mapas e exemplos reais." },
+                { q: "Funciona para viagem em grupo, casal ou solo?", a: "Sim para os três perfis. Cada cidade tem indicações específicas: melhores lugares para casais, para grupos de amigos e para quem viaja sozinho(a)." },
+                { q: "Os preços ficam desatualizados?", a: "O guia é atualizado periodicamente e quem compra recebe as atualizações gratuitas. Os valores são uma referência realista da média atual." },
+                { q: "Quanto tempo demora para ler tudo?", a: "Você não precisa ler tudo. É um guia de consulta: vai direto na cidade que vai visitar e nas dicas que precisa naquele momento." },
+              ].map((item) => (
+                <FaqItem key={item.q} q={item.q} a={item.a} />
+              ))}
+            </div>
+          </div>
+        </section>
+
+
       
 
       <ConversionBlock 
