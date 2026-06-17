@@ -1,0 +1,129 @@
+import type { SalesContent } from "@/components/sales/SalesPage";
+
+export const reveillon: SalesContent = {
+  slug: "reveillon-tailandia",
+  seoTitle: "Réveillon na Tailândia — Guia Completo das Melhores Festas",
+  seoDescription: "Onde virar o ano na Tailândia: Bangkok, Phuket, Koh Samui, Koh Phangan. Festas, fogos, jantares, hotéis e roteiros prontos para o Réveillon.",
+  heroBadge: "🎆 Réveillon Tailândia 2026",
+  heroTitle: "Vire o ano em",
+  heroHighlight: "uma festa inesquecível",
+  heroSubtitle: "O guia definitivo do Réveillon na Tailândia: Bangkok, Phuket, Koh Samui, Koh Phangan, Krabi, Chiang Mai. Festas, jantares, melhores hotéis com vista, fogos e roteiros prontos para virar 2026 com estilo.",
+  heroWarning: "Hotel em Phuket no Réveillon esgota em outubro e dobra de preço em novembro. Planejar 6 semanas antes pode te custar R$ 5.000 a mais do que se você se organizar agora.",
+  heroBgGradient: "bg-gradient-to-br from-violet-950 via-background to-indigo-950",
+  heroEmoji: "🎆",
+  ctaLink: "#comprar",
+  ctaText: "QUERO MEU RÉVEILLON PERFEITO",
+  pains: [
+    { title: "Hotéis lotados e em dobro de preço", desc: "Quem deixa pra última hora paga 200%+ ou fica sem hospedagem na cidade que escolheu." },
+    { title: "Não sabe onde rola a melhor festa", desc: "Bangkok rooftop? Walking Street em Pattaya? Full Moon em Koh Phangan? Cada cidade tem um Réveillon diferente." },
+    { title: "Gasta uma fortuna em festa ruim", desc: "Pacotes 'open bar premium' que custam R$ 2.500 e entregam comida fria e fila no banheiro." },
+    { title: "Vai pra ilha errada na monção", desc: "Phuket no Réveillon tem clima ótimo. Koh Samui mesma data pode ter chuva. Lado errado da Tailândia arruina a virada." },
+  ],
+  features: [
+    { title: "10 cidades comparadas", desc: "Bangkok, Phuket, Koh Samui, Phangan, Krabi, Chiang Mai, Pattaya, Hua Hin, Koh Lanta, Koh Tao." },
+    { title: "Top 50 festas por categoria", desc: "Rooftop, praia, balada, jantar romântico, família. Cada uma com preço, vibe e como reservar." },
+    { title: "Pacotes hotel + festa", desc: "As melhores combinações antecipadas, com preço real (sem mark-up de agência)." },
+  ],
+  comparison: {
+    theirs: [
+      "Reservar em novembro pelo dobro do preço",
+      "Ficar com hotel longe da festa principal",
+      "Pagar R$ 3.000 em festa medíocre",
+      "Ir pra ilha com tempo ruim sem saber",
+      "Perder a virada em fila/uber preso",
+    ],
+    ours: [
+      "Reservar agora, preço normal, lugar perfeito",
+      "Hotel a 5 min a pé da festa principal",
+      "Festa de R$ 400 com qualidade premium",
+      "Saber qual costa está no tempo certo",
+      "Logística pronta: trajetos, horários, alternativas",
+    ],
+  },
+  authority: {
+    title: "5 Réveillons na Tailândia",
+    paragraphs: [
+      "Já virei o ano na Tailândia 5 vezes — Bangkok, Phuket, Koh Phangan, Koh Samui e Krabi — testando hotéis, festas, jantares e logística de transporte em cada uma.",
+      "Esse guia é exatamente o que eu queria ter na primeira viagem: opções honestas, preços reais, recomendações por perfil (família, casal, grupo, solo) e roteiro pronto pra cada dia da semana entre 28/12 e 02/01.",
+    ],
+    bullets: [
+      "5 Réveillons cobertos pessoalmente",
+      "100+ festas avaliadas",
+      "Já ajudou 600+ brasileiros",
+    ],
+  },
+  modules: [
+    {
+      title: "10 cidades comparadas",
+      desc: "Qual cidade é perfeita para o seu perfil.",
+      bullets: ["Vibe de cada uma", "Clima e monção", "Faixa de preço", "Público dominante"],
+    },
+    {
+      title: "Top 50 festas avaliadas",
+      desc: "Por categoria: rooftop, praia, balada, jantar.",
+      bullets: ["Wonderfruit, Half Moon", "Rooftops Bangkok", "Bangla Phuket", "Jantares com fogos"],
+    },
+    {
+      title: "Hotéis estratégicos",
+      desc: "Onde ficar para estar a pé da festa principal.",
+      bullets: ["Phuket Patong/Kata", "Bangkok Sukhumvit/Silom", "Phangan Haad Rin", "Krabi Ao Nang"],
+    },
+    {
+      title: "Roteiros prontos 28/12 a 02/01",
+      desc: "Semana inteira planejada por cidade.",
+      bullets: ["Onde almoçar", "Pré-festa", "Virada", "01/01 e ressaca"],
+    },
+    {
+      title: "Logística da virada",
+      desc: "Como não perder a contagem regressiva preso em uber.",
+      bullets: ["Horários de fechamento de rua", "Onde pegar táxi 23h", "Alternativas a Grab", "Como voltar 03h"],
+    },
+  ],
+  bonuses: [
+    { title: "Calendário 28/12 a 02/01", desc: "PDF com os principais eventos dia a dia em todas as cidades.", value: "R$ 87" },
+    { title: "Lista de hotéis com fogos da janela", desc: "Hospedagens com vista privilegiada da queima de fogos.", value: "R$ 67" },
+    { title: "Comparativo de pacotes", desc: "Pacotes hotel+festa avaliados por custo-benefício real.", value: "R$ 57" },
+    { title: "Guia Full Moon Party especial", desc: "Edição especial de Réveillon em Koh Phangan, com tudo o que muda.", value: "R$ 87" },
+    { title: "Grupo de WhatsApp do Réveillon", desc: "Conexão com outros brasileiros indo na mesma data.", value: "R$ 127" },
+  ],
+  testimonials: [
+    { name: "Camila R.", city: "São Paulo", text: "Virei o ano em Phuket seguindo o roteiro. Festa em rooftop, fogos do hotel, voltei caminhando. Perfeito." },
+    { name: "Lucas T.", city: "Rio de Janeiro", text: "Economizei R$ 4.000 reservando no dia que o guia indicou. Mesmo hotel que meu amigo, pela metade." },
+    { name: "Aline P.", city: "Curitiba", text: "Half Moon em Phangan no réveillon foi insano. Sem o guia eu nunca acharia essa info." },
+    { name: "Diego M.", city: "Florianópolis", text: "Roteiro de 5 dias em Bangkok funcionou cada dia. Saí da viagem sem stress." },
+    { name: "Marina L.", city: "Brasília", text: "Comparativo de pacotes me salvou. Quase fechei um caríssimo, achei outro muito melhor pelo guia." },
+    { name: "Rodrigo F.", city: "BH", text: "Grupo de WhatsApp foi um bônus inesperado. Acabei virando o ano com pessoal que conheci ali." },
+  ],
+  pricing: {
+    badge: "Edição Réveillon 2026",
+    oldPrice: "R$ 297",
+    price: "97",
+    priceCents: "00",
+    installments: "12x de R$ 9,71",
+    includes: [
+      "Guia das 10 cidades comparadas",
+      "Top 50 festas avaliadas",
+      "Hotéis com vista dos fogos",
+      "Roteiros completos 28/12 a 02/01",
+      "Todos os 5 bônus exclusivos",
+      "Acesso ao grupo do Réveillon",
+    ],
+  },
+  guarantee: {
+    days: 7,
+    title: "7 dias de garantia total",
+    text: "Compre agora, garanta os melhores hotéis enquanto há disponibilidade. Se em 7 dias achar que não vale, devolvemos o valor integralmente. Não devolvemos o tempo perdido, então comece já.",
+  },
+  faqs: [
+    { q: "Quando devo reservar hotel?", a: "Hotéis bons em Phuket e Koh Samui esgotam até outubro. O ideal é reservar até setembro. O guia indica os hotéis exatos e como reservar direto com 30-40% de desconto." },
+    { q: "Qual cidade é melhor para casal?", a: "Krabi e Koh Lanta para romance tranquilo. Phuket para casal jovem com vida noturna. Bangkok para casal urbano." },
+    { q: "Onde rola a melhor balada?", a: "Walking Street em Pattaya, Bangla em Phuket e os rooftops de Bangkok. Para festival, Koh Phangan." },
+    { q: "Tem festa para família?", a: "Sim, especialmente em Krabi (Ao Nang), Hua Hin e Koh Samui (Chaweng). Hotéis grandes fazem ceia + show de fogos." },
+    { q: "Quanto custa em média a viagem do Réveillon?", a: "Passagem + 7 dias com festas inclusas: R$ 12.000-18.000 por pessoa. O guia tem versão econômica em R$ 8.000 e premium em R$ 25.000." },
+    { q: "Como é o clima nessa época?", a: "Tailândia está em alta estação. Lado Andaman (Phuket, Krabi) com sol garantido. Lado Golfo (Samui, Phangan) pode ter chuva ocasional. O guia detalha cada ilha." },
+  ],
+  finalCTA: {
+    title: "Vire 2026 do jeito certo na Tailândia",
+    subtitle: "Cada dia que passa, os melhores hotéis somem e as melhores festas ficam mais caras. Decida agora e tenha o réveillon dos seus sonhos.",
+  },
+};
