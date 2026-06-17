@@ -17,6 +17,13 @@ export const InternalLinksSection = ({ currentPath }: InternalLinksSectionProps)
     { label: "Tailândia para Gays", path: "/tailandia-para-gays", icon: "🏳️‍🌈" },
     { label: "Guia Songkran", path: "/songkran-ano-novo-tailandes", icon: "💦" },
     { label: "Lua de Mel", path: "/lua-de-mel-tailandia", icon: "💍" },
+    { label: "Cursos de Massagem", path: "/cursos-de-massagem", icon: "🪷" },
+    { label: "Aluguel de Motos", path: "/aluguel-de-motos-tailandia", icon: "🏍️" },
+    { label: "Mergulho", path: "/mergulho-tailandia", icon: "🤿" },
+    { label: "Cafés e Coworkings", path: "/cafes-e-coworkings-tailandia", icon: "💻" },
+    { label: "Réveillon", path: "/reveillon-tailandia", icon: "🎆" },
+    { label: "Clubes de Strip", path: "/clubes-de-strip-tailandia", icon: "🎭" },
+    { label: "Go-Go Bars", path: "/go-go-bars-tailandia", icon: "🍸" },
   ];
 
   const filteredLinks = links.filter(link => link.path !== currentPath);

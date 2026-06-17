@@ -21,11 +21,18 @@ export const Header = () => {
     { label: "Elefantes", path: "/santuariosdeelefantes" },
     { label: "Muay Thai", path: "/muaythai" },
     { label: "Trilhas", path: "/guiatrilhasthai" },
+    { label: "Mergulho", path: "/mergulho-tailandia" },
+    { label: "Massagem", path: "/cursos-de-massagem" },
+    { label: "Motos", path: "/aluguel-de-motos-tailandia" },
+    { label: "Coworkings", path: "/cafes-e-coworkings-tailandia" },
     { label: "Festas", path: "/festas" },
+    { label: "Réveillon", path: "/reveillon-tailandia" },
     { label: "Voluntariado", path: "/voluntariado-tailandia" },
     { label: "Gays", path: "/tailandia-para-gays" },
     { label: "Songkran", path: "/songkran-ano-novo-tailandes" },
     { label: "Lua de Mel", path: "/lua-de-mel-tailandia" },
+    { label: "Go-Go Bars", path: "/go-go-bars-tailandia" },
+    { label: "Strip Clubs", path: "/clubes-de-strip-tailandia" },
     { label: "FAQ", path: "/#faq" },
   ];
 
