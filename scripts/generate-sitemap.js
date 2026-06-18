@@ -4,7 +4,7 @@
 import { writeFileSync } from "fs";
 import { resolve } from "path";
 // Slugs das ilhas (espelha src/data/sales/ilhas.ts > ilhasMeta).
-// Mantido inline para evitar carregar imports de .jpg via tsx.
+// Mantido inline para evitar carregar imports de .jpg no Node.
 const ilhaSlugs = [
   "phuket-tailandia",
   "koh-samui-tailandia",
@@ -25,16 +25,10 @@ const ilhaSlugs = [
 const BASE_URL = "https://guiastailandia.com.br";
 const today = new Date().toISOString().slice(0, 10);
 
-interface Entry {
-  path: string;
-  priority?: string;
-  changefreq?: string;
-}
-
 // Páginas indexáveis. Excluídas intencionalmente:
 //  - /guiatrilhasthai44 e /muaythai5645 (guias pagos, não devem aparecer)
 //  - /export-copy-auditoria (interna)
-const entries: Entry[] = [
+const entries = [
   { path: "/", priority: "1.0", changefreq: "weekly" },
 
   // Guias temáticos
@@ -93,8 +87,7 @@ const xml = [
 writeFileSync(resolve("public/sitemap.xml"), xml);
 console.log(`✓ sitemap.xml written (${entries.length} URLs, lastmod=${today})`);
 
-// Lista de URLs para o IndexNow consumir logo após o build
-// Lista de URLs consumida pelo ping-indexnow.ts (postbuild).
+// Lista de URLs consumida pelo ping-indexnow.js (postbuild).
 // IMPORTANTE: gravar fora de public/ — senão o Vite copia para dist/
 // e o arquivo ficaria publicamente acessível.
 writeFileSync(

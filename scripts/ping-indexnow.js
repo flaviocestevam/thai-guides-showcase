@@ -11,7 +11,7 @@ const KEY = "7e407e63e8ec192d7a599cec71166ce9";
 const KEY_LOCATION = `https://${HOST}/${KEY}.txt`;
 
 async function main() {
-  let urls: string[];
+  let urls;
   try {
     urls = JSON.parse(
       readFileSync(resolve(".indexnow-urls.json"), "utf8"),
