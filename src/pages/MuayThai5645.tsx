@@ -168,7 +168,7 @@ const MuayThai5645 = () => {
           <p className="guide-section-label mb-4">Capítulo 4</p>
           <h2 className="font-display text-4xl sm:text-5xl text-foreground mb-4">As Melhores Academias por Cidade</h2>
           <p className="text-muted-foreground mb-12 max-w-2xl">
-            27 academias em 9 cidades, avaliadas com base em qualidade dos treinadores, infraestrutura, custo-benefício e experiência para estrangeiros. 3 opções por cidade com preços, detalhes e reviews reais.
+            24 academias em 9 cidades, avaliadas com base em qualidade dos treinadores, infraestrutura, custo-benefício e experiência para estrangeiros. Geralmente 3 opções por cidade com preços, detalhes e reviews reais — excepto Koh Lanta (2 academias confirmadas) e Phi Phi (1 academia de treino real, veja por quê na seção da ilha).
           </p>
 
           {citiesData.map((cityGroup) => (
@@ -501,7 +501,7 @@ const MuayThai5645 = () => {
               { error: '"Reservei hotel longe do camp"', desc: "Depois de 2h de treino às 7h da manhã, a última coisa que você quer é uma viagem de 40min no trânsito. Fique o mais perto possível — de preferência a pé ou 5min de scooter." },
               { error: '"Não descansei o suficiente"', desc: "Muay Thai 2x/dia, 6 dias/semana é BRUTAL. Descanse entre os treinos. Massagem, piscina, sono — são parte do treino, não luxo." },
               { error: '"Comprei equipamento no Brasil antes de ir"', desc: "Luvas Twins no Brasil: R$ 600. Na Tailândia: R$ 250. Shorts de Muay Thai no Brasil: R$ 150. Na Tailândia: R$ 50. Compre TUDO lá." },
-              { error: '"Ignorei o visto"', desc: "Brasileiros têm 90 dias de isenção de visto. Para estadias mais longas, considere o ED Visa (visto de educação) oferecido por alguns camps, que permite ficar até 1 ano." },
+              { error: '"Ignorei o visto"', desc: "Brasileiros têm 90 dias de isenção de visto. Para estadias mais longas, considere o DTV (Destination Thailand Visa) — veja o capítulo de visto pra detalhes completos." },
             ].map((item, i) => (
               <div key={i} className="bg-card rounded-lg p-6 border border-border">
                 <h4 className="font-display text-xl text-destructive mb-2">❌ Erro: {item.error}</h4>
@@ -573,9 +573,20 @@ const MuayThai5645 = () => {
                   <p className="text-sm text-muted-foreground">Cidadãos brasileiros têm isenção de visto para a Tailândia por até <strong className="text-foreground">90 dias</strong>. Basta chegar com passaporte válido (mínimo 6 meses de validade) e passagem de volta.</p>
                 </div>
                 <div>
-                  <h4 className="text-foreground font-semibold mb-2">📚 ED Visa (Education Visa) — para estadias longas</h4>
-                  <p className="text-sm text-muted-foreground">O visto de educação permite ficar até <strong className="text-foreground">1 ano</strong> na Tailândia. Ideal para quem quer treinar a sério.</p>
+                  <h4 className="text-foreground font-semibold mb-2">🛂 DTV (Destination Thailand Visa) — para estadias mais longas</h4>
+                  <p className="text-sm text-muted-foreground mb-3">Lançado em julho de 2024 como parte da iniciativa de Soft Power da Tailândia, o DTV permite ficar até <strong className="text-foreground">180 dias por entrada</strong> e é válido por <strong className="text-foreground">5 anos com múltiplas entradas</strong>. É hoje o visto recomendado pra quem quer treinar Muay Thai por período longo — substituiu boa parte da função que o ED Visa cumpria antes. O pedido é feito direto no portal oficial <strong className="text-foreground">thaievisa.go.th</strong>.</p>
+                  <p className="text-sm text-muted-foreground mb-2">Três academias deste guia são provedoras diretas confirmadas, emitindo carta de matrícula pra dar suporte ao seu pedido de DTV:</p>
+                  <ul className="space-y-1.5 text-sm text-muted-foreground">
+                    <li className="flex items-start gap-2"><span className="text-gold mt-0.5">•</span> <strong className="text-foreground">Ratchawat Muay Thai</strong> (Koh Samui) — pacotes a partir de 20.000 THB/6 meses, carta de matrícula em até 24h</li>
+                    <li className="flex items-start gap-2"><span className="text-gold mt-0.5">•</span> <strong className="text-foreground">Punch It Gym</strong> (Koh Samui) — suporte para matrículas de 3+ meses</li>
+                    <li className="flex items-start gap-2"><span className="text-gold mt-0.5">•</span> <strong className="text-foreground">Lanta Muay Thai Complex</strong> (Koh Lanta) — suporte direto pro DTV no local</li>
+                  </ul>
                 </div>
+                <div>
+                  <h4 className="text-foreground font-semibold mb-2">📚 ED Visa (Education Visa) — ainda existe, mas é mais raro hoje</h4>
+                  <p className="text-sm text-muted-foreground">O ED Visa tradicional permite ficar até <strong className="text-foreground">1 ano</strong> na Tailândia, mas a maioria dos camps migrou pro DTV depois de 2024. A <strong className="text-foreground">Fairtex Training Center</strong> (Pattaya) é reconhecida oficialmente pelo Ministério da Educação da Tailândia pra emitir esse tipo de visto.</p>
+                </div>
+                <p className="text-sm text-muted-foreground">⚠️ <strong className="text-foreground">Confirme sempre direto com a academia antes de fechar pacote</strong> — políticas de visto mudam com frequência e cada camp tem seu próprio processo. Use o site oficial (thaievisa.go.th) como referência final, nunca terceiros ou agências não verificadas.</p>
               </div>
             </div>
           </div>
@@ -617,7 +628,7 @@ const MuayThai5645 = () => {
         <div className="max-w-3xl mx-auto text-center">
           <p className="font-display text-2xl text-foreground mb-2">🥊 Guia Muay Thai Tailândia</p>
           <p className="text-sm text-muted-foreground mb-6">O guia definitivo para treinar na terra do Muay Thai. Feito com 🔥 por quem já viveu isso.</p>
-          <p className="text-xs text-muted-foreground">Todos os direitos reservados. Preços e informações sujeitos a alterações.</p>
+          <p className="text-xs text-muted-foreground">© 2024 Guia Muay Thai Tailândia. Todos os direitos reservados.</p>
         </div>
       </footer>
     </div>
