@@ -317,7 +317,7 @@ const GuiaLuaDeMel = () => {
             <h2 className="text-3xl md:text-5xl font-bold text-center mb-4">
               O Que <span style={{ color: ROSE }}>Vem no Guia</span>
             </h2>
-            <p className="text-center text-gray-500 mb-16 max-w-2xl mx-auto">PDF de 120+ páginas com mapas, links clicáveis, planilha de orçamento e atualizações grátis durante 2026.</p>
+            <p className="text-center text-gray-500 mb-16 max-w-2xl mx-auto">PDF de 180+ páginas com mapas, links clicáveis, planilha de orçamento, templates de e-mail prontos e atualizações grátis durante 2026.</p>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
               {[
                 { icon: Hotel, title: "40+ Resorts", desc: "Selecionados para casais" },
