@@ -96,10 +96,10 @@ export const clubesStrip: SalesContent = {
   ],
   pricing: {
     badge: "Acesso adulto",
-    oldPrice: "R$ 147",
-    price: "47",
+    oldPrice: "R$ 197",
+    price: "67",
     priceCents: "00",
-    installments: "12x de R$ 4,71",
+    installments: "12x de R$ 6,71",
     includes: [
       "Guia completo dos 3 destinos principais",
       "Mapa interativo dos distritos",

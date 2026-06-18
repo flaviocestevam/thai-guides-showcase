@@ -96,10 +96,10 @@ export const goGoBars: SalesContent = {
   ],
   pricing: {
     badge: "Acesso adulto",
-    oldPrice: "R$ 127",
-    price: "37",
+    oldPrice: "R$ 197",
+    price: "67",
     priceCents: "00",
-    installments: "12x de R$ 3,71",
+    installments: "12x de R$ 6,71",
     includes: [
       "Manual completo do funcionamento",
       "Glossário definitivo",

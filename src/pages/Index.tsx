@@ -117,7 +117,7 @@ const salesPages: ProductCard[] = [
     image: festasImg,
     urgency: "Saiba onde estão as melhores noites de 2025!",
     socialProof: "Vivido por milhares de viajantes",
-    originalPrice: "R$ 197",
+    originalPrice: "R$ 0",
     price: "GRÁTIS",
     highlight: "Roteiro noturno por 7 cidades",
     viewers: 15,
