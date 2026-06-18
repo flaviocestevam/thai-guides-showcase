@@ -196,17 +196,18 @@ const MergulhoTailandia465355 = () => {
         </div>
         <div className="container mx-auto px-5 max-w-5xl relative z-10 text-white">
           <div className="inline-block px-3 py-1 rounded-full text-xs font-bold tracking-widest uppercase mb-5" style={{ background: CORAL }}>
-            🤿 Guia 2026 • 26 capítulos
+            🤿 Guia 2026 • 31 capítulos
           </div>
           <h1 className="text-4xl md:text-6xl font-black leading-tight mb-5">
             Mergulho na Tailândia <span style={{ color: "#7FE7E5" }}>do Open Water ao Divemaster</span>
           </h1>
           <p className="text-lg md:text-xl text-white/90 max-w-3xl mb-8 leading-relaxed">
             Cursos PADI/SSI, melhores ilhas, custos reais em THB, calendário mês a mês, dive sites mapeados,
-            liveaboards e roteiros prontos do iniciante ao profissional. Mergulho bom não é o mais barato — é o mais seguro.
+            liveaboards, seguro DAN, câmaras hiperbáricas, vida marinha, fotografia subaquática e roteiros prontos
+            do iniciante ao profissional. Mergulho bom não é o mais barato — é o mais seguro.
           </p>
           <div className="flex flex-wrap gap-3 text-sm">
-            {["26 capítulos","4 bases comparadas","30 dive sites","Glossário PT/EN","Roteiros 7/10/14/21 dias","Calendário mês a mês"].map(t => (
+            {["31 capítulos","4 bases comparadas","30 dive sites","Seguro DAN + emergências","Vida marinha mês a mês","Fotografia subaquática","Glossário PT/EN","Roteiros 7/10/14/21 dias"].map(t => (
               <span key={t} className="px-3 py-1 rounded-full bg-white/10 border border-white/20">{t}</span>
             ))}
           </div>
