@@ -285,11 +285,16 @@ const buildJsonLd = (c: SalesContent) => {
     {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
-      itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
-        { "@type": "ListItem", position: 2, name: "Ilhas", item: `${SITE_URL}/ilhas` },
-        { "@type": "ListItem", position: 3, name: c.heroBadge, item: url },
-      ],
+      itemListElement: c.slug.startsWith("koh-") || c.slug.startsWith("ilhas-") || c.slug === "phuket-tailandia"
+        ? [
+            { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+            { "@type": "ListItem", position: 2, name: "Ilhas", item: `${SITE_URL}/ilhas` },
+            { "@type": "ListItem", position: 3, name: c.heroBadge, item: url },
+          ]
+        : [
+            { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+            { "@type": "ListItem", position: 2, name: c.heroBadge, item: url },
+          ],
     },
   ];
 };
