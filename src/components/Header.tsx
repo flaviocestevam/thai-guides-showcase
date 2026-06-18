@@ -75,24 +75,29 @@ export const Header = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Menu */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden absolute top-full left-0 right-0 bg-background border-b border-border p-4 flex flex-col gap-4 animate-in slide-in-from-top-4 duration-300">
-          {menuItems.map((item) => (
-            <a
-              key={item.label}
-              href={item.path}
-              className="text-lg font-body font-semibold py-2 border-b border-border/50"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              {item.label}
-            </a>
-          ))}
-          <Button asChild className="w-full rounded-xl py-6 text-lg font-bold">
-            <a href="/#guias" onClick={() => setIsMobileMenuOpen(false)}>
-              Quero o Guia
-            </a>
-          </Button>
+        <div className="absolute top-full left-0 right-0 bg-background border-b border-border shadow-xl animate-in slide-in-from-top-4 duration-300">
+          <div className="max-w-7xl mx-auto p-4 max-h-[80vh] overflow-y-auto">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
+              {menuItems.map((item) => (
+                <a
+                  key={item.label}
+                  href={item.path}
+                  className="text-sm md:text-base font-body font-semibold py-2 px-3 rounded-md hover:bg-muted hover:text-primary transition-colors border border-border/40"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {item.label}
+                </a>
+              ))}
+            </div>
+            <Button asChild className="w-full mt-4 rounded-xl py-6 text-lg font-bold">
+              <a href="/#guias" onClick={() => setIsMobileMenuOpen(false)}>
+                <ShoppingCart className="w-5 h-5 mr-2" />
+                Quero o Guia
+              </a>
+            </Button>
+          </div>
         </div>
       )}
     </header>
