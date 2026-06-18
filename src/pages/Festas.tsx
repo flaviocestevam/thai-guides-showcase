@@ -528,9 +528,12 @@ const Festas = () => {
               <span className="inline-block text-primary text-sm font-semibold tracking-[0.2em] uppercase mb-3">
                 Quem já curtiu
               </span>
-              <h2 className="text-3xl md:text-5xl font-display font-bold mb-3">
-                Brasileiros que economizaram (e curtiram muito)
+              <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">
+                Mais de <span className="text-primary">7.000 pessoas</span> no mundo todo já compraram nossos guias
               </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                Brasileiros que economizaram, evitaram cilada e curtiram a noite tailandesa de verdade.
+              </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
