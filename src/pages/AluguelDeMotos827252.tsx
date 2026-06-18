@@ -464,46 +464,27 @@ const AluguelDeMotos827252 = () => {
       <section className="py-16 px-6 bg-gradient-to-b from-background via-primary/5 to-background border-b border-border/40">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-10">
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/15 text-primary text-sm mb-4"><Gift className="w-4 h-4" /> Bônus exclusivos incluídos</span>
-            <h2 className="font-display text-3xl sm:text-4xl text-foreground mb-3">Seus 5 bônus do guia</h2>
-            <p className="text-muted-foreground">Tudo que foi prometido na compra está abaixo. Salve esta página nos favoritos.</p>
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/15 text-primary text-sm mb-4"><Gift className="w-4 h-4" /> Bônus incluídos</span>
+            <h2 className="font-display text-3xl sm:text-4xl text-foreground mb-3">Seus bônus do guia</h2>
+            <p className="text-muted-foreground">Conteúdo extra que acompanha sua compra.</p>
           </div>
 
           <div className="space-y-5">
             <Card>
-              <h3 className="font-display text-xl text-foreground mb-2 flex items-center gap-2"><MapPin className="w-5 h-5 text-primary" />Bônus 1 — Mapa offline das melhores rotas (GPX/KMZ)</h3>
-              <p className="text-sm mb-3">Arquivos para carregar no Google Maps, Maps.me ou Organic Maps das 8 rotas testadas: Mae Hong Son Loop completo, Chiang Mai → Pai, Samui Ring Road, Krabi → Tiger Cave, Phuket → Phang Nga, Koh Lanta interior, Doi Inthanon, Chiang Rai → Golden Triangle.</p>
-              <p className="text-xs text-muted-foreground">📦 <strong className="text-foreground">[PENDENTE: link de download dos arquivos GPX/KMZ]</strong> — me envie os arquivos prontos e eu publico aqui.</p>
+              <h3 className="font-display text-xl text-foreground mb-2 flex items-center gap-2"><Languages className="w-5 h-5 text-primary" />Bônus 1 — Scripts em tailandês</h3>
+              <p className="text-sm">Frases prontas para gasolineiro, polícia, mecânico, locadora e emergência — já incluídas no Capítulo 20 deste guia. Salve a página offline ou imprima.</p>
             </Card>
 
             <Card>
-              <h3 className="font-display text-xl text-foreground mb-2 flex items-center gap-2"><Languages className="w-5 h-5 text-primary" />Bônus 2 — Scripts em tailandês</h3>
-              <p className="text-sm">Frases prontas para gasolineiro, polícia, mecânico, locadora e emergência — já incluídas no Capítulo 20 deste guia. Imprima ou salve offline.</p>
-            </Card>
-
-            <Card>
-              <h3 className="font-display text-xl text-foreground mb-2 flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-primary" />Bônus 3 — Checklist de vistoria em PDF</h3>
-              <p className="text-sm mb-3">Os 12 itens do Capítulo 7 em formato imprimível, uma página, para levar na carteira no momento do aluguel.</p>
-              <p className="text-xs text-muted-foreground">📦 <strong className="text-foreground">[PENDENTE: link do PDF imprimível]</strong> — posso gerar a partir do conteúdo do Capítulo 7 se você confirmar.</p>
-            </Card>
-
-            <Card>
-              <h3 className="font-display text-xl text-foreground mb-2 flex items-center gap-2"><Calculator className="w-5 h-5 text-primary" />Bônus 4 — Calculadora de combustível</h3>
+              <h3 className="font-display text-xl text-foreground mb-2 flex items-center gap-2"><Calculator className="w-5 h-5 text-primary" />Bônus 2 — Calculadora de combustível</h3>
               <p className="text-sm mb-2">Fórmula rápida: <strong className="text-foreground">km da rota ÷ 42 km/L × 40 THB ≈ custo em baht</strong>. Para reais, multiplique por ~0,18.</p>
-              <p className="text-sm">Exemplos reais:</p>
+              <p className="text-sm">Exemplos reais já calculados:</p>
               <Bul items={[
                 "Mae Hong Son Loop (600 km): ~570 THB ≈ R$ 105",
                 "Chiang Mai → Pai ida e volta (270 km): ~260 THB ≈ R$ 47",
                 "Samui Ring Road (52 km): ~50 THB ≈ R$ 9",
                 "Phuket → Phang Nga ida e volta (180 km): ~170 THB ≈ R$ 31",
               ]} />
-              <p className="text-xs text-muted-foreground mt-2">📦 <strong className="text-foreground">[PENDENTE: calculadora interativa (input km → custo)]</strong> — posso construir o componente se você quiser uma versão dinâmica.</p>
-            </Card>
-
-            <Card>
-              <h3 className="font-display text-xl text-foreground mb-2 flex items-center gap-2"><Users className="w-5 h-5 text-primary" />Bônus 5 — Grupo de viajantes de moto na Tailândia</h3>
-              <p className="text-sm mb-3">Telegram com brasileiros rodando no país agora. Tire dúvidas em tempo real, descubra rotas novas e receba avisos de chuva forte/estrada interditada.</p>
-              <p className="text-xs text-muted-foreground">📦 <strong className="text-foreground">[PENDENTE: link de convite do Telegram]</strong> — me passe o link do grupo e eu publico aqui.</p>
             </Card>
           </div>
 
