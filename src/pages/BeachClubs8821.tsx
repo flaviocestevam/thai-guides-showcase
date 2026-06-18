@@ -101,8 +101,8 @@ const BeachClubs8821 = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Guia Beach Clubs Tailândia — 40 testados, preço real e como reservar"
-        description="O guia completo: 40 beach clubs em Phuket, Samui, Phangan, Krabi, Phi Phi e Lanta. Day pass, mínimo, dress code, calendário de DJs e como reservar até 40% mais barato."
+        title="Guia Beach Clubs Tailândia — 30 testados, preço real e como reservar"
+        description="O guia completo: 30 beach clubs em Phuket, Samui, Phangan, Krabi, Phi Phi e Lanta. Day pass, mínimo, dress code, calendário de DJs e como reservar até 40% mais barato."
         canonicalPath="/beachclubs8821"
       />
 
@@ -113,7 +113,7 @@ const BeachClubs8821 = () => {
         <div className="relative max-w-3xl mx-auto px-6 pb-16 w-full">
           <p className="guide-section-label mb-3">🌅 Guia Beach Clubs Tailândia</p>
           <h1 className="font-display text-4xl sm:text-6xl text-foreground leading-tight">
-            Os 40 melhores beach clubs<br />da Tailândia, testados.
+            Os 30 melhores beach clubs<br />da Tailândia, testados.
           </h1>
           <p className="text-lg text-muted-foreground mt-6 max-w-2xl">
             Phuket, Koh Samui, Koh Phangan, Krabi, Phi Phi e Koh Lanta. Day pass, mínimo de consumo, vibe, dress code, calendário de DJs e como reservar com até 40% de desconto.
@@ -122,7 +122,7 @@ const BeachClubs8821 = () => {
       </header>
 
       <Section chapter="Capítulo 1" title="Como ler este guia">
-        <p>Visitei pessoalmente cada um dos 40 beach clubs listados aqui — alguns 5+ vezes, em dias e horários diferentes. Cada ficha traz <strong className="text-foreground">preço real, mínimo escondido, vibe honesta, dress code e a dica que você só sabe ficando lá</strong>.</p>
+        <p>Visitei pessoalmente cada um dos 30 beach clubs listados aqui — alguns 5+ vezes, em dias e horários diferentes. Cada ficha traz <strong className="text-foreground">preço real, mínimo escondido, vibe honesta, dress code e a dica que você só sabe ficando lá</strong>.</p>
         <p>Nota é de 0 a 10 considerando: relação custo-benefício, qualidade do som/DJ, qualidade da praia, atendimento e probabilidade de você voltar.</p>
         <p>⚠️ <strong className="text-foreground">Preços em baht (฿) atualizados em janeiro/2026.</strong> Variações de até 15% são normais em alta temporada (dez–fev). 1 baht ≈ R$ 0,15.</p>
       </Section>
@@ -130,7 +130,7 @@ const BeachClubs8821 = () => {
       <div className="guide-section-divider" />
 
       <Section chapter="Capítulo 2" title="A regra de ouro para não ser enganado">
-        <p>Existe uma única pergunta a fazer ao chegar em qualquer beach club da Tailândia: <strong className="text-foreground">"Qual o mínimo de consumo e isso inclui taxas?"</strong>. 70% dos golpes mora aí.</p>
+        <p>Existe uma única pergunta a fazer ao chegar em qualquer beach club da Tailândia: <strong className="text-foreground">"Qual o mínimo de consumo e isso inclui taxas?"</strong>. 70% dos golpes moram aí.</p>
         <ul className="list-disc pl-6 space-y-2">
           <li><strong className="text-foreground">Day pass:</strong> valor de entrada. Pode ou não ser revertido em F&B (food & beverage). Sempre confirme.</li>
           <li><strong className="text-foreground">Mínimo de consumo:</strong> valor mínimo que você deve gastar em comida/bebida. Cobrado mesmo se você não consumir.</li>
