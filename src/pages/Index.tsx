@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 
 
 import heroImg from "@/assets/hero-lanterns.jpg";
+import heroFirePoi from "@/assets/hero-firepoi-phiphi.png.asset.json";
 import elephantImg from "@/assets/hero-elephants.jpg";
 import muayThaiImg from "@/assets/muay-thai-hero.jpg";
 import trilhasImg from "@/assets/trilhas/hero-trekking.jpg";
