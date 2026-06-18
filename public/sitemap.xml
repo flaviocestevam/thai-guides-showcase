@@ -63,7 +63,9 @@
   <url>
     <loc>https://guiastailandia.com.br/lanternfestival</loc>
     <priority>0.7</priority>
+  </url>
   <url>
+
     <loc>https://guiastailandia.com.br/voluntariado-tailandia</loc>
     <priority>0.8</priority>
   </url>
