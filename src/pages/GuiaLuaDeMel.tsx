@@ -140,7 +140,7 @@ const GuiaLuaDeMel = () => {
                 "https://images.unsplash.com/photo-1537956965359-7573183d1f57?q=80&w=800",
               ].map((img, i) => (
                 <div key={i} className="relative overflow-hidden rounded-3xl aspect-[4/5] shadow-xl group">
-                  <img src={img} alt="Ilha paradisíaca na Tailândia" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                  <img src={img} alt="Ilha paradisíaca na Tailândia" loading="lazy" decoding="async" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
                   <div className="absolute bottom-6 left-6 text-white font-bold text-sm uppercase tracking-wider" style={{ color: ROSE }}>
                     Revelada no guia

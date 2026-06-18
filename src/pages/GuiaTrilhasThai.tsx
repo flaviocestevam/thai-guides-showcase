@@ -297,7 +297,7 @@ const GuiaTrilhasThai = () => {
         {/* HERO */}
 
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <img src={heroTrekking} alt="Trilha de trekking na selva tailandesa" className="absolute inset-0 w-full h-full object-cover" width={1920} height={1080} />
+        <img src={heroTrekking} alt="Trilha de trekking na selva tailandesa" fetchPriority="high" decoding="async" className="absolute inset-0 w-full h-full object-cover" width={1920} height={1080} />
         <div className="absolute inset-0 bg-gradient-to-b from-forest-dark/85 via-forest-dark/60 to-forest-dark/95" />
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
           <div className="flex flex-wrap items-center justify-center gap-4 mb-6">
@@ -914,7 +914,7 @@ const GuiaTrilhasThai = () => {
       {/* FINAL CTA */}
       <section className="py-24 px-6 bg-forest-dark text-center relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <img src={kohPhiPhi} alt="" className="w-full h-full object-cover" />
+          <img src={kohPhiPhi} alt="" loading="lazy" decoding="async" className="w-full h-full object-cover" />
         </div>
         <div className="relative z-10 max-w-3xl mx-auto">
           <Footprints className="w-12 h-12 text-elephant-gold mx-auto mb-6" />

@@ -141,7 +141,7 @@ const GuiaSongkran = () => {
                 "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?q=80&w=800",
               ].map((img, i) => (
                 <div key={i} className="relative overflow-hidden rounded-3xl aspect-[4/5] shadow-xl group">
-                  <img src={img} alt="Cidade da Tailândia em Songkran" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                  <img src={img} alt="Cidade da Tailândia em Songkran" loading="lazy" decoding="async" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
                   <div className="absolute bottom-6 left-6 text-white font-bold text-sm uppercase tracking-wider" style={{ color: ORANGE }}>
                     Comparada no guia
