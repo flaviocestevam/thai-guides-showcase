@@ -91,10 +91,10 @@ export const cursosDeMassagem: SalesContent = {
   ],
   pricing: {
     badge: "Oferta de lançamento",
-    oldPrice: "R$ 297",
-    price: "97",
+    oldPrice: "R$ 197",
+    price: "67",
     priceCents: "00",
-    installments: "12x de R$ 9,71",
+    installments: "12x de R$ 6,71",
     includes: [
       "Guia completo das 10 escolas certificadas",
       "Manual passo a passo do visto ED",

@@ -96,10 +96,10 @@ export const reveillon: SalesContent = {
   ],
   pricing: {
     badge: "Edição Réveillon 2026",
-    oldPrice: "R$ 297",
-    price: "97",
+    oldPrice: "R$ 197",
+    price: "67",
     priceCents: "00",
-    installments: "12x de R$ 9,71",
+    installments: "12x de R$ 6,71",
     includes: [
       "Guia das 10 cidades comparadas",
       "Top 50 festas avaliadas",

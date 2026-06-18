@@ -96,10 +96,10 @@ export const mergulho: SalesContent = {
   ],
   pricing: {
     badge: "Oferta inaugural",
-    oldPrice: "R$ 247",
-    price: "87",
+    oldPrice: "R$ 197",
+    price: "67",
     priceCents: "00",
-    installments: "12x de R$ 8,71",
+    installments: "12x de R$ 6,71",
     includes: [
       "Guia com 20 escolas avaliadas",
       "Roteiros de OW a Instructor",

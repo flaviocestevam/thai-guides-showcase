@@ -97,9 +97,9 @@ export const cafesCoworkings: SalesContent = {
   pricing: {
     badge: "Edição nômade",
     oldPrice: "R$ 197",
-    price: "57",
+    price: "67",
     priceCents: "00",
-    installments: "12x de R$ 5,71",
+    installments: "12x de R$ 6,71",
     includes: [
       "Guia com 200+ lugares testados",
       "Mapa interativo Google Maps",
