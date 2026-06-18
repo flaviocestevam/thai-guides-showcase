@@ -23,6 +23,7 @@ import CursosDeMassagem from "./pages/CursosDeMassagem.tsx";
 import AluguelDeMotos from "./pages/AluguelDeMotos.tsx";
 import AluguelDeMotos827252 from "./pages/AluguelDeMotos827252.tsx";
 import Mergulho from "./pages/Mergulho.tsx";
+import MergulhoTailandia465355 from "./pages/MergulhoTailandia465355.tsx";
 import CafesCoworkings from "./pages/CafesCoworkings.tsx";
 import ClubesStrip from "./pages/ClubesStrip.tsx";
 import GoGoBars from "./pages/GoGoBars.tsx";
@@ -69,6 +70,7 @@ const App = () => (
           <Route path="/aluguel-de-motos-tailandia" element={<AluguelDeMotos />} />
           <Route path="/aluguel-de-motos-tailandia827252" element={<AluguelDeMotos827252 />} />
           <Route path="/mergulho-tailandia" element={<Mergulho />} />
+          <Route path="/mergulho-tailandia465355" element={<MergulhoTailandia465355 />} />
           <Route path="/cafes-e-coworkings-tailandia" element={<CafesCoworkings />} />
           <Route path="/clubes-de-strip-tailandia" element={<ClubesStrip />} />
           <Route path="/go-go-bars-tailandia" element={<GoGoBars />} />
