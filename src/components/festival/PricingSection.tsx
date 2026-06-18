@@ -19,7 +19,7 @@ const PricingSection = () => (
           ⏰ OFERTA LIMITADA
         </div>
 
-        <p className="text-muted-foreground font-body text-lg line-through mb-1">R$ 67</p>
+        <p className="text-muted-foreground font-body text-lg line-through mb-1">R$ 197</p>
         <p className="text-5xl md:text-7xl font-display font-black text-gradient-gold mb-2">
           R$ 67
         </p>
