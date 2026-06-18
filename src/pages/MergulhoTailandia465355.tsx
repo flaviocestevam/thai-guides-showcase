@@ -196,18 +196,18 @@ const MergulhoTailandia465355 = () => {
         </div>
         <div className="container mx-auto px-5 max-w-5xl relative z-10 text-white">
           <div className="inline-block px-3 py-1 rounded-full text-xs font-bold tracking-widest uppercase mb-5" style={{ background: CORAL }}>
-            🤿 Guia 2026 • 31 capítulos
+            🤿 Guia 2026 • 34 capítulos
           </div>
           <h1 className="text-4xl md:text-6xl font-black leading-tight mb-5">
             Mergulho na Tailândia <span style={{ color: "#7FE7E5" }}>do Open Water ao Divemaster</span>
           </h1>
           <p className="text-lg md:text-xl text-white/90 max-w-3xl mb-8 leading-relaxed">
             Cursos PADI/SSI, melhores ilhas, custos reais em THB, calendário mês a mês, dive sites mapeados,
-            liveaboards, seguro DAN, câmaras hiperbáricas, vida marinha, fotografia subaquática e roteiros prontos
-            do iniciante ao profissional. Mergulho bom não é o mais barato — é o mais seguro.
+            liveaboards, seguro DAN, câmaras hiperbáricas, vida marinha, fotografia subaquática, checklist pré-viagem
+            e diretório de escolas com Google Maps e telefone — do iniciante ao profissional.
           </p>
           <div className="flex flex-wrap gap-3 text-sm">
-            {["31 capítulos","4 bases comparadas","30 dive sites","Seguro DAN + emergências","Vida marinha mês a mês","Fotografia subaquática","Glossário PT/EN","Roteiros 7/10/14/21 dias"].map(t => (
+            {["34 capítulos","Diretório de escolas (Maps + tel.)","Checklist pré-viagem","Equipamento detalhado","Seguro DAN","Vida marinha mês a mês","Glossário PT/EN","Roteiros 7/10/14/21 dias"].map(t => (
               <span key={t} className="px-3 py-1 rounded-full bg-white/10 border border-white/20">{t}</span>
             ))}
           </div>
@@ -925,8 +925,368 @@ Thank you.`}
         </Card>
       </Section>
 
-      {/* 31 - Conclusão */}
-      <Section id="conclusao" icon={Waves} kicker="Capítulo 31" title="Conclusão: o caminho do mergulhador brasileiro na Tailândia">
+      {/* 32 - Equipamento detalhado */}
+      <Section id="equipamento-detalhado" icon={Wrench} kicker="Capítulo 32" title="Equipamento detalhado: o que comprar antes de viajar (com preços)">
+        <p>O Capítulo 14 deu o resumo. Aqui vai a versão completa, com prioridade, faixa de preço (USD/BRL) e por que cada item vale ou não.</p>
+
+        <H3>🟢 Prioridade 1 — Compre ANTES de viajar</H3>
+        <div className="grid md:grid-cols-2 gap-4">
+          <Card title="Máscara (essencial)" tone="good">
+            <Bul items={[
+              ["Preço","R$ 200 a R$ 800 (US$ 40–160)"],
+              ["Marcas confiáveis","Cressi, Mares, Aqua Lung, TUSA, Scubapro"],
+              ["Por que","Máscara que vaza ou aperta arruína o mergulho. Aluguel costuma ser desconfortável"],
+              ["Como escolher","Teste a vedação SEM a alça: encoste no rosto, inspire pelo nariz, deve grudar"],
+              ["Dica","Leve antifog ou cuspa no vidro antes de cada mergulho"],
+            ]} />
+          </Card>
+          <Card title="Snorkel + nadadeiras de viagem" tone="good">
+            <Bul items={[
+              ["Snorkel","R$ 100–250. Modelo simples basta"],
+              ["Nadadeiras de viagem","R$ 400–900 (Mares Avanti Quattro, Cressi Palau)"],
+              ["Por que","Conforto e propulsão fazem diferença em correnteza"],
+              ["Dica","Modelos abertos (open heel) funcionam com bota — mais versátil"],
+            ]} />
+          </Card>
+        </div>
+
+        <H3>🟡 Prioridade 2 — Compre após Open Water (se vai mergulhar mais)</H3>
+        <div className="grid md:grid-cols-2 gap-4">
+          <Card title="Computador de mergulho">
+            <Bul items={[
+              ["Entrada","R$ 1.500–2.500 (Cressi Leonardo, Mares Puck Pro)"],
+              ["Intermediário","R$ 2.500–4.500 (Suunto Zoop Novo, Mares Smart)"],
+              ["Avançado","R$ 4.500–10.000+ (Shearwater Peregrine, Garmin Descent)"],
+              ["Por que","Segurança e independência. Aluguel some quando você precisa"],
+            ]} />
+          </Card>
+          <Card title="SMB + carretel (sausage)">
+            <Bul items={[
+              ["Preço","R$ 250–500"],
+              ["Por que","Sinaliza sua posição ao barco na subida. Obrigatório em muitos dives"],
+              ["Cor","laranja (padrão) ou amarelo (emergência)"],
+            ]} />
+          </Card>
+          <Card title="Roupa de neoprene">
+            <Bul items={[
+              ["Tailândia","3mm shorty ou 3mm full body é suficiente"],
+              ["Preço","R$ 600–1.800"],
+              ["Aluguel","viável para curta viagem; comprar vale para 10+ mergulhos"],
+            ]} />
+          </Card>
+          <Card title="Logbook digital ou físico">
+            <Bul items={[
+              ["Físico","R$ 80–150 (PADI/SSI)"],
+              ["Apps grátis","Diveboard, MacDive, Subsurface"],
+              ["Por que","Comprova experiência para cursos avançados e liveaboards"],
+            ]} />
+          </Card>
+        </div>
+
+        <H3>🔵 Prioridade 3 — Só se for mergulhar muito ou virar pro</H3>
+        <div className="grid md:grid-cols-2 gap-4">
+          <Card title="BCD (colete)">
+            <Bul items={[
+              ["Preço","R$ 3.000–8.000"],
+              ["Tipos","Jacket (iniciante), wing (técnico)"],
+              ["Vale quando","mais de 50 mergulhos/ano ou trabalho na área"],
+            ]} />
+          </Card>
+          <Card title="Regulador + octopus">
+            <Bul items={[
+              ["Preço","R$ 3.500–10.000"],
+              ["Marcas","Apeks, Scubapro, Mares, Aqua Lung"],
+              ["Vale quando","você sabe que mergulhará por anos"],
+              ["Cuidado","manutenção anual obrigatória"],
+            ]} />
+          </Card>
+          <Card title="Bota + luva (uso específico)">
+            <Bul items={[
+              ["Bota","R$ 200–500. Necessária com nadadeira open heel"],
+              ["Luva","R$ 100–300. Proibida em muitos parques marinhos da Tailândia — confirme antes"],
+            ]} />
+          </Card>
+          <Card title="Lanterna de mergulho">
+            <Bul items={[
+              ["Preço","R$ 300–2.500"],
+              ["Quando comprar","só após curso de mergulho noturno"],
+              ["Backup","leve duas — uma falha é regra, não exceção"],
+            ]} />
+          </Card>
+        </div>
+
+        <H3>📦 Acessórios baratos que mudam a viagem</H3>
+        <Card>
+          <Bul items={[
+            ["Defog / antifog","R$ 30. Acaba com vidro embaçado"],
+            ["Bag estanque (dry bag)","R$ 80–200. Protege celular e câmera no barco"],
+            ["Toalha microfibra","R$ 50–120. Seca rápido, ocupa pouco"],
+            ["Roupa de lycra (rashguard)","R$ 150–400. Protege de sol, água-viva e arranhão"],
+            ["Protetor reef-safe","R$ 80–200. Sem oxibenzona/octinoxato"],
+            ["Remédio para enjoo","Dramin / Stugeron. Liveaboard sem isso = inferno"],
+            ["Tampão de ouvido tipo Doc's Pro Plugs","R$ 100. Reduz otite e barotrauma leve"],
+            ["Kit de costura + cola Aquaseal","R$ 80. Salva neoprene rasgado no meio da viagem"],
+          ]} />
+        </Card>
+
+        <Card tone="warn" title="✈️ Bagagem: equipamento de mergulho conta como esportivo">
+          Algumas companhias (Singapore Airlines, Qatar, Emirates) liberam franquia extra para "diving equipment". Verifique antes — pode economizar R$ 400–800 em excesso de bagagem.
+        </Card>
+      </Section>
+
+      {/* 33 - Checklist Pré-Viagem */}
+      <Section id="checklist-viagem" icon={ListChecks} kicker="Capítulo 33" title="Checklist pré-viagem completo (60 → 0 dias)">
+        <p>Use este cronograma para chegar na Tailândia sem esquecer nada essencial.</p>
+
+        <H3>📅 60 dias antes</H3>
+        <Card tone="good"><Bul items={[
+          "Decidir destino principal (Koh Tao / Phangan / Phuket / Khao Lak / Lanta)",
+          "Reservar passagens — terças e quartas são mais baratas",
+          "Tirar/renovar passaporte (mínimo 6 meses de validade)",
+          "Verificar exigência de visto (brasileiros têm isenção até 60 dias)",
+          "Agendar check-up médico, otorrino e dentista",
+          "Iniciar preparo físico (cardio, natação)",
+          "Pesquisar e shortlistar 3 escolas de mergulho (use o diretório no próximo capítulo)",
+          "Contratar seguro de mergulho DAN ou similar",
+        ]} /></Card>
+
+        <H3>📅 30 dias antes</H3>
+        <Card><Bul items={[
+          "Contratar seguro viagem com cobertura para mergulho recreativo",
+          "Vacinas: hepatites A/B, tétano, febre amarela (se vier da América do Sul, exigida)",
+          "Comprar máscara, snorkel e nadadeiras pessoais",
+          "Reservar primeira hospedagem (mínimo 3 noites)",
+          "Reservar transfer aeroporto → ilha (Bangkok Airways + ferry combinado)",
+          "Avisar banco e cartão de crédito sobre viagem ao exterior",
+          "Pedir cartão internacional (Wise, Nomad, C6 Global) — IOF zero",
+          "Baixar apps: Grab, Bolt, Google Translate, Maps offline, XE Currency, Diveboard",
+        ]} /></Card>
+
+        <H3>📅 15 dias antes</H3>
+        <Card><Bul items={[
+          "Confirmar reservas por email/WhatsApp com a escola",
+          "Comprar eSIM (Airalo, Holafly) — ativa só na chegada",
+          "Imprimir/salvar PDF: passaporte, seguro, vouchers, certificações antigas (se houver)",
+          "Levantar 5.000–10.000 THB em espécie (ou trocar no aeroporto BKK)",
+          "Comprar protetor solar reef-safe, repelente, antifog",
+          "Comprar remédios pessoais + dramin + analgésico + antialérgico",
+          "Testar máscara em piscina/mar",
+        ]} /></Card>
+
+        <H3>📅 7 dias antes</H3>
+        <Card><Bul items={[
+          "Fazer cópia digital (Drive/iCloud) de todos os documentos",
+          "Compartilhar roteiro com família + número de emergência DAN: +1-919-684-9111",
+          "Confirmar peso da bagagem (equipamento esportivo às vezes tem franquia extra)",
+          "Verificar previsão do tempo e estado do mar no destino",
+          "Não fazer atividade nova (academia pesada, vacina) — risco de ficar indisposto",
+        ]} /></Card>
+
+        <H3>📅 Véspera</H3>
+        <Card tone="warn"><Bul items={[
+          "Dormir 8h+ — você vai chegar cansado",
+          "Beber MUITA água (hidratação importa em voo longo)",
+          "Evitar álcool",
+          "Conferir mala 2x: passaporte, seguro, máscara, remédios, certificação anterior",
+          "Carregar todos os eletrônicos + power bank",
+          "Não esquecer adaptador de tomada Tipo A/B/C (Tailândia aceita os três)",
+        ]} /></Card>
+
+        <H3>🎒 Mala de mergulho — o que NÃO esquecer</H3>
+        <div className="grid md:grid-cols-2 gap-4">
+          <Card title="Documentos" tone="info"><Bul items={[
+            "Passaporte + cópia digital",
+            "Comprovante de seguro de mergulho",
+            "Cartão de certificação (se já mergulha) + logbook",
+            "Comprovante de hospedagem e voo de saída",
+            "Atestado médico se tiver condição preexistente",
+          ]} /></Card>
+          <Card title="Equipamento pessoal"><Bul items={[
+            "Máscara + antifog",
+            "Snorkel",
+            "Nadadeiras de viagem (se levar)",
+            "Computador de mergulho + carregador",
+            "Rashguard / lycra UV",
+            "SMB + carretel",
+          ]} /></Card>
+          <Card title="Saúde"><Bul items={[
+            "Remédios pessoais (estoque dobrado)",
+            "Dramin / Stugeron (enjoo)",
+            "Analgésico, antialérgico, antibiótico (se prescrito)",
+            "Pomada para queimadura solar",
+            "Doc's Pro Plugs (proteção de ouvido)",
+            "Tira-cera de ouvido (otite é o vilão #1 do mergulhador)",
+          ]} /></Card>
+          <Card title="Tecnologia"><Bul items={[
+            "Celular + carregador",
+            "Power bank 10.000+ mAh",
+            "Câmera/GoPro + caixa estanque + filtro vermelho",
+            "Cartão SD reserva",
+            "Adaptador universal de tomada",
+            "Fones bluetooth",
+          ]} /></Card>
+        </div>
+      </Section>
+
+      {/* 34 - Diretório de Escolas */}
+      <Section id="diretorio-escolas" icon={MapPin} kicker="Capítulo 34" title="Diretório de escolas de mergulho (Google Maps + telefone)">
+        <p>Curadoria de escolas reconhecidas como PADI 5 Star / SSI Diamond, com contato verificado em dezembro de 2025. <strong>Sempre confirme preço e turma direto com a escola</strong> antes de fechar.</p>
+
+        <H3>🏝️ Koh Tao</H3>
+        <div className="grid md:grid-cols-2 gap-4">
+          <Card title="Big Blue Diving Resort">
+            <p>📍 15/3 Moo 1, Sairee Beach, Koh Tao</p>
+            <p>📞 <a href="tel:+66774564415" className="underline" style={{ color: TEAL }}>+66 77 456 415</a></p>
+            <p>🌐 <a href="https://www.bigbluediving.com" target="_blank" rel="noopener" className="underline">bigbluediving.com</a></p>
+            <p>🗺️ <a href="https://www.google.com/maps/search/?api=1&query=Big+Blue+Diving+Resort+Koh+Tao" target="_blank" rel="noopener" className="underline">Ver no Google Maps</a></p>
+            <p className="text-sm text-slate-600 mt-2">PADI 5★ + SSI Platinum. Uma das mais antigas e estruturadas. Aceita aluno e Divemaster com hospedagem.</p>
+          </Card>
+          <Card title="Master Divers">
+            <p>📍 25/8 Moo 2, Mae Haad, Koh Tao</p>
+            <p>📞 <a href="tel:+66926185637" className="underline" style={{ color: TEAL }}>+66 92 618 5637</a> (WhatsApp)</p>
+            <p>🌐 <a href="https://master-divers.com" target="_blank" rel="noopener" className="underline">master-divers.com</a></p>
+            <p>🗺️ <a href="https://maps.app.goo.gl/3dC5ihttbzi3qpjW6" target="_blank" rel="noopener" className="underline">Ver no Google Maps</a></p>
+            <p className="text-sm text-slate-600 mt-2">PADI 5★ CDC boutique. Foco em qualidade &gt; quantidade, turmas pequenas. Excelente para Divemaster.</p>
+          </Card>
+          <Card title="Davy Jones' Locker">
+            <p>📍 Sairee Beach, Koh Tao</p>
+            <p>📞 <a href="tel:+66954835371" className="underline" style={{ color: TEAL }}>+66 95 483 5371</a> (WhatsApp 09h–18h30)</p>
+            <p>🌐 <a href="https://davyjoneslocker.asia" target="_blank" rel="noopener" className="underline">davyjoneslocker.asia</a></p>
+            <p>🗺️ <a href="https://www.google.com/maps/search/?api=1&query=Davy+Jones+Locker+Koh+Tao" target="_blank" rel="noopener" className="underline">Ver no Google Maps</a></p>
+            <p className="text-sm text-slate-600 mt-2">PADI 5★ IDC. Forte em técnico, sidemount, wreck. Máximo 4 alunos/instrutor.</p>
+          </Card>
+          <Card title="Simply Scuba Koh Tao">
+            <p>📍 Sairee Beach, Koh Tao</p>
+            <p>🌐 <a href="https://simplyscubakohtao.com" target="_blank" rel="noopener" className="underline">simplyscubakohtao.com</a></p>
+            <p>🗺️ <a href="https://www.google.com/maps/search/?api=1&query=Simply+Scuba+Koh+Tao" target="_blank" rel="noopener" className="underline">Ver no Google Maps</a></p>
+            <p className="text-sm text-slate-600 mt-2">PADI Elite Instructors. Contato pelo site ou WhatsApp.</p>
+          </Card>
+          <Card title="Ocean Sound Dive + Yoga">
+            <p>📍 Sairee Beach, Koh Tao</p>
+            <p>🌐 <a href="https://www.oceansoundkohtao.com" target="_blank" rel="noopener" className="underline">oceansoundkohtao.com</a></p>
+            <p>🗺️ <a href="https://www.google.com/maps/search/?api=1&query=Ocean+Sound+Dive+Yoga+Koh+Tao" target="_blank" rel="noopener" className="underline">Ver no Google Maps</a></p>
+            <p className="text-sm text-slate-600 mt-2">Top ranqueada no Google e TripAdvisor desde 2011. Combina mergulho + yoga.</p>
+          </Card>
+          <Card title="Siam Scuba">
+            <p>📍 Koh Tao</p>
+            <p>🌐 <a href="https://siamscuba.com" target="_blank" rel="noopener" className="underline">siamscuba.com</a></p>
+            <p>🗺️ <a href="https://www.google.com/maps/search/?api=1&query=Siam+Scuba+Koh+Tao" target="_blank" rel="noopener" className="underline">Ver no Google Maps</a></p>
+            <p className="text-sm text-slate-600 mt-2">PADI 5★ Dive Center.</p>
+          </Card>
+        </div>
+
+        <H3>🏝️ Koh Phangan</H3>
+        <div className="grid md:grid-cols-2 gap-4">
+          <Card title="Sail Rock Divers">
+            <p>📍 15 Moo 7, Chaloklum, Koh Phangan 84280</p>
+            <p>📞 <a href="tel:+66822822950" className="underline" style={{ color: TEAL }}>+66 82 282 2950</a></p>
+            <p>🌐 <a href="https://sailrockdiversresort.com" target="_blank" rel="noopener" className="underline">sailrockdiversresort.com</a></p>
+            <p>🗺️ <a href="https://www.google.com/maps/search/?api=1&query=Sail+Rock+Divers+Chaloklum+Koh+Phangan" target="_blank" rel="noopener" className="underline">Ver no Google Maps</a></p>
+            <p className="text-sm text-slate-600 mt-2">PADI 5★ CDC. Primeiro dive resort de Phangan. Logística mais curta para Sail Rock.</p>
+          </Card>
+          <Card title="The Dive Inn">
+            <p>📍 Chaloklum, Koh Phangan</p>
+            <p>🌐 <a href="https://www.the-diveinn.com" target="_blank" rel="noopener" className="underline">the-diveinn.com</a></p>
+            <p>🗺️ <a href="https://www.google.com/maps/search/?api=1&query=The+Dive+Inn+Koh+Phangan" target="_blank" rel="noopener" className="underline">Ver no Google Maps</a></p>
+            <p className="text-sm text-slate-600 mt-2">SSI Dive Center desde 2002. Especialidades e formação completa.</p>
+          </Card>
+        </div>
+
+        <H3>🏝️ Phuket</H3>
+        <div className="grid md:grid-cols-2 gap-4">
+          <Card title="Aussie Divers Phuket (PADI 5★ CDC)">
+            <p>📍 Chalong Main Office, Phuket</p>
+            <p>📞 <a href="tel:+66986693361" className="underline" style={{ color: TEAL }}>+66 98 669 3361</a> (escritório)</p>
+            <p>📞 <a href="tel:+66620180729" className="underline" style={{ color: TEAL }}>+66 62 018 0729</a> (Ash)</p>
+            <p>🌐 <a href="https://www.aussiediversphuket.com" target="_blank" rel="noopener" className="underline">aussiediversphuket.com</a></p>
+            <p>🗺️ <a href="https://www.google.com/maps/search/?api=1&query=Aussie+Divers+Phuket+Chalong" target="_blank" rel="noopener" className="underline">Ver no Google Maps</a></p>
+            <p className="text-sm text-slate-600 mt-2">Fusão com Local Dive Thailand (nov/2024). Top em day trips e cursos.</p>
+          </Card>
+          <Card title="Indepth Dive Centre">
+            <p>📍 Phuket (centro)</p>
+            <p>🌐 <a href="https://www.padi.com/dive-center/thailand/indepth-dive-centre/" target="_blank" rel="noopener" className="underline">Ficha PADI</a></p>
+            <p>🗺️ <a href="https://www.google.com/maps/search/?api=1&query=Indepth+Dive+Centre+Phuket" target="_blank" rel="noopener" className="underline">Ver no Google Maps</a></p>
+            <p className="text-sm text-slate-600 mt-2">PADI 5★ IDC + TecRec. Forte em formação profissional.</p>
+          </Card>
+          <Card title="Seafarer Divers">
+            <p>📍 Phuket</p>
+            <p>🌐 <a href="https://www.padi.com/dive-center/thailand/seafarer-divers-co-ltd/" target="_blank" rel="noopener" className="underline">Ficha PADI</a></p>
+            <p>🗺️ <a href="https://www.google.com/maps/search/?api=1&query=Seafarer+Divers+Phuket" target="_blank" rel="noopener" className="underline">Ver no Google Maps</a></p>
+            <p className="text-sm text-slate-600 mt-2">PADI 5★ Dive Center.</p>
+          </Card>
+          <Card title="Phuket Dive Tours (Chalong)">
+            <p>📍 Próximo ao Tiger Muay Thai, Chalong</p>
+            <p>🌐 <a href="https://www.phuketdivetours.com" target="_blank" rel="noopener" className="underline">phuketdivetours.com</a></p>
+            <p>🗺️ <a href="https://www.google.com/maps/search/?api=1&query=Phuket+Dive+Tours+Chalong" target="_blank" rel="noopener" className="underline">Ver no Google Maps</a></p>
+            <p className="text-sm text-slate-600 mt-2">SSI Diamond. Piscina própria, grupos pequenos.</p>
+          </Card>
+        </div>
+
+        <H3>🏝️ Khao Lak (base para Similan / Surin / Richelieu)</H3>
+        <div className="grid md:grid-cols-2 gap-4">
+          <Card title="Similan Dive Center">
+            <p>📍 67/7 Moo 5 Khuekkhak, Takuapa 82220</p>
+            <p>📞 <a href="tel:+6676490965" className="underline" style={{ color: TEAL }}>+66 76 490 965</a></p>
+            <p>📱 <a href="tel:+66612216519" className="underline" style={{ color: TEAL }}>+66 61 221 6519</a> (WhatsApp)</p>
+            <p>🌐 <a href="https://similandivecenter.com" target="_blank" rel="noopener" className="underline">similandivecenter.com</a></p>
+            <p>🗺️ <a href="https://www.google.com/maps/search/?api=1&query=Similan+Dive+Center+Khao+Lak" target="_blank" rel="noopener" className="underline">Ver no Google Maps</a></p>
+          </Card>
+          <Card title="Khao Lak Explorer">
+            <p>📍 Khao Lak</p>
+            <p>📞 <a href="tel:+66611195733" className="underline" style={{ color: TEAL }}>+66 61 119 5733</a></p>
+            <p>🌐 <a href="https://khaolakexplorer.com" target="_blank" rel="noopener" className="underline">khaolakexplorer.com</a></p>
+            <p>🗺️ <a href="https://www.google.com/maps/search/?api=1&query=Khao+Lak+Explorer+Dive+Center" target="_blank" rel="noopener" className="underline">Ver no Google Maps</a></p>
+            <p className="text-sm text-slate-600 mt-2">PADI 5★. Liveaboards Khao Lak e Phuket → Similan.</p>
+          </Card>
+          <Card title="Big Blue Diving Khao Lak">
+            <p>📍 4/53 Moo 7, Khuk Kak, Takua Pa 82190</p>
+            <p>🌐 <a href="https://www.bigbluedivingkhaolak.com" target="_blank" rel="noopener" className="underline">bigbluedivingkhaolak.com</a></p>
+            <p>🗺️ <a href="https://www.google.com/maps/search/?api=1&query=Big+Blue+Diving+Khao+Lak" target="_blank" rel="noopener" className="underline">Ver no Google Maps</a></p>
+            <p className="text-sm text-slate-600 mt-2">20+ anos na Tailândia. Especialistas em liveaboard Similan. Contato pelo site.</p>
+          </Card>
+          <Card title="Khao Lak Scuba Adventures">
+            <p>📍 Khao Lak</p>
+            <p>🌐 <a href="https://khaolakscubaadventures.com" target="_blank" rel="noopener" className="underline">khaolakscubaadventures.com</a></p>
+            <p>🗺️ <a href="https://www.google.com/maps/search/?api=1&query=Khao+Lak+Scuba+Adventures" target="_blank" rel="noopener" className="underline">Ver no Google Maps</a></p>
+            <p className="text-sm text-slate-600 mt-2">Opera a frota Manta Queen — referência em liveaboard.</p>
+          </Card>
+          <Card title="Similan Seven Sea Club">
+            <p>📍 Khao Lak</p>
+            <p>🌐 <a href="https://similansevenseaclub.com" target="_blank" rel="noopener" className="underline">similansevenseaclub.com</a></p>
+            <p>🗺️ <a href="https://www.google.com/maps/search/?api=1&query=Similan+Seven+Sea+Club+Khao+Lak" target="_blank" rel="noopener" className="underline">Ver no Google Maps</a></p>
+            <p className="text-sm text-slate-600 mt-2">PADI 5★. Múltiplos liveaboards a Similan.</p>
+          </Card>
+        </div>
+
+        <H3>🏝️ Koh Lanta</H3>
+        <div className="grid md:grid-cols-2 gap-4">
+          <Card title="Blue Planet Divers">
+            <p>📍 3 Moo 1, Ban Saladan, Koh Lanta, Krabi</p>
+            <p>📞 <a href="tel:+66854723450" className="underline" style={{ color: TEAL }}>+66 85 472 3450</a></p>
+            <p>📱 <a href="tel:+66881793419" className="underline" style={{ color: TEAL }}>+66 88 179 3419</a></p>
+            <p>🌐 <a href="https://blueplanetdivers.net" target="_blank" rel="noopener" className="underline">blueplanetdivers.net</a></p>
+            <p>🗺️ <a href="https://www.google.com/maps/search/?api=1&query=Blue+Planet+Divers+Koh+Lanta" target="_blank" rel="noopener" className="underline">Ver no Google Maps</a></p>
+            <p className="text-sm text-slate-600 mt-2">SSI Diamond. Hin Daeng, Hin Muang, Koh Haa. Mergulho e freediving.</p>
+          </Card>
+        </div>
+
+        <Card tone="info" title="🔍 Como validar uma escola que você descobriu por conta">
+          <Bul items={[
+            ["1. PADI Pro Check","padi.com/scuba-diving/about-padi/check-status — verifica certificadora"],
+            ["2. SSI MyDiveGuide","divessi.com — busca dive centers verificados"],
+            ["3. Google Reviews","leia ao menos 20 avaliações; cuidado com 5★ todas iguais (fake)"],
+            ["4. TripAdvisor + Reddit","r/scuba e r/Thailand têm relatos honestos"],
+            ["5. WhatsApp direto","escola séria responde rápido e tira dúvidas sem empurrar venda"],
+          ]} />
+        </Card>
+
+        <Card tone="warn">
+          ⚠️ Este diretório é informativo. Preços, equipe e padrões mudam. Sempre confirme em primeira mão antes de pagar. Nunca pague antecipado para escolas sem reputação verificável.
+        </Card>
+      </Section>
+
+      {/* 35 - Conclusão */}
+      <Section id="conclusao" icon={Waves} kicker="Capítulo 35" title="Conclusão: o caminho do mergulhador brasileiro na Tailândia">
         <p>A Tailândia é um dos melhores lugares do mundo para começar. Mas o erro é achar que todo curso é igual. A melhor escolha não é a mais barata — é a que te ensina com calma, respeita seu ritmo e forma um mergulhador de verdade.</p>
         <Card title="🎯 Para a maioria dos brasileiros">
           <Bul items={[
