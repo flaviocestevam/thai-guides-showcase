@@ -7,6 +7,7 @@ import {
   Check, X, Shield, Heart, Sparkles, Award, Star, Leaf, PawPrint,
   GraduationCap, Home, BookOpen, Gift, Info, FileText, Map, DollarSign, Calendar
 } from "lucide-react";
+import heroImg from "@/assets/generated/voluntariado-hero.png.asset.json";
 
 const GREEN = "#16A34A";
 const EMERALD = "#059669";
@@ -28,7 +29,7 @@ const GuiaVoluntariado = () => {
         <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden">
           <div className="absolute inset-0 z-0">
             <img
-              src="https://images.unsplash.com/photo-1591025207163-942350e47db2?q=80&w=1920"
+              src={heroImg.url}
               alt="Voluntariado com elefantes na Tailândia"
               className="w-full h-full object-cover brightness-[0.45]"
             />

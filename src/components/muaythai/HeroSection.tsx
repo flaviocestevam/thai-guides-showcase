@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import heroImage from "@/assets/muay-thai-hero.jpg";
+import heroImage from "@/assets/generated/muay-thai-hero.png.asset.json";
 import CountdownTimer from "./CountdownTimer";
 
 const HeroSection = () => {
@@ -9,7 +9,7 @@ const HeroSection = () => {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src={heroImage}
+          src={heroImage.url}
           alt="Lutadores treinando Muay Thai em um camp tradicional na Tailândia"
           className="w-full h-full object-cover"
           width={1920}

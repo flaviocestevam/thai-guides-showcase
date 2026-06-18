@@ -7,6 +7,7 @@ import {
   Check, X, Shield, MapPin, Droplets, Sparkles, Calendar, Map,
   Plane, Info, Star, BookOpen, Gift, Award, Smartphone, Package2, Hotel
 } from "lucide-react";
+import heroImg from "@/assets/generated/songkran-hero.png.asset.json";
 
 const ORANGE = "#FF6B35";
 const TEAL = "#00A8A8";
@@ -28,7 +29,7 @@ const GuiaSongkran = () => {
         <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden">
           <div className="absolute inset-0 z-0">
             <img
-              src="https://images.unsplash.com/photo-1528181304800-259b08848526?q=80&w=1920"
+              src={heroImg.url}
               alt="Songkran — Ano Novo Tailandês"
               className="w-full h-full object-cover brightness-[0.45]"
             />

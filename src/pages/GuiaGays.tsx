@@ -8,6 +8,7 @@ import {
   Plane, Info, Star, BookOpen, MessageCircle, Gift, Award, Calendar, Map, Languages,
   Smartphone, Dumbbell, Sun, Scale, Music, Wallet
 } from "lucide-react";
+import heroImg from "@/assets/generated/gays-hero.png.asset.json";
 
 const PURPLE = "#7C3AED";
 const PINK = "#EC4899";
@@ -29,7 +30,7 @@ const GuiaGays = () => {
         <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden">
           <div className="absolute inset-0 z-0">
             <img
-              src="https://images.unsplash.com/photo-1561409037-c7be81613c1f?q=80&w=1920"
+              src={heroImg.url}
               alt="Bangkok à noite — vida LGBTQIA+ na Tailândia"
               className="w-full h-full object-cover brightness-[0.45]"
             />
