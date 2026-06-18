@@ -45,7 +45,7 @@ const GuiaVoluntariado = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild size="lg" className="bg-gradient-to-r from-[#16A34A] to-[#059669] hover:opacity-90 text-white font-bold py-8 px-10 text-xl rounded-xl shadow-2xl transition-all hover:scale-105 border-none">
-                <a href="#oferta">Quero o Guia por R$97</a>
+                <a href="#oferta">Quero o Guia por R$67</a>
               </Button>
             </div>
             <div className="mt-8 flex flex-wrap gap-6 text-sm text-gray-300 font-medium">
@@ -227,7 +227,7 @@ const GuiaVoluntariado = () => {
                 <h3 className="text-2xl font-bold mb-6">Você com o guia</h3>
                 <ul className="space-y-4">
                   {[
-                    "Investe R$97 uma vez e fala direto com os projetos",
+                    "Investe R$67 uma vez e fala direto com os projetos",
                     "Acesso à lista filtrada de plataformas sérias",
                     "Templates de e-mail em inglês prontos",
                     "Escolhe seu projeto, sua duração, seu visto",
@@ -379,7 +379,7 @@ const GuiaVoluntariado = () => {
 
               <div className="space-y-2 mb-10">
                 <span className="text-xl text-gray-400 line-through font-medium">De R$301</span>
-                <div className="text-6xl md:text-8xl font-black" style={{ color: GREEN }}>R$97</div>
+                <div className="text-6xl md:text-8xl font-black" style={{ color: GREEN }}>R$67</div>
                 <span className="block text-sm font-bold text-gray-400 tracking-widest uppercase">Pagamento Único</span>
               </div>
 
@@ -461,7 +461,7 @@ const GuiaVoluntariado = () => {
             </h2>
             <p className="text-gray-300 text-lg mb-10">Não pague R$ 9 mil pra agência fazer o que você consegue fazer sozinho com o guia certo na mão.</p>
             <Button asChild size="lg" className="bg-gradient-to-r from-[#16A34A] to-[#059669] hover:opacity-90 text-white font-bold py-8 px-12 text-xl rounded-xl shadow-2xl border-none">
-              <a href="#oferta">Garantir Meu Guia por R$97</a>
+              <a href="#oferta">Garantir Meu Guia por R$67</a>
             </Button>
           </div>
         </section>
