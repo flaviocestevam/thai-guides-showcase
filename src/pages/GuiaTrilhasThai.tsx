@@ -147,7 +147,7 @@ const FloatingBottomCTA = () => {
         <div className="hidden sm:block">
           <p className="text-sm text-elephant-cream/70">
             <span className="line-through">R$ 197</span>{" "}
-            <span className="text-2xl font-display font-bold text-elephant-gold">R$ 97</span>{" "}
+            <span className="text-2xl font-display font-bold text-elephant-gold">R$ 67</span>{" "}
             <span className="text-xs">ou 6x de R$ 18,50</span>
           </p>
         </div>
@@ -681,7 +681,7 @@ const GuiaTrilhasThai = () => {
           <div className="grid md:grid-cols-2 gap-6 text-left mb-12">
             {[
               { icon: Mountain, title: "30+ Trilhas Detalhadas", desc: "Distância, dificuldade, duração, custo, melhor época, como chegar e mapa", val: "R$ 197" },
-              { icon: Calendar, title: "Roteiros Prontos por Nível", desc: "Iniciante, intermediário e avançado — só copiar e colar no seu planejamento", val: "R$ 97" },
+              { icon: Calendar, title: "Roteiros Prontos por Nível", desc: "Iniciante, intermediário e avançado — só copiar e colar no seu planejamento", val: "R$ 67" },
               { icon: MapIcon, title: "10 Regiões Cobertas", desc: "Bangkok, Chiang Mai, Pai, Krabi, Phuket, Koh Tao, Koh Lipe, Koh Lanta e mais", val: "R$ 87" },
               { icon: Sparkles, title: "Trilhas Secretas Exclusivas", desc: "Praias escondidas e mirantes que nem 1% dos turistas conhece", val: "R$ 67" },
               { icon: TrendingUp, title: "Tabela de Custos em R$", desc: "Quanto custa cada item: entrada, transporte, guia, comida — sem surpresa", val: "R$ 47" },
@@ -841,7 +841,7 @@ const GuiaTrilhasThai = () => {
             ))}
           </div>
           <p className="text-lg text-elephant-fg/80 mb-2">
-            Por <strong className="text-forest font-display text-2xl">R$ 97</strong> você acessa um guia que vai te economizar facilmente <strong className="text-elephant-fg">10x esse valor</strong> em excursões evitadas e erros que você não vai cometer.
+            Por <strong className="text-forest font-display text-2xl">R$ 67</strong> você acessa um guia que vai te economizar facilmente <strong className="text-elephant-fg">10x esse valor</strong> em excursões evitadas e erros que você não vai cometer.
           </p>
           <p className="text-elephant-muted-fg">
             E isso sem contar a viagem que você teria perdido sem ele.

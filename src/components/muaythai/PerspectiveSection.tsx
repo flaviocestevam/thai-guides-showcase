@@ -37,7 +37,7 @@ const PerspectiveSection = () => {
         </div>
 
         <p className="text-center text-lg text-muted-foreground">
-          Por <strong className="text-accent">R$ 97</strong> você garante que a experiência mais 
+          Por <strong className="text-accent">R$ 67</strong> você garante que a experiência mais 
           importante da sua viagem seja perfeita.
         </p>
         <p className="text-center text-muted-foreground mt-2">

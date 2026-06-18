@@ -44,7 +44,7 @@ const GuiaLuaDeMel = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild size="lg" className="text-white font-bold py-8 px-10 text-xl rounded-xl shadow-2xl transition-all hover:scale-105 border-none" style={{ backgroundColor: ROSE }}>
-                <a href="#oferta">Quero o Guia por R$97</a>
+                <a href="#oferta">Quero o Guia por R$67</a>
               </Button>
             </div>
             <div className="mt-8 flex flex-wrap gap-6 text-sm text-gray-300 font-medium">
@@ -410,7 +410,7 @@ const GuiaLuaDeMel = () => {
 
               <div className="space-y-2 mb-10">
                 <span className="text-xl text-gray-400 line-through font-medium">De R$301</span>
-                <div className="text-6xl md:text-8xl font-black" style={{ color: ROSE }}>R$97</div>
+                <div className="text-6xl md:text-8xl font-black" style={{ color: ROSE }}>R$67</div>
                 <span className="block text-sm font-bold text-gray-400 tracking-widest uppercase">Pagamento Único</span>
               </div>
 
@@ -492,7 +492,7 @@ const GuiaLuaDeMel = () => {
             </h2>
             <p className="text-gray-300 text-lg mb-10">Não confiem no roteiro do cunhado. Confiem em quem mora aqui, conhece cada resort e atende casais brasileiros toda semana.</p>
             <Button asChild size="lg" className="text-white font-bold py-8 px-12 text-xl rounded-xl shadow-2xl border-none" style={{ backgroundColor: ROSE }}>
-              <a href="#oferta">Garantir Nosso Guia por R$97</a>
+              <a href="#oferta">Garantir Nosso Guia por R$67</a>
             </Button>
           </div>
         </section>

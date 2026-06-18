@@ -45,7 +45,7 @@ const GuiaSongkran = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild size="lg" className="bg-[#FF6B35] hover:bg-[#FF6B35]/90 text-white font-bold py-8 px-10 text-xl rounded-xl shadow-2xl transition-all hover:scale-105 border-none">
-                <a href="#oferta">Quero o Guia por R$97</a>
+                <a href="#oferta">Quero o Guia por R$67</a>
               </Button>
             </div>
             <div className="mt-8 flex flex-wrap gap-6 text-sm text-gray-300 font-medium">
@@ -383,7 +383,7 @@ const GuiaSongkran = () => {
 
               <div className="space-y-2 mb-10">
                 <span className="text-xl text-gray-400 line-through font-medium">De R$301</span>
-                <div className="text-6xl md:text-8xl font-black" style={{ color: ORANGE }}>R$97</div>
+                <div className="text-6xl md:text-8xl font-black" style={{ color: ORANGE }}>R$67</div>
                 <span className="block text-sm font-bold text-gray-400 tracking-widest uppercase">Pagamento Único</span>
               </div>
 
@@ -465,7 +465,7 @@ const GuiaSongkran = () => {
             </h2>
             <p className="text-gray-300 text-lg mb-10">Não desperdice a viagem aprendendo na pancada. Vai com quem já passou por isso — e te entrega tudo mastigado.</p>
             <Button asChild size="lg" className="bg-[#FF6B35] hover:bg-[#FF6B35]/90 text-white font-bold py-8 px-12 text-xl rounded-xl shadow-2xl border-none">
-              <a href="#oferta">Garantir Meu Guia por R$97</a>
+              <a href="#oferta">Garantir Meu Guia por R$67</a>
             </Button>
           </div>
         </section>

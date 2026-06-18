@@ -19,9 +19,9 @@ const FloatingCTA = () => {
       <div className="max-w-4xl mx-auto flex items-center justify-between gap-4">
         <div className="hidden sm:block">
           <p className="font-body text-sm text-muted-foreground">
-            <span className="line-through">R$ 497</span>{" "}
-            <span className="text-2xl font-display font-black text-gradient-gold">R$ 197</span>{" "}
-            <span className="text-xs">ou 12x de R$ 19,21</span>
+            <span className="line-through">R$ 197</span>{" "}
+            <span className="text-2xl font-display font-black text-gradient-gold">R$ 67</span>{" "}
+            <span className="text-xs">ou 12x de R$ 6,71</span>
           </p>
         </div>
         <CTAButton href={HOTMART_LINK} size="default" className="whitespace-nowrap text-sm">

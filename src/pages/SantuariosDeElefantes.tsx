@@ -149,7 +149,7 @@ const FloatingBottomCTA = () => {
         <div className="hidden sm:block">
           <p className="text-sm text-elephant-cream/70">
             <span className="line-through">R$ 197</span>{" "}
-            <span className="text-2xl font-display font-bold text-elephant-gold">R$ 97</span>{" "}
+            <span className="text-2xl font-display font-bold text-elephant-gold">R$ 67</span>{" "}
             <span className="text-xs">ou 6x de R$ 18,50</span>
           </p>
         </div>
@@ -578,7 +578,7 @@ const SantuariosDeElefantes = () => {
             <TestimonialCard
               name="Bruno K."
               location="Porto Alegre, RS"
-              text="Por R$97 eu economizei facilmente R$500 em passeios furada. O guia se paga na primeira decisão que você toma com ele."
+              text="Por R$67 eu economizei facilmente R$500 em passeios furada. O guia se paga na primeira decisão que você toma com ele."
             />
           </div>
           <div className="mt-12 text-center bg-elephant-card rounded-xl p-6 border border-elephant-border max-w-md mx-auto">
@@ -602,7 +602,7 @@ const SantuariosDeElefantes = () => {
           <div className="grid md:grid-cols-2 gap-6 text-left mb-12">
             {[
               { icon: BookOpen, title: "Guia Completo (8 Capítulos)", desc: "Tudo sobre santuários éticos, critérios, custos e logística", val: "R$ 197" },
-              { icon: MapPin, title: "3 Roteiros Prontos", desc: "Itinerários de 3, 5 e 7 dias com valores detalhados", val: "R$ 97" },
+              { icon: MapPin, title: "3 Roteiros Prontos", desc: "Itinerários de 3, 5 e 7 dias com valores detalhados", val: "R$ 67" },
               { icon: AlertTriangle, title: "Lista Negra Exclusiva", desc: "Santuários falsos para evitar a todo custo", val: "R$ 67" },
               { icon: Zap, title: "Frases em Tailandês", desc: "Comunicação básica para se virar em qualquer situação", val: "R$ 47" },
               { icon: Shield, title: "Checklist de Viagem", desc: "O que levar, vestir, vacinas e documentos", val: "R$ 37" },
@@ -722,7 +722,7 @@ const SantuariosDeElefantes = () => {
             ))}
           </div>
           <p className="text-lg text-elephant-fg/80 mb-2">
-            Por <strong className="text-forest font-display text-2xl">R$ 97</strong> você garante que a experiência mais importante da sua viagem seja perfeita.
+            Por <strong className="text-forest font-display text-2xl">R$ 67</strong> você garante que a experiência mais importante da sua viagem seja perfeita.
           </p>
           <p className="text-elephant-muted-fg">
             Quanto custa a culpa de ter financiado sofrimento animal? <strong className="text-elephant-fg">Isso não tem preço.</strong>
