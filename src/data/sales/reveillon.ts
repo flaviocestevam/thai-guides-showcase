@@ -59,7 +59,7 @@ export const reveillon: SalesContent = {
       bullets: ["Vibe de cada uma", "Clima e monção", "Faixa de preço", "Público dominante"],
     },
     {
-      title: "Top 50 festas avaliadas",
+      title: "36+ festas avaliadas",
       desc: "Por categoria: rooftop, praia, balada, jantar.",
       bullets: ["Wonderfruit, Half Moon", "Rooftops Bangkok", "Bangla Phuket", "Jantares com fogos"],
     },
