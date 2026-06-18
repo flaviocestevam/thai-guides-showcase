@@ -85,6 +85,7 @@ const GuiaTrilhasThai44 = () => {
               { href: "#trilhas-secretas", label: "Trilhas Secretas" },
               { href: "#roteiros", label: "Roteiros Prontos" },
               { href: "#dicas", label: "Dicas & Custos" },
+              { href: "#frases", label: "Frases em Tailandês" },
             ].map((l) => (
               <Button key={l.href} variant="outline" size="sm" asChild>
                 <a href={l.href}>{l.label}</a>
