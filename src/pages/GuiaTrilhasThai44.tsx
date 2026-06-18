@@ -51,7 +51,7 @@ const GuiaTrilhasThai44 = () => {
 
       {/* HERO */}
       <section id="top" className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-        <img src={heroTrekking} alt="Trilha de trekking na selva tailandesa" fetchPriority="high" decoding="async" className="absolute inset-0 w-full h-full object-cover" width={1920} height={1080} />
+        <img src={heroTrekking} alt="Trilha de trekking na selva tailandesa" {...({ fetchpriority: "high" } as any)} decoding="async" className="absolute inset-0 w-full h-full object-cover" width={1920} height={1080} />
         <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/30 to-background" />
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto pt-20">
           <p className="text-sm md:text-base font-semibold tracking-[0.3em] text-primary uppercase mb-6">Guia Completo</p>
