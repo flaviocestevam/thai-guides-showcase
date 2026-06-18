@@ -67,22 +67,32 @@ const Festas = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/50 to-background" />
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
           <p className="text-sm md:text-base font-bold tracking-[0.3em] uppercase text-primary mb-4">
-            Guia Definitivo 2025
+            🌙 Guia da Noite Tailandesa — Edição 2025
           </p>
-          <h1 className="text-5xl md:text-8xl font-display font-black mb-6 leading-none">
+          <h1 className="text-4xl md:text-7xl font-display font-black mb-6 leading-tight">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-pink-500 to-violet-500">
-              Festas na Tailândia
+              Onde sair à noite em cada uma das 9 cidades da Tailândia
             </span>
           </h1>
-          <p className="text-base md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10">
-            Tudo que você precisa saber sobre as melhores festas, baladas e experiências noturnas em 9 cidades incríveis
+          <p className="text-base md:text-xl text-muted-foreground max-w-2xl mx-auto mb-6">
+            Sem cair em cilada, sem pagar preço de turista e sem perder a melhor festa da semana — o mapa pronto pra você usar desde a primeira noite.
           </p>
+          <div className="bg-card/60 backdrop-blur-sm border border-primary/30 rounded-xl px-6 py-4 max-w-2xl mx-auto mb-8">
+            <p className="text-sm md:text-base text-foreground leading-relaxed">
+              ⚠️ <strong>Leia até o fim</strong> — existe um erro que quase todo brasileiro comete na primeira noite em Bangkok e que custa, em média, <strong className="text-destructive">R$ 400 em uma única saída</strong>. Te conto qual é mais abaixo.
+            </p>
+          </div>
           <a
-            href="#cities"
+            href="#oferta"
             className="inline-flex items-center gap-2 bg-gradient-to-r from-pink-500 to-primary text-primary-foreground font-bold text-lg px-8 py-4 rounded-full transition-all hover:scale-105 hover:shadow-[0_0_30px_hsl(var(--primary)/0.4)]"
           >
-            Explorar Cidades <ArrowDown className="w-5 h-5" />
+            🌃 QUERO MEU GUIA DA NOITE AGORA <ArrowDown className="w-5 h-5" />
           </a>
+          <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6 text-xs md:text-sm text-muted-foreground mt-6">
+            <span>✅ Pagamento 100% Seguro</span>
+            <span>✅ Entrega Imediata</span>
+            <span>✅ Garantia de 7 dias</span>
+          </div>
         </div>
       </section>
         {/* Dor e Problema */}
@@ -518,9 +528,12 @@ const Festas = () => {
               <span className="inline-block text-primary text-sm font-semibold tracking-[0.2em] uppercase mb-3">
                 Quem já curtiu
               </span>
-              <h2 className="text-3xl md:text-5xl font-display font-bold mb-3">
-                Brasileiros que economizaram (e curtiram muito)
+              <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">
+                Mais de <span className="text-primary">7.000 pessoas</span> no mundo todo já compraram nossos guias
               </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                Brasileiros que economizaram, evitaram cilada e curtiram a noite tailandesa de verdade.
+              </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
@@ -576,12 +589,54 @@ const Festas = () => {
 
       
 
-      <ConversionBlock 
-        title="Chega de perder tempo (e dinheiro) na noite!"
-        subtitle="Acesse agora o guia que já ajudou centenas de brasileiros a curtirem o melhor da Tailândia com segurança e economia real."
-        ctaText="QUERO O GUIA DE FESTAS COMPLETO"
-        ctaLink="https://pay.kiwify.com.br/xxxxx" 
-      />
+        {/* Oferta / Preço */}
+        <section id="oferta" className="py-20 md:py-28 px-4 bg-gradient-to-b from-background via-muted/30 to-background border-t border-border">
+          <div className="max-w-3xl mx-auto text-center">
+            <span className="inline-block text-primary text-sm font-semibold tracking-[0.2em] uppercase mb-3">
+              Oferta por tempo limitado
+            </span>
+            <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">
+              Quanto custa <span className="text-destructive">NÃO</span> ter esse guia?
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto mb-10">
+              Uma cerveja a mais no bar errado já paga R$ 50. Um tuk-tuk "amigo" já paga R$ 80. Uma Full Moon na data errada custa a viagem inteira. Só na primeira noite o guia se paga.
+            </p>
+
+            <div className="bg-card border border-primary/30 rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
+              <div className="absolute top-0 right-0 bg-primary text-primary-foreground font-bold text-xs px-4 py-2 rounded-bl-xl">
+                ⏰ OFERTA LIMITADA
+              </div>
+              <p className="text-muted-foreground text-lg line-through mb-1">R$ 197</p>
+              <p className="text-5xl md:text-7xl font-display font-black bg-clip-text text-transparent bg-gradient-to-r from-primary via-pink-500 to-violet-500 mb-2">
+                R$ 67
+              </p>
+              <p className="text-primary font-semibold text-sm mb-6">
+                ou 12x de R$ 6,71 🔥
+              </p>
+              <ul className="text-left max-w-md mx-auto space-y-3 mb-8">
+                <li className="flex items-start gap-2 text-sm"><CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" /> Entrega digital imediata no seu e-mail</li>
+                <li className="flex items-start gap-2 text-sm"><CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" /> Acesso vitalício + atualizações por temporada</li>
+                <li className="flex items-start gap-2 text-sm"><CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" /> Funciona offline (PDF) no celular durante a viagem</li>
+                <li className="flex items-start gap-2 text-sm"><CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" /> Garantia incondicional de 7 dias</li>
+              </ul>
+              <a
+                href="[LINK_CHECKOUT_FESTAS]"
+                className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-pink-500 to-primary text-primary-foreground font-bold text-lg px-10 py-5 rounded-full transition-all hover:scale-105 hover:shadow-[0_0_30px_hsl(var(--primary)/0.4)] w-full max-w-md"
+              >
+                🌃 GARANTIR MEU GUIA AGORA
+              </a>
+              <p className="text-xs text-muted-foreground mt-4">
+                Pagamento 100% seguro via Cakto • Pix ou cartão
+              </p>
+            </div>
+
+            <div className="mt-8 bg-primary/10 border border-primary/20 rounded-xl p-5">
+              <p className="text-sm">
+                🛡️ <strong>Garantia de 7 dias:</strong> compra, baixa, lê. Se não valer o que pagou, devolvemos 100% — sem perguntas.
+              </p>
+            </div>
+          </div>
+        </section>
       <InternalLinksSection currentPath="/festas" />
       <BackToHomeFooter />
       </main>
