@@ -19,6 +19,7 @@ import GuiaSongkran from "./pages/GuiaSongkran.tsx";
 import GuiaLuaDeMel from "./pages/GuiaLuaDeMel.tsx";
 import CursosDeMassagem from "./pages/CursosDeMassagem.tsx";
 import AluguelDeMotos from "./pages/AluguelDeMotos.tsx";
+import AluguelDeMotos827252 from "./pages/AluguelDeMotos827252.tsx";
 import Mergulho from "./pages/Mergulho.tsx";
 import CafesCoworkings from "./pages/CafesCoworkings.tsx";
 import ClubesStrip from "./pages/ClubesStrip.tsx";
