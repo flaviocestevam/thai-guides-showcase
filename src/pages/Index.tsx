@@ -6,9 +6,7 @@ import { StructuredData } from "@/components/StructuredData";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { ilhasMeta } from "@/data/sales/ilhas";
-
-
+import { ilhasMeta, ilhas } from "@/data/sales/ilhas";
 
 import heroImg from "@/assets/generated/lanternas-hero.png.asset.json";
 import heroFirePoi from "@/assets/hero-firepoi-phiphi.png.asset.json";
@@ -31,7 +29,7 @@ import topHostelsImg from "@/assets/generated/top-hostels-hero.png.asset.json";
 import aventureirosImg from "@/assets/generated/aventureiros-hero.png.asset.json";
 import beachClubsImg from "@/assets/generated/beach-clubs-hero.png.asset.json";
 import petsImg from "@/assets/generated/pets-hero.png.asset.json";
-import criancasImg from "@/assets/sales/criancas.webp";
+import criancasImg from "@/assets/generated/criancas-hero.png.asset.json";
 import casasMassagemImg from "@/assets/sales/casas-massagem.webp";
 import retirosImg from "@/assets/sales/retiros.webp";
 
@@ -379,7 +377,7 @@ const salesPages: ProductCard[] = [
       "Roteiros por idade (0-3, 4-8, 9-14), 30 hotéis com kids club testados e atrações que crianças realmente amam.",
     path: "/tailandia-para-criancas",
     emoji: "👨‍👩‍👧‍👦",
-    image: criancasImg,
+    image: criancasImg.url,
     badge: "👶 FAMÍLIA",
     urgency: "Ilha errada arruina viagem em família!",
     socialProof: "5 viagens com filhos pequenos",
@@ -670,28 +668,37 @@ const Index = () => {
                 <Link
                   key={ilha.slug}
                   to={`/${ilha.slug}`}
-                  className="group relative bg-card border border-border rounded-2xl p-5 hover:border-primary/40 hover:-translate-y-1 hover:shadow-premium transition-all"
+                  className="group relative overflow-hidden bg-card border border-border rounded-2xl hover:border-primary/40 hover:-translate-y-1 hover:shadow-premium transition-all"
                 >
-                  <div className="flex items-start justify-between mb-3">
-                    <span className="text-3xl">{ilha.emoji}</span>
-                    <span className="text-[10px] uppercase tracking-[0.15em] font-bold text-primary bg-primary/10 px-2 py-1 rounded-full">
+                  <div className="relative h-44 overflow-hidden">
+                    <img
+                      src={ilhas[ilha.slug]?.heroImage}
+                      alt={`Praia e paisagem de ${ilha.nome}`}
+                      className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
+                    <div className="absolute top-4 left-4 text-3xl">{ilha.emoji}</div>
+                    <span className="absolute top-4 right-4 text-[10px] uppercase tracking-[0.15em] font-bold text-primary bg-background/80 backdrop-blur-sm px-2 py-1 rounded-full border border-primary/20">
                       {ilha.cardBadge}
                     </span>
                   </div>
-                  <h3 className="font-display font-bold text-lg tracking-tight">{ilha.nome}</h3>
-                  <p className="text-[11px] text-muted-foreground mb-1">{ilha.regiao}</p>
-                  <p className="text-sm font-medium text-foreground/80 mb-2">{ilha.cardSubtitle}</p>
-                  <p className="text-xs text-muted-foreground leading-relaxed mb-4 line-clamp-3">
-                    {ilha.cardDescription}
-                  </p>
-                  <div className="flex items-center justify-between pt-3 border-t border-foreground/5">
-                    <div>
-                      <span className="text-xs text-muted-foreground line-through">R$ 197</span>{" "}
-                      <span className="text-base font-display font-bold text-primary">R$ 67</span>
+                  <div className="p-5">
+                    <h3 className="font-display font-bold text-lg tracking-tight">{ilha.nome}</h3>
+                    <p className="text-[11px] text-muted-foreground mb-1">{ilha.regiao}</p>
+                    <p className="text-sm font-medium text-foreground/80 mb-2">{ilha.cardSubtitle}</p>
+                    <p className="text-xs text-muted-foreground leading-relaxed mb-4 line-clamp-3">
+                      {ilha.cardDescription}
+                    </p>
+                    <div className="flex items-center justify-between pt-3 border-t border-foreground/5">
+                      <div>
+                        <span className="text-xs text-muted-foreground line-through">R$ 197</span>{" "}
+                        <span className="text-base font-display font-bold text-primary">R$ 67</span>
+                      </div>
+                      <span className="inline-flex items-center gap-1 text-xs font-semibold text-primary group-hover:gap-2 transition-all">
+                        Ver guia <ArrowRight className="w-3.5 h-3.5" />
+                      </span>
                     </div>
-                    <span className="inline-flex items-center gap-1 text-xs font-semibold text-primary group-hover:gap-2 transition-all">
-                      Ver guia <ArrowRight className="w-3.5 h-3.5" />
-                    </span>
                   </div>
                 </Link>
               ))}

@@ -1,34 +1,34 @@
 import type { SalesContent } from "@/components/sales/SalesPage";
-import phuketImg from "@/assets/ilhas/phuket.webp";
-import samuiImg from "@/assets/ilhas/samui.webp";
-import phiphiImg from "@/assets/ilhas/phiphi.webp";
-import phanganImg from "@/assets/ilhas/phangan.webp";
-import taoImg from "@/assets/ilhas/tao.webp";
+import phuketImg from "@/assets/generated/phuket-hero.png.asset.json";
+import samuiImg from "@/assets/generated/koh-samui-hero.png.asset.json";
+import phiphiImg from "@/assets/hero-firepoi-phiphi.png.asset.json";
+import phanganImg from "@/assets/generated/koh-phangan-hero.png.asset.json";
+import taoImg from "@/assets/generated/koh-tao-hero.png.asset.json";
 import changImg from "@/assets/ilhas/chang.webp";
-import lantaImg from "@/assets/ilhas/lanta.webp";
-import lipeImg from "@/assets/ilhas/lipe.webp";
-import koodImg from "@/assets/ilhas/kood.webp";
-import yaoImg from "@/assets/ilhas/yao.webp";
-import makImg from "@/assets/ilhas/mak.webp";
-import larnImg from "@/assets/ilhas/larn.webp";
-import similanImg from "@/assets/ilhas/similan.webp";
-import rachaImg from "@/assets/ilhas/racha.webp";
+import lantaImg from "@/assets/generated/koh-lanta-hero.png.asset.json";
+import lipeImg from "@/assets/generated/koh-lipe-hero-v2.png.asset.json";
+import koodImg from "@/assets/generated/koh-kood-hero.png.asset.json";
+import yaoImg from "@/assets/generated/koh-yao-hero.png.asset.json";
+import makImg from "@/assets/generated/koh-mak-hero.png.asset.json";
+import larnImg from "@/assets/generated/koh-larn-hero.png.asset.json";
+import similanImg from "@/assets/generated/ilhas-similan-hero.png.asset.json";
+import rachaImg from "@/assets/generated/koh-racha-hero.png.asset.json";
 
 const heroImagesBySlug: Record<string, string> = {
-  "phuket-tailandia": phuketImg,
-  "koh-samui-tailandia": samuiImg,
-  "koh-phi-phi-tailandia": phiphiImg,
-  "koh-phangan-tailandia": phanganImg,
-  "koh-tao-tailandia": taoImg,
+  "phuket-tailandia": phuketImg.url,
+  "koh-samui-tailandia": samuiImg.url,
+  "koh-phi-phi-tailandia": phiphiImg.url,
+  "koh-phangan-tailandia": phanganImg.url,
+  "koh-tao-tailandia": taoImg.url,
   "koh-chang-tailandia": changImg,
-  "koh-lanta-tailandia": lantaImg,
-  "koh-lipe-tailandia": lipeImg,
-  "koh-kood-tailandia": koodImg,
-  "koh-yao-tailandia": yaoImg,
-  "koh-mak-tailandia": makImg,
-  "koh-larn-tailandia": larnImg,
-  "ilhas-similan-tailandia": similanImg,
-  "koh-racha-tailandia": rachaImg,
+  "koh-lanta-tailandia": lantaImg.url,
+  "koh-lipe-tailandia": lipeImg.url,
+  "koh-kood-tailandia": koodImg.url,
+  "koh-yao-tailandia": yaoImg.url,
+  "koh-mak-tailandia": makImg.url,
+  "koh-larn-tailandia": larnImg.url,
+  "ilhas-similan-tailandia": similanImg.url,
+  "koh-racha-tailandia": rachaImg.url,
 };
 
 
