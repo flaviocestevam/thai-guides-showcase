@@ -83,7 +83,7 @@ const WhatYouGet = () => {
             para resolver tudo antes de ir. Inclui contatos diretos.
           </p>
           <div className="flex items-center gap-2">
-            <span className="text-sm text-muted-foreground line-through">R$ 97</span>
+            <span className="text-sm text-muted-foreground line-through">R$ 67</span>
             <span className="text-sm font-bold text-accent">GRÁTIS</span>
           </div>
         </motion.div>

@@ -27,7 +27,7 @@ const testimonials = [
     city: "Fortaleza, CE",
   },
   {
-    text: "Por R$ 97 eu economizei facilmente R$ 2.000 em decisões erradas. Cada academia tem review real, preços, WhatsApp. Perfeito.",
+    text: "Por R$ 67 eu economizei facilmente R$ 2.000 em decisões erradas. Cada academia tem review real, preços, WhatsApp. Perfeito.",
     name: "Bruno K.",
     city: "Porto Alegre, RS",
   },

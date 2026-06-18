@@ -36,7 +36,7 @@ const PricingSection = () => {
           </div>
 
           <p className="text-muted-foreground mb-1">De <span className="line-through">R$ 197</span> por apenas</p>
-          <p className="text-6xl font-display text-foreground mb-2">R$97<span className="text-2xl">,00</span></p>
+          <p className="text-6xl font-display text-foreground mb-2">R$67<span className="text-2xl">,00</span></p>
           <p className="text-muted-foreground mb-8">ou 6x de R$ 18,50</p>
 
           <p className="text-sm text-accent mb-6">127 pessoas compraram nas últimas 24h</p>

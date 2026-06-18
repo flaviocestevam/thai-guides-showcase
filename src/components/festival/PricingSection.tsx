@@ -19,9 +19,9 @@ const PricingSection = () => (
           ⏰ OFERTA LIMITADA
         </div>
 
-        <p className="text-muted-foreground font-body text-lg line-through mb-1">R$ 497</p>
+        <p className="text-muted-foreground font-body text-lg line-through mb-1">R$ 67</p>
         <p className="text-5xl md:text-7xl font-display font-black text-gradient-gold mb-2">
-          R$ 197
+          R$ 67
         </p>
         <p className="text-primary font-body font-semibold text-sm mb-8">
           Oferta especial por tempo limitado! 🔥

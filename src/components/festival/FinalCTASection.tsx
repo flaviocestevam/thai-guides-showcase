@@ -40,11 +40,11 @@ const FinalCTASection = () => (
           ⏰ PODE SAIR DO AR A QUALQUER MOMENTO
         </div>
 
-        <p className="text-muted-foreground font-body text-sm mb-1">De <span className="line-through">R$ 497</span> por apenas</p>
+        <p className="text-muted-foreground font-body text-sm mb-1">De <span className="line-through">R$ 67</span> por apenas</p>
         <p className="text-5xl md:text-7xl font-display font-black text-gradient-gold mb-1">
-          R$ 197
+          R$ 67
         </p>
-        <p className="text-muted-foreground font-body text-xs mb-1">ou 12x de R$ 19,21</p>
+        <p className="text-muted-foreground font-body text-xs mb-1">ou 12x de R$ 6,71</p>
         <p className="text-primary font-body font-semibold text-sm mb-8">
           Menos que um jantar em Chiang Mai. Mas pode salvar toda a sua viagem. 🔥
         </p>
