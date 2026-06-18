@@ -388,7 +388,7 @@ const LuaDeMel8272524 = () => {
           <Heart className="w-12 h-12 text-primary mx-auto mb-6" />
           <h1 className="font-display text-4xl sm:text-5xl text-foreground mb-4">Guia Lua de Mel na Tailândia</h1>
           <p className="text-lg text-muted-foreground">Roteiro romântico completo para casais brasileiros viverem uma viagem inesquecível sem dor de cabeça.</p>
-          <p className="text-sm text-primary/80 mt-6 uppercase tracking-widest">26 capítulos · 40+ resorts · 3 roteiros prontos</p>
+          <p className="text-sm text-primary/80 mt-6 uppercase tracking-widest">34 capítulos · 40+ resorts · 3 roteiros prontos</p>
         </div>
       </header>
 
