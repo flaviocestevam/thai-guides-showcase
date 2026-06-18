@@ -169,37 +169,40 @@ const Festas = () => {
               <Gem className="w-6 h-6" />
               <span className="font-bold tracking-widest uppercase">Segredos Revelados</span>
             </div>
-            <h2 className="text-3xl md:text-5xl font-display font-bold text-center mb-16">
-              Experiências Únicas e Secretas
+            <h2 className="text-3xl md:text-5xl font-display font-bold text-center mb-4">
+              Capítulos exclusivos dentro do guia
             </h2>
+            <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-16">
+              Lugares que blog de viagem genérico nunca vai te mostrar — mapeados rua por rua dentro do material.
+            </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="relative group overflow-hidden rounded-3xl bg-card border border-border p-8 hover:border-primary/50 transition-all">
                 <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
                   <Clock className="w-16 h-16" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4">After Hours em Bangkok</h3>
-                <p className="text-muted-foreground">Onde a festa continua depois que as luzes se apagam em Sukhumvit. Os locais que os guias comuns não mostram.</p>
+                <h3 className="text-2xl font-bold mb-4">🔒 After Hours em Bangkok</h3>
+                <p className="text-muted-foreground">Onde a festa continua depois que os bares fecham. Os 4 endereços que turista comum nunca acha — todos no guia.</p>
               </div>
               <div className="relative group overflow-hidden rounded-3xl bg-card border border-border p-8 hover:border-primary/50 transition-all">
                 <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
                   <Flame className="w-16 h-16" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4">Festas Secretas em Koh Phangan</h3>
-                <p className="text-muted-foreground">Muito além da Full Moon Party. Descubra as festas na selva e praias escondidas que acontecem o ano todo.</p>
+                <h3 className="text-2xl font-bold mb-4">🔒 Festas Secretas em Koh Phangan</h3>
+                <p className="text-muted-foreground">Muito além da Full Moon. As festas na selva e praias escondidas que rolam o ano todo — calendário e localização dentro do guia.</p>
               </div>
               <div className="relative group overflow-hidden rounded-3xl bg-card border border-border p-8 hover:border-primary/50 transition-all">
                 <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
                   <PartyPopper className="w-16 h-16" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4">Rooftops Escondidos</h3>
-                <p className="text-muted-foreground">A vista mais incrível da cidade sem precisar pagar fortunas ou enfrentar filas imensas de turistas.</p>
+                <h3 className="text-2xl font-bold mb-4">🔒 Rooftops Escondidos</h3>
+                <p className="text-muted-foreground">A vista mais incrível da cidade sem pagar fortuna nem enfrentar fila de turista. Lista dos preferidos no guia.</p>
               </div>
               <div className="relative group overflow-hidden rounded-3xl bg-card border border-border p-8 hover:border-primary/50 transition-all">
                 <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
                   <Star className="w-16 h-16" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4">Festas de Lua Nova (Black Moon)</h3>
-                <p className="text-muted-foreground">O lado B de Koh Phangan. Enquanto a Full Moon é comercial, a Black Moon é underground, no meio da selva e com uma vibe muito mais autêntica.</p>
+                <h3 className="text-2xl font-bold mb-4">🔒 O lado B da Full Moon</h3>
+                <p className="text-muted-foreground">Existe uma festa "irmã" da Full Moon, underground e no meio da selva, com vibe muito mais autêntica. Quando acontece e como chegar — só no guia.</p>
               </div>
             </div>
           </div>
