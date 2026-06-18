@@ -290,18 +290,24 @@ const GuiaGays = () => {
             <h2 className="text-3xl md:text-5xl font-bold text-center mb-4">
               O Que <span style={{ color: PURPLE }}>Vem no Guia</span>
             </h2>
-            <p className="text-center text-gray-500 mb-16 max-w-2xl mx-auto">PDF de 90+ páginas com mapas, links clicáveis e atualizações grátis durante 2026.</p>
+            <p className="text-center text-gray-500 mb-16 max-w-2xl mx-auto">PDF de 150+ páginas com mapas, links clicáveis, leis atualizadas pós-casamento igualitário e atualizações grátis durante 2026.</p>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
               {[
-                { icon: Hotel, title: "Hotéis testados", desc: "30+ endereços gay-friendly" },
-                { icon: Martini, title: "Mapa da night", desc: "Bares, baladas e cabarés" },
-                { icon: Heart, title: "Saunas & spas", desc: "Os 10 melhores do país" },
+                { icon: Hotel, title: "40+ hotéis testados", desc: "Por perfil e orçamento" },
+                { icon: Martini, title: "Mapa da night", desc: "Silom Soi 2 vs Soi 4 destrinchado" },
+                { icon: Dumbbell, title: "Saunas & gyms gays", desc: "Bangkok, Phuket e Pattaya" },
                 { icon: Plane, title: "Roteiro 14 dias", desc: "Pronto, dia a dia, gay-friendly" },
-                { icon: Sparkles, title: "Eventos & Prides", desc: "Calendário 2026 completo" },
+                { icon: Music, title: "Circuit & Pride", desc: "gCircuit Songkran, White Party, Pride" },
                 { icon: Languages, title: "Frases em tailandês", desc: "Para flertar e se virar" },
-                { icon: Map, title: "Mapas por bairro", desc: "Silom, Nimman, Patong" },
+                { icon: Map, title: "Mapas por bairro", desc: "Silom, Nimman, Patong, Jomtien" },
                 { icon: Shield, title: "Lista preta de golpes", desc: "Como identificar e reagir" },
                 { icon: Calendar, title: "Quando ir", desc: "Calendário de eventos e clima" },
+                { icon: Smartphone, title: "Apps de paquera", desc: "Grindr, Hornet, Blued + segurança digital" },
+                { icon: Sun, title: "Praias e ilhas gays", desc: "Dongtan Beach e as ilhas mais amigáveis" },
+                { icon: Scale, title: "Leis essenciais", desc: "Consentimento, vape, cannabis e drogas" },
+                { icon: Heart, title: "Casamento igualitário", desc: "Cerimônia legal e simbólica pós-2025" },
+                { icon: Wallet, title: "Dinheiro & eSIM", desc: "Wise, ATM, transporte noturno seguro" },
+                { icon: Users, title: "Lés, bi, trans e não-bin.", desc: "Cena, hormônios e Tangerine Clinic" },
               ].map((item, i) => (
                 <div key={i} className="text-center p-8 rounded-3xl bg-white hover:shadow-lg transition border border-gray-100">
                   <div className="inline-flex items-center justify-center w-20 h-20 rounded-full mb-6" style={{ backgroundColor: `${PURPLE}1A`, color: PURPLE }}>
