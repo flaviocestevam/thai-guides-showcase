@@ -92,7 +92,7 @@ export const reveillon: SalesContent = {
     { name: "Aline P.", city: "Curitiba", text: "Half Moon em Phangan no réveillon foi insano. Sem o guia eu nunca acharia essa info." },
     { name: "Diego M.", city: "Florianópolis", text: "Roteiro de 5 dias em Bangkok funcionou cada dia. Saí da viagem sem stress." },
     { name: "Marina L.", city: "Brasília", text: "Comparativo de pacotes me salvou. Quase fechei um caríssimo, achei outro muito melhor pelo guia." },
-    { name: "Rodrigo F.", city: "BH", text: "Grupo de WhatsApp foi um bônus inesperado. Acabei virando o ano com pessoal que conheci ali." },
+    { name: "Rodrigo F.", city: "BH", text: "Capítulo de logística da virada me salvou. Em Bangkok consegui sair do rooftop e chegar no hotel sem ficar 2h em fila de Grab." },
   ],
   pricing: {
     badge: "Edição Réveillon 2026",
