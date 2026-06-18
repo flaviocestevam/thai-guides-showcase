@@ -24,6 +24,13 @@ import CafesCoworkings from "./pages/CafesCoworkings.tsx";
 import ClubesStrip from "./pages/ClubesStrip.tsx";
 import GoGoBars from "./pages/GoGoBars.tsx";
 import Reveillon from "./pages/Reveillon.tsx";
+import TopHostels from "./pages/TopHostels.tsx";
+import Aventureiros from "./pages/Aventureiros.tsx";
+import BeachClubs from "./pages/BeachClubs.tsx";
+import Pets from "./pages/Pets.tsx";
+import Criancas from "./pages/Criancas.tsx";
+import CasasDeMassagem from "./pages/CasasDeMassagem.tsx";
+import Retiros from "./pages/Retiros.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -56,6 +63,13 @@ const App = () => (
           <Route path="/clubes-de-strip-tailandia" element={<ClubesStrip />} />
           <Route path="/go-go-bars-tailandia" element={<GoGoBars />} />
           <Route path="/reveillon-tailandia" element={<Reveillon />} />
+          <Route path="/top-hostels-tailandia" element={<TopHostels />} />
+          <Route path="/tailandia-para-aventureiros" element={<Aventureiros />} />
+          <Route path="/beach-clubs-tailandia" element={<BeachClubs />} />
+          <Route path="/tailandia-para-pets" element={<Pets />} />
+          <Route path="/tailandia-para-criancas" element={<Criancas />} />
+          <Route path="/casas-de-massagem-tailandia" element={<CasasDeMassagem />} />
+          <Route path="/retiros-tailandia" element={<Retiros />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

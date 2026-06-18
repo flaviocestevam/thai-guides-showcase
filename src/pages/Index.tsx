@@ -24,6 +24,13 @@ import cafesImg from "@/assets/sales/cafes-coworkings.jpg";
 import reveillonImg from "@/assets/sales/reveillon.jpg";
 import stripImg from "@/assets/sales/clubes-strip.jpg";
 import goGoImg from "@/assets/sales/go-go-bars.jpg";
+import topHostelsImg from "@/assets/sales/top-hostels.jpg";
+import aventureirosImg from "@/assets/sales/aventureiros.jpg";
+import beachClubsImg from "@/assets/sales/beach-clubs.jpg";
+import petsImg from "@/assets/sales/pets.jpg";
+import criancasImg from "@/assets/sales/criancas.jpg";
+import casasMassagemImg from "@/assets/sales/casas-massagem.jpg";
+import retirosImg from "@/assets/sales/retiros.jpg";
 
 interface ProductCard {
   title: string;
@@ -297,6 +304,118 @@ const salesPages: ProductCard[] = [
     price: "R$ 67",
     highlight: "Glossário tailandês completo",
     viewers: 24,
+  },
+  {
+    title: "Top Hostels Tailândia",
+    subtitle: "Os 100 Melhores Avaliados",
+    description:
+      "100 hostels testados em 12 cidades. Wi-Fi medido, vibe descrita, preço real e como reservar até 30% mais barato.",
+    path: "/top-hostels-tailandia",
+    emoji: "🛏️",
+    image: topHostelsImg,
+    badge: "🛏️ MOCHILEIRO",
+    urgency: "Hostels bons esgotam em alta temporada!",
+    socialProof: "100 hostels avaliados pessoalmente",
+    originalPrice: "R$ 197",
+    price: "R$ 67",
+    highlight: "Filtro por perfil de viagem",
+    viewers: 16,
+  },
+  {
+    title: "Tailândia para Aventureiros",
+    subtitle: "Trilhas, Mergulho, Selva e Adrenalina",
+    description:
+      "50 aventuras testadas: rapel, escalada, jungle trek, rafting, tirolesa e mergulho. Operadoras certificadas e lista negra.",
+    path: "/tailandia-para-aventureiros",
+    emoji: "⛰️",
+    image: aventureirosImg,
+    badge: "⛰️ RADICAL",
+    urgency: "1 em 3 cai em operadora pirata!",
+    socialProof: "70+ aventuras documentadas",
+    originalPrice: "R$ 197",
+    price: "R$ 67",
+    highlight: "Calendário por esporte",
+    viewers: 20,
+  },
+  {
+    title: "Beach Clubs Tailândia",
+    subtitle: "Top 40 com Preços e Vibes Reais",
+    description:
+      "40 beach clubs avaliados em Phuket, Samui, Phangan e Krabi. Day pass, mínimos, DJs e como reservar com 40% off.",
+    path: "/beach-clubs-tailandia",
+    emoji: "🌅",
+    image: beachClubsImg,
+    badge: "🌅 SUNSET",
+    urgency: "Consumo mínimo escondido pode custar R$ 1.200!",
+    socialProof: "100+ pôr do sol testados",
+    originalPrice: "R$ 197",
+    price: "R$ 67",
+    highlight: "Calendário 12 meses de DJs",
+    viewers: 26,
+  },
+  {
+    title: "Tailândia para Pets",
+    subtitle: "Leve seu Cachorro ou Gato sem Perrengue",
+    description:
+      "Documentação, voos, hotéis pet-friendly verificados, veterinários 24h e praias liberadas. Tudo em português.",
+    path: "/tailandia-para-pets",
+    emoji: "🐶",
+    image: petsImg,
+    badge: "🐶 PET-FRIENDLY",
+    urgency: "Burocracia exige 6 meses de antecedência!",
+    socialProof: "3 pets levados pessoalmente",
+    originalPrice: "R$ 197",
+    price: "R$ 67",
+    highlight: "Grupo WhatsApp de famílias com pet",
+    viewers: 9,
+  },
+  {
+    title: "Tailândia com Crianças",
+    subtitle: "Roteiros, Hotéis e Atividades Família",
+    description:
+      "Roteiros por idade (0-3, 4-8, 9-14), 30 hotéis com kids club testados e atrações que crianças realmente amam.",
+    path: "/tailandia-para-criancas",
+    emoji: "👨‍👩‍👧‍👦",
+    image: criancasImg,
+    badge: "👶 FAMÍLIA",
+    urgency: "Ilha errada arruina viagem em família!",
+    socialProof: "5 viagens com filhos pequenos",
+    originalPrice: "R$ 197",
+    price: "R$ 67",
+    highlight: "Roteiros por faixa etária",
+    viewers: 18,
+  },
+  {
+    title: "Casas de Massagem",
+    subtitle: "Top 200 Avaliadas e Honestas",
+    description:
+      "200 casas de massagem testadas em 6 cidades. Preço real, lista negra de fachadas e mapa Google Maps incluso.",
+    path: "/casas-de-massagem-tailandia",
+    emoji: "🪷",
+    image: casasMassagemImg,
+    badge: "🪷 RELAX",
+    urgency: "70% no Patong são fachada!",
+    socialProof: "1.000+ massagens documentadas",
+    originalPrice: "R$ 197",
+    price: "R$ 67",
+    highlight: "Mapa por bairro com top 200",
+    viewers: 22,
+  },
+  {
+    title: "Guia de Retiros na Tailândia",
+    subtitle: "Ioga, Meditação, Detox e Bem-Estar",
+    description:
+      "60 retiros avaliados: yoga, Vipassana, detox, silêncio. Dos gratuitos por doação aos premium. Por modalidade e nível.",
+    path: "/retiros-tailandia",
+    emoji: "🧘",
+    image: retirosImg,
+    badge: "🧘 TRANSFORMAÇÃO",
+    urgency: "Vagas em retiros bons esgotam 3 meses antes!",
+    socialProof: "12 retiros vividos pessoalmente",
+    originalPrice: "R$ 197",
+    price: "R$ 67",
+    highlight: "Inclui retiros por doação",
+    viewers: 14,
   },
 ];
 
