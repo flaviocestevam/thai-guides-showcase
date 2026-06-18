@@ -1,4 +1,37 @@
 import type { SalesContent } from "@/components/sales/SalesPage";
+import phuketImg from "@/assets/ilhas/phuket.jpg";
+import samuiImg from "@/assets/ilhas/samui.jpg";
+import phiphiImg from "@/assets/ilhas/phiphi.jpg";
+import phanganImg from "@/assets/ilhas/phangan.jpg";
+import taoImg from "@/assets/ilhas/tao.jpg";
+import changImg from "@/assets/ilhas/chang.jpg";
+import lantaImg from "@/assets/ilhas/lanta.jpg";
+import lipeImg from "@/assets/ilhas/lipe.jpg";
+import koodImg from "@/assets/ilhas/kood.jpg";
+import yaoImg from "@/assets/ilhas/yao.jpg";
+import makImg from "@/assets/ilhas/mak.jpg";
+import larnImg from "@/assets/ilhas/larn.jpg";
+import similanImg from "@/assets/ilhas/similan.jpg";
+import rachaImg from "@/assets/ilhas/racha.jpg";
+
+const heroImagesBySlug: Record<string, string> = {
+  "phuket-tailandia": phuketImg,
+  "koh-samui-tailandia": samuiImg,
+  "koh-phi-phi-tailandia": phiphiImg,
+  "koh-phangan-tailandia": phanganImg,
+  "koh-tao-tailandia": taoImg,
+  "koh-chang-tailandia": changImg,
+  "koh-lanta-tailandia": lantaImg,
+  "koh-lipe-tailandia": lipeImg,
+  "koh-kood-tailandia": koodImg,
+  "koh-yao-tailandia": yaoImg,
+  "koh-mak-tailandia": makImg,
+  "koh-larn-tailandia": larnImg,
+  "ilhas-similan-tailandia": similanImg,
+  "koh-racha-tailandia": rachaImg,
+};
+
+
 
 /**
  * Catálogo de páginas de vendas das Ilhas da Tailândia.
@@ -69,6 +102,8 @@ const make = (
   heroWarning: body.heroWarning,
   heroBgGradient: baseBgGradient(body.bgGradient),
   heroEmoji: meta.emoji,
+  heroImage: heroImagesBySlug[meta.slug],
+
   ctaLink: `https://pay.cakto.com.br/REPLACE-${meta.slug}`,
   ctaText: `QUERO O GUIA DE ${meta.nome.toUpperCase()}`,
   pains: body.pains,
