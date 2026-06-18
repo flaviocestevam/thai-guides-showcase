@@ -62,6 +62,7 @@ const App = () => (
           <Route path="/tailandia-para-gays" element={<GuiaGays />} />
           <Route path="/songkran-ano-novo-tailandes" element={<GuiaSongkran />} />
           <Route path="/lua-de-mel-tailandia" element={<GuiaLuaDeMel />} />
+          <Route path="/lua-de-mel-tailandia8272524" element={<LuaDeMel8272524 />} />
           <Route path="/cursos-de-massagem" element={<CursosDeMassagem />} />
           <Route path="/aluguel-de-motos-tailandia" element={<AluguelDeMotos />} />
           <Route path="/aluguel-de-motos-tailandia827252" element={<AluguelDeMotos827252 />} />
