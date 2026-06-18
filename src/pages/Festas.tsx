@@ -135,26 +135,26 @@ const Festas = () => {
               </div>
               <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">Saudade de um Reggaeton?</h2>
               <p className="text-muted-foreground max-w-2xl">
-                Sabemos que depois de algumas semanas ouvindo música tailandesa e EDM, o brasileiro sente falta de um tempero latino. Listamos os melhores picos de Salsa, Bachata e Reggaeton.
+                Depois de algumas semanas de música tailandesa e EDM, bate aquela falta de um tempero latino. Dentro do guia você recebe a lista completa de bares de Salsa, Bachata e Reggaeton em Bangkok e Phuket — com endereço, melhor noite e até o código secreto pra entrar em um deles.
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-card border border-primary/20 p-8 rounded-3xl flex gap-6 items-start hover:shadow-lg transition-all">
-                <div className="bg-primary/10 p-4 rounded-2xl text-primary font-black text-2xl">01</div>
+                <div className="bg-primary/10 p-4 rounded-2xl text-primary font-black text-2xl">🔒</div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Havana Social (Bangkok)</h3>
+                  <h3 className="text-xl font-bold mb-2">2 bares de Salsa em Bangkok</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    O segredo mais bem guardado de Bangkok. Você entra por uma cabine telefônica antiga usando um código secreto e cai direto em Cuba nos anos 40. Salsa e drinks de primeira.
+                    Um deles você só entra usando um código secreto numa cabine telefônica antiga. <strong>Nome, endereço e código completos dentro do guia.</strong>
                   </p>
                 </div>
               </div>
               <div className="bg-card border border-primary/20 p-8 rounded-3xl flex gap-6 items-start hover:shadow-lg transition-all">
-                <div className="bg-primary/10 p-4 rounded-2xl text-primary font-black text-2xl">02</div>
+                <div className="bg-primary/10 p-4 rounded-2xl text-primary font-black text-2xl">🔒</div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Revolucion Cocktail (BKK & Phuket)</h3>
+                  <h3 className="text-xl font-bold mb-2">Ponto de encontro latino em Phuket</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    Vibe latina raiz com bartenders que fazem shows com fogo e música que vai do Reggaeton clássico aos hits atuais. O ponto de encontro oficial dos latinos na ilha.
+                    Reggaeton clássico, hits atuais e o lugar onde os brasileiros e latinos da ilha se cruzam toda semana. <strong>Endereço e melhor dia dentro do guia.</strong>
                   </p>
                 </div>
               </div>
@@ -169,37 +169,40 @@ const Festas = () => {
               <Gem className="w-6 h-6" />
               <span className="font-bold tracking-widest uppercase">Segredos Revelados</span>
             </div>
-            <h2 className="text-3xl md:text-5xl font-display font-bold text-center mb-16">
-              Experiências Únicas e Secretas
+            <h2 className="text-3xl md:text-5xl font-display font-bold text-center mb-4">
+              Capítulos exclusivos dentro do guia
             </h2>
+            <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-16">
+              Lugares que blog de viagem genérico nunca vai te mostrar — mapeados rua por rua dentro do material.
+            </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="relative group overflow-hidden rounded-3xl bg-card border border-border p-8 hover:border-primary/50 transition-all">
                 <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
                   <Clock className="w-16 h-16" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4">After Hours em Bangkok</h3>
-                <p className="text-muted-foreground">Onde a festa continua depois que as luzes se apagam em Sukhumvit. Os locais que os guias comuns não mostram.</p>
+                <h3 className="text-2xl font-bold mb-4">🔒 After Hours em Bangkok</h3>
+                <p className="text-muted-foreground">Onde a festa continua depois que os bares fecham. Os 4 endereços que turista comum nunca acha — todos no guia.</p>
               </div>
               <div className="relative group overflow-hidden rounded-3xl bg-card border border-border p-8 hover:border-primary/50 transition-all">
                 <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
                   <Flame className="w-16 h-16" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4">Festas Secretas em Koh Phangan</h3>
-                <p className="text-muted-foreground">Muito além da Full Moon Party. Descubra as festas na selva e praias escondidas que acontecem o ano todo.</p>
+                <h3 className="text-2xl font-bold mb-4">🔒 Festas Secretas em Koh Phangan</h3>
+                <p className="text-muted-foreground">Muito além da Full Moon. As festas na selva e praias escondidas que rolam o ano todo — calendário e localização dentro do guia.</p>
               </div>
               <div className="relative group overflow-hidden rounded-3xl bg-card border border-border p-8 hover:border-primary/50 transition-all">
                 <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
                   <PartyPopper className="w-16 h-16" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4">Rooftops Escondidos</h3>
-                <p className="text-muted-foreground">A vista mais incrível da cidade sem precisar pagar fortunas ou enfrentar filas imensas de turistas.</p>
+                <h3 className="text-2xl font-bold mb-4">🔒 Rooftops Escondidos</h3>
+                <p className="text-muted-foreground">A vista mais incrível da cidade sem pagar fortuna nem enfrentar fila de turista. Lista dos preferidos no guia.</p>
               </div>
               <div className="relative group overflow-hidden rounded-3xl bg-card border border-border p-8 hover:border-primary/50 transition-all">
                 <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
                   <Star className="w-16 h-16" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4">Festas de Lua Nova (Black Moon)</h3>
-                <p className="text-muted-foreground">O lado B de Koh Phangan. Enquanto a Full Moon é comercial, a Black Moon é underground, no meio da selva e com uma vibe muito mais autêntica.</p>
+                <h3 className="text-2xl font-bold mb-4">🔒 O lado B da Full Moon</h3>
+                <p className="text-muted-foreground">Existe uma festa "irmã" da Full Moon, underground e no meio da selva, com vibe muito mais autêntica. Quando acontece e como chegar — só no guia.</p>
               </div>
             </div>
           </div>
@@ -345,55 +348,54 @@ const Festas = () => {
                 <AlertTriangle className="w-8 h-8 text-destructive animate-pulse" />
               </div>
               <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">
-                Guia Noite +18: Distritos e Segurança
+                Capítulo Noite +18: Distritos e Segurança
               </h2>
               <p className="text-muted-foreground max-w-2xl text-lg">
-                Se você busca a famosa "Adult Nightlife" da Tailândia, precisa saber onde estão os distritos oficiais e como não ser extorquido.
+                Quem busca a "Adult Nightlife" tailandesa precisa saber onde estão os distritos oficiais e como não ser extorquido. Tudo isso está mapeado dentro do guia — aqui você vê só uma amostra.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-              {/* Distrito 1 */}
               <div className="bg-card border border-primary/20 p-8 rounded-3xl relative overflow-hidden group">
+                <span className="absolute top-3 right-3 bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-full">🔒 No guia</span>
                 <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
-                  <MapPin className="w-5 h-5 text-primary" /> Nana Plaza & Soi Cowboy
+                  <MapPin className="w-5 h-5 text-primary" /> 2 distritos em Bangkok
                 </h3>
                 <p className="text-sm text-muted-foreground mb-4">
-                  Os dois maiores distritos de Bangkok. Nana é um complexo fechado de 3 andares, enquanto Cowboy é uma rua neon icônica. 
+                  Um complexo fechado de 3 andares + uma rua neon icônica. Mapa dos dois lado a lado, horários e preço justo — dentro do guia.
                 </p>
                 <span className="text-xs font-bold text-primary">Melhor para: Gogo Bars e Shows</span>
               </div>
 
-              {/* Distrito 2 */}
               <div className="bg-card border border-primary/20 p-8 rounded-3xl relative overflow-hidden group">
+                <span className="absolute top-3 right-3 bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-full">🔒 No guia</span>
                 <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
-                  <MapPin className="w-5 h-5 text-primary" /> Walking Street (Pattaya)
+                  <MapPin className="w-5 h-5 text-primary" /> A capital da noite adulta
                 </h3>
                 <p className="text-sm text-muted-foreground mb-4">
-                  A capital mundial da noite adulta. Centenas de clubes de strip e bares de gogo concentrados em 1km de pura luz neon.
+                  1 km de pura luz neon com centenas de bares. Quais valem a pena, quais são cilada e por onde entrar — destrinchado no guia.
                 </p>
                 <span className="text-xs font-bold text-primary">Melhor para: Festas Intensas</span>
               </div>
 
-              {/* Distrito 3 */}
               <div className="bg-card border border-primary/20 p-8 rounded-3xl relative overflow-hidden group">
+                <span className="absolute top-3 right-3 bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-full">🔒 No guia</span>
                 <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
-                  <MapPin className="w-5 h-5 text-primary" /> Bangla Road (Phuket)
+                  <MapPin className="w-5 h-5 text-primary" /> Distrito de Phuket
                 </h3>
                 <p className="text-sm text-muted-foreground mb-4">
-                  Onde a noite de Patong acontece. Os becos (Sois) escondem dezenas de bares com pole dance e shows variados.
+                  Onde a noite de Patong acontece. Os becos escondem dezenas de bares — o guia mostra quais entrar e quais passar reto.
                 </p>
                 <span className="text-xs font-bold text-primary">Melhor para: Mix de Praia e Balada</span>
               </div>
             </div>
 
             <div className="flex flex-col items-center text-center mb-10">
-              <h3 className="text-2xl font-bold mb-2">Alerta de Golpes Comuns</h3>
-              <p className="text-muted-foreground">O que acontece se você não seguir o guia</p>
+              <h3 className="text-2xl font-bold mb-2">Alerta dos golpes mais comuns</h3>
+              <p className="text-muted-foreground">Você reconhece o golpe nessa página. Como sair dele sem perder dinheiro está dentro do guia.</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* Golpe 1 */}
               <div className="bg-card border border-destructive/20 p-8 rounded-3xl relative overflow-hidden group">
                 <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
                   <Beer className="w-20 h-20 text-destructive" />
@@ -402,64 +404,67 @@ const Festas = () => {
                   <Ghost className="w-5 h-5 text-destructive" /> O Golpe do "Menu Amigo"
                 </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Em Gogo Bars e casas de strip, garçons podem te oferecer um drink com preço fixo, mas na hora da conta, taxas "escondidas" e "drinks para as moças" triplicam o valor.
+                  Drink com "preço fixo" que vira o triplo na hora da conta, com taxas escondidas e "drinks para as moças".
                 </p>
-                <div className="mt-6 p-3 bg-destructive/10 rounded-xl text-destructive text-xs font-bold uppercase tracking-wider text-center">
-                  Como fugir: Pague cada drink na hora
+                <div className="mt-6 p-3 bg-primary/10 rounded-xl text-primary text-xs font-bold uppercase tracking-wider text-center">
+                  🔒 Script anti-golpe no guia
                 </div>
               </div>
 
-              {/* Golpe 2 */}
               <div className="bg-card border border-destructive/20 p-8 rounded-3xl relative overflow-hidden group">
                 <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
                   <EyeOff className="w-20 h-20 text-destructive" />
                 </div>
                 <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
-                  <MapPinOff className="w-5 h-5 text-destructive" /> Ping Pong Shows
+                  <MapPinOff className="w-5 h-5 text-destructive" /> Show "Grátis" em Beco
                 </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Promessas de shows "gratuitos" ou baratos em ruas secundárias. Ao entrar, seguranças bloqueiam a saída e exigem pagamentos exorbitantes por uma única cerveja.
+                  Promoter chama pra um show barato em rua secundária. Ao entrar, seguranças bloqueiam a saída e cobram fortuna.
                 </p>
-                <div className="mt-6 p-3 bg-destructive/10 rounded-xl text-destructive text-xs font-bold uppercase tracking-wider text-center">
-                  Como fugir: Nunca siga "promoters" de rua
+                <div className="mt-6 p-3 bg-primary/10 rounded-xl text-primary text-xs font-bold uppercase tracking-wider text-center">
+                  🔒 Como identificar antes — no guia
                 </div>
               </div>
 
-              {/* Golpe 3 */}
               <div className="bg-card border border-destructive/20 p-8 rounded-3xl relative overflow-hidden group">
                 <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
                   <Smartphone className="w-20 h-20 text-destructive" />
                 </div>
                 <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
-                  <AlertTriangle className="w-5 h-5 text-destructive" /> Ladyboys e Furtos
+                  <AlertTriangle className="w-5 h-5 text-destructive" /> Abordagem com Furto
                 </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Infelizmente, em áreas como Sukhumvit e Bangla Road, grupos podem se aproximar de forma carinhosa para furtar correntes, relógios e celulares de turistas distraídos.
+                  Grupos que se aproximam de forma carinhosa pra furtar correntes, relógios e celulares de turistas distraídos.
                 </p>
-                <div className="mt-6 p-3 bg-destructive/10 rounded-xl text-destructive text-xs font-bold uppercase tracking-wider text-center">
-                  Como fugir: Mantenha distância e evite contato físico
+                <div className="mt-6 p-3 bg-primary/10 rounded-xl text-primary text-xs font-bold uppercase tracking-wider text-center">
+                  🔒 Protocolo de defesa no guia
                 </div>
               </div>
             </div>
 
-            <div className="mt-12 bg-destructive/10 border border-destructive/20 rounded-3xl p-8 md:p-12 text-center">
-              <h3 className="text-2xl font-bold mb-4">A Regra de Ouro para Gogo Bars e Strip</h3>
+            <div className="mt-12 bg-primary/10 border border-primary/20 rounded-3xl p-8 md:p-12 text-center">
+              <h3 className="text-2xl font-bold mb-4">+17 golpes catalogados no guia completo</h3>
               <p className="text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                Se você decidir visitar distritos como Nana Plaza, Soi Cowboy (Bangkok) ou Walking Street (Pattaya), lembre-se: <strong>Estabelecimentos oficiais raramente usam pessoas na rua para te puxar.</strong> Se alguém te abordar com "show grátis", é cilada. Vá apenas em locais conhecidos e pague cada rodada conforme ela chegar.
+                Cada golpe vem com: <strong>como identificar antes</strong>, <strong>frase exata pra se desvencilhar</strong> e <strong>qual app abrir no celular</strong> pra registrar/pedir ajuda. Está tudo destravado no momento da compra.
               </p>
             </div>
           </div>
         </section>
 
-        {/* Cities */}
+        {/* Cities — amostra das 9 cidades cobertas no guia */}
         <section id="cities" className="py-20 md:py-28 px-4 bg-muted/10">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-5xl font-display font-bold text-center mb-3">
-              Onde a Noite Acontece
-            </h2>
-            <p className="text-center text-muted-foreground mb-14 max-w-xl mx-auto">
-              Clique nas imagens para abrir os detalhes de cada cidade sem sair da página
-            </p>
+            <div className="text-center mb-14">
+              <span className="inline-block text-primary text-sm font-semibold tracking-[0.2em] uppercase mb-3">
+                9 cidades cobertas
+              </span>
+              <h2 className="text-3xl md:text-5xl font-display font-bold mb-3">
+                Cada cidade é um capítulo do guia
+              </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                Pra cada uma das 9 cidades: <strong>melhores bairros</strong>, <strong>lugares testados</strong> com endereço, <strong>preço justo da cerveja</strong>, <strong>melhor noite da semana</strong> e <strong>dicas locais</strong>. Tudo destravado quando você adquire o guia.
+              </p>
+            </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {cities.map((city) => (
                 <CityCard key={city.id} city={city} />
@@ -468,15 +473,20 @@ const Festas = () => {
           </div>
         </section>
 
-        {/* Survival Tips */}
+        {/* Survival Tips — prévia do capítulo de sobrevivência */}
         <section id="survival" className="py-20 md:py-28 px-4 border-t border-border">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-5xl font-display font-bold text-center mb-3">
-              Dicas de Sobrevivência
-            </h2>
-            <p className="text-center text-muted-foreground mb-14 max-w-xl mx-auto">
-              O que todo turista precisa saber antes de cair na noite tailandesa
-            </p>
+            <div className="text-center mb-14">
+              <span className="inline-block text-primary text-sm font-semibold tracking-[0.2em] uppercase mb-3">
+                Capítulo de sobrevivência
+              </span>
+              <h2 className="text-3xl md:text-5xl font-display font-bold mb-3">
+                4 frentes que ninguém te conta antes de embarcar
+              </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                Segurança, dinheiro, drinks e transporte. Aqui você vê o título de cada frente — as regras práticas, o passo a passo e os apps recomendados estão dentro do guia.
+              </p>
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {survivalTips.map((tip) => (
                 <TipCard key={tip.title} tip={tip} />
