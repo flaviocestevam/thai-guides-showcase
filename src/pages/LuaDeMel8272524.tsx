@@ -1,5 +1,5 @@
 import { SEO } from "@/components/SEO";
-import { Heart, Calendar, MapPin, Hotel, Utensils, Camera, Ship, Sparkles, Wallet, CheckCircle2, AlertTriangle, Gift, Sun, Cloud } from "lucide-react";
+import { Heart, Calendar, MapPin, Hotel, Utensils, Camera, Ship, Sparkles, Wallet, CheckCircle2, AlertTriangle, Gift, Sun, Cloud, Luggage, Wifi, Stethoscope, Languages, Plane, Globe2, Cake, Mail } from "lucide-react";
 
 const Section = ({ n, title, icon: Icon, children, id }: { n: string; title: string; icon?: any; children: React.ReactNode; id?: string }) => (
   <section id={id} className="py-14 px-6 border-b border-border/40">
