@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 
 
 import heroImg from "@/assets/hero-lanterns.jpg";
+import heroFirePoi from "@/assets/hero-firepoi-phiphi.png.asset.json";
 import elephantImg from "@/assets/hero-elephants.jpg";
 import muayThaiImg from "@/assets/muay-thai-hero.jpg";
 import trilhasImg from "@/assets/trilhas/hero-trekking.jpg";
@@ -484,28 +485,44 @@ const Index = () => {
       <Header />
 
       {/* Hero */}
-      <header className="relative pt-32 pb-20 md:pt-48 md:pb-32 px-4 overflow-hidden">
+      <header className="relative min-h-[92vh] flex items-center pt-32 pb-20 md:pt-40 md:pb-32 px-4 overflow-hidden">
+        <img
+          src={heroFirePoi.url}
+          alt="Show de fogo na praia em Koh Phi Phi à noite, multidão assistindo"
+          className="absolute inset-0 w-full h-full object-cover scale-105 animate-[fade-in_1.2s_ease-out]"
+          loading="eager"
+          fetchPriority="high"
+        />
+        {/* Cinematic overlays */}
+        <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/55 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-tr from-background/70 via-transparent to-primary/10" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,hsl(var(--background))_85%)]" />
 
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent pointer-events-none" />
-        <div className="relative z-10 max-w-5xl mx-auto text-center space-y-6">
-          <span className="inline-flex items-center gap-2 bg-primary/15 border-glow text-primary font-body font-semibold text-sm px-5 py-2 rounded-full tracking-wider uppercase">
+        <div className="relative z-10 max-w-5xl mx-auto text-center space-y-7 animate-fade-in">
+          <span className="inline-flex items-center gap-2 bg-background/40 backdrop-blur-md border border-primary/30 text-primary font-body font-semibold text-xs md:text-sm px-5 py-2 rounded-full tracking-[0.2em] uppercase shadow-lg shadow-primary/10">
             <MapPin className="w-4 h-4" />
             Experiências na Tailândia
           </span>
 
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-display font-black leading-tight">
+          <h1 className="text-5xl sm:text-6xl md:text-8xl font-display font-black leading-[1.02] tracking-tight text-white drop-shadow-2xl">
             Explore a Tailândia{" "}
-            <span className="text-gradient-gold">como um local</span>
+            <span className="block text-gradient-gold">como um local</span>
           </h1>
 
-          <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed font-body">
-            Encontre guias completos e informações testadas por viajantes reais para viver experiências autênticas sem desperdiçar tempo nem dinheiro.
+          <p className="text-base md:text-xl text-white/85 max-w-2xl mx-auto leading-relaxed font-body">
+            Guias completos e testados por viajantes reais para viver experiências autênticas — sem desperdiçar tempo nem dinheiro.
           </p>
 
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
+            <Button asChild size="lg" className="rounded-full px-8 py-6 text-base font-bold shadow-2xl shadow-primary/30 hover:shadow-primary/50 hover:scale-[1.03] transition-all duration-300">
+              <a href="#guias">Ver guias disponíveis <ArrowRight className="w-4 h-4 ml-1" /></a>
+            </Button>
+          </div>
+
           {/* Trust bar */}
-          <div className="flex flex-wrap items-center justify-center gap-4 md:gap-8 pt-4 text-sm text-muted-foreground font-body">
+          <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 pt-6 text-sm text-white/80 font-body">
             <span className="flex items-center gap-1.5">
-              <Users className="w-4 h-4 text-primary" /> 6.000+ viajantes
+              <Users className="w-4 h-4 text-primary" /> 7.000+ viajantes
             </span>
             <span className="flex items-center gap-1.5">
               <Star className="w-4 h-4 text-primary" /> 4.9/5 avaliações
