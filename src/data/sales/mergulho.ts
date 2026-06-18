@@ -103,7 +103,7 @@ export const mergulho: SalesContent = {
     { title: "Seguro DAN + câmaras hiperbáricas", desc: "Como contratar o seguro certo e mapa das câmaras hiperbáricas da Tailândia.", value: "R$ 47" },
     { title: "Logbook digital + Glossário PT/EN", desc: "Template editável para registrar mergulhos e todos os termos técnicos para acompanhar curso em inglês.", value: "R$ 47" },
     { title: "Mapa dos 30 melhores dive sites", desc: "PDF com pontos de mergulho da Tailândia, profundidade, dificuldade e melhor época.", value: "R$ 67" },
-    { title: "Grupo de divers brasileiros", desc: "Conexão com brasileiros mergulhando na Tailândia agora.", value: "R$ 97" },
+    { title: "Roteiros prontos 7 / 10 / 14 / 21 dias", desc: "Itinerários testados para combinar curso, fun dives e descanso sem sobrecarga.", value: "R$ 87" },
   ],
   testimonials: [
     { name: "Pedro H.", city: "Rio de Janeiro", text: "Tirei OW e Advanced em 10 dias por R$ 2.000 total. No Brasil tinha orçado R$ 6.500 só pelo OW." },
