@@ -80,11 +80,11 @@ export const reveillon: SalesContent = {
     },
   ],
   bonuses: [
-    { title: "Calendário 28/12 a 02/01", desc: "PDF com os principais eventos dia a dia em todas as cidades.", value: "R$ 87" },
-    { title: "Lista de hotéis com fogos da janela", desc: "Hospedagens com vista privilegiada da queima de fogos.", value: "R$ 67" },
-    { title: "Comparativo de pacotes", desc: "Pacotes hotel+festa avaliados por custo-benefício real.", value: "R$ 57" },
-    { title: "Guia Full Moon Party especial", desc: "Edição especial de Réveillon em Koh Phangan, com tudo o que muda.", value: "R$ 87" },
-    { title: "Grupo de WhatsApp do Réveillon", desc: "Conexão com outros brasileiros indo na mesma data.", value: "R$ 127" },
+    { title: "Calendário 28/12 a 02/01", desc: "Principais eventos dia a dia em todas as cidades — Capítulo 9.", value: "R$ 87" },
+    { title: "Lista de hotéis com fogos da janela", desc: "Hospedagens com vista privilegiada da queima de fogos em 5 regiões — Capítulo 4.", value: "R$ 67" },
+    { title: "Comparativo de pacotes (econômico ao premium)", desc: "Pacotes hotel + festa avaliados por custo-benefício real — Capítulo 8.", value: "R$ 57" },
+    { title: "Edição especial Full Moon Réveillon", desc: "Capítulo dedicado ao NYE em Koh Phangan — Capítulo 10.", value: "R$ 87" },
+    { title: "Checklist pré-viagem + Erros que arruínam", desc: "Tudo o que reservar, comprar, confirmar e evitar — Capítulos 14 e 15.", value: "R$ 47" },
   ],
   testimonials: [
     { name: "Camila R.", city: "São Paulo", text: "Virei o ano em Phuket seguindo o roteiro. Festa em rooftop, fogos do hotel, voltei caminhando. Perfeito." },
@@ -102,11 +102,11 @@ export const reveillon: SalesContent = {
     installments: "12x de R$ 6,71",
     includes: [
       "Guia das 10 cidades comparadas",
-      "Top 50 festas avaliadas",
+      "36+ festas avaliadas por categoria",
       "Hotéis com vista dos fogos",
       "Roteiros completos 28/12 a 02/01",
+      "Logística da virada por cidade",
       "Todos os 5 bônus exclusivos",
-      "Acesso ao grupo do Réveillon",
     ],
   },
   guarantee: {
