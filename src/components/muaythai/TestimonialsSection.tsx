@@ -22,12 +22,7 @@ const testimonials = [
     city: "Goiânia, GO",
   },
   {
-    text: "A parte de vistos salvou minha viagem! Eu não sabia que podia ficar até 1 ano com ED Visa. O guia tem tudo, inclusive agências recomendadas.",
-    name: "Ana Clara V.",
-    city: "Fortaleza, CE",
-  },
-  {
-    text: "Por R$ 67 eu economizei facilmente R$ 2.000 em decisões erradas. Cada academia tem review real, preços, WhatsApp. Perfeito.",
+    text: "Por R$ 67 eu economizei facilmente R$ 2.000 em decisões erradas. Cada academia tem review real, preços, contato direto. Perfeito.",
     name: "Bruno K.",
     city: "Porto Alegre, RS",
   },

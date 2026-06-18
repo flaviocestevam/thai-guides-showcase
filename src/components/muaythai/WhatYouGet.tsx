@@ -3,10 +3,10 @@ import { BookOpen, Map, AlertOctagon, MessageCircle, CheckSquare, RefreshCw, Gif
 
 const WhatYouGet = () => {
   const items = [
-    { icon: BookOpen, title: "Guia Completo (9 Capítulos)", price: "R$ 297", desc: "27 academias em 9 cidades, avaliadas com base real" },
+    { icon: BookOpen, title: "Guia Completo (10 Capítulos)", price: "R$ 297", desc: "24 academias em 9 cidades, avaliadas com base real" },
     { icon: Map, title: "3 Roteiros Prontos", price: "R$ 147", desc: "Phuket 2 semanas, Bangkok 1 semana, Chiang Mai 1 mês" },
     { icon: AlertOctagon, title: "Red Flags & Critérios", price: "R$ 97", desc: "Como identificar camps ruins antes de pagar" },
-    { icon: MessageCircle, title: "Contatos Diretos", price: "R$ 67", desc: "WhatsApp, Maps e links de cada academia" },
+    { icon: MessageCircle, title: "Contato Direto + Mapa", price: "R$ 67", desc: "Contato oficial de cada academia (WhatsApp quando existir publicamente, senão telefone ou site) e link direto pro Google Maps" },
     { icon: CheckSquare, title: "Tabela de Custos Completa", price: "R$ 67", desc: "Preços de treino, acomodação e vida em cada cidade" },
     { icon: RefreshCw, title: "Atualizações Gratuitas", price: "Inestimável", desc: "Toda atualização futura do guia, sem custo extra" },
   ];
@@ -76,11 +76,12 @@ const WhatYouGet = () => {
             <span className="text-sm font-semibold text-accent">🎁 Bônus Exclusivo</span>
           </div>
           <h3 className="text-xl font-display text-foreground mb-2">
-            Guia de Vistos e Agências Recomendadas
+            Guia de Vistos: DTV e Suporte Direto nas Academias
           </h3>
           <p className="text-muted-foreground text-sm mb-2">
-            ED Visa para ficar até 1 ano, agências verificadas em cada cidade, custos reais e dicas 
-            para resolver tudo antes de ir. Inclui contatos diretos.
+            Como funciona o visto DTV (até 180 dias por entrada, válido por 5 anos) e quais academias 
+            deste guia são provedoras oficiais — com carta de matrícula em até 24h e custos reais a 
+            partir de 20.000 THB. Inclui também onde ainda existe suporte ao ED Visa tradicional.
           </p>
           <div className="flex items-center gap-2">
             <span className="text-sm text-muted-foreground line-through">R$ 67</span>
@@ -92,9 +93,9 @@ const WhatYouGet = () => {
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-12">
           {[
             { value: "1.847+", label: "Lutadores usaram" },
-            { value: "27", label: "Academias avaliadas" },
+            { value: "24", label: "Academias avaliadas" },
             { value: "4.9/5", label: "Avaliação média" },
-            { value: "9", label: "Capítulos completos" },
+            { value: "10", label: "Capítulos completos" },
           ].map((stat, i) => (
             <motion.div
               key={i}
