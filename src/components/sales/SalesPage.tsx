@@ -587,7 +587,7 @@ const SalesPage = ({ c }: { c: SalesContent }) => (
             </Reveal>
           </div>
           <Reveal delay={160}>
-            <div className="relative glass-card rounded-3xl p-8 md:p-12 shadow-premium border-primary/40">
+            <div className="relative glass-card rounded-3xl p-8 md:p-12 shadow-premium border-primary/40 pricing-shimmer">
               <div className="text-center mb-8">
                 <p className="text-muted-foreground line-through text-base">
                   De {c.pricing.oldPrice}
