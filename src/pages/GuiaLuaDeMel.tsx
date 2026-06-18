@@ -5,7 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import {
   Check, X, Shield, Heart, Sparkles, Palmtree, Hotel, Utensils, Plane, Camera,
-  Info, Star, BookOpen, MessageCircle, Gift, Award, Calendar, Map, DollarSign, Sun
+  Info, Star, BookOpen, MessageCircle, Gift, Award, Calendar, Map, DollarSign, Sun,
+  Luggage, Mail, Wifi, Stethoscope, Languages, Cake, Globe2
 } from "lucide-react";
 
 const ROSE = "#E11D74";
