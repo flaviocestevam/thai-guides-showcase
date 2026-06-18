@@ -730,7 +730,260 @@ const LuaDeMel8272524 = () => {
         ))}
       </Section>
 
-      <Section n="25" title="Dúvidas comuns" icon={Sparkles}>
+      <Section n="25" title="Bagagem essencial para lua de mel" icon={Luggage}>
+        <p>Lua de mel pede uma mala mais pensada que viagem comum. Calor úmido, ar-condicionado forte, templos com dress code, jantar elegante, barco molhado e fotos importantes — tudo no mesmo roteiro.</p>
+        <H3>Roupas (para os dois)</H3>
+        <Bul items={[
+          "2 looks 'jantar especial' (vestido leve / camisa de linho)",
+          "Roupa branca, off-white ou tons terrosos para fotos (evitem estampas berrantes)",
+          "Roupa de banho extra (uma sempre estará molhada)",
+          "Canga / sarong leve (serve para templo, praia e capa de sol)",
+          "Calça/saia longa cobrindo joelho + blusa cobrindo ombro para templos",
+          "Tênis confortável + sandália + chinelo de dedo",
+          "Casaco fino (avião, ar-condicionado, Chiang Mai à noite no inverno)",
+          "Lingerie/roupa íntima especial para a noite de chegada",
+        ]} />
+        <H3>Beleza e cuidados (foco em foto e calor)</H3>
+        <Bul items={[
+          "Protetor solar reef-safe (Hawaii Tropic mineral, Sun Bum, Stream2Sea) — alguns parques exigem",
+          "Repelente com icaridina (Exposis Extreme) — picadas em fotos arruínam",
+          "Pós-sol ou aloe vera",
+          "Hidratante labial com FPS",
+          "Maquiagem à prova d'água (suor + mar)",
+          "Secador de cabelo de viagem (alguns hotéis pequenos não têm bom)",
+          "Babyliss/chapinha bivolt",
+          "Perfume travel-size para o jantar especial",
+        ]} />
+        <H3>Eletrônicos</H3>
+        <Bul items={[
+          "Adaptador universal (Tailândia aceita pinos chatos, mas algumas tomadas antigas só pegam redondo)",
+          "Carregador rápido + cabo extra",
+          "Power bank (passeios longos de barco)",
+          "Câmera/GoPro + cartão de memória extra",
+          "Saco impermeável para celular em passeio de barco",
+        ]} />
+        <H3>Documentos e cópias</H3>
+        <Bul items={[
+          "Passaporte com 6 meses de validade",
+          "Foto digital do passaporte salva offline",
+          "Comprovantes de hotel e voo impressos (a imigração pode pedir)",
+          "Apólice do seguro viagem impressa",
+          "Cartões de crédito de bandeiras diferentes (Visa + Master)",
+        ]} />
+      </Section>
+
+      <Section n="26" title="Como conseguir upgrade e mimos de honeymoon" icon={Mail}>
+        <p>Quase todo hotel de 4★+ na Tailândia oferece algum mimo para casais em lua de mel — mas <strong className="text-foreground">não oferece se vocês não avisarem</strong>. Avisem por e-mail antes da viagem e de novo no check-in.</p>
+        <H3>O que pedir (sem timidez)</H3>
+        <Bul items={[
+          "Upgrade gratuito de categoria se houver disponibilidade",
+          "Decoração romântica no quarto na chegada (flores, pétalas, bolo)",
+          "Espumante ou frutas de cortesia",
+          "Late check-out no último dia",
+          "Andar mais alto / quarto mais silencioso",
+          "Mesa especial no jantar de aniversário (se cair na viagem)",
+        ]} />
+        <H3>E-mail para enviar 2 a 4 semanas antes</H3>
+        <Card className="bg-muted/30">
+          <p className="text-xs text-primary/80 uppercase tracking-wider mb-2">Em inglês — pronto para colar</p>
+          <p className="text-sm italic text-foreground/90">Dear [Hotel Name] team,<br/><br/>
+          We have a reservation under [LAST NAME] from [check-in] to [check-out]. We are very excited because this is our honeymoon trip.<br/><br/>
+          If possible, we would love to request:<br/>
+          – A complimentary upgrade subject to availability<br/>
+          – A quiet, higher-floor room with a king-size bed<br/>
+          – Any small honeymoon touch you may have available (flowers, decoration, sparkling wine)<br/>
+          – Late check-out on [date]<br/><br/>
+          Thank you very much. We are looking forward to staying with you.<br/><br/>
+          Kind regards,<br/>[Your full name]</p>
+        </Card>
+        <H3>O que funciona melhor</H3>
+        <Bul items={[
+          "Reservar direto pelo site do hotel (não OTA) aumenta chance de upgrade",
+          "Programa de fidelidade da bandeira (Marriott, IHG, Accor, Hilton) — o nível mais básico já dá benefícios",
+          "Chegar bem-vestido no check-in",
+          "Sorrir e mencionar 'honeymoon' de novo, mesmo já tendo escrito",
+          "Avaliar o hotel depois com nota alta se cumprirem (eles reforçam essas práticas)",
+        ]} />
+      </Section>
+
+      <Section n="27" title="Conectividade: eSIM, Wi-Fi e apps" icon={Wifi}>
+        <H3>eSIM (mais prático que chip físico)</H3>
+        <Bul items={[
+          "Airalo, Holafly, Nomad ou Saily — ativam antes de embarcar",
+          "Plano de 10 a 15 GB cobre 2 a 3 semanas com folga",
+          "AIS e TrueMove (operadoras locais) também vendem turísticos no aeroporto",
+          "Tenham 2 eSIMs (um em cada celular) — se um falhar, ainda têm internet",
+        ]} />
+        <H3>Wi-Fi</H3>
+        <Bul items={[
+          "Quase todo hotel, café e restaurante tem Wi-Fi",
+          "Em ilhas pequenas (Koh Lipe, Koh Yao) a conexão é instável — programem fotos para subir do hotel",
+          "Aeroportos têm Wi-Fi gratuito com cadastro",
+        ]} />
+        <H3>Apps que valem instalar antes</H3>
+        <Bul items={[
+          "Grab e Bolt — táxi/Uber tailandês",
+          "Google Maps + áreas baixadas offline (Bangkok, Chiang Mai, ilhas)",
+          "Maps.me — backup offline mais detalhado em trilhas",
+          "Google Translate (com tailandês baixado offline) + função câmera para cardápio",
+          "Klook e GetYourGuide — passeios e ingressos com cancelamento",
+          "Agoda e Booking — preço local costuma ser melhor no Agoda na Ásia",
+          "OpenRice e Google Maps reviews — restaurantes locais",
+          "Windy — clima por hora para passeios de barco",
+          "XE Currency — câmbio offline",
+          "WhatsApp Business dos hotéis salvos (atendem rápido)",
+        ]} />
+      </Section>
+
+      <Section n="28" title="Saúde, bem-estar e farmacinha" icon={Stethoscope}>
+        <H3>Antes de embarcar</H3>
+        <Bul items={[
+          "Seguro viagem com cobertura mínima de USD 60.000 (alguns países do Schengen exigem 30k; lua de mel pede mais)",
+          "Vacinas: febre amarela (obrigatória só se vier de país de risco), hepatite A e tifoide recomendadas",
+          "Dengue circula — repelente é mais importante que vacina",
+          "Levem anticoncepcional/medicação contínua para a viagem inteira + receita médica em inglês",
+        ]} />
+        <H3>Farmacinha do casal</H3>
+        <Bul items={[
+          "Analgésico (dipirona/paracetamol)",
+          "Anti-inflamatório (ibuprofeno)",
+          "Antialérgico (loratadina)",
+          "Antitérmico",
+          "Sais de reidratação",
+          "Loperamida (diarreia do viajante)",
+          "Probiótico",
+          "Pomada para assadura (calor + mar)",
+          "Curativo + antisséptico (cortes em coral acontecem)",
+          "Repelente potente e protetor solar de sobra",
+          "Anti-enjoo (passeios de barco e voos)",
+          "Camisinha / método contraceptivo de backup",
+        ]} />
+        <H3>Comida e água</H3>
+        <Bul items={[
+          "Bebam apenas água engarrafada lacrada",
+          "Gelo em restaurante bom é seguro (feito de água tratada)",
+          "Street food com fila de tailandês = sinal verde",
+          "Frutos do mar crus só em restaurante reconhecido",
+          "Comam picante com moderação nos primeiros dias",
+        ]} />
+        <H3>Onde ir se algo acontecer</H3>
+        <Bul items={[
+          "Bangkok: Bumrungrad International, BNH, Samitivej",
+          "Phuket: Bangkok Hospital Phuket, Siriroj International",
+          "Chiang Mai: Bangkok Hospital Chiang Mai, Chiang Mai Ram",
+          "Koh Samui: Bangkok Hospital Samui",
+          "Todos atendem em inglês, padrão alto, aceitam cartão e acionam o seguro direto",
+        ]} />
+      </Section>
+
+      <Section n="29" title="Etiqueta cultural para casais" icon={Languages}>
+        <p>A Tailândia é acolhedora, mas tem regras silenciosas. Respeitar isso muda totalmente a forma como vocês são tratados — inclusive nos resorts.</p>
+        <H3>Em templos</H3>
+        <Bul items={[
+          "Ombros e joelhos cobertos (vale para os dois)",
+          "Sapato fora antes de entrar no santuário",
+          "Não apontem os pés para imagens de Buda",
+          "Nada de selfie 'engraçada' com Buda — é crime cultural sério",
+          "Mulheres não tocam em monges; entreguem objetos via marido ou tecido",
+        ]} />
+        <H3>Demonstração de afeto</H3>
+        <Bul items={[
+          "Mão dada, abraço breve e selinho são tranquilos em áreas turísticas",
+          "Beijo longo em público é considerado deselegante",
+          "Em templos, evitem qualquer carinho",
+          "Em resort/praia/restaurante: liberado normalmente",
+        ]} />
+        <H3>Comportamento geral</H3>
+        <Bul items={[
+          "Wai (cumprimento com mãos juntas) é bem recebido, mesmo desajeitado",
+          "Voz baixa em público — tailandês não grita",
+          "Não toquem a cabeça de ninguém (nem de criança fofa)",
+          "Família real é assunto delicado — não façam piadas nem comentários",
+          "Sempre paguem com sorriso; tailandês detesta cliente bravo",
+        ]} />
+      </Section>
+
+      <Section n="30" title="Aniversário, surpresa e datas durante a viagem" icon={Cake}>
+        <p>Se aniversário de casamento, namoro, noivado ou aniversário de um dos dois cair durante a lua de mel, dá para transformar em momento inesquecível com pouco esforço.</p>
+        <H3>Combine com o hotel</H3>
+        <Bul items={[
+          "Avisem por e-mail antes (ver template do capítulo 26)",
+          "Peçam bolo simples, espumante e mensagem no quarto",
+          "Maioria dos resorts 4★+ não cobra ou cobra simbólico",
+        ]} />
+        <H3>Pedido de casamento durante a viagem</H3>
+        <Bul items={[
+          "Phang Nga Bay ao pôr do sol em longtail privativo — clássico",
+          "Pier do Six Senses Yao Noi ao amanhecer",
+          "Promthep Cape (Phuket) no pôr do sol",
+          "Railay Beach com fotógrafo escondido",
+          "Doi Suthep (Chiang Mai) ao nascer do sol",
+          "Combine fotógrafo escondido com 1h de cobertura e entrega rápida",
+        ]} />
+        <H3>Renovação de votos simbólica</H3>
+        <Bul items={[
+          "Resorts em Samui, Phuket, Krabi e Koh Yao oferecem pacotes prontos",
+          "Cerimônia simbólica (não tem valor legal) com monge budista é possível mediante reserva",
+          "Combinem música, leitura, fotógrafo e jantar privativo no mesmo dia",
+        ]} />
+      </Section>
+
+      <Section n="31" title="Tailândia + extensão para outros países" icon={Globe2}>
+        <p>Se sobram dias e orçamento, dá para combinar a Tailândia com um segundo destino sem voltar para o Brasil. Tudo a partir de Bangkok com voo curto.</p>
+        <Card>
+          <p className="font-display text-lg text-foreground">Tailândia + Maldivas</p>
+          <p className="text-sm mt-1">Voo direto Bangkok → Malé (~4h). 4 a 5 noites em resort de água. Combinação clássica de lua de mel.</p>
+        </Card>
+        <Card>
+          <p className="font-display text-lg text-foreground">Tailândia + Bali</p>
+          <p className="text-sm mt-1">Voo Bangkok → Denpasar (~4h30). Bali tem cultura, vulcão, arrozais e Ubud. Combina com casal aventureiro + descanso.</p>
+        </Card>
+        <Card>
+          <p className="font-display text-lg text-foreground">Tailândia + Camboja (Siem Reap)</p>
+          <p className="text-sm mt-1">Voo Bangkok → Siem Reap (~1h). 2 a 3 noites para Angkor Wat. Experiência cultural marcante em pouco tempo.</p>
+        </Card>
+        <Card>
+          <p className="font-display text-lg text-foreground">Tailândia + Vietnã</p>
+          <p className="text-sm mt-1">Bangkok → Hanói ou Da Nang (~2h). Halong Bay, Hoi An, comida espetacular, custo baixo. Pede mais dias.</p>
+        </Card>
+        <Card>
+          <p className="font-display text-lg text-foreground">Tailândia + Singapura</p>
+          <p className="text-sm mt-1">Voo Bangkok → Singapura (~2h30). 2 a 3 noites antes de voltar. Bom para emendar com voo de retorno por Cingapura.</p>
+        </Card>
+        <Card>
+          <p className="font-display text-lg text-foreground">Tailândia + Japão</p>
+          <p className="text-sm mt-1">Voo Bangkok → Tóquio (~6h). Combinação cara mas marcante. Pede pelo menos 25 dias totais.</p>
+        </Card>
+        <p className="text-sm italic">Dica de logística: tirem o voo internacional de volta sempre de Bangkok — é o hub mais barato e estável.</p>
+      </Section>
+
+      <Section n="32" title="Chegada, jet lag romântico e despedida" icon={Plane}>
+        <H3>Primeiras 24 horas em Bangkok</H3>
+        <Bul items={[
+          "Cheguem com pelo menos 1 dia de folga antes de qualquer compromisso importante",
+          "Hotel com check-in cedo (paguem extra se necessário; cama vale ouro)",
+          "Banho longo, comida leve, hidratação",
+          "Nada de templo, balada ou jantar pesado no dia 1",
+          "Massagem dos pés à tarde + jantar no rooftop do próprio hotel = noite perfeita",
+        ]} />
+        <H3>Lidando com jet lag a dois</H3>
+        <Bul items={[
+          "A diferença de fuso é ~10h — luz do sol pela manhã ajuda muito",
+          "Melatonina 1h antes de dormir, 3 a 5 dias",
+          "Evitem álcool nas primeiras 48h",
+          "Acordar junto, mesmo cansados, sincroniza melhor o ritmo do casal",
+        ]} />
+        <H3>Último dia: como não terminar mal</H3>
+        <Bul items={[
+          "Voltem para Bangkok 1 noite antes do voo internacional — não confiem em ferry/voo doméstico no dia",
+          "Hotel próximo do aeroporto (Novotel Suvarnabhumi conectado ao terminal) na última noite",
+          "Massagem leve antes do voo longo",
+          "Última refeição: algo que vocês amaram repetir — fecha a viagem com sabor",
+          "Comprem lembrança só na ida ou em Bangkok no fim (não carreguem por toda viagem)",
+        ]} />
+      </Section>
+
+      <Section n="33" title="Dúvidas comuns" icon={Sparkles}>
         {[
           ["Quantos dias são ideais?", "14 dias é o melhor equilíbrio. 10 funciona enxuto. 21 é ideal para duas ilhas sem correria."],
           ["Phuket, Krabi ou Koh Samui?", "Depende do mês e do estilo. Phuket é prática e luxuosa, Krabi é cinematográfica, Samui é completa para resort e melhor no meio do ano."],
