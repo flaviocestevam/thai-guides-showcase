@@ -451,15 +451,20 @@ const Festas = () => {
           </div>
         </section>
 
-        {/* Cities */}
+        {/* Cities — amostra das 9 cidades cobertas no guia */}
         <section id="cities" className="py-20 md:py-28 px-4 bg-muted/10">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-5xl font-display font-bold text-center mb-3">
-              Onde a Noite Acontece
-            </h2>
-            <p className="text-center text-muted-foreground mb-14 max-w-xl mx-auto">
-              Clique nas imagens para abrir os detalhes de cada cidade sem sair da página
-            </p>
+            <div className="text-center mb-14">
+              <span className="inline-block text-primary text-sm font-semibold tracking-[0.2em] uppercase mb-3">
+                9 cidades cobertas
+              </span>
+              <h2 className="text-3xl md:text-5xl font-display font-bold mb-3">
+                Cada cidade é um capítulo do guia
+              </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                Pra cada uma das 9 cidades: <strong>melhores bairros</strong>, <strong>lugares testados</strong> com endereço, <strong>preço justo da cerveja</strong>, <strong>melhor noite da semana</strong> e <strong>dicas locais</strong>. Tudo destravado quando você adquire o guia.
+              </p>
+            </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {cities.map((city) => (
                 <CityCard key={city.id} city={city} />
@@ -468,15 +473,20 @@ const Festas = () => {
           </div>
         </section>
 
-        {/* Survival Tips */}
+        {/* Survival Tips — prévia do capítulo de sobrevivência */}
         <section id="survival" className="py-20 md:py-28 px-4 border-t border-border">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-5xl font-display font-bold text-center mb-3">
-              Dicas de Sobrevivência
-            </h2>
-            <p className="text-center text-muted-foreground mb-14 max-w-xl mx-auto">
-              O que todo turista precisa saber antes de cair na noite tailandesa
-            </p>
+            <div className="text-center mb-14">
+              <span className="inline-block text-primary text-sm font-semibold tracking-[0.2em] uppercase mb-3">
+                Capítulo de sobrevivência
+              </span>
+              <h2 className="text-3xl md:text-5xl font-display font-bold mb-3">
+                4 frentes que ninguém te conta antes de embarcar
+              </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                Segurança, dinheiro, drinks e transporte. Aqui você vê o título de cada frente — as regras práticas, o passo a passo e os apps recomendados estão dentro do guia.
+              </p>
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {survivalTips.map((tip) => (
                 <TipCard key={tip.title} tip={tip} />
