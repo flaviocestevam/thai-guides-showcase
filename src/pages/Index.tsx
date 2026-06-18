@@ -17,6 +17,13 @@ import voluntariadoImg from "@/assets/voluntariado-hero.jpg";
 import gaysImg from "@/assets/gays-hero.jpg";
 import songkranImg from "@/assets/songkran-hero.jpg";
 import luaDeMelImg from "@/assets/luademel-hero.jpg";
+import massagemImg from "@/assets/sales/cursos-massagem.jpg";
+import motosImg from "@/assets/sales/aluguel-motos.jpg";
+import mergulhoImg from "@/assets/sales/mergulho.jpg";
+import cafesImg from "@/assets/sales/cafes-coworkings.jpg";
+import reveillonImg from "@/assets/sales/reveillon.jpg";
+import stripImg from "@/assets/sales/clubes-strip.jpg";
+import goGoImg from "@/assets/sales/go-go-bars.jpg";
 
 interface ProductCard {
   title: string;
@@ -186,6 +193,7 @@ const salesPages: ProductCard[] = [
       "Onde estudar massagem tailandesa autêntica: escolas certificadas, visto de estudante, roteiros e como sair formado pagando 60% menos.",
     path: "/cursos-de-massagem",
     emoji: "🪷",
+    image: massagemImg,
     badge: "🎓 CERTIFICAÇÃO",
     urgency: "Vagas limitadas nas escolas oficiais!",
     socialProof: "Indicado por 200+ alunos",
@@ -201,6 +209,7 @@ const salesPages: ProductCard[] = [
       "As 25 melhores locadoras testadas, sistema anti-golpe da caução, PID e rotas prontas como Mae Hong Son Loop.",
     path: "/aluguel-de-motos-tailandia",
     emoji: "🏍️",
+    image: motosImg,
     badge: "🛡️ ANTI-GOLPE",
     urgency: "1 em cada 4 turistas perde R$ 3.000!",
     socialProof: "10.000 km rodados",
@@ -216,6 +225,7 @@ const salesPages: ProductCard[] = [
       "Koh Tao, Similan, Phi Phi: 20 escolas avaliadas, roteiros do iniciante ao profissional e calendário das melhores ilhas.",
     path: "/mergulho-tailandia",
     emoji: "🤿",
+    image: mergulhoImg,
     badge: "🌊 PADI",
     urgency: "Open Water em Koh Tao por R$ 1.200!",
     socialProof: "600+ mergulhos logados",
@@ -231,6 +241,7 @@ const salesPages: ProductCard[] = [
       "Mais de 200 cafés e coworkings testados com Wi-Fi medido em Mbps, tomadas contadas e ar avaliado. Para trabalhar de verdade.",
     path: "/cafes-e-coworkings-tailandia",
     emoji: "💻",
+    image: cafesImg,
     badge: "🌐 NÔMADE",
     urgency: "Wi-Fi ruim derruba reunião com cliente!",
     socialProof: "1.500+ nômades brasileiros",
@@ -246,6 +257,7 @@ const salesPages: ProductCard[] = [
       "10 cidades comparadas, top 50 festas, hotéis com vista dos fogos e roteiros prontos de 28/12 a 02/01.",
     path: "/reveillon-tailandia",
     emoji: "🎆",
+    image: reveillonImg,
     badge: "🥂 RÉVEILLON 2026",
     urgency: "Hotéis bons esgotam em outubro!",
     socialProof: "5 Réveillons cobertos",
@@ -261,6 +273,7 @@ const salesPages: ProductCard[] = [
       "Bangkok, Pattaya e Phuket: distritos, lista negra de golpes, etiqueta local e ranking dos melhores. Sem moralismo, só informação prática.",
     path: "/clubes-de-strip-tailandia",
     emoji: "🎭",
+    image: stripImg,
     badge: "🔞 +18",
     urgency: "Golpe da conta inflada custa R$ 6.000!",
     socialProof: "100+ estabelecimentos avaliados",
@@ -276,6 +289,7 @@ const salesPages: ProductCard[] = [
       "Manual completo: glossário (bar fine, lady drink, off-fee), top 50 bares e estratégias para pagar exatamente o que vale.",
     path: "/go-go-bars-tailandia",
     emoji: "🍸",
+    image: goGoImg,
     badge: "🔞 +18",
     urgency: "A diferença entre R$ 600 e R$ 4.000 é conhecimento!",
     socialProof: "150+ bares mapeados",
