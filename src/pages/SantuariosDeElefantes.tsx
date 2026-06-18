@@ -302,7 +302,7 @@ const SantuariosDeElefantes = () => {
         {/* HERO */}
 
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <img src={HERO_IMG} alt="Elefante em santuário na Tailândia" className="absolute inset-0 w-full h-full object-cover" width={1920} height={1080} />
+        <img src={HERO_IMG} alt="Elefante em santuário na Tailândia" fetchPriority="high" decoding="async" className="absolute inset-0 w-full h-full object-cover" width={1920} height={1080} />
         <div className="absolute inset-0 bg-gradient-to-b from-forest-dark/80 via-forest-dark/60 to-forest-dark/90" />
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
           <div className="flex flex-wrap items-center justify-center gap-4 mb-6">
@@ -793,7 +793,7 @@ const SantuariosDeElefantes = () => {
       {/* FINAL CTA */}
       <section className="py-24 px-6 bg-forest-dark text-center relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <img src={PHUKET_IMG} alt="" className="w-full h-full object-cover" />
+          <img src={PHUKET_IMG} alt="" loading="lazy" decoding="async" className="w-full h-full object-cover" />
         </div>
         <div className="relative z-10 max-w-3xl mx-auto">
           <Heart className="w-12 h-12 text-elephant-gold mx-auto mb-6" />

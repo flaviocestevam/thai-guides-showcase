@@ -1,3 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /muaythai5645
+Disallow: /guiatrilhasthai44
+Disallow: /export-copy-auditoria
+
 Sitemap: https://guiastailandia.com.br/sitemap.xml
