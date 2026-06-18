@@ -210,11 +210,35 @@ const SectionHeader = ({
   </div>
 );
 
+/* ---------- Scroll progress bar ---------- */
+const ScrollProgress = () => {
+  const [p, setP] = useState(0);
+  useEffect(() => {
+    const onScroll = () => {
+      const h = document.documentElement;
+      const max = h.scrollHeight - h.clientHeight;
+      setP(max > 0 ? (h.scrollTop / max) * 100 : 0);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+  return (
+    <div className="fixed top-0 left-0 right-0 h-[2px] z-[60] bg-transparent">
+      <div
+        className="h-full bg-gradient-to-r from-primary via-accent to-primary ease-premium transition-[width] duration-150"
+        style={{ width: `${p}%` }}
+      />
+    </div>
+  );
+};
+
 const SalesPage = ({ c }: { c: SalesContent }) => (
   <div className="min-h-screen bg-background text-foreground overflow-x-hidden antialiased selection:bg-primary/30">
     <SEO title={c.seoTitle} description={c.seoDescription} canonicalPath={`/${c.slug}`} />
+    <ScrollProgress />
     <Header />
-    <main className="pt-20">
+    <main className="pt-20 pb-28 md:pb-0">
       <Breadcrumbs />
       <div className="max-w-7xl mx-auto px-4">
         <BackToHome />
@@ -230,7 +254,7 @@ const SalesPage = ({ c }: { c: SalesContent }) => (
             src={c.heroImage}
             alt=""
             aria-hidden="true"
-            className="absolute inset-0 w-full h-full object-cover opacity-60"
+            className="absolute inset-0 w-full h-full object-cover opacity-60 animate-ken-burns"
             width={1536}
             height={1024}
           />
@@ -563,7 +587,7 @@ const SalesPage = ({ c }: { c: SalesContent }) => (
             </Reveal>
           </div>
           <Reveal delay={160}>
-            <div className="relative glass-card rounded-3xl p-8 md:p-12 shadow-premium border-primary/40">
+            <div className="relative glass-card rounded-3xl p-8 md:p-12 shadow-premium border-primary/40 pricing-shimmer">
               <div className="text-center mb-8">
                 <p className="text-muted-foreground line-through text-base">
                   De {c.pricing.oldPrice}
