@@ -1,19 +1,19 @@
 import { useState, useEffect } from "react";
 
 const CountdownTimer = () => {
-  const [time, setTime] = useState({ hours: 5, minutes: 47, seconds: 29 });
+  const [time, setTime] = useState({ minutes: 15, seconds: 0 });
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setTime((prev) => {
-        let { hours, minutes, seconds } = prev;
-        seconds--;
-        if (seconds < 0) { seconds = 59; minutes--; }
-        if (minutes < 0) { minutes = 59; hours--; }
-        if (hours < 0) { hours = 23; minutes = 59; seconds = 59; }
-        return { hours, minutes, seconds };
+    const end = Date.now() + 15 * 60000;
+    const tick = () => {
+      const d = Math.max(0, end - Date.now());
+      setTime({
+        minutes: Math.floor(d / 60000),
+        seconds: Math.floor((d / 1000) % 60),
       });
-    }, 1000);
+    };
+    tick();
+    const interval = setInterval(tick, 1000);
     return () => clearInterval(interval);
   }, []);
 
@@ -24,7 +24,6 @@ const CountdownTimer = () => {
       <span>Preço promocional acaba em:</span>
       <div className="flex gap-2 ml-2">
         {[
-          { value: time.hours, label: "Horas" },
           { value: time.minutes, label: "Min" },
           { value: time.seconds, label: "Seg" },
         ].map((item) => (
