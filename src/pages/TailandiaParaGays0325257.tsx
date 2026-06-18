@@ -1,7 +1,8 @@
 import { SEO } from "@/components/SEO";
 import {
   Rainbow, MapPin, Hotel, Calendar, Shield, Heart, AlertTriangle, Sparkles,
-  CheckCircle2, Wine, Camera, Stethoscope, Languages, MessageCircle, Gift, Users, Globe2
+  CheckCircle2, Wine, Camera, Stethoscope, Languages, MessageCircle, Gift, Users, Globe2,
+  Smartphone, Dumbbell, Sun, Scale, Music, Wallet, Pill
 } from "lucide-react";
 
 const Section = ({ n, title, icon: Icon, children, id }: { n: string; title: string; icon?: any; children: React.ReactNode; id?: string }) => (
