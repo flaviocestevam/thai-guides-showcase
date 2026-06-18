@@ -254,7 +254,7 @@ const SalesPage = ({ c }: { c: SalesContent }) => (
             src={c.heroImage}
             alt=""
             aria-hidden="true"
-            className="absolute inset-0 w-full h-full object-cover opacity-60"
+            className="absolute inset-0 w-full h-full object-cover opacity-60 animate-ken-burns"
             width={1536}
             height={1024}
           />
