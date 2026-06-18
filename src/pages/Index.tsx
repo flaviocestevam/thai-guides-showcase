@@ -417,6 +417,21 @@ const salesPages: ProductCard[] = [
     highlight: "Inclui retiros por doação",
     viewers: 14,
   },
+  {
+    title: "Guias das Ilhas",
+    subtitle: "14 ilhas decifradas — Phuket, Samui, Phi Phi e mais",
+    description:
+      "De Phuket a Koh Kood, da Full Moon de Phangan ao silêncio de Yao Noi. 14 guias completos das ilhas que importam na Tailândia.",
+    path: "/ilhas",
+    emoji: "🏝️",
+    badge: "🏝️ NOVA CATEGORIA",
+    urgency: "14 ilhas em uma só categoria — escolha a sua!",
+    socialProof: "Phuket, Samui, Phi Phi, Phangan, Tao e mais 9",
+    originalPrice: "R$ 197",
+    price: "R$ 67",
+    highlight: "Catálogo completo das ilhas",
+    viewers: 33,
+  },
 ];
 
 const LiveViewers = ({ base }: { base: number }) => {

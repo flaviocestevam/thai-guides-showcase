@@ -21,6 +21,7 @@ export const Header = () => {
     { label: "Elefantes", path: "/santuariosdeelefantes" },
     { label: "Muay Thai", path: "/muaythai" },
     { label: "Trilhas", path: "/guiatrilhasthai" },
+    { label: "Ilhas", path: "/ilhas" },
     { label: "Mergulho", path: "/mergulho-tailandia" },
     { label: "Massagem", path: "/cursos-de-massagem" },
     { label: "Motos", path: "/aluguel-de-motos-tailandia" },
