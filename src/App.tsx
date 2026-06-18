@@ -15,6 +15,7 @@ import GuiaTrilhasThai44 from "./pages/GuiaTrilhasThai44.tsx";
 import GuiaTrilhasThai from "./pages/GuiaTrilhasThai.tsx";
 import GuiaVoluntariado from "./pages/GuiaVoluntariado.tsx";
 import GuiaGays from "./pages/GuiaGays.tsx";
+import TailandiaParaGays0325257 from "./pages/TailandiaParaGays0325257.tsx";
 import GuiaSongkran from "./pages/GuiaSongkran.tsx";
 import GuiaLuaDeMel from "./pages/GuiaLuaDeMel.tsx";
 import LuaDeMel8272524 from "./pages/LuaDeMel8272524.tsx";
