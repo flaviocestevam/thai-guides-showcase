@@ -316,7 +316,7 @@ const SalesPage = ({ c }: { c: SalesContent }) => (
             </p>
           </Reveal>
           <Reveal delay={120}>
-            <Countdown hours={24} />
+            <Countdown minutes={15} />
           </Reveal>
         </div>
         <hr className="hairline max-w-5xl mx-auto mt-16" />
