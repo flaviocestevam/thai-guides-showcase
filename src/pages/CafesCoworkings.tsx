@@ -1,4 +1,5 @@
 import SalesPage from "@/components/sales/SalesPage";
 import { cafesCoworkings } from "@/data/sales/cafesCoworkings";
-const CafesCoworkings = () => <SalesPage c={cafesCoworkings} />;
+import heroImg from "@/assets/sales/cafes-coworkings.jpg";
+const CafesCoworkings = () => <SalesPage c={{ ...cafesCoworkings, heroImage: heroImg }} />;
 export default CafesCoworkings;
