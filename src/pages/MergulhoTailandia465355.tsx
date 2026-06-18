@@ -743,8 +743,190 @@ Thank you.`}
         ]} /></Card>
       </Section>
 
-      {/* 26 - Conclusão */}
-      <Section id="conclusao" icon={Waves} kicker="Capítulo 26" title="Conclusão: o caminho do mergulhador brasileiro na Tailândia">
+      {/* 26 - Seguro & Emergências */}
+      <Section id="seguro-emergencias" icon={Phone} kicker="Capítulo 26" title="Seguro de mergulho, DAN e câmaras hiperbáricas">
+        <p>Seguro viagem comum geralmente <strong>não cobre acidente de mergulho</strong>. Tratamento de doença descompressiva em câmara hiperbárica na Tailândia pode custar <strong>US$ 800 a US$ 3.000 por sessão</strong> — e raramente é uma sessão só. Não viaje sem cobertura específica.</p>
+        <div className="grid md:grid-cols-2 gap-4">
+          <Card title="DAN (Divers Alert Network)" tone="info">
+            <Bul items={[
+              ["DAN World / DAN Asia-Pacific","planos anuais a partir de ~US$ 40–100"],
+              ["Cobre","tratamento, evacuação, câmara hiperbárica"],
+              ["Hotline 24h","emergência médica de mergulho em inglês"],
+              ["Vale a pena","mesmo para quem mergulha pouco — uma sessão paga o ano inteiro"],
+            ]} />
+          </Card>
+          <Card title="Seguros alternativos">
+            <Bul items={[
+              ["World Nomads / SafetyWing","alguns planos incluem mergulho recreativo até 30m — leia a letra miúda"],
+              ["DiveAssure","cobertura ampla, opção para Divemaster/Instructor"],
+              ["Seguro brasileiro padrão","quase sempre EXCLUI esportes aquáticos com cilindro"],
+            ]} />
+          </Card>
+        </div>
+        <H3>Câmaras hiperbáricas na Tailândia</H3>
+        <Card><Bul items={[
+          ["Koh Tao","Badalveda Hyperbaric Chamber (a mais próxima das escolas)"],
+          ["Koh Samui","Bandon International Hospital — câmara operacional"],
+          ["Phuket","Bangkok Hospital Phuket + SSS Recompression Chamber Network"],
+          ["Bangkok","Hospital Naval / Somdech Phra Pinklao"],
+        ]} /></Card>
+        <Card title="🚨 Em emergência — o que fazer" tone="warn">
+          <Bul items={[
+            "Sinais de doença descompressiva podem aparecer em até 24h depois do mergulho",
+            "Dor articular, formigamento, fraqueza, tontura, visão alterada → procure ajuda IMEDIATAMENTE",
+            "Não tome banho quente, não voe, não beba álcool",
+            "Ligue para o DAN Hotline: +1-919-684-9111 (24h, internacional)",
+            "Informe o dive center — eles têm protocolo de evacuação",
+            "Hidrate e mantenha-se calmo até atendimento",
+          ]} />
+        </Card>
+      </Section>
+
+      {/* 27 - Saúde e Preparo Físico */}
+      <Section id="saude-fitness" icon={HeartPulse} kicker="Capítulo 27" title="Saúde e preparo físico: como chegar pronto para mergulhar">
+        <p>Mergulho não exige atleta, mas exige condicionamento mínimo. Cardio ruim, sobrepeso descontrolado, sinusite crônica ou problema de ouvido podem virar problema sério a 18 metros de profundidade.</p>
+        <div className="grid md:grid-cols-2 gap-4">
+          <Card title="Antes da viagem (1–2 meses)" tone="good">
+            <Bul items={[
+              ["Cardio leve","30 min, 3x por semana — caminhada, corrida, natação"],
+              ["Natação","prática a respiração e flutuabilidade"],
+              ["Exercícios de equalização","prática de Valsalva e Frenzel — YouTube ensina"],
+              ["Check-up","cardio, otorrino, dentista (dor de dente subaquática é tortura)"],
+              ["Vacinas em dia","febre amarela, hepatites, tétano"],
+            ]} />
+          </Card>
+          <Card title="Cuidados no dia a dia" tone="warn">
+            <Bul items={[
+              ["Hidratação","desidratação aumenta risco de descompressão — beba 3L/dia"],
+              ["Álcool","evite na noite anterior — ressaca + mergulho é receita de problema"],
+              ["Sono","mínimo 7h antes de mergulhar"],
+              ["Alimentação","refeição leve 1–2h antes; nada de feijoada"],
+              ["Sinusite/resfriado","NÃO mergulhe — barotrauma de seios paranasais é grave"],
+              ["Medicamentos","antihistamínicos com cuidado, alguns causam sonolência em profundidade"],
+            ]} />
+          </Card>
+        </div>
+        <Card title="🧠 Saúde mental também conta" tone="info">
+          Ansiedade em água é comum e não é fraqueza. Avise o instrutor antes do curso. Boa escola adapta ritmo, ensina técnicas de respiração e nunca empurra ninguém. Pânico subaquático é uma das principais causas de acidente — prefira voltar à superfície a engolir o medo.
+        </Card>
+      </Section>
+
+      {/* 28 - Vida Marinha */}
+      <Section id="vida-marinha" icon={Fish} kicker="Capítulo 28" title="Vida marinha: o que você pode encontrar (e quando)">
+        <p>Vida marinha nunca tem garantia, mas há padrões. Veja o que esperar em cada região e época:</p>
+        <div className="grid md:grid-cols-2 gap-4">
+          <Card title="🌊 Golfo (Koh Tao/Phangan/Samui)">
+            <Bul items={[
+              ["Tubarão-baleia","raros encontros, mais comuns mar-mai e ago-out"],
+              ["Tubarão-touro (bull shark)","Sail Rock, principalmente fev-mai"],
+              ["Tubarões-de-pontas-pretas","comuns em Shark Island e Aow Leuk"],
+              ["Barracudas, carangueijos, peixes-leão, polvos","quase todo mergulho"],
+              ["Tartarugas","frequentes em Shark Island e Hin Wong"],
+            ]} />
+          </Card>
+          <Card title="🌅 Andaman (Phuket/Lanta/Phi Phi)">
+            <Bul items={[
+              ["Tubarão-leopardo (zebra shark)","Phi Phi, Shark Point, Koh Haa"],
+              ["Cavalos-marinhos","Koh Doc Mai, Anemone Reef"],
+              ["Sépias e polvos","quase certeza"],
+              ["Mantas e tubarão-baleia","Hin Daeng/Muang em fev–abr"],
+              ["Peixes-frade, peixes-papagaio gigantes","abundantes"],
+            ]} />
+          </Card>
+          <Card title="🏝️ Similan / Surin / Richelieu">
+            <Bul items={[
+              ["Tubarão-baleia","Richelieu Rock, pico em fev–abr"],
+              ["Mantas oceânicas","Koh Bon, dez–abr"],
+              ["Tartarugas-de-pente","abundantes"],
+              ["Atuns, barracudas, jacks","cardumes enormes"],
+              ["Frogfish, ghost pipefish, nudibranchs","macro raro em Richelieu"],
+            ]} />
+          </Card>
+          <Card title="🚫 O que NÃO tocar — nunca">
+            <Bul items={[
+              ["Peixe-pedra (stonefish)","veneno doloroso, pode matar — camuflado no fundo"],
+              ["Peixe-leão","espinhos venenosos — não persiga"],
+              ["Ouriços-do-mar","espinhos quebram dentro da pele"],
+              ["Coral-de-fogo","queima por horas"],
+              ["Águas-vivas tipo box","raras mas perigosas — vinagre ajuda no acidente"],
+              ["Cones-do-mar","conchas bonitas que matam — nunca pegue"],
+            ]} />
+          </Card>
+        </div>
+      </Section>
+
+      {/* 29 - Fotografia subaquática */}
+      <Section id="fotografia" icon={Camera} kicker="Capítulo 29" title="Fotografia e vídeo subaquático: dicas práticas">
+        <p>Mergulho com câmera é um nível a mais de atenção. Iniciante deve focar no mergulho — câmera só depois que flutuabilidade está perfeita.</p>
+        <div className="grid md:grid-cols-2 gap-4">
+          <Card title="Para começar barato" tone="good">
+            <Bul items={[
+              ["GoPro Hero 11/12/13","melhor custo-benefício até 10m"],
+              ["Caixa estanque oficial","aceita até 60m com dive housing"],
+              ["Filtro vermelho","essencial além de 5m — sem ele tudo vira azul"],
+              ["Bastão flutuante","evita perder no fundo do mar"],
+            ]} />
+          </Card>
+          <Card title="Para evoluir">
+            <Bul items={[
+              ["Mirrorless + housing","Olympus TG-7, Sony A7, Canon R — investimento alto"],
+              ["Strobes / luzes de vídeo","cor real além de 10m"],
+              ["Curso PADI Digital Underwater Photographer","2 dias, vale a pena"],
+              ["Edição","Lightroom Mobile + filtro automático já transforma fotos"],
+            ]} />
+          </Card>
+        </div>
+        <Card title="📐 Regras de ouro" tone="info">
+          <Bul items={[
+            "Flutuabilidade perfeita PRIMEIRO — câmera é distração",
+            "Aproxime-se devagar — peixe foge de movimento brusco",
+            "Nunca persiga, encurrale ou toque vida marinha pela foto",
+            "Não use flash em peixes pequenos (especialmente cavalos-marinhos) — pode cegar",
+            "Bom enquadramento > vida marinha rara mal fotografada",
+            "Backup das fotos todo dia — cartão de memória pode falhar no calor",
+          ]} />
+        </Card>
+        <Card tone="warn">⚠️ Nunca arrisque sua segurança ou a vida marinha por uma foto. Foto de Instagram não vale lesão na pele do recife — ou na sua.</Card>
+      </Section>
+
+      {/* 30 - Conservação */}
+      <Section id="conservacao" icon={Leaf} kicker="Capítulo 30" title="Mergulho responsável: proteja o recife que você veio ver">
+        <p>O recife tailandês está sob pressão: branqueamento, turismo de massa, pesca predatória, plástico. Cada mergulhador faz diferença — para melhor ou para pior.</p>
+        <div className="grid md:grid-cols-2 gap-4">
+          <Card title="✅ Faça" tone="good">
+            <Bul items={[
+              "Use protetor solar reef-safe (sem oxibenzona/octinoxato)",
+              "Mantenha flutuabilidade — não pise, não chute, não arraste",
+              "Mantenha distância — 1 metro mínimo de coral e fauna",
+              "Recolha lixo que encontrar no mergulho",
+              "Escolha escola/operador com prática 'Green Fins' ou PADI Eco Center",
+              "Recuse passeios com cativeiro de animais marinhos",
+              "Evite consumir tubarão, raia e peixe-papagaio em restaurantes",
+            ]} />
+          </Card>
+          <Card title="❌ Não faça" tone="warn">
+            <Bul items={[
+              "Não toque, alimente ou monte em tartaruga, raia ou tubarão",
+              "Não colete conchas, corais, areia ou estrelas — é crime na Tailândia",
+              "Não use luvas em mergulho recreativo (estimula tocar coisas)",
+              "Não jogue bituca, plástico ou comida no mar",
+              "Não compre souvenirs de coral, tartaruga, marfim ou tubarão",
+              "Não mergulhe com âncora largada em coral — exija boia de amarração",
+            ]} />
+          </Card>
+        </div>
+        <Card title="🌱 ONGs e projetos para apoiar ou se voluntariar" tone="info">
+          <Bul items={[
+            ["Save Koh Tao","conservação local, mergulhos de limpeza, plantio de coral"],
+            ["New Heaven Reef Conservation Program","cursos de marine conservation em Koh Tao"],
+            ["Eco Koh Tao","programa estruturado de conservação para mergulhadores"],
+            ["Green Fins Thailand","certifica operadores com práticas sustentáveis"],
+          ]} />
+        </Card>
+      </Section>
+
+      {/* 31 - Conclusão */}
+      <Section id="conclusao" icon={Waves} kicker="Capítulo 31" title="Conclusão: o caminho do mergulhador brasileiro na Tailândia">
         <p>A Tailândia é um dos melhores lugares do mundo para começar. Mas o erro é achar que todo curso é igual. A melhor escolha não é a mais barata — é a que te ensina com calma, respeita seu ritmo e forma um mergulhador de verdade.</p>
         <Card title="🎯 Para a maioria dos brasileiros">
           <Bul items={[
