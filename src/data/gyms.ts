@@ -22,10 +22,8 @@ import bullImg from "@/assets/gyms/bull-krabi.jpg";
 import emeraldImg from "@/assets/gyms/emerald-krabi.jpg";
 import lantaComplexImg from "@/assets/gyms/lanta-complex.jpg";
 import lantaDejpayakImg from "@/assets/gyms/lanta-dejpayak.jpg";
-import freedomImg from "@/assets/gyms/freedom-kohlanta.jpg";
 import songthaiImg from "@/assets/gyms/songthai-phiphi.jpg";
 import reggaeImg from "@/assets/gyms/reggae-phiphi.jpg";
-import phiphiGymImg from "@/assets/gyms/phiphi-gym.jpg";
 
 export interface GymData {
   image: string;
