@@ -91,23 +91,22 @@ const Reveal = ({
   );
 };
 
-/* ---------- Countdown ---------- */
-const Countdown = ({ hours = 24 }: { hours?: number }) => {
-  const [t, setT] = useState({ h: 0, m: 0, s: 0 });
+/* ---------- Countdown (promo 15 min) ---------- */
+const Countdown = ({ minutes = 15 }: { minutes?: number; hours?: number }) => {
+  const [t, setT] = useState({ m: 0, s: 0 });
   useEffect(() => {
-    const end = Date.now() + hours * 3600000;
+    const end = Date.now() + minutes * 60000;
     const tick = () => {
       const d = Math.max(0, end - Date.now());
       setT({
-        h: Math.floor(d / 3600000),
-        m: Math.floor((d / 60000) % 60),
+        m: Math.floor(d / 60000),
         s: Math.floor((d / 1000) % 60),
       });
     };
     tick();
     const id = setInterval(tick, 1000);
     return () => clearInterval(id);
-  }, [hours]);
+  }, [minutes]);
   const Box = ({ v, l }: { v: number; l: string }) => (
     <div className="glass-card rounded-2xl px-5 py-4 min-w-[80px] md:min-w-[104px]">
       <div className="text-4xl md:text-5xl font-display font-bold text-primary tabular-nums tracking-editorial leading-none">
@@ -120,8 +119,6 @@ const Countdown = ({ hours = 24 }: { hours?: number }) => {
   );
   return (
     <div className="flex items-center justify-center gap-3 md:gap-4">
-      <Box v={t.h} l="Horas" />
-      <span className="text-2xl text-primary/40 font-light">:</span>
       <Box v={t.m} l="Min" />
       <span className="text-2xl text-primary/40 font-light">:</span>
       <Box v={t.s} l="Seg" />
@@ -319,7 +316,7 @@ const SalesPage = ({ c }: { c: SalesContent }) => (
             </p>
           </Reveal>
           <Reveal delay={120}>
-            <Countdown hours={24} />
+            <Countdown minutes={15} />
           </Reveal>
         </div>
         <hr className="hairline max-w-5xl mx-auto mt-16" />
