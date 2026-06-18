@@ -10,17 +10,17 @@ import { ilhasMeta } from "@/data/sales/ilhas";
 
 
 
-import heroImg from "@/assets/hero-lanterns.jpg";
+import heroImg from "@/assets/generated/lanternas-hero.png.asset.json";
 import heroFirePoi from "@/assets/hero-firepoi-phiphi.png.asset.json";
-import elephantImg from "@/assets/hero-elephants.jpg";
-import muayThaiImg from "@/assets/muay-thai-hero.jpg";
-import trilhasImg from "@/assets/trilhas/hero-trekking.jpg";
-import festasImg from "@/assets/festas/hero-thailand.jpg";
-import voluntariadoImg from "@/assets/voluntariado-hero.jpg";
-import gaysImg from "@/assets/gays-hero.jpg";
-import songkranImg from "@/assets/songkran-hero.jpg";
-import luaDeMelImg from "@/assets/luademel-hero.jpg";
-import massagemImg from "@/assets/sales/cursos-massagem.webp";
+import elephantImg from "@/assets/generated/elefantes-hero.png.asset.json";
+import muayThaiImg from "@/assets/generated/muay-thai-hero.png.asset.json";
+import trilhasImg from "@/assets/generated/trilhas-hero.png.asset.json";
+import festasImg from "@/assets/generated/festas-hero.png.asset.json";
+import voluntariadoImg from "@/assets/generated/voluntariado-hero.png.asset.json";
+import gaysImg from "@/assets/generated/gays-hero.png.asset.json";
+import songkranImg from "@/assets/generated/songkran-hero.png.asset.json";
+import luaDeMelImg from "@/assets/generated/lua-de-mel-hero.png.asset.json";
+import massagemImg from "@/assets/generated/cursos-massagem-hero.png.asset.json";
 import motosImg from "@/assets/sales/aluguel-motos.webp";
 import mergulhoImg from "@/assets/sales/mergulho.webp";
 import cafesImg from "@/assets/sales/cafes-coworkings.webp";
@@ -60,7 +60,7 @@ const salesPages: ProductCard[] = [
     path: "/festivaldaslanternas",
     emoji: "🏮",
     badge: "🔥 MAIS VENDIDO",
-    image: heroImg,
+    image: heroImg.url,
     urgency: "Hotéis esgotam 3 meses antes do festival!",
     socialProof: "4.200+ viajantes já compraram",
     originalPrice: "R$ 197",
@@ -75,7 +75,7 @@ const salesPages: ProductCard[] = [
       "Descubra os melhores santuários éticos, como evitar armadilhas turísticas e viver momentos inesquecíveis com os elefantes tailandeses.",
     path: "/santuariosdeelefantes",
     emoji: "🐘",
-    image: elephantImg,
+    image: elephantImg.url,
     badge: "⚡ NOVO",
     urgency: "87% dos turistas visitam o santuário errado!",
     socialProof: "2.800+ viajantes já compraram",
@@ -92,7 +92,7 @@ const salesPages: ProductCard[] = [
     path: "/muaythai",
     emoji: "🥊",
     badge: "🔥 POPULAR",
-    image: muayThaiImg,
+    image: muayThaiImg.url,
     urgency: "Últimas horas — 51% de desconto!",
     socialProof: "1.800+ lutadores já compraram",
     originalPrice: "R$ 197",
@@ -108,7 +108,7 @@ const salesPages: ProductCard[] = [
     path: "/guiatrilhasthai",
     emoji: "🥾",
     badge: "⚡ LANÇAMENTO",
-    image: trilhasImg,
+    image: trilhasImg.url,
     urgency: "Oferta de lançamento: 50% de desconto acaba hoje!",
     socialProof: "1.400+ trilheiros já compraram",
     originalPrice: "R$ 197",
@@ -124,7 +124,7 @@ const salesPages: ProductCard[] = [
     path: "/festas",
     emoji: "🔥",
     badge: "✨ COMPLETO",
-    image: festasImg,
+    image: festasImg.url,
     urgency: "Saiba onde estão as melhores noites de 2025!",
     socialProof: "Vivido por milhares de viajantes",
     originalPrice: "R$ 197",
@@ -140,7 +140,7 @@ const salesPages: ProductCard[] = [
     path: "/voluntariado-tailandia",
     emoji: "🌿",
     badge: "✨ INÉDITO",
-    image: voluntariadoImg,
+    image: voluntariadoImg.url,
     urgency: "Descubra como ajudar causas reais com segurança!",
     socialProof: "Novidade para brasileiros",
     originalPrice: "R$ 197",
@@ -156,7 +156,7 @@ const salesPages: ProductCard[] = [
     path: "/tailandia-para-gays",
     emoji: "🏳️‍🌈",
     badge: "✨ EXCLUSIVO",
-    image: gaysImg,
+    image: gaysImg.url,
     urgency: "Viaje com segurança e orgulho!",
     socialProof: "Indispensável para o público",
     originalPrice: "R$ 197",
@@ -172,7 +172,7 @@ const salesPages: ProductCard[] = [
     path: "/songkran-ano-novo-tailandes",
     emoji: "💦",
     badge: "🔥 ESSENCIAL",
-    image: songkranImg,
+    image: songkranImg.url,
     urgency: "Hospedagem esgota rápido para abril!",
     socialProof: "Planejamento para o festival",
     originalPrice: "R$ 197",
@@ -188,7 +188,7 @@ const salesPages: ProductCard[] = [
     path: "/lua-de-mel-tailandia",
     emoji: "💍",
     badge: "✨ ROMÂNTICO",
-    image: luaDeMelImg,
+    image: luaDeMelImg.url,
     urgency: "Não arrisque o momento mais importante!",
     socialProof: "Favorito dos casais",
     originalPrice: "R$ 197",
@@ -203,7 +203,7 @@ const salesPages: ProductCard[] = [
       "Onde estudar massagem tailandesa autêntica: escolas certificadas, visto de estudante, roteiros e como sair formado pagando 60% menos.",
     path: "/cursos-de-massagem",
     emoji: "🪷",
-    image: massagemImg,
+    image: massagemImg.url,
     badge: "🎓 CERTIFICAÇÃO",
     urgency: "Vagas limitadas nas escolas oficiais!",
     socialProof: "Indicado por 200+ alunos",
