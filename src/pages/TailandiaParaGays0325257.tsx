@@ -182,7 +182,7 @@ const TailandiaParaGays0325257 = () => {
           <Rainbow className="w-12 h-12 text-primary mx-auto mb-6" />
           <h1 className="font-display text-4xl sm:text-5xl text-foreground mb-4">Guia Tailândia para Gays e LGBTQIA+</h1>
           <p className="text-lg text-muted-foreground">Onde ficar, onde circular, o que evitar e como viver a Tailândia com liberdade, respeito e segurança.</p>
-          <p className="text-sm text-primary/80 mt-6 uppercase tracking-widest">22 capítulos · 40+ hotéis · roteiro 14 dias</p>
+          <p className="text-sm text-primary/80 mt-6 uppercase tracking-widest">30 capítulos · 40+ hotéis · roteiro 14 dias</p>
         </div>
       </header>
 
