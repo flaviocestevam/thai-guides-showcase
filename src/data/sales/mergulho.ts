@@ -97,10 +97,12 @@ export const mergulho: SalesContent = {
     },
   ],
   bonuses: [
-    { title: "Logbook digital completo", desc: "Template editável para registrar todos os seus mergulhos com fotos.", value: "R$ 47" },
-    { title: "Lista de hospedagens parceiras", desc: "Combos hospedagem + curso que reduzem 25% do orçamento.", value: "R$ 87" },
-    { title: "Glossário PADI em PT/EN", desc: "Todos os termos técnicos para acompanhar curso em inglês.", value: "R$ 37" },
-    { title: "Mapa dos dive sites", desc: "PDF com os 30 melhores pontos de mergulho da Tailândia, profundidade e dificuldade.", value: "R$ 67" },
+    { title: "Diretório de escolas com Google Maps + telefone", desc: "20+ centros verificados em Koh Tao, Phangan, Phuket, Khao Lak e Koh Lanta. Link do mapa e contato direto.", value: "R$ 127" },
+    { title: "Checklist pré-viagem 60→7 dias", desc: "Cronograma completo: documentos, equipamento, saúde e tecnologia, separado por mala.", value: "R$ 57" },
+    { title: "Guia de equipamento (R$/US$)", desc: "O que comprar, o que alugar, prioridade 1/2/3 e bagagem de voo sem pagar excesso.", value: "R$ 67" },
+    { title: "Seguro DAN + câmaras hiperbáricas", desc: "Como contratar o seguro certo e mapa das câmaras hiperbáricas da Tailândia.", value: "R$ 47" },
+    { title: "Logbook digital + Glossário PT/EN", desc: "Template editável para registrar mergulhos e todos os termos técnicos para acompanhar curso em inglês.", value: "R$ 47" },
+    { title: "Mapa dos 30 melhores dive sites", desc: "PDF com pontos de mergulho da Tailândia, profundidade, dificuldade e melhor época.", value: "R$ 67" },
     { title: "Grupo de divers brasileiros", desc: "Conexão com brasileiros mergulhando na Tailândia agora.", value: "R$ 97" },
   ],
   testimonials: [
