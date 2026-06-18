@@ -21,16 +21,16 @@ import gaysImg from "@/assets/generated/gays-hero.png.asset.json";
 import songkranImg from "@/assets/generated/songkran-hero.png.asset.json";
 import luaDeMelImg from "@/assets/generated/lua-de-mel-hero.png.asset.json";
 import massagemImg from "@/assets/generated/cursos-massagem-hero.png.asset.json";
-import motosImg from "@/assets/sales/aluguel-motos.webp";
-import mergulhoImg from "@/assets/sales/mergulho.webp";
-import cafesImg from "@/assets/sales/cafes-coworkings.webp";
-import reveillonImg from "@/assets/sales/reveillon.webp";
-import stripImg from "@/assets/sales/clubes-strip.webp";
-import goGoImg from "@/assets/sales/go-go-bars.webp";
-import topHostelsImg from "@/assets/sales/top-hostels.webp";
-import aventureirosImg from "@/assets/sales/aventureiros.webp";
-import beachClubsImg from "@/assets/sales/beach-clubs.webp";
-import petsImg from "@/assets/sales/pets.webp";
+import motosImg from "@/assets/generated/aluguel-motos-hero.png.asset.json";
+import mergulhoImg from "@/assets/generated/mergulho-hero.png.asset.json";
+import cafesImg from "@/assets/generated/cafes-coworkings-hero.png.asset.json";
+import reveillonImg from "@/assets/generated/reveillon-hero.png.asset.json";
+import stripImg from "@/assets/generated/clubes-strip-hero.png.asset.json";
+import goGoImg from "@/assets/generated/go-go-bars-hero.png.asset.json";
+import topHostelsImg from "@/assets/generated/top-hostels-hero.png.asset.json";
+import aventureirosImg from "@/assets/generated/aventureiros-hero.png.asset.json";
+import beachClubsImg from "@/assets/generated/beach-clubs-hero.png.asset.json";
+import petsImg from "@/assets/generated/pets-hero.png.asset.json";
 import criancasImg from "@/assets/sales/criancas.webp";
 import casasMassagemImg from "@/assets/sales/casas-massagem.webp";
 import retirosImg from "@/assets/sales/retiros.webp";
@@ -219,7 +219,7 @@ const salesPages: ProductCard[] = [
       "As 25 melhores locadoras testadas, sistema anti-golpe da caução, PID e rotas prontas como Mae Hong Son Loop.",
     path: "/aluguel-de-motos-tailandia",
     emoji: "🏍️",
-    image: motosImg,
+    image: motosImg.url,
     badge: "🛡️ ANTI-GOLPE",
     urgency: "1 em cada 4 turistas perde R$ 3.000!",
     socialProof: "10.000 km rodados",
@@ -235,7 +235,7 @@ const salesPages: ProductCard[] = [
       "Koh Tao, Similan, Phi Phi: 20 escolas avaliadas, roteiros do iniciante ao profissional e calendário das melhores ilhas.",
     path: "/mergulho-tailandia",
     emoji: "🤿",
-    image: mergulhoImg,
+    image: mergulhoImg.url,
     badge: "🌊 PADI",
     urgency: "Open Water em Koh Tao por R$ 1.200!",
     socialProof: "600+ mergulhos logados",
@@ -251,7 +251,7 @@ const salesPages: ProductCard[] = [
       "Mais de 200 cafés e coworkings testados com Wi-Fi medido em Mbps, tomadas contadas e ar avaliado. Para trabalhar de verdade.",
     path: "/cafes-e-coworkings-tailandia",
     emoji: "💻",
-    image: cafesImg,
+    image: cafesImg.url,
     badge: "🌐 NÔMADE",
     urgency: "Wi-Fi ruim derruba reunião com cliente!",
     socialProof: "1.500+ nômades brasileiros",
@@ -267,7 +267,7 @@ const salesPages: ProductCard[] = [
       "10 cidades comparadas, top 50 festas, hotéis com vista dos fogos e roteiros prontos de 28/12 a 02/01.",
     path: "/reveillon-tailandia",
     emoji: "🎆",
-    image: reveillonImg,
+    image: reveillonImg.url,
     badge: "🥂 RÉVEILLON 2026",
     urgency: "Hotéis bons esgotam em outubro!",
     socialProof: "5 Réveillons cobertos",
@@ -283,7 +283,7 @@ const salesPages: ProductCard[] = [
       "Bangkok, Pattaya e Phuket: distritos, lista negra de golpes, etiqueta local e ranking dos melhores. Sem moralismo, só informação prática.",
     path: "/clubes-de-strip-tailandia",
     emoji: "🎭",
-    image: stripImg,
+    image: stripImg.url,
     badge: "🔞 +18",
     urgency: "Golpe da conta inflada custa R$ 6.000!",
     socialProof: "100+ estabelecimentos avaliados",
@@ -299,7 +299,7 @@ const salesPages: ProductCard[] = [
       "Manual completo: glossário (bar fine, lady drink, off-fee), top 50 bares e estratégias para pagar exatamente o que vale.",
     path: "/go-go-bars-tailandia",
     emoji: "🍸",
-    image: goGoImg,
+    image: goGoImg.url,
     badge: "🔞 +18",
     urgency: "A diferença entre R$ 600 e R$ 4.000 é conhecimento!",
     socialProof: "150+ bares mapeados",
@@ -315,7 +315,7 @@ const salesPages: ProductCard[] = [
       "100 hostels testados em 12 cidades. Wi-Fi medido, vibe descrita, preço real e como reservar até 30% mais barato.",
     path: "/top-hostels-tailandia",
     emoji: "🛏️",
-    image: topHostelsImg,
+    image: topHostelsImg.url,
     badge: "🛏️ MOCHILEIRO",
     urgency: "Hostels bons esgotam em alta temporada!",
     socialProof: "100 hostels avaliados pessoalmente",
@@ -331,7 +331,7 @@ const salesPages: ProductCard[] = [
       "50 aventuras testadas: rapel, escalada, jungle trek, rafting, tirolesa e mergulho. Operadoras certificadas e lista negra.",
     path: "/tailandia-para-aventureiros",
     emoji: "⛰️",
-    image: aventureirosImg,
+    image: aventureirosImg.url,
     badge: "⛰️ RADICAL",
     urgency: "1 em 3 cai em operadora pirata!",
     socialProof: "70+ aventuras documentadas",
@@ -347,7 +347,7 @@ const salesPages: ProductCard[] = [
       "40 beach clubs avaliados em Phuket, Samui, Phangan e Krabi. Day pass, mínimos, DJs e como reservar com 40% off.",
     path: "/beach-clubs-tailandia",
     emoji: "🌅",
-    image: beachClubsImg,
+    image: beachClubsImg.url,
     badge: "🌅 SUNSET",
     urgency: "Consumo mínimo escondido pode custar R$ 1.200!",
     socialProof: "100+ pôr do sol testados",
@@ -363,7 +363,7 @@ const salesPages: ProductCard[] = [
       "Documentação, voos, hotéis pet-friendly verificados, veterinários 24h e praias liberadas. Tudo em português.",
     path: "/tailandia-para-pets",
     emoji: "🐶",
-    image: petsImg,
+    image: petsImg.url,
     badge: "🐶 PET-FRIENDLY",
     urgency: "Burocracia exige 6 meses de antecedência!",
     socialProof: "3 pets levados pessoalmente",
