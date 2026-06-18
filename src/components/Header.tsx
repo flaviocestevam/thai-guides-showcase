@@ -59,7 +59,9 @@ export const Header = () => {
             <a
               key={item.label}
               href={item.path}
-              className="text-sm font-body font-medium hover:text-primary transition-colors"
+              className={`text-sm font-body font-medium transition-colors hover:text-primary ${
+                isScrolled ? "text-foreground" : "text-white/90 drop-shadow-md"
+              }`}
             >
               {item.label}
             </a>
