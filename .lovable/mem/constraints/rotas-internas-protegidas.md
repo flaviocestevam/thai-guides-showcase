@@ -1,9 +1,9 @@
 ---
 name: Rotas internas protegidas
-description: `/guiatrilhasthai44` e `/muaythai5645` são guias pagos — nunca expor publicamente, mas conteúdo pode ser atualizado quando o usuário pedir explicitamente
+description: `/guiatrilhasthai44`, `/muaythai5645` e `/beachclubs8821` são guias pagos — nunca expor publicamente, mas conteúdo pode ser atualizado quando o usuário pedir explicitamente
 type: constraint
 ---
-Rotas `/guiatrilhasthai44` e `/muaythai5645` são GUIAS PAGOS.
+Rotas `/guiatrilhasthai44`, `/muaythai5645` e `/beachclubs8821` são GUIAS PAGOS.
 
 **Nunca:**
 - Linkar a partir de páginas públicas
