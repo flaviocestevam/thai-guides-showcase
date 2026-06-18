@@ -1,12 +1,8 @@
+import type { ReactNode } from "react";
+
 /**
  * Componente compartilhado de depoimentos.
  * Substitui as variantes duplicadas em festival/, lantern/ e muaythai/.
- *
- * Uso:
- *   <Testimonials
- *     title='O Que Nossos Clientes <span class="text-gradient-gold">Dizem</span>'
- *     items={[{ name, city, quote, img? }]}
- *   />
  */
 
 export type Testimonial = {
@@ -17,7 +13,7 @@ export type Testimonial = {
 };
 
 type Props = {
-  title: string; // pode conter HTML simples (span de gradiente)
+  title: ReactNode; // pode incluir <span> com gradiente, etc.
   subtitle?: string;
   items: Testimonial[];
   className?: string;
@@ -26,10 +22,9 @@ type Props = {
 const Testimonials = ({ title, subtitle, items, className = "" }: Props) => (
   <section className={`py-20 md:py-28 px-4 ${className}`}>
     <div className="max-w-6xl mx-auto">
-      <h2
-        className="text-3xl md:text-5xl font-display font-bold text-center mb-4"
-        dangerouslySetInnerHTML={{ __html: title }}
-      />
+      <h2 className="text-3xl md:text-5xl font-display font-bold text-center mb-4">
+        {title}
+      </h2>
       {subtitle && (
         <p className="text-center text-muted-foreground mb-12">{subtitle}</p>
       )}

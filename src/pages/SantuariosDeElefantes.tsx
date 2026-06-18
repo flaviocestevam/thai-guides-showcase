@@ -302,7 +302,7 @@ const SantuariosDeElefantes = () => {
         {/* HERO */}
 
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <img src={HERO_IMG} alt="Elefante em santuário na Tailândia" fetchPriority="high" decoding="async" className="absolute inset-0 w-full h-full object-cover" width={1920} height={1080} />
+        <img src={HERO_IMG} alt="Elefante em santuário na Tailândia" {...({ fetchpriority: "high" } as any)} decoding="async" className="absolute inset-0 w-full h-full object-cover" width={1920} height={1080} />
         <div className="absolute inset-0 bg-gradient-to-b from-forest-dark/80 via-forest-dark/60 to-forest-dark/90" />
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
           <div className="flex flex-wrap items-center justify-center gap-4 mb-6">
