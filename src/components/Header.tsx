@@ -53,34 +53,26 @@ export const Header = () => {
           </span>
         </Link>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-8">
-          {menuItems.map((item) => (
-            <a
-              key={item.label}
-              href={item.path}
-              className={`text-sm font-body font-medium transition-colors hover:text-primary ${
-                isScrolled ? "text-foreground" : "text-white/90 drop-shadow-md"
-              }`}
-            >
-              {item.label}
-            </a>
-          ))}
-          <Button asChild className="rounded-full px-6 font-bold shadow-lg hover:shadow-primary/20">
+        {/* Desktop CTA + Menu */}
+        <div className="flex items-center gap-3">
+          <Button asChild className="hidden sm:inline-flex rounded-full px-6 font-bold shadow-lg hover:shadow-primary/20">
             <a href="/#guias">
               <ShoppingCart className="w-4 h-4 mr-2" />
               Quero o Guia
             </a>
           </Button>
-        </nav>
-
-        {/* Mobile Toggle */}
-        <button
-          className={`lg:hidden p-2 ${isScrolled ? "text-foreground" : "text-white drop-shadow-md"}`}
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        >
-          {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </button>
+          <button
+            aria-label="Abrir menu"
+            className={`p-2 rounded-md transition-colors ${
+              isScrolled
+                ? "text-foreground hover:bg-muted"
+                : "text-white drop-shadow-md hover:bg-white/10"
+            }`}
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
