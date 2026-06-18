@@ -84,7 +84,7 @@ export const Header = () => {
                 <a
                   key={item.label}
                   href={item.path}
-                  className="text-sm md:text-base font-body font-semibold py-2 px-3 rounded-md hover:bg-muted hover:text-primary transition-colors border border-border/40"
+                  className="text-sm md:text-base font-body font-semibold py-2 px-3 rounded-md text-foreground hover:bg-muted hover:text-primary transition-colors border border-border/40"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.label}
