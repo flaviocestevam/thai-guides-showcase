@@ -1001,7 +1001,7 @@ const LuaDeMel8272524 = () => {
         ))}
       </Section>
 
-      <Section n="26" title="Resumo final" icon={Heart}>
+      <Section n="34" title="Resumo final" icon={Heart}>
         <p>A Tailândia pode ser uma lua de mel inesquecível. Mas não porque qualquer roteiro serve. Ela fica especial quando vocês escolhem bem:</p>
         <Bul items={["A época certa", "A ilha certa", "O hotel certo", "O ritmo certo", "Os transfers certos", "As experiências certas", "Os dias livres certos"]} />
         <Card className="bg-primary/5 border-primary/20">
