@@ -67,22 +67,32 @@ const Festas = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/50 to-background" />
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
           <p className="text-sm md:text-base font-bold tracking-[0.3em] uppercase text-primary mb-4">
-            Guia Definitivo 2025
+            🌙 Guia da Noite Tailandesa — Edição 2025
           </p>
-          <h1 className="text-5xl md:text-8xl font-display font-black mb-6 leading-none">
+          <h1 className="text-4xl md:text-7xl font-display font-black mb-6 leading-tight">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-pink-500 to-violet-500">
-              Festas na Tailândia
+              Onde sair à noite em cada uma das 9 cidades da Tailândia
             </span>
           </h1>
-          <p className="text-base md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10">
-            Tudo que você precisa saber sobre as melhores festas, baladas e experiências noturnas em 9 cidades incríveis
+          <p className="text-base md:text-xl text-muted-foreground max-w-2xl mx-auto mb-6">
+            Sem cair em cilada, sem pagar preço de turista e sem perder a melhor festa da semana — o mapa pronto pra você usar desde a primeira noite.
           </p>
+          <div className="bg-card/60 backdrop-blur-sm border border-primary/30 rounded-xl px-6 py-4 max-w-2xl mx-auto mb-8">
+            <p className="text-sm md:text-base text-foreground leading-relaxed">
+              ⚠️ <strong>Leia até o fim</strong> — existe um erro que quase todo brasileiro comete na primeira noite em Bangkok e que custa, em média, <strong className="text-destructive">R$ 400 em uma única saída</strong>. Te conto qual é mais abaixo.
+            </p>
+          </div>
           <a
-            href="#cities"
+            href="#oferta"
             className="inline-flex items-center gap-2 bg-gradient-to-r from-pink-500 to-primary text-primary-foreground font-bold text-lg px-8 py-4 rounded-full transition-all hover:scale-105 hover:shadow-[0_0_30px_hsl(var(--primary)/0.4)]"
           >
-            Explorar Cidades <ArrowDown className="w-5 h-5" />
+            🌃 QUERO MEU GUIA DA NOITE AGORA <ArrowDown className="w-5 h-5" />
           </a>
+          <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6 text-xs md:text-sm text-muted-foreground mt-6">
+            <span>✅ Pagamento 100% Seguro</span>
+            <span>✅ Entrega Imediata</span>
+            <span>✅ Garantia de 7 dias</span>
+          </div>
         </div>
       </section>
         {/* Dor e Problema */}
