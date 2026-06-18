@@ -5,7 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import {
   Check, X, Shield, MapPin, Heart, Sparkles, Users, Hotel, Martini,
-  Plane, Info, Star, BookOpen, MessageCircle, Gift, Award, Calendar, Map, Languages
+  Plane, Info, Star, BookOpen, MessageCircle, Gift, Award, Calendar, Map, Languages,
+  Smartphone, Dumbbell, Sun, Scale, Music, Wallet
 } from "lucide-react";
 
 const PURPLE = "#7C3AED";
