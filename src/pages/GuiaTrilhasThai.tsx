@@ -707,16 +707,16 @@ const GuiaTrilhasThai = () => {
               </div>
               <div className="mt-6 flex gap-4 items-start text-left">
                 <div className="w-12 h-12 rounded-xl bg-elephant-gold/10 flex items-center justify-center shrink-0">
-                  <Camera className="w-6 h-6 text-elephant-gold" />
+                  <Compass className="w-6 h-6 text-elephant-gold" />
                 </div>
                 <div>
                   <div className="flex items-center gap-3 mb-2 flex-wrap">
-                    <h3 className="font-display text-xl font-bold text-elephant-fg">Mapa de Mirantes Fotográficos</h3>
+                    <h3 className="font-display text-xl font-bold text-elephant-fg">Trilhas Secretas Pouco Conhecidas</h3>
                     <span className="text-elephant-muted-fg line-through text-sm">R$ 47</span>
                     <span className="text-forest font-bold text-sm">GRÁTIS</span>
                   </div>
                   <p className="text-elephant-muted-fg text-sm leading-relaxed">
-                    Coordenadas exatas dos melhores pontos para sunrise e sunset em cada trilha — incluindo ângulos, horários ideais e dicas de fotografia.
+                    Capítulo dedicado a trilhas fora do circuito turístico — com nível, melhor época e como chegar sem agência.
                   </p>
                 </div>
               </div>

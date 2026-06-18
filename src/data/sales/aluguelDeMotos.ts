@@ -95,8 +95,11 @@ export const aluguelDeMotos: SalesContent = {
     },
   ],
   bonuses: [
-    { title: "Scripts em tailandês", desc: "Frases prontas para gasolineiro, polícia, mecânico e locadora — pronto para usar offline.", value: "R$ 47" },
-    { title: "Calculadora de combustível", desc: "Fórmula + custos já calculados das principais rotas em THB e R$.", value: "R$ 37" },
+    { title: "Scripts em tailandês prontos", desc: "Frases para gasolineiro, polícia, mecânico, locadora e emergência — Capítulo 20, pronto para usar offline.", value: "R$ 47" },
+    { title: "Calculadora de combustível", desc: "Fórmula + custos já calculados das principais rotas em THB e R$ — Capítulo 12.", value: "R$ 37" },
+    { title: "Checklist de vistoria 12 pontos", desc: "O passo a passo que torna o golpe da 'moto arranhada' impossível — Capítulo 7.", value: "R$ 57" },
+    { title: "Protocolo anti-golpe da caução", desc: "Vídeo de entrega, o que assinar, o que NÃO entregar e o que fotografar — Capítulos 4 a 6.", value: "R$ 67" },
+    { title: "Lista de apps offline indispensáveis", desc: "Navegação, tradução, postos e emergência — Capítulo 17.", value: "R$ 37" },
   ],
   testimonials: [
     { name: "Carlos M.", city: "São Paulo", text: "Tentaram me aplicar o golpe da caução em Phuket. Mostrei o vídeo de entrega e o cara recuou. Esse guia me salvou R$ 4.000." },
