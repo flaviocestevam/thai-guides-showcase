@@ -30,6 +30,7 @@ export type SalesContent = {
   heroWarning: string;
   heroBgGradient: string;
   heroEmoji: string;
+  heroImage?: string;
   ctaLink: string;
   ctaText: string;
   pains: { icon?: string; title: string; desc: string }[];
@@ -226,14 +227,27 @@ const SalesPage = ({ c }: { c: SalesContent }) => (
       <section
         className={`relative min-h-[92vh] flex items-center justify-center overflow-hidden ${c.heroBgGradient}`}
       >
+        {/* Hero background image */}
+        {c.heroImage && (
+          <img
+            src={c.heroImage}
+            alt=""
+            aria-hidden="true"
+            className="absolute inset-0 w-full h-full object-cover opacity-60"
+            width={1536}
+            height={1024}
+          />
+        )}
         {/* Mesh + orbs */}
         <div className="absolute inset-0 bg-mesh" />
         <div className="orb w-[520px] h-[520px] -top-40 -left-40" style={{ background: "hsl(var(--primary) / 0.5)" }} />
         <div className="orb w-[420px] h-[420px] top-1/3 -right-32" style={{ background: "hsl(var(--accent) / 0.45)" }} />
-        <div className="absolute inset-0 opacity-[0.07] text-[28rem] flex items-center justify-center pointer-events-none select-none">
-          {c.heroEmoji}
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/50 to-background" />
+        {!c.heroImage && (
+          <div className="absolute inset-0 opacity-[0.07] text-[28rem] flex items-center justify-center pointer-events-none select-none">
+            {c.heroEmoji}
+          </div>
+        )}
+        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/70 to-background" />
         {/* Grain */}
         <div
           className="absolute inset-0 opacity-[0.04] pointer-events-none mix-blend-overlay"
