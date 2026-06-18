@@ -135,26 +135,26 @@ const Festas = () => {
               </div>
               <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">Saudade de um Reggaeton?</h2>
               <p className="text-muted-foreground max-w-2xl">
-                Sabemos que depois de algumas semanas ouvindo música tailandesa e EDM, o brasileiro sente falta de um tempero latino. Listamos os melhores picos de Salsa, Bachata e Reggaeton.
+                Depois de algumas semanas de música tailandesa e EDM, bate aquela falta de um tempero latino. Dentro do guia você recebe a lista completa de bares de Salsa, Bachata e Reggaeton em Bangkok e Phuket — com endereço, melhor noite e até o código secreto pra entrar em um deles.
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-card border border-primary/20 p-8 rounded-3xl flex gap-6 items-start hover:shadow-lg transition-all">
-                <div className="bg-primary/10 p-4 rounded-2xl text-primary font-black text-2xl">01</div>
+                <div className="bg-primary/10 p-4 rounded-2xl text-primary font-black text-2xl">🔒</div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Havana Social (Bangkok)</h3>
+                  <h3 className="text-xl font-bold mb-2">2 bares de Salsa em Bangkok</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    O segredo mais bem guardado de Bangkok. Você entra por uma cabine telefônica antiga usando um código secreto e cai direto em Cuba nos anos 40. Salsa e drinks de primeira.
+                    Um deles você só entra usando um código secreto numa cabine telefônica antiga. <strong>Nome, endereço e código completos dentro do guia.</strong>
                   </p>
                 </div>
               </div>
               <div className="bg-card border border-primary/20 p-8 rounded-3xl flex gap-6 items-start hover:shadow-lg transition-all">
-                <div className="bg-primary/10 p-4 rounded-2xl text-primary font-black text-2xl">02</div>
+                <div className="bg-primary/10 p-4 rounded-2xl text-primary font-black text-2xl">🔒</div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Revolucion Cocktail (BKK & Phuket)</h3>
+                  <h3 className="text-xl font-bold mb-2">Ponto de encontro latino em Phuket</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    Vibe latina raiz com bartenders que fazem shows com fogo e música que vai do Reggaeton clássico aos hits atuais. O ponto de encontro oficial dos latinos na ilha.
+                    Reggaeton clássico, hits atuais e o lugar onde os brasileiros e latinos da ilha se cruzam toda semana. <strong>Endereço e melhor dia dentro do guia.</strong>
                   </p>
                 </div>
               </div>
