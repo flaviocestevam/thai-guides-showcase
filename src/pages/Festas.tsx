@@ -348,55 +348,54 @@ const Festas = () => {
                 <AlertTriangle className="w-8 h-8 text-destructive animate-pulse" />
               </div>
               <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">
-                Guia Noite +18: Distritos e Segurança
+                Capítulo Noite +18: Distritos e Segurança
               </h2>
               <p className="text-muted-foreground max-w-2xl text-lg">
-                Se você busca a famosa "Adult Nightlife" da Tailândia, precisa saber onde estão os distritos oficiais e como não ser extorquido.
+                Quem busca a "Adult Nightlife" tailandesa precisa saber onde estão os distritos oficiais e como não ser extorquido. Tudo isso está mapeado dentro do guia — aqui você vê só uma amostra.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-              {/* Distrito 1 */}
               <div className="bg-card border border-primary/20 p-8 rounded-3xl relative overflow-hidden group">
+                <span className="absolute top-3 right-3 bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-full">🔒 No guia</span>
                 <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
-                  <MapPin className="w-5 h-5 text-primary" /> Nana Plaza & Soi Cowboy
+                  <MapPin className="w-5 h-5 text-primary" /> 2 distritos em Bangkok
                 </h3>
                 <p className="text-sm text-muted-foreground mb-4">
-                  Os dois maiores distritos de Bangkok. Nana é um complexo fechado de 3 andares, enquanto Cowboy é uma rua neon icônica. 
+                  Um complexo fechado de 3 andares + uma rua neon icônica. Mapa dos dois lado a lado, horários e preço justo — dentro do guia.
                 </p>
                 <span className="text-xs font-bold text-primary">Melhor para: Gogo Bars e Shows</span>
               </div>
 
-              {/* Distrito 2 */}
               <div className="bg-card border border-primary/20 p-8 rounded-3xl relative overflow-hidden group">
+                <span className="absolute top-3 right-3 bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-full">🔒 No guia</span>
                 <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
-                  <MapPin className="w-5 h-5 text-primary" /> Walking Street (Pattaya)
+                  <MapPin className="w-5 h-5 text-primary" /> A capital da noite adulta
                 </h3>
                 <p className="text-sm text-muted-foreground mb-4">
-                  A capital mundial da noite adulta. Centenas de clubes de strip e bares de gogo concentrados em 1km de pura luz neon.
+                  1 km de pura luz neon com centenas de bares. Quais valem a pena, quais são cilada e por onde entrar — destrinchado no guia.
                 </p>
                 <span className="text-xs font-bold text-primary">Melhor para: Festas Intensas</span>
               </div>
 
-              {/* Distrito 3 */}
               <div className="bg-card border border-primary/20 p-8 rounded-3xl relative overflow-hidden group">
+                <span className="absolute top-3 right-3 bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-full">🔒 No guia</span>
                 <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
-                  <MapPin className="w-5 h-5 text-primary" /> Bangla Road (Phuket)
+                  <MapPin className="w-5 h-5 text-primary" /> Distrito de Phuket
                 </h3>
                 <p className="text-sm text-muted-foreground mb-4">
-                  Onde a noite de Patong acontece. Os becos (Sois) escondem dezenas de bares com pole dance e shows variados.
+                  Onde a noite de Patong acontece. Os becos escondem dezenas de bares — o guia mostra quais entrar e quais passar reto.
                 </p>
                 <span className="text-xs font-bold text-primary">Melhor para: Mix de Praia e Balada</span>
               </div>
             </div>
 
             <div className="flex flex-col items-center text-center mb-10">
-              <h3 className="text-2xl font-bold mb-2">Alerta de Golpes Comuns</h3>
-              <p className="text-muted-foreground">O que acontece se você não seguir o guia</p>
+              <h3 className="text-2xl font-bold mb-2">Alerta dos golpes mais comuns</h3>
+              <p className="text-muted-foreground">Você reconhece o golpe nessa página. Como sair dele sem perder dinheiro está dentro do guia.</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* Golpe 1 */}
               <div className="bg-card border border-destructive/20 p-8 rounded-3xl relative overflow-hidden group">
                 <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
                   <Beer className="w-20 h-20 text-destructive" />
@@ -405,50 +404,48 @@ const Festas = () => {
                   <Ghost className="w-5 h-5 text-destructive" /> O Golpe do "Menu Amigo"
                 </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Em Gogo Bars e casas de strip, garçons podem te oferecer um drink com preço fixo, mas na hora da conta, taxas "escondidas" e "drinks para as moças" triplicam o valor.
+                  Drink com "preço fixo" que vira o triplo na hora da conta, com taxas escondidas e "drinks para as moças".
                 </p>
-                <div className="mt-6 p-3 bg-destructive/10 rounded-xl text-destructive text-xs font-bold uppercase tracking-wider text-center">
-                  Como fugir: Pague cada drink na hora
+                <div className="mt-6 p-3 bg-primary/10 rounded-xl text-primary text-xs font-bold uppercase tracking-wider text-center">
+                  🔒 Script anti-golpe no guia
                 </div>
               </div>
 
-              {/* Golpe 2 */}
               <div className="bg-card border border-destructive/20 p-8 rounded-3xl relative overflow-hidden group">
                 <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
                   <EyeOff className="w-20 h-20 text-destructive" />
                 </div>
                 <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
-                  <MapPinOff className="w-5 h-5 text-destructive" /> Ping Pong Shows
+                  <MapPinOff className="w-5 h-5 text-destructive" /> Show "Grátis" em Beco
                 </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Promessas de shows "gratuitos" ou baratos em ruas secundárias. Ao entrar, seguranças bloqueiam a saída e exigem pagamentos exorbitantes por uma única cerveja.
+                  Promoter chama pra um show barato em rua secundária. Ao entrar, seguranças bloqueiam a saída e cobram fortuna.
                 </p>
-                <div className="mt-6 p-3 bg-destructive/10 rounded-xl text-destructive text-xs font-bold uppercase tracking-wider text-center">
-                  Como fugir: Nunca siga "promoters" de rua
+                <div className="mt-6 p-3 bg-primary/10 rounded-xl text-primary text-xs font-bold uppercase tracking-wider text-center">
+                  🔒 Como identificar antes — no guia
                 </div>
               </div>
 
-              {/* Golpe 3 */}
               <div className="bg-card border border-destructive/20 p-8 rounded-3xl relative overflow-hidden group">
                 <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
                   <Smartphone className="w-20 h-20 text-destructive" />
                 </div>
                 <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
-                  <AlertTriangle className="w-5 h-5 text-destructive" /> Ladyboys e Furtos
+                  <AlertTriangle className="w-5 h-5 text-destructive" /> Abordagem com Furto
                 </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Infelizmente, em áreas como Sukhumvit e Bangla Road, grupos podem se aproximar de forma carinhosa para furtar correntes, relógios e celulares de turistas distraídos.
+                  Grupos que se aproximam de forma carinhosa pra furtar correntes, relógios e celulares de turistas distraídos.
                 </p>
-                <div className="mt-6 p-3 bg-destructive/10 rounded-xl text-destructive text-xs font-bold uppercase tracking-wider text-center">
-                  Como fugir: Mantenha distância e evite contato físico
+                <div className="mt-6 p-3 bg-primary/10 rounded-xl text-primary text-xs font-bold uppercase tracking-wider text-center">
+                  🔒 Protocolo de defesa no guia
                 </div>
               </div>
             </div>
 
-            <div className="mt-12 bg-destructive/10 border border-destructive/20 rounded-3xl p-8 md:p-12 text-center">
-              <h3 className="text-2xl font-bold mb-4">A Regra de Ouro para Gogo Bars e Strip</h3>
+            <div className="mt-12 bg-primary/10 border border-primary/20 rounded-3xl p-8 md:p-12 text-center">
+              <h3 className="text-2xl font-bold mb-4">+17 golpes catalogados no guia completo</h3>
               <p className="text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                Se você decidir visitar distritos como Nana Plaza, Soi Cowboy (Bangkok) ou Walking Street (Pattaya), lembre-se: <strong>Estabelecimentos oficiais raramente usam pessoas na rua para te puxar.</strong> Se alguém te abordar com "show grátis", é cilada. Vá apenas em locais conhecidos e pague cada rodada conforme ela chegar.
+                Cada golpe vem com: <strong>como identificar antes</strong>, <strong>frase exata pra se desvencilhar</strong> e <strong>qual app abrir no celular</strong> pra registrar/pedir ajuda. Está tudo destravado no momento da compra.
               </p>
             </div>
           </div>
