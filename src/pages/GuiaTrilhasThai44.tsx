@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Mountain, Compass, Map, Sparkles, Calendar, Lightbulb } from "lucide-react";
+import { Mountain, Compass, Map, Sparkles, Calendar, Lightbulb, Languages } from "lucide-react";
 import heroTrekking from "@/assets/trilhas/hero-trekking.jpg";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -299,6 +299,82 @@ const GuiaTrilhasThai44 = () => {
           </Card>
         </div>
       </section>
+
+      {/* CHAPTER 6 - FRASES EM TAILANDÊS */}
+      <section id="frases" className="py-20 md:py-28">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <Badge variant="outline" className="mb-4"><Languages className="w-3 h-3 mr-1" />Capítulo 6</Badge>
+          <h2 className="font-serif text-4xl md:text-5xl font-bold mb-3">Frases em Tailandês para Trilheiros</h2>
+          <p className="text-lg text-muted-foreground mb-12">Pronúncia simplificada. Mulher fala "kha" no fim, homem fala "khap".</p>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {[
+              { cat: "Cumprimentos e cortesia", items: [
+                ["Olá / Tchau", "Sawadee kha/khap", "sa-wa-dí cá / cáp"],
+                ["Obrigado(a)", "Khop khun kha/khap", "côp-cún cá / cáp"],
+                ["Por favor", "Karuna", "ca-ru-ná"],
+                ["Sim / Não", "Chai / Mai chai", "tchái / mái tchái"],
+                ["Desculpe", "Khor thot", "côr-tót"],
+              ]},
+              { cat: "Pedir caminho e direção", items: [
+                ["Onde fica a trilha?", "Sen thaang yùu thîi nǎi?", "sên-táang iú-tí-nái"],
+                ["É longe?", "Klai mái?", "clái mái"],
+                ["Quanto tempo a pé?", "Dern kìi naa-thii?", "dern ki naa-tí"],
+                ["Pode me mostrar no mapa?", "Chûay chíi thîi phǎenthîi", "tchúai-tchí-tí pên-tí"],
+                ["Estou perdido(a)", "Chǎn lǒng thaang", "tchán lóng-táang"],
+              ]},
+              { cat: "Água, comida e abrigo", items: [
+                ["Tem água?", "Mii náam mái?", "mí nám mái"],
+                ["Uma garrafa de água, por favor", "Náam khùat nèung kha/khap", "nám-cúat nâung"],
+                ["Onde compro comida?", "Súu aa-hǎan thîi nǎi?", "sú a-rán tí-nái"],
+                ["Tem banheiro?", "Mii hông náam mái?", "mí róng nám mái"],
+                ["Onde durmo hoje?", "Norn thîi nǎi keun níi?", "non-tí-nái cân-ní"],
+              ]},
+              { cat: "Guia local, transporte e preço", items: [
+                ["Quanto custa?", "Thâo rài?", "tâu-rai"],
+                ["Muito caro", "Phaeng mâak", "péng-mác"],
+                ["Pode baixar o preço?", "Lót dâai mái?", "lót-dái-mái"],
+                ["Você é guia?", "Khun pen guide mái?", "cun pên guide mái"],
+                ["Pode me levar até...?", "Pai sòng thîi... dâai mái?", "pai-sòng-tí... dái-mái"],
+              ]},
+              { cat: "Emergência e saúde", items: [
+                ["Ajuda!", "Chûay dûay!", "tchúai-dúai"],
+                ["Estou machucado(a)", "Chǎn bàat jèp", "tchán bát-tjép"],
+                ["Preciso de médico", "Tông kaan mǎo", "tóng-kan mór"],
+                ["Hospital, por favor", "Rohng phá-yaa-baan", "ron pa-ia-bán"],
+                ["Ligue para a polícia", "Thoh hǎa tam-rùat", "tô rá tam-rúat"],
+              ]},
+              { cat: "Natureza e clima", items: [
+                ["Está chovendo?", "Fǒn tòk mái?", "fón-tók-mái"],
+                ["Tem cobra aqui?", "Mii nguu thîi nîi mái?", "mí-ngu-tí-ni-mái"],
+                ["É seguro?", "Plòt phai mái?", "plòt-fái-mái"],
+                ["Onde nasce o sol aqui?", "Phra aathít khûen thîi nǎi?", "prá-atít kùn tí-nái"],
+                ["Bonito!", "Sǔai mâak!", "súai-mác"],
+              ]},
+            ].map((g) => (
+              <Card key={g.cat} className="p-6 border-border/50 bg-card/50">
+                <h3 className="font-serif text-lg font-bold mb-4 text-primary">{g.cat}</h3>
+                <ul className="space-y-3 text-sm">
+                  {g.items.map(([pt, th, pron]) => (
+                    <li key={pt} className="border-b border-border/30 pb-2 last:border-0 last:pb-0">
+                      <p className="text-foreground font-medium">{pt}</p>
+                      <p className="text-muted-foreground"><em>{th}</em> — <span className="text-primary/80">{pron}</span></p>
+                    </li>
+                  ))}
+                </ul>
+              </Card>
+            ))}
+          </div>
+
+          <Card className="p-6 mt-8 border-border/50 bg-gradient-to-br from-amber-500/5 to-primary/5">
+            <p className="text-sm text-muted-foreground">
+              <strong className="text-foreground">Dica:</strong> baixe o pacote de tailandês offline no Google Translate e mostre o texto na tela quando a pronúncia falhar. Em vila rural, escrever vale mais que falar.
+            </p>
+          </Card>
+        </div>
+      </section>
+
+
 
       {/* FOOTER */}
       <footer className="py-12 border-t border-border/50">
