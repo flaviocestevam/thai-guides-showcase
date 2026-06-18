@@ -48,7 +48,7 @@ export const Header = () => {
     >
       <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 group">
-          <span className="text-xl md:text-2xl font-display font-black tracking-tighter">
+          <span className={`text-xl md:text-2xl font-display font-black tracking-tighter ${isScrolled ? "" : "text-white drop-shadow-md"}`}>
             GUIAS <span className="text-primary group-hover:text-gradient-gold transition-all duration-300">TAILANDIA</span>
           </span>
         </Link>
@@ -59,7 +59,9 @@ export const Header = () => {
             <a
               key={item.label}
               href={item.path}
-              className="text-sm font-body font-medium hover:text-primary transition-colors"
+              className={`text-sm font-body font-medium transition-colors hover:text-primary ${
+                isScrolled ? "text-foreground" : "text-white/90 drop-shadow-md"
+              }`}
             >
               {item.label}
             </a>
@@ -74,7 +76,7 @@ export const Header = () => {
 
         {/* Mobile Toggle */}
         <button
-          className="lg:hidden p-2 text-foreground"
+          className={`lg:hidden p-2 ${isScrolled ? "text-foreground" : "text-white drop-shadow-md"}`}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
