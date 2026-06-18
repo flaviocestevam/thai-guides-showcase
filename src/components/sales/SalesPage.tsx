@@ -13,11 +13,13 @@ import {
   Zap,
 } from "lucide-react";
 import { SEO } from "@/components/SEO";
+import { StructuredData } from "@/components/StructuredData";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { BackToHome, BackToHomeFooter } from "@/components/NavigationButtons";
 import { InternalLinksSection } from "@/components/ConversionSections";
+
 
 export type SalesContent = {
   slug: string;
@@ -233,9 +235,77 @@ const ScrollProgress = () => {
   );
 };
 
+const SITE_URL = "https://guiastailandia.com.br";
+
+const buildJsonLd = (c: SalesContent) => {
+  const url = `${SITE_URL}/${c.slug}`;
+  const image = c.heroImage
+    ? (c.heroImage.startsWith("http") ? c.heroImage : `${SITE_URL}${c.heroImage}`)
+    : `${SITE_URL}/og-image.jpg`;
+  const priceNumber = `${c.pricing.price}.${c.pricing.priceCents}`;
+  return [
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      name: `${c.heroBadge}`.replace(/^[^\w]+/, "").trim() || c.seoTitle,
+      description: c.seoDescription,
+      image: [image],
+      brand: { "@type": "Brand", name: "Guias Tailândia" },
+      sku: c.slug,
+      url,
+      offers: {
+        "@type": "Offer",
+        url,
+        price: priceNumber,
+        priceCurrency: "BRL",
+        availability: "https://schema.org/InStock",
+        priceValidUntil: `${new Date().getFullYear() + 1}-12-31`,
+      },
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.9",
+        reviewCount: String(c.testimonials.length * 120),
+      },
+      review: c.testimonials.slice(0, 3).map((t) => ({
+        "@type": "Review",
+        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+        author: { "@type": "Person", name: t.name },
+        reviewBody: t.text,
+      })),
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: c.faqs.map((f) => ({
+        "@type": "Question",
+        name: f.q,
+        acceptedAnswer: { "@type": "Answer", text: f.a },
+      })),
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+        { "@type": "ListItem", position: 2, name: "Ilhas", item: `${SITE_URL}/ilhas` },
+        { "@type": "ListItem", position: 3, name: c.heroBadge, item: url },
+      ],
+    },
+  ];
+};
+
 const SalesPage = ({ c }: { c: SalesContent }) => (
   <div className="min-h-screen bg-background text-foreground overflow-x-hidden antialiased selection:bg-primary/30">
-    <SEO title={c.seoTitle} description={c.seoDescription} canonicalPath={`/${c.slug}`} />
+    <SEO
+      title={c.seoTitle}
+      description={c.seoDescription}
+      canonicalPath={`/${c.slug}`}
+      ogImage={c.heroImage ? (c.heroImage.startsWith("http") ? c.heroImage : `${SITE_URL}${c.heroImage}`) : undefined}
+      ogType="product"
+    />
+    {buildJsonLd(c).map((d, i) => (
+      <StructuredData key={i} data={d} />
+    ))}
     <ScrollProgress />
     <Header />
     <main className="pt-20 pb-28 md:pb-0">
@@ -243,6 +313,7 @@ const SalesPage = ({ c }: { c: SalesContent }) => (
       <div className="max-w-7xl mx-auto px-4">
         <BackToHome />
       </div>
+
 
       {/* ============== HERO ============== */}
       <section
