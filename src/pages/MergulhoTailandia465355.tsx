@@ -5,6 +5,7 @@ import {
   Anchor, AlertTriangle, Award, Calendar, CheckCircle2, DollarSign, Fish,
   GraduationCap, Info, LifeBuoy, MapPin, Ship, Shield, Sparkles, Waves,
   Wrench, BookOpen, ListChecks, HelpCircle, Hotel, Wallet, Compass, Languages,
+  HeartPulse, Camera, Leaf, Users, Phone,
 } from "lucide-react";
 
 const TEAL = "#0EA5A3";
