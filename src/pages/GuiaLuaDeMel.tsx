@@ -5,7 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import {
   Check, X, Shield, Heart, Sparkles, Palmtree, Hotel, Utensils, Plane, Camera,
-  Info, Star, BookOpen, MessageCircle, Gift, Award, Calendar, Map, DollarSign, Sun
+  Info, Star, BookOpen, MessageCircle, Gift, Award, Calendar, Map, DollarSign, Sun,
+  Luggage, Mail, Wifi, Stethoscope, Languages, Cake, Globe2
 } from "lucide-react";
 
 const ROSE = "#E11D74";
@@ -316,18 +317,26 @@ const GuiaLuaDeMel = () => {
             <h2 className="text-3xl md:text-5xl font-bold text-center mb-4">
               O Que <span style={{ color: ROSE }}>Vem no Guia</span>
             </h2>
-            <p className="text-center text-gray-500 mb-16 max-w-2xl mx-auto">PDF de 120+ páginas com mapas, links clicáveis, planilha de orçamento e atualizações grátis durante 2026.</p>
+            <p className="text-center text-gray-500 mb-16 max-w-2xl mx-auto">PDF de 180+ páginas com mapas, links clicáveis, planilha de orçamento, templates de e-mail prontos e atualizações grátis durante 2026.</p>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
               {[
-                { icon: Hotel, title: "40+ Resorts", desc: "Selecionados para casais" },
-                { icon: Palmtree, title: "Mapa das Ilhas", desc: "Qual encaixa no seu estilo" },
-                { icon: Utensils, title: "Restaurantes top", desc: "Romance garantido" },
-                { icon: Plane, title: "3 Roteiros Prontos", desc: "10, 14 e 21 dias" },
-                { icon: Heart, title: "Surpresas para o par", desc: "Pedidos, decoração, jantares" },
-                { icon: DollarSign, title: "Orçamento real", desc: "Em R$ e ฿ — planilha inclusa" },
-                { icon: Calendar, title: "Quando ir", desc: "Mês a mês, ilha a ilha" },
-                { icon: Map, title: "Transfers entre ilhas", desc: "Lancha, ferry e voo doméstico" },
-                { icon: Camera, title: "Spots de foto", desc: "Para o ensaio dos sonhos" },
+              { icon: Hotel, title: "40+ Resorts", desc: "Selecionados para casais" },
+              { icon: Palmtree, title: "Mapa das Ilhas", desc: "Qual encaixa no seu estilo" },
+              { icon: Utensils, title: "Restaurantes top", desc: "Romance garantido" },
+              { icon: Plane, title: "3 Roteiros Prontos", desc: "10, 14 e 21 dias" },
+              { icon: Heart, title: "Surpresas para o par", desc: "Pedidos, decoração, jantares" },
+              { icon: DollarSign, title: "Orçamento real", desc: "Em R$ e ฿ — planilha inclusa" },
+              { icon: Calendar, title: "Quando ir", desc: "Mês a mês, ilha a ilha" },
+              { icon: Map, title: "Transfers entre ilhas", desc: "Lancha, ferry e voo doméstico" },
+              { icon: Camera, title: "Spots de foto", desc: "Para o ensaio dos sonhos" },
+              { icon: Luggage, title: "Bagagem do casal", desc: "Lista pronta para lua de mel" },
+              { icon: Mail, title: "Upgrade de honeymoon", desc: "Templates de e-mail para o hotel" },
+              { icon: Wifi, title: "eSIM, Wi-Fi e apps", desc: "Conectados desde o pouso" },
+              { icon: Stethoscope, title: "Saúde e farmacinha", desc: "Vacinas + hospitais por região" },
+              { icon: Languages, title: "Etiqueta cultural", desc: "Como agir como casal na Tailândia" },
+              { icon: Cake, title: "Datas especiais", desc: "Aniversário, pedido, renovação de votos" },
+              { icon: Globe2, title: "Extensões", desc: "Combinar com Maldivas, Bali, Camboja" },
+              { icon: Plane, title: "Jet lag e despedida", desc: "Chegada e último dia sem estresse" },
               ].map((item, i) => (
                 <div key={i} className="text-center p-8 rounded-3xl bg-white hover:shadow-lg transition border border-pink-100">
                   <div className="inline-flex items-center justify-center w-20 h-20 rounded-full mb-6" style={{ backgroundColor: `${ROSE}1A`, color: ROSE }}>
