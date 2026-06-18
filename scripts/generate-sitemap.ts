@@ -94,7 +94,10 @@ writeFileSync(resolve("public/sitemap.xml"), xml);
 console.log(`✓ sitemap.xml written (${entries.length} URLs, lastmod=${today})`);
 
 // Lista de URLs para o IndexNow consumir logo após o build
+// Lista de URLs consumida pelo ping-indexnow.ts (postbuild).
+// IMPORTANTE: gravar fora de public/ — senão o Vite copia para dist/
+// e o arquivo ficaria publicamente acessível.
 writeFileSync(
-  resolve("public/.indexnow-urls.json"),
+  resolve(".indexnow-urls.json"),
   JSON.stringify(entries.map((e) => `${BASE_URL}${e.path}`), null, 2),
 );

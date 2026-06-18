@@ -14,7 +14,7 @@ async function main() {
   let urls: string[];
   try {
     urls = JSON.parse(
-      readFileSync(resolve("public/.indexnow-urls.json"), "utf8"),
+      readFileSync(resolve(".indexnow-urls.json"), "utf8"),
     );
   } catch {
     console.log("IndexNow: nenhum arquivo de URLs encontrado, pulando.");
