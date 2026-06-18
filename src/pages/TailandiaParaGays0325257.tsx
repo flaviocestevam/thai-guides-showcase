@@ -449,7 +449,223 @@ const TailandiaParaGays0325257 = () => {
         ))}
       </Section>
 
-      <Section n="22" title="Conclusão" icon={Rainbow}>
+      <Section n="22" title="Apps de paquera e segurança digital" icon={Smartphone}>
+        <p>Apps são parte central da vida gay na Tailândia. Saber qual usar em cada cidade e como se proteger evita 80% dos problemas que turistas relatam.</p>
+        <H3>Quais apps funcionam onde</H3>
+        <Bul items={[
+          "Grindr — universal, maior público em Bangkok, Phuket, Pattaya, Chiang Mai",
+          "Hornet — segundo maior, popular com latinos e expats",
+          "Tinder — funciona, público mais 'date' que sexo, bom para encontro com tailandeses",
+          "Jack'd — público mais ursino/maduro",
+          "Blued — gigante chinês, dominante entre tailandeses locais (interface parte em chinês/tailandês)",
+          "Romeo (Planet Romeo) — público europeu/expat, mais sério",
+          "Sniffies — pegou em Bangkok, mapa em tempo real",
+        ]} />
+        <H3>Regras de segurança (não negocie)</H3>
+        <Bul items={[
+          "Foto de perfil sem rosto reconhecível se você é discreto na vida real",
+          "Nunca envie nudes com rosto + tatuagem identificável para desconhecido",
+          "Primeiro encontro sempre em lugar público (café, lobby de hotel)",
+          "Compartilhe localização ao vivo com um amigo durante o encontro",
+          "Não dê o número do quarto antes de conhecer",
+          "Desconfie de perfil novo, fotos modelo demais, inglês perfeito demais — bot ou golpe",
+          "Se pedir dinheiro, transferência ou foto íntima rápido demais, bloqueie",
+          "Cuidado com convites para 'festa privada' em condomínio — pode envolver drogas e câmera escondida",
+        ]} />
+        <H3>Acompanhantes e trabalho sexual</H3>
+        <Bul items={[
+          "Trabalho sexual existe em alta escala mas é tecnicamente ilegal",
+          "Combine valor, tempo e o que está incluso ANTES",
+          "Pague em dinheiro, em mãos, ao final",
+          "Nunca deixe celular, carteira ou passaporte à vista",
+          "Encontros em hotel próprio (joiner-friendly) — confirme política do hotel",
+          "Nunca em local isolado ou indicado por terceiro com pressão",
+        ]} />
+      </Section>
+
+      <Section n="23" title="Saunas, gyms e espaços masculinos" icon={Dumbbell}>
+        <p>A Tailândia tem uma cena de saunas gays consolidada, especialmente em Bangkok. São espaços de socialização, descanso e sexo entre adultos. Regras básicas: respeito, consentimento, higiene e preservativo disponível.</p>
+        <H3>Bangkok</H3>
+        <Bul items={[
+          "Sauna Mania (Ratchada) — popular com locais, sessões temáticas",
+          "Chakran Sauna (Ari) — clássico, instalações modernas",
+          "The Heaven (Saphan Khwai) — grande, vários andares",
+          "Farose 2 (Silom) — central, fácil acesso",
+          "G.O.D. (Guys on Display) e similares — eventos em clubes (verificar agenda)",
+        ]} />
+        <H3>Phuket / Pattaya</H3>
+        <Bul items={[
+          "Sansuk Men Sauna (Patong) — referência em Phuket",
+          "Toy Boys Bar Complex e similares em Pattaya são bar/show, não sauna tradicional",
+          "Pattaya tem várias 'massage shops' gays em Boyztown — preço claro antes",
+        ]} />
+        <H3>Regras práticas</H3>
+        <Bul items={[
+          "Leve apenas o necessário; deixe relógio, joias e cartão extra no hotel",
+          "Use o cadeado (locker) — leve um pequeno se possível",
+          "Camisinha é responsabilidade sua — leve do hotel",
+          "'No' é 'no' — assédio é causa de expulsão e às vezes polícia",
+          "Maioria abre depois das 14h e tem horário de pico noite",
+          "Documento: muitas pedem passaporte/ID na entrada",
+        ]} />
+      </Section>
+
+      <Section n="24" title="Praias gays e ilhas mais amigáveis" icon={Sun}>
+        <H3>Praias com seção gay reconhecida</H3>
+        <Bul items={[
+          "Dongtan Beach (Jomtien, Pattaya) — a praia gay mais tradicional da Tailândia; rainbow flags, beach bars LGBTQIA+, jet ski, public e atmosfera relaxada",
+          "Paradise Beach Phuket — não é 'oficialmente' gay mas tem boa mistura",
+          "Patong Beach (Phuket) — área frente ao Paradise Complex tem fluxo gay durante o dia",
+          "Kata Noi (Phuket) — calma, casal, sem cena mas tranquila para mão dada",
+        ]} />
+        <H3>Ilhas mais amigáveis</H3>
+        <Bul items={[
+          "Koh Samui — top para casal gay (Bophut, Choeng Mon, Chaweng Noi)",
+          "Koh Phangan — vibração alternativa, festas eletrônicas, comunidade queer crescente fora da Full Moon",
+          "Koh Yao Noi — refúgio cinematográfico, sem cena mas extremamente respeitoso",
+          "Koh Lanta — ritmo lento, gay-friendly por ser cosmopolita",
+          "Koh Tao — diving, jovem, descontraído",
+        ]} />
+        <H3>Evitar como base se quer cena gay</H3>
+        <Bul items={[
+          "Koh Lipe — lindíssima mas isolada, sem cena",
+          "Krabi/Ao Nang — família e europeu, pouca vida noturna gay",
+          "Phi Phi — festa hétero mochileira",
+        ]} />
+      </Section>
+
+      <Section n="25" title="Leis: idade de consentimento, drogas, vape e cannabis" icon={Scale}>
+        <p>Ignorar a lei tailandesa custa caro. Não é xenofobia: as penas se aplicam igual a estrangeiros, com agravante de não falar o idioma e estar longe da embaixada.</p>
+        <H3>Idade de consentimento</H3>
+        <Bul items={[
+          "Idade de consentimento legal: 15 anos — mas relações com menores de 18 podem gerar processo se houver denúncia, troca de dinheiro ou material gravado",
+          "Em prostituição, idade mínima é 18 (e fortemente fiscalizada)",
+          "Em bar gay com show, contratar/levar menor de 20 para beber é crime",
+          "Sempre confirme idade com documento se houver QUALQUER dúvida — turistas já foram presos por engano",
+        ]} />
+        <H3>Drogas (atenção máxima)</H3>
+        <Bul items={[
+          "MDMA, cocaína, ketamina, GHB, metanfetamina: penas pesadíssimas, inclusive perpétua",
+          "'G' (GHB/GBL) circula em cena chemsex em Bangkok — risco médico ALTO (overdose), penal alto",
+          "Pílulas de festa em clube são frequentemente adulteradas",
+          "Blitz em portas de clube acontecem; teste de urina pode ser exigido",
+          "Se for abordado pela polícia e oferecer 'taxa' para liberar — pode ser armadilha; peça embaixada",
+        ]} />
+        <H3>Cannabis</H3>
+        <Bul items={[
+          "Desde meados de 2025 a lei voltou a ficar restritiva: uso recreativo está sendo recriminalizado",
+          "Lojas (dispensaries) ainda existem em Bangkok, Chiang Mai e Phuket mas regulação muda",
+          "Nunca atravessar fronteira com cannabis — crime grave em todos os países vizinhos",
+          "Fumar em via pública ou hotel pode gerar multa",
+        ]} />
+        <H3>Vape / cigarro eletrônico</H3>
+        <Bul items={[
+          "VAPE É ILEGAL na Tailândia — importar, usar ou vender",
+          "Turistas foram detidos por usar pod em rua",
+          "Multa pesada + apreensão; em alguns casos prisão",
+          "Não traga e não compre na rua",
+        ]} />
+      </Section>
+
+      <Section n="26" title="Circuit parties e eventos gays internacionais" icon={Music}>
+        <p>A Tailândia é um dos principais polos da cena circuit asiática. Se festa eletrônica gay é a sua, o calendário do país funciona melhor que muito destino europeu.</p>
+        <H3>gCircuit Songkran (abril)</H3>
+        <p>O maior evento circuit gay da Ásia. Acontece em Bangkok durante o Songkran (Ano Novo tailandês). Várias festas grandes em uma semana, DJs internacionais, milhares de gays do mundo todo. Hospedagem reservada com 4 a 6 meses de antecedência. Ingressos esgotam.</p>
+        <H3>White Party Bangkok / Phuket</H3>
+        <p>Eventos sazonais, geralmente em alta temporada (dez–fev). Conferir programação atualizada — datas mudam.</p>
+        <H3>Bangkok Pride (junho)</H3>
+        <p>Parada principal em Silom. Programação cresceu muito desde a aprovação do casamento. Festas oficiais e satélite ao longo do mês.</p>
+        <H3>Eventos menores recorrentes</H3>
+        <Bul items={[
+          "Maggie Choo's (Bangkok) — noites drag clássicas",
+          "House of Heals — drag/queer night",
+          "Festas pop-up em DJ Station, GOD e Sing Sing Theater",
+          "Beach parties LGBTQIA+ em Koh Phangan (fora Full Moon)",
+        ]} />
+        <H3>Dress code circuit</H3>
+        <Bul items={[
+          "Tênis confortável (são 6h+ de pé)",
+          "Top tank/regata (cor combina com tema da festa)",
+          "Pochete cross-body com cadeado mini",
+          "Sem celular caro à mostra",
+          "Roupa de troca no guarda-volumes (esquentam)",
+        ]} />
+      </Section>
+
+      <Section n="27" title="Casamento igualitário e cerimônia simbólica" icon={Heart}>
+        <p>Desde 2025 a Tailândia reconhece <strong className="text-foreground">casamento entre pessoas do mesmo sexo</strong>. Para casal estrangeiro, há duas rotas:</p>
+        <H3>Casamento legal de estrangeiros</H3>
+        <Bul items={[
+          "Exige documentos consulares (Affirmation of Freedom to Marry) emitidos pela Embaixada do Brasil em Bangkok",
+          "Tradução juramentada para tailandês",
+          "Registro em um Amphur (escritório distrital)",
+          "Casamento é reconhecido na Tailândia; no Brasil já é reconhecido por homoafetividade desde 2013",
+          "Processo leva 1 a 3 semanas — não dá para casar 'de improviso' em viagem curta",
+        ]} />
+        <H3>Cerimônia simbólica (mais comum)</H3>
+        <Bul items={[
+          "Resorts em Koh Samui, Phuket, Krabi e Koh Yao oferecem pacotes prontos",
+          "Cerimônia na praia, jantar privativo, fotógrafo, flores, votos",
+          "Sem valor legal mas marcante e fácil de organizar",
+          "Custo: USD 1.500 a USD 8.000 dependendo do resort e número de convidados",
+          "Bençao budista com monges é possível mediante reserva (e respeito)",
+        ]} />
+        <H3>Lua de mel gay</H3>
+        <p>Veja a combinação <strong className="text-foreground">Bangkok + Koh Samui</strong> ou <strong className="text-foreground">Bangkok + Koh Yao Noi + Krabi</strong> como rotas mais românticas. Os resorts 5★ tailandeses estão entre os mais experientes do mundo em receber casais do mesmo sexo.</p>
+      </Section>
+
+      <Section n="28" title="Dinheiro, eSIM e logística prática" icon={Wallet}>
+        <H3>Dinheiro</H3>
+        <Bul items={[
+          "Use cartão Wise, Nomad ou C6 Global para evitar IOF de 6,38%",
+          "ATM tailandês cobra 220 THB por saque (~R$ 36) além da taxa do banco — saque alto e poucas vezes",
+          "Bancos sem taxa: SCB (algumas agências), Aeon (Sukhumvit)",
+          "Casas de câmbio Super Rich (laranja ou verde) têm melhor taxa para dólar/euro em espécie",
+          "Bares e clubes gays aceitam cartão, mas leve dinheiro para gorjeta e cabaré",
+          "Reserve 200–500 THB em notas pequenas para tuk-tuk, gorjeta e Songkran",
+        ]} />
+        <H3>eSIM</H3>
+        <Bul items={[
+          "Airalo (mais barato), Holafly (ilimitado), Saily ou Nomad — ativar antes de embarcar",
+          "10 a 15 GB cobrem 2 semanas com folga",
+          "Tenham 2 eSIMs (um em cada celular) — se um falhar, ainda têm internet para Grab e mapa",
+        ]} />
+        <H3>Transporte noturno seguro</H3>
+        <Bul items={[
+          "Grab e Bolt funcionam 24h em Bangkok, Phuket e Chiang Mai",
+          "Tuk-tuk na saída de bar gay tarde cobra 3x — recuse e peça Grab",
+          "Moto-táxi (jaqueta laranja) é o mais rápido em Bangkok mas exige capacete e não é ideal bêbado",
+          "Em Pattaya, baht-bus tem rota fixa por 10–20 THB",
+          "Sempre confirme placa do carro antes de entrar",
+        ]} />
+      </Section>
+
+      <Section n="29" title="Lésbicas, bi, queer e pessoas não-binárias" icon={Users}>
+        <p>A cena explícita da Tailândia é fortemente masculina, mas isso não significa que mulheres lésbicas/bi, pessoas trans e não-binárias não tenham espaço. Tem — só é mais distribuído e menos turístico.</p>
+        <H3>Bangkok para mulheres</H3>
+        <Bul items={[
+          "Maggie Choo's e House of Heals — noites mistas e queer-friendly",
+          "Karma Kafe e bares de Silom Soi 4 — público misto",
+          "Eventos pontuais 'Girls Only' no Pride Month — acompanhar @bangkokpride no Instagram",
+          "Comunidade tomboy/tomdee é forte localmente — Tinder e Hinge funcionam bem",
+        ]} />
+        <H3>Chiang Mai para mulheres queer</H3>
+        <Bul items={[
+          "Cena mais alternativa, cafés, retiros yoga, comunidade nômade digital",
+          "Bairro Nimman concentra eventos queer e wellness",
+          "Free Bird Café e similares têm orientação LGBTQIA+ + ativismo",
+        ]} />
+        <H3>Pessoas não-binárias e trans</H3>
+        <Bul items={[
+          "Documento brasileiro com nome social é aceito em hotéis 4★+; em imigração, use o nome do passaporte",
+          "Banheiros públicos seguem binário — em hotéis e cafés cosmopolitas há gender-neutral",
+          "Hormônios: trazer estoque completo + receita em inglês (alfândega pode perguntar)",
+          "PrEP/PEP estão disponíveis para todos os gêneros nas clínicas Pulse e Tangerine (Bangkok)",
+          "Tangerine Clinic (Bangkok) — referência mundial em saúde trans, atende turistas",
+        ]} />
+      </Section>
+
+      <Section n="30" title="Conclusão" icon={Rainbow}>
         <p>A Tailândia é um dos melhores países da Ásia para viajantes gays e LGBTQIA+. Mas a melhor viagem não acontece porque o país é "liberado" — ela acontece quando você sabe <strong className="text-foreground">onde ir, onde não ir, como se comportar, como se proteger e como escolher os lugares certos</strong> para o seu estilo.</p>
         <Card className="bg-primary/5 border-primary/20">
           <Bul items={["Bangkok é a capital da cena", "Chiang Mai é a bolha calma", "Phuket é praia com festa", "Koh Samui é romance", "Pattaya é adulta e exige cuidado", "Hua Hin é a surpresa discreta"]} />
