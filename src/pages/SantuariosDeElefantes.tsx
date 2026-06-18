@@ -8,8 +8,9 @@ import { InternalLinksSection, ConversionBlock } from "@/components/ConversionSe
 import { Check, Shield, Clock, Star, MapPin, AlertTriangle, ChevronDown, Users, BookOpen, Zap, Heart, ArrowRight, Eye, TrendingUp, X, ThumbsDown, ThumbsUp, Quote, Sparkles, Ban, CircleCheck } from "lucide-react";
 
 import { useState, useEffect, useCallback } from "react";
+import heroAsset from "@/assets/generated/elefantes-hero.png.asset.json";
 
-const HERO_IMG = "https://guia-elefantes.lovable.app/assets/elephant_hero-DuOZkqXt.jpg";
+const HERO_IMG = heroAsset.url;
 const ENP_IMG = "https://guia-elefantes.lovable.app/assets/elephant-nature-park-C5qJR4Vf.jpg";
 const PHUKET_IMG = "https://guia-elefantes.lovable.app/assets/phuket-elephant-sanctuary-B7dQdaJu.jpg";
 

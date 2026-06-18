@@ -1,4 +1,4 @@
-import heroImg from "@/assets/hero-lanterns.jpg";
+import heroImg from "@/assets/generated/lanternas-hero.png.asset.json";
 import { CTAButton } from "@/components/festival/CTAButton";
 
 const HOTMART_LINK = "https://pay.cakto.com.br/3drcnfk_835346";
@@ -6,7 +6,7 @@ const HOTMART_LINK = "https://pay.cakto.com.br/3drcnfk_835346";
 const HeroSection = () => (
   <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
     <img
-      src={heroImg}
+      src={heroImg.url}
       alt="Milhares de lanternas flutuando no céu de Chiang Mai durante o Festival Yi Peng"
       className="absolute inset-0 w-full h-full object-cover"
       width={1920}

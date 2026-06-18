@@ -8,6 +8,7 @@ import {
   Info, Star, BookOpen, MessageCircle, Gift, Award, Calendar, Map, DollarSign, Sun,
   Luggage, Mail, Wifi, Stethoscope, Languages, Cake, Globe2
 } from "lucide-react";
+import heroImg from "@/assets/generated/lua-de-mel-hero.png.asset.json";
 
 const ROSE = "#E11D74";
 const GOLD = "#D4A017";
@@ -28,7 +29,7 @@ const GuiaLuaDeMel = () => {
         <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden">
           <div className="absolute inset-0 z-0">
             <img
-              src="https://images.unsplash.com/photo-1537956965359-7573183d1f57?q=80&w=1920"
+              src={heroImg.url}
               alt="Casal em praia paradisíaca na Tailândia"
               className="w-full h-full object-cover brightness-[0.5]"
             />
