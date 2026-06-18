@@ -3,7 +3,24 @@
 
 import { writeFileSync } from "fs";
 import { resolve } from "path";
-import { ilhasMeta } from "../src/data/sales/ilhas";
+// Slugs das ilhas (espelha src/data/sales/ilhas.ts > ilhasMeta).
+// Mantido inline para evitar carregar imports de .jpg via tsx.
+const ilhaSlugs = [
+  "phuket-tailandia",
+  "koh-samui-tailandia",
+  "koh-phi-phi-tailandia",
+  "koh-phangan-tailandia",
+  "koh-tao-tailandia",
+  "koh-chang-tailandia",
+  "koh-lanta-tailandia",
+  "koh-lipe-tailandia",
+  "koh-kood-tailandia",
+  "koh-yao-tailandia",
+  "koh-mak-tailandia",
+  "koh-larn-tailandia",
+  "ilhas-similan-tailandia",
+  "koh-racha-tailandia",
+];
 
 const BASE_URL = "https://guiastailandia.com.br";
 const today = new Date().toISOString().slice(0, 10);
@@ -52,7 +69,7 @@ const entries: Entry[] = [
 
   // Ilhas (catálogo + dinâmico)
   { path: "/ilhas", priority: "0.9" },
-  ...ilhasMeta.map((i) => ({ path: `/${i.slug}`, priority: "0.7" })),
+  ...ilhaSlugs.map((slug) => ({ path: `/${slug}`, priority: "0.7" })),
 ];
 
 const xml = [
