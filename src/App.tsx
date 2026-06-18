@@ -15,6 +15,7 @@ import GuiaTrilhasThai44 from "./pages/GuiaTrilhasThai44.tsx";
 import GuiaTrilhasThai from "./pages/GuiaTrilhasThai.tsx";
 import GuiaVoluntariado from "./pages/GuiaVoluntariado.tsx";
 import GuiaGays from "./pages/GuiaGays.tsx";
+import TailandiaParaGays0325257 from "./pages/TailandiaParaGays0325257.tsx";
 import GuiaSongkran from "./pages/GuiaSongkran.tsx";
 import GuiaLuaDeMel from "./pages/GuiaLuaDeMel.tsx";
 import LuaDeMel8272524 from "./pages/LuaDeMel8272524.tsx";
@@ -60,6 +61,7 @@ const App = () => (
           <Route path="/guiatrilhasthai" element={<GuiaTrilhasThai />} />
           <Route path="/voluntariado-tailandia" element={<GuiaVoluntariado />} />
           <Route path="/tailandia-para-gays" element={<GuiaGays />} />
+          <Route path="/tailandia-para-gays0325257" element={<TailandiaParaGays0325257 />} />
           <Route path="/songkran-ano-novo-tailandes" element={<GuiaSongkran />} />
           <Route path="/lua-de-mel-tailandia" element={<GuiaLuaDeMel />} />
           <Route path="/lua-de-mel-tailandia8272524" element={<LuaDeMel8272524 />} />
