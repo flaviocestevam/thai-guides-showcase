@@ -17,6 +17,13 @@ import voluntariadoImg from "@/assets/voluntariado-hero.jpg";
 import gaysImg from "@/assets/gays-hero.jpg";
 import songkranImg from "@/assets/songkran-hero.jpg";
 import luaDeMelImg from "@/assets/luademel-hero.jpg";
+import massagemImg from "@/assets/sales/cursos-massagem.jpg";
+import motosImg from "@/assets/sales/aluguel-motos.jpg";
+import mergulhoImg from "@/assets/sales/mergulho.jpg";
+import cafesImg from "@/assets/sales/cafes-coworkings.jpg";
+import reveillonImg from "@/assets/sales/reveillon.jpg";
+import stripImg from "@/assets/sales/clubes-strip.jpg";
+import goGoImg from "@/assets/sales/go-go-bars.jpg";
 
 interface ProductCard {
   title: string;
