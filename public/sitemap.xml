@@ -1,90 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://guiastailandia.com.br/</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://guiastailandia.com.br/festivaldaslanternas</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://guiastailandia.com.br/santuariosdeelefantes</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://guiastailandia.com.br/muaythai</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://guiastailandia.com.br/guiatrilhasthai</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://guiastailandia.com.br/festas</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://guiastailandia.com.br/festas/bangkok</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://guiastailandia.com.br/festas/phuket</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://guiastailandia.com.br/festas/pattaya</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://guiastailandia.com.br/festas/kohphangan</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://guiastailandia.com.br/festas/phiphi</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://guiastailandia.com.br/festas/krabi</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://guiastailandia.com.br/festas/chiangmai</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://guiastailandia.com.br/festas/kohsamui</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://guiastailandia.com.br/festas/kohlipe</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://guiastailandia.com.br/lanternfestival</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
+  <url><loc>https://guiastailandia.com.br/</loc><priority>1.0</priority><changefreq>weekly</changefreq></url>
 
-    <loc>https://guiastailandia.com.br/voluntariado-tailandia</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://guiastailandia.com.br/tailandia-para-gays</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://guiastailandia.com.br/songkran-ano-novo-tailandes</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://guiastailandia.com.br/lua-de-mel-tailandia</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://guiastailandia.com.br/ilhas</loc>
-    <priority>0.9</priority>
-  </url>
+  <!-- Guias temáticos principais -->
+  <url><loc>https://guiastailandia.com.br/festivaldaslanternas</loc><priority>0.8</priority></url>
+  <url><loc>https://guiastailandia.com.br/santuariosdeelefantes</loc><priority>0.8</priority></url>
+  <url><loc>https://guiastailandia.com.br/muaythai</loc><priority>0.8</priority></url>
+  <url><loc>https://guiastailandia.com.br/guiatrilhasthai</loc><priority>0.8</priority></url>
+  <url><loc>https://guiastailandia.com.br/lanternfestival</loc><priority>0.7</priority></url>
+  <url><loc>https://guiastailandia.com.br/voluntariado-tailandia</loc><priority>0.8</priority></url>
+  <url><loc>https://guiastailandia.com.br/tailandia-para-gays</loc><priority>0.8</priority></url>
+  <url><loc>https://guiastailandia.com.br/songkran-ano-novo-tailandes</loc><priority>0.8</priority></url>
+  <url><loc>https://guiastailandia.com.br/lua-de-mel-tailandia</loc><priority>0.8</priority></url>
+
+  <!-- Festas -->
+  <url><loc>https://guiastailandia.com.br/festas</loc><priority>0.8</priority></url>
+  <url><loc>https://guiastailandia.com.br/festas/bangkok</loc><priority>0.6</priority></url>
+  <url><loc>https://guiastailandia.com.br/festas/phuket</loc><priority>0.6</priority></url>
+  <url><loc>https://guiastailandia.com.br/festas/pattaya</loc><priority>0.6</priority></url>
+  <url><loc>https://guiastailandia.com.br/festas/kohphangan</loc><priority>0.6</priority></url>
+  <url><loc>https://guiastailandia.com.br/festas/phiphi</loc><priority>0.6</priority></url>
+  <url><loc>https://guiastailandia.com.br/festas/krabi</loc><priority>0.6</priority></url>
+  <url><loc>https://guiastailandia.com.br/festas/chiangmai</loc><priority>0.6</priority></url>
+  <url><loc>https://guiastailandia.com.br/festas/kohsamui</loc><priority>0.6</priority></url>
+  <url><loc>https://guiastailandia.com.br/festas/kohlipe</loc><priority>0.6</priority></url>
+
+  <!-- Ilhas -->
+  <url><loc>https://guiastailandia.com.br/ilhas</loc><priority>0.9</priority></url>
   <url><loc>https://guiastailandia.com.br/phuket-tailandia</loc><priority>0.8</priority></url>
   <url><loc>https://guiastailandia.com.br/koh-samui-tailandia</loc><priority>0.8</priority></url>
   <url><loc>https://guiastailandia.com.br/koh-phi-phi-tailandia</loc><priority>0.8</priority></url>
@@ -99,4 +41,20 @@
   <url><loc>https://guiastailandia.com.br/koh-larn-tailandia</loc><priority>0.5</priority></url>
   <url><loc>https://guiastailandia.com.br/ilhas-similan-tailandia</loc><priority>0.6</priority></url>
   <url><loc>https://guiastailandia.com.br/koh-racha-tailandia</loc><priority>0.5</priority></url>
+
+  <!-- Páginas de vendas -->
+  <url><loc>https://guiastailandia.com.br/aluguel-de-motos-tailandia</loc><priority>0.8</priority></url>
+  <url><loc>https://guiastailandia.com.br/tailandia-para-aventureiros</loc><priority>0.8</priority></url>
+  <url><loc>https://guiastailandia.com.br/beach-clubs-tailandia</loc><priority>0.8</priority></url>
+  <url><loc>https://guiastailandia.com.br/cafes-e-coworkings-tailandia</loc><priority>0.7</priority></url>
+  <url><loc>https://guiastailandia.com.br/casas-de-massagem-tailandia</loc><priority>0.7</priority></url>
+  <url><loc>https://guiastailandia.com.br/clubes-de-strip-tailandia</loc><priority>0.7</priority></url>
+  <url><loc>https://guiastailandia.com.br/tailandia-para-criancas</loc><priority>0.8</priority></url>
+  <url><loc>https://guiastailandia.com.br/cursos-de-massagem</loc><priority>0.7</priority></url>
+  <url><loc>https://guiastailandia.com.br/go-go-bars-tailandia</loc><priority>0.7</priority></url>
+  <url><loc>https://guiastailandia.com.br/mergulho-tailandia</loc><priority>0.8</priority></url>
+  <url><loc>https://guiastailandia.com.br/tailandia-para-pets</loc><priority>0.7</priority></url>
+  <url><loc>https://guiastailandia.com.br/retiros-tailandia</loc><priority>0.8</priority></url>
+  <url><loc>https://guiastailandia.com.br/reveillon-tailandia</loc><priority>0.8</priority></url>
+  <url><loc>https://guiastailandia.com.br/top-hostels-tailandia</loc><priority>0.8</priority></url>
 </urlset>
