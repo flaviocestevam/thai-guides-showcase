@@ -9,6 +9,7 @@ import { resolve } from "path";
 const HOST = "guiastailandia.com.br";
 const KEY = "7e407e63e8ec192d7a599cec71166ce9";
 const KEY_LOCATION = `https://${HOST}/${KEY}.txt`;
+const TIMEOUT_MS = 10_000;
 
 async function main() {
   let urls;
@@ -21,21 +22,36 @@ async function main() {
     return;
   }
 
-  const res = await fetch("https://api.indexnow.org/IndexNow", {
-    method: "POST",
-    headers: { "Content-Type": "application/json; charset=utf-8" },
-    body: JSON.stringify({
-      host: HOST,
-      key: KEY,
-      keyLocation: KEY_LOCATION,
-      urlList: urls,
-    }),
-  });
+  if (!Array.isArray(urls) || urls.length === 0) {
+    console.log("IndexNow: lista de URLs vazia ou inválida, pulando.");
+    return;
+  }
 
-  if (res.ok || res.status === 202) {
-    console.log(`✓ IndexNow: ${urls.length} URLs notificadas (HTTP ${res.status})`);
-  } else {
-    console.warn(`⚠ IndexNow falhou (HTTP ${res.status}): ${await res.text()}`);
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), TIMEOUT_MS);
+
+  try {
+    const res = await fetch("https://api.indexnow.org/IndexNow", {
+      method: "POST",
+      signal: controller.signal,
+      headers: { "Content-Type": "application/json; charset=utf-8" },
+      body: JSON.stringify({
+        host: HOST,
+        key: KEY,
+        keyLocation: KEY_LOCATION,
+        urlList: urls,
+      }),
+    });
+
+    if (res.ok || res.status === 202) {
+      console.log(`✓ IndexNow: ${urls.length} URLs notificadas (HTTP ${res.status})`);
+    } else {
+      console.warn(`⚠ IndexNow falhou (HTTP ${res.status}): ${await res.text()}`);
+    }
+  } catch (error) {
+    console.warn("⚠ IndexNow pulado:", error?.message ?? error);
+  } finally {
+    clearTimeout(timeout);
   }
 }
 
