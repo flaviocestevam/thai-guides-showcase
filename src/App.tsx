@@ -31,6 +31,9 @@ import Pets from "./pages/Pets.tsx";
 import Criancas from "./pages/Criancas.tsx";
 import CasasDeMassagem from "./pages/CasasDeMassagem.tsx";
 import Retiros from "./pages/Retiros.tsx";
+import Ilhas from "./pages/Ilhas.tsx";
+import IlhaPage from "./pages/IlhaPage.tsx";
+import { ilhasMeta } from "./data/sales/ilhas";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -70,6 +73,17 @@ const App = () => (
           <Route path="/tailandia-para-criancas" element={<Criancas />} />
           <Route path="/casas-de-massagem-tailandia" element={<CasasDeMassagem />} />
           <Route path="/retiros-tailandia" element={<Retiros />} />
+
+          {/* ===== Categoria Ilhas ===== */}
+          <Route path="/ilhas" element={<Ilhas />} />
+          {ilhasMeta.map((ilha) => (
+            <Route
+              key={ilha.slug}
+              path={`/${ilha.slug}`}
+              element={<IlhaPage slug={ilha.slug} />}
+            />
+          ))}
+
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
