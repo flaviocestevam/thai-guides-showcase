@@ -587,9 +587,49 @@ const Reveillon67729 = () => {
           </Card>
         </Section>
 
-        {/* 19 - CONCLUSÃO */}
-        <Section id="conclusao" icon={Star} kicker="Capítulo 19" title="Encerramento">
-          <p>Réveillon na Tailândia é insano quando bem planejado e desastre quando improvisado. Você tem aqui o que precisa: cidades comparadas, festas por categoria, hotéis com vista de fogos, roteiro dia a dia, logística por cidade, comparativo de pacotes e checklist completo.</p>
+        {/* 19 - CÂMBIO E DINHEIRO */}
+        <Section id="cambio" icon={Wallet} kicker="Capítulo 19" title="Câmbio, dinheiro e gorjetas no Réveillon">
+          <p>Na semana do Réveillon, casas de câmbio em aeroporto e hotel pioram a cotação em 8–15%. Quem se planeja antes economiza o equivalente a um jantar premium.</p>
+          <Card title="Onde trocar (do melhor pro pior)">
+            <Bul items={[
+              ["SuperRich (laranja e verde)", "Melhor cotação THB do país — unidades em Bangkok, Phuket Patong, Chiang Mai"],
+              ["Twelve Victory / Vasu Exchange", "Bangkok Sukhumvit, cotação próxima ao SuperRich"],
+              ["ATM de banco (Bangkok Bank, Kasikorn)", "Taxa fixa de 220 THB por saque + IOF — vale pra valor alto"],
+              ["Câmbio de hotel", "Última opção — perde 10–15%"],
+              ["Aeroporto (chegada)", "Troque só 1.000 THB pra táxi, o resto na cidade"],
+            ]} />
+          </Card>
+          <Card title="Cartões — o que funciona" tone="info">
+            <Bul items={[
+              ["Wise / Nomad / Avenue", "Melhor câmbio, débito direto no THB, aceito em quase tudo"],
+              ["Visa/Mastercard crédito brasileiro", "Funciona, mas cobra IOF 5,38% + spread do banco"],
+              ["Amex", "Aceitação baixa fora de hotéis 5★ — não conte"],
+              ["Dinheiro vivo", "Indispensável em festa de praia, tuk-tuk, comida de rua, Phangan"],
+            ]} />
+          </Card>
+          <Card title="Gorjeta — quanto e quando" tone="good">
+            <Bul items={[
+              "Restaurante: 10% se não tiver service charge na conta",
+              "Massagem: 50–100 THB por hora de serviço",
+              "Tuk-tuk/táxi: arredonde pra cima (10–20 THB)",
+              "Carregador de mala em hotel: 20–50 THB por mala",
+              "Garçom de gala/ceia de Réveillon: 200–500 THB se atendimento foi excelente",
+              "Não dê gorjeta em food court e comida de rua — não é cultura local",
+            ]} />
+          </Card>
+          <Card tone="warn" title="Armadilhas comuns no NYE">
+            <Bul items={[
+              "ATM de marca desconhecida na rua — golpe de clonagem comum em Bangla e Khao San",
+              "Câmbio 'sem comissão' em Patong — escondem spread de 12%",
+              "Troco em nota de 1.000 THB falsa — confira marca-d'água sempre",
+              "Cartão sumir do garçom por 5 minutos — peça maquininha na mesa",
+            ]} />
+          </Card>
+        </Section>
+
+        {/* 20 - CONCLUSÃO */}
+        <Section id="conclusao" icon={Star} kicker="Capítulo 20" title="Encerramento">
+          <p>Réveillon na Tailândia é insano quando bem planejado e desastre quando improvisado. Você tem aqui o que precisa: cidades comparadas, festas por categoria, hotéis com vista de fogos, roteiro dia a dia, logística por cidade, comparativo de pacotes, câmbio e checklist completo.</p>
           <p>Comece pela cidade certa pro seu perfil. Reserve hotel agora. Compre ingresso da festa principal. Confirme tudo 7 dias antes. Vá descansado pro dia 31.</p>
           <p>Em janeiro você lembra dessa virada pelo resto da vida.</p>
           <p><strong>Boas festas e boa virada!</strong></p>
