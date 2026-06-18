@@ -21,7 +21,7 @@ export const reveillon: SalesContent = {
   ],
   features: [
     { title: "10 cidades comparadas", desc: "Bangkok, Phuket, Koh Samui, Phangan, Krabi, Chiang Mai, Pattaya, Hua Hin, Koh Lanta, Koh Tao." },
-    { title: "Top 50 festas por categoria", desc: "Rooftop, praia, balada, jantar romântico, família. Cada uma com preço, vibe e como reservar." },
+    { title: "36+ festas por categoria", desc: "Rooftop, praia, balada, jantar romântico, família. Cada uma com preço, vibe e como reservar." },
     { title: "Pacotes hotel + festa", desc: "As melhores combinações antecipadas, com preço real (sem mark-up de agência)." },
   ],
   comparison: {
