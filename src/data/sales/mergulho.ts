@@ -7,7 +7,7 @@ export const mergulho: SalesContent = {
   heroBadge: "🤿 Capital mundial do mergulho barato",
   heroTitle: "Mergulhe na Tailândia",
   heroHighlight: "do Zero ao Instrutor",
-  heroSubtitle: "Koh Tao forma mais mergulhadores PADI por ano que qualquer outro lugar do planeta. Guia completo das melhores escolas, ilhas, cursos e roteiros para você sair certificado pagando 60% menos que no Brasil.",
+  heroSubtitle: "Koh Tao forma mais mergulhadores PADI por ano que qualquer outro lugar do planeta. Guia completo com 35 capítulos: escolas avaliadas com Google Maps e telefone, equipamentos, checklist pré-viagem, seguro DAN, vida marinha, fotografia subaquática e roteiros para sair certificado pagando 60% menos que no Brasil.",
   heroWarning: "A maioria dos brasileiros escolhe a primeira escola que aparece em Koh Tao e perde mais de R$ 1.500 com escolas superlotadas que entregam certificação por linha de montagem.",
   heroBgGradient: "bg-gradient-to-br from-cyan-950 via-background to-blue-950",
   heroEmoji: "🤿",
@@ -20,9 +20,11 @@ export const mergulho: SalesContent = {
     { title: "Escola sem padrão de segurança", desc: "Equipamento velho, dive master despreparado, mergulho sem briefing. Acidente em mergulho é fatal." },
   ],
   features: [
-    { title: "Top 20 escolas PADI/SSI", desc: "Avaliadas pessoalmente em Koh Tao, Koh Phangan, Phuket, Khao Lak. Foco em turmas pequenas e segurança." },
-    { title: "Roteiros do Open Water ao Divemaster", desc: "Caminho completo: do iniciante absoluto ao profissional, com tempo, custo e ordem ideal de cursos." },
-    { title: "Calendário de mergulho", desc: "Quando ir em cada ilha: Similan, Surin, Richelieu Rock, Sail Rock, Chumphon Pinnacle." },
+    { title: "20+ escolas com Google Maps e telefone", desc: "Diretório completo verificado: Koh Tao, Phangan, Phuket, Khao Lak, Koh Lanta. Link do mapa e contato direto de cada centro." },
+    { title: "Equipamentos + checklist pré-viagem", desc: "Lista de prioridade 1/2/3, faixas de preço em R$/US$, bagagem de voo e cronograma 60→30→15→7 dias antes de embarcar." },
+    { title: "Seguro DAN, saúde e emergências", desc: "Câmaras hiperbáricas mapeadas, preparo físico, vida marinha (o que NÃO tocar) e protocolo de emergência." },
+    { title: "Calendário ilha por ilha, mês a mês", desc: "Similan, Surin, Richelieu, Sail Rock, Chumphon Pinnacle — quando ir e quando NÃO ir." },
+    { title: "Fotografia subaquática + conservação", desc: "Da câmera de iniciante ao mergulho responsável. ONGs sérias para apoiar em Koh Tao." },
   ],
   comparison: {
     theirs: [
@@ -54,9 +56,9 @@ export const mergulho: SalesContent = {
   },
   modules: [
     {
-      title: "As 20 melhores escolas avaliadas",
-      desc: "Quem é confiável, didática, equipamento e turmas reduzidas.",
-      bullets: ["Koh Tao (10 escolas)", "Phuket/Khao Lak (6)", "Koh Phangan (4)", "Preços em THB e R$"],
+      title: "Diretório de escolas com Google Maps + telefone",
+      desc: "20+ centros verificados em 5 regiões com link do mapa e contato direto.",
+      bullets: ["Koh Tao, Phangan, Phuket", "Khao Lak e Koh Lanta", "Google Maps + WhatsApp", "Guia de validação"],
     },
     {
       title: "Roteiros por nível",
@@ -77,6 +79,21 @@ export const mergulho: SalesContent = {
       title: "Custos reais de vida na ilha",
       desc: "Quanto vai gastar morando em Koh Tao 30, 60 ou 90 dias.",
       bullets: ["Hospedagem", "Comida", "Curso", "Vida social"],
+    },
+    {
+      title: "Equipamento + Checklist pré-viagem",
+      desc: "O que comprar, o que alugar e o que levar — passo a passo até o voo.",
+      bullets: ["Prioridade 1, 2 e 3", "Faixas em R$ e US$", "Bagagem de voo", "Timeline 60→7 dias"],
+    },
+    {
+      title: "Seguro DAN, saúde e emergências",
+      desc: "Como mergulhar protegido e o que fazer se algo der errado.",
+      bullets: ["Câmaras hiperbáricas", "Preparo físico", "Protocolo de emergência", "O que NÃO tocar no mar"],
+    },
+    {
+      title: "Fotografia subaquática + conservação",
+      desc: "Da primeira câmera ao mergulho responsável.",
+      bullets: ["Setup iniciante", "Regras de ouro", "ONGs sérias", "Mergulho ético"],
     },
   ],
   bonuses: [
@@ -101,10 +118,13 @@ export const mergulho: SalesContent = {
     priceCents: "00",
     installments: "12x de R$ 6,71",
     includes: [
-      "Guia com 20 escolas avaliadas",
+      "35 capítulos completos",
+      "20+ escolas com Google Maps e telefone",
       "Roteiros de OW a Instructor",
       "Calendário completo das ilhas",
-      "Comparativo de liveaboards",
+      "Equipamento + checklist pré-viagem",
+      "Seguro DAN, saúde e emergências",
+      "Fotografia subaquática e conservação",
       "Todos os 5 bônus exclusivos",
       "Atualizações vitalícias",
     ],
