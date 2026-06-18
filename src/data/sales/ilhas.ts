@@ -1,18 +1,18 @@
 import type { SalesContent } from "@/components/sales/SalesPage";
-import phuketImg from "@/assets/ilhas/phuket.jpg";
-import samuiImg from "@/assets/ilhas/samui.jpg";
-import phiphiImg from "@/assets/ilhas/phiphi.jpg";
-import phanganImg from "@/assets/ilhas/phangan.jpg";
-import taoImg from "@/assets/ilhas/tao.jpg";
-import changImg from "@/assets/ilhas/chang.jpg";
-import lantaImg from "@/assets/ilhas/lanta.jpg";
-import lipeImg from "@/assets/ilhas/lipe.jpg";
-import koodImg from "@/assets/ilhas/kood.jpg";
-import yaoImg from "@/assets/ilhas/yao.jpg";
-import makImg from "@/assets/ilhas/mak.jpg";
-import larnImg from "@/assets/ilhas/larn.jpg";
-import similanImg from "@/assets/ilhas/similan.jpg";
-import rachaImg from "@/assets/ilhas/racha.jpg";
+import phuketImg from "@/assets/ilhas/phuket.webp";
+import samuiImg from "@/assets/ilhas/samui.webp";
+import phiphiImg from "@/assets/ilhas/phiphi.webp";
+import phanganImg from "@/assets/ilhas/phangan.webp";
+import taoImg from "@/assets/ilhas/tao.webp";
+import changImg from "@/assets/ilhas/chang.webp";
+import lantaImg from "@/assets/ilhas/lanta.webp";
+import lipeImg from "@/assets/ilhas/lipe.webp";
+import koodImg from "@/assets/ilhas/kood.webp";
+import yaoImg from "@/assets/ilhas/yao.webp";
+import makImg from "@/assets/ilhas/mak.webp";
+import larnImg from "@/assets/ilhas/larn.webp";
+import similanImg from "@/assets/ilhas/similan.webp";
+import rachaImg from "@/assets/ilhas/racha.webp";
 
 const heroImagesBySlug: Record<string, string> = {
   "phuket-tailandia": phuketImg,
