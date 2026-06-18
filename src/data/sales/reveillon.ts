@@ -78,6 +78,11 @@ export const reveillon: SalesContent = {
       desc: "Como não perder a contagem regressiva preso em uber.",
       bullets: ["Horários de fechamento de rua", "Onde pegar táxi 23h", "Alternativas a Grab", "Como voltar 03h"],
     },
+    {
+      title: "Câmbio, dinheiro e gorjetas",
+      desc: "Onde trocar com a melhor cotação e evitar golpes no NYE.",
+      bullets: ["SuperRich vs aeroporto", "Cartões que funcionam", "Tabela de gorjeta", "Armadilhas de ATM"],
+    },
   ],
   bonuses: [
     { title: "Calendário 28/12 a 02/01", desc: "Principais eventos dia a dia em todas as cidades — Capítulo 9.", value: "R$ 87" },
@@ -85,6 +90,7 @@ export const reveillon: SalesContent = {
     { title: "Comparativo de pacotes (econômico ao premium)", desc: "Pacotes hotel + festa avaliados por custo-benefício real — Capítulo 8.", value: "R$ 57" },
     { title: "Edição especial Full Moon Réveillon", desc: "Capítulo dedicado ao NYE em Koh Phangan — Capítulo 10.", value: "R$ 87" },
     { title: "Checklist pré-viagem + Erros que arruínam", desc: "Tudo o que reservar, comprar, confirmar e evitar — Capítulos 14 e 15.", value: "R$ 47" },
+    { title: "Guia de Câmbio e Gorjetas no NYE", desc: "Onde trocar, cartões que funcionam, tabela de gorjeta e armadilhas — Capítulo 19.", value: "R$ 37" },
   ],
   testimonials: [
     { name: "Camila R.", city: "São Paulo", text: "Virei o ano em Phuket seguindo o roteiro. Festa em rooftop, fogos do hotel, voltei caminhando. Perfeito." },
@@ -106,7 +112,8 @@ export const reveillon: SalesContent = {
       "Hotéis com vista dos fogos",
       "Roteiros completos 28/12 a 02/01",
       "Logística da virada por cidade",
-      "Todos os 5 bônus exclusivos",
+      "Câmbio, dinheiro e gorjetas no NYE",
+      "Todos os 6 bônus exclusivos",
     ],
   },
   guarantee: {
