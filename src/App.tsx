@@ -34,6 +34,7 @@ import Retiros from "./pages/Retiros.tsx";
 import Ilhas from "./pages/Ilhas.tsx";
 import IlhaPage from "./pages/IlhaPage.tsx";
 import { ilhasMeta } from "./data/sales/ilhas";
+import ExportCopyAuditoria from "./pages/ExportCopyAuditoria.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -83,6 +84,8 @@ const App = () => (
               element={<IlhaPage slug={ilha.slug} />}
             />
           ))}
+
+          <Route path="/export-copy-auditoria" element={<ExportCopyAuditoria />} />
 
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
