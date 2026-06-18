@@ -1146,7 +1146,7 @@ Thank you.`}
             <p>📞 <a href="tel:+66926185637" className="underline" style={{ color: TEAL }}>+66 92 618 5637</a> (WhatsApp)</p>
             <p>🌐 <a href="https://master-divers.com" target="_blank" rel="noopener" className="underline">master-divers.com</a></p>
             <p>🗺️ <a href="https://maps.app.goo.gl/3dC5ihttbzi3qpjW6" target="_blank" rel="noopener" className="underline">Ver no Google Maps</a></p>
-            <p className="text-sm text-slate-600 mt-2">PADI 5★ CDC boutique. Foco em qualidade > quantidade, turmas pequenas. Excelente para Divemaster.</p>
+            <p className="text-sm text-slate-600 mt-2">PADI 5★ CDC boutique. Foco em qualidade &gt; quantidade, turmas pequenas. Excelente para Divemaster.</p>
           </Card>
           <Card title="Davy Jones' Locker">
             <p>📍 Sairee Beach, Koh Tao</p>
