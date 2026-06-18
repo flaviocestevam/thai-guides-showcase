@@ -28,6 +28,7 @@ import CafesCoworkings from "./pages/CafesCoworkings.tsx";
 import ClubesStrip from "./pages/ClubesStrip.tsx";
 import GoGoBars from "./pages/GoGoBars.tsx";
 import Reveillon from "./pages/Reveillon.tsx";
+import Reveillon67729 from "./pages/Reveillon67729.tsx";
 import TopHostels from "./pages/TopHostels.tsx";
 import Aventureiros from "./pages/Aventureiros.tsx";
 import BeachClubs from "./pages/BeachClubs.tsx";
@@ -75,6 +76,7 @@ const App = () => (
           <Route path="/clubes-de-strip-tailandia" element={<ClubesStrip />} />
           <Route path="/go-go-bars-tailandia" element={<GoGoBars />} />
           <Route path="/reveillon-tailandia" element={<Reveillon />} />
+          <Route path="/reveillon-tailandia67729" element={<Reveillon67729 />} />
           <Route path="/top-hostels-tailandia" element={<TopHostels />} />
           <Route path="/tailandia-para-aventureiros" element={<Aventureiros />} />
           <Route path="/beach-clubs-tailandia" element={<BeachClubs />} />
