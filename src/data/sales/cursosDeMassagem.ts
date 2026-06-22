@@ -93,9 +93,9 @@ export const cursosDeMassagem: SalesContent = {
       "Guia completo das 10 escolas certificadas",
       "Manual passo a passo do visto ED",
       "Roteiros prontos de 1, 3 e 6 meses",
-      "Todos os 5 bônus exclusivos",
+      "Os 2 bônus exclusivos (glossário 100+ termos + planilha de orçamento)",
       "Atualizações vitalícias",
-      "Acesso ao grupo de alunos",
+
     ],
   },
   guarantee: {
