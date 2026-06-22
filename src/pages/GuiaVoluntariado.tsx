@@ -286,7 +286,7 @@ const GuiaVoluntariado = () => {
             <h2 className="text-3xl md:text-5xl font-bold text-center mb-4">
               O Que <span style={{ color: GREEN }}>Vem no Guia</span>
             </h2>
-            <p className="text-center text-gray-500 mb-16 max-w-2xl mx-auto">PDF de 90+ páginas com mapas, links clicáveis e atualizações grátis durante 2026.</p>
+            <p className="text-center text-gray-500 mb-16 max-w-2xl mx-auto">PDF de 90+ páginas com mapas e links clicáveis.</p>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
               {[
                 { icon: Map, title: "Plataformas testadas", desc: "Onde achar vagas direto" },
