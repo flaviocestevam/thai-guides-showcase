@@ -11,6 +11,7 @@ import MuayThai from "./pages/MuayThai.tsx";
 import MuayThai5645 from "./pages/MuayThai5645.tsx";
 import Festas from "./pages/Festas.tsx";
 import Festas7733 from "./pages/Festas7733.tsx";
+import GoGoBars8855 from "./pages/GoGoBars8855.tsx";
 
 import GuiaTrilhasThai44 from "./pages/GuiaTrilhasThai44.tsx";
 import GuiaTrilhasThai from "./pages/GuiaTrilhasThai.tsx";
