@@ -310,6 +310,51 @@ const experienciasPorCidade: CityBlock[] = [
       { label: "Underwater World Pattaya", url: "https://www.google.com/maps/search/Underwater+World+Pattaya", note: "aquário com túnel + tubarões + alimentação ao vivo. ฿500 adulto / ฿350 criança. 2h." },
     ],
   },
+  {
+    city: "Ayutthaya",
+    tagline: "Antiga capital — ruínas, elefantes éticos e bate-volta de Bangkok.",
+    items: [
+      { label: "Wat Maha That (cabeça de Buda na árvore)", url: "https://www.google.com/maps/search/Wat+Maha+That+Ayutthaya", note: "ícone do parque histórico. Criança adora a foto da raiz envolvendo a cabeça. ฿50 entrada. Vá 7h-9h, ainda fresco." },
+      { label: "Wat Chaiwatthanaram (templo às margens)", url: "https://www.google.com/maps/search/Wat+Chaiwatthanaram", note: "ruínas khmer de tirar fôlego. Aluguel de roupas tailandesas pra criança (฿200/h) na entrada — ela vira princesa." },
+      { label: "Elephantstay Ayutthaya", url: "https://www.google.com/maps/search/Elephantstay+Ayutthaya", note: "santuário ético de elefantes resgatados. Visita meio dia ฿2.500 — alimentar e dar banho, SEM montaria." },
+      { label: "Million Toy Museum", url: "https://www.google.com/maps/search/Million+Toy+Museum+Ayutthaya", note: "coleção privada com brinquedos de 60+ países. Pequeno mas mágico, especialmente pra 5-10 anos. ฿50." },
+      { label: "Bang Pa-In Royal Palace (caminho de BKK)", url: "https://www.google.com/maps/search/Bang+Pa-In+Royal+Palace", note: "palácio de verão, jardins amplos pra correr, ponte e carros elétricos de aluguel. ฿100 entrada." },
+    ],
+  },
+  {
+    city: "Khao Lak",
+    tagline: "Praia calma + parques nacionais — alternativa zero-balada a Phuket.",
+    items: [
+      { label: "Khao Sok National Park (Cheow Lan Lake)", url: "https://www.google.com/maps/search/Cheow+Lan+Lake+Khao+Sok", note: "lago esmeralda com pináculos. Day trip a partir de Khao Lak. Bangalô flutuante (6+ anos). Macacos selvagens." },
+      { label: "Sea Turtle Conservation Center", url: "https://www.google.com/maps/search/Sea+Turtle+Conservation+Center+Khao+Lak", note: "centro da Marinha tailandesa com tartarugas resgatadas. Gratuito (doação ฿100). Educativo, 1h de programa." },
+      { label: "Khao Lak-Lam Ru National Park (mirante)", url: "https://www.google.com/maps/search/Khao+Lak+Lam+Ru+National+Park", note: "trilha curta 800m até mirante sobre o mar. Restaurante na entrada. ฿200 adulto / ฿100 criança." },
+      { label: "Tsunami Memorial Park (Polícia 813)", url: "https://www.google.com/maps/search/Tsunami+Memorial+Khao+Lak", note: "barco da polícia arrastado 2km terra adentro pelo tsunami de 2004. Memorial educativo pra adolescente (9+). Gratuito." },
+      { label: "Bang Niang Market (segunda/quarta/sábado)", url: "https://www.google.com/maps/search/Bang+Niang+Market+Khao+Lak", note: "mercado noturno familiar, sem pegada balada. Comida + brinquedo + roupa. Criança come satay enquanto adulto compra." },
+    ],
+  },
+  {
+    city: "Koh Phi Phi & Koh Yao",
+    tagline: "Day trips e ilhas vizinhas — só pra criança 6+ que aguenta lancha.",
+    items: [
+      { label: "Maya Bay (com reserva oficial)", url: "https://www.google.com/maps/search/Maya+Bay+Phi+Phi", note: "reserve via DNP (฿400 + lancha). Vá 7h pela manhã ou último horário. Mínimo 6 anos. Lancha 30min de Phi Phi Don." },
+      { label: "Bamboo Island (Koh Mai Phai)", url: "https://www.google.com/maps/search/Bamboo+Island+Phi+Phi", note: "ilhota deserta, mar de piscina, ideal pra criança nadar. Incluída no tour 'Phi Phi early bird'." },
+      { label: "Monkey Beach (Phi Phi Don)", url: "https://www.google.com/maps/search/Monkey+Beach+Phi+Phi", note: "macacos selvagens — NÃO alimente, NÃO toque. Foto à distância. Criança fica encantada, mas precisa de regra clara." },
+      { label: "Viewpoint 2 Phi Phi (subida)", url: "https://www.google.com/maps/search/Phi+Phi+Viewpoint+2", note: "trilha íngreme 25min, vista da ilha em formato 8. Criança 7+ aguenta. Vá ao pôr-do-sol, leve lanterna pra descer." },
+      { label: "Koh Yao Yai Beach (alternativa calma)", url: "https://www.google.com/maps/search/Koh+Yao+Yai", note: "ilha quase sem turista, bicicleta + búfalo nos campos. Hospedar 1-2 noites em vez de day trip. Família ama o silêncio." },
+      { label: "Koh Yao Noi — Manoh Pier", url: "https://www.google.com/maps/search/Manoh+Pier+Koh+Yao+Noi", note: "passeio de longtail pelos pináculos. Pescadores locais ensinam criança a pegar lula. Reservar pelo hotel ฿1.500." },
+    ],
+  },
+  {
+    city: "Kanchanaburi",
+    tagline: "História + natureza acessível — bate-volta de Bangkok pra família com 7+.",
+    items: [
+      { label: "Erawan National Park (7 cachoeiras)", url: "https://www.google.com/maps/search/Erawan+Waterfall", note: "7 níveis de cachoeira turquesa. Níveis 1-4 são fáceis (criança 5+). Peixinhos fazem 'fish spa' grátis na água. ฿300/฿200." },
+      { label: "Death Railway + ponte do rio Kwai", url: "https://www.google.com/maps/search/Bridge+over+River+Kwai", note: "ponte da 2ª Guerra, trem cênico passa em cima. Adolescente (9+) entende a história, criança curte a aventura do trem." },
+      { label: "Hellfire Pass Memorial Museum", url: "https://www.google.com/maps/search/Hellfire+Pass+Memorial", note: "museu australiano gratuito + trilha pelo trecho original da Death Railway. Pesado mas marcante pra 10+." },
+      { label: "Sai Yok Yai Waterfall", url: "https://www.google.com/maps/search/Sai+Yok+Yai+Waterfall", note: "cachoeira que cai direto no rio Kwai. Tem balsa pra atravessar (criança ama). ฿300/฿200." },
+      { label: "ElephantsWorld Sanctuary", url: "https://www.google.com/maps/search/ElephantsWorld+Kanchanaburi", note: "outro santuário ético de elefantes (alternativa a Chiang Mai). Dia inteiro ฿2.500, almoço incluso. Reserve antes." },
+    ],
+  },
 ];
 
 /* ============================================================ */
