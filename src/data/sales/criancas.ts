@@ -120,7 +120,7 @@ export const criancas: SalesContent = {
       "Atrações por faixa etária",
       "Guia de comida infantil",
       "Todos os 5 bônus exclusivos",
-      "Grupo de WhatsApp da comunidade",
+      "Guia das principais cidades (Bangkok, Phuket, Krabi, Samui, Lanta, Chiang Mai, Hua Hin)",
     ],
   },
   guarantee: {
