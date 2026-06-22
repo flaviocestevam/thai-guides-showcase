@@ -278,7 +278,7 @@ const Festas7733 = () => {
       </header>
 
       {/* STICKY NAV */}
-      <nav className="sticky top-0 z-30 backdrop-blur-xl" style={{ background: "rgba(244,239,230,0.78)", borderBottom: `1px solid ${LINE}` }}>
+      <nav className="sticky top-0 z-30 backdrop-blur-xl" style={{ background: "rgba(7,6,11,0.72)", borderBottom: `1px solid ${LINE}` }}>
         <div className="container mx-auto max-w-5xl px-6 py-3.5 overflow-x-auto">
           <div className="flex gap-1 text-[13px] font-medium whitespace-nowrap">
             {chapters.map(([id, label], i) => (
