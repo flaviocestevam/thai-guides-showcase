@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import {
   Check, X, Shield, MapPin, Droplets, Sparkles, Calendar, Map,
-  Plane, Info, Star, BookOpen, Gift, Award, Smartphone, Package2, Hotel
+  Plane, Info, Star, BookOpen, Award, Smartphone, Hotel
 } from "lucide-react";
 import heroImg from "@/assets/generated/songkran-hero.png.asset.json";
 
