@@ -367,7 +367,7 @@ const CafesCoworkings7391 = () => {
 
       <Section chapter="Vistos" title="Como ficar legalmente o tempo todo">
         <ul className="list-disc pl-6 space-y-2">
-          <li><span className="text-foreground">Isenção 60 dias</span> — brasileiro entra sem visto. Pode estender +30 dias na imigração (฿1.900).</li>
+          <li><span className="text-foreground">Isenção 90 dias (brasileiros)</span> — pelo acordo Brasil–Tailândia, brasileiro entra sem visto e pode ficar até 90 dias por entrada. Esse prazo não pode ser estendido na imigração — para ficar mais tempo é preciso sair do país ou usar outro visto (METV, ED, DTV, Elite).</li>
           <li><span className="text-foreground">METV (Multiple Entry Tourist Visa)</span> — 6 meses, múltiplas entradas de 60 dias. Solicite no consulado antes de viajar.</li>
           <li><span className="text-foreground">ED Visa</span> — visto de estudo (tailandês, muay thai, mergulho). 6 a 12 meses. Custo total ~US$ 1.000 com escola.</li>
           <li><span className="text-foreground">DTV (Destination Thailand Visa)</span> — visto para nômades digitais lançado recentemente. 5 anos, estadias de 180 dias renováveis. Renda comprovada ~฿500k em conta.</li>
