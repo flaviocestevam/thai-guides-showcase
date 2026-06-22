@@ -213,7 +213,7 @@ const GoGoBars8855 = () => {
           <Reveal delay={240}>
             <div className="mt-10 flex flex-wrap gap-6 text-sm" style={{ color: "rgba(244,239,230,0.55)" }}>
               <span className="flex items-center gap-2"><span className="w-1 h-1 rounded-full" style={{ background: NEON }} /> 5 distritos cobertos</span>
-              <span className="flex items-center gap-2"><span className="w-1 h-1 rounded-full" style={{ background: NEON }} /> Preços 2025 verificados</span>
+              <span className="flex items-center gap-2"><span className="w-1 h-1 rounded-full" style={{ background: NEON }} /> Preços verificados em campo</span>
               <span className="flex items-center gap-2"><span className="w-1 h-1 rounded-full" style={{ background: NEON }} /> Sem moralismo, sem firula</span>
             </div>
           </Reveal>
@@ -369,7 +369,7 @@ const GoGoBars8855 = () => {
         </Section>
 
         {/* PREÇOS REAIS */}
-        <Section id="cap-precos" kicker="Capítulo 09" title="Preços reais 2025 (média verificada em campo)">
+        <Section id="cap-precos" kicker="Capítulo 09" title="Preços reais (média verificada em campo)">
           <div className="not-prose overflow-x-auto rounded-xl" style={{ border: `1px solid ${LINE}` }}>
             <table className="w-full text-[14.5px]" style={{ color: "rgba(244,239,230,0.85)" }}>
               <thead>
@@ -399,7 +399,7 @@ const GoGoBars8855 = () => {
             </table>
           </div>
           <p className="text-[14px]" style={{ color: "rgba(244,239,230,0.6)" }}>
-            Cotação de referência: ฿100 ≈ R$ 16 (jun/2026). Cobranças adicionais "fora da tabela" = sinal de armadilha.
+            Cotação de referência: ฿100 ≈ R$ 16. Cobranças adicionais "fora da tabela" = sinal de armadilha.
           </p>
         </Section>
 
@@ -557,7 +557,7 @@ const GoGoBars8855 = () => {
         {/* FOOTER */}
         <footer className="py-16 text-center">
           <p className="text-[14px]" style={{ color: "rgba(244,239,230,0.55)" }}>
-            Guia atualizado em junho/2026 · Pesquisa de campo contínua em Bangkok, Pattaya e Phuket ·
+            Pesquisa de campo contínua em Bangkok, Pattaya e Phuket ·
             Conteúdo +18 destinado exclusivamente a maiores de idade
           </p>
         </footer>
