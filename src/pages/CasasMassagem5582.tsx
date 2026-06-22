@@ -456,7 +456,7 @@ const CasasMassagem5582 = () => {
 
       <div className="guide-section-divider" />
 
-      <Section chapter="Capítulo 17" title="Frases salva-vidas">
+      <Section chapter="Capítulo 18" title="Frases salva-vidas">
         <Card>
           <p className="text-sm"><strong className="text-foreground">Pressão mais forte:</strong> "Nuat naek noi" (นวดแน่นหน่อย)</p>
         </Card>
@@ -476,7 +476,7 @@ const CasasMassagem5582 = () => {
 
       <div className="guide-section-divider" />
 
-      <Section chapter="Capítulo 18" title="Etiqueta e gorjeta">
+      <Section chapter="Capítulo 19" title="Etiqueta e gorjeta">
         <p>Gorjeta padrão: ฿50–฿100 (≈ R$ 7–15) em casa de bairro. Em spa de luxo: 10% da conta. Entregue na mão da massagista, não na recepção.</p>
         <p>Sapato fica na entrada. Não dê telefone, não filme. Se algo te incomodar (toque inadequado, ambiente), levante e saia — você não paga.</p>
         <p>Reserve sempre que possível, especialmente para spa luxo: 24h a 7 dias antes via WhatsApp ou Instagram da casa.</p>
