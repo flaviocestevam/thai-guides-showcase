@@ -7,7 +7,7 @@ export const cafesCoworkings: SalesContent = {
   heroBadge: "💻 Para nômades digitais",
   heroTitle: "Trabalhe de qualquer canto da",
   heroHighlight: "Tailândia",
-  heroSubtitle: "Guia definitivo dos 200+ melhores cafés e coworkings da Tailândia — Wi-Fi testado em Mbps, número de tomadas, ar condicionado, política de notebooks, ruído e preço do café. Tudo o que o nômade digital precisa.",
+  heroSubtitle: "Guia definitivo dos 100 melhores cafés e coworkings da Tailândia — número de tomadas, ar condicionado, ruído, preço do café e link direto do Google Maps. Tudo o que o nômade digital precisa, em mais de 10 cidades e ilhas.",
   heroWarning: "Wi-Fi medido por foto bonita no Instagram quebra entrega de cliente. Esse guia tem velocidade real testada em cada lugar — você nunca mais perde uma reunião por internet cair.",
   heroBgGradient: "bg-gradient-to-br from-emerald-950 via-background to-teal-950",
   heroEmoji: "💻",
