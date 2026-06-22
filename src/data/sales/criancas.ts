@@ -59,6 +59,20 @@ export const criancas: SalesContent = {
       bullets: ["0-3: ilhas calmas + Bangkok 2 dias", "4-8: Krabi + Chiang Mai", "9-14: roteiro completo 14 dias", "Adolescente: aventura + cultura"],
     },
     {
+      title: "Principais cidades cobertas",
+      desc: "Onde levar a família em cada destino.",
+      bullets: [
+        "Bangkok: Sea Life, Lumphini, family rooms à beira-rio",
+        "Phuket: Mai Khao, Nai Yang, kids clubs premiados",
+        "Krabi: Klong Muang (mar de piscina), Ao Nang",
+        "Koh Samui: Bophut, Choeng Mon, vilas com piscina",
+        "Koh Lanta: praias rasas, vibe lenta family-friendly",
+        "Chiang Mai: elefantes éticos, fazendas, cultura",
+        "Hua Hin: praia urbana calma, kids clubs históricos",
+        "Pattaya/Khao Kheow: melhor zoo da Tailândia",
+      ],
+    },
+    {
       title: "30 hotéis com kids club",
       desc: "Avaliados na prática.",
       bullets: ["Phuket family resorts", "Krabi all-inclusive", "Koh Samui kids club", "Chiang Mai eco-resort"],
