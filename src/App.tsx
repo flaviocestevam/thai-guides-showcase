@@ -69,6 +69,8 @@ const App = () => (
           <Route path="/tailandia-para-gays" element={<GuiaGays />} />
           <Route path="/tailandia-para-gays0325257" element={<TailandiaParaGays0325257 />} />
           <Route path="/songkran-ano-novo-tailandes" element={<GuiaSongkran />} />
+          <Route path="/songkran9482" element={<Songkran9482 />} />
+
           <Route path="/lua-de-mel-tailandia" element={<GuiaLuaDeMel />} />
           <Route path="/lua-de-mel-tailandia8272524" element={<LuaDeMel8272524 />} />
           <Route path="/cursos-de-massagem" element={<CursosDeMassagem />} />
