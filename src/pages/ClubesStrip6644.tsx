@@ -163,6 +163,7 @@ const russos: LinkRef[] = [
 
 
 const chapters: [string, string][] = [
+  ["cap-iniciantes", "Iniciantes"],
   ["cap-1", "Glossário"],
   ["cap-2", "Etiqueta"],
   ["cap-3", "Bangkok"],
@@ -306,6 +307,45 @@ const ClubesStrip6644 = () => {
       </nav>
 
       <main className="container mx-auto max-w-3xl px-6 divide-y" style={{ borderColor: LINE }}>
+        {/* Cap Iniciantes */}
+        <Section id="cap-iniciantes" kicker="Comece por aqui" title="Dicas para iniciantes — leia antes da primeira noite">
+          <p>Se é sua primeira vez num red-light district tailandês, respeite essas 12 regras. Elas resolvem 95% dos perrengues.</p>
+          <ul className="not-prose grid sm:grid-cols-2 gap-3 mt-6">
+            {[
+              ["Comece pelo Soi Cowboy (BKK)", "É o distrito mais bem regulado. Menus impressos na entrada, preços fixos, sem pressão de promotor. Aprenda a dinâmica ali antes de testar Nana/Patpong/Bangla."],
+              ["Vá entre 21h e 23h", "Cedo demais (19h) os bares estão vazios e a pressão de venda fica enorme. Tarde demais (>2h) você só pega os bares de freelancer mais agressivos."],
+              ["Leve apenas ฿3.000–5.000 em dinheiro", "Mais que isso não vai precisar numa noite honesta. Deixe cartão no hotel ou em bolso separado para emergência."],
+              ["Cópia do passaporte, nunca o original", "Cópia colorida + carteira de motorista internacional resolvem qualquer abordagem da polícia turística."],
+              ["Sempre peça o menu ANTES do primeiro drink", "Sem menu impresso visível = não entre. Essa única regra elimina o golpe da conta inflada."],
+              ["Pague cada rodada na hora", "NUNCA abra conta. 'Tab' é o caminho mais curto pra conta de ฿20.000 no fim da noite."],
+              ["Não fotografe dançarina no palco", "Proibido em 100% dos bares. Te expulsam e podem reter o celular. Selfie na rua, ok."],
+              ["Recuse lady drink se não quiser", "Diga 'mai ow' com sorriso. Ninguém se ofende. Você não é obrigado a pagar drink pra ninguém."],
+              ["Bar fine ≠ tudo incluso", "A taxa só libera a moça do turno. O que rola depois é negociação direta com ela, fora do bar."],
+              ["Drink só na sua mão", "Nunca aceite copo já servido. Boy-drink-spiking acontece, especialmente em bares de freelancer."],
+              ["Grab ou Bolt no retorno", "Tuk-tuk e moto-taxi à noite supercobram 3–5x. App te leva ao hotel pelo preço justo."],
+              ["Se algo der errado: '1155 — Tourist Police'", "Falar essa frase em voz firme resolve 80% das contas erradas antes de qualquer ligação real."],
+            ].map(([head, body], i) => (
+              <Reveal key={i} delay={i * 30}>
+                <div className="rounded-xl p-4 h-full" style={{ background: "rgba(255,255,255,0.55)", border: `1px solid ${LINE}` }}>
+                  <div className="flex items-baseline gap-2.5 mb-1.5">
+                    <span className="font-display text-sm font-semibold flex-shrink-0" style={{ color: GOLD }}>{String(i + 1).padStart(2, "0")}</span>
+                    <div className="font-semibold" style={{ color: INK }}>{head}</div>
+                  </div>
+                  <div className="text-[14.5px] pl-7" style={{ color: "rgba(10,10,15,0.7)" }}>{body}</div>
+                </div>
+              </Reveal>
+            ))}
+          </ul>
+          <Reveal>
+            <div className="not-prose mt-8 rounded-xl p-5 flex gap-3" style={{ background: "rgba(225,29,72,0.07)", border: `1px solid rgba(225,29,72,0.2)` }}>
+              <AlertTriangle className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: NEON }} />
+              <p className="text-[14.5px]" style={{ color: "rgba(10,10,15,0.78)" }}>
+                <strong>Roteiro 0 da primeira noite:</strong> jantar 19h em Sukhumvit → BTS até Asoke → entre 21h–23h fique no Soi Cowboy → 4 cervejas em 2 bares diferentes → volta de Grab até a meia-noite. Custo total: ฿1.500–2.000. Pronto, você "passou de fase" e pode explorar o resto com confiança.
+              </p>
+            </div>
+          </Reveal>
+        </Section>
+
         {/* Cap 1 — Glossário */}
         <Section id="cap-1" kicker="Capítulo 01" title="Glossário — os 12 termos que você precisa saber antes de entrar">
           <p>Quase todo prejuízo de turista vem de pedir algo cujo nome ele não conhece. Decore esses termos.</p>
