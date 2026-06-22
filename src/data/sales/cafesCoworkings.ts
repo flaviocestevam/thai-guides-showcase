@@ -20,36 +20,36 @@ export const cafesCoworkings: SalesContent = {
     { title: "Calor sem ar e barulho de blender", desc: "Tailândia tem 33ºC e umidade. Café sem ar e com blender ligado o tempo todo é tortura para foco." },
   ],
   features: [
-    { title: "200+ lugares testados", desc: "Cada café e coworking visitado pessoalmente, com fotos, Wi-Fi medido e tomadas contadas." },
+    { title: "100 lugares testados", desc: "Cada café e coworking visitado pessoalmente, com fotos, tomadas contadas e link do Google Maps." },
     { title: "Filtros por necessidade", desc: "Procura silêncio? Reunião? Maratona de código? O guia tem ranking por tipo de trabalho." },
-    { title: "Mapa interativo", desc: "Bangkok, Chiang Mai, Phuket, Koh Lanta, Koh Phangan, Pai — todos categorizados por bairro." },
+    { title: "Mapa interativo", desc: "10+ cidades e ilhas: Bangkok, Chiang Mai, Phuket, Pai, Krabi, Koh Lanta, Koh Phangan, Koh Tao, Koh Samui e mais." },
   ],
   comparison: {
     theirs: [
       "Confiar em listas do Google Maps com 4,5 estrelas",
       "Pagar US$ 250/mês em coworking superlotado",
-      "Descobrir 'no laptop allowed' depois do café pago",
+      "Pagar um café e descobrir que não tem tomada",
       "Levar 3h pra achar um lugar produtivo",
-      "Reunião com cliente caindo por Wi-Fi ruim",
+      "Cair em café lindo com blender ligado o dia todo",
     ],
     ours: [
       "Lista curada por nômades que trabalham lá",
       "Coworkings de US$ 30/mês até premium",
-      "Política de laptop sinalizada em cada lugar",
+      "Tomadas contadas em cada lugar",
       "Mapa pronto, vai direto ao certo",
-      "Wi-Fi medido em Mbps por horário",
+      "Nível de ruído avaliado por lugar",
     ],
   },
   authority: {
     title: "3 anos como nômade digital na Tailândia",
     paragraphs: [
       "Trabalho remotamente da Tailândia há mais de 3 anos e já fui de Chiang Mai a Koh Lanta passando por Bangkok, Pai, Phuket, Koh Phangan e Koh Tao.",
-      "Esse guia é o resultado de literalmente milhares de horas testando lugares — alguns para amar, outros para nunca mais voltar. Tudo no mesmo formato: Wi-Fi medido, tomadas contadas, ar testado.",
+      "Esse guia é o resultado de literalmente milhares de horas testando lugares — alguns para amar, outros para nunca mais voltar. Tudo no mesmo formato: tomadas contadas, ar testado, ruído avaliado.",
     ],
     bullets: [
       "3 anos de nomadismo na Tailândia",
-      "200+ lugares testados pessoalmente",
-      "Comunidade de 1.500+ nômades brasileiros",
+      "100 lugares testados pessoalmente",
+      "10+ cidades e ilhas cobertas",
     ],
   },
   modules: [
