@@ -181,6 +181,125 @@ const chapters: [string, string][] = [
 
 type CityBlock = { city: string; tagline: string; items: LinkRef[] };
 
+const hoteisPorCidade: CityBlock[] = [
+  {
+    city: "Bangkok",
+    tagline: "Capital — base de chegada/saída. Kids club, family rooms e piscina infantil em hotéis urbanos.",
+    items: [
+      { label: "Anantara Riverside Bangkok Resort", url: "https://www.google.com/maps/search/Anantara+Riverside+Bangkok", note: "kids club 4–12 (9h–18h). Family room 50m². Berço grátis, piscina rasa, shuttle barco até centro." },
+      { label: "Shangri-La Bangkok", url: "https://www.google.com/maps/search/Shangri-La+Bangkok", note: "Adventure Zone (4–12), babá por hora (฿400/h, fala inglês). Piscina infantil separada com salva-vidas." },
+      { label: "Chatrium Hotel Riverside", url: "https://www.google.com/maps/search/Chatrium+Hotel+Riverside+Bangkok", note: "Family suites 70m² com 2 quartos. Melhor custo-benefício família 4. Kids menu em todos os restaurantes." },
+      { label: "Avani+ Riverside Bangkok", url: "https://www.google.com/maps/search/Avani+Riverside+Bangkok", note: "Family rooms até 6 pessoas. Sky pool com área infantil. Boa pra adolescente." },
+      { label: "Pullman Bangkok King Power", url: "https://www.google.com/maps/search/Pullman+Bangkok+King+Power", note: "Kids club 3–12, manhã + tarde. Berço grátis. Próximo Victory Monument (ônibus pra praias)." },
+      { label: "Centara Grand at CentralWorld", url: "https://www.google.com/maps/search/Centara+Grand+CentralWorld", note: "Dentro do maior shopping. Kids club + cinema/boliche colado. Salva 1 dia de chuva inteiro." },
+    ],
+  },
+  {
+    city: "Phuket",
+    tagline: "Ilha mais visitada da Tailândia — resorts família em Mai Khao, Surin e Patong.",
+    items: [
+      { label: "JW Marriott Phuket Resort (Mai Khao)", url: "https://www.google.com/maps/search/JW+Marriott+Phuket+Mai+Khao", note: "Kids Club premiado, 3 piscinas (1 infantil), aula de tartaruga marinha. Berço, monitor de bebê, kit de fraldas." },
+      { label: "Renaissance Phuket Resort & Spa", url: "https://www.google.com/maps/search/Renaissance+Phuket+Resort", note: "R Kids Club + R Teen Club separados (adolescente longe da criança de 5). Praia Mai Khao calma." },
+      { label: "Holiday Inn Resort Phuket (Patong)", url: "https://www.google.com/maps/search/Holiday+Inn+Resort+Phuket", note: "'Kids Stay & Eat Free' real, não pegadinha. 2 crianças <12 grátis no quarto + buffet." },
+      { label: "Outrigger Surin Beach Resort", url: "https://www.google.com/maps/search/Outrigger+Surin+Beach", note: "Family villas 2 quartos, cozinha. Kids club + babá noturna a preço justo (฿300/h)." },
+      { label: "Anantara Mai Khao Phuket Villas", url: "https://www.google.com/maps/search/Anantara+Mai+Khao+Phuket", note: "Vilas com piscina privada (paz pros pais), kids club opcional. Aula de cozinha thai pra criança." },
+      { label: "Sala Phuket Mai Khao Beach Resort", url: "https://www.google.com/maps/search/Sala+Phuket+Resort", note: "Vilas térreas com piscina, segurança total pra criança que não nada. Praia rasa 100m." },
+    ],
+  },
+  {
+    city: "Krabi (Ao Nang / Klong Muang)",
+    tagline: "Praias rasas, falésias e tour 4 ilhas — base ideal para 0–8 anos.",
+    items: [
+      { label: "Centara Grand Beach Resort Krabi", url: "https://www.google.com/maps/search/Centara+Grand+Krabi", note: "Ao Nang, parque aquático interno (escorregadores), kids club, teen club. Praia da própria enseada." },
+      { label: "Phulay Bay, Ritz-Carlton Reserve", url: "https://www.google.com/maps/search/Phulay+Bay+Ritz+Carlton+Krabi", note: "Luxo total. Vila privada com mordomo, babá inclusa 4h/dia. Atividades culturais pra criança." },
+      { label: "Sofitel Krabi Phokeethra Golf & Spa", url: "https://www.google.com/maps/search/Sofitel+Krabi", note: "Maior piscina-lagoa do sul (toda rasa nas bordas), kids club + mini-zoo no resort. Família grande adora." },
+      { label: "Dusit Thani Krabi Beach Resort", url: "https://www.google.com/maps/search/Dusit+Thani+Krabi", note: "Klong Muang, praia mais calma que Ao Nang. Kids club + miniclub bebê 6m–3a." },
+    ],
+  },
+  {
+    city: "Koh Samui",
+    tagline: "Ilha do golfo — Bophut e Choeng Mon têm mar raso ideal para crianças.",
+    items: [
+      { label: "Banyan Tree Samui", url: "https://www.google.com/maps/search/Banyan+Tree+Samui", note: "Vilas com piscina privada (essencial família 2+ filhos). Kids club + babá 24h sob demanda." },
+      { label: "Anantara Bophut Koh Samui", url: "https://www.google.com/maps/search/Anantara+Bophut+Koh+Samui", note: "Family suites, kids club 4–12, aulas de Muay Thai infantil. Praia Bophut rasa." },
+      { label: "Santiburi Koh Samui", url: "https://www.google.com/maps/search/Santiburi+Koh+Samui", note: "Mae Nam, vilas + golfe + kids club. Crianças aprendem a navegar caiaque em águas calmas." },
+      { label: "Melati Beach Resort & Spa", url: "https://www.google.com/maps/search/Melati+Beach+Resort+Samui", note: "2 piscinas (1 infantil), kids club + babá. Berço, hidromassagem família, menu infantil." },
+    ],
+  },
+  {
+    city: "Koh Phi Phi",
+    tagline: "Ilha balada — para criança, escolher resort fora de Tonsai (Laem Tong / Long Beach).",
+    items: [
+      { label: "Zeavola Resort (Laem Tong)", url: "https://www.google.com/maps/search/Zeavola+Resort+Phi+Phi", note: "Norte da ilha, longe da balada. Vilas teca, praia exclusiva rasa. Kids amenities sob pedido. Transfer de speedboat." },
+      { label: "SAii Phi Phi Island Village (Loh Bagao)", url: "https://www.google.com/maps/search/SAii+Phi+Phi+Island+Village", note: "Praia exclusiva, kids club, snorkel infantil supervisionado. Único resort grande pet-friendly da ilha pra família." },
+      { label: "Phi Phi Island Cabana Hotel (Tonsai)", url: "https://www.google.com/maps/search/Phi+Phi+Island+Cabana+Hotel", note: "Pé no centro mas com piscina grande pra criança. Boa pra família que NÃO quer transfer extra." },
+    ],
+  },
+  {
+    city: "Koh Lanta",
+    tagline: "Ilha tranquila — alternativa a Phi Phi para família com criança pequena.",
+    items: [
+      { label: "Pimalai Resort & Spa (Kantiang Bay)", url: "https://www.google.com/maps/search/Pimalai+Resort+Koh+Lanta", note: "Maior resort da ilha, kids club, 2 piscinas, praia privada de 900m. Tem berço e cardápio infantil." },
+      { label: "Layana Resort & Spa", url: "https://www.google.com/maps/search/Layana+Resort+Koh+Lanta", note: "Adults-only oficialmente, mas aceita 13+. Boa pra família de adolescente que quer paz." },
+      { label: "Twin Lotus Resort & Spa", url: "https://www.google.com/maps/search/Twin+Lotus+Resort+Koh+Lanta", note: "Boutique família, piscina rasa, praia Klong Dao a 50m. Bom preço pra estrutura." },
+    ],
+  },
+  {
+    city: "Khao Lak",
+    tagline: "Litoral norte de Phuket — praias enormes e vazias, ideal pra criança correr.",
+    items: [
+      { label: "JW Marriott Khao Lak Resort & Spa", url: "https://www.google.com/maps/search/JW+Marriott+Khao+Lak", note: "Maior piscina da Tailândia (rios artificiais), kids club premiado, teen club. Praia exclusiva 600m." },
+      { label: "The Sands Khao Lak by Katathani", url: "https://www.google.com/maps/search/Sands+Khao+Lak+Katathani", note: "Family suites duplex, 4 piscinas (1 infantil), kids club. Praia rasa direto do resort." },
+      { label: "Centara Seaview Resort Khao Lak", url: "https://www.google.com/maps/search/Centara+Seaview+Khao+Lak", note: "Camp Safari kids club temático, piscina com escorrega. Custo-benefício família 4." },
+    ],
+  },
+  {
+    city: "Chiang Mai",
+    tagline: "Norte cultural — elefantes éticos, templos e clima ameno (Nov–Fev).",
+    items: [
+      { label: "Four Seasons Resort Chiang Mai", url: "https://www.google.com/maps/search/Four+Seasons+Resort+Chiang+Mai", note: "Mae Rim, búfalo no jardim, arrozal vivo. Kids club com aula de plantio + cozinha thai. Sonho de criança 6+." },
+      { label: "Anantara Chiang Mai Resort", url: "https://www.google.com/maps/search/Anantara+Chiang+Mai+Resort", note: "Centro, family rooms vista rio Ping. Kids club + aula de elefante (ética, sem montaria) no parceiro." },
+      { label: "Le Méridien Chiang Mai", url: "https://www.google.com/maps/search/Le+Meridien+Chiang+Mai", note: "Night Bazaar ao lado (jantar fácil). Family Plan: 2ª cama + café da manhã grátis pra criança." },
+    ],
+  },
+  {
+    city: "Chiang Rai",
+    tagline: "Extremo norte — Templo Branco, Triângulo Dourado e natureza calma para 6+.",
+    items: [
+      { label: "Anantara Golden Triangle Elephant Camp & Resort", url: "https://www.google.com/maps/search/Anantara+Golden+Triangle", note: "Programa ético com elefantes resgatados (criança 4+ acompanha banho). Vista pra Mianmar e Laos. Caro mas inesquecível." },
+      { label: "Le Méridien Chiang Rai Resort", url: "https://www.google.com/maps/search/Le+Meridien+Chiang+Rai", note: "Beira do rio Mae Kok, family rooms, piscina rasa, kids menu. Base prática pro Templo Branco." },
+    ],
+  },
+  {
+    city: "Hua Hin",
+    tagline: "Praia de classe média tailandesa a 3h de Bangkok — mar mais raso e calmo do país.",
+    items: [
+      { label: "Centara Grand Beach Resort Hua Hin", url: "https://www.google.com/maps/search/Centara+Grand+Hua+Hin", note: "Hotel colonial 1923, lendário em estrutura familiar. 4 piscinas, kids club, mini-trem do resort." },
+      { label: "InterContinental Hua Hin Resort", url: "https://www.google.com/maps/search/InterContinental+Hua+Hin", note: "Praia calmíssima (ideal <5 anos), Planet Trekkers kids club premiado mundialmente." },
+      { label: "Hyatt Regency Hua Hin", url: "https://www.google.com/maps/search/Hyatt+Regency+Hua+Hin", note: "Lagoa de natação 1.700m², a maior da Tailândia. Família 5+ adora (espaço pra todo mundo)." },
+    ],
+  },
+  {
+    city: "Pattaya / Jomtien",
+    tagline: "2h de Bangkok, parques temáticos e zoo aberto — destino #1 de família asiática.",
+    items: [
+      { label: "Centara Grand Mirage Beach Resort Pattaya", url: "https://www.google.com/maps/search/Centara+Grand+Mirage+Pattaya", note: "Parque aquático interno (Lost World), 4 piscinas, kids + teen club. Wong Amat (norte, longe da balada)." },
+      { label: "Holiday Inn Pattaya", url: "https://www.google.com/maps/search/Holiday+Inn+Pattaya", note: "'Kids Stay & Eat Free' (até 2 crianças <12). Family Towers com quarto separado pra criança." },
+      { label: "Cape Dara Resort Pattaya", url: "https://www.google.com/maps/search/Cape Dara+Resort+Pattaya", note: "Wong Amat, praia exclusiva rasa, piscina infinita, kids club. Boa relação preço/estrutura." },
+      { label: "Rabbit Resort Pattaya (Jomtien)", url: "https://www.google.com/maps/search/Rabbit+Resort+Pattaya", note: "Vilas térreas no jardim, 2 piscinas rasas. Pé na praia Dongtan (mais calma que Pattaya central)." },
+    ],
+  },
+  {
+    city: "Ayutthaya",
+    tagline: "Antiga capital, 1h30 de Bangkok — bate-volta ou 1 noite com criança 6+.",
+    items: [
+      { label: "Sala Ayutthaya", url: "https://www.google.com/maps/search/Sala+Ayutthaya", note: "Boutique beira-rio com vista pro Wat Phutthaisawan. Piscina pequena mas charmosa. Family room limitada — reservar cedo." },
+      { label: "Classic Kameo Hotel Ayutthaya", url: "https://www.google.com/maps/search/Classic+Kameo+Hotel+Ayutthaya", note: "Apart-hotel com cozinha. Family suites 2 quartos. Melhor custo-benefício pra família de 4." },
+    ],
+  },
+];
+
+
 const experienciasPorCidade: CityBlock[] = [
   {
     city: "Bangkok",
