@@ -59,6 +59,20 @@ export const criancas: SalesContent = {
       bullets: ["0-3: ilhas calmas + Bangkok 2 dias", "4-8: Krabi + Chiang Mai", "9-14: roteiro completo 14 dias", "Adolescente: aventura + cultura"],
     },
     {
+      title: "Principais cidades cobertas",
+      desc: "Onde levar a família em cada destino.",
+      bullets: [
+        "Bangkok: Sea Life, Lumphini, family rooms à beira-rio",
+        "Phuket: Mai Khao, Nai Yang, kids clubs premiados",
+        "Krabi: Klong Muang (mar de piscina), Ao Nang",
+        "Koh Samui: Bophut, Choeng Mon, vilas com piscina",
+        "Koh Lanta: praias rasas, vibe lenta family-friendly",
+        "Chiang Mai: elefantes éticos, fazendas, cultura",
+        "Hua Hin: praia urbana calma, kids clubs históricos",
+        "Pattaya/Khao Kheow: melhor zoo da Tailândia",
+      ],
+    },
+    {
       title: "30 hotéis com kids club",
       desc: "Avaliados na prática.",
       bullets: ["Phuket family resorts", "Krabi all-inclusive", "Koh Samui kids club", "Chiang Mai eco-resort"],
@@ -84,7 +98,7 @@ export const criancas: SalesContent = {
     { title: "Roteiro voo 30h sem chorar", desc: "Estratégias de sono, distração e alimentação no voo.", value: "R$ 67" },
     { title: "Lista de babás verificadas", desc: "Babá-sitter por hora em Phuket, Bangkok, Samui.", value: "R$ 87" },
     { title: "Guia de praias seguras", desc: "Mar calmo, sem corrente, com salva-vidas.", value: "R$ 57" },
-    { title: "Grupo WhatsApp Famílias na Tailândia", desc: "Comunidade brasileira viajando em família.", value: "R$ 97" },
+    
   ],
   testimonials: [
     { name: "Juliana R.", city: "São Paulo", text: "Levei meu filho de 4 anos seguindo o roteiro. Tudo funcionou — ele lembra como a melhor viagem da vida dele." },
@@ -92,7 +106,7 @@ export const criancas: SalesContent = {
     { name: "Carolina T.", city: "Florianópolis", text: "Voei com bebê de 8 meses. Estratégias do guia funcionaram — ele dormiu 9 das 12h." },
     { name: "Fernando A.", city: "Brasília", text: "Cardápio infantil tailandês foi salvação. Minhas filhas comeram thai de verdade, sem picante." },
     { name: "Aline P.", city: "Curitiba", text: "Lista de hospitais me deu paz. Quando precisei levar meu filho com dor de ouvido, fui direto." },
-    { name: "Diego M.", city: "Salvador", text: "Grupo de WhatsApp foi bônus inesperado. Conheci 3 famílias brasileiras na praia através dele." },
+    { name: "Diego M.", city: "Salvador", text: "Roteiro por idade me poupou semanas de pesquisa. Fui pra Krabi com meu filho de 5 e cada dia funcionou." },
   ],
   pricing: {
     badge: "Edição Família",
@@ -106,7 +120,7 @@ export const criancas: SalesContent = {
       "Atrações por faixa etária",
       "Guia de comida infantil",
       "Todos os 5 bônus exclusivos",
-      "Grupo de WhatsApp da comunidade",
+      "Guia das principais cidades (Bangkok, Phuket, Krabi, Samui, Lanta, Chiang Mai, Hua Hin)",
     ],
   },
   guarantee: {
