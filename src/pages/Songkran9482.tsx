@@ -276,6 +276,18 @@ const Songkran9482 = () => {
             <li><strong className="text-foreground">Phuket:</strong> Banzaan Market (Patong) — apenas modelos médios, caros.</li>
           </ul>
         </Card>
+        <Card>
+          <p className="text-sm font-semibold text-foreground mb-2">🛒 Comprar online no Lazada (entrega no hotel)</p>
+          <p className="text-sm mb-2">Se você chega em cima da hora ou não quer perder tempo caçando mercado, dá pra pedir no <a href="https://www.lazada.co.th/catalog/?q=water+gun+songkran" target="_blank" rel="noopener noreferrer" className="text-primary underline font-semibold">Lazada Tailândia</a> (equivalente local da Amazon) e receber direto no hotel em 1–3 dias.</p>
+          <ul className="text-sm space-y-1">
+            <li><strong className="text-foreground">Busque por:</strong> "water gun songkran", "ปืนฉีดน้ำ" (pistola d'água em tailandês) ou "super soaker".</li>
+            <li><strong className="text-foreground">Preço online:</strong> igual ou até mais barato que o mercado de rua (฿90–฿400), sem preço de turista.</li>
+            <li><strong className="text-foreground">Pagamento:</strong> aceita cartão internacional (Visa/Master) e COD (paga na entrega, em dinheiro).</li>
+            <li><strong className="text-foreground">Endereço de entrega:</strong> use o nome e endereço do hotel + seu telefone tailandês (compre SIM no aeroporto). Avise a recepção que vai chegar pacote no seu nome.</li>
+            <li><strong className="text-foreground">Prazo:</strong> peça com pelo menos 5 dias de antecedência. Entre os dias 10–15 o Lazada atrasa por volume.</li>
+            <li><strong className="text-foreground">Alternativa:</strong> <a href="https://shopee.co.th/search?keyword=water%20gun" target="_blank" rel="noopener noreferrer" className="text-primary underline">Shopee Tailândia</a> tem o mesmo catálogo, normalmente ฿10–฿30 mais barato.</li>
+          </ul>
+        </Card>
         <p className="text-sm"><strong className="text-foreground">Estratégia de compra:</strong></p>
         <ul className="list-disc pl-5 text-sm space-y-1">
           <li>Compre <strong>2 dias antes</strong> do dia 13. Dia 12 já dobra preço.</li>
