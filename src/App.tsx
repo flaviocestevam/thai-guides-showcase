@@ -14,6 +14,7 @@ import Festas from "./pages/Festas.tsx";
 import GuiaTrilhasThai44 from "./pages/GuiaTrilhasThai44.tsx";
 import GuiaTrilhasThai from "./pages/GuiaTrilhasThai.tsx";
 import GuiaVoluntariado from "./pages/GuiaVoluntariado.tsx";
+import Voluntariado4827 from "./pages/Voluntariado4827.tsx";
 import GuiaGays from "./pages/GuiaGays.tsx";
 import TailandiaParaGays0325257 from "./pages/TailandiaParaGays0325257.tsx";
 import GuiaSongkran from "./pages/GuiaSongkran.tsx";
