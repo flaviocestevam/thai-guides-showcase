@@ -706,20 +706,27 @@ const Criancas7811 = () => {
           </div>
         </Section>
 
-        {/* HOTÉIS BKK */}
-        <Section id="cap-hoteis-bkk" kicker="Capítulo 08" title="Hotéis com kids club em Bangkok">
-          <p>Bangkok não tem 'kids resort' como ilha, mas tem hotéis com kids club, family rooms espaçosas e piscina infantil. Esses 6 funcionam.</p>
-          <LinkGrid items={hoteisKidsClubBangkok} />
+        {/* HOTÉIS POR CIDADE */}
+        <Section id="cap-hoteis" kicker="Capítulo 08" title="Hotéis família, cidade por cidade">
+          <p>
+            Hotéis testados em <strong>12 destinos mais visitados da Tailândia</strong> com criança —
+            kids club real, family rooms, piscina rasa e babá sob demanda. Clique no nome pra abrir
+            no Google Maps.
+          </p>
+          <div className="not-prose space-y-10 mt-6">
+            {hoteisPorCidade.map((block) => (
+              <div key={block.city}>
+                <div className="flex items-baseline justify-between gap-3 mb-1">
+                  <h3 className="font-display text-[22px] font-semibold" style={{ color: NEON }}>{block.city}</h3>
+                  <span className="text-[12px] uppercase tracking-[0.22em]" style={{ color: GOLD }}>{block.items.length} hotéis</span>
+                </div>
+                <p className="text-[14.5px] mb-4" style={{ color: "rgba(244,239,230,0.65)" }}>{block.tagline}</p>
+                <LinkGrid items={block.items} />
+              </div>
+            ))}
+          </div>
         </Section>
 
-        {/* HOTÉIS ILHAS */}
-        <Section id="cap-hoteis-ilhas" kicker="Capítulo 09" title="Hotéis com kids club nas ilhas e Chiang Mai">
-          <p>
-            Esses 20 hotéis têm kids club AVALIADO PESSOALMENTE: estrutura real, idade aceita, horário,
-            atividades de verdade — nada de folder bonito sem execução.
-          </p>
-          <LinkGrid items={hoteisKidsClubIlhas} />
-        </Section>
 
         {/* ATRAÇÕES */}
         <Section id="cap-atracoes" kicker="Capítulo 10" title="Atrações por idade (que valem o ingresso)">
