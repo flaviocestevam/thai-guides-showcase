@@ -729,7 +729,7 @@ const Criancas7811 = () => {
 
 
         {/* ATRAÇÕES */}
-        <Section id="cap-atracoes" kicker="Capítulo 10" title="Atrações por idade (que valem o ingresso)">
+        <Section id="cap-atracoes" kicker="Capítulo 09" title="Atrações por idade (que valem o ingresso)">
           <p>
             Cada atração marcada com idade ideal. Levar criança fora da faixa = ela não curte e os pais brigam.
             Respeite a faixa.
@@ -738,7 +738,7 @@ const Criancas7811 = () => {
         </Section>
 
         {/* PRAIAS */}
-        <Section id="cap-praias" kicker="Capítulo 11" title="As 10 praias mais seguras para criança">
+        <Section id="cap-praias" kicker="Capítulo 10" title="As 10 praias mais seguras para criança">
           <p>
             Critério: mar raso, sem corrente, fundo de areia (não pedra), sombra natural ou estrutura, salva-vidas
             em high season. Patong/Karon NÃO entram (onda forte, corrente, jet ski sem regra).
@@ -755,7 +755,7 @@ const Criancas7811 = () => {
         </Section>
 
         {/* COMIDA */}
-        <Section id="cap-comida" kicker="Capítulo 12" title="Cardápio infantil tailandês — o que pedir">
+        <Section id="cap-comida" kicker="Capítulo 11" title="Cardápio infantil tailandês — o que pedir">
           <p>
             Tailandês tem prato pra criança que TODA criança come. Memorize esses nomes e mostre no celular se
             o garçom não entender:
@@ -788,12 +788,12 @@ const Criancas7811 = () => {
         </Section>
 
         {/* RESTAURANTES */}
-        <Section id="cap-restaurantes" kicker="Capítulo 13" title="Restaurantes que aceitam criança (e tem cadeirão)">
+        <Section id="cap-restaurantes" kicker="Capítulo 12" title="Restaurantes que aceitam criança (e tem cadeirão)">
           <LinkGrid items={restaurantesFamilia} />
         </Section>
 
         {/* SAÚDE */}
-        <Section id="cap-saude" kicker="Capítulo 14" title="Hospitais pediátricos e farmácia">
+        <Section id="cap-saude" kicker="Capítulo 13" title="Hospitais pediátricos e farmácia">
           <p>
             Tailândia tem hospital padrão americano que custa 1/4 do Brasil. Salve esses telefones no celular
             ANTES de chegar. Aceita seguro internacional (Bradesco, Allianz, IMG) direto.
@@ -802,7 +802,7 @@ const Criancas7811 = () => {
         </Section>
 
         {/* VACINAS */}
-        <Section id="cap-vacinas" kicker="Capítulo 15" title="Vacinas, seguro e medicamentos essenciais">
+        <Section id="cap-vacinas" kicker="Capítulo 14" title="Vacinas, seguro e medicamentos essenciais">
           <div className="not-prose grid sm:grid-cols-2 gap-3">
             {[
               { t: "Vacina obrigatória", d: "Febre amarela (BR exige no retorno se passa por outro país). Cartão internacional emitido em CIEVS." },
@@ -823,7 +823,7 @@ const Criancas7811 = () => {
         </Section>
 
         {/* BABÁS */}
-        <Section id="cap-babas" kicker="Capítulo 16" title="Babás verificadas por cidade">
+        <Section id="cap-babas" kicker="Capítulo 15" title="Babás verificadas por cidade">
           <p>
             Babás por hora pra jantar à dois ou day trip adulto. Esses serviços são profissionais (treinamento,
             inglês, verificação de antecedentes):
@@ -846,12 +846,12 @@ const Criancas7811 = () => {
         </Section>
 
         {/* BLACKLIST */}
-        <Section id="cap-blacklist" kicker="Capítulo 17" title="Onde NÃO levar a criança">
+        <Section id="cap-blacklist" kicker="Capítulo 16" title="Onde NÃO levar a criança">
           <LinkGrid items={blacklistFamilia} />
         </Section>
 
         {/* EMERGÊNCIA */}
-        <Section id="cap-emergencia" kicker="Capítulo 18" title="Emergência — o que fazer nos primeiros 10 minutos">
+        <Section id="cap-emergencia" kicker="Capítulo 17" title="Emergência — o que fazer nos primeiros 10 minutos">
           <div className="not-prose grid sm:grid-cols-2 gap-3">
             {[
               { t: "Febre alta (>38,5°C)", d: "Tylenol infantil dose por peso, banho morno (não frio), líquido. Se >39,5° ou >24h: hospital." },
@@ -883,7 +883,7 @@ const Criancas7811 = () => {
         </Section>
 
         {/* CUSTOS */}
-        <Section id="cap-custos" kicker="Capítulo 19" title="Custos reais — família 4 pessoas, 14 dias">
+        <Section id="cap-custos" kicker="Capítulo 18" title="Custos reais — família 4 pessoas, 14 dias">
           <div className="not-prose overflow-x-auto rounded-xl" style={{ border: `1px solid ${LINE}` }}>
             <table className="w-full text-[14.5px]" style={{ color: "rgba(244,239,230,0.85)" }}>
               <thead>
@@ -921,7 +921,7 @@ const Criancas7811 = () => {
         </Section>
 
         {/* GRUPO */}
-        <Section id="cap-grupo" kicker="Capítulo 20" title="Comunidade BR — famílias na Tailândia">
+        <Section id="cap-grupo" kicker="Capítulo 19" title="Comunidade BR — famílias na Tailândia">
           <p>
             Grupo de WhatsApp ativo com 200+ famílias brasileiras que já viajaram ou estão viajando com criança
             pra Tailândia. Aqui você:
@@ -950,7 +950,7 @@ const Criancas7811 = () => {
         </Section>
 
         {/* EXPERIÊNCIAS POR CIDADE */}
-        <Section id="cap-experiencias-cidades" kicker="Capítulo 21" title="Experiências para crianças, cidade por cidade">
+        <Section id="cap-experiencias-cidades" kicker="Capítulo 20" title="Experiências para crianças, cidade por cidade">
           <p>
             Tudo organizado por destino — clique no link de cada experiência pra abrir direto no Google Maps,
             ver horário e como chegar.
