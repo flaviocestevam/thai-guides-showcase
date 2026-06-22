@@ -292,12 +292,13 @@ const GuiaSongkran = () => {
             <h2 className="text-3xl md:text-5xl font-bold text-center mb-4">
               O Que <span style={{ color: TEAL }}>Vem no Guia</span>
             </h2>
-            <p className="text-center text-gray-500 mb-16 max-w-2xl mx-auto">PDF de 80+ páginas com mapas, links clicáveis e atualizações grátis durante 2026.</p>
+            <p className="text-center text-gray-500 mb-16 max-w-2xl mx-auto">PDF de 80+ páginas com mapas e links clicáveis.</p>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
               {[
                 { icon: Map, title: "Mapas por cidade", desc: "Zonas quentes e zonas seguras" },
                 { icon: Hotel, title: "Hotéis testados", desc: "Em qual rua dormir em paz" },
-                { icon: Calendar, title: "Calendário 2026", desc: "Dia a dia, cidade a cidade" },
+                { icon: Calendar, title: "Calendário do feriado", desc: "Dia a dia, cidade a cidade" },
+
                 { icon: Shield, title: "Kit sobrevivência", desc: "O que levar na mala" },
                 { icon: Droplets, title: "Armas de água", desc: "Onde comprar e quanto pagar" },
                 { icon: Sparkles, title: "Templos e cerimônias", desc: "Horários e etiqueta" },
