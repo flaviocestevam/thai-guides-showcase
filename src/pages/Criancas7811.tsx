@@ -812,6 +812,28 @@ const Criancas7811 = () => {
           </div>
         </Section>
 
+        {/* EXPERIÊNCIAS POR CIDADE */}
+        <Section id="cap-experiencias-cidades" kicker="Capítulo 21" title="Experiências para crianças, cidade por cidade">
+          <p>
+            Tudo organizado por destino — clique no link de cada experiência pra abrir direto no Google Maps,
+            ver horário e como chegar.
+          </p>
+          <div className="not-prose space-y-10 mt-6">
+            {experienciasPorCidade.map((block) => (
+              <div key={block.city}>
+                <div className="flex items-baseline justify-between gap-3 mb-1">
+                  <h3 className="font-display text-[22px] font-semibold" style={{ color: NEON }}>{block.city}</h3>
+                  <span className="text-[12px] uppercase tracking-[0.22em]" style={{ color: GOLD }}>{block.items.length} experiências</span>
+                </div>
+                <p className="text-[14.5px] mb-4" style={{ color: "rgba(244,239,230,0.65)" }}>{block.tagline}</p>
+                <LinkGrid items={block.items} />
+              </div>
+            ))}
+          </div>
+        </Section>
+
+
+
         {/* FOOTER */}
         <footer className="py-16 text-center">
           <p className="text-[14px]" style={{ color: "rgba(244,239,230,0.55)" }}>
