@@ -281,27 +281,39 @@ const CafesCoworkings7391 = () => {
         <div className="grid gap-4 md:grid-cols-2">
           <div className="bg-card border border-border rounded-lg p-5">
             <h3 className="text-foreground font-display text-xl mb-2">Chiang Mai</h3>
-            <p className="text-sm"><span className="text-foreground">Nimman</span> — agitação nômade, perto de tudo, condomínios novos (Hillside, The Astra). Aluguel ฿12–25k/mês.</p>
-            <p className="text-sm mt-2"><span className="text-foreground">Santitham</span> — mais barato e local, 10min de moto do Nimman. ฿7–15k/mês.</p>
-            <p className="text-sm mt-2"><span className="text-foreground">Old City</span> — para quem prefere templos a coworkings. ฿8–18k/mês.</p>
+            <p className="text-sm"><a className="text-primary underline" target="_blank" rel="noreferrer" href="https://www.google.com/maps/search/Nimman+Chiang+Mai">Nimman</a> — agitação nômade, perto de tudo, condomínios novos (Hillside, The Astra). Aluguel ฿12–25k/mês.</p>
+            <p className="text-sm mt-2"><a className="text-primary underline" target="_blank" rel="noreferrer" href="https://www.google.com/maps/search/Santitham+Chiang+Mai">Santitham</a> — mais barato e local, 10min de moto do Nimman. ฿7–15k/mês.</p>
+            <p className="text-sm mt-2"><a className="text-primary underline" target="_blank" rel="noreferrer" href="https://www.google.com/maps/search/Old+City+Chiang+Mai">Old City</a> — para quem prefere templos a coworkings. ฿8–18k/mês.</p>
           </div>
           <div className="bg-card border border-border rounded-lg p-5">
             <h3 className="text-foreground font-display text-xl mb-2">Bangkok</h3>
-            <p className="text-sm"><span className="text-foreground">Sukhumvit (Asok / Phrom Phong)</span> — BTS direto, expat-friendly. ฿18–35k/mês.</p>
-            <p className="text-sm mt-2"><span className="text-foreground">Ari</span> — vila criativa, longe do caos. ฿15–28k/mês.</p>
-            <p className="text-sm mt-2"><span className="text-foreground">Ekamai / Thonglor</span> — premium, coworkings top. ฿20–40k/mês.</p>
+            <p className="text-sm"><a className="text-primary underline" target="_blank" rel="noreferrer" href="https://www.google.com/maps/search/Asok+Phrom+Phong+Bangkok">Sukhumvit (Asok / Phrom Phong)</a> — BTS direto, expat-friendly. ฿18–35k/mês.</p>
+            <p className="text-sm mt-2"><a className="text-primary underline" target="_blank" rel="noreferrer" href="https://www.google.com/maps/search/Ari+Bangkok">Ari</a> — vila criativa, longe do caos. ฿15–28k/mês.</p>
+            <p className="text-sm mt-2"><a className="text-primary underline" target="_blank" rel="noreferrer" href="https://www.google.com/maps/search/Ekamai+Thonglor+Bangkok">Ekamai / Thonglor</a> — premium, coworkings top. ฿20–40k/mês.</p>
           </div>
           <div className="bg-card border border-border rounded-lg p-5">
             <h3 className="text-foreground font-display text-xl mb-2">Phuket</h3>
-            <p className="text-sm"><span className="text-foreground">Bang Tao / Cherngtalay</span> — praia + Hatch coworking. ฿20–40k/mês.</p>
-            <p className="text-sm mt-2"><span className="text-foreground">Rawai / Nai Harn</span> — sul tranquilo, comunidade muay-thai. ฿15–30k/mês.</p>
-            <p className="text-sm mt-2"><span className="text-foreground">Old Town</span> — cultura + GARAGE Society. ฿12–25k/mês.</p>
+            <p className="text-sm"><a className="text-primary underline" target="_blank" rel="noreferrer" href="https://www.google.com/maps/search/Bang+Tao+Cherngtalay+Phuket">Bang Tao / Cherngtalay</a> — praia + Hatch coworking. ฿20–40k/mês.</p>
+            <p className="text-sm mt-2"><a className="text-primary underline" target="_blank" rel="noreferrer" href="https://www.google.com/maps/search/Rawai+Nai+Harn+Phuket">Rawai / Nai Harn</a> — sul tranquilo, comunidade muay-thai. ฿15–30k/mês.</p>
+            <p className="text-sm mt-2"><a className="text-primary underline" target="_blank" rel="noreferrer" href="https://www.google.com/maps/search/Phuket+Old+Town">Old Town</a> — cultura + GARAGE Society. ฿12–25k/mês.</p>
+          </div>
+          <div className="bg-card border border-border rounded-lg p-5">
+            <h3 className="text-foreground font-display text-xl mb-2">Pattaya</h3>
+            <p className="text-sm"><a className="text-primary underline" target="_blank" rel="noreferrer" href="https://www.google.com/maps/search/Pratumnak+Hill+Pattaya">Pratumnak Hill</a> — área expat tranquila entre Pattaya e Jomtien. ฿12–25k/mês.</p>
+            <p className="text-sm mt-2"><a className="text-primary underline" target="_blank" rel="noreferrer" href="https://www.google.com/maps/search/Jomtien+Beach+Pattaya">Jomtien</a> — praia longa, condomínios novos, vibe família/nômade. ฿10–22k/mês.</p>
+            <p className="text-sm mt-2"><a className="text-primary underline" target="_blank" rel="noreferrer" href="https://www.google.com/maps/search/Central+Pattaya">Central Pattaya</a> — perto de shoppings e coworkings, mais agitado. ฿11–24k/mês.</p>
+          </div>
+          <div className="bg-card border border-border rounded-lg p-5">
+            <h3 className="text-foreground font-display text-xl mb-2">Koh Phi Phi</h3>
+            <p className="text-sm"><a className="text-primary underline" target="_blank" rel="noreferrer" href="https://www.google.com/maps/search/Tonsai+Village+Koh+Phi+Phi">Tonsai Village</a> — único polo da ilha, tudo a pé. Wi-Fi instável, prepare hotspot. ฿15–30k/mês (estadia curta).</p>
+            <p className="text-sm mt-2"><a className="text-primary underline" target="_blank" rel="noreferrer" href="https://www.google.com/maps/search/Long+Beach+Koh+Phi+Phi">Long Beach</a> — mais silencioso, 15min de longtail do centro. ฿18–35k/mês.</p>
+            <p className="text-xs mt-2">Phi Phi funciona melhor para retiros curtos de trabalho (1–2 semanas), não base mensal — infraestrutura é limitada.</p>
           </div>
           <div className="bg-card border border-border rounded-lg p-5">
             <h3 className="text-foreground font-display text-xl mb-2">Ilhas (Lanta / Phangan / Samui)</h3>
-            <p className="text-sm"><span className="text-foreground">Long Beach (Lanta)</span> — KoHub + bangalôs ฿10–20k/mês.</p>
-            <p className="text-sm mt-2"><span className="text-foreground">Srithanu (Phangan)</span> — yoga + cowork ฿12–25k/mês.</p>
-            <p className="text-sm mt-2"><span className="text-foreground">Bophut (Samui)</span> — Fisherman's Village, ฿18–35k/mês.</p>
+            <p className="text-sm"><a className="text-primary underline" target="_blank" rel="noreferrer" href="https://www.google.com/maps/search/Long+Beach+Koh+Lanta">Long Beach (Lanta)</a> — KoHub + bangalôs ฿10–20k/mês.</p>
+            <p className="text-sm mt-2"><a className="text-primary underline" target="_blank" rel="noreferrer" href="https://www.google.com/maps/search/Srithanu+Koh+Phangan">Srithanu (Phangan)</a> — yoga + cowork ฿12–25k/mês.</p>
+            <p className="text-sm mt-2"><a className="text-primary underline" target="_blank" rel="noreferrer" href="https://www.google.com/maps/search/Bophut+Fisherman+Village+Koh+Samui">Bophut (Samui)</a> — Fisherman's Village, ฿18–35k/mês.</p>
           </div>
         </div>
       </Section>
