@@ -210,6 +210,106 @@ const chapters: [string, string][] = [
   ["cap-emergencia", "Emergência"],
   ["cap-custos", "Custos reais"],
   ["cap-grupo", "Comunidade BR"],
+  ["cap-experiencias-cidades", "Experiências por cidade"],
+];
+
+type CityBlock = { city: string; tagline: string; items: LinkRef[] };
+
+const experienciasPorCidade: CityBlock[] = [
+  {
+    city: "Bangkok",
+    tagline: "Capital — cultura, aquário, parque e shopping para os dias de chuva.",
+    items: [
+      { label: "SEA LIFE Bangkok Ocean World (Siam Paragon)", url: "https://www.google.com/maps/search/SEA+LIFE+Bangkok+Ocean+World", note: "túnel de tubarões, raias pra tocar, mergulho infantil (8+). Subsolo do shopping = ar-condicionado o dia todo. ฿990 adulto / ฿790 criança." },
+      { label: "KidZania Bangkok", url: "https://www.google.com/maps/search/KidZania+Bangkok", note: "cidade-cenário pra criança 4-14 anos virar bombeiro, piloto, médico. 4-6h de programa. Dentro do Siam Paragon." },
+      { label: "Lumphini Park (pedalinho de cisne)", url: "https://www.google.com/maps/search/Lumphini+Park+Bangkok", note: "pedalinho ฿80/30min, varões selvagens (seguros), bicicleta de aluguel. Vai cedo (antes 10h)." },
+      { label: "Safari World Bangkok", url: "https://www.google.com/maps/search/Safari+World+Bangkok", note: "safari de carro + Marine Park com shows. Dia inteiro. ฿1.500 adulto / ฿1.400 criança. Reservar online = -20%." },
+      { label: "Madame Tussauds Bangkok", url: "https://www.google.com/maps/search/Madame+Tussauds+Bangkok", note: "ótimo pra 8+ (criança tira foto com 'celebridades'). Siam Discovery, 1h30 de programa." },
+      { label: "Dream World (Pathum Thani)", url: "https://www.google.com/maps/search/Dream+World+Bangkok", note: "parque de diversões 'Disney tailandesa'. Snow Town (-2°C), montanha-russa light. 1h de Grab do centro." },
+      { label: "Asiatique The Riverfront", url: "https://www.google.com/maps/search/Asiatique+The+Riverfront", note: "noite leve em família: roda-gigante, mercado coberto, food court, barco grátis do Saphan Taksin." },
+      { label: "Wat Pho (Buda Reclinado, cedo)", url: "https://www.google.com/maps/search/Wat+Pho+Bangkok", note: "vá 8h (abre) — vazio, fresco. Criança vê estátua de 46m. Roupa cobrindo joelho/ombro. ฿300 adulto / criança grátis." },
+    ],
+  },
+  {
+    city: "Phuket",
+    tagline: "Ilha grande — praias calmas no norte, parques aquáticos e show épico.",
+    items: [
+      { label: "Splash Jungle Water Park (Mai Khao)", url: "https://www.google.com/maps/search/Splash+Jungle+Phuket", note: "área baby + toboáguas adultos. Único parque aquático sério do norte. ฿1.495 adulto / ฿745 criança." },
+      { label: "Phuket FantaSea (Kamala)", url: "https://www.google.com/maps/search/Phuket+FantaSea", note: "show cultural com elefantes (sem montaria), acrobatas, efeitos. Parque temático + jantar buffet. 4h de programa." },
+      { label: "Aquaria Phuket (Central Floresta)", url: "https://www.google.com/maps/search/Aquaria+Phuket", note: "aquário moderno, dentro de shopping. Salva 1 dia de chuva. ฿890 adulto / ฿690 criança." },
+      { label: "Phuket Trick Eye Museum", url: "https://www.google.com/maps/search/Phuket+Trickeye+Museum", note: "museu de fotos 3D. Criança 5+ surta. Phuket Town, 1h30 de programa." },
+      { label: "Big Buddha Phuket", url: "https://www.google.com/maps/search/Big+Buddha+Phuket", note: "subida fácil de táxi, estátua de 45m, vista 360°. Roupa adequada. Entrada gratuita." },
+      { label: "Carnival Magic (perto FantaSea)", url: "https://www.google.com/maps/search/Carnival+Magic+Phuket", note: "parque temático novo, vibe carnaval tailandês. Show de luzes à noite. Adolescente curte mais que criança pequena." },
+      { label: "Patong Go-Kart Speedway", url: "https://www.google.com/maps/search/Patong+Go-Kart+Speedway", note: "kart pra criança 6+ (kart kids) e adolescente (kart adulto). ฿700–฿1.400 por sessão de 10min." },
+      { label: "Khao Phra Thaeo (gibões resgatados)", url: "https://www.google.com/maps/search/Gibbon+Rehabilitation+Phuket", note: "centro ético de reabilitação de gibões. Visita guiada gratuita (doação). Trilha curta na floresta." },
+    ],
+  },
+  {
+    city: "Krabi",
+    tagline: "Mar de piscina e ilhas de lancha — a região mais family-friendly do continente.",
+    items: [
+      { label: "4 Islands Tour (saída Ao Nang)", url: "https://www.google.com/maps/search/Ao+Nang+Pier+Krabi", note: "Phra Nang, Tup, Chicken, Poda. Lancha pequena 6h. Mar raso pra snorkel infantil. ฿1.200 com almoço." },
+      { label: "Emerald Pool (Sa Morakot)", url: "https://www.google.com/maps/search/Emerald+Pool+Krabi", note: "piscina natural verde, trilha plana 800m. Criança 4+ aguenta. ฿200 adulto / ฿100 criança." },
+      { label: "Hot Springs Waterfall (Krabi)", url: "https://www.google.com/maps/search/Hot+Springs+Waterfall+Krabi", note: "piscinas naturais de água quente 35-40°C, criança ama. Vai junto com Emerald Pool no mesmo dia." },
+      { label: "Tiger Cave Temple (Wat Tham Sua)", url: "https://www.google.com/maps/search/Tiger+Cave+Temple+Krabi", note: "templo na caverna (plano, ok criança) + opcional 1.260 degraus pro mirante (só 9+ anos com fôlego)." },
+      { label: "Ao Nang Krabi Aquarium", url: "https://www.google.com/maps/search/Krabi+Aquarium", note: "pequeno mas curado. Boa pra 3-7 anos. Manhã ou dia chuvoso. ฿200 entrada." },
+      { label: "Khao Khanab Nam (passeio de longtail)", url: "https://www.google.com/maps/search/Khao+Khanab+Nam+Krabi", note: "longtail boat pelos pináculos de calcário + caverna com estalactites. 2h, ฿1.500/barco até 6 pessoas." },
+      { label: "Nopparat Thara Pier (caiaque)", url: "https://www.google.com/maps/search/Nopparat+Thara+Pier", note: "aluguel de caiaque + standup paddle. Mar de piscina, ideal família com 8+ anos." },
+    ],
+  },
+  {
+    city: "Koh Samui",
+    tagline: "Ilha grande, calma e estruturada — bom mix de praia + atrações leves.",
+    items: [
+      { label: "Samui Aquarium & Tiger Zoo", url: "https://www.google.com/maps/search/Samui+Aquarium+Tiger+Zoo", note: "pequeno aquário + área de pássaros e répteis. ฿650 adulto / ฿350 criança. 2-3h." },
+      { label: "Coco Splash Adventure Park", url: "https://www.google.com/maps/search/Coco+Splash+Adventure+Park+Samui", note: "parque aquático pequeno mas perfeito pra 3-10 anos. Lamai. ฿650 dia inteiro." },
+      { label: "Pink Elephant Water Park", url: "https://www.google.com/maps/search/Pink+Elephant+Water+Park+Samui", note: "alternativa em Chaweng, toboáguas maiores. Bom pra 7+. ฿700 com almoço incluso." },
+      { label: "Hin Ta & Hin Yai (Grandpa & Grandma Rocks)", url: "https://www.google.com/maps/search/Hin+Ta+Hin+Yai+Samui", note: "rochas curiosas à beira-mar (formato divertido pra criança rir). Lamai. Gratuito, 30min de passeio." },
+      { label: "Na Muang Waterfall 1 & 2", url: "https://www.google.com/maps/search/Na+Muang+Waterfall+Samui", note: "Na Muang 1 é plana (carrinho ok), Na Muang 2 sobe 30min (criança 6+). Banho permitido." },
+      { label: "Fisherman's Village (Bophut)", url: "https://www.google.com/maps/search/Fishermans+Village+Bophut", note: "vila pedestre à noite, sexta tem walking street. Comer, comprar, criança correndo na rua sem perigo." },
+      { label: "Ang Thong Marine Park (day trip)", url: "https://www.google.com/maps/search/Ang+Thong+National+Marine+Park", note: "42 ilhas, lagoa esmeralda. Speedboat 4-6h, ideal 6+ anos. Crianças menores enjoam." },
+    ],
+  },
+  {
+    city: "Koh Lanta",
+    tagline: "Ilha lenta e family-friendly de verdade — pouco trânsito, praias rasas.",
+    items: [
+      { label: "Lanta Animal Welfare (visita)", url: "https://www.google.com/maps/search/Lanta+Animal+Welfare", note: "ONG de animais resgatados. Visita guiada gratuita (doação ฿200), criança 7+ pode passear cachorros. Educativo." },
+      { label: "Mu Ko Lanta National Park (farol sul)", url: "https://www.google.com/maps/search/Mu+Ko+Lanta+National+Park", note: "farol + trilha curta + macacos selvagens + praia escondida. ฿200 adulto / ฿100 criança." },
+      { label: "Old Town Lanta", url: "https://www.google.com/maps/search/Lanta+Old+Town", note: "vila chinesa-muçulmana à beira-mar, restaurantes sobre palafitas. Manhã. Criança vê barcos e peixes da varanda." },
+      { label: "Klong Chak Waterfall + Caverna", url: "https://www.google.com/maps/search/Klong+Chak+Waterfall+Koh+Lanta", note: "trilha curta 30min, caverna ao lado. Guia local ฿300 — vale (ele explica e segura criança nas pedras)." },
+      { label: "Khao Mai Kaew Cave", url: "https://www.google.com/maps/search/Khao+Mai+Kaew+Cave+Koh+Lanta", note: "caverna grande com guia obrigatório. Aventura pra 8+ anos. ฿200/pessoa, 1h de espeleologia leve." },
+    ],
+  },
+  {
+    city: "Chiang Mai",
+    tagline: "Norte cultural + aventura — elefantes éticos e fazendas tematizadas.",
+    items: [
+      { label: "Elephant Nature Park", url: "https://www.google.com/maps/search/Elephant+Nature+Park+Chiang+Mai", note: "santuário ético, sem montaria. Banho de rio + alimentação. Mínimo 4 anos. Reservar 2 meses antes. ฿2.500 adulto." },
+      { label: "Patara Elephant Farm", url: "https://www.google.com/maps/search/Patara+Elephant+Farm+Chiang+Mai", note: "alternativa ética 'Be a Mahout for a Day' versão kids. Aprender a cuidar + banho. Reservar antes." },
+      { label: "Flight of the Gibbon (zip line)", url: "https://www.google.com/maps/search/Flight+of+the+Gibbon+Chiang+Mai", note: "5km de tirolesa pela floresta. Mínimo 8 anos / 20kg. ฿3.999 com almoço e transfer. Pré-adolescente sonha." },
+      { label: "Sticky Waterfall (Bua Tong)", url: "https://www.google.com/maps/search/Sticky+Waterfall+Chiang+Mai", note: "cachoeira de calcário escalável (pé não escorrega). Criança 5+ sobe segura. Gratuito. Leve sandália aderente." },
+      { label: "Mae Sa Elephant Camp Snow Park", url: "https://www.google.com/maps/search/Snow+Park+Mae+Sa+Chiang+Mai", note: "neve artificial pra criança tailandesa — agita brasileira também. Trenó + bonecos. 1h, ฿400 entrada." },
+      { label: "Chiang Mai Zoo & Aquarium", url: "https://www.google.com/maps/search/Chiang+Mai+Zoo", note: "zoo grande no Doi Suthep + aquário com túnel. Pandas-gigantes. Carrinho/tram interno. Dia inteiro." },
+      { label: "Doi Suthep Temple (cedo)", url: "https://www.google.com/maps/search/Doi+Suthep+Chiang+Mai", note: "vista da cidade do alto. Subir 309 degraus OU usar funicular ฿20. Criança curte sinos pra fazer pedido." },
+      { label: "Pongyang Jungle Coaster & Zipline", url: "https://www.google.com/maps/search/Pongyang+Jungle+Coaster+Chiang+Mai", note: "montanha-russa de selva pra 4+ anos. Zip line light pra criança junto com adulto. Mae Rim." },
+      { label: "X-Centre Chiang Mai (kart, paintball)", url: "https://www.google.com/maps/search/X-Centre+Chiang+Mai", note: "kart kids 6+, paintball adolescente 12+, bungee adulto. Pacote família funciona." },
+    ],
+  },
+  {
+    city: "Hua Hin & Pattaya",
+    tagline: "Praia urbana + zoo gigante — destinos subestimados pela família BR.",
+    items: [
+      { label: "Vana Nava Water Jungle (Hua Hin)", url: "https://www.google.com/maps/search/Vana+Nava+Water+Jungle+Hua+Hin", note: "MAIOR parque aquático de selva da Ásia. Toboáguas + área baby. ฿1.190 adulto / ฿890 criança. Dia inteiro." },
+      { label: "Cicada Market (Hua Hin, sexta-domingo)", url: "https://www.google.com/maps/search/Cicada+Market+Hua+Hin", note: "mercado artesanal noturno com palco aberto. Criança come, vê show, compra brinquedo de madeira local. Gratuito." },
+      { label: "Plearn Wan Vintage Village", url: "https://www.google.com/maps/search/Plearn+Wan+Hua+Hin", note: "vila cenográfica anos 50, balas antigas, fotos, brinquedos retrô. Adolescente posta no Insta." },
+      { label: "Pedalinho-cisne na praia Hua Hin", url: "https://www.google.com/maps/search/Hua+Hin+Beach", note: "passeio de pônei e cavalo na areia (฿200 a volta), pedalinho, paragliding rebocado. Vibe família old-school." },
+      { label: "Khao Kheow Open Zoo (Pattaya)", url: "https://www.google.com/maps/search/Khao+Kheow+Open+Zoo+Chonburi", note: "MELHOR zoo da Tailândia, animais soltos, carrinho elétrico ฿250 com mapa. ฿300 adulto / ฿150 criança. 1h30 de BKK." },
+      { label: "Nong Nooch Tropical Garden", url: "https://www.google.com/maps/search/Nong Nooch+Garden+Pattaya", note: "jardim botânico gigante + show cultural + parque de dinossauros. Carrinho elétrico essencial. Dia inteiro." },
+      { label: "Cartoon Network Amazone Water Park", url: "https://www.google.com/maps/search/Cartoon+Network+Amazone+Pattaya", note: "parque aquático temático CN. Toboáguas Hora de Aventura, Ben 10. Criança 4-12 surta. ฿1.290 adulto / ฿1.090 criança." },
+      { label: "Underwater World Pattaya", url: "https://www.google.com/maps/search/Underwater+World+Pattaya", note: "aquário com túnel + tubarões + alimentação ao vivo. ฿500 adulto / ฿350 criança. 2h." },
+    ],
+  },
 ];
 
 /* ============================================================ */
@@ -711,6 +811,28 @@ const Criancas7811 = () => {
             </p>
           </div>
         </Section>
+
+        {/* EXPERIÊNCIAS POR CIDADE */}
+        <Section id="cap-experiencias-cidades" kicker="Capítulo 21" title="Experiências para crianças, cidade por cidade">
+          <p>
+            Tudo organizado por destino — clique no link de cada experiência pra abrir direto no Google Maps,
+            ver horário e como chegar.
+          </p>
+          <div className="not-prose space-y-10 mt-6">
+            {experienciasPorCidade.map((block) => (
+              <div key={block.city}>
+                <div className="flex items-baseline justify-between gap-3 mb-1">
+                  <h3 className="font-display text-[22px] font-semibold" style={{ color: NEON }}>{block.city}</h3>
+                  <span className="text-[12px] uppercase tracking-[0.22em]" style={{ color: GOLD }}>{block.items.length} experiências</span>
+                </div>
+                <p className="text-[14.5px] mb-4" style={{ color: "rgba(244,239,230,0.65)" }}>{block.tagline}</p>
+                <LinkGrid items={block.items} />
+              </div>
+            ))}
+          </div>
+        </Section>
+
+
 
         {/* FOOTER */}
         <footer className="py-16 text-center">
