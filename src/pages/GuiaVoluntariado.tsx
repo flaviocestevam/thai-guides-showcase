@@ -36,7 +36,7 @@ const GuiaVoluntariado = () => {
           </div>
           <div className="container mx-auto px-6 relative z-10 text-white py-12">
             <div className="inline-block bg-gradient-to-r from-[#16A34A] to-[#059669] text-xs font-bold px-3 py-1 rounded-full mb-6 tracking-wider uppercase">
-              🌿 Edição 2026 • Atualizado
+              🌿 Edição Atualizada
             </div>
             <h1 className="text-4xl md:text-7xl font-bold leading-tight max-w-4xl mb-6">
               Viva a Tailândia <span style={{ color: GOLD }}>Por Dentro</span> — Fazendo <span style={{ color: GREEN }}>Voluntariado</span>
