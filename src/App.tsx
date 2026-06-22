@@ -17,6 +17,8 @@ import GuiaVoluntariado from "./pages/GuiaVoluntariado.tsx";
 import GuiaGays from "./pages/GuiaGays.tsx";
 import TailandiaParaGays0325257 from "./pages/TailandiaParaGays0325257.tsx";
 import GuiaSongkran from "./pages/GuiaSongkran.tsx";
+import Songkran9482 from "./pages/Songkran9482.tsx";
+
 import GuiaLuaDeMel from "./pages/GuiaLuaDeMel.tsx";
 import LuaDeMel8272524 from "./pages/LuaDeMel8272524.tsx";
 import CursosDeMassagem from "./pages/CursosDeMassagem.tsx";
