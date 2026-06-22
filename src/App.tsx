@@ -11,6 +11,7 @@ import MuayThai from "./pages/MuayThai.tsx";
 import MuayThai5645 from "./pages/MuayThai5645.tsx";
 import Festas from "./pages/Festas.tsx";
 import Festas7733 from "./pages/Festas7733.tsx";
+import GoGoBars8855 from "./pages/GoGoBars8855.tsx";
 
 import GuiaTrilhasThai44 from "./pages/GuiaTrilhasThai44.tsx";
 import GuiaTrilhasThai from "./pages/GuiaTrilhasThai.tsx";
@@ -90,6 +91,7 @@ const App = () => (
           <Route path="/clubes-de-strip-tailandia" element={<ClubesStrip />} />
           <Route path="/clubesstrip6644" element={<ClubesStrip6644 />} />
           <Route path="/go-go-bars-tailandia" element={<GoGoBars />} />
+          <Route path="/gogobars8855" element={<GoGoBars8855 />} />
           <Route path="/reveillon-tailandia" element={<Reveillon />} />
           <Route path="/reveillon-tailandia67729" element={<Reveillon67729 />} />
           <Route path="/top-hostels-tailandia" element={<TopHostels />} />
