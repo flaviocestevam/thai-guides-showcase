@@ -403,7 +403,7 @@ const GuiaSongkran = () => {
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-2" className="border rounded-2xl px-8 py-2">
-              <AccordionTrigger className="text-lg font-bold hover:no-underline">Quando exatamente acontece Songkran 2026?</AccordionTrigger>
+              <AccordionTrigger className="text-lg font-bold hover:no-underline">Quando exatamente acontece Songkran?</AccordionTrigger>
               <AccordionContent className="text-gray-600 text-lg leading-relaxed">
                 O feriado oficial é em meados de abril, mas a duração e o pico variam de cidade pra cidade — algumas estendem por uma semana inteira. O calendário completo está dentro do guia.
               </AccordionContent>
