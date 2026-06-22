@@ -143,6 +143,44 @@ const hoteisBKK: LinkRef[] = [
   { label: "Buri Gallery House", url: "https://www.google.com/maps/search/Buri+Gallery+House+Chiang+Mai", note: "CM · boutique pequeno, até 8kg, sem taxa. Old City." },
 ];
 
+const hoteisIlhas: LinkRef[] = [
+  // Phuket (18)
+  { label: "The Slate Phuket (Nai Yang)", url: "https://www.google.com/maps/search/The+Slate+Phuket", note: "Phuket · vilas com jardim privado. Até 20kg, taxa ฿2.500/estadia." },
+  { label: "Renaissance Phuket Resort (Mai Khao)", url: "https://www.google.com/maps/search/Renaissance+Phuket+Resort", note: "Phuket · até 15kg, taxa ฿2.000. Praia Mai Khao pet-friendly." },
+  { label: "JW Marriott Phuket (Mai Khao)", url: "https://www.google.com/maps/search/JW+Marriott+Phuket+Mai+Khao", note: "Phuket · até 18kg, taxa ฿3.000. Tartarugas + pet-friendly beach." },
+  { label: "Anantara Mai Khao Phuket Villas", url: "https://www.google.com/maps/search/Anantara+Mai+Khao+Phuket", note: "Phuket · vilas privadas com piscina, até 20kg, taxa ฿2.500." },
+  { label: "Sala Phuket Resort (Mai Khao)", url: "https://www.google.com/maps/search/Sala+Phuket+Resort", note: "Phuket · até 15kg, taxa ฿1.800. Quartos térreos." },
+  { label: "Trisara Phuket", url: "https://www.google.com/maps/search/Trisara+Phuket", note: "Phuket · ultra-luxo, até 12kg, política sob consulta." },
+  { label: "Banyan Tree Phuket (Bang Tao)", url: "https://www.google.com/maps/search/Banyan+Tree+Phuket", note: "Phuket · vilas até 15kg, taxa ฿2.500. Lagoa interna." },
+  { label: "Outrigger Surin Beach Resort", url: "https://www.google.com/maps/search/Outrigger+Surin+Beach", note: "Phuket · até 10kg, taxa ฿1.500. Praia Surin tolera pet." },
+  { label: "Marriott Merlin Beach", url: "https://www.google.com/maps/search/Marriott+Merlin+Beach+Phuket", note: "Phuket · enseada privada, até 12kg, taxa ฿1.800." },
+  { label: "Cape Panwa Hotel", url: "https://www.google.com/maps/search/Cape+Panwa+Hotel+Phuket", note: "Phuket · sul da ilha, até 15kg, taxa ฿1.200." },
+  { label: "The Naka Island (a Luxury Collection)", url: "https://www.google.com/maps/search/Naka+Island+Phuket", note: "Phuket · ilha privada, até 10kg, taxa ฿2.500. Balsa inclusa." },
+  { label: "Andaman White Beach Resort", url: "https://www.google.com/maps/search/Andaman+White+Beach+Resort+Phuket", note: "Phuket · Nai Thon, até 15kg, taxa ฿1.000. Tranquilo." },
+  { label: "Le Méridien Phuket Mai Khao", url: "https://www.google.com/maps/search/Le+Meridien+Phuket+Mai+Khao", note: "Phuket · até 12kg, taxa ฿1.500. Programa Familink pet." },
+  { label: "Cassia Phuket (Laguna)", url: "https://www.google.com/maps/search/Cassia+Phuket", note: "Phuket · aparthotel, até 15kg, taxa ฿1.000. Estadia longa." },
+  { label: "Twinpalms Phuket (Surin)", url: "https://www.google.com/maps/search/Twinpalms+Phuket", note: "Phuket · até 10kg, taxa ฿1.800. Próximo Catch (que NÃO aceita pet)." },
+  { label: "Pullman Phuket Arcadia Naithon", url: "https://www.google.com/maps/search/Pullman+Phuket+Arcadia+Naithon", note: "Phuket · até 15kg, taxa ฿1.200. Praia Naithon pet-friendly." },
+  { label: "Avista Hideaway Phuket Patong", url: "https://www.google.com/maps/search/Avista+Hideaway+Phuket+Patong", note: "Phuket · única opção em Patong com política pet. Até 8kg, ฿1.500." },
+  { label: "Eastin Yama Hotel Phuket", url: "https://www.google.com/maps/search/Eastin+Yama+Phuket", note: "Phuket · Kata, até 10kg, taxa ฿800. Boutique custo-benefício." },
+  // Koh Samui / Phangan / Lanta (15)
+  { label: "Anantara Bophut Koh Samui", url: "https://www.google.com/maps/search/Anantara+Bophut+Koh+Samui", note: "Samui · até 12kg, taxa ฿1.800. Praia Bophut permite coleira." },
+  { label: "Six Senses Samui (Choeng Mon)", url: "https://www.google.com/maps/search/Six+Senses+Samui", note: "Samui · vilas, até 15kg, taxa ฿3.000. Sob consulta prévia." },
+  { label: "Banyan Tree Samui (Lamai)", url: "https://www.google.com/maps/search/Banyan+Tree+Samui", note: "Samui · vilas privadas, até 15kg, taxa ฿2.500." },
+  { label: "Santiburi Koh Samui (Mae Nam)", url: "https://www.google.com/maps/search/Santiburi+Koh+Samui", note: "Samui · vilas, até 18kg, taxa ฿1.500. Praia tranquila." },
+  { label: "Outrigger Koh Samui Beach Resort", url: "https://www.google.com/maps/search/Outrigger+Koh+Samui", note: "Samui · Lamai, até 10kg, taxa ฿1.000." },
+  { label: "Anantara Lawana Koh Samui", url: "https://www.google.com/maps/search/Anantara+Lawana+Koh+Samui", note: "Samui · Chaweng norte, até 12kg, taxa ฿1.500." },
+  { label: "Melati Beach Resort & Spa", url: "https://www.google.com/maps/search/Melati+Beach+Resort+Samui", note: "Samui · Choeng Mon, até 15kg, taxa ฿1.200." },
+  { label: "Belmond Napasai (Mae Nam)", url: "https://www.google.com/maps/search/Belmond+Napasai+Koh+Samui", note: "Samui · vilas até 15kg, sem taxa (incomum). Política antiga preservada." },
+  { label: "Pimalai Resort & Spa (Koh Lanta)", url: "https://www.google.com/maps/search/Pimalai+Resort+Koh+Lanta", note: "Lanta · até 15kg sem taxa. Ilha mais pet-friendly da Tailândia." },
+  { label: "Layana Resort Koh Lanta", url: "https://www.google.com/maps/search/Layana+Resort+Koh+Lanta", note: "Lanta · adultos-only, até 10kg, taxa ฿800." },
+  { label: "Crown Lanta Resort", url: "https://www.google.com/maps/search/Crown+Lanta+Resort", note: "Lanta · vilas no penhasco, até 15kg, taxa ฿1.000." },
+  { label: "Twin Lotus Resort (Klong Dao)", url: "https://www.google.com/maps/search/Twin+Lotus+Resort+Koh+Lanta", note: "Lanta · pé na areia, até 20kg, taxa ฿600. Klong Dao pet-friendly." },
+  { label: "Santhiya Koh Phangan Resort", url: "https://www.google.com/maps/search/Santhiya+Koh+Phangan", note: "Phangan · até 12kg, taxa ฿1.500. Longe da Full Moon." },
+  { label: "Anantara Rasananda Koh Phangan", url: "https://www.google.com/maps/search/Anantara+Rasananda+Koh+Phangan", note: "Phangan · vilas, até 15kg, taxa ฿1.800. Thong Nai Pan." },
+  { label: "Six Senses Yao Noi", url: "https://www.google.com/maps/search/Six+Senses+Yao+Noi", note: "Yao Noi · vilas isoladas, política pet sob consulta. Confirme por escrito." },
+];
+
 const praias: LinkRef[] = [
   { label: "Nai Yang Beach (Phuket norte)", url: "https://www.google.com/maps/search/Nai+Yang+Beach+Phuket", note: "praia de parque nacional, mas autoridades toleram pets com coleira fora do horário de pico (antes 9h, depois 17h)." },
   { label: "Mai Khao Beach (Phuket norte)", url: "https://www.google.com/maps/search/Mai+Khao+Beach+Phuket", note: "praia mais longa de Phuket, quase deserta. Pet livre ao norte da pista do aeroporto." },
