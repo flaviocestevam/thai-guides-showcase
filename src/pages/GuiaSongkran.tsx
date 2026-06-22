@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import {
   Check, X, Shield, MapPin, Droplets, Sparkles, Calendar, Map,
-  Plane, Info, Star, BookOpen, Gift, Award, Smartphone, Package2, Hotel
+  Plane, Info, Star, BookOpen, Award, Smartphone, Hotel
 } from "lucide-react";
 import heroImg from "@/assets/generated/songkran-hero.png.asset.json";
 
@@ -18,10 +18,11 @@ const GuiaSongkran = () => {
   return (
     <div className="min-h-screen bg-white text-[#1A1A1A] font-['Poppins',sans-serif]">
       <SEO
-        title="Guia Songkran 2026 — Ano Novo Tailandês Sem Perrengue"
-        description="O guia em português para viver Songkran 2026 sem perrengue: melhores cidades, hospedagem, proteção de documentos e roteiro completo."
+        title="Guia Songkran — Ano Novo Tailandês Sem Perrengue"
+        description="O guia em português para viver Songkran sem perrengue: melhores cidades, hospedagem, proteção de documentos e roteiro completo."
         canonicalPath="/songkran-ano-novo-tailandes"
       />
+
       <Header />
 
       <main id="songkran-sales">
@@ -36,10 +37,11 @@ const GuiaSongkran = () => {
           </div>
           <div className="container mx-auto px-6 relative z-10 text-white py-12">
             <div className="inline-block bg-[#FF6B35] text-xs font-bold px-3 py-1 rounded-full mb-6 tracking-wider uppercase">
-              💦 Edição 2026 • Atualizado
+              💦 Atualizado
             </div>
             <h1 className="text-4xl md:text-7xl font-bold leading-tight max-w-4xl mb-6">
-              Viva Songkran 2026 <span style={{ color: TEAL }}>Sem Perrengue</span> e Sem <span style={{ color: ORANGE }}>Susto no Bolso</span>
+              Viva Songkran <span style={{ color: TEAL }}>Sem Perrengue</span> e Sem <span style={{ color: ORANGE }}>Susto no Bolso</span>
+
             </h1>
             <p className="text-xl md:text-2xl text-gray-200 max-w-2xl mb-10 leading-relaxed">
               O guia em português para a maior guerra de água do mundo: onde ficar, como proteger documentos, em que cidade entrar de cabeça e o que evitar a qualquer custo.
@@ -61,7 +63,7 @@ const GuiaSongkran = () => {
         {/* SOCIAL PROOF BAR */}
         <section className="bg-[#0F0F1A] text-white py-6 px-6 border-y border-white/10">
           <div className="container mx-auto max-w-6xl flex flex-wrap items-center justify-around gap-6 text-center">
-            <div><div className="text-2xl font-black" style={{ color: ORANGE }}>2.500+</div><div className="text-xs text-gray-400 uppercase tracking-wider">Leitores em 2025</div></div>
+            <div><div className="text-2xl font-black" style={{ color: ORANGE }}>2.500+</div><div className="text-xs text-gray-400 uppercase tracking-wider">Leitores</div></div>
             <div><div className="text-2xl font-black" style={{ color: TEAL }}>4,9 ★</div><div className="text-xs text-gray-400 uppercase tracking-wider">Avaliação média</div></div>
             <div><div className="text-2xl font-black" style={{ color: GOLD }}>5 cidades</div><div className="text-xs text-gray-400 uppercase tracking-wider">Comparadas no guia</div></div>
             <div><div className="text-2xl font-black text-white">7 dias</div><div className="text-xs text-gray-400 uppercase tracking-wider">Garantia incondicional</div></div>
@@ -290,12 +292,13 @@ const GuiaSongkran = () => {
             <h2 className="text-3xl md:text-5xl font-bold text-center mb-4">
               O Que <span style={{ color: TEAL }}>Vem no Guia</span>
             </h2>
-            <p className="text-center text-gray-500 mb-16 max-w-2xl mx-auto">PDF de 80+ páginas com mapas, links clicáveis e atualizações grátis durante 2026.</p>
+            <p className="text-center text-gray-500 mb-16 max-w-2xl mx-auto">PDF de 80+ páginas com mapas e links clicáveis.</p>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
               {[
                 { icon: Map, title: "Mapas por cidade", desc: "Zonas quentes e zonas seguras" },
                 { icon: Hotel, title: "Hotéis testados", desc: "Em qual rua dormir em paz" },
-                { icon: Calendar, title: "Calendário 2026", desc: "Dia a dia, cidade a cidade" },
+                { icon: Calendar, title: "Calendário do feriado", desc: "Dia a dia, cidade a cidade" },
+
                 { icon: Shield, title: "Kit sobrevivência", desc: "O que levar na mala" },
                 { icon: Droplets, title: "Armas de água", desc: "Onde comprar e quanto pagar" },
                 { icon: Sparkles, title: "Templos e cerimônias", desc: "Horários e etiqueta" },
@@ -315,30 +318,8 @@ const GuiaSongkran = () => {
           </div>
         </section>
 
-        {/* SEÇÃO 9: BÔNUS */}
-        <section className="py-24 px-6 bg-white">
-          <div className="container mx-auto max-w-5xl">
-            <h2 className="text-3xl md:text-5xl font-bold text-center mb-4">
-              Bônus <span style={{ color: GOLD }}>Inclusos</span>
-            </h2>
-            <p className="text-center text-gray-500 mb-16">Sem custo extra. Já vêm junto com o PDF.</p>
-            <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-              {[
-                { icon: Package2, title: "Checklist imprimível de mala e proteção", value: "R$47" },
-                { icon: Gift, title: "Atualizações grátis durante 2026", value: "R$57" },
-              ].map((b, i) => (
-                <div key={i} className="bg-gradient-to-br from-white to-[#FFF7F2] p-8 rounded-3xl shadow-lg border-2 border-orange-100 text-center">
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full mb-4" style={{ backgroundColor: `${GOLD}1A`, color: GOLD }}>
-                    <b.icon size={28} />
-                  </div>
-                  <h3 className="font-bold text-lg mb-3">{b.title}</h3>
-                  <div className="text-sm text-gray-400 line-through">Valor avulso: {b.value}</div>
-                  <div className="text-sm font-bold mt-1" style={{ color: ORANGE }}>GRÁTIS com o guia</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+
+
 
         {/* SEÇÃO 10: DEPOIMENTOS */}
         <section className="py-24 px-6 bg-[#F8FAFC]">
@@ -350,7 +331,7 @@ const GuiaSongkran = () => {
               {[
                 { name: "Pedro M.", city: "São Paulo", text: "Cheguei em Chiang Mai sabendo exatamente em que rua ficar. Dia 14, enquanto galera perdia celular, o meu tava intacto. Valeu cada centavo." },
                 { name: "Camila & João", city: "Florianópolis", text: "Pegamos os 10 dias culturais + festa. Foi a melhor viagem de feriado da nossa vida. O capítulo de templos abriu nossa cabeça." },
-                { name: "Diego S.", city: "Belo Horizonte", text: "Já tinha ido em 2023 e voltei perdendo tudo. Em 2025 fui com o guia e parece que era outra viagem. Recomendo de olhos fechados." },
+                { name: "Diego S.", city: "Belo Horizonte", text: "Já fui em Songkran uma vez sem preparo e voltei perdendo tudo. Da segunda vez fui com o guia e parece que era outra viagem. Recomendo de olhos fechados." },
               ].map((d, i) => (
                 <div key={i} className="bg-white p-8 rounded-3xl shadow-sm">
                   <div className="flex gap-1 mb-4" style={{ color: GOLD }}>
@@ -373,24 +354,23 @@ const GuiaSongkran = () => {
             <div className="bg-white p-12 md:p-20 rounded-[3rem] shadow-2xl text-center relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 rounded-full -mr-16 -mt-16" style={{ backgroundColor: `${GOLD}1A` }}></div>
               <h2 className="text-3xl font-bold mb-4">Garantir Meu Guia Agora</h2>
-              <p className="text-gray-600 mb-10 text-lg">Acesso imediato ao PDF, mapas e atualizações de 2026.</p>
+              <p className="text-gray-600 mb-10 text-lg">Acesso imediato ao PDF e aos mapas.</p>
 
               <div className="bg-[#FFF7F2] p-6 rounded-2xl mb-8 text-left text-sm space-y-2">
                 <div className="flex justify-between"><span>Guia Songkran (80+ páginas)</span><span className="font-bold">R$197</span></div>
-                <div className="flex justify-between text-gray-500"><span>+ Checklist imprimível</span><span>R$47</span></div>
-                <div className="flex justify-between text-gray-500"><span>+ Atualizações 2026</span><span>R$57</span></div>
-                <div className="border-t border-orange-200 pt-2 flex justify-between font-bold"><span>Valor real</span><span className="line-through">R$301</span></div>
+                <div className="border-t border-orange-200 pt-2 flex justify-between font-bold"><span>Valor real</span><span className="line-through">R$197</span></div>
               </div>
 
               <div className="space-y-2 mb-10">
-                <span className="text-xl text-gray-400 line-through font-medium">De R$301</span>
+                <span className="text-xl text-gray-400 line-through font-medium">De R$197</span>
                 <div className="text-6xl md:text-8xl font-black" style={{ color: ORANGE }}>R$67</div>
-                <span className="block text-sm font-bold text-gray-400 tracking-widest uppercase">Pagamento Único</span>
+                <span className="block text-sm font-bold text-gray-400 tracking-widest uppercase">Pagamento Único · 12x de R$ 6,71</span>
               </div>
 
               <Button asChild size="lg" className="bg-[#FF6B35] hover:bg-[#FF6B35]/90 text-white font-bold py-10 px-12 text-2xl rounded-2xl shadow-xl w-full transition-transform hover:scale-[1.02] border-none">
-                <a href="#checkout">QUERO O GUIA SONGKRAN 2026</a>
+                <a href="#checkout">QUERO O GUIA SONGKRAN</a>
               </Button>
+
 
               <div className="mt-8 flex flex-wrap justify-center gap-4 text-xs font-bold text-gray-400 uppercase tracking-wider">
                 <span className="flex items-center gap-1"><Shield className="w-4 h-4" /> Pagamento Seguro</span>
@@ -423,7 +403,7 @@ const GuiaSongkran = () => {
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-2" className="border rounded-2xl px-8 py-2">
-              <AccordionTrigger className="text-lg font-bold hover:no-underline">Quando exatamente acontece Songkran 2026?</AccordionTrigger>
+              <AccordionTrigger className="text-lg font-bold hover:no-underline">Quando exatamente acontece Songkran?</AccordionTrigger>
               <AccordionContent className="text-gray-600 text-lg leading-relaxed">
                 O feriado oficial é em meados de abril, mas a duração e o pico variam de cidade pra cidade — algumas estendem por uma semana inteira. O calendário completo está dentro do guia.
               </AccordionContent>
@@ -443,7 +423,7 @@ const GuiaSongkran = () => {
             <AccordionItem value="item-5" className="border rounded-2xl px-8 py-2">
               <AccordionTrigger className="text-lg font-bold hover:no-underline">Como recebo o guia depois da compra?</AccordionTrigger>
               <AccordionContent className="text-gray-600 text-lg leading-relaxed">
-                Após o pagamento confirmado, o PDF chega no seu e-mail em até 5 minutos. Acesso vitalício e atualizações grátis durante 2026.
+                Após o pagamento confirmado, o PDF chega no seu e-mail em até 5 minutos. Acesso vitalício.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-6" className="border rounded-2xl px-8 py-2">
@@ -454,8 +434,9 @@ const GuiaSongkran = () => {
             </AccordionItem>
           </Accordion>
           <p className="text-center text-gray-400 mt-12 flex items-center justify-center gap-2 text-sm">
-            <Info className="w-4 h-4" /> Conteúdo atualizado em 2026.
+            <Info className="w-4 h-4" /> Conteúdo revisado regularmente.
           </p>
+
         </section>
 
         {/* CTA FINAL */}
