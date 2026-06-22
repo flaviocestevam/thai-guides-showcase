@@ -105,14 +105,14 @@ export const cafesCoworkings: SalesContent = {
   guarantee: {
     days: 7,
     title: "7 dias de garantia total",
-    text: "Acesse, baixe o mapa, entre no grupo. Se em 7 dias achar que não vale, devolvemos o valor integral. Sem desculpas, sem perguntas.",
+    text: "Acesse, baixe o mapa e teste. Se em 7 dias achar que não vale, devolvemos o valor integral. Sem desculpas, sem perguntas.",
   },
   faqs: [
     { q: "Funciona para qualquer profissão remota?", a: "Sim — devs, designers, gestores, copywriters, atendimento. Qualquer um que precise de Wi-Fi estável e ambiente bom para foco." },
     { q: "Qual cidade é melhor para começar?", a: "Chiang Mai é a 'capital nômade' da Ásia. Custo baixo, comunidade gigante, infraestrutura pronta. O guia explica todas." },
     { q: "Preciso de visto especial?", a: "Para nomadismo curto, visto de turista (30-60 dias) basta. Para longas estadias, ED Visa, Elite ou DTV (visto novo para nômades). O guia explica cada um." },
     { q: "O guia é atualizado?", a: "Sim. Atualizações trimestrais com novos lugares e lugares que fecharam. Quem compra recebe todas grátis." },
-    { q: "Posso confiar nos Wi-Fis medidos?", a: "Cada teste foi feito em 3 horários (manhã, tarde, noite) usando fast.com e speedtest. Reportamos média e pior caso." },
+    { q: "Como sei se um lugar é bom pra trabalhar?", a: "Cada ficha traz tomadas, ar condicionado, ruído avaliado, preço médio do café e link direto do Google Maps. Você decide antes de sair de casa." },
     { q: "Tem lugares de praia?", a: "Sim — Koh Lanta, Koh Phangan, Phuket. Trabalhar com vista pro mar é totalmente possível na Tailândia." },
   ],
   finalCTA: {
