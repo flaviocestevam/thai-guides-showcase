@@ -354,24 +354,23 @@ const GuiaSongkran = () => {
             <div className="bg-white p-12 md:p-20 rounded-[3rem] shadow-2xl text-center relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 rounded-full -mr-16 -mt-16" style={{ backgroundColor: `${GOLD}1A` }}></div>
               <h2 className="text-3xl font-bold mb-4">Garantir Meu Guia Agora</h2>
-              <p className="text-gray-600 mb-10 text-lg">Acesso imediato ao PDF, mapas e atualizações de 2026.</p>
+              <p className="text-gray-600 mb-10 text-lg">Acesso imediato ao PDF e aos mapas.</p>
 
               <div className="bg-[#FFF7F2] p-6 rounded-2xl mb-8 text-left text-sm space-y-2">
                 <div className="flex justify-between"><span>Guia Songkran (80+ páginas)</span><span className="font-bold">R$197</span></div>
-                <div className="flex justify-between text-gray-500"><span>+ Checklist imprimível</span><span>R$47</span></div>
-                <div className="flex justify-between text-gray-500"><span>+ Atualizações 2026</span><span>R$57</span></div>
-                <div className="border-t border-orange-200 pt-2 flex justify-between font-bold"><span>Valor real</span><span className="line-through">R$301</span></div>
+                <div className="border-t border-orange-200 pt-2 flex justify-between font-bold"><span>Valor real</span><span className="line-through">R$197</span></div>
               </div>
 
               <div className="space-y-2 mb-10">
-                <span className="text-xl text-gray-400 line-through font-medium">De R$301</span>
+                <span className="text-xl text-gray-400 line-through font-medium">De R$197</span>
                 <div className="text-6xl md:text-8xl font-black" style={{ color: ORANGE }}>R$67</div>
-                <span className="block text-sm font-bold text-gray-400 tracking-widest uppercase">Pagamento Único</span>
+                <span className="block text-sm font-bold text-gray-400 tracking-widest uppercase">Pagamento Único · 12x de R$ 6,71</span>
               </div>
 
               <Button asChild size="lg" className="bg-[#FF6B35] hover:bg-[#FF6B35]/90 text-white font-bold py-10 px-12 text-2xl rounded-2xl shadow-xl w-full transition-transform hover:scale-[1.02] border-none">
-                <a href="#checkout">QUERO O GUIA SONGKRAN 2026</a>
+                <a href="#checkout">QUERO O GUIA SONGKRAN</a>
               </Button>
+
 
               <div className="mt-8 flex flex-wrap justify-center gap-4 text-xs font-bold text-gray-400 uppercase tracking-wider">
                 <span className="flex items-center gap-1"><Shield className="w-4 h-4" /> Pagamento Seguro</span>
