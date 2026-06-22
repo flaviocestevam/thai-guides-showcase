@@ -500,7 +500,7 @@ const Pets9922 = () => {
         </Section>
 
         {/* CHEGADA */}
-        <Section id="cap-chegada" kicker="Capítulo 05" title="Chegada em Suvarnabhumi (BKK) — passo a passo">
+        <Section id="cap-chegada" kicker="Capítulo 07" title="Chegada em Suvarnabhumi (BKK) — passo a passo">
           <ol className="not-prose space-y-3 mt-2">
             {[
               ["Desembarque normal pela imigração", "Você passa primeiro. Pet aguarda no cargo (se foi pelo porão) ou na sua caixa (cabine)."],
@@ -522,13 +522,13 @@ const Pets9922 = () => {
         </Section>
 
         {/* HOTÉIS BKK */}
-        <Section id="cap-hoteis-bkk" kicker="Capítulo 06" title="Hotéis pet-friendly em Bangkok e Chiang Mai">
+        <Section id="cap-hoteis-bkk" kicker="Capítulo 08" title="Hotéis pet-friendly em Bangkok e Chiang Mai">
           <p>Pet-friendly de verdade: aceita por escrito, sem assustar na recepção, com infra (tigelas, áreas externas, proximidade de vet).</p>
           <LinkGrid items={hoteisBKK} />
         </Section>
 
         {/* HOTÉIS ILHAS */}
-        <Section id="cap-hoteis-ilhas" kicker="Capítulo 07" title="Hotéis pet-friendly nas ilhas">
+        <Section id="cap-hoteis-ilhas" kicker="Capítulo 09" title="Hotéis pet-friendly nas ilhas">
           <p>
             Koh Lanta é, disparado, a ilha mais pet-friendly. Phuket aceita em hotéis específicos. Samui e Yao Noi
             funcionam com confirmação prévia por escrito.
@@ -537,13 +537,13 @@ const Pets9922 = () => {
         </Section>
 
         {/* VETS BKK */}
-        <Section id="cap-vets-bkk" kicker="Capítulo 08" title="Veterinários 24h em Bangkok">
+        <Section id="cap-vets-bkk" kicker="Capítulo 10" title="Veterinários 24h em Bangkok">
           <p>Salve TODOS no celular antes de chegar. Em emergência você não tem tempo de pesquisar.</p>
           <LinkGrid items={vetsBangkok} />
         </Section>
 
         {/* VETS OUTROS */}
-        <Section id="cap-vets-outros" kicker="Capítulo 09" title="Veterinários nas outras cidades">
+        <Section id="cap-vets-outros" kicker="Capítulo 11" title="Veterinários nas outras cidades">
           <LinkGrid items={vetsOutros} />
           <div className="not-prose mt-6 rounded-xl p-5 flex gap-3" style={{ background: "rgba(45,212,191,0.07)", border: `1px solid rgba(45,212,191,0.25)` }}>
             <ShieldCheck className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: NEON }} />
@@ -555,7 +555,7 @@ const Pets9922 = () => {
         </Section>
 
         {/* PRAIAS */}
-        <Section id="cap-praias" kicker="Capítulo 10" title="As 12 praias liberadas (com regras locais)">
+        <Section id="cap-praias" kicker="Capítulo 12" title="As 12 praias liberadas (com regras locais)">
           <p>
             Regra geral: praia de parque nacional = proibido. Praia turística big-resort = proibido. Praia
             "local + remota" = tolerado com coleira. Cumprimente o vendedor de coco — ele avisa se o fiscal está perto.
@@ -564,17 +564,17 @@ const Pets9922 = () => {
         </Section>
 
         {/* PARQUES & CAFÉS */}
-        <Section id="cap-parques" kicker="Capítulo 11" title="Parques e cafés pet em Bangkok e Chiang Mai">
+        <Section id="cap-parques" kicker="Capítulo 13" title="Parques e cafés pet em Bangkok e Chiang Mai">
           <LinkGrid items={parquesCafes} />
         </Section>
 
         {/* BLACKLIST */}
-        <Section id="cap-blacklist" kicker="Capítulo 12" title="Lista negra — onde NUNCA levar o pet">
+        <Section id="cap-blacklist" kicker="Capítulo 16" title="Lista negra — onde NUNCA levar o pet">
           <LinkGrid items={blacklist} />
         </Section>
 
         {/* EMERGÊNCIA */}
-        <Section id="cap-emergencia" kicker="Capítulo 13" title="Emergência — o que fazer nos primeiros 10 minutos">
+        <Section id="cap-emergencia" kicker="Capítulo 17" title="Emergência — o que fazer nos primeiros 10 minutos">
           <div className="not-prose grid sm:grid-cols-2 gap-3">
             {[
               { t: "Intoxicação alimentar", d: "Carvão ativado oral (฿80, qualquer 7-Eleven tem). Foto do que comeu. Vet em < 1h." },
@@ -604,7 +604,7 @@ const Pets9922 = () => {
         </Section>
 
         {/* RETORNO */}
-        <Section id="cap-retorno" kicker="Capítulo 14" title="Retorno ao Brasil — a burocracia inversa">
+        <Section id="cap-retorno" kicker="Capítulo 18" title="Retorno ao Brasil — a burocracia inversa">
           <p>
             Voltar pro Brasil com o pet é <strong style={{ color: INK }}>mais simples</strong> que ir — Brasil aceita pet
             sem FAVN, mas tem suas regras. Comece a preparar 30 dias antes do voo de volta.
@@ -630,7 +630,7 @@ const Pets9922 = () => {
         </Section>
 
         {/* CUSTOS */}
-        <Section id="cap-custos" kicker="Capítulo 15" title="Custos reais (cão de 10kg, ida + 30 dias)">
+        <Section id="cap-custos" kicker="Capítulo 19" title="Custos reais (cão de 10kg, ida + 30 dias)">
           <div className="not-prose overflow-x-auto rounded-xl" style={{ border: `1px solid ${LINE}` }}>
             <table className="w-full text-[14.5px]" style={{ color: "rgba(244,239,230,0.85)" }}>
               <thead>
@@ -670,7 +670,7 @@ const Pets9922 = () => {
         </Section>
 
         {/* SITTERS */}
-        <Section id="cap-sitters" kicker="Capítulo 16" title="Pet sitters confiáveis para dias de day trip">
+        <Section id="cap-sitters" kicker="Capítulo 20" title="Pet sitters confiáveis para dias de day trip">
           <p>
             Pra dias de Phi Phi, Similan, James Bond Island ou templos: deixe o pet com sitter testado em vez de
             sozinho no hotel.
