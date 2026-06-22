@@ -148,12 +148,27 @@ const blacklist: LinkRef[] = [
   { label: "Currency exchange '0% commission'", url: "https://www.google.com/maps/search/Super+Rich+Bangkok", note: "use Super Rich (verde ou laranja) ou SuperRich Thailand — taxa real. Casas com 'zero commission' usam câmbio inflado" },
 ];
 
+const russos: LinkRef[] = [
+  // Pattaya
+  { label: "Galaxy Club (Walking Street, Pattaya)", url: "https://www.google.com/maps/search/Galaxy+Club+Walking+Street+Pattaya", note: "o mais conhecido com dançarinas russas e leste-europeias. Cardápio em russo e inglês, preços fixos no menu" },
+  { label: "Sensations Showgirls (Walking Street, Pattaya)", url: "https://www.google.com/maps/search/Sensations+Showgirls+Walking+Street+Pattaya", note: "produção tipo cabaré com elenco majoritariamente russo/ucraniano. Entrada paga, drink incluso" },
+  { label: "X-Zone Pattaya (Walking Street)", url: "https://www.google.com/maps/search/X-Zone+Walking+Street+Pattaya", note: "showgirls eslavas, ambiente estilo Las Vegas. Cobra cover (~฿500) com 1 drink" },
+  { label: "Russian Bar Pattaya (Soi 16, Beach Road)", url: "https://www.google.com/maps/search/Russian+Bar+Pattaya+Soi+16", note: "ponto de encontro da comunidade russa em Pattaya. Bar com dança, atmosfera mais local que turística" },
+  { label: "Zona russa — Jomtien / Pratumnak", url: "https://www.google.com/maps/search/Jomtien+Pattaya+Russian+area", note: "bairro com restaurantes, bares e clubes voltados à diáspora russa. Vibe diferente do centro de Pattaya" },
+  // Patong
+  { label: "Suzy Wong (Bangla Road, Patong)", url: "https://www.google.com/maps/search/Suzy+Wong+Bangla+Road+Patong", note: "agogo principal de Bangla com escalação mista (tailandesas + russas/ucranianas em alta temporada nov–mar)" },
+  { label: "Seduction Beach Club & Disco (Patong)", url: "https://www.google.com/maps/search/Seduction+Beach+Club+Patong", note: "balada grande com go-go dancers russas no palco. Cover ฿300–500, drink ฿250–350" },
+  { label: "Tiger Bar Complex (Bangla, Patong)", url: "https://www.google.com/maps/search/Tiger+Nightclub+Bangla+Patong", note: "vários bares no mesmo prédio; o agogo do 2º andar costuma ter dançarinas eslavas no inverno (alta temporada russa)" },
+];
+
+
 const chapters: [string, string][] = [
   ["cap-1", "Glossário"],
   ["cap-2", "Etiqueta"],
   ["cap-3", "Bangkok"],
   ["cap-4", "Pattaya"],
   ["cap-5", "Phuket"],
+  ["cap-russos", "Russos"],
   ["cap-6", "Lista negra"],
   ["cap-7", "Preços reais"],
   ["cap-8", "Segurança"],
@@ -377,6 +392,37 @@ const ClubesStrip6644 = () => {
           <p className="text-sm mt-6" style={{ color: "rgba(10,10,15,0.6)" }}>
             Hospede em Patong se for ficar 1–2 noites. Se for ficar mais, prefira Kata ou Karon e use Grab/Bolt para Bangla (฿250–400 cada trecho).
           </p>
+        </Section>
+
+        {/* Cap Russos */}
+        <Section id="cap-russos" kicker="Capítulo Bônus" title="Clubes de strip russas — Pattaya e Patong">
+          <p>
+            Pattaya tem a maior diáspora russa do sudeste asiático e Patong recebe forte fluxo sazonal (novembro–março). Isso se reflete em clubes
+            específicos com dançarinas russas, ucranianas e bielorrussas — diferentes em formato, preço e atmosfera dos agogos tailandeses tradicionais.
+          </p>
+          <Reveal>
+            <div className="not-prose mt-6 rounded-xl p-5 grid sm:grid-cols-3 gap-4 text-[14px]" style={{ background: "rgba(255,255,255,0.55)", border: `1px solid ${LINE}` }}>
+              {[
+                ["Formato", "Showgirl/cabaré, não agogo. Performance coreografada, palco maior, menos contato direto."],
+                ["Preço", "Cover ฿300–800 (com 1 drink). Drinks ฿250–400. Sem 'lady drink' agressivo — a economia é outra."],
+                ["Etiqueta", "Gorjeta no palco (฿100–500). Bar fine raro nesses lugares; é entretenimento, não escort."],
+              ].map(([h, b], i) => (
+                <div key={i}>
+                  <div className="text-[11px] font-semibold tracking-[0.22em] uppercase mb-1.5" style={{ color: GOLD }}>{h}</div>
+                  <div style={{ color: "rgba(10,10,15,0.72)" }}>{b}</div>
+                </div>
+              ))}
+            </div>
+          </Reveal>
+          <div className="mt-8"><LinkGrid items={russos} /></div>
+          <Reveal>
+            <div className="not-prose mt-8 rounded-xl p-4 flex gap-3" style={{ background: "rgba(225,29,72,0.07)", border: `1px solid rgba(225,29,72,0.18)` }}>
+              <AlertTriangle className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: NEON }} />
+              <p className="text-[14.5px]" style={{ color: "rgba(10,10,15,0.78)" }}>
+                <strong>Alta temporada (nov–mar)</strong> = elenco majoritariamente eslavo + preços 10–20% maiores. <strong>Baixa (mai–set)</strong> = elenco misto/tailandês e preços normais. Sempre peça o menu impresso na entrada — vale aqui também.
+              </p>
+            </div>
+          </Reveal>
         </Section>
 
         {/* Cap 6 — Lista negra */}
