@@ -25,7 +25,7 @@ type School = {
   priceLevel1: string;
   totalProgram: string;
   language: string;
-  edVisa: "Sim" | "Não" | "Apenas 3+ meses";
+  edVisa: string;
   bestFor: string;
   tip: string;
   contact: string;
