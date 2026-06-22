@@ -13,6 +13,7 @@ import Festas from "./pages/Festas.tsx";
 import Festas7733 from "./pages/Festas7733.tsx";
 import GoGoBars8855 from "./pages/GoGoBars8855.tsx";
 import Pets9922 from "./pages/Pets9922.tsx";
+import Criancas7811 from "./pages/Criancas7811.tsx";
 
 import GuiaTrilhasThai44 from "./pages/GuiaTrilhasThai44.tsx";
 import GuiaTrilhasThai from "./pages/GuiaTrilhasThai.tsx";
@@ -102,6 +103,7 @@ const App = () => (
           <Route path="/tailandia-para-pets" element={<Pets />} />
           <Route path="/pets9922" element={<Pets9922 />} />
           <Route path="/tailandia-para-criancas" element={<Criancas />} />
+          <Route path="/criancas7811" element={<Criancas7811 />} />
           <Route path="/casas-de-massagem-tailandia" element={<CasasDeMassagem />} />
           <Route path="/retiros-tailandia" element={<Retiros />} />
 
