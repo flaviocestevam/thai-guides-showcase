@@ -85,8 +85,8 @@ const GuiaVoluntariado = () => {
               </div>
               <div className="relative">
                 <img
-                  src="https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?q=80&w=800"
-                  alt="Santuário ético de elefantes na Tailândia"
+                  src="https://images.unsplash.com/photo-1583309217394-d224882a3bb1?q=80&w=800"
+                  alt="Voluntária com elefante em santuário ético na Tailândia"
                   className="rounded-3xl shadow-2xl z-10 relative aspect-[4/5] object-cover"
                 />
                 <div className="absolute -bottom-6 -right-6 w-32 h-32 rounded-full z-0 blur-2xl" style={{ backgroundColor: `${GREEN}33` }}></div>
