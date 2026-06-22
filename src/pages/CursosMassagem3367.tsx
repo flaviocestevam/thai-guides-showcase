@@ -439,22 +439,164 @@ const CursosMassagem3367 = () => {
 
       <div className="guide-section-divider" />
 
-      <Section chapter="Capítulo 11" title="Glossário rápido — termos que você vai ouvir todo dia">
+      <Section chapter="Capítulo 11" title="Glossário — 100+ termos que você vai ouvir todo dia">
+        <p>Decorar esses termos antes de embarcar te economiza 2 semanas de adaptação. Professores usam o nome tailandês mesmo nas turmas em inglês.</p>
+
         <Card>
-          <ul className="text-sm space-y-2">
-            <li><strong className="text-foreground">Nuad Boran</strong> (นวดโบราณ) — "massagem antiga". É como tailandeses chamam o que ocidentais chamam de Thai Massage tradicional.</li>
-            <li><strong className="text-foreground">Sen lines</strong> — as 10 linhas de energia (equivalente aos meridianos chineses). Sen Sumana é a principal.</li>
-            <li><strong className="text-foreground">Lom</strong> — "vento" / energia vital que corre nas Sen. Bloqueio de lom = dor.</li>
-            <li><strong className="text-foreground">Metta</strong> — compaixão amorosa. É o estado mental que você deve estar ao massagear (princípio budista).</li>
-            <li><strong className="text-foreground">Wai Khru</strong> — ritual de reverência ao mestre antes de cada aula. Aprenda os 3 versos básicos.</li>
-            <li><strong className="text-foreground">Jap Sen</strong> — técnica de "pinçar" a Sen line. Avançado.</li>
-            <li><strong className="text-foreground">Khao</strong> — joelho. Você vai usar muito.</li>
-            <li><strong className="text-foreground">Sok</strong> — cotovelo. Idem.</li>
-            <li><strong className="text-foreground">Saaba</strong>? ("tudo bem?") — pergunta ao cliente durante a sessão pra calibrar pressão.</li>
-            <li><strong className="text-foreground">Cheb mai?</strong> — "tá doendo?" — versão mais direta.</li>
+          <p className="text-sm font-semibold text-foreground mb-2">Fundamentos e filosofia (15)</p>
+          <ul className="text-sm grid sm:grid-cols-2 gap-x-4 gap-y-1">
+            <li><strong className="text-foreground">Nuad Boran</strong> — massagem antiga (Thai tradicional)</li>
+            <li><strong className="text-foreground">Nuad Phaen Boran</strong> — nome formal do currículo</li>
+            <li><strong className="text-foreground">Ruesi Dat Ton</strong> — auto-alongamento dos sábios</li>
+            <li><strong className="text-foreground">Metta</strong> — compaixão amorosa (estado mental)</li>
+            <li><strong className="text-foreground">Karuna</strong> — compaixão ativa</li>
+            <li><strong className="text-foreground">Mudita</strong> — alegria empática</li>
+            <li><strong className="text-foreground">Upekkha</strong> — equanimidade</li>
+            <li><strong className="text-foreground">Wai Khru</strong> — ritual de reverência ao mestre</li>
+            <li><strong className="text-foreground">Wai</strong> — cumprimento com mãos juntas</li>
+            <li><strong className="text-foreground">Khru / Ajarn</strong> — professor / mestre</li>
+            <li><strong className="text-foreground">Pra Khru</strong> — mestre monge</li>
+            <li><strong className="text-foreground">Sippa</strong> — arte / ofício</li>
+            <li><strong className="text-foreground">Phaen Tai</strong> — escola do Sul</li>
+            <li><strong className="text-foreground">Phaen Nuea</strong> — escola do Norte (Lanna)</li>
+            <li><strong className="text-foreground">Shivago Komarpaj</strong> — médico de Buda, patrono</li>
           </ul>
         </Card>
+
+        <Card>
+          <p className="text-sm font-semibold text-foreground mb-2">Sen lines e energia (12)</p>
+          <ul className="text-sm grid sm:grid-cols-2 gap-x-4 gap-y-1">
+            <li><strong className="text-foreground">Sen</strong> — linha de energia (10 principais)</li>
+            <li><strong className="text-foreground">Sen Sumana</strong> — linha central</li>
+            <li><strong className="text-foreground">Sen Ittha</strong> — esquerda (lua)</li>
+            <li><strong className="text-foreground">Sen Pingkhala</strong> — direita (sol)</li>
+            <li><strong className="text-foreground">Sen Kalathari</strong> — braços e pernas (cruz)</li>
+            <li><strong className="text-foreground">Sen Sahatsarangsi</strong> — pernas exterior esq.</li>
+            <li><strong className="text-foreground">Sen Thawari</strong> — pernas exterior dir.</li>
+            <li><strong className="text-foreground">Sen Lawusang</strong> — orelha esquerda</li>
+            <li><strong className="text-foreground">Sen Ulangka</strong> — orelha direita</li>
+            <li><strong className="text-foreground">Sen Nanthakrawat / Khitchanna</strong> — pélvis</li>
+            <li><strong className="text-foreground">Lom</strong> — vento, energia vital</li>
+            <li><strong className="text-foreground">Pratu Lom</strong> — porta do vento (bloqueio)</li>
+          </ul>
+        </Card>
+
+        <Card>
+          <p className="text-sm font-semibold text-foreground mb-2">Anatomia (20)</p>
+          <ul className="text-sm grid sm:grid-cols-2 gap-x-4 gap-y-1">
+            <li><strong className="text-foreground">Hua</strong> — cabeça</li>
+            <li><strong className="text-foreground">Naa</strong> — rosto</li>
+            <li><strong className="text-foreground">Kor</strong> — pescoço</li>
+            <li><strong className="text-foreground">Lai</strong> — ombro</li>
+            <li><strong className="text-foreground">Khaen</strong> — braço</li>
+            <li><strong className="text-foreground">Sok</strong> — cotovelo</li>
+            <li><strong className="text-foreground">Mue</strong> — mão</li>
+            <li><strong className="text-foreground">Niu</strong> — dedo</li>
+            <li><strong className="text-foreground">Lang</strong> — costas</li>
+            <li><strong className="text-foreground">Aok</strong> — peito</li>
+            <li><strong className="text-foreground">Thong</strong> — abdômen</li>
+            <li><strong className="text-foreground">Sapok</strong> — quadril</li>
+            <li><strong className="text-foreground">Khaa</strong> — perna</li>
+            <li><strong className="text-foreground">Khao</strong> — joelho</li>
+            <li><strong className="text-foreground">Naa Khaeng</strong> — canela</li>
+            <li><strong className="text-foreground">Nong</strong> — panturrilha</li>
+            <li><strong className="text-foreground">Khok Thao</strong> — tornozelo</li>
+            <li><strong className="text-foreground">Thao</strong> — pé</li>
+            <li><strong className="text-foreground">Fa Thao</strong> — sola</li>
+            <li><strong className="text-foreground">Kraduuk</strong> — osso</li>
+          </ul>
+        </Card>
+
+        <Card>
+          <p className="text-sm font-semibold text-foreground mb-2">Técnicas e movimentos (18)</p>
+          <ul className="text-sm grid sm:grid-cols-2 gap-x-4 gap-y-1">
+            <li><strong className="text-foreground">Jap Sen</strong> — pinçar a linha</li>
+            <li><strong className="text-foreground">Kot Sen</strong> — pressionar a linha</li>
+            <li><strong className="text-foreground">Kleun</strong> — rolar</li>
+            <li><strong className="text-foreground">Yeut</strong> — alongar</li>
+            <li><strong className="text-foreground">Bid</strong> — torcer</li>
+            <li><strong className="text-foreground">Dat</strong> — pressionar com palma</li>
+            <li><strong className="text-foreground">Yiap</strong> — pisar (com pé)</li>
+            <li><strong className="text-foreground">Tup</strong> — bater leve (percussão)</li>
+            <li><strong className="text-foreground">Khleun</strong> — onda corporal</li>
+            <li><strong className="text-foreground">Sai</strong> — esquerda</li>
+            <li><strong className="text-foreground">Khwa</strong> — direita</li>
+            <li><strong className="text-foreground">Bon</strong> — em cima</li>
+            <li><strong className="text-foreground">Lang</strong> — embaixo (também "costas")</li>
+            <li><strong className="text-foreground">Reng</strong> — forte</li>
+            <li><strong className="text-foreground">Bao</strong> — leve</li>
+            <li><strong className="text-foreground">Cha-cha</strong> — devagar</li>
+            <li><strong className="text-foreground">Reo-reo</strong> — rápido</li>
+            <li><strong className="text-foreground">Yut</strong> — pare</li>
+          </ul>
+        </Card>
+
+        <Card>
+          <p className="text-sm font-semibold text-foreground mb-2">Comandos em aula e ao cliente (20)</p>
+          <ul className="text-sm grid sm:grid-cols-2 gap-x-4 gap-y-1">
+            <li><strong className="text-foreground">Sawasdee khrap/kha</strong> — olá (h/m)</li>
+            <li><strong className="text-foreground">Khop khun khrap/kha</strong> — obrigado</li>
+            <li><strong className="text-foreground">Khor thot</strong> — desculpa / com licença</li>
+            <li><strong className="text-foreground">Sabai mai?</strong> — tá bem? (pressão ok?)</li>
+            <li><strong className="text-foreground">Sabai sabai</strong> — confortável</li>
+            <li><strong className="text-foreground">Cheb mai?</strong> — tá doendo?</li>
+            <li><strong className="text-foreground">Cheb nit noi</strong> — dói um pouco</li>
+            <li><strong className="text-foreground">Cheb maak</strong> — dói muito</li>
+            <li><strong className="text-foreground">Mai cheb</strong> — não dói</li>
+            <li><strong className="text-foreground">Reng kwa</strong> — mais forte</li>
+            <li><strong className="text-foreground">Bao kwa</strong> — mais leve</li>
+            <li><strong className="text-foreground">Phlik tua</strong> — vire o corpo</li>
+            <li><strong className="text-foreground">Non khwam</strong> — deite de bruços</li>
+            <li><strong className="text-foreground">Non ngai</strong> — deite de costas</li>
+            <li><strong className="text-foreground">Nang</strong> — sente</li>
+            <li><strong className="text-foreground">Ha jai luek</strong> — respire fundo</li>
+            <li><strong className="text-foreground">Phon klai</strong> — relaxe</li>
+            <li><strong className="text-foreground">Set laew</strong> — terminamos</li>
+            <li><strong className="text-foreground">Phak</strong> — descanse</li>
+            <li><strong className="text-foreground">Dum nam</strong> — beba água</li>
+          </ul>
+        </Card>
+
+        <Card>
+          <p className="text-sm font-semibold text-foreground mb-2">Estilos, posições e materiais (15)</p>
+          <ul className="text-sm grid sm:grid-cols-2 gap-x-4 gap-y-1">
+            <li><strong className="text-foreground">Nuad Nam Man</strong> — massagem com óleo</li>
+            <li><strong className="text-foreground">Nuad Thao</strong> — massagem pé</li>
+            <li><strong className="text-foreground">Luk Pra Kob</strong> — bola de ervas quente</li>
+            <li><strong className="text-foreground">Yam Khang</strong> — massagem com pé sobre brasa</li>
+            <li><strong className="text-foreground">Tok Sen</strong> — percussão com martelo de madeira</li>
+            <li><strong className="text-foreground">Nuad Khon Tong</strong> — gestante</li>
+            <li><strong className="text-foreground">Nuad Kila</strong> — esportiva</li>
+            <li><strong className="text-foreground">Som Poi</strong> — ervas usadas no Luk Pra Kob</li>
+            <li><strong className="text-foreground">Plai</strong> — gengibre tailandês (anti-inflamatório)</li>
+            <li><strong className="text-foreground">Takrai</strong> — capim-limão</li>
+            <li><strong className="text-foreground">Pha Khao Ma</strong> — pano usado pelo terapeuta</li>
+            <li><strong className="text-foreground">Mor Nuad</strong> — terapeuta</li>
+            <li><strong className="text-foreground">Khon Khai</strong> — paciente</li>
+            <li><strong className="text-foreground">Boran</strong> — antigo / tradicional</li>
+            <li><strong className="text-foreground">Samai mai</strong> — moderno</li>
+          </ul>
+        </Card>
+
+        <Card>
+          <p className="text-sm font-semibold text-foreground mb-2">Burocracia, visto e escola (10)</p>
+          <ul className="text-sm grid sm:grid-cols-2 gap-x-4 gap-y-1">
+            <li><strong className="text-foreground">Bai Anuyat</strong> — licença</li>
+            <li><strong className="text-foreground">Bai Rap Rong</strong> — certificado</li>
+            <li><strong className="text-foreground">TM30 / TM47 / TM87</strong> — formulários migração</li>
+            <li><strong className="text-foreground">Visa Support Letter</strong> — carta da escola</li>
+            <li><strong className="text-foreground">Re-entry permit</strong> — autorização de reentrada</li>
+            <li><strong className="text-foreground">Overstay</strong> — multa ฿500/dia (máx ฿20.000)</li>
+            <li><strong className="text-foreground">90-day report</strong> — relato obrigatório à Imigração</li>
+            <li><strong className="text-foreground">MoE</strong> — Ministry of Education</li>
+            <li><strong className="text-foreground">MoPH</strong> — Ministry of Public Health</li>
+            <li><strong className="text-foreground">THA</strong> — Thai Healing Alliance</li>
+          </ul>
+        </Card>
+
+        <p className="text-gold">💡 Imprima estas 6 cards e leve impressas. Os professores vão escrever em quadro branco usando os termos tailandeses — quem chega com base sai na frente desde o dia 1.</p>
       </Section>
+
 
       <div className="guide-section-divider" />
 
@@ -492,7 +634,85 @@ const CursosMassagem3367 = () => {
 
       <div className="guide-section-divider" />
 
-      <Section chapter="Capítulo 14" title="Contatos úteis em emergência">
+      <Section chapter="Capítulo 14" title="Planilha de orçamento mensal (modelo pronto)">
+        <p>Esta é a planilha que eu uso com os alunos antes de embarcar. Copie pra Google Sheets ou Excel — todos os valores em <strong className="text-foreground">baht (฿)</strong> e <strong className="text-foreground">reais (R$ a 1฿ = R$ 0,15)</strong>, prontos pra você ajustar conforme câmbio do dia.</p>
+
+        <Card>
+          <p className="text-sm font-semibold text-foreground mb-2">Tabela base — custo mensal de vida (Chiang Mai)</p>
+          <div className="overflow-x-auto">
+            <table className="w-full text-xs sm:text-sm border-collapse">
+              <thead>
+                <tr className="text-foreground border-b border-border">
+                  <th className="text-left py-2 pr-2">Categoria</th>
+                  <th className="text-right py-2 pr-2">Econômico ฿</th>
+                  <th className="text-right py-2 pr-2">Médio ฿</th>
+                  <th className="text-right py-2">Conforto ฿</th>
+                </tr>
+              </thead>
+              <tbody className="[&_td]:py-1.5 [&_td]:pr-2 [&_tr]:border-b [&_tr]:border-border/40">
+                <tr><td>Moradia (mensal)</td><td className="text-right">6.500</td><td className="text-right">12.000</td><td className="text-right">22.000</td></tr>
+                <tr><td>Comida (street + mercado)</td><td className="text-right">7.000</td><td className="text-right">10.000</td><td className="text-right">16.000</td></tr>
+                <tr><td>Água, luz, internet</td><td className="text-right">1.000</td><td className="text-right">1.800</td><td className="text-right">2.500</td></tr>
+                <tr><td>Transporte (songthaew/moto)</td><td className="text-right">1.500</td><td className="text-right">3.000</td><td className="text-right">5.000</td></tr>
+                <tr><td>Lavanderia</td><td className="text-right">400</td><td className="text-right">700</td><td className="text-right">1.200</td></tr>
+                <tr><td>SIM card + dados</td><td className="text-right">300</td><td className="text-right">500</td><td className="text-right">800</td></tr>
+                <tr><td>Material escolar (apostila, óleo)</td><td className="text-right">800</td><td className="text-right">1.200</td><td className="text-right">1.800</td></tr>
+                <tr><td>Lazer (massagem, templo, fim de semana)</td><td className="text-right">2.000</td><td className="text-right">4.500</td><td className="text-right">9.000</td></tr>
+                <tr><td>Buffer emergência (10%)</td><td className="text-right">1.950</td><td className="text-right">3.370</td><td className="text-right">5.830</td></tr>
+                <tr className="text-foreground font-semibold border-t-2 border-border"><td className="pt-2">Total mensal ฿</td><td className="text-right pt-2">21.450</td><td className="text-right pt-2">37.070</td><td className="text-right pt-2">64.130</td></tr>
+                <tr className="text-foreground font-semibold"><td>Total mensal R$</td><td className="text-right">3.220</td><td className="text-right">5.560</td><td className="text-right">9.620</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="text-xs text-muted-foreground mt-3">⚠️ Bangkok: some +25% em moradia, transporte e lazer. Phuket/Samui: +35%.</p>
+        </Card>
+
+        <Card>
+          <p className="text-sm font-semibold text-foreground mb-2">Cursos — soma à parte (1 mês)</p>
+          <ul className="text-sm space-y-1">
+            <li>Foundation só (ITM L1): ฿6.500 (R$ 975)</li>
+            <li>L1 + L2 (10 dias): ฿13.000 (R$ 1.950)</li>
+            <li>L1 + L2 + Foot (15 dias): ฿16.500 (R$ 2.475)</li>
+          </ul>
+        </Card>
+
+        <Card>
+          <p className="text-sm font-semibold text-foreground mb-2">Cursos — pacote 3 meses (terapeuta profissional)</p>
+          <ul className="text-sm space-y-1">
+            <li>ITM Level 1 ao 4 (150h): ฿24.500 (R$ 3.680)</li>
+            <li>ED Visa completo (ida Vientiane): ฿5.700 (R$ 855)</li>
+            <li>Especialização extra (gestante/esportiva): ฿5.000 (R$ 750)</li>
+          </ul>
+        </Card>
+
+        <Card>
+          <p className="text-sm font-semibold text-foreground mb-2">Custos únicos pré-embarque (à parte)</p>
+          <ul className="text-sm space-y-1">
+            <li>Passagem GRU↔BKK (média 2026): R$ 5.500</li>
+            <li>Seguro viagem 3 meses: R$ 900</li>
+            <li>Vacinas (hepatite A + tifoide + raiva opcional): R$ 600</li>
+            <li>Roupas brancas/claras (4 conjuntos): R$ 250</li>
+            <li>Mochila + kit higiene: R$ 400</li>
+          </ul>
+        </Card>
+
+        <Card>
+          <p className="text-sm font-semibold text-foreground mb-2">Resumo — quanto separar antes de embarcar</p>
+          <ul className="text-sm space-y-1">
+            <li><strong className="text-foreground">1 mês (Foundation):</strong> R$ 5.600 + R$ 7.650 pré = <strong className="text-foreground">R$ 13.250</strong></li>
+            <li><strong className="text-foreground">3 meses (terapeuta):</strong> R$ 16.700 + R$ 7.650 pré = <strong className="text-foreground">R$ 24.350</strong></li>
+            <li><strong className="text-foreground">6 meses (formação completa):</strong> R$ 33.400 + R$ 7.650 pré = <strong className="text-foreground">R$ 41.050</strong></li>
+          </ul>
+          <p className="text-xs text-muted-foreground mt-2">Comparativo: agência brasileira cobra R$ 25.000–R$ 60.000 para os mesmos roteiros.</p>
+        </Card>
+
+        <p className="text-gold">💡 <strong>Dica:</strong> abra conta Wise antes de embarcar e transfira em lotes mensais. Câmbio sai 7%–9% melhor que cartão de crédito brasileiro. Saque limite ฿20.000/mês em ATM grátis (Aeon Bank).</p>
+      </Section>
+
+      <div className="guide-section-divider" />
+
+      <Section chapter="Capítulo 15" title="Contatos úteis em emergência">
+
         <Card>
           <ul className="text-sm space-y-1">
             <li><strong className="text-foreground">Embaixada do Brasil em Bangkok:</strong> +66 2 256 6023</li>
