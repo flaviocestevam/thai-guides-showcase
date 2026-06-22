@@ -5,12 +5,12 @@ import { useEffect, useRef } from "react";
 /* ============================================================
    PREMIUM PALETTE — midnight neon (festa)
    ============================================================ */
-const INK = "#0A0A0F";
-const BONE = "#F4EFE6";
+const INK = "#F4EFE6";
+const BONE = "#07060B";
 const NEON = "#D946EF";       // magenta/pink neon
 const NEON_DEEP = "#86198F";
 const GOLD = "#C9A24B";
-const LINE = "rgba(10,10,15,0.08)";
+const LINE = "rgba(244,239,230,0.1)";
 
 type LinkRef = { label: string; url: string; note?: string };
 
@@ -48,7 +48,7 @@ const Section = ({ id, title, kicker, children }: { id: string; title: string; k
       </h2>
     </Reveal>
     <Reveal delay={80}>
-      <div className="text-[17px] leading-[1.75] text-pretty space-y-5" style={{ color: "rgba(10,10,15,0.82)" }}>
+      <div className="text-[17px] leading-[1.75] text-pretty space-y-5" style={{ color: "rgba(244,239,230,0.82)" }}>
         {children}
       </div>
     </Reveal>
@@ -63,13 +63,13 @@ const LinkCard = ({ item, index }: { item: LinkRef; index: number }) => (
       rel="noopener noreferrer"
       className="group block rounded-2xl p-5 md:p-6 transition-all duration-500 hover:-translate-y-1"
       style={{
-        background: "rgba(255,255,255,0.6)",
+        background: "rgba(255,255,255,0.04)",
         backdropFilter: "blur(12px)",
         border: `1px solid ${LINE}`,
-        boxShadow: "0 1px 2px rgba(10,10,15,0.04)",
+        boxShadow: "0 1px 2px rgba(0,0,0,0.4)",
       }}
-      onMouseEnter={(e) => (e.currentTarget.style.boxShadow = "0 20px 50px -20px rgba(217,70,239,0.25), 0 8px 20px -10px rgba(10,10,15,0.1)")}
-      onMouseLeave={(e) => (e.currentTarget.style.boxShadow = "0 1px 2px rgba(10,10,15,0.04)")}
+      onMouseEnter={(e) => (e.currentTarget.style.boxShadow = "0 20px 50px -20px rgba(217,70,239,0.25), 0 8px 20px -10px rgba(0,0,0,0.5)")}
+      onMouseLeave={(e) => (e.currentTarget.style.boxShadow = "0 1px 2px rgba(0,0,0,0.4)")}
     >
       <div className="flex items-start justify-between gap-3 mb-2">
         <div className="flex items-center gap-2.5">
@@ -81,7 +81,7 @@ const LinkCard = ({ item, index }: { item: LinkRef; index: number }) => (
         </div>
         <ArrowUpRight className="w-4 h-4 flex-shrink-0 mt-1 opacity-40 group-hover:opacity-100 group-hover:rotate-12 transition-all duration-500" style={{ color: NEON }} />
       </div>
-      {item.note && <p className="text-[13.5px] leading-relaxed pl-[38px]" style={{ color: "rgba(10,10,15,0.6)" }}>{item.note}</p>}
+      {item.note && <p className="text-[13.5px] leading-relaxed pl-[38px]" style={{ color: "rgba(244,239,230,0.6)" }}>{item.note}</p>}
     </a>
   </Reveal>
 );
@@ -251,14 +251,14 @@ const Festas7733 = () => {
           </Reveal>
 
           <Reveal delay={160}>
-            <p className="mt-8 max-w-2xl text-[19px] md:text-[20px] leading-[1.6] text-pretty" style={{ color: "rgba(10,10,15,0.7)" }}>
+            <p className="mt-8 max-w-2xl text-[19px] md:text-[20px] leading-[1.6] text-pretty" style={{ color: "rgba(244,239,230,0.7)" }}>
               9 cidades mapeadas. Onde sair, onde dançar salsa, qual rooftop vale a fila, quais festas secretas Koh Phangan
               esconde e qual bar tem entrada por cabine telefônica. Tudo no Google Maps.
             </p>
           </Reveal>
 
           <Reveal delay={240}>
-            <div className="mt-10 flex flex-wrap gap-6 text-sm" style={{ color: "rgba(10,10,15,0.55)" }}>
+            <div className="mt-10 flex flex-wrap gap-6 text-sm" style={{ color: "rgba(244,239,230,0.55)" }}>
               {[
                 ["9", "Cidades"],
                 ["60+", "Endereços no mapa"],
@@ -283,9 +283,9 @@ const Festas7733 = () => {
           <div className="flex gap-1 text-[13px] font-medium whitespace-nowrap">
             {chapters.map(([id, label], i) => (
               <a key={id} href={`#${id}`} className="px-3 py-1.5 rounded-full transition-all duration-300 hover:bg-fuchsia-900/5"
-                style={{ color: "rgba(10,10,15,0.62)" }}
+                style={{ color: "rgba(244,239,230,0.62)" }}
                 onMouseEnter={(e) => (e.currentTarget.style.color = NEON)}
-                onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(10,10,15,0.62)")}>
+                onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(244,239,230,0.62)")}>
                 <span className="opacity-50 mr-1.5">{String(i + 1).padStart(2, "0")}</span>{label}
               </a>
             ))}
@@ -312,12 +312,12 @@ const Festas7733 = () => {
               ["'1155' = polícia turística", "Falar essa frase em voz firme resolve 80% das contas erradas antes da ligação real."],
             ].map(([head, body], i) => (
               <Reveal key={i} delay={i * 30}>
-                <div className="rounded-xl p-4 h-full" style={{ background: "rgba(255,255,255,0.55)", border: `1px solid ${LINE}` }}>
+                <div className="rounded-xl p-4 h-full" style={{ background: "rgba(255,255,255,0.04)", border: `1px solid ${LINE}` }}>
                   <div className="flex items-baseline gap-2.5 mb-1.5">
                     <span className="font-display text-sm font-semibold flex-shrink-0" style={{ color: GOLD }}>{String(i + 1).padStart(2, "0")}</span>
                     <div className="font-semibold" style={{ color: INK }}>{head}</div>
                   </div>
-                  <div className="text-[14.5px] pl-7" style={{ color: "rgba(10,10,15,0.7)" }}>{body}</div>
+                  <div className="text-[14.5px] pl-7" style={{ color: "rgba(244,239,230,0.7)" }}>{body}</div>
                 </div>
               </Reveal>
             ))}
@@ -330,7 +330,7 @@ const Festas7733 = () => {
           <LinkGrid items={bangkok} />
           <div className="not-prose mt-8 rounded-xl p-5 flex gap-3" style={{ background: "rgba(217,70,239,0.07)", border: `1px solid rgba(217,70,239,0.2)` }}>
             <Moon className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: NEON }} />
-            <p className="text-[14.5px]" style={{ color: "rgba(10,10,15,0.78)" }}>
+            <p className="text-[14.5px]" style={{ color: "rgba(244,239,230,0.78)" }}>
               <strong>Roteiro 1 noite perfeita:</strong> 18h Moon Bar (pôr-do-sol) → 20h jantar Soi 11 → 22h Sing Sing → 0h30 Beam → 3h Sugar Club after-hours → 5h Grab para hotel. Custo total: ฿2.500–3.500.
             </p>
           </div>
@@ -344,7 +344,7 @@ const Festas7733 = () => {
           <h3 className="font-display text-xl font-semibold mt-10 mb-4" style={{ color: NEON_DEEP }}>Phuket</h3>
           <LinkGrid items={phuketLatino} />
           <div className="not-prose mt-8 rounded-xl p-5" style={{ background: "rgba(201,162,75,0.08)", border: `1px solid rgba(201,162,75,0.25)` }}>
-            <p className="text-[14.5px]" style={{ color: "rgba(10,10,15,0.78)" }}>
+            <p className="text-[14.5px]" style={{ color: "rgba(244,239,230,0.78)" }}>
               <strong>Código de entrada do Havana Social:</strong> entre no beco da Sukhumvit Soi 11, ache a cabine telefônica vermelha vintage no fim. Tire o fone, disque <strong>H-A-V-A-N-A</strong> (4-2-8-2-6-2) — a parede ao lado abre. Não funciona depois das 2h. Não fale do código para os porteiros — eles fingem não saber.
             </p>
           </div>
@@ -385,7 +385,7 @@ const Festas7733 = () => {
           <LinkGrid items={kohPhangan} />
           <div className="not-prose mt-8 rounded-xl p-5 flex gap-3" style={{ background: "rgba(217,70,239,0.07)", border: `1px solid rgba(217,70,239,0.2)` }}>
             <Sparkles className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: NEON }} />
-            <p className="text-[14.5px]" style={{ color: "rgba(10,10,15,0.78)" }}>
+            <p className="text-[14.5px]" style={{ color: "rgba(244,239,230,0.78)" }}>
               <strong>Calendário completo:</strong> Full Moon (lua cheia) → Half Moon (1 semana antes/depois) → Black Moon (lua nova) → Jungle Experience (3x por lunar cycle). Acompanhe os IGs <strong>@halfmoonfestival</strong>, <strong>@jungleexperience</strong> e <strong>@blackmoonculture</strong> — eles soltam datas com 10 dias de antecedência.
             </p>
           </div>
@@ -439,8 +439,8 @@ const Festas7733 = () => {
               ["Ferry Koh Samui → Koh Phangan ida", "฿300"],
             ].map(([item, price], i) => (
               <Reveal key={i} delay={i * 20}>
-                <div className="flex justify-between items-baseline rounded-lg px-4 py-2.5" style={{ background: "rgba(255,255,255,0.55)", border: `1px solid ${LINE}` }}>
-                  <span style={{ color: "rgba(10,10,15,0.78)" }}>{item}</span>
+                <div className="flex justify-between items-baseline rounded-lg px-4 py-2.5" style={{ background: "rgba(255,255,255,0.04)", border: `1px solid ${LINE}` }}>
+                  <span style={{ color: "rgba(244,239,230,0.78)" }}>{item}</span>
                   <span className="font-display font-semibold tabular-nums" style={{ color: NEON_DEEP }}>{price}</span>
                 </div>
               </Reveal>
@@ -462,7 +462,7 @@ const Festas7733 = () => {
                 <div className="flex items-center gap-2 mb-3 font-semibold" style={{ color: "#dc2626" }}>
                   <AlertTriangle className="w-4 h-4" /> NÃO faça
                 </div>
-                <ul className="space-y-2 text-[14.5px]" style={{ color: "rgba(10,10,15,0.75)" }}>
+                <ul className="space-y-2 text-[14.5px]" style={{ color: "rgba(244,239,230,0.75)" }}>
                   <li>• Andar com passaporte original no bolso</li>
                   <li>• Beber água da torneira (mesmo no gelo de drink em barraca)</li>
                   <li>• Aceitar carona de estranho na saída de club</li>
@@ -477,7 +477,7 @@ const Festas7733 = () => {
                 <div className="flex items-center gap-2 mb-3 font-semibold" style={{ color: "#16a34a" }}>
                   <Check className="w-4 h-4" /> FAÇA
                 </div>
-                <ul className="space-y-2 text-[14.5px]" style={{ color: "rgba(10,10,15,0.75)" }}>
+                <ul className="space-y-2 text-[14.5px]" style={{ color: "rgba(244,239,230,0.75)" }}>
                   <li>• Grab/Bolt em todo deslocamento noturno</li>
                   <li>• Endereço do hotel em tailandês no print do celular</li>
                   <li>• Cash dividido em 2 bolsos + cartão no terceiro</li>
@@ -506,9 +506,9 @@ const Festas7733 = () => {
               ["Chuay duay! / Tam-ruat!", "socorro! / polícia!"],
             ].map(([th, pt], i) => (
               <Reveal key={i} delay={i * 25}>
-                <div className="flex flex-col sm:flex-row sm:justify-between gap-1 rounded-lg px-4 py-3" style={{ background: "rgba(255,255,255,0.55)", border: `1px solid ${LINE}` }}>
+                <div className="flex flex-col sm:flex-row sm:justify-between gap-1 rounded-lg px-4 py-3" style={{ background: "rgba(255,255,255,0.04)", border: `1px solid ${LINE}` }}>
                   <span className="font-display font-semibold" style={{ color: INK }}>{th}</span>
-                  <span className="text-[14.5px]" style={{ color: "rgba(10,10,15,0.65)" }}>{pt}</span>
+                  <span className="text-[14.5px]" style={{ color: "rgba(244,239,230,0.65)" }}>{pt}</span>
                 </div>
               </Reveal>
             ))}
@@ -518,7 +518,7 @@ const Festas7733 = () => {
         {/* FOOTER */}
         <div className="py-16 text-center">
           <p className="text-[13px] tracking-[0.25em] uppercase font-semibold mb-2" style={{ color: GOLD }}>guiastailandia.com.br</p>
-          <p className="text-[14px]" style={{ color: "rgba(10,10,15,0.55)" }}>
+          <p className="text-[14px]" style={{ color: "rgba(244,239,230,0.55)" }}>
             Guia atualizado in loco. Preços, endereços e datas conferidos na última temporada.
           </p>
         </div>
