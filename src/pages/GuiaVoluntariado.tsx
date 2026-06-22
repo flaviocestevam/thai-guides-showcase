@@ -18,7 +18,7 @@ const GuiaVoluntariado = () => {
   return (
     <div className="min-h-screen bg-white text-[#1A1A1A] font-['Poppins',sans-serif]">
       <SEO
-        title="Guia de Voluntariado na Tailândia 2026 — Em Português"
+        title="Guia de Voluntariado na Tailândia — Em Português"
         description="O guia em português para fazer voluntariado na Tailândia: como encontrar projetos éticos, vistos, custos reais e roteiros sem agência."
         canonicalPath="/voluntariado-tailandia"
       />
@@ -36,7 +36,7 @@ const GuiaVoluntariado = () => {
           </div>
           <div className="container mx-auto px-6 relative z-10 text-white py-12">
             <div className="inline-block bg-gradient-to-r from-[#16A34A] to-[#059669] text-xs font-bold px-3 py-1 rounded-full mb-6 tracking-wider uppercase">
-              🌿 Edição 2026 • Atualizado
+              🌿 Edição Atualizada
             </div>
             <h1 className="text-4xl md:text-7xl font-bold leading-tight max-w-4xl mb-6">
               Viva a Tailândia <span style={{ color: GOLD }}>Por Dentro</span> — Fazendo <span style={{ color: GREEN }}>Voluntariado</span>
@@ -61,7 +61,7 @@ const GuiaVoluntariado = () => {
         {/* SOCIAL PROOF BAR */}
         <section className="bg-[#0F1A14] text-white py-6 px-6 border-y border-white/10">
           <div className="container mx-auto max-w-6xl flex flex-wrap items-center justify-around gap-6 text-center">
-            <div><div className="text-2xl font-black" style={{ color: GREEN }}>1.200+</div><div className="text-xs text-gray-400 uppercase tracking-wider">Leitores em 2025</div></div>
+            <div><div className="text-2xl font-black" style={{ color: GREEN }}>1.200+</div><div className="text-xs text-gray-400 uppercase tracking-wider">Leitores brasileiros</div></div>
             <div><div className="text-2xl font-black" style={{ color: GOLD }}>4,9 ★</div><div className="text-xs text-gray-400 uppercase tracking-wider">Avaliação média</div></div>
             <div><div className="text-2xl font-black" style={{ color: EMERALD }}>4 áreas</div><div className="text-xs text-gray-400 uppercase tracking-wider">De voluntariado</div></div>
             <div><div className="text-2xl font-black text-white">7 dias</div><div className="text-xs text-gray-400 uppercase tracking-wider">Garantia incondicional</div></div>
@@ -85,8 +85,8 @@ const GuiaVoluntariado = () => {
               </div>
               <div className="relative">
                 <img
-                  src="https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?q=80&w=800"
-                  alt="Santuário ético de elefantes na Tailândia"
+                  src="https://images.unsplash.com/photo-1583309217394-d224882a3bb1?q=80&w=800"
+                  alt="Voluntária com elefante em santuário ético na Tailândia"
                   className="rounded-3xl shadow-2xl z-10 relative aspect-[4/5] object-cover"
                 />
                 <div className="absolute -bottom-6 -right-6 w-32 h-32 rounded-full z-0 blur-2xl" style={{ backgroundColor: `${GREEN}33` }}></div>
@@ -286,7 +286,7 @@ const GuiaVoluntariado = () => {
             <h2 className="text-3xl md:text-5xl font-bold text-center mb-4">
               O Que <span style={{ color: GREEN }}>Vem no Guia</span>
             </h2>
-            <p className="text-center text-gray-500 mb-16 max-w-2xl mx-auto">PDF de 90+ páginas com mapas, links clicáveis e atualizações grátis durante 2026.</p>
+            <p className="text-center text-gray-500 mb-16 max-w-2xl mx-auto">PDF de 90+ páginas com mapas e links clicáveis.</p>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
               {[
                 { icon: Map, title: "Plataformas testadas", desc: "Onde achar vagas direto" },
@@ -321,7 +321,7 @@ const GuiaVoluntariado = () => {
             <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
               {[
                 { icon: BookOpen, title: "Templates de inscrição em inglês", value: "R$57" },
-                { icon: Gift, title: "Atualizações grátis durante 2026", value: "R$47" },
+                { icon: Gift, title: "Lista de grupos de Facebook de voluntários BR na Tailândia", value: "R$47" },
               ].map((b, i) => (
                 <div key={i} className="bg-gradient-to-br from-white to-[#F0FDF4] p-8 rounded-3xl shadow-lg border-2 border-green-100 text-center">
                   <div className="inline-flex items-center justify-center w-16 h-16 rounded-full mb-4" style={{ backgroundColor: `${GOLD}1A`, color: GOLD }}>
@@ -369,12 +369,12 @@ const GuiaVoluntariado = () => {
             <div className="bg-white p-12 md:p-20 rounded-[3rem] shadow-2xl text-center relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 rounded-full -mr-16 -mt-16" style={{ backgroundColor: `${GOLD}1A` }}></div>
               <h2 className="text-3xl font-bold mb-4">Garantir Meu Guia Agora</h2>
-              <p className="text-gray-600 mb-10 text-lg">Acesso imediato ao PDF, templates e atualizações de 2026.</p>
+              <p className="text-gray-600 mb-10 text-lg">Acesso imediato ao PDF, templates e bônus.</p>
 
               <div className="bg-[#F0FDF4] p-6 rounded-2xl mb-8 text-left text-sm space-y-2">
                 <div className="flex justify-between"><span>Guia Voluntariado (90+ páginas)</span><span className="font-bold">R$197</span></div>
                 <div className="flex justify-between text-gray-500"><span>+ Templates de inscrição</span><span>R$57</span></div>
-                <div className="flex justify-between text-gray-500"><span>+ Atualizações 2026</span><span>R$47</span></div>
+                <div className="flex justify-between text-gray-500"><span>+ Grupos de Facebook BR</span><span>R$47</span></div>
                 <div className="border-t border-green-200 pt-2 flex justify-between font-bold"><span>Valor real</span><span className="line-through">R$301</span></div>
               </div>
 
@@ -445,12 +445,12 @@ const GuiaVoluntariado = () => {
             <AccordionItem value="item-6" className="border rounded-2xl px-8 py-2">
               <AccordionTrigger className="text-lg font-bold hover:no-underline">Como recebo o guia depois da compra?</AccordionTrigger>
               <AccordionContent className="text-gray-600 text-lg leading-relaxed">
-                Após o pagamento confirmado, o PDF + os templates chegam no e-mail em até 5 minutos. Acesso vitalício e atualizações grátis durante 2026.
+                Após o pagamento confirmado, o PDF + os templates chegam no e-mail em até 5 minutos. Acesso vitalício.
               </AccordionContent>
             </AccordionItem>
           </Accordion>
           <p className="text-center text-gray-400 mt-12 flex items-center justify-center gap-2 text-sm">
-            <Info className="w-4 h-4" /> Conteúdo atualizado em 2026.
+            <Info className="w-4 h-4" /> Conteúdo atualizado periodicamente.
           </p>
         </section>
 
