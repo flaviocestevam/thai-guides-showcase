@@ -19,7 +19,7 @@ const GuiaGays = () => {
   return (
     <div className="min-h-screen bg-white text-[#1A1A1A] font-['Poppins',sans-serif]">
       <SEO
-        title="Guia Tailândia para Gays 2026 | LGBTQIA+ na Terra do Sorriso"
+        title="Guia Tailândia para Gays | LGBTQIA+ na Terra do Sorriso"
         description="O guia em português para viajantes LGBTQIA+ que querem viver a Tailândia com liberdade: Silom, Chiang Mai, ilhas gay-friendly, hotéis, festas e segurança."
         canonicalPath="/tailandia-para-gays"
       />
@@ -438,7 +438,7 @@ const GuiaGays = () => {
             <AccordionItem value="item-3" className="border rounded-2xl px-8 py-2">
               <AccordionTrigger className="text-lg font-bold hover:no-underline">Quando é a Parada de Bangkok?</AccordionTrigger>
               <AccordionContent className="text-gray-600 text-lg leading-relaxed">
-                A Bangkok Pride acontece em junho. O guia traz o calendário 2026 completo com Pride anual de Bangkok, Chiang Mai, Phuket e Pattaya, além de festas mensais como Maggie Choo's e gCircuit.
+                A Bangkok Pride acontece em junho. O guia traz o calendário anual completo com Pride anual de Bangkok, Chiang Mai, Phuket e Pattaya, além de festas mensais como Maggie Choo's e gCircuit.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-4" className="border rounded-2xl px-8 py-2">
