@@ -68,11 +68,6 @@ export const cursosDeMassagem: SalesContent = {
       desc: "1 mês, 3 meses, 6 meses — tudo planejado.",
       bullets: ["Cronograma diário", "Onde morar perto da escola", "Custo total mensal", "Combinação ideal de escolas"],
     },
-    {
-      title: "Trabalhar com massagem após o curso",
-      desc: "Como usar o certificado tailandês profissionalmente no Brasil e fora.",
-      bullets: ["Reconhecimento no Brasil", "Como precificar serviços", "Trabalhar em spa na Ásia", "Visa de trabalho na Tailândia"],
-    },
   ],
   bonuses: [
     { title: "Glossário de termos em tailandês", desc: "100+ termos técnicos de anatomia, Sen lines e comandos de aula para você acompanhar tudo desde o primeiro dia.", value: "R$ 67" },
@@ -85,6 +80,8 @@ export const cursosDeMassagem: SalesContent = {
     { name: "Juliana M.", city: "Rio de Janeiro", text: "Roteiro de 3 meses funcionou perfeitamente. Fiz Wat Pho + Sunshine como sugerido." },
     { name: "Felipe T.", city: "Curitiba", text: "Achei que ia ser genérico mas é cirúrgico. Preços batem, escolas certas, sem enrolação." },
     { name: "Camila R.", city: "Brasília", text: "A planilha de orçamento me deu segurança pra fechar 3 meses sem surpresa." },
+  ],
+
 
   pricing: {
     badge: "Oferta de lançamento",
