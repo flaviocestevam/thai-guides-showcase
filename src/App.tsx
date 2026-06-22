@@ -12,6 +12,7 @@ import MuayThai5645 from "./pages/MuayThai5645.tsx";
 import Festas from "./pages/Festas.tsx";
 import Festas7733 from "./pages/Festas7733.tsx";
 import GoGoBars8855 from "./pages/GoGoBars8855.tsx";
+import Pets9922 from "./pages/Pets9922.tsx";
 
 import GuiaTrilhasThai44 from "./pages/GuiaTrilhasThai44.tsx";
 import GuiaTrilhasThai from "./pages/GuiaTrilhasThai.tsx";
@@ -99,6 +100,7 @@ const App = () => (
           <Route path="/beach-clubs-tailandia" element={<BeachClubs />} />
           <Route path="/beachclubs8821" element={<BeachClubs8821 />} />
           <Route path="/tailandia-para-pets" element={<Pets />} />
+          <Route path="/pets9922" element={<Pets9922 />} />
           <Route path="/tailandia-para-criancas" element={<Criancas />} />
           <Route path="/casas-de-massagem-tailandia" element={<CasasDeMassagem />} />
           <Route path="/retiros-tailandia" element={<Retiros />} />
