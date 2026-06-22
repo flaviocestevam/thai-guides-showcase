@@ -100,6 +100,7 @@ const App = () => (
           <Route path="/beach-clubs-tailandia" element={<BeachClubs />} />
           <Route path="/beachclubs8821" element={<BeachClubs8821 />} />
           <Route path="/tailandia-para-pets" element={<Pets />} />
+          <Route path="/pets9922" element={<Pets9922 />} />
           <Route path="/tailandia-para-criancas" element={<Criancas />} />
           <Route path="/casas-de-massagem-tailandia" element={<CasasDeMassagem />} />
           <Route path="/retiros-tailandia" element={<Retiros />} />
