@@ -28,6 +28,7 @@ import AluguelDeMotos827252 from "./pages/AluguelDeMotos827252.tsx";
 import Mergulho from "./pages/Mergulho.tsx";
 import MergulhoTailandia465355 from "./pages/MergulhoTailandia465355.tsx";
 import CafesCoworkings from "./pages/CafesCoworkings.tsx";
+import CafesCoworkings7391 from "./pages/CafesCoworkings7391.tsx";
 import ClubesStrip from "./pages/ClubesStrip.tsx";
 import GoGoBars from "./pages/GoGoBars.tsx";
 import Reveillon from "./pages/Reveillon.tsx";
