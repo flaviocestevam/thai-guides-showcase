@@ -54,19 +54,14 @@ export const cafesCoworkings: SalesContent = {
   },
   modules: [
     {
-      title: "Os 200+ lugares testados",
-      desc: "Catálogo completo por cidade, com fotos e nota.",
-      bullets: ["Chiang Mai (80 lugares)", "Bangkok (60)", "Ilhas (40)", "Pai e Krabi (20)"],
+      title: "Os 100 lugares testados",
+      desc: "Catálogo completo por cidade e ilha, com fotos e nota.",
+      bullets: ["Chiang Mai e Pai", "Bangkok", "Phuket e Krabi", "Ilhas: Lanta, Phangan, Tao, Samui, Lipe"],
     },
     {
       title: "Comparativo de coworkings",
       desc: "Quanto custa, quem frequenta, quais eventos rolam.",
       bullets: ["Punspace, Hubba, The Hive", "CAMP, Mana, Yellow", "Day pass vs mensal", "Comunidade de cada um"],
-    },
-    {
-      title: "Wi-Fi medido em Mbps",
-      desc: "Velocidade real (download/upload) testada em 3 horários.",
-      bullets: ["Manhã, tarde, noite", "Estabilidade", "Pico de uso", "Latência para Zoom"],
     },
     {
       title: "Bairros ideais para nômades",
@@ -80,18 +75,16 @@ export const cafesCoworkings: SalesContent = {
     },
   ],
   bonuses: [
-    { title: "Mapa interativo no Google Maps", desc: "Todos os 200+ lugares já marcados, categorizados por cor.", value: "R$ 87" },
+    { title: "Mapa interativo no Google Maps", desc: "Todos os 100 lugares já marcados, categorizados por cor.", value: "R$ 87" },
     { title: "Planilha de custo nômade", desc: "Template de orçamento mensal para nômade digital brasileiro.", value: "R$ 47" },
     { title: "Guia de SIM card e eSIM", desc: "Melhores planos para nômades com dados ilimitados.", value: "R$ 37" },
-    { title: "Lista de meetups e eventos", desc: "Onde conhecer outros nômades em cada cidade.", value: "R$ 27" },
-    { title: "Grupo de WhatsApp de nômades BR", desc: "1.500+ brasileiros trabalhando da Tailândia agora.", value: "R$ 127" },
   ],
   testimonials: [
     { name: "Lucas M.", city: "São Paulo", text: "Mudei pra Chiang Mai há 2 meses. Esse guia me poupou semanas de teste e erro. Já tô no meu café fixo no Nimman." },
     { name: "Bianca T.", city: "Rio de Janeiro", text: "O comparativo de coworkings vale ouro. Escolhi o Punspace pelo perfil de comunidade, perfeito." },
-    { name: "Diego F.", city: "Florianópolis", text: "Wi-Fi medido em Mbps é genial. Acabou meu drama com reunião caindo." },
+    { name: "Diego F.", city: "Florianópolis", text: "Os links do Google Maps salvam minha vida. Chego, sento e trabalho. Sem perder tempo." },
     { name: "Marina P.", city: "Brasília", text: "O mapa interativo eu uso TODO dia. Cheguei em Bangkok e já fui direto pros melhores cafés." },
-    { name: "Henrique S.", city: "Curitiba", text: "O grupo de WhatsApp valeu o investimento sozinho. Já consegui cliente brasileiro lá." },
+    { name: "Henrique S.", city: "Curitiba", text: "Saber quantas tomadas tem cada lugar parece bobo até a bateria do notebook acabar. Genial." },
     { name: "Aline R.", city: "BH", text: "Planilha de custo é precisa. Meus gastos batem com o que ela previu. Posso planejar tudo." },
   ],
   pricing: {
@@ -101,11 +94,11 @@ export const cafesCoworkings: SalesContent = {
     priceCents: "00",
     installments: "12x de R$ 6,71",
     includes: [
-      "Guia com 200+ lugares testados",
+      "Guia com 100 lugares testados",
       "Mapa interativo Google Maps",
       "Comparativo de coworkings",
-      "Wi-Fi medido em Mbps",
-      "Todos os 5 bônus exclusivos",
+      "Cobertura de 10+ cidades e ilhas",
+      "Todos os 3 bônus exclusivos",
       "Atualizações trimestrais vitalícias",
     ],
   },
