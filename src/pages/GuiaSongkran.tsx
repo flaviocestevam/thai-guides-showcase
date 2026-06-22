@@ -423,7 +423,7 @@ const GuiaSongkran = () => {
             <AccordionItem value="item-5" className="border rounded-2xl px-8 py-2">
               <AccordionTrigger className="text-lg font-bold hover:no-underline">Como recebo o guia depois da compra?</AccordionTrigger>
               <AccordionContent className="text-gray-600 text-lg leading-relaxed">
-                Após o pagamento confirmado, o PDF chega no seu e-mail em até 5 minutos. Acesso vitalício e atualizações grátis durante 2026.
+                Após o pagamento confirmado, o PDF chega no seu e-mail em até 5 minutos. Acesso vitalício.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-6" className="border rounded-2xl px-8 py-2">
