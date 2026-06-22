@@ -75,11 +75,8 @@ export const cursosDeMassagem: SalesContent = {
     },
   ],
   bonuses: [
-    { title: "Lista de hospedagens baratas", desc: "Guesthouses e apartamentos perto de cada escola por menos de R$ 700/mês.", value: "R$ 97" },
-    { title: "Glossário de termos em tailandês", desc: "100+ termos técnicos de anatomia e linhas de energia para você acompanhar as aulas.", value: "R$ 67" },
-    { title: "Modelo de orçamento mensal", desc: "Planilha pronta com todos os custos (curso, moradia, comida, transporte).", value: "R$ 47" },
-    { title: "Grupo de WhatsApp de alunos", desc: "Conexão direta com brasileiros que estão estudando agora na Tailândia.", value: "R$ 127" },
-    { title: "Lista de spas que contratam estrangeiros", desc: "Onde trabalhar legalmente depois do curso, com salários médios.", value: "R$ 87" },
+    { title: "Glossário de termos em tailandês", desc: "100+ termos técnicos de anatomia, Sen lines e comandos de aula para você acompanhar tudo desde o primeiro dia.", value: "R$ 67" },
+    { title: "Planilha de orçamento mensal", desc: "Modelo pronto com todos os custos (curso, moradia, comida, transporte, extras) para 1, 3 e 6 meses.", value: "R$ 47" },
   ],
   testimonials: [
     { name: "Marina C.", city: "São Paulo", text: "Economizei R$ 6.000 indo direto na escola em vez de fechar com agência. O guia se pagou em 1 dia." },
@@ -87,8 +84,8 @@ export const cursosDeMassagem: SalesContent = {
     { name: "Aline P.", city: "Belo Horizonte", text: "Já estou formada nível 3 e atendendo no meu spa. O certificado da ITM é levado a sério aqui." },
     { name: "Juliana M.", city: "Rio de Janeiro", text: "Roteiro de 3 meses funcionou perfeitamente. Fiz Wat Pho + Sunshine como sugerido." },
     { name: "Felipe T.", city: "Curitiba", text: "Achei que ia ser genérico mas é cirúrgico. Preços batem, escolas certas, sem enrolação." },
-    { name: "Camila R.", city: "Brasília", text: "O grupo de WhatsApp dos alunos é ouro. Já cheguei com contatos." },
-  ],
+    { name: "Camila R.", city: "Brasília", text: "A planilha de orçamento me deu segurança pra fechar 3 meses sem surpresa." },
+
   pricing: {
     badge: "Oferta de lançamento",
     oldPrice: "R$ 197",
