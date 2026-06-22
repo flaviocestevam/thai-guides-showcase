@@ -83,7 +83,6 @@ const Voluntariado4827 = () => {
         title="Guia de Voluntariado na Tailândia — Conteúdo Completo"
         description="Guia completo de voluntariado na Tailândia: plataformas, projetos éticos, vistos, custos, templates e grupos de Facebook."
         canonicalPath="/voluntariado4827"
-        noindex
       />
 
       {/* HERO */}
