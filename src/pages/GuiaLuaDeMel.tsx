@@ -18,7 +18,7 @@ const GuiaLuaDeMel = () => {
   return (
     <div className="min-h-screen bg-white text-[#1A1A1A] font-['Poppins',sans-serif]">
       <SEO
-        title="Guia Lua de Mel na Tailândia 2026 | Roteiro Romântico Completo"
+        title="Guia Lua de Mel na Tailândia | Roteiro Romântico Completo"
         description="O guia em português para casar e viajar na Tailândia: melhores ilhas, resorts pé na areia, jantares românticos e roteiros prontos de 10 a 21 dias."
         canonicalPath="/lua-de-mel-tailandia"
       />
@@ -36,7 +36,7 @@ const GuiaLuaDeMel = () => {
           </div>
           <div className="container mx-auto px-6 relative z-10 text-white py-12">
             <div className="inline-block text-xs font-bold px-3 py-1 rounded-full mb-6 tracking-wider uppercase" style={{ backgroundColor: ROSE }}>
-              💍 Edição 2026
+              💍
             </div>
             <h1 className="text-4xl md:text-7xl font-bold leading-tight max-w-4xl mb-6">
               A Lua de Mel <span style={{ color: GOLD }}>dos Sonhos</span> na <span style={{ color: ROSE }}>Tailândia</span>
@@ -61,7 +61,7 @@ const GuiaLuaDeMel = () => {
         {/* SOCIAL PROOF BAR */}
         <section className="bg-[#1A1A2E] text-white py-6 px-6 border-y border-white/10">
           <div className="container mx-auto max-w-6xl flex flex-wrap items-center justify-around gap-6 text-center">
-            <div><div className="text-2xl font-black" style={{ color: ROSE }}>1.800+</div><div className="text-xs text-gray-400 uppercase tracking-wider">Casais em 2025</div></div>
+            <div><div className="text-2xl font-black" style={{ color: ROSE }}>1.800+</div><div className="text-xs text-gray-400 uppercase tracking-wider">Casais atendidos</div></div>
             <div><div className="text-2xl font-black" style={{ color: GOLD }}>4,9 ★</div><div className="text-xs text-gray-400 uppercase tracking-wider">Avaliação média</div></div>
             <div><div className="text-2xl font-black" style={{ color: TEAL }}>40+</div><div className="text-xs text-gray-400 uppercase tracking-wider">Resorts testados</div></div>
             <div><div className="text-2xl font-black text-white">7 dias</div><div className="text-xs text-gray-400 uppercase tracking-wider">Garantia incondicional</div></div>
@@ -264,7 +264,7 @@ const GuiaLuaDeMel = () => {
                     "Hotéis testados, com o melhor custo-benefício real",
                     "A mesma viagem por R$ 18k a R$ 28k o casal",
                     "Liberdade total para improvisar",
-                    "Atualizações constantes para 2026",
+                    "Atualizações constantes",
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-3">
                       <Check className="flex-shrink-0 mt-1" size={20} />
@@ -318,7 +318,7 @@ const GuiaLuaDeMel = () => {
             <h2 className="text-3xl md:text-5xl font-bold text-center mb-4">
               O Que <span style={{ color: ROSE }}>Vem no Guia</span>
             </h2>
-            <p className="text-center text-gray-500 mb-16 max-w-2xl mx-auto">PDF de 180+ páginas com mapas, links clicáveis, planilha de orçamento, templates de e-mail prontos e atualizações grátis durante 2026.</p>
+            <p className="text-center text-gray-500 mb-16 max-w-2xl mx-auto">PDF de 180+ páginas com mapas, links clicáveis, planilha de orçamento, templates de e-mail prontos e atualizações grátis vitalícias.</p>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
               {[
               { icon: Hotel, title: "40+ Resorts", desc: "Selecionados para casais" },
@@ -485,12 +485,12 @@ const GuiaLuaDeMel = () => {
             <AccordionItem value="item-6" className="border rounded-2xl px-8 py-2">
               <AccordionTrigger className="text-lg font-bold hover:no-underline">Como recebo o guia depois da compra?</AccordionTrigger>
               <AccordionContent className="text-gray-600 text-lg leading-relaxed">
-                Após o pagamento confirmado, o PDF + a planilha chegam no e-mail em até 5 minutos. Acesso vitalício e atualizações grátis durante 2026.
+                Após o pagamento confirmado, o PDF + a planilha chegam no e-mail em até 5 minutos. Acesso vitalício e atualizações grátis vitalícias.
               </AccordionContent>
             </AccordionItem>
           </Accordion>
           <p className="text-center text-gray-400 mt-12 flex items-center justify-center gap-2 text-sm">
-            <Info className="w-4 h-4" /> Conteúdo atualizado em 2026.
+            <Info className="w-4 h-4" /> Conteúdo atualizado regularmente.
           </p>
         </section>
 

@@ -574,7 +574,7 @@ const MuayThai5645 = () => {
                 </div>
                 <div>
                   <h4 className="text-foreground font-semibold mb-2">🛂 DTV (Destination Thailand Visa) — para estadias mais longas</h4>
-                  <p className="text-sm text-muted-foreground mb-3">Lançado em julho de 2024 como parte da iniciativa de Soft Power da Tailândia, o DTV permite ficar até <strong className="text-foreground">180 dias por entrada</strong> e é válido por <strong className="text-foreground">5 anos com múltiplas entradas</strong>. É hoje o visto recomendado pra quem quer treinar Muay Thai por período longo — substituiu boa parte da função que o ED Visa cumpria antes. O pedido é feito direto no portal oficial <strong className="text-foreground">thaievisa.go.th</strong>.</p>
+                  <p className="text-sm text-muted-foreground mb-3">Lançado como parte da iniciativa de Soft Power da Tailândia, o DTV permite ficar até <strong className="text-foreground">180 dias por entrada</strong> e é válido por <strong className="text-foreground">5 anos com múltiplas entradas</strong>. É hoje o visto recomendado pra quem quer treinar Muay Thai por período longo — substituiu boa parte da função que o ED Visa cumpria antes. O pedido é feito direto no portal oficial <strong className="text-foreground">thaievisa.go.th</strong>.</p>
                   <p className="text-sm text-muted-foreground mb-2">Três academias deste guia são provedoras diretas confirmadas, emitindo carta de matrícula pra dar suporte ao seu pedido de DTV:</p>
                   <ul className="space-y-1.5 text-sm text-muted-foreground">
                     <li className="flex items-start gap-2"><span className="text-gold mt-0.5">•</span> <strong className="text-foreground">Ratchawat Muay Thai</strong> (Koh Samui) — pacotes a partir de 20.000 THB/6 meses, carta de matrícula em até 24h</li>
@@ -584,7 +584,7 @@ const MuayThai5645 = () => {
                 </div>
                 <div>
                   <h4 className="text-foreground font-semibold mb-2">📚 ED Visa (Education Visa) — ainda existe, mas é mais raro hoje</h4>
-                  <p className="text-sm text-muted-foreground">O ED Visa tradicional permite ficar até <strong className="text-foreground">1 ano</strong> na Tailândia, mas a maioria dos camps migrou pro DTV depois de 2024. A <strong className="text-foreground">Fairtex Training Center</strong> (Pattaya) é reconhecida oficialmente pelo Ministério da Educação da Tailândia pra emitir esse tipo de visto.</p>
+                  <p className="text-sm text-muted-foreground">O ED Visa tradicional permite ficar até <strong className="text-foreground">1 ano</strong> na Tailândia, mas a maioria dos camps migrou pro DTV recentemente. A <strong className="text-foreground">Fairtex Training Center</strong> (Pattaya) é reconhecida oficialmente pelo Ministério da Educação da Tailândia pra emitir esse tipo de visto.</p>
                 </div>
                 <p className="text-sm text-muted-foreground">⚠️ <strong className="text-foreground">Confirme sempre direto com a academia antes de fechar pacote</strong> — políticas de visto mudam com frequência e cada camp tem seu próprio processo. Use o site oficial (thaievisa.go.th) como referência final, nunca terceiros ou agências não verificadas.</p>
               </div>
@@ -628,7 +628,7 @@ const MuayThai5645 = () => {
         <div className="max-w-3xl mx-auto text-center">
           <p className="font-display text-2xl text-foreground mb-2">🥊 Guia Muay Thai Tailândia</p>
           <p className="text-sm text-muted-foreground mb-6">O guia definitivo para treinar na terra do Muay Thai. Feito com 🔥 por quem já viveu isso.</p>
-          <p className="text-xs text-muted-foreground">© 2024 Guia Muay Thai Tailândia. Todos os direitos reservados.</p>
+          <p className="text-xs text-muted-foreground">© Guia Muay Thai Tailândia. Todos os direitos reservados.</p>
         </div>
       </footer>
     </div>

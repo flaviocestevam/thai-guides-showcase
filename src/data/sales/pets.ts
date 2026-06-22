@@ -95,7 +95,7 @@ export const pets: SalesContent = {
     { name: "Diego R.", city: "Recife", text: "Lista de praias liberadas mudou minha viagem. Cachorro feliz no mar todo dia." },
   ],
   pricing: {
-    badge: "Edição Pets 2026",
+    badge: "Edição Pets",
     oldPrice: "R$ 197",
     price: "67",
     priceCents: "00",

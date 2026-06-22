@@ -179,7 +179,7 @@ const MergulhoTailandia465355 = () => {
   return (
     <div className="min-h-screen font-['Poppins',sans-serif]" style={{ background: SAND, color: NAVY }}>
       <SEO
-        title="Guia Mergulho na Tailândia 2026 | PADI, SSI, Koh Tao, Similan"
+        title="Guia Mergulho na Tailândia | PADI, SSI, Koh Tao, Similan"
         description="Guia completo de mergulho na Tailândia: cursos PADI/SSI, custos reais, calendário, dive sites, liveaboards, segurança e roteiros — do Open Water ao Instructor."
         canonicalPath="/mergulho-tailandia465355"
       />
@@ -196,7 +196,7 @@ const MergulhoTailandia465355 = () => {
         </div>
         <div className="container mx-auto px-5 max-w-5xl relative z-10 text-white">
           <div className="inline-block px-3 py-1 rounded-full text-xs font-bold tracking-widest uppercase mb-5" style={{ background: CORAL }}>
-            🤿 Guia 2026 • 34 capítulos
+            🤿 Guia Completo • 34 capítulos
           </div>
           <h1 className="text-4xl md:text-6xl font-black leading-tight mb-5">
             Mergulho na Tailândia <span style={{ color: "#7FE7E5" }}>do Open Water ao Divemaster</span>
@@ -1130,7 +1130,7 @@ Thank you.`}
 
       {/* 34 - Diretório de Escolas */}
       <Section id="diretorio-escolas" icon={MapPin} kicker="Capítulo 34" title="Diretório de escolas de mergulho (Google Maps + telefone)">
-        <p>Curadoria de escolas reconhecidas como PADI 5 Star / SSI Diamond, com contato verificado em dezembro de 2025. <strong>Sempre confirme preço e turma direto com a escola</strong> antes de fechar.</p>
+        <p>Curadoria de escolas reconhecidas como PADI 5 Star / SSI Diamond, com contato verificado em recentemente. <strong>Sempre confirme preço e turma direto com a escola</strong> antes de fechar.</p>
 
         <H3>🏝️ Koh Tao</H3>
         <div className="grid md:grid-cols-2 gap-4">
@@ -1200,7 +1200,7 @@ Thank you.`}
             <p>📞 <a href="tel:+66620180729" className="underline" style={{ color: TEAL }}>+66 62 018 0729</a> (Ash)</p>
             <p>🌐 <a href="https://www.aussiediversphuket.com" target="_blank" rel="noopener" className="underline">aussiediversphuket.com</a></p>
             <p>🗺️ <a href="https://www.google.com/maps/search/?api=1&query=Aussie+Divers+Phuket+Chalong" target="_blank" rel="noopener" className="underline">Ver no Google Maps</a></p>
-            <p className="text-sm text-slate-600 mt-2">Fusão com Local Dive Thailand (nov/2024). Top em day trips e cursos.</p>
+            <p className="text-sm text-slate-600 mt-2">Fusão com Local Dive Thailand (recente). Top em day trips e cursos.</p>
           </Card>
           <Card title="Indepth Dive Centre">
             <p>📍 Phuket (centro)</p>

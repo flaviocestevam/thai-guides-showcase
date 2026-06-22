@@ -95,7 +95,7 @@ export const aventureiros: SalesContent = {
     { name: "Luana M.", city: "Salvador", text: "O calendário por esporte mudou tudo. Fui na época certa de cada coisa e tive condição perfeita." },
   ],
   pricing: {
-    badge: "Edição Aventureiros 2026",
+    badge: "Edição Aventureiros",
     oldPrice: "R$ 197",
     price: "67",
     priceCents: "00",

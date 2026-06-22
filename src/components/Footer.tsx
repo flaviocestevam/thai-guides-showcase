@@ -64,7 +64,7 @@ export const Footer = () => {
       </div>
 
       <div className="max-w-7xl mx-auto pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-body text-muted-foreground">
-        <p>© 2026 Guias Tailandia para Brasileiros. Todos os direitos reservados.</p>
+        <p>© Guias Tailandia para Brasileiros. Todos os direitos reservados.</p>
         <p>Desenvolvido com ❤️ para viajantes autênticos.</p>
       </div>
     </footer>

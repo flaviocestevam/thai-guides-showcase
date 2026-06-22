@@ -95,7 +95,7 @@ export const casasDeMassagem: SalesContent = {
     { name: "Diego F.", city: "Salvador", text: "Calendário de promoções me deu massagem premium em Bangkok por R$ 80." },
   ],
   pricing: {
-    badge: "Edição 2026",
+    badge: "Edição Completa",
     oldPrice: "R$ 197",
     price: "67",
     priceCents: "00",

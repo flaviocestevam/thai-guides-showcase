@@ -95,7 +95,7 @@ export const beachClubs: SalesContent = {
     { name: "Diego A.", city: "Salvador", text: "Já dei o guia pra 6 amigos que foram pra Phuket. Todos agradeceram." },
   ],
   pricing: {
-    badge: "Edição 2026",
+    badge: "Edição Completa",
     oldPrice: "R$ 197",
     price: "67",
     priceCents: "00",

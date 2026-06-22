@@ -422,7 +422,7 @@ const Festas7733 = () => {
         </Section>
 
         {/* PREÇOS */}
-        <Section id="cap-precos" kicker="Capítulo 14" title="Preços reais 2025 — tabela de bolso">
+        <Section id="cap-precos" kicker="Capítulo 14" title="Preços reais — tabela de bolso">
           <ul className="not-prose space-y-2.5 mt-4">
             {[
               ["Cerveja local (Singha/Chang/Leo) bar de rua", "฿80–120"],

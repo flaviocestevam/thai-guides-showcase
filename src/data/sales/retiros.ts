@@ -95,7 +95,7 @@ export const retiros: SalesContent = {
     { name: "Bruno S.", city: "Salvador", text: "Roteiro pós-retiro foi o que faltava. Como integrar de volta na vida normal sem perder o que viveu." },
   ],
   pricing: {
-    badge: "Edição Retiros 2026",
+    badge: "Edição Retiros",
     oldPrice: "R$ 197",
     price: "67",
     priceCents: "00",

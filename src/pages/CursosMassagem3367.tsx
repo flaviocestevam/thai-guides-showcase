@@ -189,7 +189,7 @@ const schools: School[] = [
     language: "Inglês",
     edVisa: "Apenas 3+ meses",
     bestFor: "Quem quer o certificado Wat Pho mas tá em Phuket de férias. Mesmo diploma, mesmo conteúdo, mesma assinatura.",
-    tip: "Confira no site oficial watpomassage.com se a franquia ainda é ativa — duas filiais já fecharam em 2024.",
+    tip: "Confira no site oficial watpomassage.com se a franquia ainda é ativa — duas filiais já fecharam recentemente.",
     contact: "watpomassage.com (filiais)",
     rating: 8,
   },
@@ -241,7 +241,7 @@ const CursosMassagem3367 = () => {
       <Section chapter="Capítulo 1" title="Como ler este guia">
         <p>Cada uma das 10 escolas abaixo foi testada (alunado ou visita técnica + entrevista com brasileiros que estudaram lá). A tabela mostra <strong className="text-foreground">preço real em baht, duração em horas, idioma, reconhecimento oficial e se emite carta para ED Visa</strong>.</p>
         <p>Nota de 0 a 10 considera: reconhecimento internacional, qualidade do ensino, custo-benefício, suporte ao aluno estrangeiro e empregabilidade do certificado.</p>
-        <p>⚠️ <strong className="text-foreground">Preços atualizados em janeiro/2026.</strong> Variações de até 10% são normais (a Tailândia reajusta cursos a cada ciclo letivo). 1 baht ≈ R$ 0,15.</p>
+        <p>⚠️ <strong className="text-foreground">Preços atualizados.</strong> Variações de até 10% são normais (a Tailândia reajusta cursos a cada ciclo letivo). 1 baht ≈ R$ 0,15.</p>
       </Section>
 
       <div className="guide-section-divider" />
@@ -318,7 +318,7 @@ const CursosMassagem3367 = () => {
             <li><strong className="text-foreground">Total: ฿5.700 (≈ R$ 850)</strong> contra R$ 4.000–6.000 da agência.</li>
           </ul>
         </Card>
-        <p className="text-gold">💡 <strong>Atenção 2026:</strong> a Tailândia restringiu o ED Visa em 2024 para evitar visas falsos. Agora exige <strong className="text-foreground">comprovante de saldo bancário</strong> de ฿20.000 e <strong>frequência de 80% comprovada por digital</strong>. Não falte aula.</p>
+        <p className="text-gold">💡 <strong>Atenção:</strong> a Tailândia restringiu o ED Visa recentemente para evitar visas falsos. Agora exige <strong className="text-foreground">comprovante de saldo bancário</strong> de ฿20.000 e <strong>frequência de 80% comprovada por digital</strong>. Não falte aula.</p>
       </Section>
 
       <div className="guide-section-divider" />
@@ -619,7 +619,7 @@ const CursosMassagem3367 = () => {
 
       <Section chapter="Capítulo 13" title="Como precificar quando voltar pro Brasil">
         <Card>
-          <p className="text-sm font-semibold text-foreground mb-2">Tabela de preços de mercado 2026 (Brasil capitais):</p>
+          <p className="text-sm font-semibold text-foreground mb-2">Tabela de preços de mercado (Brasil capitais):</p>
           <ul className="text-sm space-y-1">
             <li><strong className="text-foreground">Thai tradicional 60min:</strong> R$ 180 a R$ 280.</li>
             <li><strong className="text-foreground">Thai tradicional 90min:</strong> R$ 240 a R$ 380.</li>
@@ -688,7 +688,7 @@ const CursosMassagem3367 = () => {
         <Card>
           <p className="text-sm font-semibold text-foreground mb-2">Custos únicos pré-embarque (à parte)</p>
           <ul className="text-sm space-y-1">
-            <li>Passagem GRU↔BKK (média 2026): R$ 5.500</li>
+            <li>Passagem GRU↔BKK (média atual): R$ 5.500</li>
             <li>Seguro viagem 3 meses: R$ 900</li>
             <li>Vacinas (hepatite A + tifoide + raiva opcional): R$ 600</li>
             <li>Roupas brancas/claras (4 conjuntos): R$ 250</li>
@@ -727,7 +727,7 @@ const CursosMassagem3367 = () => {
       </Section>
 
       <footer className="py-12 px-6 text-center text-xs text-muted-foreground border-t border-border">
-        <p>Guia interno · Cursos de Massagem Tailandesa · v1.0 · jan/2026</p>
+        <p>Guia interno · Cursos de Massagem Tailandesa · v1.0</p>
         <p className="mt-2">Atualizações enviadas por email aos alunos. Dúvidas: contato@guiastailandia.com.br</p>
       </footer>
     </div>

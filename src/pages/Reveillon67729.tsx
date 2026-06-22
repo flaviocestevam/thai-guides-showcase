@@ -280,7 +280,7 @@ const Reveillon67729 = () => {
   return (
     <div className="min-h-screen" style={{ background: CREAM }}>
       <SEO
-        title="Guia Réveillon na Tailândia 2026 — Festas, Hotéis e Roteiros"
+        title="Guia Réveillon na Tailândia — Festas, Hotéis e Roteiros"
         description="Guia completo do Réveillon na Tailândia: 10 cidades comparadas, 36+ festas, hotéis com vista dos fogos, roteiros 28/12 a 02/01, logística da virada e comparativo de pacotes."
         canonicalPath="/reveillon-tailandia67729"
       />
@@ -291,7 +291,7 @@ const Reveillon67729 = () => {
         <section className="py-16 md:py-24" style={{ background: `linear-gradient(135deg, ${NAVY}, ${VIOLET})` }}>
           <div className="container mx-auto px-5 max-w-5xl text-center text-white">
             <span className="inline-block px-4 py-1 rounded-full text-xs font-bold tracking-widest uppercase mb-4" style={{ background: GOLD, color: NAVY }}>
-              🎆 Edição 2026
+              🎆
             </span>
             <h1 className="text-4xl md:text-6xl font-black leading-tight mb-5">
               Guia do Réveillon na Tailândia

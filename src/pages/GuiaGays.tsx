@@ -37,7 +37,7 @@ const GuiaGays = () => {
           </div>
           <div className="container mx-auto px-6 relative z-10 text-white py-12">
             <div className="inline-block bg-gradient-to-r from-[#EC4899] to-[#7C3AED] text-xs font-bold px-3 py-1 rounded-full mb-6 tracking-wider uppercase">
-              🏳️‍🌈 Edição 2026 • Atualizado
+              🏳️‍🌈 • Atualizado
             </div>
             <h1 className="text-4xl md:text-7xl font-bold leading-tight max-w-4xl mb-6">
               Viva a Tailândia <span style={{ color: PINK }}>Sem Filtro</span> e com <span style={{ color: TEAL }}>Total Liberdade</span>
@@ -62,7 +62,7 @@ const GuiaGays = () => {
         {/* SOCIAL PROOF BAR */}
         <section className="bg-[#0F0F1A] text-white py-6 px-6 border-y border-white/10">
           <div className="container mx-auto max-w-6xl flex flex-wrap items-center justify-around gap-6 text-center">
-            <div><div className="text-2xl font-black" style={{ color: PINK }}>2.300+</div><div className="text-xs text-gray-400 uppercase tracking-wider">Leitores em 2025</div></div>
+            <div><div className="text-2xl font-black" style={{ color: PINK }}>2.300+</div><div className="text-xs text-gray-400 uppercase tracking-wider">Leitores até hoje</div></div>
             <div><div className="text-2xl font-black" style={{ color: PURPLE }}>4,9 ★</div><div className="text-xs text-gray-400 uppercase tracking-wider">Avaliação média</div></div>
             <div><div className="text-2xl font-black" style={{ color: TEAL }}>30+</div><div className="text-xs text-gray-400 uppercase tracking-wider">Hotéis testados</div></div>
             <div><div className="text-2xl font-black" style={{ color: GOLD }}>7 dias</div><div className="text-xs text-gray-400 uppercase tracking-wider">Garantia incondicional</div></div>
@@ -79,7 +79,7 @@ const GuiaGays = () => {
                 </h2>
                 <div className="w-20 h-1.5 rounded-full" style={{ backgroundColor: GOLD }}></div>
                 <div className="space-y-4 text-gray-600 text-lg leading-relaxed">
-                  <p>Em janeiro de 2025 o país se tornou o <strong>primeiro do sudeste asiático a legalizar o casamento igualitário</strong>. A cultura é acolhedora, a comunidade é forte e visível.</p>
+                  <p>O país se tornou o <strong>primeiro do sudeste asiático a legalizar o casamento igualitário</strong>. A cultura é acolhedora, a comunidade é forte e visível.</p>
                   <p>Mas nem tudo é igual em todo lugar: Bangkok e Chiang Mai são bolhas vibrantes; algumas ilhas e cidades menores pedem mais discrição.</p>
                   <p className="font-semibold text-[#1A1A1A]">Este guia te mostra onde curtir solto — e onde respirar com tranquilidade.</p>
                 </div>
@@ -207,7 +207,7 @@ const GuiaGays = () => {
                 <h3 className="text-2xl font-bold mb-6">Com o guia</h3>
                 <ul className="space-y-4">
                   {[
-                    "Tudo mastigado, em português, atualizado em 2026",
+                    "Tudo mastigado, em português, atualizado regularmente",
                     "Hotel pré-aprovado por gente da comunidade",
                     "Lista de bares com preço justo e código de conduta",
                     "Mapas de bolso por bairro com nível de 'liberdade'",
@@ -291,7 +291,7 @@ const GuiaGays = () => {
             <h2 className="text-3xl md:text-5xl font-bold text-center mb-4">
               O Que <span style={{ color: PURPLE }}>Vem no Guia</span>
             </h2>
-            <p className="text-center text-gray-500 mb-16 max-w-2xl mx-auto">PDF de 150+ páginas com mapas, links clicáveis, leis atualizadas pós-casamento igualitário e atualizações grátis durante 2026.</p>
+            <p className="text-center text-gray-500 mb-16 max-w-2xl mx-auto">PDF de 150+ páginas com mapas, links clicáveis, leis atualizadas pós-casamento igualitário e atualizações grátis vitalícias.</p>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
               {[
                 { icon: Hotel, title: "40+ hotéis testados", desc: "Por perfil e orçamento" },
@@ -306,7 +306,7 @@ const GuiaGays = () => {
                 { icon: Smartphone, title: "Apps de paquera", desc: "Grindr, Hornet, Blued + segurança digital" },
                 { icon: Sun, title: "Praias e ilhas gays", desc: "Dongtan Beach e as ilhas mais amigáveis" },
                 { icon: Scale, title: "Leis essenciais", desc: "Consentimento, vape, cannabis e drogas" },
-                { icon: Heart, title: "Casamento igualitário", desc: "Cerimônia legal e simbólica pós-2025" },
+                { icon: Heart, title: "Casamento igualitário", desc: "Cerimônia legal e simbólica recente" },
                 { icon: Wallet, title: "Dinheiro & eSIM", desc: "Wise, ATM, transporte noturno seguro" },
                 { icon: Users, title: "Lés, bi, trans e não-bin.", desc: "Cena, hormônios e Tangerine Clinic" },
               ].map((item, i) => (
@@ -332,7 +332,7 @@ const GuiaGays = () => {
             <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
               {[
                 { icon: BookOpen, title: "E-book: 'Sobrevivendo a Songkran'", value: "R$47" },
-                { icon: Gift, title: "Atualizações grátis durante 2026", value: "R$57" },
+                { icon: Gift, title: "Atualizações grátis vitalícias", value: "R$57" },
               ].map((b, i) => (
                 <div key={i} className="bg-gradient-to-br from-white to-[#FFF5F8] p-8 rounded-3xl shadow-lg border-2 border-pink-100 text-center">
                   <div className="inline-flex items-center justify-center w-16 h-16 rounded-full mb-4" style={{ backgroundColor: `${GOLD}1A`, color: GOLD }}>
@@ -380,12 +380,12 @@ const GuiaGays = () => {
             <div className="bg-white p-12 md:p-20 rounded-[3rem] shadow-2xl text-center relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 rounded-full -mr-16 -mt-16" style={{ backgroundColor: `${GOLD}1A` }}></div>
               <h2 className="text-3xl font-bold mb-4">Garantir Meu Guia Agora</h2>
-              <p className="text-gray-600 mb-10 text-lg">Acesso imediato ao PDF, mapas e atualizações de 2026.</p>
+              <p className="text-gray-600 mb-10 text-lg">Acesso imediato ao PDF, mapas e atualizações vitalícias.</p>
 
               <div className="bg-[#FFF5F8] p-6 rounded-2xl mb-8 text-left text-sm space-y-2">
                 <div className="flex justify-between"><span>Guia completo (90+ páginas)</span><span className="font-bold">R$197</span></div>
                 <div className="flex justify-between text-gray-500"><span>+ E-book Songkran</span><span>R$47</span></div>
-                <div className="flex justify-between text-gray-500"><span>+ Atualizações 2026</span><span>R$57</span></div>
+                <div className="flex justify-between text-gray-500"><span>+ Atualizações vitalícias</span><span>R$57</span></div>
                 <div className="border-t border-pink-200 pt-2 flex justify-between font-bold"><span>Valor real</span><span className="line-through">R$301</span></div>
               </div>
 
@@ -396,7 +396,7 @@ const GuiaGays = () => {
               </div>
 
               <Button asChild size="lg" className="bg-gradient-to-r from-[#EC4899] to-[#7C3AED] hover:opacity-90 text-white font-bold py-10 px-12 text-2xl rounded-2xl shadow-xl w-full transition-transform hover:scale-[1.02] border-none">
-                <a href="#checkout">QUERO O GUIA GAY 2026</a>
+                <a href="#checkout">QUERO O GUIA GAY</a>
               </Button>
 
               <div className="mt-8 flex flex-wrap justify-center gap-4 text-xs font-bold text-gray-400 uppercase tracking-wider">
@@ -426,7 +426,7 @@ const GuiaGays = () => {
             <AccordionItem value="item-1" className="border rounded-2xl px-8 py-2">
               <AccordionTrigger className="text-lg font-bold hover:no-underline">A Tailândia é segura para gays?</AccordionTrigger>
               <AccordionContent className="text-gray-600 text-lg leading-relaxed">
-                Sim, é uma das mais seguras da Ásia. Desde 2025 o casamento igualitário é legal. Crimes de ódio são raros, mas como em qualquer lugar, bom senso e discrição em áreas mais conservadoras são bem-vindos.
+                Sim, é uma das mais seguras da Ásia. Desde então, o casamento igualitário é legal. Crimes de ódio são raros, mas como em qualquer lugar, bom senso e discrição em áreas mais conservadoras são bem-vindos.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-2" className="border rounded-2xl px-8 py-2">
@@ -438,7 +438,7 @@ const GuiaGays = () => {
             <AccordionItem value="item-3" className="border rounded-2xl px-8 py-2">
               <AccordionTrigger className="text-lg font-bold hover:no-underline">Quando é a Parada de Bangkok?</AccordionTrigger>
               <AccordionContent className="text-gray-600 text-lg leading-relaxed">
-                A Bangkok Pride acontece em junho. O guia traz o calendário 2026 completo com Prides em Bangkok, Chiang Mai, Phuket e Pattaya, além de festas mensais como Maggie Choo's e gCircuit.
+                A Bangkok Pride acontece em junho. O guia traz o calendário 2026 completo com Pride anual de Bangkok, Chiang Mai, Phuket e Pattaya, além de festas mensais como Maggie Choo's e gCircuit.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-4" className="border rounded-2xl px-8 py-2">
@@ -450,7 +450,7 @@ const GuiaGays = () => {
             <AccordionItem value="item-5" className="border rounded-2xl px-8 py-2">
               <AccordionTrigger className="text-lg font-bold hover:no-underline">Como recebo o guia depois da compra?</AccordionTrigger>
               <AccordionContent className="text-gray-600 text-lg leading-relaxed">
-                Após o pagamento confirmado, o PDF chega no seu e-mail em até 5 minutos. Acesso vitalício e atualizações grátis durante 2026.
+                Após o pagamento confirmado, o PDF chega no seu e-mail em até 5 minutos. Acesso vitalício e atualizações grátis vitalícias.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-6" className="border rounded-2xl px-8 py-2">
@@ -461,7 +461,7 @@ const GuiaGays = () => {
             </AccordionItem>
           </Accordion>
           <p className="text-center text-gray-400 mt-12 flex items-center justify-center gap-2 text-sm">
-            <Info className="w-4 h-4" /> Conteúdo atualizado em 2026.
+            <Info className="w-4 h-4" /> Conteúdo atualizado regularmente.
           </p>
         </section>
 

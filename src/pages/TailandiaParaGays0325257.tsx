@@ -196,7 +196,7 @@ const TailandiaParaGays0325257 = () => {
       </Section>
 
       <Section n="2" title="Casamento igualitário e contexto LGBTQIA+" icon={Heart}>
-        <p>A Tailândia entrou para a história ao legalizar o <strong className="text-foreground">casamento igualitário</strong> em 2025, reforçando a imagem como um dos destinos mais LGBTQIA+ friendly da Ásia.</p>
+        <p>A Tailândia entrou para a história ao legalizar o <strong className="text-foreground">casamento igualitário</strong>, reforçando a imagem como um dos destinos mais LGBTQIA+ friendly da Ásia.</p>
         <H3>Na prática para o brasileiro</H3>
         <Bul items={["Casais gays circulam com tranquilidade em áreas turísticas", "Hotéis de padrão internacional lidam bem com casais do mesmo sexo", "Bangkok, Phuket, Pattaya e Chiang Mai têm cena LGBTQIA+ visível", "Cultura drag e cabaré muito forte", "Pessoas trans e kathoey fazem parte da paisagem social há séculos"]} />
         <H3>Atenção</H3>
@@ -553,7 +553,7 @@ const TailandiaParaGays0325257 = () => {
         ]} />
         <H3>Cannabis</H3>
         <Bul items={[
-          "Desde meados de 2025 a lei voltou a ficar restritiva: uso recreativo está sendo recriminalizado",
+          "Recentemente a lei voltou a ficar restritiva: uso recreativo está sendo recriminalizado",
           "Lojas (dispensaries) ainda existem em Bangkok, Chiang Mai e Phuket mas regulação muda",
           "Nunca atravessar fronteira com cannabis — crime grave em todos os países vizinhos",
           "Fumar em via pública ou hotel pode gerar multa",
@@ -593,7 +593,7 @@ const TailandiaParaGays0325257 = () => {
       </Section>
 
       <Section n="27" title="Casamento igualitário e cerimônia simbólica" icon={Heart}>
-        <p>Desde 2025 a Tailândia reconhece <strong className="text-foreground">casamento entre pessoas do mesmo sexo</strong>. Para casal estrangeiro, há duas rotas:</p>
+        <p>Desde então, a Tailândia reconhece <strong className="text-foreground">casamento entre pessoas do mesmo sexo</strong>. Para casal estrangeiro, há duas rotas:</p>
         <H3>Casamento legal de estrangeiros</H3>
         <Bul items={[
           "Exige documentos consulares (Affirmation of Freedom to Marry) emitidos pela Embaixada do Brasil em Bangkok",

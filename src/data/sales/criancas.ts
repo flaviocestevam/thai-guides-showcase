@@ -95,7 +95,7 @@ export const criancas: SalesContent = {
     { name: "Diego M.", city: "Salvador", text: "Grupo de WhatsApp foi bônus inesperado. Conheci 3 famílias brasileiras na praia através dele." },
   ],
   pricing: {
-    badge: "Edição Família 2026",
+    badge: "Edição Família",
     oldPrice: "R$ 197",
     price: "67",
     priceCents: "00",

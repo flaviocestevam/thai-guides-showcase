@@ -95,7 +95,7 @@ export const topHostels: SalesContent = {
     { name: "Marina T.", city: "Recife", text: "Hostel boutique em Pai por R$ 70 que o guia indicou foi o melhor da viagem." },
   ],
   pricing: {
-    badge: "Edição 2026",
+    badge: "Edição Completa",
     oldPrice: "R$ 197",
     price: "67",
     priceCents: "00",
@@ -115,7 +115,7 @@ export const topHostels: SalesContent = {
     text: "Compre, acesse, leia. Se em 7 dias achar que não valeu, devolvemos 100%. Sem perguntas.",
   },
   faqs: [
-    { q: "Os hostels estão atualizados?", a: "Sim, edição 2026. Atualizado a cada 6 meses com novas avaliações e remoção dos que decaíram." },
+    { q: "Os hostels estão atualizados?", a: "Sim, edição completa. Atualizado a cada 6 meses com novas avaliações e remoção dos que decaíram." },
     { q: "Funciona para solo feminino?", a: "Sim, há bônus específico de 25 hostels seguros avaliados por mulheres viajantes." },
     { q: "Inclui ilhas?", a: "Sim — Koh Phangan, Koh Tao, Koh Lanta, Koh Samui, Phuket e Krabi têm seções dedicadas." },
     { q: "Como reservar direto?", a: "Ensinamos como entrar em contato com cada hostel via WhatsApp/email com templates prontos em inglês." },
