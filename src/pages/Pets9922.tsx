@@ -568,6 +568,71 @@ const Pets9922 = () => {
           <LinkGrid items={parquesCafes} />
         </Section>
 
+        {/* TRILHAS */}
+        <Section id="cap-trilhas" kicker="Capítulo 14" title="Hiking pet-friendly — onde caminhar com cão">
+          <p>
+            Trilha tailandesa boa pra pet = sombra, água corrente e baixa altitude. Evite parques nacionais oficiais
+            (pet proibido), opte por colinas e cachoeiras de gestão local.
+          </p>
+          <div className="not-prose grid sm:grid-cols-2 gap-3 mt-4">
+            {[
+              { t: "Doi Suthep — Monk's Trail (Chiang Mai)", l: "https://www.google.com/maps/search/Monks+Trail+Chiang+Mai", d: "3,5km, sombreada, riacho pra molhar pata. Pet com guia tolerado fora dos templos." },
+              { t: "Sticky Waterfall — Bua Tong (CM)", l: "https://www.google.com/maps/search/Sticky+Waterfall+Chiang+Mai", d: "cachoeira de calcário escalável. Pet pequeno OK; cuidado com pata em pedra escorregadia." },
+              { t: "Mae Sa Waterfall (Chiang Mai)", l: "https://www.google.com/maps/search/Mae+Sa+Waterfall+Chiang+Mai", d: "10 níveis de cachoeira, trilha plana até o nível 4. Boa pra pet idoso." },
+              { t: "Khao Khad Viewpoint (Phuket)", l: "https://www.google.com/maps/search/Khao+Khad+Viewpoint+Phuket", d: "subida curta de 1km, mirante 360°. Cedo de manhã = sem calor extremo." },
+              { t: "Big Buddha Trail (Phuket)", l: "https://www.google.com/maps/search/Big+Buddha+Phuket+Trail", d: "trilha de moto traseira ao Big Buddha. Pet OK até o estacionamento; estátua = não." },
+              { t: "Ang Thong National Park — bordas externas (Samui)", l: "https://www.google.com/maps/search/Ang+Thong+National+Park", d: "dentro é proibido. Trilha costeira de Lipa Noi → praias secretas, pet livre." },
+              { t: "Doi Inthanon — Pha Dok Siew (CM)", l: "https://www.google.com/maps/search/Pha+Dok+Siew+Nature+Trail", d: "trilha guiada Karen, parte fora do parque nacional. Pet OK com guia local pagando ฿200." },
+              { t: "Sai Yok cachoeiras (Kanchanaburi)", l: "https://www.google.com/maps/search/Sai+Yok+Yai+Waterfall", d: "área rural, sem fiscalização. Cão nada no Mae Klong." },
+            ].map((r, i) => (
+              <a key={i} href={r.l} target="_blank" rel="noopener noreferrer" className="rounded-xl p-4 block hover:-translate-y-1 transition-transform" style={{ background: "rgba(255,255,255,0.04)", border: `1px solid ${LINE}` }}>
+                <strong style={{ color: NEON }}>{r.t}</strong>
+                <p className="text-[14px] mt-1" style={{ color: "rgba(244,239,230,0.75)" }}>{r.d}</p>
+              </a>
+            ))}
+          </div>
+          <div className="not-prose mt-6 rounded-xl p-5 flex gap-3" style={{ background: "rgba(45,212,191,0.07)", border: `1px solid rgba(45,212,191,0.25)` }}>
+            <AlertTriangle className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: NEON }} />
+            <p className="text-[14.5px]" style={{ color: "rgba(244,239,230,0.85)" }}>
+              <strong style={{ color: INK }}>Regras de ouro pra trilha tropical:</strong> 6h–9h ou após 17h, sempre.
+              2L de água por hora (você + pet), bota pra pata em terreno vulcânico, repelente de carrapato, antiveneno
+              de cobra anotado no celular. Cão braquicéfalo (pug, bulldog) não sobe trilha — fica no hotel.
+            </p>
+          </div>
+        </Section>
+
+        {/* GATO */}
+        <Section id="cap-gato" kicker="Capítulo 15" title="Específico para gatos — o que muda">
+          <p>
+            Todo o protocolo (chip, antirrábica, FAVN, CVI, DLD) vale igual pra gato. As diferenças aparecem
+            em transporte, hospedagem e adaptação.
+          </p>
+          <div className="not-prose grid sm:grid-cols-2 gap-3 mt-4">
+            {[
+              { t: "Voo em cabine (sempre que possível)", d: "Gato <8kg sempre cabe em cabine. Caixa rígida ventilada, lugar embaixo do banco da frente. Cargo só em última opção (eles odeiam barulho)." },
+              { t: "Adaptação à caixa: 30 dias antes", d: "Comece a deixar a caixa de viagem aberta em casa com petisco dentro. Sem isso, miados a voo inteiro." },
+              { t: "Feliway Travel (feromônio)", d: "Spray nas paredes da caixa 30min antes. Compre na Petlove BR, 1 frasco dura ida + volta." },
+              { t: "SEM sedativo", d: "Proibido pela IATA. Sedativo + pressurização da cabine = risco cardíaco. Confie em Feliway + jejum leve (4h antes)." },
+              { t: "Areia: leve 1kg, compre o resto lá", d: "Cat's Best (qualquer Tops) é praticamente igual à do Brasil. Não vale a pena pagar bagagem extra." },
+              { t: "Hotel: confirme 'cat-friendly' explícito", d: "Muitos hotéis dizem 'pet-friendly' pensando em cão. Pergunte: 'do you accept cats in the room?' Confirme por e-mail." },
+              { t: "Vacina FeLV/FIV", d: "Não é exigida pela Tailândia, mas faça antes — felinos de rua locais carregam essas doenças. Atualize antirrábica anual." },
+              { t: "Microchip dual-readable", d: "Confirme com vet que o chip é ISO 11784/11785 — chips antigos americanos (AVID) não são lidos no aeroporto BKK." },
+            ].map((r, i) => (
+              <div key={i} className="rounded-xl p-4" style={{ background: "rgba(255,255,255,0.04)", border: `1px solid ${LINE}` }}>
+                <strong style={{ color: NEON }}>{r.t}</strong>
+                <p className="text-[14px] mt-1" style={{ color: "rgba(244,239,230,0.75)" }}>{r.d}</p>
+              </div>
+            ))}
+          </div>
+          <div className="not-prose mt-6 rounded-xl p-5" style={{ background: "rgba(201,162,75,0.08)", border: `1px solid rgba(201,162,75,0.3)` }}>
+            <strong style={{ color: GOLD }}>Hotéis confirmadamente cat-friendly:</strong>
+            <p className="text-[14.5px] mt-2" style={{ color: "rgba(244,239,230,0.85)" }}>
+              Akyra Manor (CM), 137 Pillars (BKK + CM), Mandarin Oriental (BKK), Anantara Bophut (Samui), Pimalai (Lanta).
+              Para os outros listados, sempre confirme por e-mail.
+            </p>
+          </div>
+        </Section>
+
         {/* BLACKLIST */}
         <Section id="cap-blacklist" kicker="Capítulo 16" title="Lista negra — onde NUNCA levar o pet">
           <LinkGrid items={blacklist} />
