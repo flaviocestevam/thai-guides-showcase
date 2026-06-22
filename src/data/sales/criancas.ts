@@ -106,7 +106,7 @@ export const criancas: SalesContent = {
     { name: "Carolina T.", city: "Florianópolis", text: "Voei com bebê de 8 meses. Estratégias do guia funcionaram — ele dormiu 9 das 12h." },
     { name: "Fernando A.", city: "Brasília", text: "Cardápio infantil tailandês foi salvação. Minhas filhas comeram thai de verdade, sem picante." },
     { name: "Aline P.", city: "Curitiba", text: "Lista de hospitais me deu paz. Quando precisei levar meu filho com dor de ouvido, fui direto." },
-    { name: "Diego M.", city: "Salvador", text: "Grupo de WhatsApp foi bônus inesperado. Conheci 3 famílias brasileiras na praia através dele." },
+    { name: "Diego M.", city: "Salvador", text: "Roteiro por idade me poupou semanas de pesquisa. Fui pra Krabi com meu filho de 5 e cada dia funcionou." },
   ],
   pricing: {
     badge: "Edição Família",
