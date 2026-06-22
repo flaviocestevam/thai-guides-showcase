@@ -112,17 +112,35 @@ const vetsOutros: LinkRef[] = [
 ];
 
 const hoteisBKK: LinkRef[] = [
-  { label: "Akyra Manor Chiang Mai (pet-friendly real)", url: "https://www.google.com/maps/search/Akyra+Manor+Chiang+Mai", note: "aceita pets até 15kg, sem taxa. Quartos térreos com saída pro jardim. Reserve por e-mail confirmando porte." },
-  { label: "Mandarin Oriental Bangkok (cães pequenos)", url: "https://www.google.com/maps/search/Mandarin+Oriental+Bangkok", note: "aceita cães <8kg, taxa ฿1.500/noite, cama + tigela inclusas. Pedir 'pet amenity' na reserva." },
-  { label: "137 Pillars Suites Bangkok (Sukhumvit)", url: "https://www.google.com/maps/search/137+Pillars+Suites+Bangkok", note: "suítes amplas, aceita até 10kg sem taxa. Próximo de Thonglor Pet Hospital." },
-  { label: "U Sathorn Bangkok (jardim privado)", url: "https://www.google.com/maps/search/U+Sathorn+Bangkok", note: "jardim interno enorme. Taxa ฿2.000/estadia, kit pet incluso." },
-];
-
-const hoteisIlhas: LinkRef[] = [
-  { label: "The Slate Phuket (Nai Yang)", url: "https://www.google.com/maps/search/The+Slate+Phuket", note: "vilas com jardim privado. Aceita até 20kg, taxa ฿2.500/estadia. Nai Yang Beach é pet-friendly." },
-  { label: "Six Senses Yao Noi (cães pequenos)", url: "https://www.google.com/maps/search/Six+Senses+Yao+Noi", note: "vilas isoladas, política pet sob consulta. Pedir confirmação por escrito antes do voo doméstico." },
-  { label: "Anantara Bophut Koh Samui", url: "https://www.google.com/maps/search/Anantara+Bophut+Koh+Samui", note: "aceita até 12kg, taxa ฿1.800/noite. Praia privativa de Bophut permite pet com coleira." },
-  { label: "Pimalai Resort Koh Lanta", url: "https://www.google.com/maps/search/Pimalai+Resort+Koh+Lanta", note: "Koh Lanta é a ilha mais pet-friendly da Tailândia. Pimalai aceita até 15kg sem taxa." },
+  // Bangkok (15)
+  { label: "Mandarin Oriental Bangkok (cães pequenos)", url: "https://www.google.com/maps/search/Mandarin+Oriental+Bangkok", note: "BKK · cães <8kg, taxa ฿1.500/noite, cama + tigela inclusas. Pedir 'pet amenity' na reserva." },
+  { label: "137 Pillars Suites Bangkok (Sukhumvit)", url: "https://www.google.com/maps/search/137+Pillars+Suites+Bangkok", note: "BKK · suítes amplas, aceita até 10kg sem taxa. Próximo de Thonglor Pet Hospital." },
+  { label: "U Sathorn Bangkok (jardim privado)", url: "https://www.google.com/maps/search/U+Sathorn+Bangkok", note: "BKK · jardim interno enorme. Taxa ฿2.000/estadia, kit pet incluso." },
+  { label: "The Sukhothai Bangkok", url: "https://www.google.com/maps/search/The+Sukhothai+Bangkok", note: "BKK · até 10kg, taxa ฿2.500. Jardins zen, ideal pra cão sênior." },
+  { label: "Sindhorn Kempinski Bangkok", url: "https://www.google.com/maps/search/Sindhorn+Kempinski+Bangkok", note: "BKK · até 15kg sem taxa. Parque Lumphini ao lado." },
+  { label: "The Athenee Hotel Bangkok", url: "https://www.google.com/maps/search/The+Athenee+Bangkok", note: "BKK · cães <10kg, taxa ฿1.800/noite. Próximo BTS Ploenchit." },
+  { label: "Pullman Bangkok King Power", url: "https://www.google.com/maps/search/Pullman+Bangkok+King+Power", note: "BKK · até 8kg, taxa ฿1.000/noite. Jardim grande pra passear." },
+  { label: "Park Hyatt Bangkok", url: "https://www.google.com/maps/search/Park+Hyatt+Bangkok", note: "BKK · até 7kg, sem taxa. Concierge pet (vet em standby)." },
+  { label: "W Bangkok (Sathorn)", url: "https://www.google.com/maps/search/W+Bangkok", note: "BKK · até 18kg, taxa ฿2.000/noite. Programa 'PAW' com cama e amenities." },
+  { label: "SO/ Bangkok", url: "https://www.google.com/maps/search/SO+Bangkok", note: "BKK · até 10kg, taxa ฿1.500. Pool deck pet-friendly fora de pico." },
+  { label: "Avani+ Riverside Bangkok", url: "https://www.google.com/maps/search/Avani+Riverside+Bangkok", note: "BKK · até 15kg, taxa ฿1.200. Vista do rio Chao Phraya." },
+  { label: "Carlton Hotel Bangkok Sukhumvit", url: "https://www.google.com/maps/search/Carlton+Hotel+Bangkok+Sukhumvit", note: "BKK · até 12kg, taxa ฿1.000. Próximo BTS Asok." },
+  { label: "Maitria Hotel Sukhumvit 18", url: "https://www.google.com/maps/search/Maitria+Hotel+Sukhumvit+18", note: "BKK · aparthotel, kitchenette útil pra dieta pet. Até 10kg, taxa ฿800." },
+  { label: "Citadines Sukhumvit 8", url: "https://www.google.com/maps/search/Citadines+Sukhumvit+8", note: "BKK · aparthotel até 15kg, taxa ฿1.000. Estadia longa ideal." },
+  { label: "Adelphi Suites Bangkok", url: "https://www.google.com/maps/search/Adelphi+Suites+Bangkok", note: "BKK · até 10kg, taxa ฿700. Custo-benefício pra ficar 30+ dias." },
+  // Chiang Mai (12)
+  { label: "Akyra Manor Chiang Mai", url: "https://www.google.com/maps/search/Akyra+Manor+Chiang+Mai", note: "CM · até 15kg, sem taxa. Quartos térreos com saída pro jardim." },
+  { label: "Anantara Chiang Mai Resort", url: "https://www.google.com/maps/search/Anantara+Chiang+Mai+Resort", note: "CM · até 10kg, taxa ฿1.500. Jardim no rio Ping." },
+  { label: "137 Pillars House Chiang Mai", url: "https://www.google.com/maps/search/137+Pillars+House+Chiang+Mai", note: "CM · até 12kg, sem taxa. Casa colonial restaurada." },
+  { label: "Rachamankha Hotel (Old City)", url: "https://www.google.com/maps/search/Rachamankha+Hotel+Chiang+Mai", note: "CM · até 8kg, taxa ฿800. Dentro da cidade velha." },
+  { label: "U Nimman Chiang Mai", url: "https://www.google.com/maps/search/U+Nimman+Chiang+Mai", note: "CM · até 10kg, taxa ฿1.000. Coração de Nimman." },
+  { label: "Tamarind Village", url: "https://www.google.com/maps/search/Tamarind+Village+Chiang+Mai", note: "CM · até 10kg, taxa ฿1.200. Pátio interno seguro." },
+  { label: "Le Méridien Chiang Mai", url: "https://www.google.com/maps/search/Le+Meridien+Chiang+Mai", note: "CM · até 7kg, taxa ฿1.500. Próximo Night Bazaar." },
+  { label: "X2 Chiang Mai Riverside", url: "https://www.google.com/maps/search/X2+Chiang+Mai+Riverside", note: "CM · até 15kg, taxa ฿1.000. Jardim no rio." },
+  { label: "Veranda High Resort", url: "https://www.google.com/maps/search/Veranda+High+Resort+Chiang+Mai", note: "CM · montanha, até 20kg sem taxa. Trilhas no entorno." },
+  { label: "Sireeampan Boutique Resort", url: "https://www.google.com/maps/search/Sireeampan+Chiang+Mai", note: "CM · até 12kg, taxa ฿700. Spa anexo." },
+  { label: "Maraya Hotel & Resort", url: "https://www.google.com/maps/search/Maraya+Hotel+Chiang+Mai", note: "CM · até 10kg, taxa ฿800. Próximo aeroporto." },
+  { label: "Buri Gallery House", url: "https://www.google.com/maps/search/Buri+Gallery+House+Chiang+Mai", note: "CM · boutique pequeno, até 8kg, sem taxa. Old City." },
 ];
 
 const praias: LinkRef[] = [
