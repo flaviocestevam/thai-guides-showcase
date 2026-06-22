@@ -362,6 +362,7 @@ const CafesCoworkings7391 = () => {
           <li><span className="text-foreground">eSIM Airalo Thailand</span> — US$ 17 por 30 dias / 10GB. Ativa antes de embarcar, sem fila.</li>
           <li><span className="text-foreground">Plano mensal local</span> — quem fica 3+ meses: AIS 5G unlimited ฿599/mês com passaporte.</li>
           <li><span className="text-foreground">Backup obrigatório:</span> nunca dependa só do Wi-Fi do café. Use o celular como hotspot 4G/5G — em ilhas pequenas, AIS quase sempre supera o Wi-Fi local.</li>
+          <li><span className="text-foreground">Onde comprar o chip</span> — além dos balcões no aeroporto, <span className="text-foreground">todas as lojas 7-Eleven vendem SIM AIS, TrueMove e DTAC</span> (procure o cartaz "SIM card" no caixa). Levam passaporte, ativam na hora e custa o mesmo que no aeroporto, sem fila. Existem 7-Eleven em cada quarteirão de Bangkok, Chiang Mai, Phuket, Pattaya e em quase toda ilha turística.</li>
         </ul>
       </Section>
 
