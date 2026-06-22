@@ -434,8 +434,9 @@ const GuiaSongkran = () => {
             </AccordionItem>
           </Accordion>
           <p className="text-center text-gray-400 mt-12 flex items-center justify-center gap-2 text-sm">
-            <Info className="w-4 h-4" /> Conteúdo atualizado em 2026.
+            <Info className="w-4 h-4" /> Conteúdo revisado regularmente.
           </p>
+
         </section>
 
         {/* CTA FINAL */}
