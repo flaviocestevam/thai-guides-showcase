@@ -321,7 +321,7 @@ const GuiaVoluntariado = () => {
             <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
               {[
                 { icon: BookOpen, title: "Templates de inscrição em inglês", value: "R$57" },
-                { icon: Gift, title: "Atualizações grátis durante 2026", value: "R$47" },
+                { icon: Gift, title: "Lista de grupos de Facebook de voluntários BR na Tailândia", value: "R$47" },
               ].map((b, i) => (
                 <div key={i} className="bg-gradient-to-br from-white to-[#F0FDF4] p-8 rounded-3xl shadow-lg border-2 border-green-100 text-center">
                   <div className="inline-flex items-center justify-center w-16 h-16 rounded-full mb-4" style={{ backgroundColor: `${GOLD}1A`, color: GOLD }}>
