@@ -398,8 +398,75 @@ const Pets9922 = () => {
           </div>
         </Section>
 
+        {/* DESPACHANTES */}
+        <Section id="cap-despachantes" kicker="Capítulo 04" title="Despachantes recomendados (BR e TH)">
+          <p>
+            Despachante NÃO economiza dinheiro — economiza <strong style={{ color: INK }}>tempo</strong>. Vale se você
+            não tem 1 mês pra correr atrás de cartório, vet, MAPA e DLD. Esses 3 atendem brasileiros e têm processo testado:
+          </p>
+          <div className="not-prose grid sm:grid-cols-2 gap-3 mt-4">
+            {[
+              { t: "PetTravel Brasil (SP)", d: "Despacho ida + volta + caixa IATA. Cuida de FAVN, CVI, DLD. R$ 2.800–3.500 ida. WhatsApp +55 11 9 4001-0000 (linha geral). Atende GRU/GIG." },
+              { t: "AnimalTrip (Curitiba)", d: "Especialista em rota Qatar GRU→DOH→BKK. R$ 2.200 + custos. Inclui acompanhamento no embarque." },
+              { t: "Worldwide Animal Travel (RJ)", d: "Mais caro (R$ 4.000) mas faz tudo, inclusive caixa sob medida pra raça grande." },
+              { t: "Bangkok Pet Movers (chegada TH)", d: "Recebe pet no Suvarnabhumi, faz despacho aduaneiro, leva pro hotel. ฿4.000–6.000 (R$ 700–1.100). E-mail info@bangkokpetmovers.com." },
+              { t: "Siam Pet Relocation (TH)", d: "Alternativa a Bangkok Pet Movers, mesmo preço. Cobre Phuket e Chiang Mai também." },
+              { t: "Faça você mesmo (DIY)", d: "Economiza R$ 2.000–4.000. Viável se você fala inglês ok e tem 6 meses de antecedência. Guia inteiro foi feito pra DIY." },
+            ].map((r, i) => (
+              <div key={i} className="rounded-xl p-4" style={{ background: "rgba(255,255,255,0.04)", border: `1px solid ${LINE}` }}>
+                <strong style={{ color: NEON }}>{r.t}</strong>
+                <p className="text-[14px] mt-1" style={{ color: "rgba(244,239,230,0.75)" }}>{r.d}</p>
+              </div>
+            ))}
+          </div>
+          <div className="not-prose mt-6 rounded-xl p-5 flex gap-3" style={{ background: "rgba(201,162,75,0.08)", border: `1px solid rgba(201,162,75,0.3)` }}>
+            <ShieldCheck className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: GOLD }} />
+            <p className="text-[14.5px]" style={{ color: "rgba(244,239,230,0.85)" }}>
+              <strong style={{ color: GOLD }}>Bandeira vermelha:</strong> despachante que pede pagamento integral
+              antes ou promete "burlar quarentena". Despacho legítimo é faseado (50% inicial, 50% no embarque) e
+              SEMPRE segue o protocolo DLD.
+            </p>
+          </div>
+        </Section>
+
+        {/* KIT DE VIAGEM */}
+        <Section id="cap-kit" kicker="Capítulo 05" title="Kit de viagem do pet — o que leva do Brasil e o que compra lá">
+          <div className="not-prose grid sm:grid-cols-2 gap-4">
+            <div className="rounded-xl p-5" style={{ background: "rgba(45,212,191,0.06)", border: `1px solid rgba(45,212,191,0.25)` }}>
+              <h4 className="font-display font-semibold mb-3" style={{ color: NEON }}>Leve do Brasil</h4>
+              <ul className="space-y-2 text-[14.5px]" style={{ color: "rgba(244,239,230,0.8)" }}>
+                <li>• 30 dias de ração premium (Royal Canin/Premier) — adaptação gradual</li>
+                <li>• Coleira reserva + guia + peitoral (raro encontrar bom)</li>
+                <li>• Cobertor com seu cheiro (reduz estresse no voo)</li>
+                <li>• Brinquedo favorito (não-comprimível)</li>
+                <li>• Medicamentos contínuos (3 meses, com receita)</li>
+                <li>• Antinauseante (Cerenia, prescrito vet)</li>
+                <li>• Carteira de vacinação completa + cópia digital</li>
+                <li>• Foto recente nítida (caso suma)</li>
+                <li>• Placa de identificação com seu WhatsApp internacional</li>
+                <li>• Saco higiênico (mín. 100 sacos)</li>
+              </ul>
+            </div>
+            <div className="rounded-xl p-5" style={{ background: "rgba(201,162,75,0.06)", border: `1px solid rgba(201,162,75,0.25)` }}>
+              <h4 className="font-display font-semibold mb-3" style={{ color: GOLD }}>Compra na Tailândia</h4>
+              <ul className="space-y-2 text-[14.5px]" style={{ color: "rgba(244,239,230,0.8)" }}>
+                <li>• Ração Smartheart ou Me-O (qualidade boa, 1/2 do preço BR)</li>
+                <li>• Tigelas + caminha (Tops Daily, ฿200–500)</li>
+                <li>• Areia pra gato Cat's Best (qualquer Tops)</li>
+                <li>• Snack local (jerky de frango Pedigree TH)</li>
+                <li>• Repelente natural (área de dengue, Soffell pet)</li>
+                <li>• Roupinha refrescante (PetMart, ฿300–800)</li>
+                <li>• Tapete higiênico (Big C, mais barato que BR)</li>
+                <li>• Vermífugo de manutenção (qualquer vet, ฿200)</li>
+                <li>• Antipulgas Frontline (vet, ฿600/mês)</li>
+                <li>• Bolsa de transporte ventilada (Chatuchak Market)</li>
+              </ul>
+            </div>
+          </div>
+        </Section>
+
         {/* VOOS */}
-        <Section id="cap-voos" kicker="Capítulo 04" title="Voos pet-friendly comparados">
+        <Section id="cap-voos" kicker="Capítulo 06" title="Voos pet-friendly comparados">
           <div className="not-prose overflow-x-auto rounded-xl" style={{ border: `1px solid ${LINE}` }}>
             <table className="w-full text-[14px]" style={{ color: "rgba(244,239,230,0.85)" }}>
               <thead>
