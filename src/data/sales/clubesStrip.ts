@@ -69,6 +69,11 @@ export const clubesStrip: SalesContent = {
       bullets: ["Bangla principal", "Soi Easy, Soi Sea Dragon", "Bares LGBT", "Após o fechamento (3-7h)"],
     },
     {
+      title: "Clubes de strip russas (Pattaya e Patong)",
+      desc: "Cena eslava na Tailândia: showgirls russas e ucranianas, formato cabaré, preços e etiqueta diferentes do agogo tailandês.",
+      bullets: ["Pattaya: Walking Street + zona russa (Jomtien)", "Patong: alta temporada nov–mar", "Cover, drink e gorjeta — sem lady drink", "Lista dos clubes confiáveis com mapa"],
+    },
+    {
       title: "Etiqueta e vocabulário",
       desc: "Como se comportar, como conversar, como pagar.",
       bullets: ["Lady drink", "Bar fine", "Off-fee", "Tip box vs comissão"],
