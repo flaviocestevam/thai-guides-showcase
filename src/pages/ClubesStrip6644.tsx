@@ -148,6 +148,20 @@ const blacklist: LinkRef[] = [
   { label: "Currency exchange '0% commission'", url: "https://www.google.com/maps/search/Super+Rich+Bangkok", note: "use Super Rich (verde ou laranja) ou SuperRich Thailand — taxa real. Casas com 'zero commission' usam câmbio inflado" },
 ];
 
+const russos: LinkRef[] = [
+  // Pattaya
+  { label: "Galaxy Club (Walking Street, Pattaya)", url: "https://www.google.com/maps/search/Galaxy+Club+Walking+Street+Pattaya", note: "o mais conhecido com dançarinas russas e leste-europeias. Cardápio em russo e inglês, preços fixos no menu" },
+  { label: "Sensations Showgirls (Walking Street, Pattaya)", url: "https://www.google.com/maps/search/Sensations+Showgirls+Walking+Street+Pattaya", note: "produção tipo cabaré com elenco majoritariamente russo/ucraniano. Entrada paga, drink incluso" },
+  { label: "X-Zone Pattaya (Walking Street)", url: "https://www.google.com/maps/search/X-Zone+Walking+Street+Pattaya", note: "showgirls eslavas, ambiente estilo Las Vegas. Cobra cover (~฿500) com 1 drink" },
+  { label: "Russian Bar Pattaya (Soi 16, Beach Road)", url: "https://www.google.com/maps/search/Russian+Bar+Pattaya+Soi+16", note: "ponto de encontro da comunidade russa em Pattaya. Bar com dança, atmosfera mais local que turística" },
+  { label: "Zona russa — Jomtien / Pratumnak", url: "https://www.google.com/maps/search/Jomtien+Pattaya+Russian+area", note: "bairro com restaurantes, bares e clubes voltados à diáspora russa. Vibe diferente do centro de Pattaya" },
+  // Patong
+  { label: "Suzy Wong (Bangla Road, Patong)", url: "https://www.google.com/maps/search/Suzy+Wong+Bangla+Road+Patong", note: "agogo principal de Bangla com escalação mista (tailandesas + russas/ucranianas em alta temporada nov–mar)" },
+  { label: "Seduction Beach Club & Disco (Patong)", url: "https://www.google.com/maps/search/Seduction+Beach+Club+Patong", note: "balada grande com go-go dancers russas no palco. Cover ฿300–500, drink ฿250–350" },
+  { label: "Tiger Bar Complex (Bangla, Patong)", url: "https://www.google.com/maps/search/Tiger+Nightclub+Bangla+Patong", note: "vários bares no mesmo prédio; o agogo do 2º andar costuma ter dançarinas eslavas no inverno (alta temporada russa)" },
+];
+
+
 const chapters: [string, string][] = [
   ["cap-1", "Glossário"],
   ["cap-2", "Etiqueta"],
