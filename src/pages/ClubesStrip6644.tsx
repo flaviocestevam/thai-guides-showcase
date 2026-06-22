@@ -163,6 +163,7 @@ const russos: LinkRef[] = [
 
 
 const chapters: [string, string][] = [
+  ["cap-iniciantes", "Iniciantes"],
   ["cap-1", "Glossário"],
   ["cap-2", "Etiqueta"],
   ["cap-3", "Bangkok"],
