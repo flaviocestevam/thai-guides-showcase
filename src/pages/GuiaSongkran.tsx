@@ -318,30 +318,8 @@ const GuiaSongkran = () => {
           </div>
         </section>
 
-        {/* SEÇÃO 9: BÔNUS */}
-        <section className="py-24 px-6 bg-white">
-          <div className="container mx-auto max-w-5xl">
-            <h2 className="text-3xl md:text-5xl font-bold text-center mb-4">
-              Bônus <span style={{ color: GOLD }}>Inclusos</span>
-            </h2>
-            <p className="text-center text-gray-500 mb-16">Sem custo extra. Já vêm junto com o PDF.</p>
-            <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-              {[
-                { icon: Package2, title: "Checklist imprimível de mala e proteção", value: "R$47" },
-                { icon: Gift, title: "Atualizações grátis durante 2026", value: "R$57" },
-              ].map((b, i) => (
-                <div key={i} className="bg-gradient-to-br from-white to-[#FFF7F2] p-8 rounded-3xl shadow-lg border-2 border-orange-100 text-center">
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full mb-4" style={{ backgroundColor: `${GOLD}1A`, color: GOLD }}>
-                    <b.icon size={28} />
-                  </div>
-                  <h3 className="font-bold text-lg mb-3">{b.title}</h3>
-                  <div className="text-sm text-gray-400 line-through">Valor avulso: {b.value}</div>
-                  <div className="text-sm font-bold mt-1" style={{ color: ORANGE }}>GRÁTIS com o guia</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+
+
 
         {/* SEÇÃO 10: DEPOIMENTOS */}
         <section className="py-24 px-6 bg-[#F8FAFC]">
