@@ -84,7 +84,6 @@ export const pets: SalesContent = {
     { title: "Kit de viagem do pet", desc: "Lista do que levar (e do que comprar lá).", value: "R$ 47" },
     { title: "Guia de retorno ao Brasil", desc: "A burocracia inversa, que ninguém te conta antes." , value: "R$ 67" },
     { title: "Lista de pet sitters confiáveis", desc: "Pra dias que precisar deixar o pet em alguém.", value: "R$ 57" },
-    { title: "Grupo WhatsApp Pet na Tailândia", desc: "Comunidade brasileira pra emergências e dicas.", value: "R$ 97" },
   ],
   testimonials: [
     { name: "Patricia M.", city: "São Paulo", text: "Levei meu Yorkshire pra Chiang Mai seguindo o guia. Zero estresse, zero quarentena. Vale ouro." },
