@@ -123,7 +123,7 @@ const salesPages: ProductCard[] = [
     emoji: "🔥",
     badge: "✨ COMPLETO",
     image: festasImg.url,
-    urgency: "Saiba onde estão as melhores noites de 2025!",
+    urgency: "Saiba onde estão as melhores melhores noites!",
     socialProof: "Vivido por milhares de viajantes",
     originalPrice: "R$ 197",
     price: "R$ 67",
@@ -164,7 +164,7 @@ const salesPages: ProductCard[] = [
   },
   {
     title: "Guia Songkran",
-    subtitle: "Ano Novo Tailandês 2026",
+    subtitle: "Ano Novo Tailandês",
     description:
       "Viva a maior guerra de água do mundo do jeito certo. Datas, melhores cidades, onde ficar e como proteger seus bens.",
     path: "/songkran-ano-novo-tailandes",
@@ -260,13 +260,13 @@ const salesPages: ProductCard[] = [
   },
   {
     title: "Réveillon na Tailândia",
-    subtitle: "Vire 2026 com Estilo",
+    subtitle: "Vire o Ano com Estilo",
     description:
       "10 cidades comparadas, top 50 festas, hotéis com vista dos fogos e roteiros prontos de 28/12 a 02/01.",
     path: "/reveillon-tailandia",
     emoji: "🎆",
     image: reveillonImg.url,
-    badge: "🥂 RÉVEILLON 2026",
+    badge: "🥂 RÉVEILLON",
     urgency: "Hotéis bons esgotam em outubro!",
     socialProof: "5 Réveillons cobertos",
     originalPrice: "R$ 197",

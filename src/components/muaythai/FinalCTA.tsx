@@ -48,7 +48,7 @@ const FinalCTA = () => {
         </motion.div>
 
         <p className="mt-12 text-sm text-muted-foreground">
-          © 2024 Guia Muay Thai Tailândia. Todos os direitos reservados.
+          © Guia Muay Thai Tailândia. Todos os direitos reservados.
         </p>
       </div>
     </section>

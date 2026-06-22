@@ -124,7 +124,7 @@ const BeachClubs8821 = () => {
       <Section chapter="Capítulo 1" title="Como ler este guia">
         <p>Visitei pessoalmente cada um dos 30 beach clubs listados aqui — alguns 5+ vezes, em dias e horários diferentes. Cada ficha traz <strong className="text-foreground">preço real, mínimo escondido, vibe honesta, dress code e a dica que você só sabe ficando lá</strong>.</p>
         <p>Nota é de 0 a 10 considerando: relação custo-benefício, qualidade do som/DJ, qualidade da praia, atendimento e probabilidade de você voltar.</p>
-        <p>⚠️ <strong className="text-foreground">Preços em baht (฿) atualizados em janeiro/2026.</strong> Variações de até 15% são normais em alta temporada (dez–fev). 1 baht ≈ R$ 0,15.</p>
+        <p>⚠️ <strong className="text-foreground">Preços em baht (฿) atualizados.</strong> Variações de até 15% são normais em alta temporada (dez–fev). 1 baht ≈ R$ 0,15.</p>
       </Section>
 
       <div className="guide-section-divider" />
@@ -187,7 +187,7 @@ const BeachClubs8821 = () => {
 
       <div className="guide-section-divider" />
 
-      <Section chapter="Capítulo 9" title="Calendário 2026 de eventos e DJs internacionais">
+      <Section chapter="Capítulo 9" title="Calendário de eventos e DJs internacionais">
         <Card>
           <h4 className="text-foreground font-semibold">Janeiro</h4>
           <p className="text-sm">Café del Mar Phuket — White Party Ano Novo (1ª semana). Nikki Beach Samui — DJ set semanal Solomun convidado (3ª semana).</p>
@@ -364,7 +364,7 @@ const BeachClubs8821 = () => {
       </Section>
 
       <footer className="py-12 text-center text-xs text-muted-foreground">
-        Guia Beach Clubs Tailândia · edição 2026 · uso pessoal do comprador. Reprodução proibida.
+        Guia Beach Clubs Tailândia · edição completa · uso pessoal do comprador. Reprodução proibida.
       </footer>
     </div>
   );

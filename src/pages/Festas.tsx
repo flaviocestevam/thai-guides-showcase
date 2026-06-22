@@ -67,7 +67,7 @@ const Festas = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/50 to-background" />
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
           <p className="text-sm md:text-base font-bold tracking-[0.3em] uppercase text-primary mb-4">
-            🌙 Guia da Noite Tailandesa — Edição 2025
+            🌙 Guia da Noite Tailandesa — Edição Completa
           </p>
           <h1 className="text-4xl md:text-7xl font-display font-black mb-6 leading-tight">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-pink-500 to-violet-500">
@@ -258,7 +258,7 @@ const Festas = () => {
                   </div>
                 </div>
                 <p className="mt-6 text-sm text-center text-muted-foreground italic">
-                  * Valores médios baseados em 2024/2025
+                  * Valores médios atualizados periodicamente
                 </p>
               </div>
             </div>

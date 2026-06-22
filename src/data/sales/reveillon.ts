@@ -4,10 +4,10 @@ export const reveillon: SalesContent = {
   slug: "reveillon-tailandia",
   seoTitle: "Réveillon na Tailândia — Guia Completo das Melhores Festas",
   seoDescription: "Onde virar o ano na Tailândia: Bangkok, Phuket, Koh Samui, Koh Phangan. Festas, fogos, jantares, hotéis e roteiros prontos para o Réveillon.",
-  heroBadge: "🎆 Réveillon Tailândia 2026",
+  heroBadge: "🎆 Réveillon Tailândia",
   heroTitle: "Vire o ano em",
   heroHighlight: "uma festa inesquecível",
-  heroSubtitle: "O guia definitivo do Réveillon na Tailândia: Bangkok, Phuket, Koh Samui, Koh Phangan, Krabi, Chiang Mai. Festas, jantares, melhores hotéis com vista, fogos e roteiros prontos para virar 2026 com estilo.",
+  heroSubtitle: "O guia definitivo do Réveillon na Tailândia: Bangkok, Phuket, Koh Samui, Koh Phangan, Krabi, Chiang Mai. Festas, jantares, melhores hotéis com vista, fogos e roteiros prontos para virar o ano com estilo.",
   heroWarning: "Hotel em Phuket no Réveillon esgota em outubro e dobra de preço em novembro. Planejar 6 semanas antes pode te custar R$ 5.000 a mais do que se você se organizar agora.",
   heroBgGradient: "bg-gradient-to-br from-violet-950 via-background to-indigo-950",
   heroEmoji: "🎆",
@@ -101,7 +101,7 @@ export const reveillon: SalesContent = {
     { name: "Rodrigo F.", city: "BH", text: "Capítulo de logística da virada me salvou. Em Bangkok consegui sair do rooftop e chegar no hotel sem ficar 2h em fila de Grab." },
   ],
   pricing: {
-    badge: "Edição Réveillon 2026",
+    badge: "Edição Réveillon",
     oldPrice: "R$ 197",
     price: "67",
     priceCents: "00",
@@ -130,7 +130,7 @@ export const reveillon: SalesContent = {
     { q: "Como é o clima nessa época?", a: "Tailândia está em alta estação. Lado Andaman (Phuket, Krabi) com sol garantido. Lado Golfo (Samui, Phangan) pode ter chuva ocasional. O guia detalha cada ilha." },
   ],
   finalCTA: {
-    title: "Vire 2026 do jeito certo na Tailândia",
+    title: "Vire o ano do jeito certo na Tailândia",
     subtitle: "Cada dia que passa, os melhores hotéis somem e as melhores festas ficam mais caras. Decida agora e tenha o réveillon dos seus sonhos.",
   },
 };
