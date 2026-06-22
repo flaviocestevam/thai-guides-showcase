@@ -168,6 +168,7 @@ const chapters: [string, string][] = [
   ["cap-3", "Bangkok"],
   ["cap-4", "Pattaya"],
   ["cap-5", "Phuket"],
+  ["cap-russos", "Russos"],
   ["cap-6", "Lista negra"],
   ["cap-7", "Preços reais"],
   ["cap-8", "Segurança"],
