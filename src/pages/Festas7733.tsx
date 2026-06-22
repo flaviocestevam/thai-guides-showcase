@@ -228,8 +228,8 @@ const Festas7733 = () => {
 
       {/* HERO */}
       <header className="relative overflow-hidden">
-        <div className="orb" style={{ top: "-10%", left: "-10%", width: 520, height: 520, background: `radial-gradient(circle, ${NEON}55, transparent 70%)`, opacity: 0.3 }} />
-        <div className="orb" style={{ top: "20%", right: "-15%", width: 600, height: 600, background: `radial-gradient(circle, ${GOLD}40, transparent 70%)`, opacity: 0.3 }} />
+        <div className="orb" style={{ top: "-10%", left: "-10%", width: 520, height: 520, background: `radial-gradient(circle, ${NEON}55, transparent 70%)`, opacity: 0.7 }} />
+        <div className="orb" style={{ top: "20%", right: "-15%", width: 600, height: 600, background: `radial-gradient(circle, ${GOLD}40, transparent 70%)`, opacity: 0.7 }} />
 
         <div className="relative container mx-auto max-w-5xl px-6 pt-24 md:pt-32 pb-20 md:pb-28">
           <Reveal>
