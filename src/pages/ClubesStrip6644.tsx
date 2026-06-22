@@ -394,6 +394,37 @@ const ClubesStrip6644 = () => {
           </p>
         </Section>
 
+        {/* Cap Russos */}
+        <Section id="cap-russos" kicker="Capítulo Bônus" title="Clubes de strip russas — Pattaya e Patong">
+          <p>
+            Pattaya tem a maior diáspora russa do sudeste asiático e Patong recebe forte fluxo sazonal (novembro–março). Isso se reflete em clubes
+            específicos com dançarinas russas, ucranianas e bielorrussas — diferentes em formato, preço e atmosfera dos agogos tailandeses tradicionais.
+          </p>
+          <Reveal>
+            <div className="not-prose mt-6 rounded-xl p-5 grid sm:grid-cols-3 gap-4 text-[14px]" style={{ background: "rgba(255,255,255,0.55)", border: `1px solid ${LINE}` }}>
+              {[
+                ["Formato", "Showgirl/cabaré, não agogo. Performance coreografada, palco maior, menos contato direto."],
+                ["Preço", "Cover ฿300–800 (com 1 drink). Drinks ฿250–400. Sem 'lady drink' agressivo — a economia é outra."],
+                ["Etiqueta", "Gorjeta no palco (฿100–500). Bar fine raro nesses lugares; é entretenimento, não escort."],
+              ].map(([h, b], i) => (
+                <div key={i}>
+                  <div className="text-[11px] font-semibold tracking-[0.22em] uppercase mb-1.5" style={{ color: GOLD }}>{h}</div>
+                  <div style={{ color: "rgba(10,10,15,0.72)" }}>{b}</div>
+                </div>
+              ))}
+            </div>
+          </Reveal>
+          <div className="mt-8"><LinkGrid items={russos} /></div>
+          <Reveal>
+            <div className="not-prose mt-8 rounded-xl p-4 flex gap-3" style={{ background: "rgba(225,29,72,0.07)", border: `1px solid rgba(225,29,72,0.18)` }}>
+              <AlertTriangle className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: NEON }} />
+              <p className="text-[14.5px]" style={{ color: "rgba(10,10,15,0.78)" }}>
+                <strong>Alta temporada (nov–mar)</strong> = elenco majoritariamente eslavo + preços 10–20% maiores. <strong>Baixa (mai–set)</strong> = elenco misto/tailandês e preços normais. Sempre peça o menu impresso na entrada — vale aqui também.
+              </p>
+            </div>
+          </Reveal>
+        </Section>
+
         {/* Cap 6 — Lista negra */}
         <Section id="cap-6" kicker="Capítulo 06" title="Lista negra — armadilhas conhecidas">
           <p>Categorias e endereços onde o golpe da conta inflada é recorrente. Não entre.</p>
