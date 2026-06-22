@@ -37,10 +37,11 @@ const GuiaSongkran = () => {
           </div>
           <div className="container mx-auto px-6 relative z-10 text-white py-12">
             <div className="inline-block bg-[#FF6B35] text-xs font-bold px-3 py-1 rounded-full mb-6 tracking-wider uppercase">
-              💦 Edição 2026 • Atualizado
+              💦 Atualizado
             </div>
             <h1 className="text-4xl md:text-7xl font-bold leading-tight max-w-4xl mb-6">
-              Viva Songkran 2026 <span style={{ color: TEAL }}>Sem Perrengue</span> e Sem <span style={{ color: ORANGE }}>Susto no Bolso</span>
+              Viva Songkran <span style={{ color: TEAL }}>Sem Perrengue</span> e Sem <span style={{ color: ORANGE }}>Susto no Bolso</span>
+
             </h1>
             <p className="text-xl md:text-2xl text-gray-200 max-w-2xl mb-10 leading-relaxed">
               O guia em português para a maior guerra de água do mundo: onde ficar, como proteger documentos, em que cidade entrar de cabeça e o que evitar a qualquer custo.
