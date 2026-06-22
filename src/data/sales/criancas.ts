@@ -98,7 +98,7 @@ export const criancas: SalesContent = {
     { title: "Roteiro voo 30h sem chorar", desc: "Estratégias de sono, distração e alimentação no voo.", value: "R$ 67" },
     { title: "Lista de babás verificadas", desc: "Babá-sitter por hora em Phuket, Bangkok, Samui.", value: "R$ 87" },
     { title: "Guia de praias seguras", desc: "Mar calmo, sem corrente, com salva-vidas.", value: "R$ 57" },
-    { title: "Grupo WhatsApp Famílias na Tailândia", desc: "Comunidade brasileira viajando em família.", value: "R$ 97" },
+    
   ],
   testimonials: [
     { name: "Juliana R.", city: "São Paulo", text: "Levei meu filho de 4 anos seguindo o roteiro. Tudo funcionou — ele lembra como a melhor viagem da vida dele." },
