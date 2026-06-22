@@ -20,6 +20,7 @@ import GuiaSongkran from "./pages/GuiaSongkran.tsx";
 import GuiaLuaDeMel from "./pages/GuiaLuaDeMel.tsx";
 import LuaDeMel8272524 from "./pages/LuaDeMel8272524.tsx";
 import CursosDeMassagem from "./pages/CursosDeMassagem.tsx";
+import CursosMassagem3367 from "./pages/CursosMassagem3367.tsx";
 import AluguelDeMotos from "./pages/AluguelDeMotos.tsx";
 import AluguelDeMotos827252 from "./pages/AluguelDeMotos827252.tsx";
 import Mergulho from "./pages/Mergulho.tsx";
@@ -69,6 +70,7 @@ const App = () => (
           <Route path="/lua-de-mel-tailandia" element={<GuiaLuaDeMel />} />
           <Route path="/lua-de-mel-tailandia8272524" element={<LuaDeMel8272524 />} />
           <Route path="/cursos-de-massagem" element={<CursosDeMassagem />} />
+          <Route path="/cursosmassagem3367" element={<CursosMassagem3367 />} />
           <Route path="/aluguel-de-motos-tailandia" element={<AluguelDeMotos />} />
           <Route path="/aluguel-de-motos-tailandia827252" element={<AluguelDeMotos827252 />} />
           <Route path="/mergulho-tailandia" element={<Mergulho />} />
