@@ -163,8 +163,8 @@ const chapters: [string, string][] = [
   ["cap-roteiro-grande", "Roteiro 9-14"],
   ["cap-voo", "Voo 30h sem chorar"],
   ["cap-mala", "Checklist mala"],
-  ["cap-hoteis-bkk", "Hotéis Bangkok"],
-  ["cap-hoteis-ilhas", "Hotéis ilhas+CM"],
+  ["cap-hoteis", "Hotéis por cidade"],
+
   ["cap-atracoes", "Atrações por idade"],
   ["cap-praias", "Praias seguras"],
   ["cap-comida", "Comida pra criança"],
