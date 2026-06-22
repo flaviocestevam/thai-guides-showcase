@@ -18,7 +18,7 @@ const GuiaVoluntariado = () => {
   return (
     <div className="min-h-screen bg-white text-[#1A1A1A] font-['Poppins',sans-serif]">
       <SEO
-        title="Guia de Voluntariado na Tailândia 2026 — Em Português"
+        title="Guia de Voluntariado na Tailândia — Em Português"
         description="O guia em português para fazer voluntariado na Tailândia: como encontrar projetos éticos, vistos, custos reais e roteiros sem agência."
         canonicalPath="/voluntariado-tailandia"
       />
