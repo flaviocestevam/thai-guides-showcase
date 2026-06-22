@@ -18,10 +18,11 @@ const GuiaSongkran = () => {
   return (
     <div className="min-h-screen bg-white text-[#1A1A1A] font-['Poppins',sans-serif]">
       <SEO
-        title="Guia Songkran 2026 — Ano Novo Tailandês Sem Perrengue"
-        description="O guia em português para viver Songkran 2026 sem perrengue: melhores cidades, hospedagem, proteção de documentos e roteiro completo."
+        title="Guia Songkran — Ano Novo Tailandês Sem Perrengue"
+        description="O guia em português para viver Songkran sem perrengue: melhores cidades, hospedagem, proteção de documentos e roteiro completo."
         canonicalPath="/songkran-ano-novo-tailandes"
       />
+
       <Header />
 
       <main id="songkran-sales">
