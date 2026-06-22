@@ -351,7 +351,91 @@ const CasasMassagem5582 = () => {
       </Section>
       <div className="guide-section-divider" />
 
-      <Section chapter="Capítulo 16" title="Lista negra — o que evitar">
+      <Section chapter="Capítulo 16" title='Massagem com "final feliz" — o que é e como identificar'>
+        <p>A chamada <strong className="text-foreground">"happy ending massage"</strong> é uma modalidade comum no Sudeste Asiático em que a sessão de massagem termina com um serviço sexual (geralmente manual), oferecido de forma discreta pela massagista, mediante gorjeta extra. É legal numa zona cinzenta — tolerada na prática, regulamentada como serviço adulto. Sem julgamento: existe, é procurada por parte do público masculino e funciona como um mercado próprio.</p>
+        <p>O ponto deste capítulo <strong className="text-foreground">não é recomendar nem condenar</strong> — é evitar que você, querendo apenas uma massagem terapêutica, entre por acidente numa casa que opera nessa modalidade e passe por um momento constrangedor (ou pague a mais sem entender o que aconteceu).</p>
+
+        <h3 className="font-display text-2xl text-foreground pt-4">Como funciona na prática</h3>
+        <Card>
+          <p className="text-sm"><strong className="text-foreground">1. Entrada e escolha.</strong> Recepcionista mostra um painel com fotos numeradas das massagistas (em vez de uniformes padronizados e equipe à vista). Você escolhe pelo número.</p>
+        </Card>
+        <Card>
+          <p className="text-sm"><strong className="text-foreground">2. Sala fechada.</strong> Cabines com porta sólida (não cortina divisória), trancáveis, geralmente com chuveiro privativo.</p>
+        </Card>
+        <Card>
+          <p className="text-sm"><strong className="text-foreground">3. Massagem inicial.</strong> Os primeiros 30–40 min costumam ser massagem de óleo legítima.</p>
+        </Card>
+        <Card>
+          <p className="text-sm"><strong className="text-foreground">4. Oferta discreta.</strong> No fim, a massagista pergunta algo como "happy ending?", "special?" ou "extra service?" — e diz um valor adicional (geralmente ฿500–฿2.000). Aí o cliente aceita ou recusa.</p>
+        </Card>
+        <Card>
+          <p className="text-sm"><strong className="text-foreground">5. Você pode recusar.</strong> Um "no, thank you" educado encerra o assunto sem retaliação. A massagem segue ou termina normalmente, você paga só o preço de tabela e vai embora.</p>
+        </Card>
+
+        <h3 className="font-display text-2xl text-foreground pt-4">Como saber ANTES de entrar (sinais externos)</h3>
+        <Card>
+          <p className="text-sm">🚩 <strong className="text-foreground">Vitrine com mulheres em traje civil sentadas em banco</strong>, olhando pra rua e chamando passantes (estilo "fishbowl").</p>
+        </Card>
+        <Card>
+          <p className="text-sm">🚩 <strong className="text-foreground">Iluminação rosa, vermelha ou roxa</strong> na fachada/recepção, em vez de luz branca/quente clínica.</p>
+        </Card>
+        <Card>
+          <p className="text-sm">🚩 <strong className="text-foreground">Sem tabela de preço visível</strong> em inglês na entrada — ou tabela só com "oil massage" e nada de thai/foot/herbal.</p>
+        </Card>
+        <Card>
+          <p className="text-sm">🚩 <strong className="text-foreground">Painel numerado com fotos das funcionárias</strong> na recepção.</p>
+        </Card>
+        <Card>
+          <p className="text-sm">🚩 <strong className="text-foreground">Localização em zona de vida noturna adulta</strong>: Soi Bangla (Patong), Walking Street (Pattaya), Soi Cowboy, Nana e Patpong (Bangkok), Loi Kroh (Chiang Mai à noite).</p>
+        </Card>
+        <Card>
+          <p className="text-sm">🚩 <strong className="text-foreground">Horário até 02h/04h da madrugada</strong> sem interrupção. Casa terapêutica fecha 22h–00h no máximo.</p>
+        </Card>
+        <Card>
+          <p className="text-sm">🚩 <strong className="text-foreground">Recepção exclusivamente masculina como público</strong> — todos clientes homens sozinhos, nenhuma mulher, nenhum casal, nenhum local.</p>
+        </Card>
+        <Card>
+          <p className="text-sm">🚩 <strong className="text-foreground">Palavras na placa:</strong> "soapy massage", "bath massage", "body-to-body", "VIP massage", "special massage", "A-class" — são códigos do mercado adulto, não da massagem terapêutica.</p>
+        </Card>
+
+        <h3 className="font-display text-2xl text-foreground pt-4">Sinais de casa terapêutica (o oposto)</h3>
+        <Card>
+          <p className="text-sm">✅ Equipe uniformizada (verde, branco, bege), todas em pé ou trabalhando — não sentadas esperando.</p>
+        </Card>
+        <Card>
+          <p className="text-sm">✅ Tabela em inglês com 4+ tipos: Thai, Oil, Foot, Herbal — preço por hora claro.</p>
+        </Card>
+        <Card>
+          <p className="text-sm">✅ Cabines com cortina divisória (não porta fechada) e teto aberto.</p>
+        </Card>
+        <Card>
+          <p className="text-sm">✅ Clientes mistos: mulheres, casais, idosos, locais tailandeses.</p>
+        </Card>
+        <Card>
+          <p className="text-sm">✅ Iluminação branca/quente clínica, recepção feminina/familiar à vista.</p>
+        </Card>
+
+        <h3 className="font-display text-2xl text-foreground pt-4">Casas que costumam operar nessa modalidade</h3>
+        <p>Não vamos listar nomes individuais — o modelo muda de dono e o que vale é reconhecer o <strong className="text-foreground">tipo de estabelecimento</strong>. Em geral:</p>
+        <Card>
+          <p className="text-sm"><strong className="text-foreground">Soapy massage parlors</strong> (Ratchada, Huay Kwang, Nana em Bangkok). São casas grandes, prédio próprio, abertas até 04h. São explícitas — ninguém entra ali por engano.</p>
+        </Card>
+        <Card>
+          <p className="text-sm"><strong className="text-foreground">"Oil massage" de rua em zona vermelha</strong>: Soi Bangla (Patong), Walking Street (Pattaya), Soi 4/Nana (Bangkok), Loi Kroh à noite (Chiang Mai). Maioria opera no modelo "fishbowl" descrito acima.</p>
+        </Card>
+        <Card>
+          <p className="text-sm"><strong className="text-foreground">Casas "A-class"</strong>: terminologia local pra estabelecimento misto, com cardápio explícito de serviços extras. Placas dizem "A-class massage" ou "men's club".</p>
+        </Card>
+
+        <h3 className="font-display text-2xl text-foreground pt-4">Se você entrou sem querer</h3>
+        <p>Acontece — especialmente em Patong, Pattaya e Sukhumvit à noite. Se percebeu o ambiente errado <strong className="text-foreground">antes</strong> de pagar/deitar: levante-se, agradeça e saia. Você não deve nada. Se a oferta vier <strong className="text-foreground">durante</strong> a massagem: "No, thank you" resolve. Termine a sessão normal, pague o preço de tabela e vá embora. Não há perigo, nem retaliação — é só um mercado paralelo operando em silêncio.</p>
+        <p>Todas as 120 casas listadas neste guia foram verificadas como <strong className="text-foreground">100% terapêuticas</strong>. Se ficar em dúvida em qualquer canto da Tailândia, escolha uma das listadas — e use os sinais acima pra rejeitar o resto na entrada.</p>
+      </Section>
+
+      <div className="guide-section-divider" />
+
+      <Section chapter="Capítulo 17" title="Lista negra — o que evitar">
+
         <Card>
           <h4 className="text-foreground font-semibold">Patong / Soi Bangla (Phuket)</h4>
           <p className="text-sm">90% das casas com luz vermelha/rosa e meninas chamando na porta. Fuja. Use só Let's Relax (Jungceylon) e Raintree.</p>
