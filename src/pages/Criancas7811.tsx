@@ -95,42 +95,8 @@ const LinkGrid = ({ items }: { items: LinkRef[] }) => (
    DATA
    ============================================================ */
 
-const hoteisKidsClubBangkok: LinkRef[] = [
-  { label: "Anantara Riverside Bangkok Resort", url: "https://www.google.com/maps/search/Anantara+Riverside+Bangkok", note: "BKK · kids club aceita 4–12 anos, atividades 9h–18h. Family room 50m². Berço grátis, piscina rasa, shuttle barco até centro." },
-  { label: "Shangri-La Bangkok", url: "https://www.google.com/maps/search/Shangri-La+Bangkok", note: "BKK · Adventure Zone (4–12), babá disponível por hora (฿400/h, falar inglês). Piscina infantil separada com salva-vidas." },
-  { label: "Chatrium Hotel Riverside", url: "https://www.google.com/maps/search/Chatrium+Hotel+Riverside+Bangkok", note: "BKK · Family suites 70m² com 2 quartos. Custo-benefício família 4. Kids menu em todos os restaurantes." },
-  { label: "Avani+ Riverside Bangkok", url: "https://www.google.com/maps/search/Avani+Riverside+Bangkok", note: "BKK · Family rooms até 6 pessoas. Sky pool com área infantil. Boa pra adolescente (rooftop bar dos pais à vista)." },
-  { label: "Pullman Bangkok King Power", url: "https://www.google.com/maps/search/Pullman+Bangkok+King+Power", note: "BKK · kids club 3–12 anos, manhã + tarde. Berço grátis. Próximo Victory Monument (ônibus pra praias)." },
-  { label: "Centara Grand at CentralWorld", url: "https://www.google.com/maps/search/Centara+Grand+CentralWorld", note: "BKK · dentro do maior shopping. Kids club + cinema/boliche colado. Salva 1 dia de chuva inteiro." },
-];
+// hoteisPorCidade definido abaixo (depende do tipo CityBlock)
 
-const hoteisKidsClubIlhas: LinkRef[] = [
-  // Phuket
-  { label: "JW Marriott Phuket Resort (Mai Khao)", url: "https://www.google.com/maps/search/JW+Marriott+Phuket+Mai+Khao", note: "Phuket · Kids Club premiado, 3 piscinas (1 infantil), aula de tartaruga marinha. Tem berço, monitor de bebê, kit de fraldas." },
-  { label: "Renaissance Phuket Resort & Spa", url: "https://www.google.com/maps/search/Renaissance+Phuket+Resort", note: "Phuket · R Kids Club + R Teen Club separados (adolescente não quer estar com criança de 5). Praia Mai Khao calma." },
-  { label: "Holiday Inn Resort Phuket (Patong)", url: "https://www.google.com/maps/search/Holiday+Inn+Resort+Phuket", note: "Phuket · 'Kids Stay & Eat Free' real, não pegadinha. 2 crianças <12 grátis no quarto + buffet." },
-  { label: "Outrigger Surin Beach Resort", url: "https://www.google.com/maps/search/Outrigger+Surin+Beach", note: "Phuket · Family villas 2 quartos, cozinha. Kids club + babá noturna a preço justo (฿300/h)." },
-  { label: "Anantara Mai Khao Phuket Villas", url: "https://www.google.com/maps/search/Anantara+Mai+Khao+Phuket", note: "Phuket · vilas com piscina privada (paz pros pais), kids club opcional. Aula de cozinha thai pra criança." },
-  { label: "Sala Phuket Mai Khao Beach Resort", url: "https://www.google.com/maps/search/Sala+Phuket+Resort", note: "Phuket · vilas térreas com piscina, segurança total pra criança que não nada. Praia rasa 100m." },
-  // Krabi
-  { label: "Centara Grand Beach Resort Krabi", url: "https://www.google.com/maps/search/Centara+Grand+Krabi", note: "Krabi · Ao Nang, parque aquático interno (escorregadores), kids club, teen club. Praia da própria enseada." },
-  { label: "Phulay Bay, Ritz-Carlton Reserve", url: "https://www.google.com/maps/search/Phulay+Bay+Ritz+Carlton+Krabi", note: "Krabi · luxo total. Vila privada com mordomo, babá inclusa 4h/dia. Atividades culturais pra criança." },
-  { label: "Sofitel Krabi Phokeethra Golf & Spa", url: "https://www.google.com/maps/search/Sofitel+Krabi", note: "Krabi · maior piscina lagoa do sul (toda rasa nas bordas), kids club + zoo no resort. Família grande adora." },
-  { label: "Dusit Thani Krabi Beach Resort", url: "https://www.google.com/maps/search/Dusit+Thani+Krabi", note: "Krabi · Klong Muang, praia mais calma que Ao Nang. Kids club + miniclub bebê 6m–3a." },
-  // Koh Samui
-  { label: "Banyan Tree Samui", url: "https://www.google.com/maps/search/Banyan+Tree+Samui", note: "Samui · vilas com piscina privada (essencial família 2+ filhos). Kids club + babá 24h sob demanda." },
-  { label: "Anantara Bophut Koh Samui", url: "https://www.google.com/maps/search/Anantara+Bophut+Koh+Samui", note: "Samui · Family suites, kids club 4–12, aulas de Muay Thai infantil. Praia Bophut rasa." },
-  { label: "Santiburi Koh Samui", url: "https://www.google.com/maps/search/Santiburi+Koh+Samui", note: "Samui · Mae Nam, vilas + golfe + kids club. Crianças aprendem a navegar caiaque em águas calmas." },
-  { label: "Melati Beach Resort & Spa", url: "https://www.google.com/maps/search/Melati+Beach+Resort+Samui", note: "Samui · 2 piscinas (1 infantil), kids club + babá. Tem berço, hidromassagem família, menu infantil." },
-  // Chiang Mai
-  { label: "Four Seasons Resort Chiang Mai", url: "https://www.google.com/maps/search/Four+Seasons+Resort+Chiang+Mai", note: "CM · Mae Rim, búfalo no jardim, arrozal vivo. Kids club com aula de plantio + cozinha thai. Sonho de criança 6+." },
-  { label: "Anantara Chiang Mai Resort", url: "https://www.google.com/maps/search/Anantara+Chiang+Mai+Resort", note: "CM · centro, family rooms vista rio Ping. Kids club + aula de elefante (ética, sem montaria) no parceiro." },
-  { label: "Le Méridien Chiang Mai", url: "https://www.google.com/maps/search/Le+Meridien+Chiang+Mai", note: "CM · Night Bazaar ao lado (jantar fácil). Family Plan: 2ª cama + café da manhã grátis pra criança." },
-  // Hua Hin (família brasileira raramente vai, mas é OURO pra criança pequena)
-  { label: "Centara Grand Beach Resort Hua Hin", url: "https://www.google.com/maps/search/Centara+Grand+Hua+Hin", note: "Hua Hin · hotel colonial 1923, lendário em estrutura familiar. 4 piscinas, kids club, mini-trem do resort." },
-  { label: "InterContinental Hua Hin Resort", url: "https://www.google.com/maps/search/InterContinental+Hua+Hin", note: "Hua Hin · praia calmíssima (ideal <5 anos), Planet Trekkers kids club premiado mundialmente." },
-  { label: "Hyatt Regency Hua Hin", url: "https://www.google.com/maps/search/Hyatt+Regency+Hua+Hin", note: "Hua Hin · lagoa de natação 1.700m², a maior da Tailândia. Família 5+ adora (tem espaço pra todo mundo)." },
-];
 
 const atracoesPorIdade: LinkRef[] = [
   // 0-3
