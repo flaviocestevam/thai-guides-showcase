@@ -331,7 +331,7 @@ const GuiaSongkran = () => {
               {[
                 { name: "Pedro M.", city: "São Paulo", text: "Cheguei em Chiang Mai sabendo exatamente em que rua ficar. Dia 14, enquanto galera perdia celular, o meu tava intacto. Valeu cada centavo." },
                 { name: "Camila & João", city: "Florianópolis", text: "Pegamos os 10 dias culturais + festa. Foi a melhor viagem de feriado da nossa vida. O capítulo de templos abriu nossa cabeça." },
-                { name: "Diego S.", city: "Belo Horizonte", text: "Já tinha ido em 2023 e voltei perdendo tudo. Em 2025 fui com o guia e parece que era outra viagem. Recomendo de olhos fechados." },
+                { name: "Diego S.", city: "Belo Horizonte", text: "Já fui em Songkran uma vez sem preparo e voltei perdendo tudo. Da segunda vez fui com o guia e parece que era outra viagem. Recomendo de olhos fechados." },
               ].map((d, i) => (
                 <div key={i} className="bg-white p-8 rounded-3xl shadow-sm">
                   <div className="flex gap-1 mb-4" style={{ color: GOLD }}>
