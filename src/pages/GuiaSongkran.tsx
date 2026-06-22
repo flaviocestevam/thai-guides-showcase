@@ -63,7 +63,7 @@ const GuiaSongkran = () => {
         {/* SOCIAL PROOF BAR */}
         <section className="bg-[#0F0F1A] text-white py-6 px-6 border-y border-white/10">
           <div className="container mx-auto max-w-6xl flex flex-wrap items-center justify-around gap-6 text-center">
-            <div><div className="text-2xl font-black" style={{ color: ORANGE }}>2.500+</div><div className="text-xs text-gray-400 uppercase tracking-wider">Leitores em 2025</div></div>
+            <div><div className="text-2xl font-black" style={{ color: ORANGE }}>2.500+</div><div className="text-xs text-gray-400 uppercase tracking-wider">Leitores</div></div>
             <div><div className="text-2xl font-black" style={{ color: TEAL }}>4,9 ★</div><div className="text-xs text-gray-400 uppercase tracking-wider">Avaliação média</div></div>
             <div><div className="text-2xl font-black" style={{ color: GOLD }}>5 cidades</div><div className="text-xs text-gray-400 uppercase tracking-wider">Comparadas no guia</div></div>
             <div><div className="text-2xl font-black text-white">7 dias</div><div className="text-xs text-gray-400 uppercase tracking-wider">Garantia incondicional</div></div>
