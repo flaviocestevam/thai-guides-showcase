@@ -634,7 +634,85 @@ const CursosMassagem3367 = () => {
 
       <div className="guide-section-divider" />
 
-      <Section chapter="Capítulo 14" title="Contatos úteis em emergência">
+      <Section chapter="Capítulo 14" title="Planilha de orçamento mensal (modelo pronto)">
+        <p>Esta é a planilha que eu uso com os alunos antes de embarcar. Copie pra Google Sheets ou Excel — todos os valores em <strong className="text-foreground">baht (฿)</strong> e <strong className="text-foreground">reais (R$ a 1฿ = R$ 0,15)</strong>, prontos pra você ajustar conforme câmbio do dia.</p>
+
+        <Card>
+          <p className="text-sm font-semibold text-foreground mb-2">Tabela base — custo mensal de vida (Chiang Mai)</p>
+          <div className="overflow-x-auto">
+            <table className="w-full text-xs sm:text-sm border-collapse">
+              <thead>
+                <tr className="text-foreground border-b border-border">
+                  <th className="text-left py-2 pr-2">Categoria</th>
+                  <th className="text-right py-2 pr-2">Econômico ฿</th>
+                  <th className="text-right py-2 pr-2">Médio ฿</th>
+                  <th className="text-right py-2">Conforto ฿</th>
+                </tr>
+              </thead>
+              <tbody className="[&_td]:py-1.5 [&_td]:pr-2 [&_tr]:border-b [&_tr]:border-border/40">
+                <tr><td>Moradia (mensal)</td><td className="text-right">6.500</td><td className="text-right">12.000</td><td className="text-right">22.000</td></tr>
+                <tr><td>Comida (street + mercado)</td><td className="text-right">7.000</td><td className="text-right">10.000</td><td className="text-right">16.000</td></tr>
+                <tr><td>Água, luz, internet</td><td className="text-right">1.000</td><td className="text-right">1.800</td><td className="text-right">2.500</td></tr>
+                <tr><td>Transporte (songthaew/moto)</td><td className="text-right">1.500</td><td className="text-right">3.000</td><td className="text-right">5.000</td></tr>
+                <tr><td>Lavanderia</td><td className="text-right">400</td><td className="text-right">700</td><td className="text-right">1.200</td></tr>
+                <tr><td>SIM card + dados</td><td className="text-right">300</td><td className="text-right">500</td><td className="text-right">800</td></tr>
+                <tr><td>Material escolar (apostila, óleo)</td><td className="text-right">800</td><td className="text-right">1.200</td><td className="text-right">1.800</td></tr>
+                <tr><td>Lazer (massagem, templo, fim de semana)</td><td className="text-right">2.000</td><td className="text-right">4.500</td><td className="text-right">9.000</td></tr>
+                <tr><td>Buffer emergência (10%)</td><td className="text-right">1.950</td><td className="text-right">3.370</td><td className="text-right">5.830</td></tr>
+                <tr className="text-foreground font-semibold border-t-2 border-border"><td className="pt-2">Total mensal ฿</td><td className="text-right pt-2">21.450</td><td className="text-right pt-2">37.070</td><td className="text-right pt-2">64.130</td></tr>
+                <tr className="text-foreground font-semibold"><td>Total mensal R$</td><td className="text-right">3.220</td><td className="text-right">5.560</td><td className="text-right">9.620</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="text-xs text-muted-foreground mt-3">⚠️ Bangkok: some +25% em moradia, transporte e lazer. Phuket/Samui: +35%.</p>
+        </Card>
+
+        <Card>
+          <p className="text-sm font-semibold text-foreground mb-2">Cursos — soma à parte (1 mês)</p>
+          <ul className="text-sm space-y-1">
+            <li>Foundation só (ITM L1): ฿6.500 (R$ 975)</li>
+            <li>L1 + L2 (10 dias): ฿13.000 (R$ 1.950)</li>
+            <li>L1 + L2 + Foot (15 dias): ฿16.500 (R$ 2.475)</li>
+          </ul>
+        </Card>
+
+        <Card>
+          <p className="text-sm font-semibold text-foreground mb-2">Cursos — pacote 3 meses (terapeuta profissional)</p>
+          <ul className="text-sm space-y-1">
+            <li>ITM Level 1 ao 4 (150h): ฿24.500 (R$ 3.680)</li>
+            <li>ED Visa completo (ida Vientiane): ฿5.700 (R$ 855)</li>
+            <li>Especialização extra (gestante/esportiva): ฿5.000 (R$ 750)</li>
+          </ul>
+        </Card>
+
+        <Card>
+          <p className="text-sm font-semibold text-foreground mb-2">Custos únicos pré-embarque (à parte)</p>
+          <ul className="text-sm space-y-1">
+            <li>Passagem GRU↔BKK (média 2026): R$ 5.500</li>
+            <li>Seguro viagem 3 meses: R$ 900</li>
+            <li>Vacinas (hepatite A + tifoide + raiva opcional): R$ 600</li>
+            <li>Roupas brancas/claras (4 conjuntos): R$ 250</li>
+            <li>Mochila + kit higiene: R$ 400</li>
+          </ul>
+        </Card>
+
+        <Card>
+          <p className="text-sm font-semibold text-foreground mb-2">Resumo — quanto separar antes de embarcar</p>
+          <ul className="text-sm space-y-1">
+            <li><strong className="text-foreground">1 mês (Foundation):</strong> R$ 5.600 + R$ 7.650 pré = <strong className="text-foreground">R$ 13.250</strong></li>
+            <li><strong className="text-foreground">3 meses (terapeuta):</strong> R$ 16.700 + R$ 7.650 pré = <strong className="text-foreground">R$ 24.350</strong></li>
+            <li><strong className="text-foreground">6 meses (formação completa):</strong> R$ 33.400 + R$ 7.650 pré = <strong className="text-foreground">R$ 41.050</strong></li>
+          </ul>
+          <p className="text-xs text-muted-foreground mt-2">Comparativo: agência brasileira cobra R$ 25.000–R$ 60.000 para os mesmos roteiros.</p>
+        </Card>
+
+        <p className="text-gold">💡 <strong>Dica:</strong> abra conta Wise antes de embarcar e transfira em lotes mensais. Câmbio sai 7%–9% melhor que cartão de crédito brasileiro. Saque limite ฿20.000/mês em ATM grátis (Aeon Bank).</p>
+      </Section>
+
+      <div className="guide-section-divider" />
+
+      <Section chapter="Capítulo 15" title="Contatos úteis em emergência">
+
         <Card>
           <ul className="text-sm space-y-1">
             <li><strong className="text-foreground">Embaixada do Brasil em Bangkok:</strong> +66 2 256 6023</li>
