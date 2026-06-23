@@ -545,7 +545,7 @@ const Phuket8821 = () => {
         {/* ROTEIROS */}
         <section id="roteiros">
           <h2 className="text-3xl font-display font-bold mb-2 flex items-center gap-3"><Sun className="text-emerald-400" /> Roteiros prontos — 3, 5, 7 e 10 dias</h2>
-          <p className="text-muted-foreground mb-6">Base recomendada: <G>Kata Beach</G> (custo-benefício) ou <G>Bang Tao Beach</G> (premium). Ajuste por bairro de hospedagem.</p>
+          <p className="text-muted-foreground mb-6">Base recomendada: Kata (custo-benefício) ou Bang Tao (premium). Ajuste por bairro de hospedagem.</p>
           <div className="grid md:grid-cols-2 gap-5">
             {ROTEIROS.map((r) => (
               <Card key={r.dias} className="border-emerald-500/20">
