@@ -437,6 +437,49 @@ const KohKood7841 = () => {
             </div>
           </section>
 
+          <section id="mapa-scooter">
+            <SectionTitle icon={Footprints} kicker="03 — Mobilidade" title="Mapa scooter — tempos reais entre cada praia" />
+            <Reveal>
+              <div className="pk-card p-0 overflow-hidden">
+                <div className="overflow-x-auto">
+                  <table className="pk-table">
+                    <thead><tr><th>De</th><th>Para</th><th>Tempo</th><th>Como</th></tr></thead>
+                    <tbody>
+                      {MAPA_SCOOTER.map((m, i) => (
+                        <tr key={i}>
+                          <td className="font-medium">{m.de}</td>
+                          <td>{m.para}</td>
+                          <td className="pk-gold-soft font-medium whitespace-nowrap">{m.tempo}</td>
+                          <td className="text-sm">{m.como}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </Reveal>
+          </section>
+
+          <section id="mes-perfil">
+            <SectionTitle icon={CalendarCheck} kicker="04 — Decisão" title="Mês ideal por perfil — cartão único" />
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+              {MES_PERFIL.map((m, i) => {
+                const isEvitar = m.perfil.startsWith("EVITAR");
+                return (
+                  <Reveal key={i} i={i}>
+                    <article className={`pk-card pk-card-tight h-full ${isEvitar ? "pk-tone-alert" : "pk-tone-ok"}`}>
+                      <header className="flex items-start justify-between gap-3 mb-3">
+                        <h3 className="pk-h4">{m.perfil}</h3>
+                        <span className="pk-verdict">{m.mes}</span>
+                      </header>
+                      <p className="text-sm text-[hsl(var(--pk-muted))]">{m.motivo}</p>
+                    </article>
+                  </Reveal>
+                );
+              })}
+            </div>
+          </section>
+
           <section id="clima">
             <SectionTitle icon={CalendarDays} kicker="03 — Quando ir" title="Clima mês a mês — janela honesta" />
             <Reveal>
