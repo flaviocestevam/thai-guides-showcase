@@ -344,7 +344,7 @@ const Phuket8821 = () => {
               <Card key={b.nome} className={`${b.cor} border`}>
                 <CardHeader className="pb-3">
                   <div className="flex items-start justify-between gap-2">
-                    <CardTitle className="text-xl">{b.nome}</CardTitle>
+                    <CardTitle className="text-xl"><G>{b.nome}</G></CardTitle>
                     <Badge variant="outline" className="text-[10px] whitespace-nowrap">{b.veredito}</Badge>
                   </div>
                 </CardHeader>
