@@ -52,6 +52,7 @@ import CasasDeMassagem from "./pages/CasasDeMassagem.tsx";
 import Retiros from "./pages/Retiros.tsx";
 import Retiros8834 from "./pages/Retiros8834.tsx";
 import Ilhas from "./pages/Ilhas.tsx";
+import Phuket8821 from "./pages/Phuket8821.tsx";
 import IlhaPage from "./pages/IlhaPage.tsx";
 import { ilhasMeta } from "./data/sales/ilhas";
 import ExportCopyAuditoria from "./pages/ExportCopyAuditoria.tsx";
