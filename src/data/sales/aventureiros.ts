@@ -48,9 +48,10 @@ export const aventureiros: SalesContent = {
     ],
     bullets: [
       "70+ aventuras documentadas",
-      "150+ operadoras avaliadas",
+      "Operadoras testadas pessoalmente",
       "Já guiou 400+ aventureiros",
     ],
+
   },
   modules: [
     {
