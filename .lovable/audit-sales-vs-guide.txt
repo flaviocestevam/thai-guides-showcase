@@ -1,9 +1,9 @@
 ================================================================
- AUDITORIA VENDA × GUIA  —  2026-06-23T19:55:13.363Z
+ AUDITORIA VENDA × GUIA  —  2026-06-23T20:11:00.937Z
 ================================================================
 
-✅ koh-samui-tailandia  →  src/pages/KohSamui7392.tsx
-   Cobertura: 33/33 (100%)
+✅ koh-phangan-tailandia  →  src/pages/KohPhangan8463.tsx
+   Cobertura: 12/12 (100%)
 
 ----------------------------------------------------------------
  Total de gaps: 0
