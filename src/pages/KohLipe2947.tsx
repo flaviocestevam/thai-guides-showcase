@@ -413,6 +413,57 @@ const KohLipe2947 = () => {
             </div>
           </section>
 
+          <section id="mapa-andando">
+            <SectionTitle icon={Footprints} kicker="03 — Ilha a pé" title="Mapa a pé — Lipe inteira em 25 minutos" />
+            <Reveal>
+              <div className="pk-card pk-card-feature mb-6">
+                <p className="text-lg leading-relaxed">
+                  <strong className="pk-gold">Lipe são 2x3 km, plana, sem carros.</strong>{" "}
+                  Tudo é caminhável. Não alugue scooter nem bike — é dinheiro jogado fora. <em>Tempos reais, com calçado normal.</em>
+                </p>
+              </div>
+            </Reveal>
+            <Reveal>
+              <div className="pk-card p-0 overflow-hidden">
+                <div className="overflow-x-auto">
+                  <table className="pk-table">
+                    <thead><tr><th>De</th><th>Para</th><th>Tempo</th><th>Como</th></tr></thead>
+                    <tbody>
+                      {MAPA_ANDANDO.map((m, i) => (
+                        <tr key={i}>
+                          <td className="font-medium"><G>{m.de}</G></td>
+                          <td className="font-medium"><G>{m.para}</G></td>
+                          <td className="pk-gold-soft font-medium whitespace-nowrap">{m.tempo}</td>
+                          <td className="text-sm">{m.como}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </Reveal>
+          </section>
+
+          <section id="mes-perfil">
+            <SectionTitle icon={CalendarCheck} kicker="04 — Mês ideal" title="Qual mês por perfil de viajante" />
+            <div className="grid md:grid-cols-2 gap-5">
+              {MES_PERFIL.map((m, i) => {
+                const isEvitar = m.perfil.startsWith("EVITAR");
+                return (
+                  <Reveal key={i} i={i}>
+                    <article className={`pk-card pk-card-tight h-full ${isEvitar ? "pk-tone-alert" : "pk-tone-ok"}`}>
+                      <header className="flex items-start justify-between gap-3 mb-3">
+                        <h3 className="pk-h4">{m.perfil}</h3>
+                        <span className="pk-verdict">{m.mes}</span>
+                      </header>
+                      <p className="text-sm text-[hsl(var(--pk-muted))]">{m.motivo}</p>
+                    </article>
+                  </Reveal>
+                );
+              })}
+            </div>
+          </section>
+
           <section id="clima">
             <SectionTitle icon={CalendarDays} kicker="03 — Quando ir" title="Clima mês a mês — janela honesta" />
             <Reveal>
