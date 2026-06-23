@@ -377,7 +377,7 @@ const Phuket8821 = () => {
           </div>
           <Card className="mt-6 border-amber-500/30 bg-amber-500/5">
             <CardContent className="p-5 text-sm">
-              <strong className="text-amber-300">Bandeira vermelha = NÃO ENTRE.</strong> Maio a outubro a costa oeste tem correntes mortais. Salva-vidas em Karon, Kata, Patong e Surin. Em Bang Tao e Nai Harn, depende do hotel.
+              <strong className="text-amber-300">Bandeira vermelha = NÃO ENTRE.</strong> Maio a outubro a costa oeste tem correntes mortais. Salva-vidas em <G>Karon Beach</G>, <G>Kata Beach</G>, <G>Patong Beach</G> e <G>Surin Beach</G>. Em <G>Bang Tao Beach</G> e <G>Nai Harn Beach</G>, depende do hotel.
             </CardContent>
           </Card>
         </section>
