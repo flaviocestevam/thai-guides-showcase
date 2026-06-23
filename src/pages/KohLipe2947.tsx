@@ -597,6 +597,29 @@ const KohLipe2947 = () => {
             </div>
           </section>
 
+          <section id="moken">
+            <SectionTitle icon={Users} kicker="09 — Cultura" title="Chao Ley (Moken) — o povo do mar" />
+            <Reveal>
+              <div className="pk-card pk-card-feature mb-6">
+                <p className="text-lg leading-relaxed">
+                  <strong className="pk-gold">700 Moken vivem em Lipe — eram os donos antes do turismo.</strong>{" "}
+                  Conhecer a vila e contratar um pescador Moken pro sunrise breakfast é a experiência mais autêntica da ilha.
+                  <em> Apoia direto a comunidade, sem intermediário turístico.</em>
+                </p>
+              </div>
+            </Reveal>
+            <div className="grid md:grid-cols-2 gap-5">
+              {MOKEN.map((x, i) => (
+                <Reveal key={x.titulo} i={i}>
+                  <article className="pk-card pk-card-tight h-full">
+                    <p className="pk-kicker">{x.titulo}</p>
+                    <p className="text-sm mt-2 text-[hsl(var(--pk-muted))]">{x.texto}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
           <section id="comida">
             <SectionTitle icon={UtensilsCrossed} kicker="09 — Mesa" title="Onde comer — 10 testados" />
             <div className="grid md:grid-cols-2 gap-5">
