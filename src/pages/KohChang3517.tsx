@@ -176,7 +176,7 @@ const BLACKLIST = [
 const APROVADAS = [
   { nome: "BB Divers Koh Chang", oque: "Mergulho 5★ PADI + day-trip a Koh Rang." },
   { nome: "Bang Bao Boat", oque: "Cooperativa local — 4 islands honesto." },
-  { nome: "Ban Kwan Chang Elephant Camp", oque: "Único ético; banho e caminhada SEM montaria." },
+  { nome: "Ban Kwan Chang Elephant Camp", oque: "Único ético; observação e caminhada na floresta SEM montaria, SEM banho, SEM foto em cima." },
   { nome: "Salakphet Mangrove Tour", oque: "Caiaque com comunidade local, baixo impacto." },
 ];
 
