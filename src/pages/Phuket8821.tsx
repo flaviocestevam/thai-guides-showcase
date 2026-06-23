@@ -603,9 +603,9 @@ const Phuket8821 = () => {
           <h2 className="text-3xl font-display font-bold mb-2 flex items-center gap-3"><MapIcon className="text-emerald-400" /> Mapa Google interativo (offline)</h2>
           <Card className="border-emerald-500/20">
             <CardContent className="p-6 text-sm space-y-3">
-              <p>Todos os pontos deste guia (bairros, praias, restaurantes, locadoras, piers, beach clubs) estão num mapa colaborativo do Google Maps.</p>
-              <p><strong className="text-emerald-300">Link do mapa:</strong> <a href="https://www.google.com/maps/d/edit?mid=phuket-guiastailandia-template" target="_blank" rel="noreferrer" className="underline">Mapa Phuket — Guias Tailândia</a> [link de exemplo — substituir pelo mapa real do produto].</p>
-              <p><strong>Como usar offline:</strong> abra Google Maps → menu → "Mapas offline" → "Selecione seu próprio mapa" → faça o quadrado em Phuket. Funciona sem chip por 30 dias.</p>
+              <p>Cada bairro, praia, restaurante, locadora, pier e beach club deste guia tem um botão <span className="inline-flex items-center gap-1 text-[10px] font-medium px-1.5 py-0.5 rounded-md border border-emerald-500/30 bg-emerald-500/10 text-emerald-300">📍 Mapa</span> ao lado do nome — clique pra abrir direto no Google Maps.</p>
+              <p><strong className="text-emerald-300">Abrir Phuket no Google Maps:</strong> <a href="https://www.google.com/maps/place/Phuket,+Thailand" target="_blank" rel="noreferrer" className="underline text-emerald-300">ver ilha inteira</a>.</p>
+              <p><strong>Como salvar offline:</strong> abra o Google Maps no celular → menu → "Mapas offline" → "Selecione seu próprio mapa" → enquadre Phuket → baixar. Funciona sem chip por 30 dias.</p>
             </CardContent>
           </Card>
         </section>
