@@ -1,9 +1,9 @@
 ================================================================
- AUDITORIA VENDA × GUIA  —  2026-06-23T20:14:14.714Z
+ AUDITORIA VENDA × GUIA  —  2026-06-23T20:17:22.454Z
 ================================================================
 
-✅ koh-phangan-tailandia  →  src/pages/KohPhangan8463.tsx
-   Cobertura: 33/33 (100%)
+✅ koh-chang-tailandia  →  src/pages/KohChang3517.tsx
+   Cobertura: 42/42 (100%)
 
 ----------------------------------------------------------------
  Total de gaps: 0
