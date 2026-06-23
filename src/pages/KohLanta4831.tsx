@@ -725,7 +725,211 @@ const KohLanta4831 = () => {
             </div>
           </section>
 
+          <section id="visi">
+            <SectionTitle icon={Eye} kicker="12 — Visibilidade" title="Visibilidade real em Koh Haa, Hin Daeng e Hin Muang" />
+            <Reveal>
+              <div className="pk-card p-0 overflow-hidden">
+                <div className="overflow-x-auto">
+                  <table className="pk-table">
+                    <thead><tr><th>Ponto</th><th>Melhor mês</th><th>Visi</th><th>Vida marinha</th></tr></thead>
+                    <tbody>
+                      {VISI_DIVE.map((v, i) => (
+                        <tr key={i}>
+                          <td><G q={v.ponto + " Koh Lanta dive"}>{v.ponto}</G></td>
+                          <td className="pk-gold-soft font-medium">{v.mes}</td>
+                          <td>{v.visi}</td>
+                          <td className="text-[hsl(var(--pk-muted))]">{v.marinho}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </Reveal>
+          </section>
+
+          <section id="mapa-loop">
+            <SectionTitle icon={Footprints} kicker="13 — Logística" title="Mapa de scooter — tempos reais entre pontos" />
+            <Reveal>
+              <div className="pk-card p-0 overflow-hidden">
+                <div className="overflow-x-auto">
+                  <table className="pk-table">
+                    <thead><tr><th>Trecho</th><th>Tempo</th><th>Observação</th></tr></thead>
+                    <tbody>
+                      {MAPA_LOOP.map((m, i) => (
+                        <tr key={i}>
+                          <td><G q={m.trecho + " Koh Lanta"}>{m.trecho}</G></td>
+                          <td className="pk-gold-soft font-medium">{m.min}</td>
+                          <td className="text-[hsl(var(--pk-muted))]">{m.obs}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </Reveal>
+          </section>
+
+          <section id="mes-perfil">
+            <SectionTitle icon={CalendarRange} kicker="14 — Quando ir" title="Mês × perfil de viajante" />
+            <div className="grid md:grid-cols-2 gap-5">
+              {MES_PERFIL.map((m, i) => (
+                <Reveal key={m.perfil} i={i}>
+                  <article className="pk-card pk-card-tight h-full">
+                    <h3 className="pk-h4 pk-gold">{m.perfil}</h3>
+                    <p className="pk-gold-soft text-sm mt-2">{m.mes}</p>
+                    <p className="text-sm text-[hsl(var(--pk-muted))] mt-2">{m.obs}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="comparativo">
+            <SectionTitle icon={Scale} kicker="15 — Decisão" title="Comparativo Lanta × Phi Phi × Krabi — 8 dimensões" />
+            <Reveal>
+              <div className="pk-card p-0 overflow-hidden">
+                <div className="overflow-x-auto">
+                  <table className="pk-table">
+                    <thead><tr><th>Dimensão</th><th>Koh Lanta</th><th>Koh Phi Phi</th><th>Krabi</th></tr></thead>
+                    <tbody>
+                      {COMPARATIVO.map((c, i) => (
+                        <tr key={i}>
+                          <td className="pk-gold-soft font-medium">{c.dim}</td>
+                          <td>{c.lanta}</td>
+                          <td>{c.phiphi}</td>
+                          <td>{c.krabi}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </Reveal>
+          </section>
+
+          <section id="barcodia">
+            <SectionTitle icon={Anchor} kicker="16 — Mar grande" title="Koh Rok, Koh Haa e Hin Daeng — preços reais" />
+            <div className="space-y-5">
+              {BARCO_DIA.map((a, i) => (
+                <Reveal key={a.tour} i={i}>
+                  <article className="pk-card grid md:grid-cols-4 gap-5">
+                    <div className="md:col-span-2">
+                      <h3 className="pk-h3"><G q={a.tour + " Koh Lanta"}>{a.tour}</G></h3>
+                      <p className="pk-gold-soft text-sm mt-2">{a.preco}</p>
+                    </div>
+                    <div><p className="pk-kicker">Inclui</p><p className="text-sm mt-1">{a.inclui}</p></div>
+                    <div><p className="pk-kicker">Armadilha</p><p className="text-sm text-[hsl(var(--pk-alert))] mt-1">{a.obs}</p></div>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="pesca">
+            <SectionTitle icon={Fish} kicker="17 — Pesca local" title="Pesca em Saladan — tradicional, lula e game" />
+            <div className="grid md:grid-cols-3 gap-5">
+              {PESCA.map((p, i) => (
+                <Reveal key={p.tipo} i={i}>
+                  <article className="pk-card h-full">
+                    <h3 className="pk-h4 pk-gold">{p.tipo}</h3>
+                    <p className="pk-gold-soft text-sm mt-2">{p.preco}</p>
+                    <p className="text-sm text-[hsl(var(--pk-muted))] mt-3">{p.oque}</p>
+                    <p className="text-sm mt-3"><strong>Quando:</strong> {p.quando}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="spa">
+            <SectionTitle icon={Flower2} kicker="18 — Wellness" title="Spa, yoga e cooking — os 5 que valem" />
+            <div className="grid md:grid-cols-2 gap-5">
+              {SPA_LANTA.map((s, i) => (
+                <Reveal key={s.nome} i={i}>
+                  <article className="pk-card pk-card-tight h-full">
+                    <div className="flex justify-between items-start gap-3 mb-2">
+                      <h3 className="pk-h4"><G q={s.nome + " Koh Lanta"}>{s.nome}</G></h3>
+                      <span className="pk-tag-sm">{s.bairro}</span>
+                    </div>
+                    <p className="text-sm text-[hsl(var(--pk-muted))] mb-3">{s.oque}</p>
+                    <p className="pk-gold-soft text-sm font-medium">{s.preco}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="vilarejo">
+            <SectionTitle icon={Tent} kicker="19 — Isolamento" title="Praias remotas — Bamboo, Mai Pai, Mu Ko Lanta NP" />
+            <div className="grid md:grid-cols-2 gap-5">
+              {VILAREJO.map((v, i) => (
+                <Reveal key={v.nome} i={i}>
+                  <article className="pk-card h-full">
+                    <h3 className="pk-h3"><G q={v.nome + " Koh Lanta"}>{v.nome}</G></h3>
+                    <dl className="pk-dl mt-3">
+                      <div><dt>Como chegar</dt><dd>{v.como}</dd></div>
+                      <div><dt>Quanto</dt><dd>{v.quanto}</dd></div>
+                      <div><dt>Por que ir</dt><dd>{v.porque}</dd></div>
+                    </dl>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="familia">
+            <SectionTitle icon={Baby} kicker="20 — Crianças" title="Família com kids em Lanta — sem ilusão" />
+            <div className="grid md:grid-cols-2 gap-5">
+              {FAMILIA.map((f, i) => (
+                <Reveal key={f.dim} i={i}>
+                  <article className="pk-card pk-card-tight h-full">
+                    <h3 className="pk-h4 pk-gold">{f.dim}</h3>
+                    <p className="text-sm text-[hsl(var(--pk-muted))] mt-2">{f.oque}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="conservacao">
+            <SectionTitle icon={Leaf} kicker="21 — Conservação" title="Coral, tartaruga e Emerald Cave — regras locais" />
+            <div className="grid md:grid-cols-2 gap-5">
+              {CONSERVACAO.map((c, i) => (
+                <Reveal key={c.regra} i={i}>
+                  <article className="pk-card pk-card-tight h-full pk-tone-ok">
+                    <h3 className="pk-h4 pk-gold">{c.regra}</h3>
+                    <p className="text-sm text-[hsl(var(--pk-muted))] mt-2">{c.desc}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="booking">
+            <SectionTitle icon={BookOpen} kicker="22 — Reserva" title="Antecedência real por cenário" />
+            <Reveal>
+              <div className="pk-card p-0 overflow-hidden">
+                <div className="overflow-x-auto">
+                  <table className="pk-table">
+                    <thead><tr><th>Cenário</th><th>Antecedência</th><th>Onde reservar</th></tr></thead>
+                    <tbody>
+                      {BOOKING.map((b, i) => (
+                        <tr key={i}>
+                          <td className="pk-gold-soft font-medium">{b.quando}</td>
+                          <td>{b.antecedencia}</td>
+                          <td className="text-[hsl(var(--pk-muted))]">{b.onde}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </Reveal>
+          </section>
+
           <section id="mapa">
+
             <SectionTitle icon={MapIcon} kicker="12 — Mapa" title="Mapa Google interativo (offline)" />
             <Reveal>
               <div className="pk-card space-y-4 text-sm leading-relaxed">
