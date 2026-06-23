@@ -202,14 +202,14 @@ const categories: Cat[] = [
 
 const Aventureiros6712 = () => (
   <main className="min-h-screen bg-background text-foreground">
-    <SEO title="Guia Tailândia para Aventureiros — Edição Completa" description="Guia privado: 30+ operadoras testadas, lista negra, calendário por esporte, seguros." />
+    <SEO title="Guia Tailândia para Aventureiros — Edição Completa" description="Guia privado: 50 operadoras testadas em 12 modalidades, lista negra, calendário por esporte, seguros, protocolos de emergência." />
 
     {/* HERO */}
     <section className="py-20 px-6 bg-gradient-to-br from-emerald-950 via-background to-stone-900">
       <div className="max-w-3xl mx-auto text-center">
         <p className="guide-section-label mb-4">Edição Completa</p>
         <h1 className="font-display text-5xl sm:text-6xl text-foreground mb-6">Tailândia para Aventureiros</h1>
-        <p className="text-lg text-muted-foreground">30+ operadoras testadas em 10 modalidades — escalada, mergulho, skydive, rafting, cavernas, jungle trek, tirolesa, bungee, moto e kitesurf. Com nível de risco, certificação, preço real e janela climática.</p>
+        <p className="text-lg text-muted-foreground">50 operadoras testadas em 12 modalidades — escalada, mergulho, skydive, rafting, cavernas, jungle trek, tirolesa, bungee, parapente, moto, kitesurf/surf, ATV/buggy e kayak/SUP. Com nível de risco, certificação, preço real e janela climática.</p>
       </div>
     </section>
 
