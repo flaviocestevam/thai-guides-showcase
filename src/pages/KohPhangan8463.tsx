@@ -3,7 +3,8 @@
 import {
   MapPin, AlertTriangle, CheckCircle2, XCircle, Bike, Ship, UtensilsCrossed,
   Compass, Wallet, ShieldCheck, Map as MapIcon, Sun, Waves, Sparkles, Home,
-  ArrowUpRight, Moon,
+  ArrowUpRight, Moon, Eye, Footprints, CalendarRange, Scale, Anchor, Fish,
+  Flower2, Tent, Baby, Leaf, BookOpen,
 } from "lucide-react";
 import { PK_STYLES, Reveal, SectionTitle, TONE_CLASS, makeMapChip, type Tone } from "@/components/guides/premiumShell";
 
@@ -22,6 +23,17 @@ const TOC = [
   { id: "roteiros", label: "Roteiros", icon: Sun },
   { id: "antigolpe", label: "Anti-golpe", icon: ShieldCheck },
   { id: "blacklist", label: "Lista negra", icon: XCircle },
+  { id: "visi", label: "Visibilidade Sail Rock", icon: Eye },
+  { id: "mapa-loop", label: "Mapa de scooter", icon: Footprints },
+  { id: "mes-perfil", label: "Mês × perfil", icon: CalendarRange },
+  { id: "comparativo", label: "Phangan × Tao × Samui", icon: Scale },
+  { id: "angthong", label: "Ang Thong & barco-dia", icon: Anchor },
+  { id: "pesca", label: "Pesca em Chaloklum", icon: Fish },
+  { id: "spa", label: "Spas e wellness", icon: Flower2 },
+  { id: "vilarejo", label: "Praias remotas", icon: Tent },
+  { id: "familia", label: "Família com kids", icon: Baby },
+  { id: "conservacao", label: "Conservação", icon: Leaf },
+  { id: "booking", label: "Como reservar", icon: BookOpen },
   { id: "mapa", label: "Mapa", icon: MapIcon },
   { id: "orcamento", label: "Orçamento", icon: Wallet },
 ];
@@ -151,6 +163,104 @@ const COMIDA = [
   { lugar: "Anantara Rasananda Beachfront", bairro: "Thong Nai Pan", oque: "Premium pé na areia.", preco: "800-1.500 baht" },
   { lugar: "Bubba's Coffee Bar", bairro: "Sri Thanu", oque: "Café de especialidade + brunch.", preco: "150-280 baht" },
 ];
+
+const VISI_SAIL = [
+  { ponto: "Sail Rock (pináculo principal)", mes: "Mar-Out", visi: "15-30 m", marinho: "Whale shark (sazonal), barracuda, atum, grouper gigante." },
+  { ponto: "Sail Rock — chimney 18m", mes: "Mar-Mai", visi: "20-30 m", marinho: "Banco de barracuda, snapper, peixe-pedra." },
+  { ponto: "Chumphon Pinnacle (de Chaloklum)", mes: "Mar-Out", visi: "15-25 m", marinho: "Whale shark Mar-Mai, banco de jack, scorpionfish." },
+  { ponto: "Mae Haad (Koh Ma)", mes: "Ano todo", visi: "8-15 m", marinho: "Snorkel raso, peixe-papagaio, tartaruga ocasional." },
+  { ponto: "Haad Yao Reef", mes: "Mar-Set", visi: "8-12 m", marinho: "Coral mole, peixe-anjo, polvo." },
+  { ponto: "Haad Salad (recife noroeste)", mes: "Mar-Set", visi: "6-10 m", marinho: "Snorkel iniciante, peixe-borboleta." },
+];
+
+const MAPA_LOOP = [
+  { trecho: "Thong Sala → Sri Thanu", min: "15 min", obs: "Reta plana, asfalto bom." },
+  { trecho: "Thong Sala → Haad Rin", min: "25 min", obs: "Subida íngreme nos últimos 5 km — scooter 125 sofre com 2." },
+  { trecho: "Thong Sala → Chaloklum", min: "30 min", obs: "Boa estrada, alguns trechos cegos." },
+  { trecho: "Thong Sala → Thong Nai Pan", min: "50 min", obs: "Subida 45° em 2 trechos. Não tente em scooter pequeno c/ 2." },
+  { trecho: "Sri Thanu → Mae Haad (Koh Ma)", min: "20 min", obs: "Ondulada, asfalto OK." },
+  { trecho: "Chaloklum → Bottle Beach (longtail)", min: "20 min de barco", obs: "Estrada termina antes — só barco ou trilha 1h30." },
+  { trecho: "Thong Nai Pan → Than Sadet (cachoeira)", min: "20 min", obs: "Estrada de terra nos últimos 2 km." },
+  { trecho: "Loop completo da ilha", min: "3h-3h30", obs: "Sem paradas. Ideal fazer em 1 dia inteiro c/ paradas." },
+];
+
+const MES_PERFIL = [
+  { perfil: "Full Moon hardcore", mes: "Qualquer (lua cheia)", obs: "Reserve com 60 dias. Dez/Jan/Fev = picos absurdos." },
+  { perfil: "Wellness/yoga retreat", mes: "Nov-Mar", obs: "Sri Thanu lotado de quem foge do inverno do norte. Reserve com 30-45 dias." },
+  { perfil: "Mochileiro de baixo orçamento", mes: "Jun-Set", obs: "Baixa temporada, hotéis 30-40% off. Chuva tarde mas curta." },
+  { perfil: "Casal lua de mel premium", mes: "Dez-Abr", obs: "Thong Nai Pan no melhor estado, mar calmo, Anantara/Santhiya com promo Ago-Out." },
+  { perfil: "Mergulhador (whale shark)", mes: "Mar-Mai", obs: "Pico de visibilidade em Sail Rock e Chumphon Pinnacle." },
+  { perfil: "Família com criança", mes: "Dez-Mar", obs: "Thong Nai Pan ou Haad Salad. Evite Full Moon week." },
+];
+
+const COMPARATIVO = [
+  { dim: "Vibe principal", phangan: "Festa + wellness extremo", tao: "Mergulho 24/7", samui: "Resort + conforto" },
+  { dim: "Custo médio/dia (casal)", phangan: "R$ 600-900", tao: "R$ 500-800", samui: "R$ 800-1.200" },
+  { dim: "Vida noturna", phangan: "Full Moon mundial", tao: "Pub crawl + Sairee", samui: "Chaweng + Ark Bar" },
+  { dim: "Mergulho", phangan: "Sail Rock (avançado)", tao: "Capital Open Water mundial", samui: "Limitado, vai de Tao" },
+  { dim: "Wellness/Yoga", phangan: "Sri Thanu (top mundial)", tao: "Algumas escolas", samui: "Spa de resort" },
+  { dim: "Família com kids", phangan: "Só Thong Nai Pan", tao: "Limitado, ilha pequena", samui: "Excelente, infraestrutura" },
+  { dim: "Acesso", phangan: "Ferry de Samui (45 min)", tao: "Ferry de Phangan (1h15)", samui: "Voo direto USM" },
+  { dim: "Tempo mínimo", phangan: "5 dias", tao: "4 dias (3 mergulhos)", samui: "4 dias" },
+];
+
+const ANG_THONG = [
+  { tour: "Ang Thong Speedboat (full)", preco: "2.300-2.800 baht", inclui: "Kayak na lagoa esmeralda, snorkel, mirante Wua Talab, almoço.", obs: "Phangan é mais longe que Samui. Se passa por Samui, faça de lá." },
+  { tour: "Ang Thong + camping noite Koh Wua Talab", preco: "4.500-6.000 baht", inclui: "1 noite tenda, 2 dias kayak/trekking, refeições.", obs: "Só 2 operadoras autorizadas. Reserve com 30 dias." },
+  { tour: "Sail Rock dive day-trip", preco: "3.500-4.500 baht (2 mergulhos)", inclui: "Equipamento, almoço, instrutor.", obs: "Pináculo avançado — não é primeiro mergulho." },
+  { tour: "Around the island longtail privativo", preco: "3.500-5.000 baht/barco", inclui: "Bottle Beach, Mae Haad, Haad Salad, snorkel.", obs: "Combine paradas ANTES. Sem combinação = só Mae Haad." },
+];
+
+const PESCA = [
+  { tipo: "Pesca tradicional com pescador de Chaloklum", preco: "2.500-3.500 baht/4h (até 4 pessoas)", oque: "Barco de pesca real, linha de mão, peixe vai pro restaurante depois.", quando: "Saída 6h ou 16h. Combine no porto de Chaloklum." },
+  { tipo: "Squid fishing noturno", preco: "1.500 baht/pessoa", oque: "3h noturno com luz atraindo lula. Cozinham a bordo.", quando: "Sai 18h-19h. Set-Mar é alta de lula." },
+  { tipo: "Game fishing (atum, barracuda)", preco: "12.000-18.000 baht/dia (barco)", oque: "Trolling em Sail Rock e arredores. Linha pesada, cadeira de pesca.", quando: "Mar-Set. Reservar com 7 dias." },
+];
+
+const SPA_PHANGAN = [
+  { nome: "Orion Healing Center", bairro: "Sri Thanu", oque: "Detox, jejum, colônica, yoga. Referência mundial em wellness.", preco: "Programa 7d R$ 3.500-5.500." },
+  { nome: "Agama Yoga", bairro: "Sri Thanu", oque: "Yoga tântrica intensiva, escola séria de longa estadia.", preco: "Curso 4 semanas R$ 4.500." },
+  { nome: "Pyramid Yoga", bairro: "Sri Thanu", oque: "Hatha/Vinyasa em pirâmide energética. Drop-in possível.", preco: "Aula R$ 70, retiro 7d R$ 3.000." },
+  { nome: "The Sanctuary Thailand", bairro: "Haad Tien (leste)", oque: "Detox/jejum em propriedade isolada. Wellness celebrado por NYT.", preco: "Programa 5d R$ 4.000+." },
+  { nome: "Wat Pho Massage Phangan", bairro: "Thong Sala", oque: "Massagem tradicional credenciada, mesma escola do Bangkok.", preco: "60 min R$ 90, 90 min R$ 130." },
+];
+
+const VILAREJO = [
+  { nome: "Bottle Beach (Haad Khuat)", como: "Longtail de Chaloklum 20 min ou trilha 1h30 (íngreme).", quanto: "Bangalô R$ 130-300, só dinheiro.", porque: "3 guesthouses, 2 restaurantes, mar absurdo. Sem ATM, sem 7-Eleven." },
+  { nome: "Than Sadet (rio + cachoeira)", como: "Scooter 45 min de Thong Sala. Estrada terra final.", quanto: "Bangalô R$ 100-200.", porque: "Lugar sagrado dos reis Rama. Cachoeira limpa, quase sem turista." },
+  { nome: "Haad Yuan / Haad Why Nam", como: "Só longtail de Haad Rin (200 baht).", quanto: "Bangalô R$ 150-400.", porque: "Festas secretas (Eden, Why Nam), sossego entre eventos." },
+  { nome: "Mae Haad (e Koh Ma)", como: "Scooter Sri Thanu 20 min.", quanto: "Bangalô R$ 180-350.", porque: "Banco de areia até ilhota Koh Ma na maré baixa — postal raro." },
+  { nome: "Haad Khom (Coral Bay)", como: "Scooter Chaloklum 10 min.", quanto: "Bangalô R$ 200-400.", porque: "Snorkel direto da praia, restaurante pé na areia, quase deserta." },
+];
+
+const FAMILIA = [
+  { dim: "Bairros OK", oque: "Thong Nai Pan (premium), Haad Salad (calmo), Chaloklum (autêntico). NUNCA Haad Rin ou Baan Tai (festa)." },
+  { dim: "Hospital", oque: "Bandon International Hospital (Thong Sala) — 24h, plano de viagem aceito. Casos sérios = voo pra Samui ou BKK." },
+  { dim: "Praias seguras pra criança", oque: "Thong Nai Pan Noi (raso, calmo), Haad Salad (recife protege), Mae Haad (banco de areia)." },
+  { dim: "Mobilidade", oque: "Songthaew compartilhado funciona, mas tem que esperar. Carro privado por dia: 1.500-2.000 baht." },
+  { dim: "Comida", oque: "Resorts grandes em Thong Nai Pan têm cardápio infantil. Em Sri Thanu, vegan-friendly até pra criança." },
+  { dim: "Datas a evitar", oque: "Semana de Full Moon, Half Moon e Black Moon — ilha vira balada. Calendário oficial é obrigatório." },
+];
+
+const CONSERVACAO = [
+  { regra: "Protetor solar reef-safe obrigatório em snorkel", desc: "Oxybenzone destrói coral em Mae Haad e Haad Khom. Marcas como Stream2Sea, Banana Boat Reef Friendly." },
+  { regra: "Não pise ou toque coral", desc: "Coral cresce 1cm/ano. Quebra = morte. Use colete pra flutuar se não tem confiança." },
+  { regra: "Lixo da Full Moon", desc: "Trash Hero Phangan organiza limpeza pós-festa toda manhã. Voluntariado aberto." },
+  { regra: "Tartaruga no Mae Haad", desc: "Aparecem entre Mar-Set. Distância mínima 3m, sem flash." },
+  { regra: "Whale shark em Sail Rock", desc: "Não persiga, mantenha 3m de distância. Sem tocar, sem cavalgar." },
+  { regra: "Plástico de uso único", desc: "Phangan tem ban municipal em sacolas. Leve canudo de aço e ecobag." },
+];
+
+const BOOKING = [
+  { quando: "Full Moon (qualquer mês)", antecedencia: "60 dias mínimo, 90 ideal", onde: "Booking + Agoda em paralelo (preços divergem 20-30%)." },
+  { quando: "Sri Thanu retreat (Nov-Mar)", antecedencia: "45-60 dias", onde: "Direto no site do Orion/Agama/Pyramid (5-10% off vs. OTAs)." },
+  { quando: "Thong Nai Pan premium (Dez-Mar)", antecedencia: "60-90 dias", onde: "Anantara e Santhiya têm flash sales em Ago-Set: 30-40% off." },
+  { quando: "Baixa temporada (Mai-Out)", antecedencia: "7-15 dias", onde: "Walk-in funciona, mas sem garantia. Use Agoda com cancelamento grátis." },
+  { quando: "Ferry de/para Samui ou Tao", antecedencia: "2-3 dias normal, 7 dias em Full Moon", onde: "12go.asia ou direto Lomprayah (mesmo preço, evita intermediário)." },
+  { quando: "Cabin Bottle Beach", antecedencia: "Sem reserva online (sem internet lá). Chegue cedo 8-9h.", onde: "Vai de longtail, pergunta no Smile, Bottle Beach 1 e 2 in loco." },
+];
+
+
 
 const KohPhangan8463 = () => {
   return (
@@ -486,7 +596,211 @@ const KohPhangan8463 = () => {
             </div>
           </section>
 
+          <section id="visi">
+            <SectionTitle icon={Eye} kicker="13 — Visibilidade" title="Visibilidade real em Sail Rock e arredores" />
+            <Reveal>
+              <div className="pk-card p-0 overflow-hidden">
+                <div className="overflow-x-auto">
+                  <table className="pk-table">
+                    <thead><tr><th>Ponto</th><th>Melhor mês</th><th>Visi</th><th>Vida marinha</th></tr></thead>
+                    <tbody>
+                      {VISI_SAIL.map((v, i) => (
+                        <tr key={i}>
+                          <td><G q={v.ponto + " Koh Phangan dive"}>{v.ponto}</G></td>
+                          <td className="pk-gold-soft font-medium">{v.mes}</td>
+                          <td>{v.visi}</td>
+                          <td className="text-[hsl(var(--pk-muted))]">{v.marinho}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </Reveal>
+          </section>
+
+          <section id="mapa-loop">
+            <SectionTitle icon={Footprints} kicker="14 — Logística" title="Mapa de scooter — tempos reais entre pontos" />
+            <Reveal>
+              <div className="pk-card p-0 overflow-hidden">
+                <div className="overflow-x-auto">
+                  <table className="pk-table">
+                    <thead><tr><th>Trecho</th><th>Tempo</th><th>Observação</th></tr></thead>
+                    <tbody>
+                      {MAPA_LOOP.map((m, i) => (
+                        <tr key={i}>
+                          <td><G q={m.trecho + " Koh Phangan"}>{m.trecho}</G></td>
+                          <td className="pk-gold-soft font-medium">{m.min}</td>
+                          <td className="text-[hsl(var(--pk-muted))]">{m.obs}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </Reveal>
+          </section>
+
+          <section id="mes-perfil">
+            <SectionTitle icon={CalendarRange} kicker="15 — Quando ir" title="Mês × perfil de viajante" />
+            <div className="grid md:grid-cols-2 gap-5">
+              {MES_PERFIL.map((m, i) => (
+                <Reveal key={m.perfil} i={i}>
+                  <article className="pk-card pk-card-tight h-full">
+                    <h3 className="pk-h4 pk-gold">{m.perfil}</h3>
+                    <p className="pk-gold-soft text-sm mt-2">{m.mes}</p>
+                    <p className="text-sm text-[hsl(var(--pk-muted))] mt-2">{m.obs}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="comparativo">
+            <SectionTitle icon={Scale} kicker="16 — Decisão" title="Comparativo Phangan × Tao × Samui — 8 dimensões" />
+            <Reveal>
+              <div className="pk-card p-0 overflow-hidden">
+                <div className="overflow-x-auto">
+                  <table className="pk-table">
+                    <thead><tr><th>Dimensão</th><th>Koh Phangan</th><th>Koh Tao</th><th>Koh Samui</th></tr></thead>
+                    <tbody>
+                      {COMPARATIVO.map((c, i) => (
+                        <tr key={i}>
+                          <td className="pk-gold-soft font-medium">{c.dim}</td>
+                          <td>{c.phangan}</td>
+                          <td>{c.tao}</td>
+                          <td>{c.samui}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </Reveal>
+          </section>
+
+          <section id="angthong">
+            <SectionTitle icon={Anchor} kicker="17 — Mar grande" title="Ang Thong, Sail Rock e barco-dia — preços reais" />
+            <div className="space-y-5">
+              {ANG_THONG.map((a, i) => (
+                <Reveal key={a.tour} i={i}>
+                  <article className="pk-card grid md:grid-cols-4 gap-5">
+                    <div className="md:col-span-2">
+                      <h3 className="pk-h3"><G q={a.tour + " Koh Phangan"}>{a.tour}</G></h3>
+                      <p className="pk-gold-soft text-sm mt-2">{a.preco}</p>
+                    </div>
+                    <div><p className="pk-kicker">Inclui</p><p className="text-sm mt-1">{a.inclui}</p></div>
+                    <div><p className="pk-kicker">Armadilha</p><p className="text-sm text-[hsl(var(--pk-alert))] mt-1">{a.obs}</p></div>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="pesca">
+            <SectionTitle icon={Fish} kicker="18 — Pesca local" title="Pesca em Chaloklum — tradicional e game" />
+            <div className="grid md:grid-cols-3 gap-5">
+              {PESCA.map((p, i) => (
+                <Reveal key={p.tipo} i={i}>
+                  <article className="pk-card h-full">
+                    <h3 className="pk-h4 pk-gold">{p.tipo}</h3>
+                    <p className="pk-gold-soft text-sm mt-2">{p.preco}</p>
+                    <p className="text-sm text-[hsl(var(--pk-muted))] mt-3">{p.oque}</p>
+                    <p className="text-sm mt-3"><strong>Quando:</strong> {p.quando}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="spa">
+            <SectionTitle icon={Flower2} kicker="19 — Wellness" title="Spas, yoga e retiros — os 5 que valem" />
+            <div className="grid md:grid-cols-2 gap-5">
+              {SPA_PHANGAN.map((s, i) => (
+                <Reveal key={s.nome} i={i}>
+                  <article className="pk-card pk-card-tight h-full">
+                    <div className="flex justify-between items-start gap-3 mb-2">
+                      <h3 className="pk-h4"><G q={s.nome + " Koh Phangan"}>{s.nome}</G></h3>
+                      <span className="pk-tag-sm">{s.bairro}</span>
+                    </div>
+                    <p className="text-sm text-[hsl(var(--pk-muted))] mb-3">{s.oque}</p>
+                    <p className="pk-gold-soft text-sm font-medium">{s.preco}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="vilarejo">
+            <SectionTitle icon={Tent} kicker="20 — Isolamento" title="Praias remotas — vilarejos e desconexão" />
+            <div className="grid md:grid-cols-2 gap-5">
+              {VILAREJO.map((v, i) => (
+                <Reveal key={v.nome} i={i}>
+                  <article className="pk-card h-full">
+                    <h3 className="pk-h3"><G q={v.nome + " Koh Phangan"}>{v.nome}</G></h3>
+                    <dl className="pk-dl mt-3">
+                      <div><dt>Como chegar</dt><dd>{v.como}</dd></div>
+                      <div><dt>Quanto</dt><dd>{v.quanto}</dd></div>
+                      <div><dt>Por que ir</dt><dd>{v.porque}</dd></div>
+                    </dl>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="familia">
+            <SectionTitle icon={Baby} kicker="21 — Crianças" title="Família com kids em Phangan — sem ilusão" />
+            <div className="grid md:grid-cols-2 gap-5">
+              {FAMILIA.map((f, i) => (
+                <Reveal key={f.dim} i={i}>
+                  <article className="pk-card pk-card-tight h-full">
+                    <h3 className="pk-h4 pk-gold">{f.dim}</h3>
+                    <p className="text-sm text-[hsl(var(--pk-muted))] mt-2">{f.oque}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="conservacao">
+            <SectionTitle icon={Leaf} kicker="22 — Conservação" title="Coral, tartaruga e Trash Hero — regras locais" />
+            <div className="grid md:grid-cols-2 gap-5">
+              {CONSERVACAO.map((c, i) => (
+                <Reveal key={c.regra} i={i}>
+                  <article className="pk-card pk-card-tight h-full pk-tone-ok">
+                    <h3 className="pk-h4 pk-gold">{c.regra}</h3>
+                    <p className="text-sm text-[hsl(var(--pk-muted))] mt-2">{c.desc}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="booking">
+            <SectionTitle icon={BookOpen} kicker="23 — Reserva" title="Antecedência real por cenário" />
+            <Reveal>
+              <div className="pk-card p-0 overflow-hidden">
+                <div className="overflow-x-auto">
+                  <table className="pk-table">
+                    <thead><tr><th>Cenário</th><th>Antecedência</th><th>Onde reservar</th></tr></thead>
+                    <tbody>
+                      {BOOKING.map((b, i) => (
+                        <tr key={i}>
+                          <td className="pk-gold-soft font-medium">{b.quando}</td>
+                          <td>{b.antecedencia}</td>
+                          <td className="text-[hsl(var(--pk-muted))]">{b.onde}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </Reveal>
+          </section>
+
           <section id="mapa">
+
             <SectionTitle icon={MapIcon} kicker="13 — Mapa" title="Mapa Google interativo (offline)" />
             <Reveal>
               <div className="pk-card space-y-4 text-sm leading-relaxed">

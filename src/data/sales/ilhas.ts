@@ -458,6 +458,16 @@ const phangan = make(ilhasMeta[3], {
     { title: "Calendário Full Moon 24 meses", desc: "Datas oficiais das próximas 24 Full Moon, Half Moon e Black Moon Parties — pra planejar com 2 anos de antecedência." },
     { title: "Os 2 lados da ilha decodificados", desc: "Haad Rin (festa) vs. Sri Thanu/Chaloklum (calma/wellness). Quem deve ficar em cada um e quando combinar os dois." },
     { title: "Protocolo anti-roubo Full Moon", desc: "Bebida segura, balde proibido, dinheiro escondido, hotel certo pra dormir — 8 regras que evitam o pior." },
+    { title: "Visibilidade real em Sail Rock e Chumphon Pinnacle", desc: "Tabela mês-a-mês de visibilidade, vida marinha e janela de whale shark — pra quem mergulha sério." },
+    { title: "Mapa de scooter — 8 trechos cronometrados", desc: "Tempo real entre Thong Sala, Sri Thanu, Haad Rin, Thong Nai Pan, Chaloklum, Bottle, Than Sadet." },
+    { title: "Mês × perfil de viajante", desc: "Tabela cruzada: Full Moon, wellness, mochileiro, lua de mel, mergulhador, família — quando ir." },
+    { title: "Comparativo Phangan × Tao × Samui (8 dimensões)", desc: "Decisão clara entre as 3 ilhas do Golfo, com custo, vibe, mergulho, família e tempo mínimo." },
+    { title: "Ang Thong e barco-dia com camping", desc: "Operadoras autorizadas pra Ang Thong saindo direto de Phangan, inclusive overnight em Koh Wua Talab." },
+    { title: "Pesca tradicional em Chaloklum", desc: "Como contratar pescador local, squid fishing noturno e game fishing — preços reais." },
+    { title: "5 spas e retiros sérios mapeados", desc: "Orion Healing, Agama, Pyramid, The Sanctuary e Wat Pho — preços de programas e drop-in." },
+    { title: "Praias remotas: Bottle, Than Sadet, Mae Haad", desc: "Como chegar, quanto custa, e por que ir nas 5 praias isoladas que ninguém te conta." },
+    { title: "Família com kids — sem ilusão", desc: "Bairros OK, hospital, praias seguras, datas a evitar." },
+    { title: "Conservação: reef-safe, tartaruga, Trash Hero", desc: "6 regras locais pra não destruir coral e participar de limpeza pós-Full Moon." },
   ],
   comparison: {
     theirs: [
@@ -478,12 +488,12 @@ const phangan = make(ilhasMeta[3], {
     ],
   },
   authority: {
-    title: "3 Full Moons + 12 dias morando em Sri Thanu",
+    title: "3 Full Moons + 12 dias morando em Sri Thanu + Sail Rock",
     paragraphs: [
-      "Fui em 3 Full Moon Parties em 3 anos diferentes pra confirmar o que muda e o que se repete. Morei 12 dias em Sri Thanu testando 4 centros de yoga e 3 de massagem. E rodei a ilha 2 vezes de scooter pra mapear as 17 praias.",
+      "Fui em 3 Full Moon Parties em 3 anos diferentes pra confirmar o que muda e o que se repete. Morei 12 dias em Sri Thanu testando 4 centros de yoga e 3 de massagem. Rodei a ilha 2 vezes de scooter pra mapear as 17 praias. Mergulhei 6 vezes em Sail Rock pra cruzar visibilidade com calendário e operadora.",
       "Esse guia é pra você não aprender Phangan do jeito difícil — porque o jeito difícil em Phangan pode acabar mal.",
     ],
-    bullets: ["3 Full Moons documentadas", "12 dias em Sri Thanu", "17 praias mapeadas", "4 centros yoga testados", "Protocolo anti-metanol testado in loco"],
+    bullets: ["3 Full Moons documentadas", "12 dias em Sri Thanu", "17 praias mapeadas", "4 centros yoga testados", "6 mergulhos em Sail Rock", "Protocolo anti-metanol testado in loco"],
   },
   modules: [
     { title: "Full Moon Party do zero", desc: "Tudo o que ninguém te conta antes de comprar passagem.", bullets: ["Calendário 24 meses", "Como chegar e voltar vivo", "Os 3 bares seguros", "Os 5 que devem ser evitados", "Sobrevivência financeira (orçamento real)"] },
@@ -491,13 +501,25 @@ const phangan = make(ilhasMeta[3], {
     { title: "Hospedagem por perfil e por mês", desc: "Festa, wellness, mochileiro, casal — e como o preço dobra na Full Moon.", bullets: ["Haad Rin (só pra festa)", "Sri Thanu boutique e budget", "Chaloklum bangalô", "Thong Nai Pan premium", "Quando reservar (e com quanta antecedência)"] },
     { title: "Transfer e mobilidade", desc: "Como não pagar o dobro chegando ou rodando a ilha.", bullets: ["Ferry de Samui e Tao", "Songthaew real x golpe", "Aluguel de scooter seguro", "Estradas perigosas mapeadas", "Apps que funcionam em Phangan"] },
     { title: "Yoga, massagem e retiros", desc: "Sri Thanu é Mecca de wellness — separe sério de marketing.", bullets: ["Os 3 estúdios sérios", "Retiros de 5 a 10 dias", "Massagem real x turística", "Detox e jejum responsáveis", "O que evitar (cura milagrosa, etc.)"] },
+    { title: "Mergulho em Sail Rock e Chumphon", desc: "Visibilidade real, janela de whale shark, operadora certa em Chaloklum.", bullets: ["Sail Rock chimney 18m", "Chumphon Pinnacle", "Lotus Diving Chaloklum", "Janela Mar-Mai whale shark", "Mergulho avançado, não primeiro"] },
+    { title: "Ang Thong, pesca e barco-dia", desc: "Mar grande saindo de Phangan, com operadora certa.", bullets: ["Ang Thong speedboat", "Camping Koh Wua Talab", "Pesca tradicional Chaloklum", "Squid fishing noturno", "Around-the-island longtail"] },
+    { title: "Família com kids em Phangan", desc: "Bairros OK, hospital, datas a evitar.", bullets: ["Thong Nai Pan premium", "Haad Salad calmo", "Bandon Hospital Thong Sala", "Praias rasas seguras", "Evitar semana de festa"] },
+    { title: "Conservação e turismo responsável", desc: "Como não destruir o que veio ver.", bullets: ["Protetor reef-safe obrigatório", "Distância de tartaruga e whale shark", "Trash Hero pós-Full Moon", "Plástico de uso único", "Operadoras eco-certificadas"] },
+    { title: "Como e quando reservar tudo", desc: "Antecedência por cenário, OTA certa, flash sales.", bullets: ["Full Moon: 60-90 dias", "Sri Thanu Nov-Mar: 45 dias", "Premium Dez-Mar: 60-90 dias", "Anantara flash sale Ago-Set", "Ferry: 12go ou Lomprayah direto"] },
   ],
   bonuses: [
     { title: "Calendário Full Moon 24 meses", desc: "Datas das próximas 24 Full Moon, Half Moon e Black Moon Parties.", value: "R$ 47" },
     { title: "Protocolo anti-metanol", desc: "Como identificar bebida adulterada antes de beber. PDF de 1 página.", value: "R$ 87" },
     { title: "Mapa Google offline da ilha", desc: "Praias, hotéis, estúdios de yoga e estradas perigosas marcadas.", value: "R$ 67" },
     { title: "Tabela de transfer Full Moon", desc: "Preço real do porto a cada bairro em dia normal vs. dia de festa.", value: "R$ 47" },
+    { title: "Comparativo Phangan × Tao × Samui", desc: "Tabela de 8 dimensões pra decidir entre as 3 ilhas do Golfo.", value: "R$ 57" },
+    { title: "Mapa de scooter com tempos cronometrados", desc: "8 trechos da ilha com tempo real e nível de dificuldade.", value: "R$ 37" },
+    { title: "Tabela de visibilidade Sail Rock + Chumphon", desc: "Mês-a-mês com janela whale shark e operadora certa.", value: "R$ 47" },
+    { title: "Guia das 5 praias remotas", desc: "Bottle, Than Sadet, Mae Haad, Haad Yuan, Haad Khom — como chegar e onde dormir.", value: "R$ 57" },
+    { title: "Pacote família com kids", desc: "Bairros OK, hospital, praias seguras, datas a evitar.", value: "R$ 37" },
+    { title: "Checklist de reserva por antecedência", desc: "Quando reservar cada cenário, OTA certa, flash sales.", value: "R$ 37" },
   ],
+
   testimonials: [
     { name: "Vinícius Ramos", city: "Belo Horizonte, MG", text: "Cheguei 4 dias antes da Full Moon seguindo o calendário do guia. Hotel em Sri Thanu por 600 baht/noite, fiquei na zen total, e no dia da festa fui de táxi compartilhado. Voltei sem perder pertences — guia salvou minha viagem." },
     { name: "Larissa Penna", city: "Rio de Janeiro, RJ", text: "O protocolo anti-metanol parece exagero até você ler. Segui à risca, bebi só nos 3 bares indicados. Minha amiga não leu e acordou no hospital com lavagem estomacal. Sério. Esse capítulo paga o guia 1.000 vezes." },
