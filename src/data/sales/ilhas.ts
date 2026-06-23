@@ -433,7 +433,7 @@ const phiPhi = make(ilhasMeta[2], {
   ],
   finalCTA: {
     title: "Phi Phi é o sonho de quem sabe — e a decepção de quem não foi avisado",
-    subtitle: "A diferença entre \"superestimada\" e \"melhor dia da minha vida\" cabe num guia de R$ 67. Decida com informação, não com Instagram pago.",
+    subtitle: "A diferença entre voltar dizendo \"superestimada\" e voltar dizendo \"melhor dia da viagem\" cabe num guia de R$ 67. Baixa agora, lê em 1 hora, salva R$ 700 só no primeiro long-tail e no hotel certo.",
   },
 });
 
