@@ -512,6 +512,20 @@ const KohLipe2947 = () => {
             </div>
           </section>
 
+          <section id="walking">
+            <SectionTitle icon={Lightbulb} kicker="10 — Noite" title="Walking Street — único 'centro' de Lipe" />
+            <div className="grid md:grid-cols-2 gap-5">
+              {WALKING_STREET.map((w, i) => (
+                <Reveal key={w.titulo} i={i}>
+                  <article className="pk-card pk-card-tight h-full">
+                    <p className="pk-kicker">{w.titulo}</p>
+                    <p className="text-sm mt-2 text-[hsl(var(--pk-muted))]">{w.texto}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
           <section id="sunsets">
             <SectionTitle icon={Sunset} kicker="10 — Sunset" title="5 sunset spots ranqueados" />
             <div className="grid md:grid-cols-2 gap-5">
