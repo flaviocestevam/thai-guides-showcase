@@ -118,18 +118,18 @@ const silence: Retreat[] = [
 ];
 
 const donationOnly = [
-  { name: "Wat Suan Mokkh", city: "Surat Thani", note: "10 dias Vipassana + Anapanasati, calendário mensal" },
-  { name: "Wat Pa Tam Wua", city: "Mae Hong Son", note: "Aberto, vagas sempre, monges thai" },
-  { name: "Dhamma Kamala", city: "Prachinburi", note: "10 dias Goenka, calendário rígido" },
-  { name: "Dhamma Abha", city: "Phitsanulok", note: "Alternativa Goenka, mais vagas" },
-  { name: "International Forest Monastery (Wat Pah Nanachat)", city: "Ubon Ratchathani", note: "Ajahn Chah lineage, monges ocidentais" },
-  { name: "Wat Ram Poeng", city: "Chiang Mai", note: "Mahasi tradition, 26 dias completo" },
-  { name: "Doi Suthep Vipassana", city: "Chiang Mai", note: "3, 10 ou 21 dias, montanha" },
-  { name: "Wat Khao Tham", city: "Koh Phangan", note: "Único sério em ilha" },
-  { name: "Wat Mahathat Section 5", city: "Bangkok", note: "Intro de 3-7 dias no centro" },
-  { name: "Plum Village Thailand", city: "Pak Chong", note: "Thich Nhat Hanh, mindfulness" },
-  { name: "Wat Marp Jan", city: "Rayong", note: "Tradição Ajahn Chah, floresta" },
-  { name: "Sorn Thawee Meditation Centre", city: "Chachoengsao", note: "Mahasi, 7-30 dias, perto de Bangkok" },
+  { name: "Wat Suan Mokkh", city: "Surat Thani", note: "10 dias Vipassana + Anapanasati, calendário mensal", site: "https://www.suanmokkh-idh.org" },
+  { name: "Wat Pa Tam Wua", city: "Mae Hong Son", note: "Aberto, vagas sempre, monges thai", site: "https://www.watpatamwua.com" },
+  { name: "Dhamma Kamala", city: "Prachinburi", note: "10 dias Goenka, calendário rígido", site: "https://www.kamala.dhamma.org" },
+  { name: "Dhamma Abha", city: "Phitsanulok", note: "Alternativa Goenka, mais vagas", site: "https://www.abha.dhamma.org" },
+  { name: "International Forest Monastery (Wat Pah Nanachat)", city: "Ubon Ratchathani", note: "Ajahn Chah lineage, monges ocidentais", site: "https://www.watpahnanachat.org" },
+  { name: "Wat Ram Poeng", city: "Chiang Mai", note: "Mahasi tradition, 26 dias completo", site: "https://www.palikanon.com/vipassana/wat_rampoeng" },
+  { name: "Doi Suthep Vipassana", city: "Chiang Mai", note: "3, 10 ou 21 dias, montanha", site: "https://fivethousandyears.org" },
+  { name: "Wat Khao Tham", city: "Koh Phangan", note: "Único sério em ilha", site: "https://www.watkowtahm.org" },
+  { name: "Wat Mahathat Section 5", city: "Bangkok", note: "Intro de 3-7 dias no centro", site: "https://www.mahachula.com" },
+  { name: "Plum Village Thailand", city: "Pak Chong", note: "Thich Nhat Hanh, mindfulness", site: "https://thaiplumvillage.org" },
+  { name: "Wat Marp Jan", city: "Rayong", note: "Tradição Ajahn Chah, floresta", site: "https://www.watmarpjan.org" },
+  { name: "Sorn Thawee Meditation Centre", city: "Chachoengsao", note: "Mahasi, 7-30 dias, perto de Bangkok", site: "https://www.sornthawee.org" },
 ];
 
 const Retiros8834 = () => (
