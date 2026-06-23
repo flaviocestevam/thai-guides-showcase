@@ -22,8 +22,93 @@ const TOC = [
   { id: "roteiros", label: "Roteiros", icon: Sun },
   { id: "antigolpe", label: "Anti-golpe", icon: ShieldCheck },
   { id: "blacklist", label: "Lista negra", icon: XCircle },
+  { id: "cachoeiras", label: "Cachoeira mês a mês", icon: Sun },
+  { id: "ferries", label: "Ferries", icon: Ship },
+  { id: "checklist", label: "Checklist viagem", icon: ShieldCheck },
+  { id: "conectividade", label: "SIM & Wi-Fi", icon: MapPin },
+  { id: "dinheiro", label: "ATM & câmbio", icon: Wallet },
+  { id: "erros", label: "Erros caros", icon: AlertTriangle },
   { id: "mapa", label: "Mapa", icon: MapIcon },
   { id: "orcamento", label: "Orçamento", icon: Wallet },
+];
+
+const CACHOEIRAS_MES: { mes: string; status: string; oque: string; tone: Tone }[] = [
+  { mes: "Janeiro", status: "Fraca", oque: "Fio d'água. Klong Plu vira piscina rasa. Pule a entrada de 200 baht.", tone: "warn" },
+  { mes: "Fevereiro", status: "Seca", oque: "Klong Plu e Khlong Nonsi praticamente secas. Than Mayom ainda escorre.", tone: "alert" },
+  { mes: "Março", status: "Seca", oque: "Pior mês. Foque em praia e snorkel.", tone: "alert" },
+  { mes: "Abril", status: "Fraca", oque: "Começam chuvas pontuais. Volume ainda baixo.", tone: "warn" },
+  { mes: "Maio", status: "Boa", oque: "Klong Plu volta a ter queda. Vale a entrada.", tone: "ok" },
+  { mes: "Junho", status: "Cheia", oque: "Volume forte. Cuidado com pedra escorregadia.", tone: "ok" },
+  { mes: "Julho", status: "Cheia", oque: "Pico de volume. Janela de ouro pra cachoeira.", tone: "premium" },
+  { mes: "Agosto", status: "Cheia", oque: "Forte mesmo. Algumas trilhas alagam — Than Mayom ainda OK.", tone: "premium" },
+  { mes: "Setembro", status: "Cheia", oque: "Última grande janela. Chuva forte intercalada.", tone: "premium" },
+  { mes: "Outubro", status: "Cheia + perigosa", oque: "Volume máximo, mas correnteza pode ser perigosa. Não nade na base.", tone: "warn" },
+  { mes: "Novembro", status: "Boa", oque: "Volume cai, mar volta a ficar bom. Combo cachoeira+praia.", tone: "ok" },
+  { mes: "Dezembro", status: "Média", oque: "Klong Plu ainda escorre. Volume diminuindo.", tone: "info" },
+];
+
+const FERRIES = [
+  { rota: "Bangkok (Ekamai) → Trat", op: "999 / Cherdchai bus", saidas: "05h-23h (10/dia)", duracao: "5h-6h", preco: "250-300 baht" },
+  { rota: "Bangkok (Suvarnabhumi) → Trat (voo)", op: "Bangkok Airways", saidas: "06h45 / 10h45 / 14h25", duracao: "1h", preco: "2.500-4.000 baht" },
+  { rota: "Trat (Centerpoint) → Koh Chang (Dan Kao)", op: "Centerpoint Ferry", saidas: "06h-19h (cada hora)", duracao: "45 min", preco: "80 baht" },
+  { rota: "Trat (Ao Thammachat) → Koh Chang (Sapparot)", op: "Ferry Koh Chang", saidas: "06h30-19h (cada 45 min)", duracao: "30 min", preco: "80 baht" },
+  { rota: "Koh Chang → Koh Mak (alta temporada)", op: "Bang Bao Boat", saidas: "09h / 13h (out-mai)", duracao: "1h", preco: "450 baht" },
+  { rota: "Koh Chang → Koh Kood (alta temporada)", op: "Boonsiri / Bang Bao", saidas: "10h30 / 13h30 (nov-mai)", duracao: "1h30-2h", preco: "650-800 baht" },
+  { rota: "Koh Chang → Koh Wai", op: "Bang Bao Boat", saidas: "09h (nov-mai)", duracao: "45 min", preco: "400 baht" },
+  { rota: "Koh Chang → Cambodia (Koh Kong border)", op: "Minivan + ferry", saidas: "07h30 (1/dia)", duracao: "4h", preco: "900 baht" },
+];
+
+const CHECKLIST = [
+  { item: "Seguro viagem com cobertura para scooter", quando: "Antes de embarcar. Maioria dos sinistros em Chang é moto. Sem PID brasileira não cobre.", critico: true },
+  { item: "PID — Permissão Internacional para Dirigir", quando: "Tira no Detran do seu estado, 90 dias antes. Polícia em White Sand abre blitz semanal.", critico: true },
+  { item: "Bloqueador reef-safe (sem oxybenzone)", quando: "Obrigatório no Koh Rang National Park. Compre antes — em Chang sai 3x.", critico: false },
+  { item: "Repelente forte (DEET 30%+)", quando: "Selva, cachoeira e Salakphet têm mosquito sério. Icaridina também serve.", critico: false },
+  { item: "Sapato fechado para trilha", quando: "Trilha pra Long Beach (Hat Yao) e Klong Plu pedem solado. Havaiana não dá.", critico: false },
+  { item: "Cópia digital do passaporte + visto", quando: "Foto no celular + e-mail pra você mesmo. Resort guarda original; cópia resolve check-ins.", critico: false },
+  { item: "Vacina febre amarela (se vier do Brasil)", quando: "Tailândia não exige, mas se você fizer escala em país endêmico, sim.", critico: false },
+  { item: "Dinheiro em baht antes de chegar à ilha", quando: "Saque grande em Bangkok ou aeroporto. ATMs em Chang cobram 220 baht/saque.", critico: false },
+];
+
+const CONECTIVIDADE = [
+  { onde: "White Sand / Klong Prao / Kai Bae", sinal: "5G AIS/True ótimo", obs: "Wi-Fi em todo café. 15 Palms, Toh Pho Bakery, Magic Garden funcionam para trabalho remoto." },
+  { onde: "Lonely Beach / Bailan", sinal: "4G estável", obs: "Sinal cai à noite quando lota. Wi-Fi de hostel é lento — pague café." },
+  { onde: "Bang Bao / Klong Kloi", sinal: "4G médio", obs: "Pier tem cobertura; resort isolado ao sul varia." },
+  { onde: "Salakphet / Long Beach / interior", sinal: "3G fraco a nulo", obs: "Trilha pra Hat Yao perde sinal. Baixe Maps offline antes." },
+  { onde: "Cachoeiras (Klong Plu, Than Mayom)", sinal: "Sem sinal", obs: "Combine ponto de encontro antes de entrar na trilha." },
+];
+
+const ESIM_DICAS = [
+  { o_que: "eSIM Airalo / Holafly (recomendado)", como: "Plano Tailândia 10GB / 30 dias ~ US$ 18. Ativa no avião. Funciona em Chang inteiro." },
+  { o_que: "Chip físico AIS Traveller", como: "7-Eleven de Trat ou aeroporto. 299 baht / 8 dias ilimitado. Precisa passaporte." },
+  { o_que: "True Tourist SIM", como: "Mesma faixa. Em Chang, AIS pega melhor no leste (Salakphet)." },
+  { o_que: "Roaming brasileiro", como: "Vivo/Claro/Tim R$ 35-60/dia. Só vale 1-2 dias." },
+];
+
+const DINHEIRO = [
+  { topico: "ATM padrão tailandês", detalhe: "220 baht de taxa fixa por saque, qualquer valor. Saque 20.000 baht de uma vez em Bangkok antes de chegar." },
+  { topico: "Aeon Bank (White Sand)", detalhe: "Cobra 150 baht (vs 220). Único Aeon na ilha, perto do 7-Eleven principal." },
+  { topico: "Casas de câmbio", detalhe: "Em Chang taxa é 3-5% pior que Bangkok. Traga baht do continente quando puder." },
+  { topico: "Cartão Wise / Nomad", detalhe: "Câmbio próximo do oficial, IOF zero. Paga taxa do ATM ainda, mas spread vale." },
+  { topico: "Dinheiro em todo lugar", detalhe: "Songthaew, night market, massagem de praia, scooter: só cash. Cartão só em resort e supermercado grande." },
+  { topico: "Caução do scooter", detalhe: "Pague em DINHEIRO, nunca passaporte. Sem exceção. Filme entrega e devolução." },
+];
+
+const NIGHT_MARKETS = [
+  { nome: "Night Market de White Sand", quando: "Diário, 17h-23h", oque: "Pad thai 60 baht, mango sticky rice 50, espetinho 20.", endereco: "Final norte da rua principal de White Sand" },
+  { nome: "Night Market de Klong Prao", quando: "Diário, 18h-22h", oque: "Curry massaman 80 baht, peixe grelhado 150, suco fresco 40.", endereco: "Ao lado do Tesco Lotus de Klong Prao" },
+  { nome: "Bang Bao Pier (jantar local)", quando: "Diário, 18h-22h", oque: "Frutos do mar 120-200, garoupa fresca 250, papaya salad 60.", endereco: "Final do pier de Bang Bao, lado esquerdo" },
+  { nome: "Salakphet vila", quando: "Diário, 17h-21h", oque: "Pesca do dia 100-180, sopa tom yum 80, congee 40.", endereco: "Rua principal da vila de Salakphet" },
+];
+
+const ERROS_CAROS = [
+  { erro: "Reservou White Sand achando que era selvagem", custo: "Viagem inteira", licao: "White Sand é o lado turístico. Lonely é mochileiro, Klong Prao é família, Salakphet é autêntico. Escolha pelo perfil." },
+  { erro: "Perdeu o último ferry às 19h em Trat", custo: "+R$ 80 + dia perdido", licao: "Último ferry varia por temporada. Tem que estar no Centerpoint até 18h30 com folga." },
+  { erro: "Pagou 'santuário' com banho em elefante", custo: "Tortura financiada", licao: "Único ético em Chang é Ban Kwan Chang. Qualquer banho/montaria/foto em cima = exploração." },
+  { erro: "Foi a Klong Plu em fevereiro", custo: "R$ 60 + tempo", licao: "Janela boa = jul-out. Em fev-mar a cachoeira está seca. Cheque a tabela mensal antes." },
+  { erro: "Alugou scooter sem filmar 360°", custo: "+R$ 2.000-3.500", licao: "Arranhão prévio vira 5-12k baht na devolução. Filme tudo, contrato em inglês, caução em dinheiro." },
+  { erro: "Comeu em restaurante de praia turístico", custo: "+R$ 60/refeição", licao: "Cardápio com foto = preço x3. Night market a 50m serve melhor por R$ 12." },
+  { erro: "Ficou só no norte e voltou", custo: "70% da ilha perdido", licao: "Bang Bao, Long Beach e Salakphet têm o melhor sunset e a melhor comida. Reserve mín. 2 noites no sul." },
+  { erro: "Sacou 4× no ATM em vez de 1×", custo: "+R$ 50", licao: "4 × 220 baht = 880 baht jogados fora. Saque uma vez grande em Trat ou use Aeon em White Sand." },
 ];
 
 const BAIRROS: { nome: string; veredito: string; tone: Tone; perfil: string; evite: string; praia: string; quanto: string; quando: string; }[] = [
