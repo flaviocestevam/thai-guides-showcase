@@ -60,6 +60,7 @@ import KohTao6294 from "./pages/KohTao6294.tsx";
 import KohChang3517 from "./pages/KohChang3517.tsx";
 import KohLanta4831 from "./pages/KohLanta4831.tsx";
 import KohLipe2947 from "./pages/KohLipe2947.tsx";
+import KohKood7841 from "./pages/KohKood7841.tsx";
 import IlhaPage from "./pages/IlhaPage.tsx";
 import { ilhasMeta } from "./data/sales/ilhas";
 import ExportCopyAuditoria from "./pages/ExportCopyAuditoria.tsx";
