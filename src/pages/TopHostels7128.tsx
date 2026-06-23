@@ -362,7 +362,7 @@ const TopHostels7128 = () => (
         <p><strong>3. Localização Google falsa</strong></p>
         <p>Hostel marca "Patong Beach" mas fica 2km da praia subindo morro. <strong>Sempre cole o endereço no Google Maps e meça a distância até o que importa pra você.</strong></p>
       </Card>
-      <Call attention to: nota baixa em quesito específico.</p>
+      
       <Card>
         <p><strong>4. Nota geral 8.5 mas...</strong></p>
         <p>...com "limpeza 7.2" = sujo. "Localização 6.8" = longe. "Sono 6.5" = barulho. <strong>Sempre olhe os sub-scores, nunca a média.</strong></p>
