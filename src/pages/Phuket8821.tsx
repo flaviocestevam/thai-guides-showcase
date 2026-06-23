@@ -12,6 +12,21 @@ import {
 // Rota privada: /phuket8821
 // ============================================================================
 
+// Helper: link para Google Maps de qualquer lugar/região citado
+const gmap = (q: string) =>
+  `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q + ", Phuket, Thailand")}`;
+
+const G = ({ q, children, className = "" }: { q?: string; children: React.ReactNode; className?: string }) => (
+  <a
+    href={gmap(q ?? (typeof children === "string" ? children : ""))}
+    target="_blank"
+    rel="noreferrer"
+    className={`underline decoration-emerald-400/40 underline-offset-2 hover:decoration-emerald-300 hover:text-emerald-300 transition ${className}`}
+  >
+    {children}
+  </a>
+);
+
 const TOC = [
   { id: "comeco", label: "Antes de tudo", icon: Compass },
   { id: "bairros", label: "9 bairros decodificados", icon: Home },
@@ -329,7 +344,7 @@ const Phuket8821 = () => {
               <Card key={b.nome} className={`${b.cor} border`}>
                 <CardHeader className="pb-3">
                   <div className="flex items-start justify-between gap-2">
-                    <CardTitle className="text-xl">{b.nome}</CardTitle>
+                    <CardTitle className="text-xl"><G>{b.nome}</G></CardTitle>
                     <Badge variant="outline" className="text-[10px] whitespace-nowrap">{b.veredito}</Badge>
                   </div>
                 </CardHeader>
@@ -353,7 +368,7 @@ const Phuket8821 = () => {
             {PRAIAS.map((p) => (
               <Card key={p.nome} className="border-emerald-500/15">
                 <CardContent className="p-5 space-y-1.5">
-                  <h3 className="font-display font-bold text-lg">{p.nome}</h3>
+                  <h3 className="font-display font-bold text-lg"><G>{p.nome}</G></h3>
                   <p className="text-sm text-emerald-300">{p.perfil}</p>
                   <p className="text-sm text-muted-foreground">{p.como}</p>
                 </CardContent>
@@ -362,7 +377,7 @@ const Phuket8821 = () => {
           </div>
           <Card className="mt-6 border-amber-500/30 bg-amber-500/5">
             <CardContent className="p-5 text-sm">
-              <strong className="text-amber-300">Bandeira vermelha = NÃO ENTRE.</strong> Maio a outubro a costa oeste tem correntes mortais. Salva-vidas em Karon, Kata, Patong e Surin. Em Bang Tao e Nai Harn, depende do hotel.
+              <strong className="text-amber-300">Bandeira vermelha = NÃO ENTRE.</strong> Maio a outubro a costa oeste tem correntes mortais. Salva-vidas em <G>Karon Beach</G>, <G>Kata Beach</G>, <G>Patong Beach</G> e <G>Surin Beach</G>. Em <G>Bang Tao Beach</G> e <G>Nai Harn Beach</G>, depende do hotel.
             </CardContent>
           </Card>
         </section>
@@ -375,36 +390,36 @@ const Phuket8821 = () => {
             <Card className="border-emerald-500/20">
               <CardHeader><CardTitle className="text-lg">Mochileiro (R$ 45-120)</CardTitle></CardHeader>
               <CardContent className="text-sm space-y-2">
-                <p><strong>Lub d Patong</strong> — hostel design, piscina, bar ativo.</p>
-                <p><strong>Bodega Phuket Old Town</strong> — melhor pra cultura.</p>
-                <p><strong>Phuket Backpacker Hostel (Kata)</strong> — cama R$ 50, perto da praia.</p>
-                <p><strong>Bedrock Kata</strong> — boutique-hostel, casais.</p>
+                <p><strong><G>Lub d Phuket Patong</G></strong> — hostel design, piscina, bar ativo.</p>
+                <p><strong><G>Bodega Phuket Old Town</G></strong> — melhor pra cultura.</p>
+                <p><strong><G>Phuket Backpacker Hostel Kata</G></strong> — cama R$ 50, perto da praia.</p>
+                <p><strong><G>Bedrock Hostel Kata</G></strong> — boutique-hostel, casais.</p>
               </CardContent>
             </Card>
             <Card className="border-emerald-500/20">
               <CardHeader><CardTitle className="text-lg">Médio (R$ 200-500)</CardTitle></CardHeader>
               <CardContent className="text-sm space-y-2">
-                <p><strong>The Old Phuket (Karon)</strong> — piscina dupla, café incrível.</p>
-                <p><strong>Sugar Marina Surf (Kata)</strong> — pé na praia.</p>
-                <p><strong>Casa Blanca Boutique (Phuket Town)</strong> — sino-portuguesa.</p>
-                <p><strong>Aleenta Phuket (Layan)</strong> — adults only.</p>
+                <p><strong><G>The Old Phuket Karon Beach Resort</G></strong> — piscina dupla, café incrível.</p>
+                <p><strong><G>Sugar Marina Resort Surf Kata</G></strong> — pé na praia.</p>
+                <p><strong><G>Casa Blanca Boutique Hotel Phuket Town</G></strong> — sino-portuguesa.</p>
+                <p><strong><G>Aleenta Phuket Phang Nga Resort Layan</G></strong> — adults only.</p>
               </CardContent>
             </Card>
             <Card className="border-emerald-500/20">
               <CardHeader><CardTitle className="text-lg">Premium (R$ 700-3000+)</CardTitle></CardHeader>
               <CardContent className="text-sm space-y-2">
-                <p><strong>The Nai Harn</strong> — vista mítica, melhor sunset de Phuket.</p>
-                <p><strong>Banyan Tree Bang Tao</strong> — pool villa clássico.</p>
-                <p><strong>Trisara Phuket</strong> — top 3 da Tailândia.</p>
-                <p><strong>Keemala</strong> — vilas-ninho na floresta, lua de mel.</p>
+                <p><strong><G>The Nai Harn Phuket</G></strong> — vista mítica, melhor sunset de Phuket.</p>
+                <p><strong><G>Banyan Tree Phuket Bang Tao</G></strong> — pool villa clássico.</p>
+                <p><strong><G>Trisara Phuket</G></strong> — top 3 da Tailândia.</p>
+                <p><strong><G>Keemala Phuket</G></strong> — vilas-ninho na floresta, lua de mel.</p>
               </CardContent>
             </Card>
           </div>
           <Card className="mt-5 border-red-500/30 bg-red-500/5">
             <CardContent className="p-5 text-sm">
-              <strong className="text-red-300">REJEITADOS:</strong> Patong Beach Hotel (cheiro mofo, mar sujo na frente),
-              Phuket Graceland (avaliações falsas, paredes finas),
-              qualquer hotel na "Soi Bangla" (som de balada 24h).
+              <strong className="text-red-300">REJEITADOS:</strong> <G>Patong Beach Hotel</G> (cheiro mofo, mar sujo na frente),
+              <G>Phuket Graceland Resort</G> (avaliações falsas, paredes finas),
+              qualquer hotel na <G q="Soi Bangla Patong">"Soi Bangla"</G> (som de balada 24h).
             </CardContent>
           </Card>
         </section>
@@ -422,7 +437,7 @@ const Phuket8821 = () => {
                 <tbody>
                   {TRANSFER.map((r, i) => (
                     <tr key={i} className="border-t border-emerald-500/10">
-                      <td className="p-3">{r.destino}</td>
+                      <td className="p-3"><G q={r.destino.replace("Aeroporto", "Phuket International Airport").replace("→", "to")}>{r.destino}</G></td>
                       <td className="p-3 text-emerald-300">{r.bolt}</td>
                       <td className="p-3 text-muted-foreground">{r.taxi}</td>
                       <td className="p-3">{r.tempo}</td>
@@ -451,9 +466,9 @@ const Phuket8821 = () => {
             <Card className="border-emerald-500/30 bg-emerald-500/5">
               <CardHeader><CardTitle className="text-lg">Locadoras testadas</CardTitle></CardHeader>
               <CardContent className="text-sm space-y-2">
-                <p><strong>Cat Motors (Kata, Patong)</strong> — top da Tailândia, contrato em inglês, fotos digitais, sem passaporte.</p>
-                <p><strong>Mr Mechanic (Kata)</strong> — local, honesto, manuten. boa.</p>
-                <p><strong>BB Bikes (Phuket Town)</strong> — para long-stay.</p>
+                <p><strong><G>Cat Motors Phuket</G></strong> (Kata, Patong) — top da Tailândia, contrato em inglês, fotos digitais, sem passaporte.</p>
+                <p><strong><G>Mr Mechanic Kata Phuket</G></strong> — local, honesto, manuten. boa.</p>
+                <p><strong><G>BB Bikes Phuket Town</G></strong> — para long-stay.</p>
                 <p>Diária: 200-300 baht (Honda Click 125). Mensal: 3.500-4.500.</p>
               </CardContent>
             </Card>
@@ -482,7 +497,7 @@ const Phuket8821 = () => {
               <Card key={d.tour} className="border-emerald-500/20">
                 <CardContent className="p-5 grid md:grid-cols-5 gap-3 text-sm">
                   <div className="md:col-span-2">
-                    <h3 className="font-display font-bold text-lg mb-1">{d.tour}</h3>
+                    <h3 className="font-display font-bold text-lg mb-1"><G q={d.tour + " Thailand"}>{d.tour}</G></h3>
                     <p className="text-emerald-300 text-xs">{d.barco}</p>
                   </div>
                   <div><strong className="text-xs text-muted-foreground">Quando</strong><p>{d.quando}</p></div>
@@ -504,8 +519,8 @@ const Phuket8821 = () => {
               <Card key={c.lugar} className="border-emerald-500/15">
                 <CardContent className="p-5">
                   <div className="flex justify-between items-start mb-1">
-                    <h3 className="font-display font-bold">{c.lugar}</h3>
-                    <Badge variant="outline" className="text-[10px]">{c.bairro}</Badge>
+                    <h3 className="font-display font-bold"><G q={`${c.lugar} ${c.bairro} Phuket`}>{c.lugar}</G></h3>
+                    <Badge variant="outline" className="text-[10px]"><G q={`${c.bairro} Phuket`}>{c.bairro}</G></Badge>
                   </div>
                   <p className="text-sm text-muted-foreground mb-2">{c.oque}</p>
                   <p className="text-sm text-emerald-300">{c.preco}</p>
@@ -523,7 +538,7 @@ const Phuket8821 = () => {
         {/* ROTEIROS */}
         <section id="roteiros">
           <h2 className="text-3xl font-display font-bold mb-2 flex items-center gap-3"><Sun className="text-emerald-400" /> Roteiros prontos — 3, 5, 7 e 10 dias</h2>
-          <p className="text-muted-foreground mb-6">Base recomendada: Kata (custo-benefício) ou Bang Tao (premium). Ajuste por bairro de hospedagem.</p>
+          <p className="text-muted-foreground mb-6">Base recomendada: <G>Kata Beach</G> (custo-benefício) ou <G>Bang Tao Beach</G> (premium). Ajuste por bairro de hospedagem.</p>
           <div className="grid md:grid-cols-2 gap-5">
             {ROTEIROS.map((r) => (
               <Card key={r.dias} className="border-emerald-500/20">
@@ -562,14 +577,14 @@ const Phuket8821 = () => {
             <Card className="border-red-500/30 bg-red-500/5">
               <CardHeader><CardTitle className="text-lg text-red-300">EVITAR</CardTitle></CardHeader>
               <CardContent className="text-sm">
-                <ul className="space-y-2">{BLACKLIST.map((b, i) => <li key={i} className="flex gap-2"><XCircle className="w-4 h-4 text-red-400 shrink-0 mt-0.5" /> {b}</li>)}</ul>
+                <ul className="space-y-2">{BLACKLIST.map((b, i) => <li key={i} className="flex gap-2"><XCircle className="w-4 h-4 text-red-400 shrink-0 mt-0.5" /> <G q={b + " Phuket tour"}>{b}</G></li>)}</ul>
               </CardContent>
             </Card>
             <Card className="border-emerald-500/30 bg-emerald-500/5">
               <CardHeader><CardTitle className="text-lg text-emerald-300">3 OPERADORAS QUE VALEM</CardTitle></CardHeader>
               <CardContent className="text-sm">
                 <ul className="space-y-2.5">{APROVADAS.map((a) => (
-                  <li key={a.nome}><strong className="text-emerald-300">{a.nome}</strong> — {a.oque}</li>
+                  <li key={a.nome}><strong className="text-emerald-300"><G q={a.nome + " Phuket Thailand"}>{a.nome}</G></strong> — {a.oque}</li>
                 ))}</ul>
               </CardContent>
             </Card>
