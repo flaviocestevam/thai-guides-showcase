@@ -16,16 +16,23 @@ import {
 const gmap = (q: string) =>
   `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q + ", Phuket, Thailand")}`;
 
-const G = ({ q, children, className = "" }: { q?: string; children: React.ReactNode; className?: string }) => (
-  <a
-    href={gmap(q ?? (typeof children === "string" ? children : ""))}
-    target="_blank"
-    rel="noreferrer"
-    className={`underline decoration-emerald-400/40 underline-offset-2 hover:decoration-emerald-300 hover:text-emerald-300 transition ${className}`}
-  >
-    {children}
-  </a>
-);
+const G = ({ q, children, className = "" }: { q?: string; children: React.ReactNode; className?: string }) => {
+  const query = q ?? (typeof children === "string" ? children : "");
+  return (
+    <span className={`inline-flex items-baseline gap-1.5 ${className}`}>
+      <span>{children}</span>
+      <a
+        href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query + ", Phuket, Thailand")}`}
+        target="_blank"
+        rel="noreferrer"
+        title={`Abrir ${query} no Google Maps`}
+        className="inline-flex items-center gap-1 text-[10px] font-medium px-1.5 py-0.5 rounded-md border border-emerald-500/30 bg-emerald-500/10 text-emerald-300 hover:bg-emerald-500/20 transition no-underline align-middle"
+      >
+        📍 Mapa
+      </a>
+    </span>
+  );
+};
 
 const TOC = [
   { id: "comeco", label: "Antes de tudo", icon: Compass },
