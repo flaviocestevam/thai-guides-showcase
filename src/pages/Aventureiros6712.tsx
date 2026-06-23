@@ -241,6 +241,14 @@ const Aventureiros6712 = () => (
             <p className="font-semibold text-foreground text-sm">Protocolo de emergência</p>
             <p className="text-xs text-muted-foreground">Heli, hospitais, embaixada</p>
           </a>
+          <a href="#pagamento" className="block bg-card border border-border rounded-lg p-3 hover:border-primary transition">
+            <p className="font-semibold text-foreground text-sm">Como pagar cada operadora</p>
+            <p className="text-xs text-muted-foreground">Método seguro por tipo</p>
+          </a>
+          <a href="#familia" className="block bg-card border border-border rounded-lg p-3 hover:border-primary transition">
+            <p className="font-semibold text-foreground text-sm">Aventura em família</p>
+            <p className="text-xs text-muted-foreground">O que rola com criança 8+</p>
+          </a>
           <a href="#khao-sok" className="block bg-card border border-border rounded-lg p-3 hover:border-primary transition">
             <p className="font-semibold text-foreground text-sm">Khao Sok Jungle Trek</p>
             <p className="text-xs text-muted-foreground">Roteiro 4 dias completo</p>
