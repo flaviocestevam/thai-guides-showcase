@@ -570,19 +570,182 @@ const KohChang3517 = () => {
             </div>
           </section>
 
-          <section id="mapa">
-            <SectionTitle icon={MapIcon} kicker="13 — Mapa" title="Mapa Google interativo (offline)" />
+          <section id="cachoeiras">
+            <SectionTitle icon={Sun} kicker="13 — Janela da selva" title="Cachoeira mês a mês — para não pagar ingresso à toa" />
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {CACHOEIRAS_MES.map((c, i) => (
+                <Reveal key={c.mes} i={i}>
+                  <article className={`pk-card pk-card-tight ${TONE_CLASS[c.tone]} h-full`}>
+                    <div className="flex justify-between items-baseline">
+                      <h3 className="pk-h4">{c.mes}</h3>
+                      <span className="pk-tag-sm">{c.status}</span>
+                    </div>
+                    <p className="text-sm text-[hsl(var(--pk-muted))] mt-2">{c.oque}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
             <Reveal>
-              <div className="pk-card space-y-4 text-sm leading-relaxed">
-                <p>Cada bairro, praia, cachoeira, restaurante e locadora tem o chip <span className="pk-map-chip pk-map-chip-inline"><MapPin className="w-3 h-3" /> Mapa</span> ao lado — toque e abre no Google Maps.</p>
-                <p>
-                  <strong className="pk-gold">Abrir Koh Chang no Google Maps:</strong>{" "}
-                  <a href="https://www.google.com/maps/place/Ko+Chang,+Thailand" target="_blank" rel="noreferrer" className="pk-link">ver ilha inteira</a>.
-                </p>
-                <p><strong>Como salvar offline:</strong> Google Maps → menu → "Mapas offline" → enquadre Koh Chang + Mak + Kood → baixar. 4G é fraco no leste.</p>
+              <div className="pk-callout pk-callout-info mt-8">
+                <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5" />
+                <p><strong>Resumo:</strong> jul-set é janela de ouro. Out cheia mas perigosa pra nadar. Fev-mar = pule cachoeira, foque em praia.</p>
               </div>
             </Reveal>
           </section>
+
+          <section id="ferries">
+            <SectionTitle icon={Ship} kicker="14 — Logística" title="Tabela completa de ferries e transporte" />
+            <Reveal>
+              <div className="pk-card pk-card-tight overflow-x-auto">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className="text-left text-[hsl(var(--pk-muted))] border-b border-[hsl(var(--pk-line))]">
+                      <th className="py-3 pr-4">Rota</th>
+                      <th className="py-3 pr-4">Operadora</th>
+                      <th className="py-3 pr-4">Saídas</th>
+                      <th className="py-3 pr-4">Duração</th>
+                      <th className="py-3">Preço</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {FERRIES.map((f) => (
+                      <tr key={f.rota + f.op} className="border-b border-[hsl(var(--pk-line))]/40 align-top">
+                        <td className="py-3 pr-4 font-semibold text-[hsl(var(--pk-fg))]">{f.rota}</td>
+                        <td className="py-3 pr-4">{f.op}</td>
+                        <td className="py-3 pr-4 whitespace-nowrap">{f.saidas}</td>
+                        <td className="py-3 pr-4 whitespace-nowrap">{f.duracao}</td>
+                        <td className="py-3 whitespace-nowrap">{f.preco}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </Reveal>
+            <Reveal>
+              <div className="pk-callout pk-callout-warn mt-6">
+                <AlertTriangle className="w-5 h-5 shrink-0 mt-0.5" />
+                <p><strong>Atenção sazonal:</strong> ferries para Koh Mak, Kood e Wai só rodam de <strong>nov-mai</strong>. Em jun-out (low season), use ferry público diário Bang Bao → Mak/Kood, mais lento e cancelável por mar agitado.</p>
+              </div>
+            </Reveal>
+          </section>
+
+          <section id="checklist">
+            <SectionTitle icon={ShieldCheck} kicker="15 — Antes de embarcar" title="Checklist do viajante em Chang" />
+            <div className="grid md:grid-cols-2 gap-4">
+              {CHECKLIST.map((c, i) => (
+                <Reveal key={c.item} i={i}>
+                  <article className={`pk-card pk-card-tight ${c.critico ? TONE_CLASS.alert : TONE_CLASS.ok} h-full`}>
+                    <h4 className="pk-h4 flex items-start gap-2">
+                      {c.critico ? <AlertTriangle className="w-4 h-4 mt-1 shrink-0" /> : <CheckCircle2 className="w-4 h-4 mt-1 shrink-0" />}
+                      {c.item}
+                    </h4>
+                    <p className="text-sm text-[hsl(var(--pk-muted))] mt-2">{c.quando}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="conectividade">
+            <SectionTitle icon={MapPin} kicker="16 — Sinal" title="SIM, eSIM e Wi-Fi por região" />
+            <div className="grid md:grid-cols-5 gap-6">
+              <div className="md:col-span-3 space-y-3">
+                {CONECTIVIDADE.map((c, i) => (
+                  <Reveal key={c.onde} i={i}>
+                    <article className="pk-card pk-card-tight">
+                      <div className="flex justify-between items-baseline gap-3">
+                        <h4 className="pk-h4">{c.onde}</h4>
+                        <span className="pk-tag-sm">{c.sinal}</span>
+                      </div>
+                      <p className="text-sm text-[hsl(var(--pk-muted))] mt-2">{c.obs}</p>
+                    </article>
+                  </Reveal>
+                ))}
+              </div>
+              <Reveal i={1} className="md:col-span-2">
+                <article className="pk-card pk-tone-premium h-full">
+                  <p className="pk-kicker">Como conectar</p>
+                  <ul className="mt-3 space-y-3 text-sm">
+                    {ESIM_DICAS.map((e) => (
+                      <li key={e.o_que}>
+                        <strong className="text-[hsl(var(--pk-fg))]">{e.o_que}</strong>
+                        <p className="text-[hsl(var(--pk-muted))] mt-0.5">{e.como}</p>
+                      </li>
+                    ))}
+                  </ul>
+                </article>
+              </Reveal>
+            </div>
+          </section>
+
+          <section id="dinheiro">
+            <SectionTitle icon={Wallet} kicker="17 — Bolso" title="ATM, câmbio e onde tailandês come (night markets)" />
+            <div className="grid md:grid-cols-2 gap-4 mb-10">
+              {DINHEIRO.map((d, i) => (
+                <Reveal key={d.topico} i={i}>
+                  <article className="pk-card pk-card-tight h-full">
+                    <h4 className="pk-h4">{d.topico}</h4>
+                    <p className="text-sm text-[hsl(var(--pk-muted))] mt-2">{d.detalhe}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+            <p className="pk-kicker mb-4">Night markets — comer por R$ 12, não R$ 80</p>
+            <div className="grid md:grid-cols-2 gap-4">
+              {NIGHT_MARKETS.map((n, i) => (
+                <Reveal key={n.nome} i={i}>
+                  <article className="pk-card pk-card-tight pk-tone-ok h-full">
+                    <div className="flex justify-between items-baseline gap-3">
+                      <h4 className="pk-h4"><G q={n.nome}>{n.nome}</G></h4>
+                      <span className="pk-tag-sm">{n.quando}</span>
+                    </div>
+                    <p className="text-sm text-[hsl(var(--pk-muted))] mt-2">{n.oque}</p>
+                    <p className="text-xs text-[hsl(var(--pk-muted))] mt-1 italic">{n.endereco}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="erros">
+            <SectionTitle icon={AlertTriangle} kicker="18 — Aprenda com o erro alheio" title="Erros que custaram caro de verdade" />
+            <div className="grid md:grid-cols-2 gap-4">
+              {ERROS_CAROS.map((e, i) => (
+                <Reveal key={e.erro} i={i}>
+                  <article className={`pk-card pk-card-tight ${TONE_CLASS.alert} h-full`}>
+                    <div className="flex justify-between items-start gap-3">
+                      <h4 className="pk-h4">{e.erro}</h4>
+                      <span className="pk-tag-sm whitespace-nowrap">{e.custo}</span>
+                    </div>
+                    <p className="text-sm text-[hsl(var(--pk-muted))] mt-2"><strong className="pk-gold">Lição:</strong> {e.licao}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="mapa">
+            <SectionTitle icon={MapIcon} kicker="19 — Mapa" title="Mapa Google interativo (offline)" />
+            <Reveal>
+              <div className="pk-card space-y-4 text-sm leading-relaxed">
+                <p>Cada bairro, praia, cachoeira, restaurante e locadora tem o chip <span className="pk-map-chip pk-map-chip-inline"><MapPin className="w-3 h-3" /> Mapa</span> ao lado — toque e abre no Google Maps.</p>
+                <div className="flex flex-wrap gap-3 pt-2">
+                  <a href="https://www.google.com/maps/place/Ko+Chang,+Thailand" target="_blank" rel="noreferrer" className="pk-tag inline-flex items-center gap-2"><MapIcon className="w-4 h-4" /> Abrir Koh Chang no Maps</a>
+                  <a href="https://www.google.com/maps/search/beach+Koh+Chang+Thailand" target="_blank" rel="noreferrer" className="pk-tag inline-flex items-center gap-2"><Waves className="w-4 h-4" /> Ver todas as praias</a>
+                  <a href="https://www.google.com/maps/search/waterfall+Koh+Chang+Thailand" target="_blank" rel="noreferrer" className="pk-tag inline-flex items-center gap-2"><Sun className="w-4 h-4" /> Ver cachoeiras</a>
+                </div>
+                <div className="pk-divider my-2" />
+                <p><strong className="pk-gold">Salvar lista no seu celular (3 passos):</strong></p>
+                <ol className="list-decimal pl-5 space-y-1 text-[hsl(var(--pk-muted))]">
+                  <li>Toque em qualquer chip 📍 <strong>Mapa</strong> deste guia → abre no Google Maps.</li>
+                  <li>No app, toque em <strong>"Salvar"</strong> → escolha lista <strong>"Quero ir"</strong> ou crie <strong>"Koh Chang 2026"</strong>.</li>
+                  <li>Repita para cada lugar. Abra a lista uma vez em Wi-Fi para cachear offline.</li>
+                </ol>
+                <p><strong>Mapa offline:</strong> Google Maps → menu → "Mapas offline" → enquadre Chang + Mak + Kood → baixar. 4G é fraco no leste.</p>
+              </div>
+            </Reveal>
+          </section>
+
 
           <section id="orcamento">
             <SectionTitle icon={Wallet} kicker="14 — Bolso" title="Orçamento honesto por dia (em real)" />
