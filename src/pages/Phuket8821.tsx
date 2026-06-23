@@ -483,7 +483,7 @@ const Phuket8821 = () => {
                   <li>Filme volta de 360° na hora, com áudio narrando cada arranhão.</li>
                   <li>Tire 8-12 fotos com data ativada no celular.</li>
                   <li>Exija o contrato em inglês com cláusulas de dano descritas.</li>
-                  <li>NUNCA deixe passaporte como caução — só dinheiro (₿2.000-5.000) ou cópia autenticada.</li>
+                  <li>NUNCA deixe passaporte como caução — só dinheiro (฿2.000-5.000 / R$ 300-750) ou cópia autenticada.</li>
                   <li>Leve PID (Permissão Internacional para Dirigir) categoria A. Sem ela, polícia local multa 1.000 baht e seguro não cobre.</li>
                   <li>Use capacete sempre. Multa por falta de capacete é alvo fácil.</li>
                 </ol>
