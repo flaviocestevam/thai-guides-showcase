@@ -3,7 +3,8 @@
 import {
   MapPin, AlertTriangle, CheckCircle2, XCircle, Bike, Ship, UtensilsCrossed,
   Compass, Wallet, ShieldCheck, Map as MapIcon, Sun, Waves, Sparkles, Home,
-  ArrowUpRight, Moon,
+  ArrowUpRight, Moon, Eye, Footprints, CalendarRange, Scale, Anchor, Fish,
+  Flower2, Tent, Baby, Leaf, BookOpen,
 } from "lucide-react";
 import { PK_STYLES, Reveal, SectionTitle, TONE_CLASS, makeMapChip, type Tone } from "@/components/guides/premiumShell";
 
