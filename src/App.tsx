@@ -53,6 +53,9 @@ import Retiros from "./pages/Retiros.tsx";
 import Retiros8834 from "./pages/Retiros8834.tsx";
 import Ilhas from "./pages/Ilhas.tsx";
 import Phuket8821 from "./pages/Phuket8821.tsx";
+import KohSamui7392 from "./pages/KohSamui7392.tsx";
+import KohPhiPhi5128 from "./pages/KohPhiPhi5128.tsx";
+import KohPhangan8463 from "./pages/KohPhangan8463.tsx";
 import IlhaPage from "./pages/IlhaPage.tsx";
 import { ilhasMeta } from "./data/sales/ilhas";
 import ExportCopyAuditoria from "./pages/ExportCopyAuditoria.tsx";
@@ -119,6 +122,9 @@ const App = () => (
           {/* ===== Categoria Ilhas ===== */}
           <Route path="/ilhas" element={<Ilhas />} />
           <Route path="/phuket8821" element={<Phuket8821 />} />
+          <Route path="/kohsamui7392" element={<KohSamui7392 />} />
+          <Route path="/kohphiphi5128" element={<KohPhiPhi5128 />} />
+          <Route path="/kohphangan8463" element={<KohPhangan8463 />} />
           {ilhasMeta.map((ilha) => (
             <Route
               key={ilha.slug}
