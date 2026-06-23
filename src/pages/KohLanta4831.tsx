@@ -508,6 +508,48 @@ const KohLanta4831 = () => {
             </div>
           </section>
 
+          <section id="sunsets">
+            <SectionTitle icon={Sunset} kicker="10 — Sunset" title="5 sunset bars ranqueados — sul vence" />
+            <div className="grid md:grid-cols-2 gap-5">
+              {SUNSETS.map((s, i) => (
+                <Reveal key={s.nome} i={i}>
+                  <article className={`pk-card ${TONE_CLASS[s.tone]} h-full`}>
+                    <header className="flex items-start justify-between gap-3 mb-3">
+                      <h3 className="pk-h4"><G q={s.nome + " Koh Lanta Thailand"}>{s.nome}</G></h3>
+                      <span className="pk-verdict">{s.nota}</span>
+                    </header>
+                    <p className="pk-kicker">Quando ir</p>
+                    <p className="text-sm mt-1 mb-3">{s.quando}</p>
+                    <p className="text-sm text-[hsl(var(--pk-muted))]">{s.oque}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="oldtown">
+            <SectionTitle icon={Building2} kicker="11 — Cultura" title="Old Town (Lanta Yai) — vila chinesa em palafita" />
+            <Reveal>
+              <div className="pk-card pk-card-feature mb-6">
+                <p className="text-lg leading-relaxed">
+                  <strong className="pk-gold">Antes das 17h:</strong> parece vila morta.{" "}
+                  <strong className="pk-gold">Depois das 17h:</strong> lanternas vermelhas chinesas, palafitas iluminadas,
+                  restaurantes na água. <em>É outra cidade.</em>
+                </p>
+              </div>
+            </Reveal>
+            <div className="grid md:grid-cols-2 gap-5">
+              {OLD_TOWN.map((o, i) => (
+                <Reveal key={o.titulo} i={i}>
+                  <article className="pk-card pk-card-tight h-full">
+                    <p className="pk-kicker">{o.titulo}</p>
+                    <p className="text-sm mt-2 text-[hsl(var(--pk-muted))]">{o.texto}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
           <section id="roteiros">
             <SectionTitle icon={Sun} kicker="09 — Tempo" title="Roteiros prontos — 3, 5, 7 e 10 dias" />
             <div className="grid md:grid-cols-2 gap-6">
