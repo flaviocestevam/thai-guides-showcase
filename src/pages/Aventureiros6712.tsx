@@ -1,4 +1,5 @@
 import { SEO } from "@/components/SEO";
+import { RelatedAdventureGuides } from "@/components/RelatedAdventureGuides";
 
 const Section = ({ chapter, title, id, children }: { chapter: string; title: string; id?: string; children: React.ReactNode }) => (
   <section id={id} className="py-16 px-6 scroll-mt-20">
