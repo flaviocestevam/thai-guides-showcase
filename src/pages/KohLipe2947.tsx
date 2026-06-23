@@ -3,7 +3,7 @@
 import {
   MapPin, AlertTriangle, CheckCircle2, XCircle, Bike, Ship, UtensilsCrossed,
   Compass, Wallet, ShieldCheck, Map as MapIcon, Sun, Waves, Sparkles, Home,
-  ArrowUpRight, CalendarDays, Route, Sunset, Mountain,
+  ArrowUpRight, CalendarDays, Route, Sunset, Mountain, Hotel, Lightbulb,
 } from "lucide-react";
 import { PK_STYLES, Reveal, SectionTitle, TONE_CLASS, makeMapChip, type Tone } from "@/components/guides/premiumShell";
 
@@ -14,11 +14,13 @@ const TOC = [
   { id: "praias", label: "3 praias", icon: Home },
   { id: "clima", label: "Clima mês a mês", icon: CalendarDays },
   { id: "chegar", label: "Como chegar", icon: Route },
+  { id: "hatyai", label: "Pit-stop Hat Yai", icon: Hotel },
   { id: "hospedagem", label: "Hospedagem", icon: Sparkles },
   { id: "snorkel", label: "Snorkel 3+5", icon: Waves },
   { id: "daytrips", label: "Day-trips", icon: Ship },
   { id: "adang", label: "Adang & Rawi", icon: Mountain },
   { id: "comida", label: "Comida", icon: UtensilsCrossed },
+  { id: "walking", label: "Walking Street", icon: Lightbulb },
   { id: "sunsets", label: "Sunsets", icon: Sunset },
   { id: "roteiros", label: "Roteiros", icon: Sun },
   { id: "antigolpe", label: "Anti-golpe", icon: ShieldCheck },
@@ -164,8 +166,25 @@ const ADANG = [
   { titulo: "Trilha (Chado Cliff Viewpoint)", texto: "2,5 km só ida, íngreme. 1h30-2h subida, 1h descida. Tênis fechado, 2L água, repelente. Sem placa: pergunte ao guarda do parque na base." },
   { titulo: "Quando ir", texto: "Nascer do sol (saída 04h30 do Sunrise) OU pôr do sol (saída 15h, descida com lanterna). Meio-dia é desumano." },
   { titulo: "O que esperar", texto: "Vista panorâmica de Lipe inteira, Rawi atrás, mar azul-piscina. Macacos no caminho. Você usou o ingresso de 200 baht da chegada." },
-  { titulo: "Rawi (alternativa fácil)", texto: "Ilha vizinha sem trilha — pra praia deserta e snorkel. Longtail combinado com Adang (full day) 1.500-2.000 baht / barco." },
+  { titulo: "Rawi (praia deserta)", texto: "Ilha vizinha de Adang, sem trilha, só praia branca de 1,5 km quase sempre vazia. Longtail combinado com Adang (full day) 1.500-2.000 baht / barco até 4 pessoas. Sem restaurante — leve água e snack." },
+  { titulo: "Tarutao histórica (avançado)", texto: "Ilha-prisão dos anos 30-40, hoje sede do Parque Nacional. Longtail/speedboat charter de Lipe: 2h, 4.500+ baht/barco. Trilhas a Talo Wow, Lo Po, mirante do farol. Vá só se tiver 6+ dias em Lipe." },
 ];
+
+const WALKING_STREET = [
+  { titulo: "O que é", texto: "Rua de pedestres ligando Pattaya Beach ao Sunrise Beach. 700m de barracas, restaurantes, bares e lojas — único 'centro' da ilha." },
+  { titulo: "Quando ir", texto: "Vida noturna começa 19h, pico 21h-23h. Antes das 18h é só comércio diurno meio parado." },
+  { titulo: "Onde comer", texto: "Pooh's Bar (clássico veterano), Nee Papaya (som tam autêntico), Bombay Indian (quando enjoa de tailandês). Cardápio em inglês na maioria." },
+  { titulo: "Vibe", texto: "Lounge bars com fogo na areia, fire show 21h em vários pontos, reggae em 2-3 lugares. SEM balada eletrônica — quem quer techno vai pra Phangan." },
+];
+
+const HAT_YAI_PITSTOP = [
+  { titulo: "Quando precisa", texto: "Voo de Bangkok chegou DEPOIS das 14h em Hat Yai (HDY). Última mini-van pra Pakbara sai 14h-14h30. Sem ela, durma e siga 7h da manhã seguinte." },
+  { titulo: "Onde dormir", texto: "Centro a 12 km do aeroporto. Hotéis de R$ 120-280: Centara Hat Yai (perto rodoviária), Lee Gardens Plaza (centro), Buri Sriphu Boutique. Reserva fácil de última hora." },
+  { titulo: "Aeroporto direto", texto: "Se voo chegou após 21h: hotel no aeroporto (Sleep Box Hat Yai, cápsulas R$ 80) e parta 6h. Não pegue táxi pra centro à noite — golpe de tabela inflada." },
+  { titulo: "O que fazer", texto: "Hat Yai NÃO é destino turístico. Use só como pit-stop. Se sobrou tarde: night market Kim Yong (street food halal — Hat Yai é cidade muçulmana mista)." },
+];
+
+
 
 const HOSPEDAGEM = [
   { faixa: "Mochileiro", price: "R$ 180 — 450", items: [
@@ -364,6 +383,29 @@ const KohLipe2947 = () => {
             </Reveal>
           </section>
 
+          <section id="hatyai">
+            <SectionTitle icon={Hotel} kicker="05 — Plano B" title="Hat Yai pit-stop — se você chegou tarde" />
+            <Reveal>
+              <div className="pk-card pk-card-feature mb-6">
+                <p className="text-lg leading-relaxed">
+                  <strong className="pk-gold">Voo de Bangkok depois das 14h?</strong>{" "}
+                  Perdeu a última van pra Pakbara. Vai dormir em Hat Yai e seguir 7h da manhã.
+                  <em> Não é fim do mundo — basta saber onde dormir e onde NÃO se meter.</em>
+                </p>
+              </div>
+            </Reveal>
+            <div className="grid md:grid-cols-2 gap-5">
+              {HAT_YAI_PITSTOP.map((h, i) => (
+                <Reveal key={h.titulo} i={i}>
+                  <article className="pk-card pk-card-tight h-full">
+                    <p className="pk-kicker">{h.titulo}</p>
+                    <p className="text-sm mt-2 text-[hsl(var(--pk-muted))]">{h.texto}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
           <section id="hospedagem">
             <SectionTitle icon={Sparkles} kicker="05 — Onde dormir" title="Hospedagem por faixa real" />
             <div className="grid md:grid-cols-3 gap-6">
@@ -464,6 +506,20 @@ const KohLipe2947 = () => {
                     </div>
                     <p className="text-sm text-[hsl(var(--pk-muted))] mb-3">{c.oque}</p>
                     <p className="pk-gold-soft text-sm font-medium">{c.preco}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="walking">
+            <SectionTitle icon={Lightbulb} kicker="10 — Noite" title="Walking Street — único 'centro' de Lipe" />
+            <div className="grid md:grid-cols-2 gap-5">
+              {WALKING_STREET.map((w, i) => (
+                <Reveal key={w.titulo} i={i}>
+                  <article className="pk-card pk-card-tight h-full">
+                    <p className="pk-kicker">{w.titulo}</p>
+                    <p className="text-sm mt-2 text-[hsl(var(--pk-muted))]">{w.texto}</p>
                   </article>
                 </Reveal>
               ))}
