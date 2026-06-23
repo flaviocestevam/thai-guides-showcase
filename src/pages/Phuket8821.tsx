@@ -437,7 +437,7 @@ const Phuket8821 = () => {
                 <tbody>
                   {TRANSFER.map((r, i) => (
                     <tr key={i} className="border-t border-emerald-500/10">
-                      <td className="p-3">{r.destino}</td>
+                      <td className="p-3"><G q={r.destino.replace("Aeroporto", "Phuket International Airport").replace("→", "to")}>{r.destino}</G></td>
                       <td className="p-3 text-emerald-300">{r.bolt}</td>
                       <td className="p-3 text-muted-foreground">{r.taxi}</td>
                       <td className="p-3">{r.tempo}</td>
