@@ -121,6 +121,7 @@ const categories: Cat[] = [
     ops: [
       op({ name: "Thai Adventure Rafting", city: "Pai", activity: "Rafting 2 dias rio Pai (classe 2–4)", level: "Intermediário", risk: "Alto", season: "Jul–Out (chuvas = nível alto)", price: "2 dias 1 noite: ฿3.200 (acampamento na selva incluso)", cert: "Whitewater certified guides", why: "Único que faz o trecho de 2 dias com acampamento na floresta. Dorme em barraca à beira do rio." }),
       op({ name: "Siam Adventures Rafting", city: "Phang Nga (rio Song Pra Ek)", activity: "Bamboo rafting + caverna", level: "Iniciante", risk: "Baixo", season: "Ano todo", price: "Pacote 1 dia: ฿2.000", cert: "TAT registered", why: "Combo com caverna James Bond — bom pra família/iniciante. Não é radical." }),
+      op({ name: "8Adventures Phuket", city: "Phang Nga (rio Tone Pariwat)", activity: "Whitewater + sea kayak combo", level: "Intermediário", risk: "Médio", season: "Mai–Out", price: "Whitewater dia inteiro: ฿2.800", cert: "Whitewater Rescue certified", why: "Único rio classe 3 do Sul. Saída fácil de Phuket — alternativa pra quem não vai pro Norte." }),
     ],
   },
   {
@@ -130,6 +131,7 @@ const categories: Cat[] = [
     ops: [
       op({ name: "Cave Lodge", city: "Soppong (próximo a Pai)", activity: "Tham Lod + cavernas técnicas + tubing", level: "Intermediário", risk: "Médio", season: "Nov–Mai (cavernas fechadas Jun–Out)", price: "Tour caverna técnica: ฿1.500–฿3.000", cert: "Dono inglês com 35+ anos de espeleologia local", why: "Única operadora séria de espeleologia técnica do Norte. Hospedagem própria." }),
       op({ name: "Khao Sok Discovery (Nam Talu)", city: "Khao Sok NP", activity: "Caverna Nam Talu — 3km no rio", level: "Avançado", risk: "Alto", season: "Dez–Abr APENAS (fechada Mai–Nov)", price: "Incluso no pacote 3 dias: ฿8.500", cert: "Khao Sok NP licensed", why: "ATENÇÃO: 8 turistas morreram em 2014 numa enchente súbita. Só vá com operadora licenciada e fora da época de chuva." }),
+      op({ name: "Phraya Nakhon Cave Trek", city: "Sam Roi Yot NP (Prachuap)", activity: "Trek + caverna com pavilhão real iluminado por raio de sol", level: "Iniciante", risk: "Baixo", season: "Nov–Mar", price: "Day tour de Hua Hin: ฿1.800", cert: "Parque nacional licensed", why: "Caverna com o pavilhão Kuha Karuhas — feixe de luz às 10h. Foto símbolo da Tailândia." }),
     ],
   },
   {
@@ -140,6 +142,8 @@ const categories: Cat[] = [
       op({ name: "Flight of the Gibbon", city: "Chiang Mai (Mae Kampong)", activity: "Tirolesa 5km / 40+ plataformas", level: "Iniciante", risk: "Médio", season: "Ano todo", price: "฿3.999 (transfer + almoço inclusos)", cert: "ACCT-style (US zipline standard) + parceria com Gibbon Rehabilitation", why: "Operação mais séria do país. Parte do ingresso vai pra conservação de gibões." }),
       op({ name: "Pongyang Jungle Coaster & Zipline", city: "Chiang Mai (Mae Rim)", activity: "Tirolesa + roller coaster da selva", level: "Iniciante", risk: "Baixo", season: "Ano todo", price: "Combo: ฿1.890", cert: "TAT registered", why: "Combo barato, mais leve. Bom pra casal/família." }),
       op({ name: "Hanuman World", city: "Phuket (Chalong)", activity: "Tirolesa 30 plataformas + skywalk", level: "Iniciante", risk: "Médio", season: "Ano todo", price: "Pacote A: ฿2.500 / VIP: ฿4.900", cert: "EU zipline standards (próprio)", why: "Melhor opção em Phuket — não cai na cilada das tirolesas curtas de mall." }),
+      op({ name: "Skyline Adventure Chiang Mai", city: "Chiang Mai (Mae Rim)", activity: "Tirolesa 33 plataformas + abseiling", level: "Iniciante", risk: "Médio", season: "Ano todo", price: "฿2.890 c/ transfer e almoço", cert: "ACCT US zipline standard", why: "Mais nova e barata que Flight of the Gibbon, mesma certificação. Plataformas mais altas." }),
+      op({ name: "Tree Top Adventure Park", city: "Krabi (Khlong Thom)", activity: "Tirolesa + circuito de obstáculos em copa", level: "Iniciante", risk: "Baixo", season: "Ano todo", price: "฿1.700", cert: "EU zipline standards", why: "Único circuito de copa de árvore do Sul. Bom pra família entre dias de praia." }),
     ],
   },
   {
@@ -149,6 +153,7 @@ const categories: Cat[] = [
     ops: [
       op({ name: "Jungle Bungy Jump Phuket", city: "Phuket (Kathu)", activity: "Bungee 50m sobre lagoa", level: "Iniciante", risk: "Alto", season: "Ano todo", price: "฿2.500 (foto + vídeo +฿700)", cert: "Operador australiano cert. AJ Hackett-style", why: "Único bungee sério da ilha. Plataforma e cordas auditadas anualmente." }),
       op({ name: "Pattaya Bungy Jump (X-Centre)", city: "Pattaya", activity: "Bungee 60m + paintball + buggy", level: "Iniciante", risk: "Alto", season: "Ano todo", price: "Bungee: ฿2.200 / combo: ฿3.800", cert: "Operação local cert. Thai DCA", why: "Combo bom de dia inteiro pra quem quer várias adrenalinas no mesmo lugar." }),
+      op({ name: "Paragliding Phuket (Pegasus)", city: "Phuket (Karon Viewpoint)", activity: "Voo tandem de parapente sobre Karon/Kata", level: "Iniciante", risk: "Alto", season: "Nov–Abr (vento estável)", price: "฿4.500 voo 15min c/ vídeo", cert: "FAI tandem rating (Brasil/Europa)", why: "Único parapente operacional da Tailândia. Pousa em Karon Beach. Voo curto, vista absurda." }),
     ],
   },
   {
@@ -158,6 +163,8 @@ const categories: Cat[] = [
     ops: [
       op({ name: "Tony's Big Bikes", city: "Chiang Mai", activity: "Aluguel + roteiro Mae Hong Son Loop", level: "Avançado", risk: "Alto", season: "Nov–Fev (seco)", price: "CRF300L: ฿1.200/dia · KTM 390: ฿1.800/dia", cert: "Loja com 20+ anos, manutenção própria", why: "Melhor manutenção de Chiang Mai. CNH internacional obrigatória." }),
       op({ name: "Cat Motors", city: "Chiang Mai", activity: "Aluguel de moto + tour guiado", level: "Intermediário", risk: "Médio", season: "Nov–Fev", price: "Honda Click: ฿250/dia · CRF250: ฿1.000/dia", cert: "Seguro próprio incluso (raro na Tailândia)", why: "Único que entrega seguro real incluso. Honesto sobre o estado da moto." }),
+      op({ name: "Mr. Mechanic", city: "Chiang Mai (Old City)", activity: "Aluguel + suporte rodoviário no Loop", level: "Intermediário", risk: "Médio", season: "Nov–Fev", price: "Scooter: ฿200/dia · CB500X: ฿1.500/dia", cert: "Operação familiar 25+ anos", why: "Suporte mecânico via WhatsApp em qualquer ponto do Mae Hong Son Loop." }),
+      op({ name: "Phuket Big Bike Rental", city: "Phuket (Chalong)", activity: "Aluguel CB500X / Versys pra explorar Sul", level: "Intermediário", risk: "Médio", season: "Nov–Abr", price: "CB500X: ฿1.400/dia (semana ฿8.400)", cert: "Loja com seguro third-party incluso", why: "Único do Sul com motos grandes em bom estado. Bom pra rodar Phuket → Krabi → Khao Sok." }),
     ],
   },
   {
@@ -167,6 +174,28 @@ const categories: Cat[] = [
     ops: [
       op({ name: "Kiteboarding Asia (KBA) — Hua Hin", city: "Hua Hin", activity: "Curso IKO + aluguel", level: "Iniciante", risk: "Médio", season: "Out–Mar (vento NE) / Mai–Set (vento SW)", price: "Curso 3 dias 9h: ฿16.500", cert: "IKO + VDWS", why: "Escola mais antiga (20+ anos). Praia rasa = ideal pra aprender." }),
       op({ name: "Saltwater Dreaming Surf", city: "Phuket (Kata Beach)", activity: "Aulas de surf + aluguel prancha", level: "Iniciante", risk: "Médio", season: "Mai–Out (swell monção)", price: "Aula 2h: ฿1.500 / aluguel: ฿300/h", cert: "ISA certified", why: "Única escola séria de surf em Phuket. Fora da época de swell vai só nadar." }),
+      op({ name: "KiteZone Pranburi", city: "Pranburi (próx. Hua Hin)", activity: "Curso IKO + wing foil", level: "Iniciante", risk: "Médio", season: "Out–Mar", price: "Curso 9h: ฿15.500 / wing foil 3h: ฿6.500", cert: "IKO", why: "Praia mais vazia que Hua Hin. Bom pra quem quer evoluir sem multidão de aluno." }),
+      op({ name: "Phuket Surf School Kalim", city: "Phuket (Kalim Beach)", activity: "Surf intermediário (ondas reef break)", level: "Intermediário", risk: "Alto", season: "Mai–Set", price: "Aula 2h: ฿2.000", cert: "ISA + WSL coach assistente", why: "Única que ensina em Kalim (reef break sério). Pra quem já dropou e quer melhorar." }),
+    ],
+  },
+  {
+    slug: "atv-buggy",
+    name: "ATV, buggy e quadriciclo off-road",
+    tagline: "Chiang Mai e Phuket têm circuitos de selva sérios. Pattaya e Krabi têm operações mais turísticas (mas válidas).",
+    ops: [
+      op({ name: "X-Centre Chiang Mai (ATV)", city: "Chiang Mai (Mae Rim)", activity: "ATV 2h em trilha de selva + cachoeira", level: "Iniciante", risk: "Médio", season: "Nov–Mai (seco)", price: "2h: ฿2.400 / dia inteiro: ฿4.500", cert: "Capacete + briefing obrigatório", why: "Circuito real de off-road (não pista de mall). Aulinha rápida e você está na selva." }),
+      op({ name: "Phuket ATV Patong Adventure", city: "Phuket (Patong)", activity: "ATV 1–3h vista Big Buddha", level: "Iniciante", risk: "Médio", season: "Ano todo", price: "1h: ฿1.500 / 3h: ฿3.800", cert: "TAT registered", why: "Melhor operação da ilha. Termina no Big Buddha — combo aventura + foto clássica." }),
+      op({ name: "Krabi Jungle Buggy", city: "Krabi (Ao Nang)", activity: "Buggy 2 lugares em plantação de borracha", level: "Iniciante", risk: "Baixo", season: "Nov–Abr", price: "Buggy 2h: ฿2.800 (casal)", cert: "TAT registered", why: "Bom pra casal — você dirige e o outro filma. Trilha lamacenta e divertida." }),
+    ],
+  },
+  {
+    slug: "kayak-sup",
+    name: "Kayak oceano e SUP expedição",
+    tagline: "Phang Nga Bay (James Bond) e Ao Thalane (Krabi) têm mangues e hongs (lagos secretos dentro de ilhas).",
+    ops: [
+      op({ name: "John Gray's Sea Canoe", city: "Phuket (saída Phang Nga)", activity: "Kayak em hongs + caverna marinha", level: "Iniciante", risk: "Baixo", season: "Nov–Abr", price: "Day tour ฿4.300 c/ almoço", cert: "Pioneiro do sea canoe na Tailândia (1989)", why: "O único a entrar nos hongs verdadeiros — grutas internas só acessíveis em maré baixa." }),
+      op({ name: "Sea Kayak Krabi (Ao Thalane)", city: "Krabi (Ao Thalane)", activity: "Kayak em manguezal + caverna", level: "Iniciante", risk: "Baixo", season: "Nov–Abr", price: "Meio-dia: ฿1.500", cert: "TAT registered", why: "Mais barato que Phang Nga, ecossistema de mangue impressionante. Bom com criança 8+." }),
+      op({ name: "SUP Tour Koh Yao Noi", city: "Koh Yao Noi", activity: "SUP expedição + snorkel em ilhotas desertas", level: "Intermediário", risk: "Médio", season: "Nov–Abr", price: "Dia inteiro: ฿2.500 (prancha + almoço)", cert: "ISA SUP", why: "Sai da ilha mais calma do Sul, vai pra ilhotas vazias. Aventura sem outro turista por perto." }),
     ],
   },
 ];
