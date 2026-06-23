@@ -349,20 +349,20 @@ const phiPhi = make(ilhasMeta[2], {
     { title: "Voltou achando que Phi Phi é superestimada", desc: "Não é. É a ilha errada pra quem faz day-trip turístico. É a ilha dos sonhos pra quem sabe o que tá fazendo. Esse guia é a diferença." },
   ],
   features: [
-    { title: "Day-trip vs. pernoite: decisão clara", desc: "Critério objetivo pra escolher entre passar o dia ou dormir 1-2 noites — com prós, contras e custo real de cada um." },
-    { title: "Maya Bay sem multidão", desc: "A operadora, o horário e a rota que evita as 800 pessoas. Inclui mapa do percurso e o que fazer enquanto os outros barcos chegam." },
-    { title: "Hotéis silenciosos vs. balada", desc: "Lista de hotéis em cada lado da ilha — quem quer festa fica em Tonsai, quem quer paz fica em Long Beach. Sem surpresa." },
-    { title: "Visibilidade por ponto de snorkel × mês", desc: "Maya, Pi Le, Bamboo, Mosquito, Shark Point, Hin Bida, King Cruiser — quando cada ponto rende e quando vira aposta." },
-    { title: "Mapa a pé + tabela de longtail", desc: "Sem scooter, sem carro: 7 trechos com tempo real, distância e risco. Tonsai → viewpoint, Long Beach, Loh Bagao, Laem Tong." },
-    { title: "Mês ideal por perfil", desc: "Lua de mel, mochileiro festeiro, mergulhador, família com kids, fotógrafo Maya — cada um tem janela própria." },
-    { title: "Comparativo Phi Phi × Lanta × Krabi", desc: "Tabela de 7 dimensões pra decidir qual ilha do Andaman combina (ou se faz combo)." },
-    { title: "Day-trips de barco + camping em Maya Bay", desc: "Sunrise tour, 4 ilhas, longtail privado, sunset com plâncton e como reservar a única noite oficial dentro de Maya." },
-    { title: "Pesca tradicional e lulada noturna", desc: "Sair com pescador local, jantar de lula no barco — quem opera, contato e o que esperar." },
-    { title: "Spa do resort ao pé-na-areia", desc: "Phi Phi Island Village, Zeavola, Tara, Sunflower — qual é luxo, qual é honesto, qual é casal." },
-    { title: "Loh Bagao, Laem Tong e Long Beach", desc: "O Phi Phi sem festa — onde os resorts boutique escondem casal de lua de mel longe do agito de Tonsai." },
-    { title: "Phi Phi com kids", desc: "Onde dormir longe do bar, snorkel raso pra criança, day-trip que aguenta, o que NÃO fazer." },
-    { title: "Maya Bay viva: cota + reef-safe + macaco", desc: "Regras de conservação que viraram lei: cota diária, taxa 400 baht, monkey beach, sunscreen químico." },
-    { title: "Timeline de reserva", desc: "Quando travar ferry, resort, Maya sunrise tour e camping pra cada época do ano." },
+    { title: "Decida em 5 min: day-trip ou dormir 1-2 noites", desc: "Critério objetivo por perfil (casal, mochileiro, família, fotógrafo) com prós, contras e custo real de cada caminho — pra não chegar lá e descobrir que escolheu errado." },
+    { title: "Entre em Maya Bay com 30 pessoas, não com 800", desc: "A operadora, o horário e a rota exata que evita o tour padrão. Mapa do percurso + o que fazer nos 90 min que os outros barcos ainda nem largaram do pier." },
+    { title: "Durma em silêncio (ou na festa) pelo mesmo preço", desc: "Tonsai pra quem quer balada, Long Beach pra quem quer paz, Laem Tong pra resort isolado — hotéis testados em cada lado, com diária real em baht." },
+    { title: "Saiba antes se o snorkel vai ser água turva", desc: "Visibilidade mês a mês em Maya, Pi Le, Bamboo, Mosquito, Shark Point, Hin Bida e King Cruiser — quando cada ponto rende e quando vira aposta cara." },
+    { title: "Atravesse a ilha sem pagar 2x no long-tail", desc: "Mapa a pé com 7 trechos (tempo, distância, risco) + tabela de preço de long-tail por rota — capitão do pier para de tentar te enrolar quando você abre o PDF." },
+    { title: "O mês certo pro seu perfil (não o do Instagram)", desc: "Lua de mel, mochileiro festeiro, mergulhador, família com kids, fotógrafo Maya — cada um tem janela climática própria e o guia te mostra a sua." },
+    { title: "Phi Phi ou Lanta ou Krabi? Decida em 5 minutos", desc: "Tabela comparativa de 7 dimensões (preço, perfil, ferry, praia, festa, kids, dive) — e a rota de combo entre as 3 ilhas pra quem tem 10+ dias no Andaman." },
+    { title: "Durma dentro de Maya Bay (só 30 vagas por noite)", desc: "Sunrise tour, 4 ilhas, longtail privado, sunset com plâncton — e o passo a passo pra reservar a única noite oficial de camping dentro do parque." },
+    { title: "Jante lula que você mesmo pescou", desc: "Sair com pescador local em barco tradicional, técnica da lulada noturna, jantar a bordo — contato, preço e o que esperar." },
+    { title: "Spa honesto vs. turismo de spa", desc: "Phi Phi Island Village, Zeavola, Tara, Sunflower — qual entrega massagem de verdade, qual é cenário pra foto, qual vale o luxo pra casal." },
+    { title: "Os 3 cantos onde Phi Phi vira lua de mel", desc: "Loh Bagao, Laem Tong e Long Beach — onde os resorts boutique escondem casal longe do agito de Tonsai, com transfer e custo real da reserva." },
+    { title: "Phi Phi com criança sem perder a noite", desc: "Onde dormir longe do bar, snorkel raso seguro pra kid, day-trip que aguenta sem chorar e os 3 erros que viajante com filho não pode cometer aqui." },
+    { title: "As 4 regras pra entrar em Maya Bay (sem multa)", desc: "Cota diária, taxa 400 baht, monkey beach proibida, sunscreen químico barrado — a conservação virou lei e o guia te coloca dentro sem dor de cabeça." },
+    { title: "Quando reservar pra não pagar 3x", desc: "Timeline ano todo: ferry, resort, Maya sunrise tour e camping — quantos meses antes travar cada um pra alta, baixa e Réveillon." },
   ],
   comparison: {
     theirs: [
@@ -433,7 +433,7 @@ const phiPhi = make(ilhasMeta[2], {
   ],
   finalCTA: {
     title: "Phi Phi é o sonho de quem sabe — e a decepção de quem não foi avisado",
-    subtitle: "A diferença entre \"superestimada\" e \"melhor dia da minha vida\" cabe num guia de R$ 67. Decida com informação, não com Instagram pago.",
+    subtitle: "A diferença entre voltar dizendo \"superestimada\" e voltar dizendo \"melhor dia da viagem\" cabe num guia de R$ 67. Baixa agora, lê em 1 hora, salva R$ 700 só no primeiro long-tail e no hotel certo.",
   },
 });
 
