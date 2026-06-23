@@ -237,7 +237,10 @@ const Retiros8834 = () => (
           <Card key={x.name}>
             <p><strong>{x.name}</strong> — {x.city}</p>
             <p className="text-sm">{x.note}</p>
-            <a href={gmaps(`${x.name} ${x.city} Thailand`)} target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline">→ Google Maps</a>
+            <div className="flex flex-wrap gap-3 pt-1">
+              <a href={gmaps(`${x.name} ${x.city} Thailand`)} target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline">→ Google Maps</a>
+              <a href={x.site} target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline">→ Site oficial</a>
+            </div>
           </Card>
         ))}
       </div>
