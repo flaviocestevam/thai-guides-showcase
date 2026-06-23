@@ -469,6 +469,11 @@ const Aventureiros6712 = () => (
       </Card>
     </Section>
 
+    <RelatedAdventureGuides
+      title="Outros guias da Tailândia que combinam com o seu"
+      subtitle="Você já tem o Aventureiros. Estes são os guias-irmãos que mais fazem sentido pra fechar a viagem — cada um é independente e vendido à parte no nosso catálogo."
+    />
+
     <section className="py-16 px-6 text-center">
       <p className="text-muted-foreground">Boa aventura — e volta inteiro pra contar.</p>
     </section>
