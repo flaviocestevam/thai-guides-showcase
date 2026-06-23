@@ -584,7 +584,7 @@ const Phuket8821 = () => {
               <CardHeader><CardTitle className="text-lg text-emerald-300">3 OPERADORAS QUE VALEM</CardTitle></CardHeader>
               <CardContent className="text-sm">
                 <ul className="space-y-2.5">{APROVADAS.map((a) => (
-                  <li key={a.nome}><strong className="text-emerald-300">{a.nome}</strong> — {a.oque}</li>
+                  <li key={a.nome}><strong className="text-emerald-300"><G q={a.nome + " Phuket Thailand"}>{a.nome}</G></strong> — {a.oque}</li>
                 ))}</ul>
               </CardContent>
             </Card>
