@@ -4,6 +4,8 @@ import {
   MapPin, AlertTriangle, CheckCircle2, XCircle, Bike, Ship, UtensilsCrossed,
   Compass, Wallet, ShieldCheck, Map as MapIcon, Sun, Waves, Sparkles, Home,
   ArrowUpRight, CalendarDays, Route, Sunset, Mountain, Hotel, Lightbulb,
+  Footprints, Anchor, GraduationCap, Eye, Users, Wifi, Banknote, Baby,
+  HeartPulse, CalendarCheck,
 } from "lucide-react";
 import { PK_STYLES, Reveal, SectionTitle, TONE_CLASS, makeMapChip, type Tone } from "@/components/guides/premiumShell";
 
@@ -12,22 +14,123 @@ const G = makeMapChip("Koh Lipe, Thailand");
 const TOC = [
   { id: "comeco", label: "Antes de tudo", icon: Compass },
   { id: "praias", label: "3 praias", icon: Home },
+  { id: "mapa-andando", label: "Mapa a pé", icon: Footprints },
+  { id: "mes-perfil", label: "Mês ideal", icon: CalendarCheck },
   { id: "clima", label: "Clima mês a mês", icon: CalendarDays },
   { id: "chegar", label: "Como chegar", icon: Route },
   { id: "hatyai", label: "Pit-stop Hat Yai", icon: Hotel },
+  { id: "ferries-arq", label: "Ferries arquipélago", icon: Anchor },
   { id: "hospedagem", label: "Hospedagem", icon: Sparkles },
   { id: "snorkel", label: "Snorkel 3+5", icon: Waves },
+  { id: "visi-pontos", label: "Visi por ponto", icon: Eye },
+  { id: "mergulho", label: "Mergulho", icon: GraduationCap },
   { id: "daytrips", label: "Day-trips", icon: Ship },
   { id: "adang", label: "Adang & Rawi", icon: Mountain },
+  { id: "moken", label: "Chao Ley (Moken)", icon: Users },
   { id: "comida", label: "Comida", icon: UtensilsCrossed },
   { id: "walking", label: "Walking Street", icon: Lightbulb },
   { id: "sunsets", label: "Sunsets", icon: Sunset },
+  { id: "internet", label: "Internet & SIM", icon: Wifi },
+  { id: "dinheiro", label: "Dinheiro & ATM", icon: Banknote },
+  { id: "familia", label: "Família", icon: Baby },
+  { id: "saude", label: "Saúde & emergência", icon: HeartPulse },
   { id: "roteiros", label: "Roteiros", icon: Sun },
   { id: "antigolpe", label: "Anti-golpe", icon: ShieldCheck },
   { id: "blacklist", label: "Lista negra", icon: XCircle },
   { id: "mapa", label: "Mapa", icon: MapIcon },
   { id: "orcamento", label: "Orçamento", icon: Wallet },
 ];
+
+const MAPA_ANDANDO = [
+  { de: "Pier flutuante (chegada)", para: "Pattaya Beach centro", tempo: "5 min", como: "Saída direta na praia. Longtail-taxi não precisa." },
+  { de: "Pattaya Beach", para: "Sunrise Beach (norte)", tempo: "8-10 min", como: "Pela Walking Street até o fim, vira à esquerda. Plano." },
+  { de: "Pattaya Beach", para: "Sunset Beach (oeste)", tempo: "12-15 min", como: "Trilha de cimento entre Pattaya norte e Sunset. Algumas escadas." },
+  { de: "Sunrise Beach", para: "Sunset Beach", tempo: "20-25 min", como: "Atravessa a ilha pela trilha do norte. Iluminada à noite só até metade." },
+  { de: "Pattaya central", para: "Walking Street fim (mercado)", tempo: "10 min", como: "É a própria Walking. 700m de fim a fim." },
+  { de: "Sunrise sul", para: "Sunrise norte (Castaway)", tempo: "15 min pela areia", como: "Maré baixa: caminhe pela praia. Maré alta: trilha de trás." },
+];
+
+const FERRIES_ARQ = [
+  { rota: "Lipe → Lanta", barco: "Speedboat Tigerline / Bundhaya", janela: "Nov-mai (alta)", saida: "09h00", tempo: "4h (com parada em Phi Phi)", preco: "1.800-2.200 baht" },
+  { rota: "Lipe → Phi Phi (direto)", barco: "Speedboat Tigerline", janela: "Nov-mai", saida: "09h00", tempo: "2h30", preco: "1.700-2.000 baht" },
+  { rota: "Lipe → Phuket (Rassada)", barco: "Speedboat combo (via Lanta ou Phi Phi)", janela: "Nov-mai", saida: "09h00", tempo: "7-8h dia inteiro", preco: "2.500-3.200 baht" },
+  { rota: "Lipe → Krabi (Klong Jilad)", barco: "Speedboat combo", janela: "Nov-mai", saida: "09h00", tempo: "5h", preco: "2.200-2.700 baht" },
+  { rota: "Lipe → Langkawi (Telaga, Malásia)", barco: "Ferry Telaga Express", janela: "Nov-mai", saida: "10h30 e 16h", tempo: "1h15", preco: "1.200-1.500 baht" },
+  { rota: "Lipe → Pakbara (volta)", barco: "Speedboat Bundhaya/Tigerline", janela: "Nov-mai", saida: "09h30 / 11h30 / 13h30", tempo: "1h30", preco: "650-750 baht" },
+];
+
+const MES_PERFIL = [
+  { perfil: "Lua de mel / casal premium", mes: "Fev", motivo: "Visibilidade Maldivas, vento mínimo, sunset perfeito. Preço alto mas vale." },
+  { perfil: "Mergulhador (Open Water+)", mes: "Mar-abr", motivo: "Hin Daeng/Muang em pico de visi (30m+). Stonehenge claro." },
+  { perfil: "Família com criança", mes: "Jan ou Mar", motivo: "Mar calmo na Sunrise, sem vento sul, restaurante aberto." },
+  { perfil: "Mochileiro / budget", mes: "Início nov ou fim abr", motivo: "Janela aberta com preços 30-40% abaixo do pico." },
+  { perfil: "Fotografia / drone", mes: "Fev", motivo: "Visibilidade aérea máxima, mar azul-piscina, golden hour limpo." },
+  { perfil: "EVITAR", mes: "Mai-out", motivo: "Monção fecha ilha. 90% dos resorts e tours fecham." },
+  { perfil: "EVITAR (preço)", mes: "23 dez - 5 jan", motivo: "Lotação absurda, preços +80%, mínimo 5-7 noites obrigatórias." },
+];
+
+const VISI_PONTOS = [
+  { ponto: "Hin Ngam", nov: "15-20m", dez: "20-25m", jan: "25-30m", fev: "30-35m", mar: "25-30m", abr: "15-20m" },
+  { ponto: "Jabang (coral roxo)", nov: "12-18m", dez: "18-22m", jan: "20-25m", fev: "25-30m", mar: "22-28m", abr: "12-18m" },
+  { ponto: "Koh Yang", nov: "15-20m", dez: "20-25m", jan: "20-28m", fev: "25-30m", mar: "20-25m", abr: "15-20m" },
+  { ponto: "Stonehenge (dive)", nov: "15-20m", dez: "20-25m", jan: "25-30m", fev: "30m+", mar: "25-30m", abr: "15-20m" },
+  { ponto: "8 Mile Rock (dive)", nov: "20-25m", dez: "25-30m", jan: "30m+", fev: "30-40m", mar: "30m+", abr: "20-25m" },
+  { ponto: "Hin Sorn (deserto)", nov: "20-25m", dez: "25-30m", jan: "25-30m", fev: "30m+", mar: "25-30m", abr: "20-25m" },
+  { ponto: "Direto da praia (Sunrise)", nov: "8-12m", dez: "12-18m", jan: "15-20m", fev: "15-20m", mar: "12-18m", abr: "8-12m" },
+];
+
+const MERGULHO = [
+  { titulo: "Open Water (iniciante)", texto: "PADI Open Water em Lipe: R$ 1.600-2.000, 3-4 dias. Forra Dive e Davy Jones aceitam zero experiência. Compare: Koh Tao R$ 1.400-1.700 (mais barato), mas Lipe = água mais clara." },
+  { titulo: "Advanced Open Water", texto: "2 dias, R$ 1.100-1.400. Em Lipe rende: dive em 8 Mile Rock só é liberado com Advanced. Vale combinar com Open Water em sequência." },
+  { titulo: "Sites para Open Water", texto: "Stonehenge (12-18m, coral colorido), Jabang Wall, Koh Yang sul. Sem corrente forte, ideal pra primeiro dive certificado." },
+  { titulo: "Sites para Advanced+", texto: "8 Mile Rock (24-30m, manta ray em fev-abr), Hin Daeng/Muang (parede vertical, advanced obrigatório, corrente forte). Tubarões-leopardo possíveis." },
+  { titulo: "Escola pra iniciante", texto: "Forra Dive (mais didático, turmas pequenas) ou Davy Jones (descontraído, bom para grupo de amigos). Sabye Sports é mais técnico." },
+  { titulo: "Fun dive avulso", texto: "2 tanks R$ 850-1.100. Inclui equipamento. Confirme: cilindro 12L (padrão) e instrutor falando inglês fluente." },
+];
+
+const MOKEN = [
+  { titulo: "Quem são", texto: "Chao Ley ('povo do mar') — minoria nativa nômade do Andaman. Em Lipe vivem ~700 Moken em comunidade no centro-norte da ilha, principal grupo étnico original (chegaram antes do turismo)." },
+  { titulo: "Onde encontrar", texto: "Vila Moken fica entre Pattaya e Sunrise, atrás da Walking Street. Mercado local de peixe ao amanhecer no Sunrise pier (06h-08h). Longtail-taxis e barcos de pesca quase todos são Moken." },
+  { titulo: "Etiqueta cultural", texto: "Sem religião budista (animistas) — não levam mal foto, mas peça antes. Cerimônia Loi Reua (lançamento de barco ritual) acontece mai e nov — turistas observam de longe, não participam." },
+  { titulo: "Sunrise breakfast em longtail tradicional", texto: "Combine direto na praia Sunrise na noite anterior com um pescador Moken. 1.200-1.800 baht/barco até 4 pessoas, saída 05h30, café da manhã preparado a bordo. Experiência única — apoia direto a comunidade, sem intermediário." },
+  { titulo: "O que NÃO fazer", texto: "Não compre 'artesanato Moken' em loja turística — quase sempre é importado da Birmânia. Compre direto na vila ou no mercado pequeno do Sunrise pier de manhã." },
+];
+
+const INTERNET = [
+  { titulo: "Operadora — só AIS pega", texto: "AIS (Advanced Info Service) é a ÚNICA com sinal decente em Lipe. TrueMove H e DTAC têm cobertura inconsistente, falham fora de Pattaya. Compre SIM AIS em Bangkok aeroporto antes de embarcar." },
+  { titulo: "SIM Tourist (recomendado)", texto: "AIS Tourist SIM: 30 dias, 30GB, ligações inclusas — R$ 50-70 no aeroporto BKK/DMK ou em 7-Eleven de Hat Yai. Lipe não vende SIM novo (só recarga)." },
+  { titulo: "Wi-Fi em cafés", texto: "Cafe Lipe, Lipe Lobby Bar, Mali Resort Pattaya — Wi-Fi confiável (10-30 Mbps). Bom pra Zoom/upload. Sunrise/Sunset Beach têm Wi-Fi mais fraco." },
+  { titulo: "Trabalho remoto", texto: "Funciona em Pattaya com AIS 4G + Wi-Fi do café como backup. Possível chamadas Zoom de 30-60 min em horário não-lotação (06h-09h e 22h+). Não conte com 'fibra' — não existe." },
+  { titulo: "Backup essencial", texto: "Em monção (mai-out) torres caem com tempestade. Mesmo na alta, internet some 1-2h em dias de chuva forte. Tenha tudo importante salvo offline." },
+];
+
+const DINHEIRO = [
+  { titulo: "Lipe NÃO tem banco", texto: "Só 3 ATMs na ilha — todos no Walking Street e em Pattaya. Cobram 220 baht de taxa POR saque (independente do valor). Saque 10.000+ por vez pra diluir taxa." },
+  { titulo: "Traga cash de fora", texto: "Saque em Hat Yai aeroporto (Bangkok Bank cobra 220 baht mas câmbio melhor) OU em Pakbara antes de embarcar. Calcule: R$ 250-400/dia em cash pra mochileiro, R$ 600-1.000 pra casal padrão." },
+  { titulo: "Cartão funciona onde?", texto: "Resorts médios/premium aceitam Visa/Master (com taxa 3%). Restaurantes em Walking Street: 60% aceitam. Longtails, food stalls, massagens de rua: SÓ cash." },
+  { titulo: "Câmbio em Lipe", texto: "2 casas de câmbio em Walking Street com câmbio ruim (-8 a -10% vs. Bangkok). Última opção. Real brasileiro NÃO é aceito — leve dólar ou euro se quiser câmbio na ilha." },
+  { titulo: "Quanto trazer em cash", texto: "Mochileiro 5 dias: 12.000-15.000 baht. Casal padrão 6 dias: 30.000-40.000 baht. Premium: cartão resolve 70%, mas leve 15.000 baht backup." },
+];
+
+const FAMILIA = [
+  { titulo: "Praia ideal", texto: "Sunrise Beach (sul, perto de Castaway/Idyllic). Mar raso 50m, sem ondas, areia branca fina, vista de Adang. Pattaya é mais movimentada com tráfego de barco — risco com criança pequena." },
+  { titulo: "Hotéis com kids facilities", texto: "Idyllic Concept Resort (piscina infantil, berço), Bundhaya Resort (família-friendly, frente mar Pattaya), Mali Resort (cottages com 2 quartos), Akira Lipe Resort (premium com baby cot)." },
+  { titulo: "Tours com criança", texto: "EVITE longtail sem cobertura (sol direto 4h+). Use speedboat com toldo — Forra Dive Tour 7 ilhas em meio dia (5h). Coletes salva-vidas: confirme tamanho infantil ANTES." },
+  { titulo: "Comida pra criança seletiva", texto: "Lipe Lobby Bar (pratos ocidentais), Bombay Indian (naan + arroz simples), Cafe Lipe (sourdough/sanduíche). Tailandês picante: peça 'mai phet' (sem pimenta) — funciona." },
+  { titulo: "Farmácia e fralda", texto: "1 farmácia em Walking Street com básico (Dipirona, soro, antialérgico). Fralda Pampers e leite em pó: 7-Eleven em Pattaya. Stock limitado — leve da casa o suficiente pra 7+ dias." },
+  { titulo: "O que NÃO fazer com criança", texto: "Trilha Adang (íngreme, macacos), Walking Street depois das 22h (movimento de bar), longtail sem colete infantil, snorkel em Hin Ngam horário de pico (longtails passam perto)." },
+];
+
+const SAUDE = [
+  { titulo: "Clínica única em Lipe", texto: "Koh Lipe Health Promoting Hospital — em Pattaya, perto do pier flutuante. Atende 08h-18h dias úteis, emergência 24h via telefone. Básico: pontos, soro, antibiótico. Aceita seguro internacional com pré-pagamento + reembolso." },
+  { titulo: "Emergência grave = Satun", texto: "Casos sérios (acidente, suspeita de cirurgia) = speedboat de emergência a Pakbara + ambulância a Satun Hospital (4-5h total). Custo: 15.000-30.000 baht só transporte. SEGURO VIAGEM com cobertura de evacuação marítima é OBRIGATÓRIO." },
+  { titulo: "Queimadura de sol e medusa", texto: "Sol em Lipe é 8/10 UV mesmo nublado. FPS 50+ a cada 2h. Medusa-caixa rara mas possível em mai-out (mais um motivo pra evitar a janela). Vinagre branco neutraliza — tenha 1L no hotel." },
+  { titulo: "Kit básico obrigatório", texto: "Dipirona/Paracetamol, antialérgico, soro de reidratação (vendido em pó nos 7-Eleven), curativo, repelente com DEET 30%+, FPS 50, pomada cicatrizante (queimadura de sol)." },
+  { titulo: "Seguro viagem", texto: "OBRIGATÓRIO com: evacuação marítima (mínimo US$ 20k), cobertura mergulho (se for mergulhar), cobertura motorizado (se alugar bike). World Nomads, SafetyWing ou IATI Mochileiro funcionam em Lipe." },
+  { titulo: "Vacinas e remédios", texto: "Sem vacina obrigatória pra brasileiro. Recomendadas: Hepatite A, Tifoide, Tétano em dia. Anti-malárico NÃO é necessário em Lipe (sem mosquito vetor). Dengue existe — repelente é defesa." },
+];
+
+
 
 const PRAIAS: { nome: string; veredito: string; tone: Tone; perfil: string; evite: string; agua: string; quanto: string; quando: string }[] = [
   { nome: "Pattaya Beach", veredito: "CENTRAL — chegada, vida, walking street", tone: "warn", perfil: "Primeira vez, casal padrão, quem quer tudo a pé.", evite: "Quem busca silêncio total — barcos partem da praia o dia todo.", agua: "Cristalina, mas com tráfego de longtails. Areia branca fina.", quanto: "Hotel R$ 350 / boutique R$ 800 / resort R$ 1.500.", quando: "Você quer rapidez: pier, restaurantes e bares a 5 min." },
@@ -310,6 +413,57 @@ const KohLipe2947 = () => {
             </div>
           </section>
 
+          <section id="mapa-andando">
+            <SectionTitle icon={Footprints} kicker="03 — Ilha a pé" title="Mapa a pé — Lipe inteira em 25 minutos" />
+            <Reveal>
+              <div className="pk-card pk-card-feature mb-6">
+                <p className="text-lg leading-relaxed">
+                  <strong className="pk-gold">Lipe são 2x3 km, plana, sem carros.</strong>{" "}
+                  Tudo é caminhável. Não alugue scooter nem bike — é dinheiro jogado fora. <em>Tempos reais, com calçado normal.</em>
+                </p>
+              </div>
+            </Reveal>
+            <Reveal>
+              <div className="pk-card p-0 overflow-hidden">
+                <div className="overflow-x-auto">
+                  <table className="pk-table">
+                    <thead><tr><th>De</th><th>Para</th><th>Tempo</th><th>Como</th></tr></thead>
+                    <tbody>
+                      {MAPA_ANDANDO.map((m, i) => (
+                        <tr key={i}>
+                          <td className="font-medium"><G>{m.de}</G></td>
+                          <td className="font-medium"><G>{m.para}</G></td>
+                          <td className="pk-gold-soft font-medium whitespace-nowrap">{m.tempo}</td>
+                          <td className="text-sm">{m.como}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </Reveal>
+          </section>
+
+          <section id="mes-perfil">
+            <SectionTitle icon={CalendarCheck} kicker="04 — Mês ideal" title="Qual mês por perfil de viajante" />
+            <div className="grid md:grid-cols-2 gap-5">
+              {MES_PERFIL.map((m, i) => {
+                const isEvitar = m.perfil.startsWith("EVITAR");
+                return (
+                  <Reveal key={i} i={i}>
+                    <article className={`pk-card pk-card-tight h-full ${isEvitar ? "pk-tone-alert" : "pk-tone-ok"}`}>
+                      <header className="flex items-start justify-between gap-3 mb-3">
+                        <h3 className="pk-h4">{m.perfil}</h3>
+                        <span className="pk-verdict">{m.mes}</span>
+                      </header>
+                      <p className="text-sm text-[hsl(var(--pk-muted))]">{m.motivo}</p>
+                    </article>
+                  </Reveal>
+                );
+              })}
+            </div>
+          </section>
+
           <section id="clima">
             <SectionTitle icon={CalendarDays} kicker="03 — Quando ir" title="Clima mês a mês — janela honesta" />
             <Reveal>
@@ -406,6 +560,39 @@ const KohLipe2947 = () => {
             </div>
           </section>
 
+          <section id="ferries-arq">
+            <SectionTitle icon={Anchor} kicker="06 — Arquipélago" title="Ferries Lipe ⇄ Lanta / Phi Phi / Phuket / Langkawi" />
+            <Reveal>
+              <div className="pk-card pk-card-feature mb-6">
+                <p className="text-lg leading-relaxed">
+                  <strong className="pk-gold">Lipe é um hub melhor do que parece.</strong>{" "}
+                  Combinar com Lanta, Phi Phi ou cruzar pra Langkawi (Malásia) é speedboat direto — <em>só de nov-mai</em>. Em monção: nenhuma das rotas abaixo funciona.
+                </p>
+              </div>
+            </Reveal>
+            <Reveal>
+              <div className="pk-card p-0 overflow-hidden">
+                <div className="overflow-x-auto">
+                  <table className="pk-table">
+                    <thead><tr><th>Rota</th><th>Barco / Operadora</th><th>Janela</th><th>Saída</th><th>Tempo</th><th>Preço</th></tr></thead>
+                    <tbody>
+                      {FERRIES_ARQ.map((f, i) => (
+                        <tr key={i}>
+                          <td className="font-medium">{f.rota}</td>
+                          <td>{f.barco}</td>
+                          <td className="whitespace-nowrap">{f.janela}</td>
+                          <td className="whitespace-nowrap">{f.saida}</td>
+                          <td className="whitespace-nowrap">{f.tempo}</td>
+                          <td className="pk-gold-soft font-medium whitespace-nowrap">{f.preco}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </Reveal>
+          </section>
+
           <section id="hospedagem">
             <SectionTitle icon={Sparkles} kicker="05 — Onde dormir" title="Hospedagem por faixa real" />
             <div className="grid md:grid-cols-3 gap-6">
@@ -442,6 +629,52 @@ const KohLipe2947 = () => {
                     <p className="pk-kicker">Quando ir</p>
                     <p className="text-sm mt-1 mb-3">{s.quando}</p>
                     <p className="text-sm text-[hsl(var(--pk-muted))]">{s.oque}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="visi-pontos">
+            <SectionTitle icon={Eye} kicker="07 — Visibilidade" title="Visibilidade por ponto, mês a mês (em metros)" />
+            <Reveal>
+              <div className="pk-card p-0 overflow-hidden">
+                <div className="overflow-x-auto">
+                  <table className="pk-table">
+                    <thead><tr><th>Ponto</th><th>Nov</th><th>Dez</th><th>Jan</th><th>Fev</th><th>Mar</th><th>Abr</th></tr></thead>
+                    <tbody>
+                      {VISI_PONTOS.map((v) => (
+                        <tr key={v.ponto}>
+                          <td className="font-medium"><G q={v.ponto + " Koh Lipe Thailand"}>{v.ponto}</G></td>
+                          <td>{v.nov}</td>
+                          <td>{v.dez}</td>
+                          <td className="pk-gold-soft font-medium">{v.jan}</td>
+                          <td className="pk-gold-soft font-medium">{v.fev}</td>
+                          <td>{v.mar}</td>
+                          <td>{v.abr}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </Reveal>
+            <Reveal>
+              <div className="pk-callout pk-callout-info mt-6">
+                <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5" />
+                <p><strong>Fev é o mês rei.</strong> 8 Mile Rock chega a 40m de visibilidade — único momento da Tailândia que rivaliza Maldivas. Mai-out fica em 5m ou menos por monção.</p>
+              </div>
+            </Reveal>
+          </section>
+
+          <section id="mergulho">
+            <SectionTitle icon={GraduationCap} kicker="08 — Mergulho" title="Mergulho decodificado — Open Water ao Advanced" />
+            <div className="grid md:grid-cols-2 gap-5">
+              {MERGULHO.map((x, i) => (
+                <Reveal key={x.titulo} i={i}>
+                  <article className="pk-card pk-card-tight h-full">
+                    <p className="pk-kicker">{x.titulo}</p>
+                    <p className="text-sm mt-2 text-[hsl(var(--pk-muted))]">{x.texto}</p>
                   </article>
                 </Reveal>
               ))}
@@ -494,6 +727,29 @@ const KohLipe2947 = () => {
             </div>
           </section>
 
+          <section id="moken">
+            <SectionTitle icon={Users} kicker="09 — Cultura" title="Chao Ley (Moken) — o povo do mar" />
+            <Reveal>
+              <div className="pk-card pk-card-feature mb-6">
+                <p className="text-lg leading-relaxed">
+                  <strong className="pk-gold">700 Moken vivem em Lipe — eram os donos antes do turismo.</strong>{" "}
+                  Conhecer a vila e contratar um pescador Moken pro sunrise breakfast é a experiência mais autêntica da ilha.
+                  <em> Apoia direto a comunidade, sem intermediário turístico.</em>
+                </p>
+              </div>
+            </Reveal>
+            <div className="grid md:grid-cols-2 gap-5">
+              {MOKEN.map((x, i) => (
+                <Reveal key={x.titulo} i={i}>
+                  <article className="pk-card pk-card-tight h-full">
+                    <p className="pk-kicker">{x.titulo}</p>
+                    <p className="text-sm mt-2 text-[hsl(var(--pk-muted))]">{x.texto}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
           <section id="comida">
             <SectionTitle icon={UtensilsCrossed} kicker="09 — Mesa" title="Onde comer — 10 testados" />
             <div className="grid md:grid-cols-2 gap-5">
@@ -539,6 +795,68 @@ const KohLipe2947 = () => {
                     <p className="pk-kicker">Quando</p>
                     <p className="text-sm mt-1 mb-3">{s.quando}</p>
                     <p className="text-sm text-[hsl(var(--pk-muted))]">{s.oque}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="internet">
+            <SectionTitle icon={Wifi} kicker="15 — Conectividade" title="Internet, SIM e trabalho remoto" />
+            <div className="grid md:grid-cols-2 gap-5">
+              {INTERNET.map((x, i) => (
+                <Reveal key={x.titulo} i={i}>
+                  <article className="pk-card pk-card-tight h-full">
+                    <p className="pk-kicker">{x.titulo}</p>
+                    <p className="text-sm mt-2 text-[hsl(var(--pk-muted))]">{x.texto}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="dinheiro">
+            <SectionTitle icon={Banknote} kicker="16 — Dinheiro" title="ATM, cash e cartão — Lipe sem banco" />
+            <div className="grid md:grid-cols-2 gap-5">
+              {DINHEIRO.map((x, i) => (
+                <Reveal key={x.titulo} i={i}>
+                  <article className="pk-card pk-card-tight h-full">
+                    <p className="pk-kicker">{x.titulo}</p>
+                    <p className="text-sm mt-2 text-[hsl(var(--pk-muted))]">{x.texto}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="familia">
+            <SectionTitle icon={Baby} kicker="17 — Família" title="Lipe com criança — o que muda" />
+            <div className="grid md:grid-cols-2 gap-5">
+              {FAMILIA.map((x, i) => (
+                <Reveal key={x.titulo} i={i}>
+                  <article className="pk-card pk-card-tight h-full">
+                    <p className="pk-kicker">{x.titulo}</p>
+                    <p className="text-sm mt-2 text-[hsl(var(--pk-muted))]">{x.texto}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="saude">
+            <SectionTitle icon={HeartPulse} kicker="18 — Saúde" title="Clínica, emergência e seguro" />
+            <Reveal>
+              <div className="pk-callout pk-callout-alert mb-6">
+                <AlertTriangle className="w-5 h-5 shrink-0 mt-0.5" />
+                <p><strong>Seguro viagem com evacuação marítima é OBRIGATÓRIO em Lipe.</strong> Hospital sério fica em Satun (4-5h de transporte). Sem seguro, evacuação grave custa R$ 8.000-15.000 do seu bolso.</p>
+              </div>
+            </Reveal>
+            <div className="grid md:grid-cols-2 gap-5">
+              {SAUDE.map((x, i) => (
+                <Reveal key={x.titulo} i={i}>
+                  <article className="pk-card pk-card-tight h-full">
+                    <p className="pk-kicker">{x.titulo}</p>
+                    <p className="text-sm mt-2 text-[hsl(var(--pk-muted))]">{x.texto}</p>
                   </article>
                 </Reveal>
               ))}
