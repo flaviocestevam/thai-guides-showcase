@@ -735,6 +735,28 @@ const KohKood7841 = () => {
             </div>
           </section>
 
+          <section id="pesca">
+            <SectionTitle icon={Fish} kicker="13 — Autêntico" title="Pesca local com longtail Moken/tailandês" />
+            <Reveal>
+              <div className="pk-card pk-card-feature mb-6">
+                <p className="text-lg leading-relaxed">
+                  <strong className="pk-gold">A experiência fora do tour:</strong> pescador da vila aceita levar você de longtail tradicional pra pesca matinal.
+                  Apoia direto a comunidade, sem intermediário turístico.
+                </p>
+              </div>
+            </Reveal>
+            <div className="grid md:grid-cols-2 gap-5">
+              {PESCA.map((x, i) => (
+                <Reveal key={x.titulo} i={i}>
+                  <article className="pk-card pk-card-tight h-full">
+                    <p className="pk-kicker">{x.titulo}</p>
+                    <p className="text-sm mt-2 text-[hsl(var(--pk-muted))]">{x.texto}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
           <section id="cachoeira">
             <SectionTitle icon={Trees} kicker="11 — Selva" title="Cachoeiras + trilhas (livres e sinalizadas)" />
             <div className="grid md:grid-cols-2 gap-5">
