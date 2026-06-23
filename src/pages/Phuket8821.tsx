@@ -1,4 +1,5 @@
 // internal links open in new tab (padrão dos guias pagos)
+import type { ReactNode } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
@@ -12,11 +13,7 @@ import {
 // Rota privada: /phuket8821
 // ============================================================================
 
-// Helper: link para Google Maps de qualquer lugar/região citado
-const gmap = (q: string) =>
-  `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q + ", Phuket, Thailand")}`;
-
-const G = ({ q, children, className = "" }: { q?: string; children: React.ReactNode; className?: string }) => {
+const G = ({ q, children, className = "" }: { q?: string; children: ReactNode; className?: string }) => {
   const query = q ?? (typeof children === "string" ? children : "");
   return (
     <span className={`inline-flex items-baseline gap-1.5 ${className}`}>
