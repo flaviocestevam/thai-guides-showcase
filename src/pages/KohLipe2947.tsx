@@ -164,8 +164,25 @@ const ADANG = [
   { titulo: "Trilha (Chado Cliff Viewpoint)", texto: "2,5 km só ida, íngreme. 1h30-2h subida, 1h descida. Tênis fechado, 2L água, repelente. Sem placa: pergunte ao guarda do parque na base." },
   { titulo: "Quando ir", texto: "Nascer do sol (saída 04h30 do Sunrise) OU pôr do sol (saída 15h, descida com lanterna). Meio-dia é desumano." },
   { titulo: "O que esperar", texto: "Vista panorâmica de Lipe inteira, Rawi atrás, mar azul-piscina. Macacos no caminho. Você usou o ingresso de 200 baht da chegada." },
-  { titulo: "Rawi (alternativa fácil)", texto: "Ilha vizinha sem trilha — pra praia deserta e snorkel. Longtail combinado com Adang (full day) 1.500-2.000 baht / barco." },
+  { titulo: "Rawi (praia deserta)", texto: "Ilha vizinha de Adang, sem trilha, só praia branca de 1,5 km quase sempre vazia. Longtail combinado com Adang (full day) 1.500-2.000 baht / barco até 4 pessoas. Sem restaurante — leve água e snack." },
+  { titulo: "Tarutao histórica (avançado)", texto: "Ilha-prisão dos anos 30-40, hoje sede do Parque Nacional. Longtail/speedboat charter de Lipe: 2h, 4.500+ baht/barco. Trilhas a Talo Wow, Lo Po, mirante do farol. Vá só se tiver 6+ dias em Lipe." },
 ];
+
+const WALKING_STREET = [
+  { titulo: "O que é", texto: "Rua de pedestres ligando Pattaya Beach ao Sunrise Beach. 700m de barracas, restaurantes, bares e lojas — único 'centro' da ilha." },
+  { titulo: "Quando ir", texto: "Vida noturna começa 19h, pico 21h-23h. Antes das 18h é só comércio diurno meio parado." },
+  { titulo: "Onde comer", texto: "Pooh's Bar (clássico veterano), Nee Papaya (som tam autêntico), Bombay Indian (quando enjoa de tailandês). Cardápio em inglês na maioria." },
+  { titulo: "Vibe", texto: "Lounge bars com fogo na areia, fire show 21h em vários pontos, reggae em 2-3 lugares. SEM balada eletrônica — quem quer techno vai pra Phangan." },
+];
+
+const HAT_YAI_PITSTOP = [
+  { titulo: "Quando precisa", texto: "Voo de Bangkok chegou DEPOIS das 14h em Hat Yai (HDY). Última mini-van pra Pakbara sai 14h-14h30. Sem ela, durma e siga 7h da manhã seguinte." },
+  { titulo: "Onde dormir", texto: "Centro a 12 km do aeroporto. Hotéis de R$ 120-280: Centara Hat Yai (perto rodoviária), Lee Gardens Plaza (centro), Buri Sriphu Boutique. Reserva fácil de última hora." },
+  { titulo: "Aeroporto direto", texto: "Se voo chegou após 21h: hotel no aeroporto (Sleep Box Hat Yai, cápsulas R$ 80) e parta 6h. Não pegue táxi pra centro à noite — golpe de tabela inflada." },
+  { titulo: "O que fazer", texto: "Hat Yai NÃO é destino turístico. Use só como pit-stop. Se sobrou tarde: night market Kim Yong (street food halal — Hat Yai é cidade muçulmana mista)." },
+];
+
+
 
 const HOSPEDAGEM = [
   { faixa: "Mochileiro", price: "R$ 180 — 450", items: [
