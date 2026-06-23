@@ -252,6 +252,14 @@ const Retiros8834 = () => (
               <p className="text-xs text-muted-foreground">{c.retreats.length} retiros</p>
             </a>
           ))}
+          <a href="#por-doacao" className="block bg-card border border-border rounded-lg p-3 hover:border-primary transition">
+            <p className="font-semibold text-foreground text-sm">12 por doação</p>
+            <p className="text-xs text-muted-foreground">Lista agregada</p>
+          </a>
+          <a href="#luxo" className="block bg-card border border-border rounded-lg p-3 hover:border-primary transition">
+            <p className="font-semibold text-foreground text-sm">Top 10 luxo</p>
+            <p className="text-xs text-muted-foreground">Vale o preço</p>
+          </a>
           <a href="#preparacao" className="block bg-card border border-border rounded-lg p-3 hover:border-primary transition">
             <p className="font-semibold text-foreground text-sm">Como se preparar</p>
             <p className="text-xs text-muted-foreground">21 dias antes</p>
