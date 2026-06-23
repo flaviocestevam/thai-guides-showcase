@@ -364,6 +364,133 @@ const KohTao6294 = () => {
             </Reveal>
           </section>
 
+          <section id="carreira">
+            <SectionTitle icon={Sparkles} kicker="05 — Carreira PADI" title="Open Water ao Instrutor — prazos e preços reais" />
+            <div className="overflow-x-auto pk-card pk-card-tight">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="text-left text-[hsl(var(--pk-muted))] border-b border-[hsl(var(--pk-line))]">
+                    <th className="py-3 pr-4">Nível</th>
+                    <th className="py-3 pr-4">Prazo</th>
+                    <th className="py-3 pr-4">Preço (baht)</th>
+                    <th className="py-3">O que muda</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {CARREIRA.map((c) => (
+                    <tr key={c.nivel} className="border-b border-[hsl(var(--pk-line))]/40 align-top">
+                      <td className="py-3 pr-4 font-semibold text-[hsl(var(--pk-fg))]">{c.nivel}</td>
+                      <td className="py-3 pr-4 whitespace-nowrap">{c.prazo}</td>
+                      <td className="py-3 pr-4 whitespace-nowrap">{c.preco}</td>
+                      <td className="py-3">{c.oque}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            <div className="mt-10 grid md:grid-cols-2 gap-5">
+              <Reveal>
+                <article className="pk-card">
+                  <p className="pk-kicker">Instrutores brasileiros — contato via escola</p>
+                  <p className="pk-h4 mt-1">Os 6 brasileiros que dão aula em PT</p>
+                  <ul className="mt-4 space-y-3 text-sm">
+                    {INSTRUTORES_BR.map((i) => (
+                      <li key={i.nome}>
+                        <strong className="text-[hsl(var(--pk-fg))]">{i.nome}</strong>
+                        <span className="text-[hsl(var(--pk-muted))]"> — {i.base}.</span>
+                        <p className="text-[hsl(var(--pk-muted))] mt-0.5">{i.oque}</p>
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="text-xs text-[hsl(var(--pk-muted))] mt-4">Peça pelo nome na recepção da escola indicada — todos atendem em PT mediante agendamento. Confirmar disponibilidade 1 semana antes.</p>
+                </article>
+              </Reveal>
+
+              <Reveal i={1}>
+                <article className="pk-card">
+                  <p className="pk-kicker">Script de negociação no pier</p>
+                  <p className="pk-h4 mt-1">De R$ 1.800 para R$ 600 — passo a passo</p>
+                  <ol className="mt-4 space-y-3 text-sm list-decimal pl-5">
+                    {NEGOCIAR.map((n) => (
+                      <li key={n.fase}>
+                        <strong className="text-[hsl(var(--pk-fg))]">{n.fase}:</strong>
+                        <span className="text-[hsl(var(--pk-muted))]"> {n.o_que_dizer}</span>
+                      </li>
+                    ))}
+                  </ol>
+                </article>
+              </Reveal>
+            </div>
+
+            <Reveal>
+              <div className="mt-8">
+                <p className="pk-kicker mb-4">Escolas para evitar — e o porquê</p>
+                <div className="grid md:grid-cols-2 gap-4">
+                  {ESCOLAS_EVITAR.map((e) => (
+                    <article key={e.nome} className={`pk-card pk-card-tight ${TONE_CLASS.alert} h-full`}>
+                      <h4 className="pk-h4 flex items-start gap-2"><XCircle className="w-4 h-4 mt-1 shrink-0" /> {e.nome}</h4>
+                      <p className="text-sm text-[hsl(var(--pk-muted))] mt-2">{e.motivo}</p>
+                    </article>
+                  ))}
+                </div>
+              </div>
+            </Reveal>
+          </section>
+
+          <section id="clima">
+            <SectionTitle icon={Sun} kicker="06 — Janela do mar" title="Visibilidade mês a mês" />
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {VISIBILIDADE.map((v, i) => (
+                <Reveal key={v.mes} i={i}>
+                  <article className={`pk-card pk-card-tight ${TONE_CLASS[v.tone]} h-full`}>
+                    <div className="flex justify-between items-baseline">
+                      <h3 className="pk-h4">{v.mes}</h3>
+                      <span className="pk-tag-sm">{v.vis}</span>
+                    </div>
+                    <p className="text-sm text-[hsl(var(--pk-muted))] mt-2">{v.dica}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+            <Reveal>
+              <div className="pk-callout pk-callout-warn mt-8">
+                <AlertTriangle className="w-5 h-5 shrink-0 mt-0.5" />
+                <p><strong>Regra prática:</strong> jan-mai e fev-mar especialmente = janela de ouro. Out-nov = monção NE, evite reservar viagem fechada. Jun-set é mar viável com pacotes 20-30% mais baratos.</p>
+              </div>
+            </Reveal>
+          </section>
+
+          <section id="sunrise">
+            <SectionTitle icon={Sun} kicker="07 — Foto da viagem" title="John-Suwan Viewpoint às 5h45" />
+            <div className="grid md:grid-cols-5 gap-6">
+              <Reveal className="md:col-span-3">
+                <article className="pk-card h-full">
+                  <p className="pk-kicker">O viewpoint que ninguém faz na hora certa</p>
+                  <p className="pk-h3 mt-2">A vista das 3 baías ao nascer do sol</p>
+                  <p className="text-[hsl(var(--pk-muted))] mt-4 leading-relaxed">
+                    O <G q="John-Suwan Viewpoint Koh Tao">John-Suwan Viewpoint</G> entrega o postal mais raro da ilha: Chalok, Thian Og (Shark Bay) e Jansom Bay vistas de cima, com Koh Nang Yuan ao fundo. 99% dos turistas sobe às 14h, com 38° de calor, suado e sem ver nada — porque o sol bate de frente.
+                  </p>
+                  <p className="text-[hsl(var(--pk-muted))] mt-3 leading-relaxed">
+                    Quem sobe <strong className="text-[hsl(var(--pk-fg))]">às 5h45</strong> pega o nascer do sol entre as três baías, vento fresco e ninguém na trilha. É a foto que vira capa de viagem.
+                  </p>
+                </article>
+              </Reveal>
+              <Reveal i={1} className="md:col-span-2">
+                <article className="pk-card pk-tone-premium h-full">
+                  <p className="pk-kicker">Plano operacional</p>
+                  <ul className="mt-3 space-y-3 text-sm">
+                    <li><strong className="text-[hsl(var(--pk-fg))]">Acesso:</strong> entrada no <G q="John-Suwan Viewpoint trailhead Chalok Baan Kao">trailhead de Chalok Baan Kao</G>. Taxa 50 baht no quiosque.</li>
+                    <li><strong className="text-[hsl(var(--pk-fg))]">Subida:</strong> 15-20 min, íngreme nos últimos 5. Tênis obrigatório.</li>
+                    <li><strong className="text-[hsl(var(--pk-fg))]">Horário:</strong> sair do hotel 5h15 (Sairee) ou 5h35 (Chalok). Sol nasce 6h05-6h25 conforme o mês.</li>
+                    <li><strong className="text-[hsl(var(--pk-fg))]">Levar:</strong> lanterna do celular, água, repelente. Sem drone (proibido).</li>
+                    <li><strong className="text-[hsl(var(--pk-fg))]">Bônus:</strong> desça por <G q="Freedom Beach Koh Tao">Freedom Beach</G> para café da manhã pé na areia.</li>
+                  </ul>
+                </article>
+              </Reveal>
+            </div>
+          </section>
+
           <section id="hospedagem">
             <SectionTitle icon={Sparkles} kicker="05 — Onde dormir" title="Hospedagem por faixa real" />
             <div className="grid md:grid-cols-3 gap-6">
