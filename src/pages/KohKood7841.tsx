@@ -4,7 +4,8 @@ import {
   MapPin, AlertTriangle, CheckCircle2, XCircle, Ship, UtensilsCrossed,
   Compass, Wallet, ShieldCheck, Map as MapIcon, Sun, Waves, Sparkles, Home,
   ArrowUpRight, CalendarDays, Route, Sunset, Hotel, Bike, Trees,
-  Lightbulb, Anchor, Wifi, Banknote, HeartPulse, Mountain,
+  Anchor, Wifi, HeartPulse, Eye, Footprints, CalendarCheck,
+  Baby, GraduationCap, Fish, Flower, Building2, Factory, ClipboardList, Scale,
 } from "lucide-react";
 import { PK_STYLES, Reveal, SectionTitle, TONE_CLASS, makeMapChip, type Tone } from "@/components/guides/premiumShell";
 
@@ -13,18 +14,29 @@ const G = makeMapChip("Koh Kood, Thailand");
 const TOC = [
   { id: "comeco", label: "Antes de tudo", icon: Compass },
   { id: "praias", label: "7 praias", icon: Home },
+  { id: "mapa-scooter", label: "Mapa scooter", icon: Footprints },
+  { id: "mes-perfil", label: "Mês ideal", icon: CalendarCheck },
   { id: "clima", label: "Clima mês a mês", icon: CalendarDays },
   { id: "chegar", label: "Como chegar (4h)", icon: Route },
+  { id: "booking-timeline", label: "Quando reservar", icon: ClipboardList },
   { id: "trat", label: "Pit-stop Trat", icon: Hotel },
   { id: "hospedagem", label: "12 resorts", icon: Sparkles },
   { id: "soneva", label: "Soneva vs alternativa", icon: Sparkles },
   { id: "scooter", label: "Scooter loop", icon: Bike },
   { id: "snorkel", label: "Snorkel grátis", icon: Waves },
+  { id: "visi-pontos", label: "Visi por ponto", icon: Eye },
+  { id: "mergulho", label: "Mergulho PADI", icon: GraduationCap },
   { id: "kayak", label: "Kayak Klong Chao", icon: Anchor },
+  { id: "pesca", label: "Pesca local", icon: Fish },
   { id: "cachoeira", label: "Cachoeira + trilha", icon: Trees },
   { id: "sunset", label: "Sunset Ao Phrao", icon: Sunset },
+  { id: "spa", label: "Spa & wellness", icon: Flower },
+  { id: "ao-salat", label: "Vila Ao Salat", icon: Building2 },
+  { id: "borracha", label: "Fábrica borracha", icon: Factory },
   { id: "comida", label: "Onde comer", icon: UtensilsCrossed },
+  { id: "familia", label: "Família", icon: Baby },
   { id: "combinar", label: "Combinar ilhas", icon: Ship },
+  { id: "comparativo", label: "Kood × Mak × Chang", icon: Scale },
   { id: "internet", label: "Internet & dinheiro", icon: Wifi },
   { id: "saude", label: "Saúde & seguro", icon: HeartPulse },
   { id: "naofazer", label: "O que NÃO fazer", icon: XCircle },
@@ -221,6 +233,108 @@ const ROTEIROS = [
   ]},
 ];
 
+const VISI_PONTOS = [
+  { ponto: "Klong Yai Kee (direto da praia)", nov: "8-12m", dez: "10-15m", jan: "12-18m", fev: "15-22m", mar: "12-18m", abr: "8-12m" },
+  { ponto: "Ao Bang Bao (direto da praia)", nov: "8-12m", dez: "12-15m", jan: "12-18m", fev: "15-20m", mar: "12-18m", abr: "8-12m" },
+  { ponto: "Koh Rang (tour)", nov: "12-18m", dez: "15-20m", jan: "18-25m", fev: "20-28m", mar: "18-22m", abr: "12-18m" },
+  { ponto: "Koh Rad (longtail privado)", nov: "10-15m", dez: "15-20m", jan: "18-22m", fev: "20-25m", mar: "15-20m", abr: "10-15m" },
+  { ponto: "Koh Rang Pinnacle (dive)", nov: "15-20m", dez: "18-25m", jan: "22-28m", fev: "25-30m", mar: "20-25m", abr: "15-20m" },
+  { ponto: "HTMS Chang (wreck dive)", nov: "12-18m", dez: "15-22m", jan: "18-25m", fev: "20-28m", mar: "18-22m", abr: "12-18m" },
+];
+
+const MAPA_SCOOTER = [
+  { de: "Pier Ao Salat (chegada)", para: "Klong Chao centro", tempo: "25 min", como: "Estrada asfaltada, sinalizada. Songthaew 200-300 baht." },
+  { de: "Klong Chao", para: "Ao Phrao (sunset bar)", tempo: "10 min", como: "Norte da costa oeste. Estrada boa, 1 curva fechada." },
+  { de: "Klong Chao", para: "Ao Bang Bao", tempo: "15 min", como: "Sul, asfalto bom. Passa por Klong Yai Kee (pare se for snorkelar)." },
+  { de: "Ao Bang Bao", para: "Ngamkho", tempo: "15 min", como: "Sul, asfalto + 500m de terra no final. OK em scooter automática." },
+  { de: "Ngamkho", para: "Tapao", tempo: "20 min", como: "Sul extremo. Asfalto + 200m trilha a pé." },
+  { de: "Klong Chao", para: "Khlong Hin (norte)", tempo: "35 min", como: "Norte da ilha, estrada subindo. Cuidado em chuva." },
+  { de: "Klong Chao", para: "Cachoeira Klong Chao", tempo: "5 min", como: "Acesso pela estrada principal, estacionamento gratuito." },
+  { de: "Loop completo (todas as praias)", para: "—", tempo: "6-7h (com paradas)", como: "60 km ida e volta. Saída 09h, volta sunset Ao Phrao 18h." },
+];
+
+const MES_PERFIL = [
+  { perfil: "Lua de mel / casal premium", mes: "Fev", motivo: "Visibilidade máxima, vento mínimo, sunset Ao Phrao impecável. Soneva/Tinkerbell com preço alto mas vale." },
+  { perfil: "Mergulhador (Open Water+)", mes: "Mar", motivo: "Koh Rang Pinnacle e HTMS Chang em pico de visi (25-30m). Operadoras todas abertas." },
+  { perfil: "Família com criança", mes: "Jan", motivo: "Mar calmo em Klong Chao raso, sem chuva, restaurante pé na areia aberto." },
+  { perfil: "Mochileiro / budget", mes: "Início nov ou fim abr", motivo: "Janela aberta com preços 30-40% abaixo do pico. Resort econômico vale." },
+  { perfil: "Slow travel / isolamento", mes: "Nov ou abr", motivo: "Ilha mais vazia, scooter solo sem trânsito, sunset bar sem fila." },
+  { perfil: "EVITAR", mes: "Mai-out", motivo: "Monção fecha 60% dos resorts e cancela speedboats." },
+  { perfil: "EVITAR (preço/lotação)", mes: "23 dez - 5 jan", motivo: "Preços +80%, mínimo 4-5 noites obrigatório, ilha lotada." },
+];
+
+const MERGULHO = [
+  { titulo: "Open Water (iniciante)", texto: "PADI Open Water em Kood: R$ 1.500-1.800, 3-4 dias. BB Divers (Klong Chao) e Paradise Divers (Ao Phrao) aceitam zero experiência. Mais barato que Koh Tao? Não — mas a ilha é menos lotada." },
+  { titulo: "Advanced Open Water", texto: "2 dias, R$ 1.000-1.300. Em Kood rende: HTMS Chang wreck (28m) só libera com Advanced. Combo Open + Advanced em sequência custa R$ 2.300." },
+  { titulo: "Sites para Open Water", texto: "Koh Rang shallow (12-15m, coral colorido), Hin Khao (formação rochosa rasa). Sem corrente forte, ideal pra primeiro dive certificado." },
+  { titulo: "Sites para Advanced+", texto: "Koh Rang Pinnacle (24-28m, parede de coral mole, peixe-rei grande), HTMS Chang (28m, navio de guerra afundado em 2012, tartarugas-marinhas dentro)." },
+  { titulo: "Escola pra iniciante", texto: "BB Divers (mais didático, turmas pequenas, instrutor brasileiro às vezes) ou Paradise Divers (descontraído). Ambas SSI/PADI." },
+  { titulo: "Fun dive avulso", texto: "2 tanks R$ 850-1.100. Inclui equipamento + almoço no barco. Confirme cilindro 12L e instrutor em inglês fluente." },
+];
+
+const PESCA = [
+  { titulo: "Pescador local longtail", texto: "Combine direto na praia de Klong Chao ou Ao Salat com pescador da vila. Saída 05h30, volta 09h. 1.200-1.800 baht/barco até 4 pessoas. Sem intermediário turístico." },
+  { titulo: "O que você pega", texto: "Lula, peixe-rei, garoupa, snapper. Pesca de linha tradicional (sem vara). Pescador ensina o nó e a leitura do mar. Resort cozinha o peixe pra você de volta (50-100 baht)." },
+  { titulo: "Etiqueta", texto: "Tire os sapatos no barco. Não jogue lixo no mar (peixe não morde). Negocie em 4 pessoas pra dividir custo. Aceite chá tradicional se oferecido." },
+  { titulo: "Charter premium", texto: "Resort boutique organiza charter privado com almoço de bordo: 4.500-6.500 baht / barco / dia. Para casal premium que quer experiência exclusiva." },
+];
+
+const SPA = [
+  { titulo: "Six Senses Spa @ Soneva Kiri", texto: "Top da Tailândia leste. Massagem tailandesa 90min: 4.500-6.500 baht. Aberto a não-hóspedes mediante reserva. Para experiência única em lua de mel." },
+  { titulo: "Shantaa Spa (Ngamkho)", texto: "Spa boutique premium. Massagem tailandesa óleo 60min: 1.500-2.000 baht. Vista pro mar, ambiente zen, aceita não-hóspedes." },
+  { titulo: "Tinkerbell Spa (Ao Bang Bao)", texto: "Casa de madeira pé na praia. Tailandesa tradicional 90min: 1.800-2.200 baht. Pacote casal popular." },
+  { titulo: "Massagem local em Klong Chao centro", texto: "3-4 casas fixas no centro com cardápio em inglês. Massagem tailandesa 60min: 300-400 baht. Mesma qualidade técnica do spa premium, sem o ambiente de luxo." },
+  { titulo: "Massagem 'pé na areia' (cuidado)", texto: "Massagista ambulante: 500-800 baht/hora, qualidade inconsistente, ambiente sem privacidade. EVITE — pague 300 na casa fixa." },
+];
+
+const AO_SALAT = [
+  { titulo: "O que é", texto: "Vila de pescadores construída sobre palafitas no mar. Única 'cidade' de Kood, fica no leste da ilha (oposto às praias turísticas). Comunidade real de pescadores tailandeses muçulmanos." },
+  { titulo: "Como chegar", texto: "Scooter de Klong Chao: 30 min de estrada asfaltada. Estacionamento gratuito na entrada da vila. Caminhe pelos píeres de madeira (com cuidado — alguns são frágeis)." },
+  { titulo: "Almoço pé no mar", texto: "2-3 restaurantes locais sobre palafitas. Peixe do dia, lula grelhada, arroz tailandês. R$ 25-50 por refeição completa. Vista do mar enquanto come. Sem cardápio em inglês — aponte pra mesa do lado." },
+  { titulo: "Etiqueta cultural", texto: "Cidade muçulmana — vista discreta (sem biquíni andando), não fotografe pessoas sem pedir. Sexta-feira (oração) evite meio-dia (12h-14h). Sem álcool nas barracas locais." },
+  { titulo: "Quando ir", texto: "Manhã 09h-11h (mercado de peixe ativo) OU almoço 12h-14h. Final de tarde fica vazio. Combine com cachoeira Klong Chao no mesmo dia." },
+];
+
+const BORRACHA = [
+  { titulo: "O que é", texto: "70% da ilha era plantação de seringueiras antes do turismo. Mini-fábricas familiares ainda extraem látex e fazem lâminas de borracha bruta — tradição centenária da região." },
+  { titulo: "Onde visitar", texto: "2-3 plantações abertas a visita perto de Khlong Hin (norte) e na estrada Klong Chao-Ao Salat. Pergunte ao resort — eles indicam a fazenda da semana (rotação)." },
+  { titulo: "O que você vê", texto: "Sangria da árvore ao amanhecer (corte em diagonal pra látex escorrer), filtragem do líquido branco, prensagem das lâminas. Demonstração de 30-45 min. Sem inglês — gestos e tradução pelo Google." },
+  { titulo: "Quanto custa", texto: "Gratuito ou doação simbólica (100-200 baht). Compre 1-2 lâminas como souvenir autêntico (50-100 baht) — sustenta a comunidade direto." },
+  { titulo: "Quando ir", texto: "Amanhecer (05h-07h) é a sangria — única hora real. Visita à fábrica em si funciona o dia todo. Em monção: produção cai pela chuva." },
+];
+
+const FAMILIA = [
+  { titulo: "Praia ideal", texto: "Klong Chao (sul, mar raso 50m, sem ondas, rio com kayak). Estrutura completa: restaurante pé na areia, banheiro, salva-vidas em alguns resorts. Ao Bang Bao também serve mas é mais isolada." },
+  { titulo: "Hotéis com kids facilities", texto: "Soneva Kiri (kids club premium, baby-sitter incluída), Tinkerbell Privacy (cottages 2 quartos, berço sob pedido), High Season Pool Villa (piscina privativa fechada), The Beach Natural Resort (familiar)." },
+  { titulo: "Atividades com criança", texto: "Kayak no rio Klong Chao (calmo, raso — colete sempre), cachoeira Klong Chao (poça gelada — supervisão), snorkel direto da praia Klong Yai Kee (mar raso, sem corrente). EVITE longtail aberto sem cobertura." },
+  { titulo: "Comida pra criança seletiva", texto: "Toh Pai (curry simples e arroz), View Point Cafe (sourdough, sanduíche, hambúrguer), Tinkerbell (cardápio kids). 'Mai phet' = sem pimenta. Frutas em qualquer mercado." },
+  { titulo: "Saúde infantil", texto: "Posto de saúde básico em Khlong Hin. Hospital sério = Trat (3-4h). Leve farmácia completa (febre, alergia, diarreia, soro). Vacinas em dia (Hepatite A obrigatória). Repelente DEET 30%+ contra dengue." },
+  { titulo: "O que NÃO fazer com criança", texto: "Scooter com criança pequena (perigoso, sem capacete infantil sério), tour Koh Rang longo (5h+ no barco), trilha pra cachoeira em chuva (escorregadia), Ao Salat sem proteção solar (palafitas sem sombra)." },
+];
+
+const COMPARATIVO = [
+  { criterio: "Tamanho / movimento", kood: "Grande, baixa lotação", mak: "Pequena, muito vazia", chang: "Grande, mais movimentada" },
+  { criterio: "Perfil", kood: "Luxo discreto, casal, isolamento", mak: "Família, mochileiro maduro, bike", chang: "Família budget, agito moderado" },
+  { criterio: "Preço médio (hotel)", kood: "R$ 700-1.500", mak: "R$ 250-700", chang: "R$ 350-1.000" },
+  { criterio: "Como chegar (de Bangkok)", kood: "Voo Trat + speedboat (4h)", mak: "Voo Trat + speedboat (3h30)", chang: "Ônibus + ferry (5-6h) ou voo (4h)" },
+  { criterio: "Praias destaque", kood: "Klong Chao, Ao Bang Bao, Ngamkho", mak: "Ao Suan Yai, Ao Khao", chang: "White Sand, Lonely Beach, Klong Prao" },
+  { criterio: "Snorkel direto da praia", kood: "Sim (2 praias grátis)", mak: "Sim (Koh Kham vizinha)", chang: "Não — tour necessário" },
+  { criterio: "Vida noturna", kood: "Quase zero (1 bar)", mak: "Zero", chang: "Lonely Beach (sim, com excesso)" },
+  { criterio: "Selva preservada", kood: "70% parque nacional", mak: "Plana, plantações", chang: "70% parque (mais montanhoso)" },
+  { criterio: "Veredito", kood: "Premium tranquilo", mak: "Família slow", chang: "Custo-benefício com agito" },
+];
+
+const BOOKING_TIMELINE = [
+  { quando: "Dez-Jan (Natal/Ano-Novo)", antecedencia: "5-6 meses", motivo: "Demanda absurda, mínimo 4-5 noites obrigatórias, preços +80%. Soneva esgota em outubro pra fim de ano." },
+  { quando: "Fev (mês rei lua de mel)", antecedencia: "4 meses", motivo: "Tinkerbell/Shantaa lotam. Resorts pequenos esgotam primeiro. Voos Bangkok Airways também — reserve junto." },
+  { quando: "Mar (mergulho)", antecedencia: "3 meses", motivo: "Demanda do circuito de mergulho. BB Divers e Paradise Divers limitam turmas." },
+  { quando: "Nov ou Abr (janela aberta)", antecedencia: "2 meses", motivo: "Pico passado/começando. Preços normalizam. Cancelamento flexível ainda funciona." },
+  { quando: "Mai (última semana antes da monção)", antecedencia: "1-2 semanas", motivo: "Última chance. Risco real de speedboat cancelar. Reserva refundable é OBRIGATÓRIA." },
+  { quando: "Jun-Out (monção)", antecedencia: "—", motivo: "NÃO VÁ. 60% dos resorts fechados. Soneva fecha completamente set-out. Speedboat cancela direto." },
+];
+
+
+
 const KohKood7841 = () => {
   return (
     <>
@@ -323,6 +437,49 @@ const KohKood7841 = () => {
             </div>
           </section>
 
+          <section id="mapa-scooter">
+            <SectionTitle icon={Footprints} kicker="03 — Mobilidade" title="Mapa scooter — tempos reais entre cada praia" />
+            <Reveal>
+              <div className="pk-card p-0 overflow-hidden">
+                <div className="overflow-x-auto">
+                  <table className="pk-table">
+                    <thead><tr><th>De</th><th>Para</th><th>Tempo</th><th>Como</th></tr></thead>
+                    <tbody>
+                      {MAPA_SCOOTER.map((m, i) => (
+                        <tr key={i}>
+                          <td className="font-medium">{m.de}</td>
+                          <td>{m.para}</td>
+                          <td className="pk-gold-soft font-medium whitespace-nowrap">{m.tempo}</td>
+                          <td className="text-sm">{m.como}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </Reveal>
+          </section>
+
+          <section id="mes-perfil">
+            <SectionTitle icon={CalendarCheck} kicker="04 — Decisão" title="Mês ideal por perfil — cartão único" />
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+              {MES_PERFIL.map((m, i) => {
+                const isEvitar = m.perfil.startsWith("EVITAR");
+                return (
+                  <Reveal key={i} i={i}>
+                    <article className={`pk-card pk-card-tight h-full ${isEvitar ? "pk-tone-alert" : "pk-tone-ok"}`}>
+                      <header className="flex items-start justify-between gap-3 mb-3">
+                        <h3 className="pk-h4">{m.perfil}</h3>
+                        <span className="pk-verdict">{m.mes}</span>
+                      </header>
+                      <p className="text-sm text-[hsl(var(--pk-muted))]">{m.motivo}</p>
+                    </article>
+                  </Reveal>
+                );
+              })}
+            </div>
+          </section>
+
           <section id="clima">
             <SectionTitle icon={CalendarDays} kicker="03 — Quando ir" title="Clima mês a mês — janela honesta" />
             <Reveal>
@@ -381,6 +538,28 @@ const KohKood7841 = () => {
                           <td className="whitespace-nowrap">{t.tempo}</td>
                           <td className="font-medium whitespace-nowrap">{t.preco}</td>
                           <td className="text-sm">{t.dica}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </Reveal>
+          </section>
+
+          <section id="booking-timeline">
+            <SectionTitle icon={ClipboardList} kicker="05 — Reserva" title="Quando reservar — timeline por janela" />
+            <Reveal>
+              <div className="pk-card p-0 overflow-hidden">
+                <div className="overflow-x-auto">
+                  <table className="pk-table">
+                    <thead><tr><th>Quando</th><th>Antecedência</th><th>Motivo</th></tr></thead>
+                    <tbody>
+                      {BOOKING_TIMELINE.map((b, i) => (
+                        <tr key={i}>
+                          <td className="font-medium">{b.quando}</td>
+                          <td className="pk-gold-soft font-medium whitespace-nowrap">{b.antecedencia}</td>
+                          <td className="text-sm">{b.motivo}</td>
                         </tr>
                       ))}
                     </tbody>
@@ -496,10 +675,78 @@ const KohKood7841 = () => {
             </div>
           </section>
 
+          <section id="visi-pontos">
+            <SectionTitle icon={Eye} kicker="10 — Visibilidade" title="Visibilidade por ponto, mês a mês (em metros)" />
+            <Reveal>
+              <div className="pk-card p-0 overflow-hidden">
+                <div className="overflow-x-auto">
+                  <table className="pk-table">
+                    <thead><tr><th>Ponto</th><th>Nov</th><th>Dez</th><th>Jan</th><th>Fev</th><th>Mar</th><th>Abr</th></tr></thead>
+                    <tbody>
+                      {VISI_PONTOS.map((v) => (
+                        <tr key={v.ponto}>
+                          <td className="font-medium"><G q={`${v.ponto} Koh Kood`}>{v.ponto}</G></td>
+                          <td>{v.nov}</td>
+                          <td>{v.dez}</td>
+                          <td className="pk-gold-soft font-medium">{v.jan}</td>
+                          <td className="pk-gold-soft font-medium">{v.fev}</td>
+                          <td>{v.mar}</td>
+                          <td>{v.abr}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </Reveal>
+            <Reveal>
+              <div className="pk-callout pk-callout-info mt-6">
+                <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5" />
+                <p><strong>Fev é o mês rei.</strong> Koh Rang Pinnacle chega a 30m de visibilidade. Mai-out fica abaixo de 5m por monção.</p>
+              </div>
+            </Reveal>
+          </section>
+
+          <section id="mergulho">
+            <SectionTitle icon={GraduationCap} kicker="11 — Mergulho" title="Mergulho decodificado — Open Water ao Advanced" />
+            <div className="grid md:grid-cols-2 gap-5">
+              {MERGULHO.map((x, i) => (
+                <Reveal key={x.titulo} i={i}>
+                  <article className="pk-card pk-card-tight h-full">
+                    <p className="pk-kicker">{x.titulo}</p>
+                    <p className="text-sm mt-2 text-[hsl(var(--pk-muted))]">{x.texto}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
           <section id="kayak">
             <SectionTitle icon={Anchor} kicker="10 — Experiência" title="Kayak no Klong Chao — a hora mais zen" />
             <div className="grid md:grid-cols-2 gap-5">
               {KAYAK.map((x, i) => (
+                <Reveal key={x.titulo} i={i}>
+                  <article className="pk-card pk-card-tight h-full">
+                    <p className="pk-kicker">{x.titulo}</p>
+                    <p className="text-sm mt-2 text-[hsl(var(--pk-muted))]">{x.texto}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="pesca">
+            <SectionTitle icon={Fish} kicker="13 — Autêntico" title="Pesca local com longtail Moken/tailandês" />
+            <Reveal>
+              <div className="pk-card pk-card-feature mb-6">
+                <p className="text-lg leading-relaxed">
+                  <strong className="pk-gold">A experiência fora do tour:</strong> pescador da vila aceita levar você de longtail tradicional pra pesca matinal.
+                  Apoia direto a comunidade, sem intermediário turístico.
+                </p>
+              </div>
+            </Reveal>
+            <div className="grid md:grid-cols-2 gap-5">
+              {PESCA.map((x, i) => (
                 <Reveal key={x.titulo} i={i}>
                   <article className="pk-card pk-card-tight h-full">
                     <p className="pk-kicker">{x.titulo}</p>
@@ -543,6 +790,56 @@ const KohKood7841 = () => {
             </div>
           </section>
 
+          <section id="spa">
+            <SectionTitle icon={Flower} kicker="16 — Wellness" title="Spa & massagem — premium e local" />
+            <div className="grid md:grid-cols-2 gap-5">
+              {SPA.map((x, i) => (
+                <Reveal key={x.titulo} i={i}>
+                  <article className="pk-card pk-card-tight h-full">
+                    <p className="pk-kicker">{x.titulo}</p>
+                    <p className="text-sm mt-2 text-[hsl(var(--pk-muted))]">{x.texto}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="ao-salat">
+            <SectionTitle icon={Building2} kicker="17 — Cultura" title="Vila Ao Salat — palafitas sobre o mar" />
+            <Reveal>
+              <div className="pk-card pk-card-feature mb-6">
+                <p className="text-lg leading-relaxed">
+                  <strong className="pk-gold">A única &lsquo;cidade&rsquo; de Kood</strong> — comunidade muçulmana de pescadores sobre palafitas no leste da ilha.
+                  Quase nenhum turista vai. Almoço pé no mar por R$ 25.
+                </p>
+              </div>
+            </Reveal>
+            <div className="grid md:grid-cols-2 gap-5">
+              {AO_SALAT.map((x, i) => (
+                <Reveal key={x.titulo} i={i}>
+                  <article className="pk-card pk-card-tight h-full">
+                    <p className="pk-kicker">{x.titulo}</p>
+                    <p className="text-sm mt-2 text-[hsl(var(--pk-muted))]">{x.texto}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="borracha">
+            <SectionTitle icon={Factory} kicker="18 — Eco" title="Plantação de seringueira — tradição centenária" />
+            <div className="grid md:grid-cols-2 gap-5">
+              {BORRACHA.map((x, i) => (
+                <Reveal key={x.titulo} i={i}>
+                  <article className="pk-card pk-card-tight h-full">
+                    <p className="pk-kicker">{x.titulo}</p>
+                    <p className="text-sm mt-2 text-[hsl(var(--pk-muted))]">{x.texto}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
           <section id="comida">
             <SectionTitle icon={UtensilsCrossed} kicker="13 — Mesa" title="Onde comer — 8 testados" />
             <div className="grid md:grid-cols-2 gap-5">
@@ -555,6 +852,20 @@ const KohKood7841 = () => {
                     </div>
                     <p className="text-sm text-[hsl(var(--pk-muted))] mb-3">{c.oque}</p>
                     <p className="pk-gold-soft text-sm font-medium">{c.preco}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="familia">
+            <SectionTitle icon={Baby} kicker="20 — Família" title="Kood com criança — o que muda" />
+            <div className="grid md:grid-cols-2 gap-5">
+              {FAMILIA.map((x, i) => (
+                <Reveal key={x.titulo} i={i}>
+                  <article className="pk-card pk-card-tight h-full">
+                    <p className="pk-kicker">{x.titulo}</p>
+                    <p className="text-sm mt-2 text-[hsl(var(--pk-muted))]">{x.texto}</p>
                   </article>
                 </Reveal>
               ))}
@@ -574,6 +885,29 @@ const KohKood7841 = () => {
                 </Reveal>
               ))}
             </div>
+          </section>
+
+          <section id="comparativo">
+            <SectionTitle icon={Scale} kicker="22 — Decisão" title="Kood × Mak × Chang — qual escolher" />
+            <Reveal>
+              <div className="pk-card p-0 overflow-hidden">
+                <div className="overflow-x-auto">
+                  <table className="pk-table">
+                    <thead><tr><th>Critério</th><th>Koh Kood</th><th>Koh Mak</th><th>Koh Chang</th></tr></thead>
+                    <tbody>
+                      {COMPARATIVO.map((c, i) => (
+                        <tr key={i}>
+                          <td className="font-medium">{c.criterio}</td>
+                          <td className="pk-gold-soft">{c.kood}</td>
+                          <td>{c.mak}</td>
+                          <td>{c.chang}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </Reveal>
           </section>
 
           <section id="internet">
