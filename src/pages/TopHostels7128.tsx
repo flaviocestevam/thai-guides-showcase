@@ -297,6 +297,11 @@ const TopHostels7128 = () => (
             <p className="font-semibold text-foreground text-sm">Top 10 festa</p>
             <p className="text-xs text-muted-foreground">Onde a noite começa dentro</p>
           </a>
+          <a href="#mapa" className="block bg-card border border-border rounded-lg p-3 hover:border-primary transition">
+            <p className="font-semibold text-foreground text-sm">Mapa Google Maps</p>
+            <p className="text-xs text-muted-foreground">Todos os 97 hostels pinados</p>
+          </a>
+
         </div>
       </div>
     </section>
