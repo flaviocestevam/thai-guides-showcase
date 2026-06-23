@@ -200,7 +200,6 @@ const phuket = make(ilhasMeta[0], {
     { title: "Tabela de preços de transfer", desc: "Quanto deve custar do aeroporto a cada bairro — print no celular antes de pousar.", value: "R$ 47" },
     { title: "Checklist anti-golpe", desc: "Os 12 golpes mais comuns em Phuket e a resposta exata pra cada um.", value: "R$ 67" },
     { title: "Lista negra de tours", desc: "Operadoras reclamadas que precisam ser evitadas — e as 3 que valem cada baht.", value: "R$ 57" },
-    { title: "Grupo de viajantes brasileiros", desc: "Tire dúvida em tempo real com quem está na ilha agora mesmo.", value: "R$ 97" },
   ],
   testimonials: [
     { name: "Camila Rezende", city: "São Paulo, SP", text: "Tinha reservado 6 noites em Patong pra lua de mel. Li o guia 3 dias antes, cancelei e fui pra Kata + Bang Tao. Salvou a viagem — literalmente. Meu marido até hoje fala disso." },
@@ -217,7 +216,7 @@ const phuket = make(ilhasMeta[0], {
     { q: "Posso fazer Phi Phi de day-trip ou preciso dormir lá?", a: "Day-trip resolve pra 90% dos viajantes. Dormir em Phi Phi só vale se você quer festa noturna. O guia compara as duas opções com prós e contras reais." },
     { q: "Qual a melhor época pra ir?", a: "Nov-mar é alta temporada (sol garantido, mais caro, lotado). Mai-out tem chuva mas é a metade do preço. O guia traz tabela mês a mês com chance de chuva e nível do mar." },
     { q: "Phuket é segura pra brasileiro?", a: "Sim, crime violento é raro. Os 3 perigos reais são scooter, golpes em comércio e mar de monção. O guia cobre os três com protocolo prático." },
-    { q: "Como recebo o guia?", a: "Na hora. Assim que o pagamento Cakto aprovar (PIX ou cartão), o link chega no seu e-mail. PDF + mapa interativo + acesso ao grupo." },
+    { q: "Como recebo o guia?", a: "Na hora. Assim que o pagamento Cakto aprovar (PIX ou cartão), o link chega no seu e-mail. PDF + mapa interativo (PDF + mapa interativo)." },
     { q: "Posso pagar no PIX?", a: "Pode. PIX ou cartão até 12x. O acesso libera na mesma hora." },
   ],
   finalCTA: {
@@ -286,7 +285,6 @@ const samui = make(ilhasMeta[1], {
     { title: "Tabela dos 3 ferries", desc: "Lomprayah, Seatran e Raja por horário, porto e preço real — print no celular.", value: "R$ 57" },
     { title: "Calendário Full Moon 24 meses", desc: "Datas das próximas 24 Full Moon, Half Moon e Black Moon Parties.", value: "R$ 47" },
     { title: "Checklist anti-armadilha de resort", desc: "9 perguntas pra fazer ANTES de reservar — evita o resort barulhento disfarçado.", value: "R$ 67" },
-    { title: "Grupo de viajantes brasileiros", desc: "Tira-dúvidas em tempo real com quem está nas ilhas agora.", value: "R$ 97" },
   ],
   testimonials: [
     { name: "Bianca e Thiago Almeida", city: "São Paulo, SP", text: "Lua de mel. Ia reservar resort em Chaweng. Mudei pra Bophut depois do guia, mesma faixa de preço (R$ 720 a diária), zero barulho, pôr do sol da varanda. Meu marido chorou no último dia." },
@@ -302,7 +300,7 @@ const samui = make(ilhasMeta[1], {
     { q: "Vou em lua de mel — qual bairro?", a: "Bophut/Fisherman's ou Choeng Mon. Nunca Chaweng (mesmo que o Booking ofereça 'beach access'). O guia explica por quê." },
     { q: "Família com criança pequena?", a: "Choeng Mon — mar raso, sem vento, restaurante pé na areia. Maenam também serve. Capítulo dedicado no guia." },
     { q: "Vale a pena ir em Full Moon?", a: "Sim, se você quer festa. Não, se você quer sossego. O guia tem calendário 24 meses e o anti-Full Moon (datas em que Phangan está vazia)." },
-    { q: "Como recebo o guia?", a: "Na hora. Pagamento Cakto (PIX ou cartão) → link no e-mail em segundos. PDF + mapa interativo + grupo." },
+    { q: "Como recebo o guia?", a: "Na hora. Pagamento Cakto (PIX ou cartão) → link no e-mail em segundos. PDF + mapa interativo." },
     { q: "Posso pagar no PIX?", a: "Pode. PIX à vista ou cartão até 12x. Acesso libera imediato." },
     { q: "E se eu não gostar?", a: "Garantia 7 dias, sem perguntas. Devolvemos cada centavo." },
   ],
@@ -372,7 +370,6 @@ const phiPhi = make(ilhasMeta[2], {
     { title: "Roteiro Maya Bay sem multidão", desc: "Operadora + horário + percurso, em PDF de 1 página pra levar no celular.", value: "R$ 87" },
     { title: "Tabela de preço de long-tail", desc: "Trecho por trecho — pra você nunca pagar o dobro.", value: "R$ 47" },
     { title: "Checklist anti-perrengue", desc: "10 erros mais comuns em Phi Phi e como evitar cada um.", value: "R$ 57" },
-    { title: "Grupo de viajantes brasileiros", desc: "Tira-dúvidas em tempo real com quem está nas ilhas agora.", value: "R$ 97" },
   ],
   testimonials: [
     { name: "Mariana Tavares", city: "São Paulo, SP", text: "Fizemos Maya Bay pela operadora indicada às 6h. Tinha 11 pessoas. ONZE. Os tours padrão chegaram 9h30 com 200 cada. Não consigo mais imaginar Phi Phi de outro jeito." },
@@ -458,7 +455,6 @@ const phangan = make(ilhasMeta[3], {
     { title: "Protocolo anti-metanol", desc: "Como identificar bebida adulterada antes de beber. PDF de 1 página.", value: "R$ 87" },
     { title: "Mapa Google offline da ilha", desc: "Praias, hotéis, estúdios de yoga e estradas perigosas marcadas.", value: "R$ 67" },
     { title: "Tabela de transfer Full Moon", desc: "Preço real do porto a cada bairro em dia normal vs. dia de festa.", value: "R$ 47" },
-    { title: "Grupo de viajantes brasileiros", desc: "Tira-dúvidas em tempo real com quem está na ilha agora.", value: "R$ 97" },
   ],
   testimonials: [
     { name: "Vinícius Ramos", city: "Belo Horizonte, MG", text: "Cheguei 4 dias antes da Full Moon seguindo o calendário do guia. Hotel em Sri Thanu por 600 baht/noite, fiquei na zen total, e no dia da festa fui de táxi compartilhado. Voltei sem perder pertences — guia salvou minha viagem." },
@@ -548,7 +544,6 @@ const tao = make(ilhasMeta[4], {
     { title: "Calendário de visibilidade mês a mês", desc: "Visibilidade média do mar em metros, por mês — pra escolher quando ir.", value: "R$ 57" },
     { title: "Script de negociação no pier", desc: "Frases exatas pra negociar Open Water de R$ 1.800 pra R$ 600.", value: "R$ 67" },
     { title: "Lista de instrutores brasileiros", desc: "Os 6 brasileiros que moram em Koh Tao e dão aula em PT — contato direto.", value: "R$ 47" },
-    { title: "Grupo de viajantes brasileiros", desc: "Tira-dúvidas em tempo real com quem está na ilha agora.", value: "R$ 97" },
   ],
   testimonials: [
     { name: "Rafael Bittencourt", city: "São Paulo, SP", text: "Tinha pago R$ 1.890 num pacote Open Water online. Cancelei e fiz pelo guia: mesma escola PADI, mesma certificação, R$ 620 no pier. Sobrou R$ 1.270 pra 2 mergulhos avançados em Sail Rock." },
@@ -564,7 +559,7 @@ const tao = make(ilhasMeta[4], {
     { q: "Não sei mergulhar — vale ir?", a: "Sim. Tao é boa pra snorkel também. Koh Nang Yuan, Mango Bay e Hin Wong têm vida marinha incrível mesmo sem certificação." },
     { q: "Quanto tempo ficar?", a: "Mínimo 4 dias (Open Water). Ideal 7 (Open + Advanced + 2 dias de descanso). 11 dias pra Rescue." },
     { q: "Quando ir?", a: "Jan-mai é ótimo. Jun-set é OK. Out-nov é arriscado (monção). Tabela mês a mês no guia." },
-    { q: "Como recebo o guia?", a: "Imediato após pagamento Cakto. PDF + mapa + acesso ao grupo." },
+    { q: "Como recebo o guia?", a: "Imediato após pagamento Cakto. PDF + mapa (PDF + mapa interativo)." },
     { q: "Posso pagar no PIX?", a: "Pode. PIX à vista ou cartão em 12x." },
     { q: "Garantia?", a: "7 dias, sem perguntas. Devolução integral." },
   ],
@@ -634,7 +629,6 @@ const chang = make(ilhasMeta[5], {
     { title: "Tabela de ferries Trat ⇄ Chang", desc: "3 operadoras, 2 portos, horário por temporada — print no celular.", value: "R$ 57" },
     { title: "Lista de santuários éticos vs. falsos", desc: "Os 6 santuários da ilha avaliados pelo critério ético global.", value: "R$ 87" },
     { title: "Checklist de cachoeira por mês", desc: "Quais cachoeiras têm água em cada mês — pra não pagar ingresso à toa.", value: "R$ 47" },
-    { title: "Grupo de viajantes brasileiros", desc: "Tira-dúvidas em tempo real com quem está na ilha agora.", value: "R$ 97" },
   ],
   testimonials: [
     { name: "Daniel Krause", city: "Curitiba, PR", text: "Ia reservar White Sand pensando que era \"selvagem\". Mudei pra Lonely Beach pelo guia. Bangalô de R$ 180 a diária pé na areia, bar reggae à noite. Foi a melhor parte da Tailândia." },
@@ -720,7 +714,6 @@ const lanta = make(ilhasMeta[6], {
     { title: "Calendário climático mês a mês", desc: "Chuva, vento, restaurantes abertos por mês — pra escolher quando ir.", value: "R$ 57" },
     { title: "Lista de hotéis por praia", desc: "12 hotéis testados nas 5 praias principais, por faixa de preço.", value: "R$ 67" },
     { title: "Roteiro scooter loop 1 dia", desc: "PDF de 1 página com horário, paradas e sunset bar final.", value: "R$ 47" },
-    { title: "Grupo de viajantes brasileiros", desc: "Tira-dúvidas em tempo real com quem está na ilha agora.", value: "R$ 97" },
   ],
   testimonials: [
     { name: "Cláudia Marques", city: "São Paulo, SP", text: "Saí de Phi Phi extenuada e fui pra Lanta no dia seguinte. Klong Nin, bangalô de R$ 220 a diária, mar calmo, zero barulho. Recuperei a fé na Tailândia. O guia salvou minha viagem." },
@@ -810,7 +803,6 @@ const lipe = make(ilhasMeta[7], {
     { title: "Calendário de visibilidade mês a mês", desc: "Visibilidade do mar em metros, mês a mês — pra escolher quando ir.", value: "R$ 57" },
     { title: "Lista de resorts por faixa", desc: "12 hotéis testados de R$ 280 a R$ 1.800 a diária, com veredito real.", value: "R$ 67" },
     { title: "Tabela das 4 etapas de transporte", desc: "Horário, operadora e preço de cada trecho Bangkok-Lipe.", value: "R$ 47" },
-    { title: "Grupo de viajantes brasileiros", desc: "Tira-dúvidas em tempo real com quem está na ilha agora.", value: "R$ 97" },
   ],
   testimonials: [
     { name: "Mariana e Vítor Faleiros", city: "São Paulo, SP", text: "Lua de mel. Lipe em janeiro pelo roteiro do guia. Resort de R$ 920 a diária com piscina infinita. Vimos a água cristalina dos 4 m de profundidade. Maldivas sem visa. Sem o guia, eu não teria nem chegado." },
@@ -896,7 +888,6 @@ const kood = make(ilhasMeta[8], {
     { title: "Comparativo de resorts em PDF", desc: "12 resorts lado a lado: praia, estrutura, preço médio, veredito.", value: "R$ 87" },
     { title: "Roteiro Bangkok → Kood em 4h", desc: "Voo + speedboat com horário e operadora, em 1 PDF.", value: "R$ 47" },
     { title: "Lista do que NÃO fazer", desc: "Os 5 tours/atrações que custam caro e decepcionam.", value: "R$ 47" },
-    { title: "Grupo de viajantes brasileiros", desc: "Tira-dúvidas em tempo real com quem está na ilha agora.", value: "R$ 97" },
   ],
   testimonials: [
     { name: "Patrícia e Henrique Falcão", city: "São Paulo, SP", text: "Aniversário de 10 anos de casamento. Reservamos boutique em Klong Chao por R$ 920 a diária pelo guia. Lookbook de revista — sem o preço de revista. Marido até pediu pra estender 2 dias." },
@@ -982,7 +973,6 @@ const yao = make(ilhasMeta[9], {
     { title: "Tabela de ferries por pier", desc: "3 piers, horário por temporada, qual ilha cada um atende.", value: "R$ 57" },
     { title: "Lista de bangalôs eco reais", desc: "Os 4 que cumprem + os 8 falsos.", value: "R$ 67" },
     { title: "Roteiro kayak Klong Mu", desc: "Operadora, horário, ponto de partida em PDF.", value: "R$ 47" },
-    { title: "Grupo de viajantes brasileiros", desc: "Tira-dúvidas em tempo real com quem está na ilha agora.", value: "R$ 97" },
   ],
   testimonials: [
     { name: "Carolina e Felipe Sotero", city: "São Paulo, SP", text: "Estávamos fazendo Phuket → Krabi e o guia sugeriu 2 noites em Yao Noi no meio. Foi a melhor parte da Tailândia inteira — bangalô eco real (R$ 320 a diária), kayak no manguezal, búfalo passando na frente." },
@@ -1068,7 +1058,6 @@ const mak = make(ilhasMeta[10], {
     { title: "Roteiro Koh Kham + Koh Rang", desc: "Operadora, horário, custo, em PDF de 1 página.", value: "R$ 67" },
     { title: "Lista de hotéis família-friendly", desc: "12 hotéis testados com cama extra e mar raso.", value: "R$ 67" },
     { title: "Calendário climático Mak", desc: "Quando ir, o que abre/fecha em cada mês.", value: "R$ 47" },
-    { title: "Grupo de viajantes brasileiros", desc: "Tira-dúvidas em tempo real com quem está na ilha agora.", value: "R$ 97" },
   ],
   testimonials: [
     { name: "Roberta e Marcos Cavalheiro", city: "São Paulo, SP", text: "Família com 2 filhos (4 e 7). Reservei em Ao Suan Yai pelo guia. Bangalô família R$ 380 a diária, mar raso até 50m, sem onda, restaurante na praia. Foi a viagem mais tranquila que já fizemos." },
@@ -1158,7 +1147,6 @@ const larn = make(ilhasMeta[11], {
     { title: "Tabela de preços tailandês vs. turista", desc: "Banana boat, lanche, transporte — preço real de cada coisa.", value: "R$ 47" },
     { title: "Cronograma 1 dia em Larn", desc: "Hora a hora pra você não enrolar.", value: "R$ 47" },
     { title: "Lista de restaurantes na vila", desc: "Onde tailandês almoça em Larn — com mapa.", value: "R$ 47" },
-    { title: "Grupo de viajantes brasileiros", desc: "Tira-dúvidas em tempo real com quem está na ilha agora.", value: "R$ 97" },
   ],
   testimonials: [
     { name: "Luiz Felipe Brandão", city: "São Paulo, SP", text: "Tinha contratado pacote Larn por R$ 280. Cancelei, fui pelo ferry público (R$ 5), praia Nual deserta, almoço por R$ 16. Mesmo dia, R$ 259 a menos do que ia gastar." },
@@ -1244,7 +1232,6 @@ const similan = make(ilhasMeta[12], {
     { title: "Comparativo das 4 operadoras", desc: "Tamanho do barco, preço, pontos visitados — lado a lado.", value: "R$ 87" },
     { title: "Tabela day-trip vs. liveaboard", desc: "Custo, mergulhos, conforto — pra decidir o que vale pra você.", value: "R$ 67" },
     { title: "Lista de pontos de mergulho", desc: "Top 10 das Similan + Bon + Tachai com nível de dificuldade.", value: "R$ 57" },
-    { title: "Grupo de viajantes brasileiros", desc: "Tira-dúvidas em tempo real com quem está na ilha agora.", value: "R$ 97" },
   ],
   testimonials: [
     { name: "Roberto Schultz", city: "São Paulo, SP", text: "Tinha reservado day-trip Similan numa operadora grande de Phuket (75 pessoas no barco). Cancelei pelo guia e fui na Wicked Diving com 16 pessoas. Mesmo preço (R$ 580), experiência incomparável. Vi tartaruga gigante." },
@@ -1330,7 +1317,6 @@ const racha = make(ilhasMeta[13], {
     { title: "Comparativo de 4 operadoras", desc: "Preço, número de pessoas, tempo na ilha — lado a lado.", value: "R$ 87" },
     { title: "Lista de beach clubs", desc: "Os 3 principais com entrada, consumo mínimo e veredito.", value: "R$ 67" },
     { title: "Roteiro day-trip ou overnight", desc: "PDF de 1 página com horário e opções.", value: "R$ 47" },
-    { title: "Grupo de viajantes brasileiros", desc: "Tira-dúvidas em tempo real com quem está na ilha agora.", value: "R$ 97" },
   ],
   testimonials: [
     { name: "Tatiane Lacerda", city: "São Paulo, SP", text: "Quase contratei o pacote 'Coral + Racha' por R$ 320. Vi no guia que era armadilha. Fui pelo Hey Beach tour SÓ Racha por R$ 380 — barco com 17 pessoas, 4h na praia, almoço no beach club. Diferença de mundo." },
