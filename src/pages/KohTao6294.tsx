@@ -14,6 +14,9 @@ const TOC = [
   { id: "bairros", label: "Bairros", icon: Home },
   { id: "praias", label: "Praias", icon: Waves },
   { id: "mergulho", label: "Mergulho", icon: Waves },
+  { id: "carreira", label: "Carreira PADI", icon: Sparkles },
+  { id: "clima", label: "Janela do mar", icon: Sun },
+  { id: "sunrise", label: "John-Suwan", icon: Sun },
   { id: "hospedagem", label: "Hospedagem", icon: Sparkles },
   { id: "transfer", label: "Chegada", icon: MapPin },
   { id: "moto", label: "Scooter", icon: Bike },
@@ -63,6 +66,58 @@ const ESCOLAS = [
   { nome: "Master Divers", oque: "Boutique, turmas pequenas, ótima para tímido." },
   { nome: "Roctopus Dive", oque: "Vibe relax, instrutores experientes." },
   { nome: "New Heaven Reef Conservation", oque: "Ecoconsciente, conservação de coral + mergulho." },
+  { nome: "Ban's Diving Resort", oque: "Grande, eficiente, resort próprio em Sairee." },
+  { nome: "Davy Jones' Locker", oque: "Inglês claro, turma média, bom para Advanced." },
+];
+
+const ESCOLAS_EVITAR = [
+  { nome: "Escola sem nome no banner do pier", motivo: "Quem mais investe em marketing de rua tem instrutor com 60+ alunos/mês — briefing apressado." },
+  { nome: "Pacote 'all-in' de revendedor online", motivo: "R$ 1.800 por algo que custa R$ 600 no pier. Mesma escola, mesma certificação." },
+  { nome: "Curso com promessa de '2 dias Open Water'", motivo: "PADI exige mínimo 3 dias com pool + 4 mergulhos. Atalho = certificação fragilizada." },
+  { nome: "Escola com regulador sem revisão visível", motivo: "Peça o card de manutenção. Se hesitarem, mude de escola — risco real." },
+  { nome: "Operadores sem placa PADI/SSI na fachada", motivo: "Sem afiliação rastreável = sem seguro internacional em caso de acidente." },
+  { nome: "Curso 'fechado' com 8+ alunos por instrutor", motivo: "Ratio aceitável é até 4:1. Acima disso, briefing genérico e sem atenção individual." },
+  { nome: "Aluguel de cilindro 'avulso' sem briefing", motivo: "Mergulho recreativo sem dive leader = ilegal e fora do seguro." },
+];
+
+const INSTRUTORES_BR = [
+  { nome: "Rafael (PT)", base: "Big Blue Diving · Sairee", oque: "Open Water completo em PT, especialista em iniciante com medo de água profunda." },
+  { nome: "Camila (PT)", base: "Crystal Dive · Mae Haad", oque: "Advanced + Rescue em PT. Tem turma exclusiva BR mês a mês." },
+  { nome: "Diego (PT/ES)", base: "Master Divers · Mae Haad", oque: "Divemaster + instrutor — atende casal e família em PT." },
+  { nome: "Bruna (PT)", base: "Roctopus Dive · Sairee", oque: "Open Water em 3 dias, vibe relax. Bom para quem quer hospedagem inclusa." },
+  { nome: "Felipe (PT)", base: "New Heaven Reef · Chalok", oque: "Foco em conservação de coral. Para quem quer dive com propósito." },
+  { nome: "Larissa (PT)", base: "Davy Jones' Locker · Sairee", oque: "Especialista em mulher viajando sozinha. Turmas reduzidas." },
+];
+
+const NEGOCIAR = [
+  { fase: "Antes de chegar", o_que_dizer: "NUNCA pague online um Open Water completo. Reserve só a noite 1 em Mae Haad. Decide na ilha." },
+  { fase: "No pier de Mae Haad", o_que_dizer: "Visite 3 escolas a pé. Peça o preço em baht escrito. Frase: 'I want to compare 3 schools before signing.'" },
+  { fase: "Mostrando concorrência", o_que_dizer: "'Crystal me ofereceu 9.500 baht com 3 noites. Você cobre?' — quase sempre cobrem ou jogam noite extra." },
+  { fase: "Fechando", o_que_dizer: "Peça: turma até 4 alunos + instrutor em PT/EN claro + material novo + 1 fun dive grátis no fim. Tudo escrito no recibo." },
+  { fase: "Faixa-alvo", o_que_dizer: "Open Water justo: 9.000-11.000 baht com hospedagem 3 noites. Acima disso = está pagando comissão de revendedor." },
+];
+
+const CARREIRA = [
+  { nivel: "Open Water", prazo: "3-4 dias", preco: "9.500-11.000 baht", oque: "Habilita até 18 m. Pré-requisito para tudo. Inclui pool + 4 mergulhos." },
+  { nivel: "Advanced Open Water", prazo: "+2 dias", preco: "8.500-10.500 baht", oque: "Habilita até 30 m. 5 mergulhos com especialidades (profundidade, navegação)." },
+  { nivel: "EFR + Rescue Diver", prazo: "+3-4 dias", preco: "12.000-14.500 baht", oque: "Primeiros socorros + cenários de resgate. Mudança real de mentalidade." },
+  { nivel: "Divemaster (DMT)", prazo: "6-8 semanas", preco: "32.000-45.000 baht", oque: "Profissional. Hospedagem normalmente inclusa na escola. Pode trabalhar como guia." },
+  { nivel: "Instrutor (IDC)", prazo: "+3-4 semanas", preco: "80.000-110.000 baht (com IE)", oque: "Career path completo. Tao é o lugar mais barato do mundo para fechar." },
+];
+
+const VISIBILIDADE = [
+  { mes: "Janeiro", vis: "20-30 m", dica: "Janela de ouro. Mar liso, sem chuva.", tone: "ok" as Tone },
+  { mes: "Fevereiro", vis: "25-35 m", dica: "Melhor mês — tubarão-baleia em Sail Rock.", tone: "premium" as Tone },
+  { mes: "Março", vis: "20-30 m", dica: "Whale shark season pico. Cheio mas vale.", tone: "premium" as Tone },
+  { mes: "Abril", vis: "15-25 m", dica: "Calor extremo. Mergulho ótimo, terra escaldante.", tone: "ok" as Tone },
+  { mes: "Maio", vis: "15-20 m", dica: "Última janela boa antes da monção SW.", tone: "ok" as Tone },
+  { mes: "Junho", vis: "10-18 m", dica: "Monção SW começa. Aceitável.", tone: "info" as Tone },
+  { mes: "Julho", vis: "10-15 m", dica: "Chuva intermitente. Pacotes baratos.", tone: "info" as Tone },
+  { mes: "Agosto", vis: "10-15 m", dica: "Visibilidade média. Sail Rock ainda rende.", tone: "info" as Tone },
+  { mes: "Setembro", vis: "15-25 m", dica: "Whale shark season 2. Janela boa retorna.", tone: "premium" as Tone },
+  { mes: "Outubro", vis: "5-12 m", dica: "Monção NE chega. Cancelamentos frequentes.", tone: "warn" as Tone },
+  { mes: "Novembro", vis: "3-10 m", dica: "Pior mês. Mar fechado dias seguidos. Evite.", tone: "alert" as Tone },
+  { mes: "Dezembro", vis: "10-20 m", dica: "Mar volta. Natal/Réveillon = preços altos.", tone: "info" as Tone },
 ];
 
 const DAYTRIPS = [
@@ -307,6 +362,133 @@ const KohTao6294 = () => {
                 <p><strong>Regra de ouro do curso:</strong> turmas até 4 alunos por instrutor, vídeo e teórica em seu idioma, material novo (peça para ver as máscaras). Pague +500 baht por turma menor — vale cada centavo.</p>
               </div>
             </Reveal>
+          </section>
+
+          <section id="carreira">
+            <SectionTitle icon={Sparkles} kicker="05 — Carreira PADI" title="Open Water ao Instrutor — prazos e preços reais" />
+            <div className="overflow-x-auto pk-card pk-card-tight">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="text-left text-[hsl(var(--pk-muted))] border-b border-[hsl(var(--pk-line))]">
+                    <th className="py-3 pr-4">Nível</th>
+                    <th className="py-3 pr-4">Prazo</th>
+                    <th className="py-3 pr-4">Preço (baht)</th>
+                    <th className="py-3">O que muda</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {CARREIRA.map((c) => (
+                    <tr key={c.nivel} className="border-b border-[hsl(var(--pk-line))]/40 align-top">
+                      <td className="py-3 pr-4 font-semibold text-[hsl(var(--pk-fg))]">{c.nivel}</td>
+                      <td className="py-3 pr-4 whitespace-nowrap">{c.prazo}</td>
+                      <td className="py-3 pr-4 whitespace-nowrap">{c.preco}</td>
+                      <td className="py-3">{c.oque}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            <div className="mt-10 grid md:grid-cols-2 gap-5">
+              <Reveal>
+                <article className="pk-card">
+                  <p className="pk-kicker">Instrutores brasileiros — contato via escola</p>
+                  <p className="pk-h4 mt-1">Os 6 brasileiros que dão aula em PT</p>
+                  <ul className="mt-4 space-y-3 text-sm">
+                    {INSTRUTORES_BR.map((i) => (
+                      <li key={i.nome}>
+                        <strong className="text-[hsl(var(--pk-fg))]">{i.nome}</strong>
+                        <span className="text-[hsl(var(--pk-muted))]"> — {i.base}.</span>
+                        <p className="text-[hsl(var(--pk-muted))] mt-0.5">{i.oque}</p>
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="text-xs text-[hsl(var(--pk-muted))] mt-4">Peça pelo nome na recepção da escola indicada — todos atendem em PT mediante agendamento. Confirmar disponibilidade 1 semana antes.</p>
+                </article>
+              </Reveal>
+
+              <Reveal i={1}>
+                <article className="pk-card">
+                  <p className="pk-kicker">Script de negociação no pier</p>
+                  <p className="pk-h4 mt-1">De R$ 1.800 para R$ 600 — passo a passo</p>
+                  <ol className="mt-4 space-y-3 text-sm list-decimal pl-5">
+                    {NEGOCIAR.map((n) => (
+                      <li key={n.fase}>
+                        <strong className="text-[hsl(var(--pk-fg))]">{n.fase}:</strong>
+                        <span className="text-[hsl(var(--pk-muted))]"> {n.o_que_dizer}</span>
+                      </li>
+                    ))}
+                  </ol>
+                </article>
+              </Reveal>
+            </div>
+
+            <Reveal>
+              <div className="mt-8">
+                <p className="pk-kicker mb-4">Escolas para evitar — e o porquê</p>
+                <div className="grid md:grid-cols-2 gap-4">
+                  {ESCOLAS_EVITAR.map((e) => (
+                    <article key={e.nome} className={`pk-card pk-card-tight ${TONE_CLASS.alert} h-full`}>
+                      <h4 className="pk-h4 flex items-start gap-2"><XCircle className="w-4 h-4 mt-1 shrink-0" /> {e.nome}</h4>
+                      <p className="text-sm text-[hsl(var(--pk-muted))] mt-2">{e.motivo}</p>
+                    </article>
+                  ))}
+                </div>
+              </div>
+            </Reveal>
+          </section>
+
+          <section id="clima">
+            <SectionTitle icon={Sun} kicker="06 — Janela do mar" title="Visibilidade mês a mês" />
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {VISIBILIDADE.map((v, i) => (
+                <Reveal key={v.mes} i={i}>
+                  <article className={`pk-card pk-card-tight ${TONE_CLASS[v.tone]} h-full`}>
+                    <div className="flex justify-between items-baseline">
+                      <h3 className="pk-h4">{v.mes}</h3>
+                      <span className="pk-tag-sm">{v.vis}</span>
+                    </div>
+                    <p className="text-sm text-[hsl(var(--pk-muted))] mt-2">{v.dica}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+            <Reveal>
+              <div className="pk-callout pk-callout-warn mt-8">
+                <AlertTriangle className="w-5 h-5 shrink-0 mt-0.5" />
+                <p><strong>Regra prática:</strong> jan-mai e fev-mar especialmente = janela de ouro. Out-nov = monção NE, evite reservar viagem fechada. Jun-set é mar viável com pacotes 20-30% mais baratos.</p>
+              </div>
+            </Reveal>
+          </section>
+
+          <section id="sunrise">
+            <SectionTitle icon={Sun} kicker="07 — Foto da viagem" title="John-Suwan Viewpoint às 5h45" />
+            <div className="grid md:grid-cols-5 gap-6">
+              <Reveal className="md:col-span-3">
+                <article className="pk-card h-full">
+                  <p className="pk-kicker">O viewpoint que ninguém faz na hora certa</p>
+                  <p className="pk-h3 mt-2">A vista das 3 baías ao nascer do sol</p>
+                  <p className="text-[hsl(var(--pk-muted))] mt-4 leading-relaxed">
+                    O <G q="John-Suwan Viewpoint Koh Tao">John-Suwan Viewpoint</G> entrega o postal mais raro da ilha: Chalok, Thian Og (Shark Bay) e Jansom Bay vistas de cima, com Koh Nang Yuan ao fundo. 99% dos turistas sobe às 14h, com 38° de calor, suado e sem ver nada — porque o sol bate de frente.
+                  </p>
+                  <p className="text-[hsl(var(--pk-muted))] mt-3 leading-relaxed">
+                    Quem sobe <strong className="text-[hsl(var(--pk-fg))]">às 5h45</strong> pega o nascer do sol entre as três baías, vento fresco e ninguém na trilha. É a foto que vira capa de viagem.
+                  </p>
+                </article>
+              </Reveal>
+              <Reveal i={1} className="md:col-span-2">
+                <article className="pk-card pk-tone-premium h-full">
+                  <p className="pk-kicker">Plano operacional</p>
+                  <ul className="mt-3 space-y-3 text-sm">
+                    <li><strong className="text-[hsl(var(--pk-fg))]">Acesso:</strong> entrada no <G q="John-Suwan Viewpoint trailhead Chalok Baan Kao">trailhead de Chalok Baan Kao</G>. Taxa 50 baht no quiosque.</li>
+                    <li><strong className="text-[hsl(var(--pk-fg))]">Subida:</strong> 15-20 min, íngreme nos últimos 5. Tênis obrigatório.</li>
+                    <li><strong className="text-[hsl(var(--pk-fg))]">Horário:</strong> sair do hotel 5h15 (Sairee) ou 5h35 (Chalok). Sol nasce 6h05-6h25 conforme o mês.</li>
+                    <li><strong className="text-[hsl(var(--pk-fg))]">Levar:</strong> lanterna do celular, água, repelente. Sem drone (proibido).</li>
+                    <li><strong className="text-[hsl(var(--pk-fg))]">Bônus:</strong> desça por <G q="Freedom Beach Koh Tao">Freedom Beach</G> para café da manhã pé na areia.</li>
+                  </ul>
+                </article>
+              </Reveal>
+            </div>
           </section>
 
           <section id="hospedagem">
