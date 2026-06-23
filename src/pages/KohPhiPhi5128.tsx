@@ -152,7 +152,100 @@ const TRANSFER = [
   { destino: "Tonsai → Laem Tong (longtail)", bolt: "—", taxi: "900-1.200 baht", tempo: "45 min" },
 ];
 
-const KohPhiPhi5128 = () => {
+// === EXPANSÃO PADRÃO KOOD/LIPE ===
+
+const VISI_SNORKEL = [
+  { ponto: "Maya Bay (snorkel raso)", prof: "1-4 m", melhor: "Fev-Abr / Out-Nov", evitar: "Mai-Set monção", nota: "Visi 10-18m em janela boa. Entre 7h ou 16h pra evitar lotação." },
+  { ponto: "Pi Le Lagoon", prof: "2-6 m", melhor: "Nov-Abr", evitar: "Junho-Set", nota: "Lagoa interna com paredão. Visi 15m+ na seca. Longtail só." },
+  { ponto: "Bamboo Island reef", prof: "1-5 m", melhor: "Dez-Abr", evitar: "Mai-Out", nota: "Areia branca, peixe-palhaço. Lotado das 11h às 14h." },
+  { ponto: "Mosquito Island", prof: "2-8 m", melhor: "Jan-Abr", evitar: "Junho-Set", nota: "Coral duro, peixe-anjo. Sem praia pra desembarcar — só snorkel do barco." },
+  { ponto: "Shark Point (Tonsai Bay)", prof: "3-6 m", melhor: "Nov-Mar", evitar: "Mai-Out", nota: "Tubarão black tip filhote, sem perigo. Snorkel direto da praia 7h-9h." },
+  { ponto: "Hin Bida (dive site)", prof: "10-22 m", melhor: "Nov-Abr", evitar: "Monção SW", nota: "Pinnacle pra Advanced. Tubarão-leopardo. Visi 20m+ na seca." },
+  { ponto: "King Cruiser Wreck", prof: "18-30 m", melhor: "Dez-Abr", evitar: "Junho-Out", nota: "Naufrágio Advanced. Visi 15-25m. Saída de Tonsai 8h." },
+  { ponto: "Loh Samah Bay", prof: "1-4 m", melhor: "Nov-Mar", evitar: "Maio-Set", nota: "Entrada secreta pra Maya por trás. Snorkel raso, multidão evita." },
+];
+
+const MAPA_PE = [
+  { de: "Tonsai Pier", para: "Loh Dalum Beach (atravessando a vila)", km: "0,4 km", min: "6 min a pé", piso: "Cimento + areia", risco: "Bagagem grande sofre — sem rodízio, becos estreitos." },
+  { de: "Tonsai centro", para: "Viewpoint 1", km: "0,8 km", min: "20 min subindo", piso: "Escadaria + trilha pedra", risco: "Calor forte. Suba 6h ou 17h. Leve 1L de água." },
+  { de: "Viewpoint 1", para: "Viewpoint 2 e 3", km: "0,6 km", min: "+15 min", piso: "Trilha, raízes", risco: "Macaco rouba garrafa. Mochila fechada." },
+  { de: "Tonsai", para: "Long Beach (Phak Nam)", km: "1,7 km a pé OU 5 min longtail", min: "35 min a pé / 5 min de barco (200 baht)", piso: "Trilha costeira + areia", risco: "Trilha alaga na maré alta — confira tábua de maré." },
+  { de: "Long Beach", para: "Shark Point", km: "0,4 km a pé", min: "8 min", piso: "Praia + rocha lisa", risco: "Rocha escorregadia. Tênis aquático." },
+  { de: "Tonsai", para: "Loh Bagao (longtail)", km: "—", min: "20 min de longtail (400-600 baht)", piso: "Barco", risco: "Mar agitado entre maio-set." },
+  { de: "Tonsai", para: "Laem Tong (longtail)", km: "—", min: "45 min (900-1.200 baht)", piso: "Barco", risco: "Resorts mandam transfer gratuito pra hóspede — confirme antes." },
+];
+
+const MES_PERFIL_PP = [
+  { perfil: "Lua de mel / casal", mes: "Dez-Mar", porque: "Mar liso pra Maya Bay ao amanhecer, sunset em Long Beach. Hospedagem em Laem Tong (norte)." },
+  { perfil: "Mochileiro festeiro", mes: "Qualquer mês (exceto Set-Out)", porque: "Fire show diário em Loh Dalum. Janeiro-Fev é cheio mas o agito vale." },
+  { perfil: "Mergulhador (Hin Bida, King Cruiser)", mes: "Dez-Abr", porque: "Visi 20m+, tubarão-leopardo na Hin Bida, King Cruiser sem corrente." },
+  { perfil: "Família com kids", mes: "Jan-Mar", porque: "Mar calmo pra snorkel raso (Shark Point, Bamboo). Hospedagem em Loh Bagao ou Laem Tong." },
+  { perfil: "Foto Maya Bay sem multidão", mes: "Nov ou Maio (transição)", porque: "Maya abre/fecha; fluxo turístico menor. Cota diária ainda existe mas barco vazio." },
+  { perfil: "Day-trip de Phuket/Krabi (não dormir)", mes: "Qualquer", porque: "Speedboat sai 8h, volta 17h. 9 horas dá pra Maya + Bamboo + snorkel. Pula a vila." },
+  { perfil: "Réveillon / NY chinês", mes: "Evite se quer paz", porque: "Tonsai vira favela festeira. Preço 3x. Laem Tong vale o triplo." },
+];
+
+const COMPARATIVO_PP = [
+  { dim: "Acesso", pp: "Só ferry/speedboat de Phuket ou Krabi (2h)", lanta: "Ferry direto ou ponte do continente", krabi: "Aeroporto próprio + estrada" },
+  { dim: "Praias", pp: "Maya Bay icônica + 6 praias menores", lanta: "9 praias longas e tranquilas", krabi: "Railay + Ao Nang + tonsai península" },
+  { dim: "Veículos", pp: "Zero scooter / zero carro — tudo a pé", lanta: "Scooter padrão", krabi: "Scooter e carro" },
+  { dim: "Vida noturna", pp: "Loh Dalum tem fire show e bar até 4h", lanta: "Bar pé na areia, sem rave", krabi: "Ao Nang tem bar e ladyboy show" },
+  { dim: "Preço médio/dia casal", pp: "R$ 900-1.500 (resort R$ 2.500+)", lanta: "R$ 600-900", krabi: "R$ 700-1.100" },
+  { dim: "Para quem é", pp: "Quer Maya/foto icônica + festa", lanta: "Casal sossego + scooter", krabi: "Família + escalada + day-trips" },
+  { dim: "Evite se", pp: "Quer dormir cedo e sem bagunça (use Laem Tong)", lanta: "Quer agito noturno", krabi: "Quer ilha de verdade — Krabi é continente" },
+];
+
+const BARCO_DIA_PP = [
+  { tour: "Maya Bay sunrise (saída 6h)", duracao: "5h", preco: "1.800-2.500 baht (sem entrada Maya 400 baht)", inclui: "Speedboat compartilhado, café da manhã, snorkel Pi Le", operadora: "Maya Bay Tours, John Gray Sea Canoe", obs: "Única forma de ver Maya semi-vazia. Reserve 2 dias antes." },
+  { tour: "4 ilhas day-trip (Bamboo, Mosquito, Maya, Pi Le)", duracao: "7h", preco: "1.200-1.800 baht + entradas", inclui: "Speedboat coletivo, almoço, snorkel 3 pontos", operadora: "Captain Bob, Phi Phi Tour", obs: "Pacote padrão. Vai cheio entre 10h-15h em Maya." },
+  { tour: "Longtail privado (4-6 pessoas)", duracao: "6-8h", preco: "3.500-5.500 baht/barco", inclui: "Barco, motorista, paradas escolhidas", operadora: "Direto na praia de Tonsai", obs: "Vale a pena pra grupo. Negocie no dia anterior, manhã." },
+  { tour: "Sunset cruise + plâncton", duracao: "4h (16h-20h)", preco: "1.500-2.200 baht", inclui: "Speedboat, snorkel com plâncton, jantar leve, open bar moderado", operadora: "Maya Bay Sleep Aboard, Captain Bob Sunset", obs: "Mar tem que estar liso pra ver plâncton. Pergunte previsão." },
+  { tour: "Camping em Maya Bay (oficial)", duracao: "1 noite (16h-7h)", preco: "3.500-4.500 baht", inclui: "Tenda, jantar, café da manhã, taxa do parque", operadora: "Maya Bay Tours (única autorizada)", obs: "Acaba esgotado. Reserve 3-4 semanas antes. Banheiro precário, leve repelente forte." },
+];
+
+const PESCA_PP = [
+  { tipo: "Squid fishing noturno", oque: "Sai com pescador de Tonsai às 19h, volta 23h. Lula viva no barco, jantar grelhado.", preco: "1.500-2.200 baht/pessoa", obs: "Reserve no pier de Tonsai com Captain Wanchai. Não tem site." },
+  { tipo: "Pesca de costa em Shark Point", oque: "Vara emprestada, manhã 6h-9h. Pesque-e-solte.", preco: "300 baht isca + vara grátis em hostel local", obs: "Pergunte no Phi Phi Hostel ou Blanco Beach Bar." },
+  { tipo: "Big game charter (atum, dourado)", oque: "Charter Tonsai 6h-14h, vara e isca inclusos.", preco: "15.000-22.000 baht (até 4 pessoas)", obs: "Janeiro-Abril é melhor. Reserve via Captain Bob ou Phi Phi Adventure." },
+];
+
+const SPA_PP = [
+  { lugar: "Phi Phi Island Village Spa", oque: "Spa de resort em Loh Bagao, oceano de frente.", preco: "2.500-4.500 baht / 60 min", melhor: "Casal lua de mel. Cabine dupla com banheira." },
+  { lugar: "Zeavola Spa (Laem Tong)", oque: "Spa zen-rústico, óleo de coco da ilha.", preco: "1.800-3.200 baht", melhor: "Sossego absoluto. Sem hóspede day-pass." },
+  { lugar: "Spa Tara (Tonsai)", oque: "Spa honesto na vila, terapeuta sênior.", preco: "350-650 baht / 60 min", melhor: "Mochileiro pós-trilha de viewpoint." },
+  { lugar: "Sunflower Beach Bar Massage", oque: "Massagem pé na areia em Long Beach.", preco: "300-450 baht", melhor: "Casal antes do sunset. Cabine de bambu." },
+];
+
+const VILAREJO_PP = [
+  { lugar: "Loh Bagao Bay", como: "Longtail 20 min de Tonsai (400-600 baht) ou transfer de resort.", oque: "Baía protegida com 2 resorts. Praia 800m vazia, snorkel direto. Zero bar.", quanto: "Resort 2.500-5.000 baht/noite. Quase sem opção barata.", obs: "Phi Phi Island Village Beach Resort é o nome. Pacote Maya inclusive disponível." },
+  { lugar: "Laem Tong (norte)", como: "Longtail 45 min (900-1.200 baht) ou transfer do resort de Phuket.", oque: "Extremo norte, vila de chao ley (ciganos do mar). 3 resorts boutique + comunidade local.", quanto: "Zeavola 8.000-15.000 baht/noite. Outros mais simples 3.500+.", obs: "Quase ninguém vai. Snorkel da praia, sunset 360°. Comunidade vende peixe fresco." },
+  { lugar: "Long Beach (Phak Nam)", como: "5 min de longtail de Tonsai (200 baht/pessoa) ou 35 min a pé.", oque: "Praia 600m com hospedagem barata pé na areia. Snorkel em Shark Point logo ao lado.", quanto: "Bangalô 800-1.800 baht. Sem A/C nos baratos.", obs: "Última balsa pra Tonsai 22h. Depois disso paga longtail privado 500 baht." },
+];
+
+const FAMILIA_PP = [
+  { item: "Hospedagem em Loh Bagao ou Laem Tong", detalhe: "Tonsai vira favela festeira à noite — som de bar até 4h. Norte é silêncio." },
+  { item: "Snorkel em Shark Point com kids", detalhe: "Filhote de black tip reef shark, água até a cintura. Bóia obrigatória pra <8 anos." },
+  { item: "Bamboo Island day-trip", detalhe: "Praia rasa de areia branca, sem ondas. Speedboat tem A/C. Almoço incluso." },
+  { item: "Maya Bay com criança: tarde, não manhã", detalhe: "Sunrise tour acorda 5h — kid não aguenta. Tour das 13h é menos turbulento." },
+  { item: "Não faça", detalhe: "Viewpoint subida com <6 anos (escadaria íngreme, macaco agressivo). Camping em Maya com kid (banheiro precário)." },
+];
+
+const CONSERVACAO_PP = [
+  { iniciativa: "Maya Bay cota diária + entrada 400 baht", oque: "Maya foi reaberta em 2022 com cota de 4.500 pessoas/dia e proibição de barcos na lagoa. Cumpra: desça pelo deck nos fundos, não toque areia molhada (filhote de coral).", como: "Tour reserva pra você. Confirme se entrada está inclusa." },
+  { iniciativa: "Hin Sornchai monkey beach", oque: "Macacos viraram agressivos por turista oferecer comida. Não alimente. Bolsa fechada, banana escondida.", como: "Tour 4 ilhas passa direto. Se descer, sem comida visível." },
+  { iniciativa: "Beach clean-up Tonsai mensal", oque: "Todo 1º sábado, 7h, saindo do pier. Café da manhã grátis pra voluntário.", como: "Phi Phi Beach Clean-up Facebook." },
+  { iniciativa: "Reef-safe sunscreen", oque: "Lojas em Tonsai vendem com oxybenzone (matam coral). Compre Stream2Sea ou Thinksport antes de viajar.", como: "Em emergência: Sunflower Beach Bar tem 1 marca reef-safe (250 baht)." },
+];
+
+const BOOKING_PP = [
+  { quando: "Réveillon / Chinese NY", reserva: "5-6 meses antes", porque: "Resort em Loh Bagao/Laem Tong esgota. Preço dobra. Ferry Tigerline lotado." },
+  { quando: "Dez-Mar (alta seca)", reserva: "6-8 semanas", porque: "Vila de Tonsai aguenta, mas norte (silêncio) vai." },
+  { quando: "Maya Bay camping", reserva: "3-4 semanas antes", porque: "Maya Bay Tours é a única autorizada. 30 vagas/noite." },
+  { quando: "Maya sunrise tour", reserva: "2 dias antes (alta) / 1 dia (baixa)", porque: "Saída 6h, melhor da janela. Speedboat coletivo lota rápido." },
+  { quando: "Mai-Set (monção)", reserva: "Dia anterior", porque: "Tudo vazio e barato. Mas Maya pode fechar por mar agitado — não vá só pela foto." },
+];
+
+
   return (
     <>
       <style>{PK_STYLES}</style>
