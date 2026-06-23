@@ -43,7 +43,7 @@ export const topHostels: SalesContent = {
   authority: {
     title: "100 hostels em 18 meses de testes",
     paragraphs: [
-      "Dormi em 100 hostels diferentes em 12 cidades da Tailândia ao longo de 18 meses. Medi Wi-Fi com app, fotografei cada quarto, conversei com staff e hóspedes.",
+      "Dormi em 100 hostels diferentes em 12 cidades da Tailândia ao longo de 18 meses, com avaliação honesta de cada um.",
       "Esse guia é exatamente o filtro que eu queria ter tido quando perdi noites em hostels horríveis no início. Honesto, prático e sem propaganda paga.",
     ],
     bullets: [
@@ -55,8 +55,8 @@ export const topHostels: SalesContent = {
   modules: [
     {
       title: "Top 100 Hostels por cidade",
-      desc: "Ranking detalhado em 12 cidades.",
-      bullets: ["Bangkok 15 melhores", "Chiang Mai top 12", "Ilhas top 30", "Pai e norte top 8"],
+      desc: "Ranking dos melhores em cada cidade pelas notas reais — sem cota fixa por destino.",
+      bullets: ["Bangkok", "Chiang Mai", "Ilhas (Phangan, Tao, Lanta, Samui, Phuket, Krabi)", "Pai e norte"],
     },
     {
       title: "Filtro por perfil",
