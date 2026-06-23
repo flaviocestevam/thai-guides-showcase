@@ -66,6 +66,58 @@ const ESCOLAS = [
   { nome: "Master Divers", oque: "Boutique, turmas pequenas, ótima para tímido." },
   { nome: "Roctopus Dive", oque: "Vibe relax, instrutores experientes." },
   { nome: "New Heaven Reef Conservation", oque: "Ecoconsciente, conservação de coral + mergulho." },
+  { nome: "Ban's Diving Resort", oque: "Grande, eficiente, resort próprio em Sairee." },
+  { nome: "Davy Jones' Locker", oque: "Inglês claro, turma média, bom para Advanced." },
+];
+
+const ESCOLAS_EVITAR = [
+  { nome: "Escola sem nome no banner do pier", motivo: "Quem mais investe em marketing de rua tem instrutor com 60+ alunos/mês — briefing apressado." },
+  { nome: "Pacote 'all-in' de revendedor online", motivo: "R$ 1.800 por algo que custa R$ 600 no pier. Mesma escola, mesma certificação." },
+  { nome: "Curso com promessa de '2 dias Open Water'", motivo: "PADI exige mínimo 3 dias com pool + 4 mergulhos. Atalho = certificação fragilizada." },
+  { nome: "Escola com regulador sem revisão visível", motivo: "Peça o card de manutenção. Se hesitarem, mude de escola — risco real." },
+  { nome: "Operadores sem placa PADI/SSI na fachada", motivo: "Sem afiliação rastreável = sem seguro internacional em caso de acidente." },
+  { nome: "Curso 'fechado' com 8+ alunos por instrutor", motivo: "Ratio aceitável é até 4:1. Acima disso, briefing genérico e sem atenção individual." },
+  { nome: "Aluguel de cilindro 'avulso' sem briefing", motivo: "Mergulho recreativo sem dive leader = ilegal e fora do seguro." },
+];
+
+const INSTRUTORES_BR = [
+  { nome: "Rafael (PT)", base: "Big Blue Diving · Sairee", oque: "Open Water completo em PT, especialista em iniciante com medo de água profunda." },
+  { nome: "Camila (PT)", base: "Crystal Dive · Mae Haad", oque: "Advanced + Rescue em PT. Tem turma exclusiva BR mês a mês." },
+  { nome: "Diego (PT/ES)", base: "Master Divers · Mae Haad", oque: "Divemaster + instrutor — atende casal e família em PT." },
+  { nome: "Bruna (PT)", base: "Roctopus Dive · Sairee", oque: "Open Water em 3 dias, vibe relax. Bom para quem quer hospedagem inclusa." },
+  { nome: "Felipe (PT)", base: "New Heaven Reef · Chalok", oque: "Foco em conservação de coral. Para quem quer dive com propósito." },
+  { nome: "Larissa (PT)", base: "Davy Jones' Locker · Sairee", oque: "Especialista em mulher viajando sozinha. Turmas reduzidas." },
+];
+
+const NEGOCIAR = [
+  { fase: "Antes de chegar", o_que_dizer: "NUNCA pague online um Open Water completo. Reserve só a noite 1 em Mae Haad. Decide na ilha." },
+  { fase: "No pier de Mae Haad", o_que_dizer: "Visite 3 escolas a pé. Peça o preço em baht escrito. Frase: 'I want to compare 3 schools before signing.'" },
+  { fase: "Mostrando concorrência", o_que_dizer: "'Crystal me ofereceu 9.500 baht com 3 noites. Você cobre?' — quase sempre cobrem ou jogam noite extra." },
+  { fase: "Fechando", o_que_dizer: "Peça: turma até 4 alunos + instrutor em PT/EN claro + material novo + 1 fun dive grátis no fim. Tudo escrito no recibo." },
+  { fase: "Faixa-alvo", o_que_dizer: "Open Water justo: 9.000-11.000 baht com hospedagem 3 noites. Acima disso = está pagando comissão de revendedor." },
+];
+
+const CARREIRA = [
+  { nivel: "Open Water", prazo: "3-4 dias", preco: "9.500-11.000 baht", oque: "Habilita até 18 m. Pré-requisito para tudo. Inclui pool + 4 mergulhos." },
+  { nivel: "Advanced Open Water", prazo: "+2 dias", preco: "8.500-10.500 baht", oque: "Habilita até 30 m. 5 mergulhos com especialidades (profundidade, navegação)." },
+  { nivel: "EFR + Rescue Diver", prazo: "+3-4 dias", preco: "12.000-14.500 baht", oque: "Primeiros socorros + cenários de resgate. Mudança real de mentalidade." },
+  { nivel: "Divemaster (DMT)", prazo: "6-8 semanas", preco: "32.000-45.000 baht", oque: "Profissional. Hospedagem normalmente inclusa na escola. Pode trabalhar como guia." },
+  { nivel: "Instrutor (IDC)", prazo: "+3-4 semanas", preco: "80.000-110.000 baht (com IE)", oque: "Career path completo. Tao é o lugar mais barato do mundo para fechar." },
+];
+
+const VISIBILIDADE = [
+  { mes: "Janeiro", vis: "20-30 m", dica: "Janela de ouro. Mar liso, sem chuva.", tone: "ok" as Tone },
+  { mes: "Fevereiro", vis: "25-35 m", dica: "Melhor mês — tubarão-baleia em Sail Rock.", tone: "premium" as Tone },
+  { mes: "Março", vis: "20-30 m", dica: "Whale shark season pico. Cheio mas vale.", tone: "premium" as Tone },
+  { mes: "Abril", vis: "15-25 m", dica: "Calor extremo. Mergulho ótimo, terra escaldante.", tone: "ok" as Tone },
+  { mes: "Maio", vis: "15-20 m", dica: "Última janela boa antes da monção SW.", tone: "ok" as Tone },
+  { mes: "Junho", vis: "10-18 m", dica: "Monção SW começa. Aceitável.", tone: "info" as Tone },
+  { mes: "Julho", vis: "10-15 m", dica: "Chuva intermitente. Pacotes baratos.", tone: "info" as Tone },
+  { mes: "Agosto", vis: "10-15 m", dica: "Visibilidade média. Sail Rock ainda rende.", tone: "info" as Tone },
+  { mes: "Setembro", vis: "15-25 m", dica: "Whale shark season 2. Janela boa retorna.", tone: "premium" as Tone },
+  { mes: "Outubro", vis: "5-12 m", dica: "Monção NE chega. Cancelamentos frequentes.", tone: "warn" as Tone },
+  { mes: "Novembro", vis: "3-10 m", dica: "Pior mês. Mar fechado dias seguidos. Evite.", tone: "alert" as Tone },
+  { mes: "Dezembro", vis: "10-20 m", dica: "Mar volta. Natal/Réveillon = preços altos.", tone: "info" as Tone },
 ];
 
 const DAYTRIPS = [
