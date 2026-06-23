@@ -156,6 +156,106 @@ const COMIDA = [
   { lugar: "Khaw Glong", bairro: "Lamai", oque: "Curry massaman e khao soi de boa, preço justo.", preco: "100-200 baht" },
 ];
 
+// === EXPANSÃO PADRÃO KOOD/LIPE ===
+
+const VISI_PRAIAS_SAMUI = [
+  { praia: "Chaweng Beach", melhor: "Dez-Mar", evitar: "Out-Nov (monção NE)", mar: "Liso 8-9 meses; ondas curtas em monção", nota: "Areia branca fina. Praia mais cheia da ilha. 7h-9h vazia." },
+  { praia: "Lamai Beach", melhor: "Dez-Mar", evitar: "Out-Nov", mar: "Algumas pedras submersas no centro", nota: "Pedaço sul (Grandfather/Grandmother rocks) é o melhor." },
+  { praia: "Bophut (Fisherman's Village)", melhor: "Ano todo", evitar: "Out-Nov picos", mar: "Calmo; raso por 50m", nota: "Vista perfeita Koh Phangan. Pôr-do-sol fraco (face leste); melhor é o nascer." },
+  { praia: "Maenam", melhor: "Ano todo", evitar: "Picos chuva Out", mar: "Calmo, fundo arenoso, ideal kids", nota: "5 km de praia vazia. Resort barato 800-1.500 baht." },
+  { praia: "Lipa Noi (oeste)", melhor: "Mar-Set", evitar: "Out-Dez (vento)", mar: "Raso 100m; pôr-do-sol épico", nota: "Único lado da ilha com sunset real. Praia vazia + bar pé na areia." },
+  { praia: "Bang Por", melhor: "Mar-Set", evitar: "Out-Dez", mar: "Calmo, fundo macio", nota: "Praia 4 km quase deserta. Restaurante de frutos do mar local 200-400 baht." },
+  { praia: "Choeng Mon (NE)", melhor: "Dez-Mar", evitar: "Out-Nov ventos", mar: "Baía protegida, raso", nota: "Família e idoso. Resort 5★ silencioso." },
+  { praia: "Silver Beach", melhor: "Dez-Abr", evitar: "Out-Nov", mar: "Cristalino, snorkel da areia", nota: "Pequena (200m), escondida entre 2 morros. Quase secreta." },
+];
+
+const MAPA_LOOP_SAMUI = [
+  { de: "Aeroporto USM", para: "Chaweng centro", km: "9 km", min: "20 min", piso: "Estrada principal asfalto bom", risco: "Taxi cobra 500 baht; Bolt 200-300; transfer hotel 800." },
+  { de: "Chaweng", para: "Lamai (via 4169)", km: "9 km", min: "15 min", piso: "Asfalto + curvas no morro", risco: "Curva cega no topo; reduza. Multas de capacete frequentes." },
+  { de: "Lamai", para: "Hin Ta/Hin Yai (rochas)", km: "1,5 km", min: "4 min", piso: "Asfalto", risco: "OK. Estacionamento 20 baht." },
+  { de: "Lamai", para: "Na Mueang waterfall 1", km: "8 km", min: "18 min", piso: "Asfalto + 2 km estrada estreita", risco: "Última subida íngreme — 110cc com 2 pessoas sofre." },
+  { de: "Chaweng", para: "Bophut Fisherman's Village", km: "8 km", min: "16 min", piso: "Asfalto", risco: "Trânsito em alta temporada. Saia 9h ou 16h." },
+  { de: "Bophut", para: "Big Buddha", km: "2,5 km", min: "6 min", piso: "Asfalto", risco: "Estacionamento gratuito. Tire chapéu no templo." },
+  { de: "Chaweng", para: "Lipa Noi (oeste)", km: "30 km", min: "45 min", piso: "Estrada principal asfalto", risco: "Posto de gasolina raro a oeste; abasteça antes." },
+  { de: "Volta completa da ilha (4169)", para: "—", km: "51 km", min: "1h45 sem paradas", piso: "Asfalto bom 95%", risco: "Faça sentido anti-horário pela manhã pra sol nas costas." },
+];
+
+const MES_PERFIL_SAMUI = [
+  { perfil: "Lua de mel / luxo", mes: "Dez-Mar", porque: "Mar liso em Chaweng, Bophut e Choeng Mon. Resorts 5★ com pool villa em alta forma." },
+  { perfil: "Família com kids", mes: "Jan-Abr", porque: "Maenam e Choeng Mon calmos. W Koh Samui, Anantara e Centara têm kid club." },
+  { perfil: "Mochileiro / longa estadia", mes: "Mai-Set", porque: "Hotel 30-40% mais barato. Chuva curta, ainda dá pra aproveitar 80% dos dias." },
+  { perfil: "Half/Full Moon Party (combo Phangan)", mes: "Lua cheia exceto Nov", porque: "Ferry Lomprayah 30 min Bangrak → Thong Sala. Durma em Samui, festa Phangan." },
+  { perfil: "Fugir de chuva absoluta", mes: "Fev-Mar", porque: "Janela mais seca do ano. Praticamente zero chuva." },
+  { perfil: "Surf iniciante (raro)", mes: "Out-Nov", porque: "Único momento com ondas em Lamai. Aluguel R$ 80/dia." },
+  { perfil: "Réveillon", mes: "Evite se quer paz", porque: "Chaweng triplica preço. Bophut e Choeng Mon ficam 50% mais caros — melhor escolha." },
+  { perfil: "Wellness retreat", mes: "Jan-Abr / Jun-Set", porque: "Kamalaya, Absolute Sanctuary, Vikasa rodam programas estruturados nesses meses." },
+];
+
+const COMPARATIVO_SAMUI = [
+  { dim: "Acesso", samui: "Voo direto BKK 1h (USM) — único do Golfo", phangan: "Ferry 30 min de Samui", tao: "Ferry 1h45 de Samui" },
+  { dim: "Praias", samui: "12 praias, várias 5★", phangan: "Bottle Beach, Thong Nai Pan — top 5 Tailândia", tao: "Pequenas, foco em snorkel" },
+  { dim: "Vida noturna", samui: "Chaweng = clubes grandes, Soi Green Mango", phangan: "Half/Full Moon mensal", tao: "Bar até 2h, sem rave" },
+  { dim: "Wellness/retreat", samui: "Capital — Kamalaya, Absolute, Vikasa", phangan: "Detox + yoga (oeste, Sri Thanu)", tao: "Apenas spa de pousada" },
+  { dim: "Mergulho", samui: "Fun dive caro, foco em conforto", phangan: "1 escola decente", tao: "Capital mundial do Open Water" },
+  { dim: "Preço médio/dia casal", samui: "R$ 1.400-2.500", phangan: "R$ 800-1.100", tao: "R$ 900-1.200" },
+  { dim: "Para quem é", samui: "Voo direto + conforto + família/luxo", phangan: "Festa + praia paradisíaca", tao: "Mergulhador / certificação" },
+  { dim: "Evite se", samui: "Procura ilha 'rústica' ou barata", phangan: "Quer voar direto", tao: "Não curte barco" },
+];
+
+const ANG_THONG_TOURS = [
+  { tour: "Ang Thong National Marine Park (speedboat)", duracao: "1 dia (8h-17h)", preco: "1.800-2.400 baht + 300 entrada", inclui: "Speedboat, almoço, snorkel, kayak, viewpoint Wua Talap", operadora: "100 Degrees East, Blue Stars, Seatran Discovery", obs: "Único lugar pra ver lagoa esmeralda Talay Nai. Reserve 2 dias antes na alta." },
+  { tour: "Ang Thong (barco grande tradicional)", duracao: "1 dia", preco: "1.200-1.500 baht", inclui: "Barco lento, almoço, snorkel, kayak", operadora: "Pacotes de hotel, agências de Chaweng", obs: "Mais barato, menos paradas. Mar tem que estar liso." },
+  { tour: "Sunset cruise Lipa Noi", duracao: "3h (16h-19h)", preco: "1.500-2.500 baht", inclui: "Catamarã, drinks moderados, snorkel breve", operadora: "Red Baron, Samui Boat Charter", obs: "Único pôr-do-sol decente da ilha vem do oeste. Reserve direto no pier de Lipa Noi." },
+  { tour: "Day-trip Koh Tan + Koh Mudsum (snorkel)", duracao: "5-6h", preco: "1.000-1.400 baht", inclui: "Longtail/speedboat, snorkel 3 pontos, almoço", operadora: "Pacotes em Hua Thanon ou Lamai", obs: "Visi 12-20m. Bom pra quem não vai a Ang Thong." },
+  { tour: "Charter privado de iate (4-8 pessoas)", duracao: "8h", preco: "25.000-45.000 baht/dia", inclui: "Iate, motorista, chef opcional", operadora: "Samui Yacht Charter, Northern Wind", obs: "Vale pra grupo 6+. Ang Thong + ilhas remotas no mesmo dia." },
+];
+
+const PESCA_SAMUI = [
+  { tipo: "Squid fishing noturno", oque: "Sai de Bophut ou Bangrak às 18h, volta 22h. Lula viva, jantar grelhado no barco.", preco: "1.500-2.200 baht/pessoa", obs: "Pergunte 'night squid boat' em Fisherman's Village. Captain Big Fish opera há 15 anos." },
+  { tipo: "Big game (atum, barracuda, dourado)", oque: "Charter saindo de Bophut 6h-14h. Vara, isca e bebida inclusos.", preco: "18.000-28.000 baht (até 6 pessoas)", obs: "Janeiro-Abril é janela. Reserve via Samui Fishing Charter ou Captain Hook." },
+  { tipo: "Pesca rústica de costa (Lipa Noi)", oque: "Sair com pescador local ao amanhecer, vara emprestada. Pesque-e-solte.", preco: "500-800 baht (vara + isca)", obs: "Pergunte no Lipa Noi pier. Comunidade local genuína." },
+];
+
+const SPA_SAMUI = [
+  { lugar: "Kamalaya Wellness Sanctuary", oque: "Resort wellness premiado com retreat estruturado — detox, yoga, Ayurveda.", preco: "12.000-25.000 baht/noite (com programa)", melhor: "Quem quer 5-7 dias de imersão real, não massagem solta." },
+  { lugar: "Absolute Sanctuary", oque: "Detox e yoga em Choeng Mon, retreat 3-10 dias.", preco: "8.000-15.000 baht/noite", melhor: "Solo traveler em busca de pausa estruturada." },
+  { lugar: "Tamarind Springs Forest Spa", oque: "Spa na floresta com hidromassagem natural em pedra vulcânica.", preco: "2.500-4.500 baht / 90 min", melhor: "Casal — cabine privativa na mata, sem pressa." },
+  { lugar: "Spa Cenvaree (Centara Chaweng)", oque: "Spa de resort grande, tailandesa e óleos.", preco: "1.800-3.200 baht / 60 min", melhor: "Hóspede do Centara ou day-pass turista." },
+  { lugar: "Let's Relax Chaweng", oque: "Rede confiável, terapeuta com selo.", preco: "600-1.200 baht / 60 min", melhor: "Pós day-trip de scooter. Sem furada." },
+  { lugar: "Lamai Park Massage (rua)", oque: "Massagem honesta sem firula em quiosque.", preco: "250-400 baht / 60 min", melhor: "Mochileiro orçamento mínimo." },
+];
+
+const VILAREJO_SAMUI = [
+  { lugar: "Lipa Noi (oeste)", como: "30 km / 45 min de Chaweng via 4169 ou estrada do norte.", oque: "Praia 6km vazia, único sunset real da ilha, restaurante de frutos do mar local. Resort boutique.", quanto: "Bangalô 1.200-2.500 baht. Refeição 200-400 baht.", obs: "Posto de gasolina raro a oeste. Abasteça antes de sair de Chaweng." },
+  { lugar: "Bang Por (NW)", como: "25 km / 35 min de Chaweng pela estrada do norte.", oque: "Praia 4 km quase deserta. 5-6 resorts pequenos. Vista Koh Phangan ao entardecer.", quanto: "Resort 1.800-4.000 baht. Quase sem hostel.", obs: "Sem ATM. Saque em Maenam antes." },
+  { lugar: "Hua Thanon (SE)", como: "12 km / 22 min de Chaweng. Vila muçulmana de pescadores.", oque: "Mercado de peixe da manhã, mesquitas, comida muçulmana local genuína.", quanto: "Refeição 80-180 baht. Sem hospedagem turística.", obs: "Vista cultural rara. Vista respeitosa (ombro e joelho cobertos)." },
+];
+
+const FAMILIA_SAMUI = [
+  { item: "Hospedagem em Maenam, Choeng Mon ou Bang Por", detalhe: "Chaweng é barulhento de noite. Praias do norte/leste são calmas, raso, areia fina." },
+  { item: "Aquarium Samui + templos (não Tiger Zoo)", detalhe: "Aquarium é OK pra kid 4+. Tiger Zoo NÃO é ético — pule. Substitua por Big Buddha + Wat Plai Laem (lagoa de carpas)." },
+  { item: "Na Mueang Waterfall 1 (não a 2)", detalhe: "A waterfall 1 tem piscina natural rasa e estacionamento próximo. A 2 exige trekking pesado." },
+  { item: "Day-trip Ang Thong com speedboat, não barco lento", detalhe: "Barco lento = 4h ida + 4h volta com kid entediado. Speedboat = 45 min cada trecho." },
+  { item: "Resort com kid club", detalhe: "Centara Grand Chaweng, Anantara Lawana, W Koh Samui, Hyatt Regency têm kid club estruturado." },
+  { item: "Não faça", detalhe: "Scooter com kid no colo (ilegal e fatal); show de elefante; tiger zoo." },
+];
+
+const CONSERVACAO_SAMUI = [
+  { iniciativa: "Trash Hero Samui (beach clean-up)", oque: "Todo domingo 7h, ponto rotativo (Bophut, Chaweng, Maenam). Bolsas + luvas fornecidas.", como: "Trash Hero Samui Facebook." },
+  { iniciativa: "Samui Elephant Sanctuary (Bophut)", oque: "Santuário ético sem montaria. Alimentar e banhar elefantes resgatados.", como: "Reserva pelo site oficial samuielephantsanctuary.org. Evite '...Elephant Park' (sem santuário no nome)." },
+  { iniciativa: "Eco resort: Six Senses + Tongsai Bay", oque: "Resorts certificados eco. Tongsai mantém 70% da terra como mata nativa.", como: "Pacote no site oficial; day-pass possível em Tongsai." },
+  { iniciativa: "Reef-safe sunscreen", oque: "Loja em Chaweng tem opções caras (Stream2Sea 350 baht). Compre no Brasil pra economizar.", como: "Marca: Australian Gold reef-safe ou ThinkSport." },
+];
+
+const BOOKING_SAMUI = [
+  { quando: "Réveillon, Chinese NY, Songkran", reserva: "5-6 meses antes", porque: "Resort 5★ esgota. Voo direto BKK-USM duplica preço." },
+  { quando: "Dez-Fev (alta seca)", reserva: "6-8 semanas", porque: "Pool villa em Bophut/Choeng Mon vai. Kamalaya esgota 3 meses antes." },
+  { quando: "Wellness retreat estruturado", reserva: "3-4 meses antes", porque: "Kamalaya e Absolute Sanctuary fecham datas. Pacote 7 dias requer reserva longa." },
+  { quando: "Jul-Ago (alta europeia)", reserva: "4 semanas", porque: "Família europeia toma resort kid-friendly. Reserva direta no resort tem upgrade." },
+  { quando: "Mai-Jun / Set", reserva: "1-2 semanas", porque: "Janela boa, baixa demanda. Negocie 15-25% no resort 4★." },
+  { quando: "Out-Nov (monção)", reserva: "Dia anterior", porque: "Tudo vazio. Preço cai 40-50%. Mas confirme cobertura de cancelamento de voo." },
+];
+
 const KohSamui7392 = () => {
   return (
     <>
