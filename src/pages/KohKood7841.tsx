@@ -887,6 +887,29 @@ const KohKood7841 = () => {
             </div>
           </section>
 
+          <section id="comparativo">
+            <SectionTitle icon={Scale} kicker="22 — Decisão" title="Kood × Mak × Chang — qual escolher" />
+            <Reveal>
+              <div className="pk-card p-0 overflow-hidden">
+                <div className="overflow-x-auto">
+                  <table className="pk-table">
+                    <thead><tr><th>Critério</th><th>Koh Kood</th><th>Koh Mak</th><th>Koh Chang</th></tr></thead>
+                    <tbody>
+                      {COMPARATIVO.map((c, i) => (
+                        <tr key={i}>
+                          <td className="font-medium">{c.criterio}</td>
+                          <td className="pk-gold-soft">{c.kood}</td>
+                          <td>{c.mak}</td>
+                          <td>{c.chang}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </Reveal>
+          </section>
+
           <section id="internet">
             <SectionTitle icon={Wifi} kicker="15 — Logística" title="Internet, SIM e dinheiro" />
             <div className="grid md:grid-cols-2 gap-5">
