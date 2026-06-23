@@ -33,21 +33,57 @@ const GUIDE_MAP = {
   "koh-lanta-tailandia":   "src/pages/KohLanta4831.tsx",
 };
 
-// ---------- Carrega ilhas via tsx loader nativo (Node 20+) -------------
-async function loadIlhas() {
-  // Reaproveita registrar do TS via esbuild-register se disponível;
-  // caso contrário, faz parse leve do arquivo procurando os literais.
-  // Para evitar dependência, fazemos um require dinâmico tolerante.
-  try {
-    const { register } = await import("tsx/esm/api");
-    const unregister = register();
-    const mod = await import(pathToFileURL(path.join(ROOT, "src/data/sales/ilhas.ts")).href);
-    unregister();
-    return mod.ilhas;
-  } catch {
-    console.error("Falha ao carregar ilhas.ts via tsx. Instale com: npm i -D tsx");
-    process.exit(2);
+// ---------- Extrai promessas direto do source de ilhas.ts -------------
+// (evita rodar TS+aliases+JSON imports só pra ler strings literais)
+function extractSalesPromises() {
+  const src = fs.readFileSync(path.join(ROOT, "src/data/sales/ilhas.ts"), "utf8");
+
+  const metaBlock = src.match(/export const ilhasMeta[^\[]*\[([\s\S]*?)\];/);
+  if (!metaBlock) throw new Error("Não achei ilhasMeta no ilhas.ts");
+  const slugs = [...metaBlock[1].matchAll(/slug:\s*"([^"]+)"/g)].map((m) => m[1]);
+
+  // Cada bloco `make(ilhasMeta[N], { ... })` — varre balanceando `{`/`}`.
+  const blocks = {};
+  const reStart = /make\(ilhasMeta\[(\d+)\]\s*,\s*\{/g;
+  let m;
+  while ((m = reStart.exec(src))) {
+    const idx = Number(m[1]);
+    let i = m.index + m[0].length - 1;
+    let depth = 0;
+    for (; i < src.length; i++) {
+      const c = src[i];
+      if (c === "{") depth++;
+      else if (c === "}") { depth--; if (depth === 0) { blocks[idx] = src.slice(m.index + m[0].length - 1, i + 1); break; } }
+    }
   }
+
+  const sliceArray = (block, key) => {
+    const re = new RegExp(`\\b${key}\\s*:\\s*\\[`);
+    const km = re.exec(block);
+    if (!km) return "";
+    let i = km.index + km[0].length - 1;
+    let depth = 0;
+    for (; i < block.length; i++) {
+      const c = block[i];
+      if (c === "[") depth++;
+      else if (c === "]") { depth--; if (depth === 0) return block.slice(km.index, i + 1); }
+    }
+    return "";
+  };
+  const titles = (chunk) =>
+    [...chunk.matchAll(/title:\s*"((?:[^"\\]|\\.)*)"/g)].map((x) => x[1].replace(/\\"/g, '"'));
+
+  const result = {};
+  for (const [idxStr, block] of Object.entries(blocks)) {
+    const slug = slugs[Number(idxStr)];
+    if (!slug) continue;
+    result[slug] = {
+      modules: titles(sliceArray(block, "modules")),
+      features: titles(sliceArray(block, "features")),
+      bonuses: titles(sliceArray(block, "bonuses")),
+    };
+  }
+  return result;
 }
 
 // ---------- Normalização ------------------------------------------------
