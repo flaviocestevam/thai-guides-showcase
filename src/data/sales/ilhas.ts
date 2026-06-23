@@ -514,6 +514,17 @@ const tao = make(ilhasMeta[4], {
     { title: "Erros que custaram caro de verdade", desc: "8 erros com o valor em real do prejuízo — aprenda com quem já errou." },
     { title: "Onde dormir por R$ 50 a R$ 1.500", desc: "Hostels, hotéis e pool villas testados nas 6 baías principais — com Maps." },
     { title: "John-Suwan Viewpoint às 5h45", desc: "A foto que vira capa de viagem com plano operacional: trilha, taxa, horário do nascer do sol mês a mês." },
+    { title: "Visibilidade por ponto de mergulho × mês", desc: "Chumphon, Sail Rock, Southwest, Twins, Sattakut, White Rock — quando cada um rende e quando vira aposta." },
+    { title: "Loop de scooter com km e tempo real", desc: "Mae Haad ↔ Sairee ↔ Chalok ↔ Tanote ↔ Aow Leuk — risco de cada trecho e onde 110cc não aguenta dois." },
+    { title: "Mês ideal por perfil de viajante", desc: "Open Water iniciante, caçador de whale shark, fun diver, festeiro de Full Moon, família — cada um tem janela própria." },
+    { title: "Comparativo Tao × Phangan × Samui", desc: "Tabela de 7 dimensões pra decidir qual ilha do Golfo combina com sua viagem (ou se rola as 3)." },
+    { title: "Liveaboard e night dive", desc: "Sail Rock noturno, White Rock à noite e raros liveaboards de 3 dias — quando reservar e quanto custa." },
+    { title: "Pesca tradicional e lulada noturna", desc: "Sair com pescador local de Mae Haad, jantar de lula no convés — preço, contato e o que esperar." },
+    { title: "Spa pós-mergulho", desc: "Jamahkiri, Healing Hands e Ban's Spa — qual resolve torcicolo de regulador e qual é fine dining wellness." },
+    { title: "Tanote, Aow Leuk e Sai Nuan — o Tao remoto", desc: "Praias escondidas a 15 min do bar de Sairee — onde dormir longe da festa sem perder a ilha." },
+    { title: "Koh Tao com kids", desc: "Bubblemaker PADI a partir de 8 anos, Shark Bay snorkel raso, hospedagem sem escada e o que NÃO fazer com criança." },
+    { title: "Save Koh Tao — voluntariado de mergulho", desc: "Plante coral em New Heaven, conte tubarão filhote em Shark Bay, beach clean-up mensal com café free." },
+    { title: "Timeline de reserva", desc: "Quando travar curso, ferry e hotel pra Réveillon, whale shark season, alta europeia ou baixa." },
   ],
   comparison: {
     theirs: [
