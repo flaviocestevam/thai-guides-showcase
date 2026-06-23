@@ -436,6 +436,37 @@ const KohLanta4831 = () => {
             </div>
           </section>
 
+          <section id="loop">
+            <SectionTitle icon={Route} kicker="07 — Roteiro 1 dia" title="Scooter loop completo — norte → sul → norte" />
+            <Reveal>
+              <div className="pk-card pk-card-feature mb-6">
+                <p className="text-lg leading-relaxed">
+                  <strong className="pk-gold">~80 km, 9 paradas, 1 dia.</strong> Saída cedo, sunset final em Kantiang ou Bamboo,
+                  jantar de volta em Klong Nin. Tanque cheio antes (PTT Saladan). Só faça em <strong>nov-abr</strong> — em monção a estrada do sul é perigosa.
+                </p>
+              </div>
+            </Reveal>
+            <Reveal>
+              <div className="pk-card p-0 overflow-hidden">
+                <div className="overflow-x-auto">
+                  <table className="pk-table">
+                    <thead><tr><th>Hora</th><th>Parada</th><th>O que fazer</th><th>Tempo</th></tr></thead>
+                    <tbody>
+                      {LOOP_PARADAS.map((p, i) => (
+                        <tr key={i}>
+                          <td className="pk-gold-soft font-semibold whitespace-nowrap">{p.hora}</td>
+                          <td className="font-medium"><G>{p.parada}</G></td>
+                          <td className="text-sm">{p.oque}</td>
+                          <td className="whitespace-nowrap">{p.tempo}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </Reveal>
+          </section>
+
           <section id="daytrips">
             <SectionTitle icon={Ship} kicker="07 — Mar" title="Day-trips — operadora certa" />
             <div className="space-y-5">
