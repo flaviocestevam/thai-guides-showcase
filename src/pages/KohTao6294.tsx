@@ -958,9 +958,13 @@ const KohTao6294 = () => {
             <p className="text-[hsl(var(--pk-muted))] mt-3 mb-8 max-w-2xl">Cada ilha tem o seu guia, mesma profundidade. Compre só o que vai usar.</p>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {[
-                { nome: "Koh Phangan", path: "/kohphangan8463" },
-                { nome: "Koh Samui", path: "/kohsamui7392" },
-                { nome: "Koh Phi Phi", path: "/kohphiphi5128" },
+                { nome: "Koh Phangan (vizinha)", path: "/koh-phangan-tailandia" },
+                { nome: "Koh Samui (vizinha)", path: "/koh-samui-tailandia" },
+                { nome: "Mergulho na Tailândia", path: "/mergulho-tailandia" },
+                { nome: "Top hostels", path: "/top-hostels-tailandia" },
+                { nome: "Aluguel de motos", path: "/aluguel-de-motos-tailandia" },
+                { nome: "Tailândia para aventureiros", path: "/tailandia-para-aventureiros" },
+                { nome: "Catálogo das ilhas", path: "/ilhas" },
                 { nome: "Catálogo geral", path: "/" },
               ].map((g) => (
                 <a key={g.path} href={g.path} target="_blank" rel="noreferrer" className="pk-island-link">
