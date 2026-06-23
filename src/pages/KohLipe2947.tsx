@@ -551,6 +551,52 @@ const KohLipe2947 = () => {
             </div>
           </section>
 
+          <section id="visi-pontos">
+            <SectionTitle icon={Eye} kicker="07 — Visibilidade" title="Visibilidade por ponto, mês a mês (em metros)" />
+            <Reveal>
+              <div className="pk-card p-0 overflow-hidden">
+                <div className="overflow-x-auto">
+                  <table className="pk-table">
+                    <thead><tr><th>Ponto</th><th>Nov</th><th>Dez</th><th>Jan</th><th>Fev</th><th>Mar</th><th>Abr</th></tr></thead>
+                    <tbody>
+                      {VISI_PONTOS.map((v) => (
+                        <tr key={v.ponto}>
+                          <td className="font-medium"><G q={v.ponto + " Koh Lipe Thailand"}>{v.ponto}</G></td>
+                          <td>{v.nov}</td>
+                          <td>{v.dez}</td>
+                          <td className="pk-gold-soft font-medium">{v.jan}</td>
+                          <td className="pk-gold-soft font-medium">{v.fev}</td>
+                          <td>{v.mar}</td>
+                          <td>{v.abr}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </Reveal>
+            <Reveal>
+              <div className="pk-callout pk-callout-info mt-6">
+                <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5" />
+                <p><strong>Fev é o mês rei.</strong> 8 Mile Rock chega a 40m de visibilidade — único momento da Tailândia que rivaliza Maldivas. Mai-out fica em 5m ou menos por monção.</p>
+              </div>
+            </Reveal>
+          </section>
+
+          <section id="mergulho">
+            <SectionTitle icon={GraduationCap} kicker="08 — Mergulho" title="Mergulho decodificado — Open Water ao Advanced" />
+            <div className="grid md:grid-cols-2 gap-5">
+              {MERGULHO.map((x, i) => (
+                <Reveal key={x.titulo} i={i}>
+                  <article className="pk-card pk-card-tight h-full">
+                    <p className="pk-kicker">{x.titulo}</p>
+                    <p className="text-sm mt-2 text-[hsl(var(--pk-muted))]">{x.texto}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
           <section id="daytrips">
             <SectionTitle icon={Ship} kicker="07 — Day-trips" title="Tours — operadora certa" />
             <div className="space-y-5">
