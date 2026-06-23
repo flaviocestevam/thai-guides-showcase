@@ -233,6 +233,108 @@ const ROTEIROS = [
   ]},
 ];
 
+const VISI_PONTOS = [
+  { ponto: "Klong Yai Kee (direto da praia)", nov: "8-12m", dez: "10-15m", jan: "12-18m", fev: "15-22m", mar: "12-18m", abr: "8-12m" },
+  { ponto: "Ao Bang Bao (direto da praia)", nov: "8-12m", dez: "12-15m", jan: "12-18m", fev: "15-20m", mar: "12-18m", abr: "8-12m" },
+  { ponto: "Koh Rang (tour)", nov: "12-18m", dez: "15-20m", jan: "18-25m", fev: "20-28m", mar: "18-22m", abr: "12-18m" },
+  { ponto: "Koh Rad (longtail privado)", nov: "10-15m", dez: "15-20m", jan: "18-22m", fev: "20-25m", mar: "15-20m", abr: "10-15m" },
+  { ponto: "Koh Rang Pinnacle (dive)", nov: "15-20m", dez: "18-25m", jan: "22-28m", fev: "25-30m", mar: "20-25m", abr: "15-20m" },
+  { ponto: "HTMS Chang (wreck dive)", nov: "12-18m", dez: "15-22m", jan: "18-25m", fev: "20-28m", mar: "18-22m", abr: "12-18m" },
+];
+
+const MAPA_SCOOTER = [
+  { de: "Pier Ao Salat (chegada)", para: "Klong Chao centro", tempo: "25 min", como: "Estrada asfaltada, sinalizada. Songthaew 200-300 baht." },
+  { de: "Klong Chao", para: "Ao Phrao (sunset bar)", tempo: "10 min", como: "Norte da costa oeste. Estrada boa, 1 curva fechada." },
+  { de: "Klong Chao", para: "Ao Bang Bao", tempo: "15 min", como: "Sul, asfalto bom. Passa por Klong Yai Kee (pare se for snorkelar)." },
+  { de: "Ao Bang Bao", para: "Ngamkho", tempo: "15 min", como: "Sul, asfalto + 500m de terra no final. OK em scooter automática." },
+  { de: "Ngamkho", para: "Tapao", tempo: "20 min", como: "Sul extremo. Asfalto + 200m trilha a pé." },
+  { de: "Klong Chao", para: "Khlong Hin (norte)", tempo: "35 min", como: "Norte da ilha, estrada subindo. Cuidado em chuva." },
+  { de: "Klong Chao", para: "Cachoeira Klong Chao", tempo: "5 min", como: "Acesso pela estrada principal, estacionamento gratuito." },
+  { de: "Loop completo (todas as praias)", para: "—", tempo: "6-7h (com paradas)", como: "60 km ida e volta. Saída 09h, volta sunset Ao Phrao 18h." },
+];
+
+const MES_PERFIL = [
+  { perfil: "Lua de mel / casal premium", mes: "Fev", motivo: "Visibilidade máxima, vento mínimo, sunset Ao Phrao impecável. Soneva/Tinkerbell com preço alto mas vale." },
+  { perfil: "Mergulhador (Open Water+)", mes: "Mar", motivo: "Koh Rang Pinnacle e HTMS Chang em pico de visi (25-30m). Operadoras todas abertas." },
+  { perfil: "Família com criança", mes: "Jan", motivo: "Mar calmo em Klong Chao raso, sem chuva, restaurante pé na areia aberto." },
+  { perfil: "Mochileiro / budget", mes: "Início nov ou fim abr", motivo: "Janela aberta com preços 30-40% abaixo do pico. Resort econômico vale." },
+  { perfil: "Slow travel / isolamento", mes: "Nov ou abr", motivo: "Ilha mais vazia, scooter solo sem trânsito, sunset bar sem fila." },
+  { perfil: "EVITAR", mes: "Mai-out", motivo: "Monção fecha 60% dos resorts e cancela speedboats." },
+  { perfil: "EVITAR (preço/lotação)", mes: "23 dez - 5 jan", motivo: "Preços +80%, mínimo 4-5 noites obrigatório, ilha lotada." },
+];
+
+const MERGULHO = [
+  { titulo: "Open Water (iniciante)", texto: "PADI Open Water em Kood: R$ 1.500-1.800, 3-4 dias. BB Divers (Klong Chao) e Paradise Divers (Ao Phrao) aceitam zero experiência. Mais barato que Koh Tao? Não — mas a ilha é menos lotada." },
+  { titulo: "Advanced Open Water", texto: "2 dias, R$ 1.000-1.300. Em Kood rende: HTMS Chang wreck (28m) só libera com Advanced. Combo Open + Advanced em sequência custa R$ 2.300." },
+  { titulo: "Sites para Open Water", texto: "Koh Rang shallow (12-15m, coral colorido), Hin Khao (formação rochosa rasa). Sem corrente forte, ideal pra primeiro dive certificado." },
+  { titulo: "Sites para Advanced+", texto: "Koh Rang Pinnacle (24-28m, parede de coral mole, peixe-rei grande), HTMS Chang (28m, navio de guerra afundado em 2012, tartarugas-marinhas dentro)." },
+  { titulo: "Escola pra iniciante", texto: "BB Divers (mais didático, turmas pequenas, instrutor brasileiro às vezes) ou Paradise Divers (descontraído). Ambas SSI/PADI." },
+  { titulo: "Fun dive avulso", texto: "2 tanks R$ 850-1.100. Inclui equipamento + almoço no barco. Confirme cilindro 12L e instrutor em inglês fluente." },
+];
+
+const PESCA = [
+  { titulo: "Pescador local longtail", texto: "Combine direto na praia de Klong Chao ou Ao Salat com pescador da vila. Saída 05h30, volta 09h. 1.200-1.800 baht/barco até 4 pessoas. Sem intermediário turístico." },
+  { titulo: "O que você pega", texto: "Lula, peixe-rei, garoupa, snapper. Pesca de linha tradicional (sem vara). Pescador ensina o nó e a leitura do mar. Resort cozinha o peixe pra você de volta (50-100 baht)." },
+  { titulo: "Etiqueta", texto: "Tire os sapatos no barco. Não jogue lixo no mar (peixe não morde). Negocie em 4 pessoas pra dividir custo. Aceite chá tradicional se oferecido." },
+  { titulo: "Charter premium", texto: "Resort boutique organiza charter privado com almoço de bordo: 4.500-6.500 baht / barco / dia. Para casal premium que quer experiência exclusiva." },
+];
+
+const SPA = [
+  { titulo: "Six Senses Spa @ Soneva Kiri", texto: "Top da Tailândia leste. Massagem tailandesa 90min: 4.500-6.500 baht. Aberto a não-hóspedes mediante reserva. Para experiência única em lua de mel." },
+  { titulo: "Shantaa Spa (Ngamkho)", texto: "Spa boutique premium. Massagem tailandesa óleo 60min: 1.500-2.000 baht. Vista pro mar, ambiente zen, aceita não-hóspedes." },
+  { titulo: "Tinkerbell Spa (Ao Bang Bao)", texto: "Casa de madeira pé na praia. Tailandesa tradicional 90min: 1.800-2.200 baht. Pacote casal popular." },
+  { titulo: "Massagem local em Klong Chao centro", texto: "3-4 casas fixas no centro com cardápio em inglês. Massagem tailandesa 60min: 300-400 baht. Mesma qualidade técnica do spa premium, sem o ambiente de luxo." },
+  { titulo: "Massagem 'pé na areia' (cuidado)", texto: "Massagista ambulante: 500-800 baht/hora, qualidade inconsistente, ambiente sem privacidade. EVITE — pague 300 na casa fixa." },
+];
+
+const AO_SALAT = [
+  { titulo: "O que é", texto: "Vila de pescadores construída sobre palafitas no mar. Única 'cidade' de Kood, fica no leste da ilha (oposto às praias turísticas). Comunidade real de pescadores tailandeses muçulmanos." },
+  { titulo: "Como chegar", texto: "Scooter de Klong Chao: 30 min de estrada asfaltada. Estacionamento gratuito na entrada da vila. Caminhe pelos píeres de madeira (com cuidado — alguns são frágeis)." },
+  { titulo: "Almoço pé no mar", texto: "2-3 restaurantes locais sobre palafitas. Peixe do dia, lula grelhada, arroz tailandês. R$ 25-50 por refeição completa. Vista do mar enquanto come. Sem cardápio em inglês — aponte pra mesa do lado." },
+  { titulo: "Etiqueta cultural", texto: "Cidade muçulmana — vista discreta (sem biquíni andando), não fotografe pessoas sem pedir. Sexta-feira (oração) evite meio-dia (12h-14h). Sem álcool nas barracas locais." },
+  { titulo: "Quando ir", texto: "Manhã 09h-11h (mercado de peixe ativo) OU almoço 12h-14h. Final de tarde fica vazio. Combine com cachoeira Klong Chao no mesmo dia." },
+];
+
+const BORRACHA = [
+  { titulo: "O que é", texto: "70% da ilha era plantação de seringueiras antes do turismo. Mini-fábricas familiares ainda extraem látex e fazem lâminas de borracha bruta — tradição centenária da região." },
+  { titulo: "Onde visitar", texto: "2-3 plantações abertas a visita perto de Khlong Hin (norte) e na estrada Klong Chao-Ao Salat. Pergunte ao resort — eles indicam a fazenda da semana (rotação)." },
+  { titulo: "O que você vê", texto: "Sangria da árvore ao amanhecer (corte em diagonal pra látex escorrer), filtragem do líquido branco, prensagem das lâminas. Demonstração de 30-45 min. Sem inglês — gestos e tradução pelo Google." },
+  { titulo: "Quanto custa", texto: "Gratuito ou doação simbólica (100-200 baht). Compre 1-2 lâminas como souvenir autêntico (50-100 baht) — sustenta a comunidade direto." },
+  { titulo: "Quando ir", texto: "Amanhecer (05h-07h) é a sangria — única hora real. Visita à fábrica em si funciona o dia todo. Em monção: produção cai pela chuva." },
+];
+
+const FAMILIA = [
+  { titulo: "Praia ideal", texto: "Klong Chao (sul, mar raso 50m, sem ondas, rio com kayak). Estrutura completa: restaurante pé na areia, banheiro, salva-vidas em alguns resorts. Ao Bang Bao também serve mas é mais isolada." },
+  { titulo: "Hotéis com kids facilities", texto: "Soneva Kiri (kids club premium, baby-sitter incluída), Tinkerbell Privacy (cottages 2 quartos, berço sob pedido), High Season Pool Villa (piscina privativa fechada), The Beach Natural Resort (familiar)." },
+  { titulo: "Atividades com criança", texto: "Kayak no rio Klong Chao (calmo, raso — colete sempre), cachoeira Klong Chao (poça gelada — supervisão), snorkel direto da praia Klong Yai Kee (mar raso, sem corrente). EVITE longtail aberto sem cobertura." },
+  { titulo: "Comida pra criança seletiva", texto: "Toh Pai (curry simples e arroz), View Point Cafe (sourdough, sanduíche, hambúrguer), Tinkerbell (cardápio kids). 'Mai phet' = sem pimenta. Frutas em qualquer mercado." },
+  { titulo: "Saúde infantil", texto: "Posto de saúde básico em Khlong Hin. Hospital sério = Trat (3-4h). Leve farmácia completa (febre, alergia, diarreia, soro). Vacinas em dia (Hepatite A obrigatória). Repelente DEET 30%+ contra dengue." },
+  { titulo: "O que NÃO fazer com criança", texto: "Scooter com criança pequena (perigoso, sem capacete infantil sério), tour Koh Rang longo (5h+ no barco), trilha pra cachoeira em chuva (escorregadia), Ao Salat sem proteção solar (palafitas sem sombra)." },
+];
+
+const COMPARATIVO = [
+  { criterio: "Tamanho / movimento", kood: "Grande, baixa lotação", mak: "Pequena, muito vazia", chang: "Grande, mais movimentada" },
+  { criterio: "Perfil", kood: "Luxo discreto, casal, isolamento", mak: "Família, mochileiro maduro, bike", chang: "Família budget, agito moderado" },
+  { criterio: "Preço médio (hotel)", kood: "R$ 700-1.500", mak: "R$ 250-700", chang: "R$ 350-1.000" },
+  { criterio: "Como chegar (de Bangkok)", kood: "Voo Trat + speedboat (4h)", mak: "Voo Trat + speedboat (3h30)", chang: "Ônibus + ferry (5-6h) ou voo (4h)" },
+  { criterio: "Praias destaque", kood: "Klong Chao, Ao Bang Bao, Ngamkho", mak: "Ao Suan Yai, Ao Khao", chang: "White Sand, Lonely Beach, Klong Prao" },
+  { criterio: "Snorkel direto da praia", kood: "Sim (2 praias grátis)", mak: "Sim (Koh Kham vizinha)", chang: "Não — tour necessário" },
+  { criterio: "Vida noturna", kood: "Quase zero (1 bar)", mak: "Zero", chang: "Lonely Beach (sim, com excesso)" },
+  { criterio: "Selva preservada", kood: "70% parque nacional", mak: "Plana, plantações", chang: "70% parque (mais montanhoso)" },
+  { criterio: "Veredito", kood: "Premium tranquilo", mak: "Família slow", chang: "Custo-benefício com agito" },
+];
+
+const BOOKING_TIMELINE = [
+  { quando: "Dez-Jan (Natal/Ano-Novo)", antecedencia: "5-6 meses", motivo: "Demanda absurda, mínimo 4-5 noites obrigatórias, preços +80%. Soneva esgota em outubro pra fim de ano." },
+  { quando: "Fev (mês rei lua de mel)", antecedencia: "4 meses", motivo: "Tinkerbell/Shantaa lotam. Resorts pequenos esgotam primeiro. Voos Bangkok Airways também — reserve junto." },
+  { quando: "Mar (mergulho)", antecedencia: "3 meses", motivo: "Demanda do circuito de mergulho. BB Divers e Paradise Divers limitam turmas." },
+  { quando: "Nov ou Abr (janela aberta)", antecedencia: "2 meses", motivo: "Pico passado/começando. Preços normalizam. Cancelamento flexível ainda funciona." },
+  { quando: "Mai (última semana antes da monção)", antecedencia: "1-2 semanas", motivo: "Última chance. Risco real de speedboat cancelar. Reserva refundable é OBRIGATÓRIA." },
+  { quando: "Jun-Out (monção)", antecedencia: "—", motivo: "NÃO VÁ. 60% dos resorts fechados. Soneva fecha completamente set-out. Speedboat cancela direto." },
+];
+
+
+
 const KohKood7841 = () => {
   return (
     <>
