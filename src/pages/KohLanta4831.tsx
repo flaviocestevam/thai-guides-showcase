@@ -3,7 +3,7 @@
 import {
   MapPin, AlertTriangle, CheckCircle2, XCircle, Bike, Ship, UtensilsCrossed,
   Compass, Wallet, ShieldCheck, Map as MapIcon, Sun, Waves, Sparkles, Home,
-  ArrowUpRight,
+  ArrowUpRight, CalendarDays, Route, Sunset, Building2,
 } from "lucide-react";
 import { PK_STYLES, Reveal, SectionTitle, TONE_CLASS, makeMapChip, type Tone } from "@/components/guides/premiumShell";
 
@@ -13,11 +13,15 @@ const TOC = [
   { id: "comeco", label: "Antes de tudo", icon: Compass },
   { id: "bairros", label: "Praias-bairro", icon: Home },
   { id: "praias", label: "Praias", icon: Waves },
+  { id: "clima", label: "Clima mês a mês", icon: CalendarDays },
   { id: "hospedagem", label: "Hospedagem", icon: Sparkles },
   { id: "transfer", label: "Chegada", icon: MapPin },
   { id: "moto", label: "Scooter", icon: Bike },
+  { id: "loop", label: "Scooter loop", icon: Route },
   { id: "daytrips", label: "Day-trips", icon: Ship },
   { id: "comida", label: "Comida", icon: UtensilsCrossed },
+  { id: "sunsets", label: "Sunsets", icon: Sunset },
+  { id: "oldtown", label: "Old Town", icon: Building2 },
   { id: "roteiros", label: "Roteiros", icon: Sun },
   { id: "antigolpe", label: "Anti-golpe", icon: ShieldCheck },
   { id: "blacklist", label: "Lista negra", icon: XCircle },
@@ -135,6 +139,50 @@ const COMIDA = [
   { lugar: "Where Else?", bairro: "Klong Khong", oque: "Beach bar hippie, melhor lugar para sunset social.", preco: "150-380 baht" },
   { lugar: "Time for Lime", bairro: "Klong Dao", oque: "Cooking class lendária + restaurante experimental.", preco: "1.800 baht aula / 350-700 jantar" },
   { lugar: "Cook Kai", bairro: "Phra Ae", oque: "Casa familiar com tom chinês-tailandês, preço justo.", preco: "100-240 baht" },
+];
+
+const CLIMA_MES = [
+  { mes: "Jan", chuva: "Mínima", vento: "Calmo NE", mar: "Cristalino", visi: "20-30m", lotacao: "Pico", preco: "+40%", veredito: "Janela perfeita." },
+  { mes: "Fev", chuva: "Mínima", vento: "Calmo NE", mar: "Cristalino", visi: "25-35m", lotacao: "Pico", preco: "+40%", veredito: "Top pra mergulho Hin Daeng/Muang." },
+  { mes: "Mar", chuva: "Baixa", vento: "Leve", mar: "Cristalino", visi: "25-35m", lotacao: "Alta", preco: "+30%", veredito: "Quente, mar ainda perfeito." },
+  { mes: "Abr", chuva: "Pré-monção", vento: "Variável", mar: "Bom", visi: "15-25m", lotacao: "Songkran (alta)", preco: "+25%", veredito: "Songkran 13-15. Aceitável até dia 20." },
+  { mes: "Mai", chuva: "Início monção", vento: "Sul forte começa", mar: "Mexido oeste", visi: "10-15m", lotacao: "Cai", preco: "-20%", veredito: "Janela ruim — restaurantes começam a fechar." },
+  { mes: "Jun", chuva: "Monção", vento: "Sul forte", mar: "Bravo", visi: "5-10m", lotacao: "Baixa", preco: "-40%", veredito: "Metade da ilha fecha. Ferries reduzem." },
+  { mes: "Jul", chuva: "Monção pesada", vento: "Sul forte", mar: "Bravo", visi: "5-10m", lotacao: "Baixa", preco: "-40%", veredito: "Evite. Day-trips cancelam." },
+  { mes: "Ago", chuva: "Monção pesada", vento: "Sul forte", mar: "Bravo", visi: "5-10m", lotacao: "Baixa", preco: "-40%", veredito: "Evite. Parque Nacional fechado." },
+  { mes: "Set", chuva: "Pico monção", vento: "Sul muito forte", mar: "Bravo", visi: "<5m", lotacao: "Mínima", preco: "-50%", veredito: "Pior mês. Não vá." },
+  { mes: "Out", chuva: "Fim monção", vento: "Reduzindo", mar: "Acalmando", visi: "10-15m", lotacao: "Subindo", preco: "Normal", veredito: "Risco. Segunda metade do mês melhora." },
+  { mes: "Nov", chuva: "Pontual", vento: "Calmo NE volta", mar: "Bom", visi: "15-25m", lotacao: "Alta", preco: "+20%", veredito: "Janela abre. Reabertura dos hotéis." },
+  { mes: "Dez", chuva: "Mínima", vento: "Calmo NE", mar: "Cristalino", visi: "20-30m", lotacao: "Pico (Natal)", preco: "+50%", veredito: "Reserve com 3+ meses." },
+];
+
+const LOOP_PARADAS: { hora: string; parada: string; oque: string; tempo: string }[] = [
+  { hora: "08h30", parada: "Saída Saladan / Klong Dao", oque: "Café no May & Mark's House antes de pegar a estrada. Tanque cheio (posto PTT Saladan).", tempo: "30 min" },
+  { hora: "09h30", parada: "Phra Ae (Long Beach)", oque: "Parada de foto na praia mais longa. Olha o sul (mais beach club).", tempo: "20 min" },
+  { hora: "10h15", parada: "Klong Khong beach bars", oque: "Praia de bares hippies. Foto rápida nos balanços do Where Else?.", tempo: "20 min" },
+  { hora: "11h00", parada: "Klong Nin", oque: "Almoço cedo no Pinto Restaurant (pad krapow). Banho rápido na praia.", tempo: "1h15" },
+  { hora: "12h45", parada: "Mirador Pimalai / Kantiang Bay", oque: "Subida de scooter — vista panorâmica da meia-lua. Curvas: atenção redobrada.", tempo: "30 min" },
+  { hora: "13h30", parada: "Bamboo Bay (Lanta Marine Park View)", oque: "Sunset bar 'Why Not Bar' — anota pra voltar às 17h30. Banho na Bamboo.", tempo: "1h" },
+  { hora: "14h45", parada: "Mu Ko Lanta National Park (Tanod)", oque: "Entrada 200 baht. Farol, trilha 2,7 km com macacos (sem sacola na mão).", tempo: "2h" },
+  { hora: "17h00", parada: "Retorno por dentro (Old Town)", oque: "Estrada da costa leste é mais reta — passe pela Old Town pra dar oi.", tempo: "30 min" },
+  { hora: "17h30", parada: "Sunset final — escolha 1", oque: "Same Same Kantiang OU volta a Bamboo (Why Not). Combine antes pra não correr no escuro.", tempo: "1h" },
+  { hora: "19h00", parada: "Jantar em Klong Nin", oque: "Funky Fish (beach bar com fogo) ou volta direto a Saladan/Phra Ae.", tempo: "—" },
+];
+
+const SUNSETS = [
+  { nome: "Same Same But Different (Kantiang Bay)", tone: "premium" as Tone, nota: "10/10", quando: "17h45-18h30 (nov-mar)", oque: "Sunset frontal entre dois morros, pé na areia. Reserva nos fins de semana." },
+  { nome: "Why Not Bar — Lanta Marine Park View (Bamboo Bay)", tone: "premium" as Tone, nota: "10/10", quando: "17h30 chega cedo", oque: "Sunset 360° de cima do penhasco. Bebida cara, vista impagável." },
+  { nome: "Funky Fish (Klong Nin)", tone: "ok" as Tone, nota: "9/10", quando: "Toda noite após 17h", oque: "Beach bar com fogo na areia, vibe local. Sem pretensão." },
+  { nome: "Where Else? (Klong Khong)", tone: "info" as Tone, nota: "8/10", quando: "17h em diante", oque: "Vibe rasta, balanços de corda no mar. Sunset social, não fotografia." },
+  { nome: "Mirador Pimalai (Kantiang)", tone: "info" as Tone, nota: "8/10", quando: "17h30, consumir no bar", oque: "Penhasco do Pimalai Resort — entre como cliente do bar (200-400 baht)." },
+];
+
+const OLD_TOWN = [
+  { titulo: "Quando ir", texto: "Das 17h às 21h. Antes disso, parece vila morta. À noite, vira centro vivo — lanternas vermelhas chinesas, palafitas iluminadas, restaurantes na água." },
+  { titulo: "Night Market — Terças", texto: "Único dia da semana com Walking Street: barracas de comida, artesanato local, lanterna no rio Khao Mai Kaew. Chegue 18h30." },
+  { titulo: "O que comer", texto: "Krua Kanda (palafita familiar), Beautiful Restaurant (massaman), Caoutchouc (fine dining francês-tailandês em casa colonial)." },
+  { titulo: "Como chegar", texto: "Scooter da Klong Nin = 20 min pela costa leste. De Phra Ae = 35 min. Estrada calma, sem curvas pesadas — boa pra iniciante." },
+  { titulo: "Onde dormir", texto: "Old Town tem 3 homestays boutique em palafita (R$ 150-250). Vale 1 noite pra ver a vila acordar e dormir." },
 ];
 
 const KohLanta4831 = () => {
@@ -255,6 +303,39 @@ const KohLanta4831 = () => {
             </div>
           </section>
 
+          <section id="clima">
+            <SectionTitle icon={CalendarDays} kicker="04 — Quando ir" title="Clima mês a mês — janela honesta" />
+            <Reveal>
+              <div className="pk-card p-0 overflow-hidden">
+                <div className="overflow-x-auto">
+                  <table className="pk-table">
+                    <thead><tr><th>Mês</th><th>Chuva</th><th>Vento</th><th>Mar (oeste)</th><th>Visi mergulho</th><th>Lotação</th><th>Preço</th><th>Veredito</th></tr></thead>
+                    <tbody>
+                      {CLIMA_MES.map((m) => (
+                        <tr key={m.mes}>
+                          <td className="pk-gold-soft font-semibold">{m.mes}</td>
+                          <td>{m.chuva}</td>
+                          <td>{m.vento}</td>
+                          <td>{m.mar}</td>
+                          <td>{m.visi}</td>
+                          <td>{m.lotacao}</td>
+                          <td className="font-medium">{m.preco}</td>
+                          <td className="text-sm">{m.veredito}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </Reveal>
+            <Reveal>
+              <div className="pk-callout pk-callout-alert mt-6">
+                <AlertTriangle className="w-5 h-5 shrink-0 mt-0.5" />
+                <p><strong>Maio-outubro fecha metade da ilha:</strong> beach bars de Klong Khong, sunset bars de Bamboo, vários restaurantes em Kantiang. Ferry Phi Phi-Lanta reduz. Janela ideal é <strong>nov-mar</strong>.</p>
+              </div>
+            </Reveal>
+          </section>
+
           <section id="hospedagem">
             <SectionTitle icon={Sparkles} kicker="04 — Onde dormir" title="Hospedagem por faixa real" />
             <div className="grid md:grid-cols-3 gap-6">
@@ -355,6 +436,37 @@ const KohLanta4831 = () => {
             </div>
           </section>
 
+          <section id="loop">
+            <SectionTitle icon={Route} kicker="07 — Roteiro 1 dia" title="Scooter loop completo — norte → sul → norte" />
+            <Reveal>
+              <div className="pk-card pk-card-feature mb-6">
+                <p className="text-lg leading-relaxed">
+                  <strong className="pk-gold">~80 km, 9 paradas, 1 dia.</strong> Saída cedo, sunset final em Kantiang ou Bamboo,
+                  jantar de volta em Klong Nin. Tanque cheio antes (PTT Saladan). Só faça em <strong>nov-abr</strong> — em monção a estrada do sul é perigosa.
+                </p>
+              </div>
+            </Reveal>
+            <Reveal>
+              <div className="pk-card p-0 overflow-hidden">
+                <div className="overflow-x-auto">
+                  <table className="pk-table">
+                    <thead><tr><th>Hora</th><th>Parada</th><th>O que fazer</th><th>Tempo</th></tr></thead>
+                    <tbody>
+                      {LOOP_PARADAS.map((p, i) => (
+                        <tr key={i}>
+                          <td className="pk-gold-soft font-semibold whitespace-nowrap">{p.hora}</td>
+                          <td className="font-medium"><G>{p.parada}</G></td>
+                          <td className="text-sm">{p.oque}</td>
+                          <td className="whitespace-nowrap">{p.tempo}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </Reveal>
+          </section>
+
           <section id="daytrips">
             <SectionTitle icon={Ship} kicker="07 — Mar" title="Day-trips — operadora certa" />
             <div className="space-y-5">
@@ -390,6 +502,48 @@ const KohLanta4831 = () => {
                     </div>
                     <p className="text-sm text-[hsl(var(--pk-muted))] mb-3">{c.oque}</p>
                     <p className="pk-gold-soft text-sm font-medium">{c.preco}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="sunsets">
+            <SectionTitle icon={Sunset} kicker="10 — Sunset" title="5 sunset bars ranqueados — sul vence" />
+            <div className="grid md:grid-cols-2 gap-5">
+              {SUNSETS.map((s, i) => (
+                <Reveal key={s.nome} i={i}>
+                  <article className={`pk-card ${TONE_CLASS[s.tone]} h-full`}>
+                    <header className="flex items-start justify-between gap-3 mb-3">
+                      <h3 className="pk-h4"><G q={s.nome + " Koh Lanta Thailand"}>{s.nome}</G></h3>
+                      <span className="pk-verdict">{s.nota}</span>
+                    </header>
+                    <p className="pk-kicker">Quando ir</p>
+                    <p className="text-sm mt-1 mb-3">{s.quando}</p>
+                    <p className="text-sm text-[hsl(var(--pk-muted))]">{s.oque}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="oldtown">
+            <SectionTitle icon={Building2} kicker="11 — Cultura" title="Old Town (Lanta Yai) — vila chinesa em palafita" />
+            <Reveal>
+              <div className="pk-card pk-card-feature mb-6">
+                <p className="text-lg leading-relaxed">
+                  <strong className="pk-gold">Antes das 17h:</strong> parece vila morta.{" "}
+                  <strong className="pk-gold">Depois das 17h:</strong> lanternas vermelhas chinesas, palafitas iluminadas,
+                  restaurantes na água. <em>É outra cidade.</em>
+                </p>
+              </div>
+            </Reveal>
+            <div className="grid md:grid-cols-2 gap-5">
+              {OLD_TOWN.map((o, i) => (
+                <Reveal key={o.titulo} i={i}>
+                  <article className="pk-card pk-card-tight h-full">
+                    <p className="pk-kicker">{o.titulo}</p>
+                    <p className="text-sm mt-2 text-[hsl(var(--pk-muted))]">{o.texto}</p>
                   </article>
                 </Reveal>
               ))}
