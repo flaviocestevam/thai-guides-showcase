@@ -340,7 +340,30 @@ const TopHostels7128 = () => (
       </Section>
     ))}
 
+    {/* MAPA */}
+    <Section id="mapa" chapter="Bônus" title="Mapa Google Maps — todos os 97 hostels">
+      <p>Cada card de hostel acima já tem botão <strong>→ Google Maps</strong> que abre a localização exata no app. Use os atalhos abaixo para ver todos os hostels de cada cidade pinados juntos no Maps — útil pra planejar bairro antes de fechar reserva:</p>
+      <div className="grid sm:grid-cols-2 gap-3">
+        {cities.map((c) => (
+          <a
+            key={c.slug}
+            href={gmaps(`best hostels ${c.name} Thailand`)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block bg-card border border-border rounded-lg p-3 hover:border-primary transition"
+          >
+            <p className="font-semibold text-foreground text-sm">→ Hostels em {c.name} no Maps</p>
+            <p className="text-xs text-muted-foreground">{c.hostels.length} endereços pinados</p>
+          </a>
+        ))}
+      </div>
+      <Card>
+        <p><strong>Como salvar offline:</strong> abra cada link, toque nos 3 pontos → "Baixar mapa offline". Funciona mesmo sem chip thai nos primeiros dias.</p>
+      </Card>
+    </Section>
+
     {/* BAIRROS */}
+
     <Section id="bairros" chapter="Bônus" title="Bairros explicados — onde ficar de verdade">
       <Card>
         <p><strong>Bangkok</strong></p>
