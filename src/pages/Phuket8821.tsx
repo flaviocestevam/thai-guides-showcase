@@ -12,6 +12,21 @@ import {
 // Rota privada: /phuket8821
 // ============================================================================
 
+// Helper: link para Google Maps de qualquer lugar/região citado
+const gmap = (q: string) =>
+  `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q + ", Phuket, Thailand")}`;
+
+const G = ({ q, children, className = "" }: { q?: string; children: React.ReactNode; className?: string }) => (
+  <a
+    href={gmap(q ?? (typeof children === "string" ? children : ""))}
+    target="_blank"
+    rel="noreferrer"
+    className={`underline decoration-emerald-400/40 underline-offset-2 hover:decoration-emerald-300 hover:text-emerald-300 transition ${className}`}
+  >
+    {children}
+  </a>
+);
+
 const TOC = [
   { id: "comeco", label: "Antes de tudo", icon: Compass },
   { id: "bairros", label: "9 bairros decodificados", icon: Home },
