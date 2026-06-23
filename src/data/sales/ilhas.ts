@@ -817,6 +817,15 @@ const lanta = make(ilhasMeta[6], {
     { title: "5 sunset bars ranqueados", desc: "Same Same, Why Not Bar, Funky Fish, Where Else?, Mirador Pimalai — nota, horário e o que esperar." },
     { title: "Old Town decodificada", desc: "Por que ir só depois das 17h, night market das terças e os 3 restaurantes em palafita que valem." },
     { title: "12 golpes com resposta pronta", desc: "Scooter, taxi, tour, ATM, polícia — script exato pra cada um." },
+    { title: "Visibilidade real em Koh Haa, Hin Daeng e Hin Muang", desc: "Tabela mês-a-mês com janela de manta ray e whale shark — pra quem mergulha sério." },
+    { title: "Mapa de scooter — 8 trechos cronometrados", desc: "Tempo real entre Saladan, Klong Dao, Phra Ae, Klong Nin, Kantiang, Bamboo, Tanod, Old Town." },
+    { title: "Mês × perfil de viajante", desc: "Tabela cruzada: slow travel, família, mergulhador, lua de mel, mochileiro, quem foge de Phi Phi." },
+    { title: "Comparativo Lanta × Phi Phi × Krabi (8 dimensões)", desc: "Decisão clara entre as 3 bases do Andaman sul, com custo, vibe, mergulho, família e tempo mínimo." },
+    { title: "Pesca tradicional em Saladan", desc: "Como contratar pescador local, squid fishing noturno e big game — preços reais." },
+    { title: "5 spas e cooking class mapeados", desc: "Oasis Yoga, Sri Lanta, Layana, Pimalai e Time for Lime — preços de drop-in e programas." },
+    { title: "Praias remotas: Bamboo, Mai Pai, Mu Ko Lanta NP", desc: "Como chegar, quanto custa, e por que ir nas 5 áreas isoladas do sul." },
+    { title: "Família com kids — sem ilusão", desc: "Praias OK, hospital, bairros recomendados, datas a evitar." },
+    { title: "Conservação: reef-safe, Emerald Cave fora do pico", desc: "6 regras locais pra não destruir coral e evitar caverna lotada." },
   ],
   comparison: {
     theirs: [
@@ -837,12 +846,12 @@ const lanta = make(ilhasMeta[6], {
     ],
   },
   authority: {
-    title: "10 dias de scooter loop em Lanta",
+    title: "10 dias de scooter loop em Lanta + 6 mergulhos em Koh Haa",
     paragraphs: [
-      "Fiquei 10 dias dormindo em 3 praias diferentes (Klong Dao, Klong Nin e Kantiang), rodei o loop completo 4 vezes, testei os 5 sunset bars e fiz o day-trip 4 ilhas pra confirmar de onde sai e qual operadora cumpre.",
+      "Fiquei 10 dias dormindo em 3 praias diferentes (Klong Dao, Klong Nin e Kantiang), rodei o loop completo 4 vezes, testei os 5 sunset bars e fiz o day-trip 4 ilhas pra confirmar de onde sai e qual operadora cumpre. Mergulhei 6 vezes em Koh Haa e 2 em Hin Daeng pra cruzar visibilidade com janela.",
       "Lanta não tem armadilha turística agressiva — mas tem perda de tempo se você não conhece a geografia. Esse guia é o mapa.",
     ],
-    bullets: ["10 dias na ilha", "3 praias dormidas", "Scooter loop 4x", "9 praias visitadas", "5 sunset bars testados"],
+    bullets: ["10 dias na ilha", "3 praias dormidas", "Scooter loop 4x", "9 praias visitadas", "5 sunset bars testados", "8 mergulhos em Koh Haa + Hin Daeng"],
   },
   modules: [
     { title: "9 praias por perfil", desc: "Decodificação de cada praia em fila do norte ao sul.", bullets: ["Klong Dao (norte agitado)", "Phra Ae (família)", "Klong Khong (chill)", "Klong Nin (perfeita)", "Kantiang (sul premium)"] },
@@ -851,6 +860,10 @@ const lanta = make(ilhasMeta[6], {
     { title: "5 sunset bars ranqueados", desc: "Os melhores sunsets do sul — nota e horário.", bullets: ["Same Same But Different (Kantiang)", "Why Not Bar (Bamboo)", "Funky Fish (Klong Nin)", "Where Else? (Klong Khong)", "Mirador Pimalai"] },
     { title: "Old Town e night market", desc: "Vila chinesa em palafita — quando vai e o que come.", bullets: ["Só depois das 17h", "Night market das terças", "Krua Kanda, Beautiful, Caoutchouc", "Como chegar de scooter", "1 noite em homestay de palafita"] },
     { title: "Day-trips e além", desc: "4 ilhas, Koh Rok, Koh Haa, Mu Ko Lanta NP.", bullets: ["Tour 4 ilhas (qual operadora)", "Koh Rok day-trip (fev-abr)", "Mergulho Hin Daeng/Muang", "Combinar com Phi Phi", "Combinar com Krabi"] },
+    { title: "Mergulho em Koh Haa e Hin Daeng/Muang", desc: "Visibilidade real, janela de manta e operadora certa.", bullets: ["Koh Haa Lagoon", "Hin Daeng manta Fev-Abr", "Hin Muang coral roxo", "Lanta Diver vs Scubafish", "Iniciante vs avançado"] },
+    { title: "Pesca tradicional e big game", desc: "Como contratar pescador de Saladan e o que esperar.", bullets: ["Pesca de linha 4h", "Squid fishing noturno", "Big game atum/barracuda", "Preço por pessoa vs barco", "Janela sazonal"] },
+    { title: "Família com kids em Lanta", desc: "Praias OK, hospital, datas a evitar.", bullets: ["Klong Dao raso 100m", "Phra Ae longa e calma", "Hospital de Saladan", "Carro privado vs songthaew", "Evitar Mai-Out"] },
+    { title: "Conservação e turismo responsável", desc: "Como não destruir o que veio ver.", bullets: ["Reef-safe em Koh Haa", "Sem âncora em Hin Daeng", "Distância de tartaruga e manta", "Emerald Cave fora do pico", "Plástico de uso único"] },
   ],
   bonuses: [
     { title: "Mapa Google das 9 praias + loop", desc: "Mapa offline com praias, sunset bars, restaurantes e a rota completa de scooter.", value: "R$ 87" },
@@ -858,7 +871,13 @@ const lanta = make(ilhasMeta[6], {
     { title: "Lista de hotéis por praia (12 testados)", desc: "Hotéis em 5 praias principais, por faixa de preço, com veredito real.", value: "R$ 67" },
     { title: "Roteiro scooter loop 1 dia (PDF)", desc: "9 paradas com horário, parada e tempo — pronto pra imprimir.", value: "R$ 47" },
     { title: "Tabela dos 5 sunset bars", desc: "Nota, horário e o que esperar em cada um. Pra escolher o seu por noite.", value: "R$ 37" },
+    { title: "Comparativo Lanta × Phi Phi × Krabi", desc: "Tabela de 8 dimensões pra decidir entre as 3 bases do Andaman sul.", value: "R$ 57" },
+    { title: "Tabela de visibilidade Koh Haa + Hin Daeng", desc: "Mês-a-mês com janela de manta ray e whale shark e operadora certa.", value: "R$ 47" },
+    { title: "Guia das 5 praias remotas e Mu Ko Lanta NP", desc: "Bamboo Bay, Mai Pai, Tanod, Nui Bay, Koh Mook — como chegar e onde dormir.", value: "R$ 57" },
+    { title: "Pacote família com kids", desc: "Praias OK, hospital, datas a evitar.", value: "R$ 37" },
+    { title: "Checklist de reserva por antecedência", desc: "Quando reservar cada cenário, OTA certa, flash sales.", value: "R$ 37" },
   ],
+
   testimonials: [
     { name: "Cláudia Marques", city: "São Paulo, SP", text: "Saí de Phi Phi extenuada e fui pra Lanta no dia seguinte. Klong Nin, bangalô de R$ 220 a diária, mar calmo, zero barulho. Recuperei a fé na Tailândia. O guia salvou minha viagem." },
     { name: "Rodrigo Bertolucci", city: "Belo Horizonte, MG", text: "Aluguei scooter e segui o loop do guia. Rodei a ilha inteira em 9h com 5 paradas. Terminei vendo o pôr do sol no Why Not Bar em Bamboo Bay. Um dos dias mais lindos da minha vida." },
