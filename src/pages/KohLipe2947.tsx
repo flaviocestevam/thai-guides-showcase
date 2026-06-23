@@ -648,6 +648,68 @@ const KohLipe2947 = () => {
             </div>
           </section>
 
+          <section id="internet">
+            <SectionTitle icon={Wifi} kicker="15 — Conectividade" title="Internet, SIM e trabalho remoto" />
+            <div className="grid md:grid-cols-2 gap-5">
+              {INTERNET.map((x, i) => (
+                <Reveal key={x.titulo} i={i}>
+                  <article className="pk-card pk-card-tight h-full">
+                    <p className="pk-kicker">{x.titulo}</p>
+                    <p className="text-sm mt-2 text-[hsl(var(--pk-muted))]">{x.texto}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="dinheiro">
+            <SectionTitle icon={Banknote} kicker="16 — Dinheiro" title="ATM, cash e cartão — Lipe sem banco" />
+            <div className="grid md:grid-cols-2 gap-5">
+              {DINHEIRO.map((x, i) => (
+                <Reveal key={x.titulo} i={i}>
+                  <article className="pk-card pk-card-tight h-full">
+                    <p className="pk-kicker">{x.titulo}</p>
+                    <p className="text-sm mt-2 text-[hsl(var(--pk-muted))]">{x.texto}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="familia">
+            <SectionTitle icon={Baby} kicker="17 — Família" title="Lipe com criança — o que muda" />
+            <div className="grid md:grid-cols-2 gap-5">
+              {FAMILIA.map((x, i) => (
+                <Reveal key={x.titulo} i={i}>
+                  <article className="pk-card pk-card-tight h-full">
+                    <p className="pk-kicker">{x.titulo}</p>
+                    <p className="text-sm mt-2 text-[hsl(var(--pk-muted))]">{x.texto}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="saude">
+            <SectionTitle icon={HeartPulse} kicker="18 — Saúde" title="Clínica, emergência e seguro" />
+            <Reveal>
+              <div className="pk-callout pk-callout-alert mb-6">
+                <AlertTriangle className="w-5 h-5 shrink-0 mt-0.5" />
+                <p><strong>Seguro viagem com evacuação marítima é OBRIGATÓRIO em Lipe.</strong> Hospital sério fica em Satun (4-5h de transporte). Sem seguro, evacuação grave custa R$ 8.000-15.000 do seu bolso.</p>
+              </div>
+            </Reveal>
+            <div className="grid md:grid-cols-2 gap-5">
+              {SAUDE.map((x, i) => (
+                <Reveal key={x.titulo} i={i}>
+                  <article className="pk-card pk-card-tight h-full">
+                    <p className="pk-kicker">{x.titulo}</p>
+                    <p className="text-sm mt-2 text-[hsl(var(--pk-muted))]">{x.texto}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
           <section id="roteiros">
             <SectionTitle icon={Sun} kicker="11 — Tempo" title="Roteiros prontos — 4, 6, 8 e 10 dias" />
             <div className="grid md:grid-cols-2 gap-6">
