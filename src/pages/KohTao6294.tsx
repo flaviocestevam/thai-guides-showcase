@@ -344,6 +344,10 @@ const KohTao6294 = () => {
                     <article className="pk-card pk-card-tight pk-tone-ok h-full">
                       <h4 className="pk-h4"><G q={`${e.nome} Koh Tao`}>{e.nome}</G></h4>
                       <p className="text-sm text-[hsl(var(--pk-muted))] mt-2">{e.oque}</p>
+                      <div className="mt-3 flex flex-wrap gap-2 text-xs">
+                        {e.site && <a href={e.site} target="_blank" rel="noreferrer" className="pk-tag-sm inline-flex items-center gap-1">site <ArrowUpRight className="w-3 h-3" /></a>}
+                        {e.ig && <a href={e.ig} target="_blank" rel="noreferrer" className="pk-tag-sm inline-flex items-center gap-1">instagram <ArrowUpRight className="w-3 h-3" /></a>}
+                      </div>
                     </article>
                   </Reveal>
                 ))}
