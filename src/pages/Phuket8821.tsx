@@ -390,28 +390,28 @@ const Phuket8821 = () => {
             <Card className="border-emerald-500/20">
               <CardHeader><CardTitle className="text-lg">Mochileiro (R$ 45-120)</CardTitle></CardHeader>
               <CardContent className="text-sm space-y-2">
-                <p><strong>Lub d Patong</strong> — hostel design, piscina, bar ativo.</p>
-                <p><strong>Bodega Phuket Old Town</strong> — melhor pra cultura.</p>
-                <p><strong>Phuket Backpacker Hostel (Kata)</strong> — cama R$ 50, perto da praia.</p>
-                <p><strong>Bedrock Kata</strong> — boutique-hostel, casais.</p>
+                <p><strong><G>Lub d Phuket Patong</G></strong> — hostel design, piscina, bar ativo.</p>
+                <p><strong><G>Bodega Phuket Old Town</G></strong> — melhor pra cultura.</p>
+                <p><strong><G>Phuket Backpacker Hostel Kata</G></strong> — cama R$ 50, perto da praia.</p>
+                <p><strong><G>Bedrock Hostel Kata</G></strong> — boutique-hostel, casais.</p>
               </CardContent>
             </Card>
             <Card className="border-emerald-500/20">
               <CardHeader><CardTitle className="text-lg">Médio (R$ 200-500)</CardTitle></CardHeader>
               <CardContent className="text-sm space-y-2">
-                <p><strong>The Old Phuket (Karon)</strong> — piscina dupla, café incrível.</p>
-                <p><strong>Sugar Marina Surf (Kata)</strong> — pé na praia.</p>
-                <p><strong>Casa Blanca Boutique (Phuket Town)</strong> — sino-portuguesa.</p>
-                <p><strong>Aleenta Phuket (Layan)</strong> — adults only.</p>
+                <p><strong><G>The Old Phuket Karon Beach Resort</G></strong> — piscina dupla, café incrível.</p>
+                <p><strong><G>Sugar Marina Resort Surf Kata</G></strong> — pé na praia.</p>
+                <p><strong><G>Casa Blanca Boutique Hotel Phuket Town</G></strong> — sino-portuguesa.</p>
+                <p><strong><G>Aleenta Phuket Phang Nga Resort Layan</G></strong> — adults only.</p>
               </CardContent>
             </Card>
             <Card className="border-emerald-500/20">
               <CardHeader><CardTitle className="text-lg">Premium (R$ 700-3000+)</CardTitle></CardHeader>
               <CardContent className="text-sm space-y-2">
-                <p><strong>The Nai Harn</strong> — vista mítica, melhor sunset de Phuket.</p>
-                <p><strong>Banyan Tree Bang Tao</strong> — pool villa clássico.</p>
-                <p><strong>Trisara Phuket</strong> — top 3 da Tailândia.</p>
-                <p><strong>Keemala</strong> — vilas-ninho na floresta, lua de mel.</p>
+                <p><strong><G>The Nai Harn Phuket</G></strong> — vista mítica, melhor sunset de Phuket.</p>
+                <p><strong><G>Banyan Tree Phuket Bang Tao</G></strong> — pool villa clássico.</p>
+                <p><strong><G>Trisara Phuket</G></strong> — top 3 da Tailândia.</p>
+                <p><strong><G>Keemala Phuket</G></strong> — vilas-ninho na floresta, lua de mel.</p>
               </CardContent>
             </Card>
           </div>
