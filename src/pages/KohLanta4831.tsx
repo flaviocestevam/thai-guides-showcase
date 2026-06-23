@@ -3,7 +3,7 @@
 import {
   MapPin, AlertTriangle, CheckCircle2, XCircle, Bike, Ship, UtensilsCrossed,
   Compass, Wallet, ShieldCheck, Map as MapIcon, Sun, Waves, Sparkles, Home,
-  ArrowUpRight,
+  ArrowUpRight, CalendarDays, Route, Sunset, Building2,
 } from "lucide-react";
 import { PK_STYLES, Reveal, SectionTitle, TONE_CLASS, makeMapChip, type Tone } from "@/components/guides/premiumShell";
 
