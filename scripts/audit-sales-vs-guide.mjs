@@ -116,9 +116,9 @@ function auditOne(slug, sales, guidePath) {
   const haystack = norm(fs.readFileSync(abs, "utf8")).join(" ");
 
   const promises = [
-    ...sales.modules.map((m) => ({ kind: "module",  title: m.title })),
-    ...sales.features.map((f) => ({ kind: "feature", title: f.title })),
-    ...sales.bonuses.map((b) => ({ kind: "bonus",   title: b.title })),
+    ...sales.modules.map((t) => ({ kind: "module",  title: t })),
+    ...sales.features.map((t) => ({ kind: "feature", title: t })),
+    ...sales.bonuses.map((t) => ({ kind: "bonus",   title: t })),
   ];
 
   const missing = [];
@@ -139,7 +139,7 @@ const args = process.argv.slice(2);
 const strict = args.includes("--strict");
 const filter = args.find((a) => !a.startsWith("--"));
 
-const ilhas = await loadIlhas();
+const promisesBySlug = extractSalesPromises();
 
 const targets = Object.entries(GUIDE_MAP).filter(([slug]) => !filter || slug.includes(filter));
 
@@ -150,9 +150,9 @@ lines.push(" AUDITORIA VENDA × GUIA  —  " + new Date().toISOString());
 lines.push("================================================================");
 
 for (const [slug, guidePath] of targets) {
-  const sales = ilhas[slug];
+  const sales = promisesBySlug[slug];
   if (!sales) {
-    lines.push(`\n[${slug}]  ⚠ sales content não encontrado em ilhas.ts`);
+    lines.push(`\n[${slug}]  ⚠ promessas não extraídas de ilhas.ts`);
     totalGaps++;
     continue;
   }
