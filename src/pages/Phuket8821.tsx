@@ -519,8 +519,8 @@ const Phuket8821 = () => {
               <Card key={c.lugar} className="border-emerald-500/15">
                 <CardContent className="p-5">
                   <div className="flex justify-between items-start mb-1">
-                    <h3 className="font-display font-bold">{c.lugar}</h3>
-                    <Badge variant="outline" className="text-[10px]">{c.bairro}</Badge>
+                    <h3 className="font-display font-bold"><G q={`${c.lugar} ${c.bairro} Phuket`}>{c.lugar}</G></h3>
+                    <Badge variant="outline" className="text-[10px]"><G q={`${c.bairro} Phuket`}>{c.bairro}</G></Badge>
                   </div>
                   <p className="text-sm text-muted-foreground mb-2">{c.oque}</p>
                   <p className="text-sm text-emerald-300">{c.preco}</p>
