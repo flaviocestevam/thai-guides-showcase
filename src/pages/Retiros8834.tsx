@@ -31,9 +31,12 @@ type Retreat = {
   rating: number;
 };
 
-const r = (o: Omit<Retreat, "mapsUrl"> & { mapsQ?: string }): Retreat => ({
+const websiteSearch = (q: string) => `https://www.google.com/search?q=${encodeURIComponent(q + " official site Thailand")}`;
+
+const r = (o: Omit<Retreat, "mapsUrl" | "website"> & { mapsQ?: string; site?: string }): Retreat => ({
   ...o,
   mapsUrl: gmaps(o.mapsQ ?? `${o.name} ${o.city} Thailand`),
+  website: o.site ?? websiteSearch(o.name),
 });
 
 const RetreatCard = ({ x }: { x: Retreat }) => (
@@ -54,6 +57,7 @@ const RetreatCard = ({ x }: { x: Retreat }) => (
     </div>
   </Card>
 );
+
 
 
 const yoga: Retreat[] = [
