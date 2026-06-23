@@ -83,7 +83,7 @@ export const retiros: SalesContent = {
     { title: "Diário de retiro (PDF)", desc: "Template pra registrar a experiência diariamente.", value: "R$ 47" },
     { title: "Top 10 retiros de luxo (vale o preço)", desc: "Para quem quer combinar transformação com conforto premium.", value: "R$ 87" },
     { title: "Guia Vipassana 10 dias detalhado", desc: "O que esperar dia por dia, como sobreviver, como aproveitar.", value: "R$ 87" },
-    { title: "Lista de mestres recomendados", desc: "Professores reconhecidos por linhagem, idioma e abordagem.", value: "R$ 67" },
+    
     { title: "Roteiro pós-retiro", desc: "Como integrar a experiência ao voltar pra vida normal.", value: "R$ 57" },
   ],
   testimonials: [
