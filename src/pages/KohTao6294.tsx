@@ -1070,7 +1070,7 @@ const KohTao6294 = () => {
                   <tbody>
                     {VISI_PONTOS.map((v) => (
                       <tr key={v.ponto}>
-                        <td className="font-semibold">{v.ponto} {G(v.ponto + " Koh Tao")}</td>
+                        <td className="font-semibold"><G q={`${v.ponto} dive site Koh Tao`}>{v.ponto}</G></td>
                         <td>{v.prof}</td>
                         <td className="pk-gold">{v.melhor}</td>
                         <td>{v.evitar}</td>
@@ -1191,7 +1191,7 @@ const KohTao6294 = () => {
                 <Reveal key={s.lugar} i={i}>
                   <article className="pk-card h-full">
                     <p className="pk-kicker">Spa</p>
-                    <h3 className="pk-h3 mt-1">{s.lugar} {G(s.lugar + " Koh Tao")}</h3>
+                    <h3 className="pk-h3 mt-1"><G q={`${s.lugar} Koh Tao`}>{s.lugar}</G></h3>
                     <div className="pk-divider my-4" />
                     <p className="text-sm">{s.oque}</p>
                     <p className="text-sm pk-gold mt-2">{s.preco}</p>
@@ -1209,7 +1209,7 @@ const KohTao6294 = () => {
                 <Reveal key={v.lugar} i={i}>
                   <article className="pk-card h-full">
                     <p className="pk-kicker">Refúgio</p>
-                    <h3 className="pk-h3 mt-1">{v.lugar} {G(v.lugar + " Koh Tao")}</h3>
+                    <h3 className="pk-h3 mt-1"><G q={`${v.lugar} Koh Tao`}>{v.lugar}</G></h3>
                     <div className="pk-divider my-4" />
                     <p className="text-sm"><span className="pk-gold">Como chegar:</span> {v.como}</p>
                     <p className="text-sm mt-2">{v.oque}</p>
