@@ -1,4 +1,5 @@
 import { SEO } from "@/components/SEO";
+import { RelatedAdventureGuides } from "@/components/RelatedAdventureGuides";
 
 const Section = ({ chapter, title, id, children }: { chapter: string; title: string; id?: string; children: React.ReactNode }) => (
   <section id={id} className="py-16 px-6 scroll-mt-20">
@@ -323,6 +324,7 @@ const Aventureiros6712 = () => (
         <p>• Preço médio (30 dias, BR): R$ 950</p>
         <p>• Limite médico: US$ 100.000 · resgate: US$ 500.000</p>
         <p>• Pago em USD, atende em inglês, hospital cobra direto</p>
+        <p>→ <a href="https://www.worldnomads.com/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">worldnomads.com</a></p>
       </Card>
       <Card>
         <p><strong>SafetyWing Nomad Insurance</strong></p>
@@ -330,6 +332,7 @@ const Aventureiros6712 = () => (
         <p>• Preço: US$ 56/4 semanas (~R$ 290)</p>
         <p>• Limite médico: US$ 250.000</p>
         <p>• Bom pra nômade. Ruim pra aventura pesada.</p>
+        <p>→ <a href="https://safetywing.com/nomad-insurance" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">safetywing.com/nomad-insurance</a></p>
       </Card>
       <Card>
         <p><strong>Coris Adventure / Assist 365 Aventura (BR)</strong></p>
@@ -337,6 +340,7 @@ const Aventureiros6712 = () => (
         <p>• Preço: R$ 18–28/dia</p>
         <p>• Limite médico: US$ 60.000–150.000 · em português 24h</p>
         <p>• Melhor custo–benefício pra brasileiro com 2 semanas.</p>
+        <p>→ <a href="https://www.coris.com.br/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">coris.com.br</a> · <a href="https://www.assist365.com.br/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">assist365.com.br</a></p>
       </Card>
       <Card>
         <p><strong>⚠️ Atenção — recusas comuns:</strong></p>
@@ -465,6 +469,11 @@ const Aventureiros6712 = () => (
         <p>D1–2: Chegada Bangkok + Khao Yai trek · D3–4: Voo Chiang Mai + Flight of the Gibbon · D5–7: Mae Hong Son Loop de moto (Tony's Big Bikes) · D8: Tham Lod caverna (Cave Lodge) · D9–11: Khao Sok 3 dias · D12–13: Escalada Railay · D14: Skydive Phuket · D15: Voo.</p>
       </Card>
     </Section>
+
+    <RelatedAdventureGuides
+      title="Outros guias da Tailândia que combinam com o seu"
+      subtitle="Você já tem o Aventureiros. Estes são os guias-irmãos que mais fazem sentido pra fechar a viagem — cada um é independente e vendido à parte no nosso catálogo."
+    />
 
     <section className="py-16 px-6 text-center">
       <p className="text-muted-foreground">Boa aventura — e volta inteiro pra contar.</p>
