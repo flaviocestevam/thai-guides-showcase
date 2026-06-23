@@ -1057,6 +1057,221 @@ const KohTao6294 = () => {
             </div>
           </section>
 
+          {/* ============== EXPANSÃO PADRÃO KOOD/LIPE ============== */}
+
+          <section id="visi-pontos">
+            <SectionTitle icon={Waves} kicker="15 — Visibilidade granular" title="Visibilidade por ponto de mergulho × mês" />
+            <Reveal>
+              <div className="pk-table">
+                <table>
+                  <thead>
+                    <tr><th>Ponto</th><th>Profundidade</th><th>Melhor janela</th><th>Evite</th><th>Nota</th></tr>
+                  </thead>
+                  <tbody>
+                    {VISI_PONTOS.map((v) => (
+                      <tr key={v.ponto}>
+                        <td className="font-semibold">{v.ponto} {G(v.ponto + " Koh Tao")}</td>
+                        <td>{v.prof}</td>
+                        <td className="pk-gold">{v.melhor}</td>
+                        <td>{v.evitar}</td>
+                        <td className="text-sm text-[hsl(var(--pk-muted))]">{v.nota}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <p className="text-sm text-[hsl(var(--pk-muted))] mt-4">Visi geral da ilha por mês está na seção "Janela do mar". Esta tabela é o detalhe por ponto — útil pra fechar fun dive específico.</p>
+            </Reveal>
+          </section>
+
+          <section id="mapa-scooter">
+            <SectionTitle icon={Footprints} kicker="16 — Loop de scooter" title="Distância e tempo real entre pontos da ilha" />
+            <Reveal>
+              <div className="pk-table">
+                <table>
+                  <thead><tr><th>De</th><th>Para</th><th>Km</th><th>Tempo</th><th>Piso</th><th>Risco</th></tr></thead>
+                  <tbody>
+                    {MAPA_SCOOTER.map((m, i) => (
+                      <tr key={i}>
+                        <td>{m.de}</td>
+                        <td className="font-semibold">{m.para}</td>
+                        <td>{m.km}</td>
+                        <td className="pk-gold">{m.min}</td>
+                        <td className="text-sm">{m.piso}</td>
+                        <td className="text-sm text-[hsl(var(--pk-muted))]">{m.risco}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <p className="text-sm text-[hsl(var(--pk-muted))] mt-4">Tao é morro. Scooter 110cc sofre com 2 pessoas em subida — alugue 125cc+ se forem dois adultos. Sem PID, sem seguro — não importa o que disserem.</p>
+            </Reveal>
+          </section>
+
+          <section id="mes-perfil">
+            <SectionTitle icon={CalendarClock} kicker="17 — Quando vir" title="Mês ideal por perfil de viajante" />
+            <div className="grid md:grid-cols-2 gap-6">
+              {MES_PERFIL.map((p, i) => (
+                <Reveal key={p.perfil} i={i}>
+                  <article className="pk-card h-full">
+                    <p className="pk-kicker">Perfil</p>
+                    <h3 className="pk-h3 mt-1">{p.perfil}</h3>
+                    <div className="pk-divider my-4" />
+                    <p className="text-sm"><span className="pk-gold font-semibold">Mês:</span> {p.mes}</p>
+                    <p className="text-sm text-[hsl(var(--pk-muted))] mt-2">{p.porque}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="comparativo">
+            <SectionTitle icon={Scale} kicker="18 — Decisão" title="Koh Tao × Koh Phangan × Koh Samui" />
+            <Reveal>
+              <div className="pk-table">
+                <table>
+                  <thead><tr><th>Dimensão</th><th>Koh Tao</th><th>Koh Phangan</th><th>Koh Samui</th></tr></thead>
+                  <tbody>
+                    {COMPARATIVO_ILHAS.map((c) => (
+                      <tr key={c.dim}>
+                        <td className="font-semibold">{c.dim}</td>
+                        <td>{c.tao}</td>
+                        <td>{c.phangan}</td>
+                        <td>{c.samui}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <p className="text-sm text-[hsl(var(--pk-muted))] mt-4">Resumo: vai certificar = Tao. Vai festa + praia = Phangan. Vai conforto e voo direto = Samui. Quer os 3? Roteiro de 10 dias está acima.</p>
+            </Reveal>
+          </section>
+
+          <section id="liveaboard">
+            <SectionTitle icon={Anchor} kicker="19 — Além do day-trip" title="Liveaboard e night dives" />
+            <div className="grid md:grid-cols-3 gap-6">
+              {LIVEABOARD.map((l, i) => (
+                <Reveal key={l.tipo} i={i}>
+                  <article className="pk-card h-full">
+                    <p className="pk-kicker">{l.duracao}</p>
+                    <h3 className="pk-h3 mt-1">{l.tipo}</h3>
+                    <div className="pk-divider my-4" />
+                    <p className="text-sm"><span className="pk-gold">Quando:</span> {l.quando}</p>
+                    <p className="text-sm mt-1"><span className="pk-gold">Preço:</span> {l.preco}</p>
+                    <p className="text-sm mt-1"><span className="pk-gold">Inclui:</span> {l.inclui}</p>
+                    <p className="text-sm text-[hsl(var(--pk-muted))] mt-3">{l.obs}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="pesca">
+            <SectionTitle icon={Fish} kicker="20 — Cultura local" title="Pesca tradicional e lulada noturna" />
+            <div className="grid md:grid-cols-3 gap-6">
+              {PESCA.map((p, i) => (
+                <Reveal key={p.tipo} i={i}>
+                  <article className="pk-card h-full">
+                    <p className="pk-kicker">Modalidade</p>
+                    <h3 className="pk-h3 mt-1">{p.tipo}</h3>
+                    <div className="pk-divider my-4" />
+                    <p className="text-sm">{p.oque}</p>
+                    <p className="text-sm pk-gold mt-2">{p.preco}</p>
+                    <p className="text-sm text-[hsl(var(--pk-muted))] mt-2">{p.obs}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="spa">
+            <SectionTitle icon={Flower2} kicker="21 — Pós-mergulho" title="Spa e recuperação muscular" />
+            <div className="grid md:grid-cols-2 gap-6">
+              {SPA_TAO.map((s, i) => (
+                <Reveal key={s.lugar} i={i}>
+                  <article className="pk-card h-full">
+                    <p className="pk-kicker">Spa</p>
+                    <h3 className="pk-h3 mt-1">{s.lugar} {G(s.lugar + " Koh Tao")}</h3>
+                    <div className="pk-divider my-4" />
+                    <p className="text-sm">{s.oque}</p>
+                    <p className="text-sm pk-gold mt-2">{s.preco}</p>
+                    <p className="text-sm text-[hsl(var(--pk-muted))] mt-2"><span className="font-semibold">Melhor para:</span> {s.melhor}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="vilarejo">
+            <SectionTitle icon={Home} kicker="22 — Lado isolado" title="Tanote, Aow Leuk e Sai Nuan — o Tao remoto" />
+            <div className="grid md:grid-cols-3 gap-6">
+              {VILAREJO_TAO.map((v, i) => (
+                <Reveal key={v.lugar} i={i}>
+                  <article className="pk-card h-full">
+                    <p className="pk-kicker">Refúgio</p>
+                    <h3 className="pk-h3 mt-1">{v.lugar} {G(v.lugar + " Koh Tao")}</h3>
+                    <div className="pk-divider my-4" />
+                    <p className="text-sm"><span className="pk-gold">Como chegar:</span> {v.como}</p>
+                    <p className="text-sm mt-2">{v.oque}</p>
+                    <p className="text-sm pk-gold mt-2">{v.quanto}</p>
+                    <p className="text-sm text-[hsl(var(--pk-muted))] mt-2">{v.obs}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="familia">
+            <SectionTitle icon={Baby} kicker="23 — Crianças" title="Koh Tao com kids — o que rola e o que evitar" />
+            <Reveal>
+              <ul className="space-y-3">
+                {FAMILIA_TAO.map((f) => (
+                  <li key={f.item} className="pk-card">
+                    <p className="font-semibold pk-gold">{f.item}</p>
+                    <p className="text-sm text-[hsl(var(--pk-muted))] mt-2">{f.detalhe}</p>
+                  </li>
+                ))}
+              </ul>
+            </Reveal>
+          </section>
+
+          <section id="conservacao">
+            <SectionTitle icon={Leaf} kicker="24 — Devolva pra ilha" title="Save Koh Tao e voluntariado de mergulho" />
+            <div className="grid md:grid-cols-2 gap-6">
+              {CONSERVACAO_TAO.map((c, i) => (
+                <Reveal key={c.iniciativa} i={i}>
+                  <article className="pk-card h-full">
+                    <p className="pk-kicker">Iniciativa</p>
+                    <h3 className="pk-h3 mt-1">{c.iniciativa}</h3>
+                    <div className="pk-divider my-4" />
+                    <p className="text-sm">{c.oque}</p>
+                    <p className="text-sm pk-gold mt-2">{c.como}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="booking">
+            <SectionTitle icon={CalendarClock} kicker="25 — Antecedência" title="Quando reservar curso, ferry e hotel" />
+            <Reveal>
+              <div className="pk-table">
+                <table>
+                  <thead><tr><th>Período</th><th>Reserve com</th><th>Por quê</th></tr></thead>
+                  <tbody>
+                    {BOOKING_TAO.map((b) => (
+                      <tr key={b.quando}>
+                        <td className="font-semibold">{b.quando}</td>
+                        <td className="pk-gold">{b.reserva}</td>
+                        <td className="text-sm text-[hsl(var(--pk-muted))]">{b.porque}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </Reveal>
+          </section>
+
           <section className="pt-16 border-t border-[hsl(var(--pk-line))]">
             <p className="pk-kicker">Continue explorando</p>
             <h2 className="pk-h2 mt-2">Outras ilhas e guias</h2>
