@@ -128,8 +128,8 @@ const Retiros8834 = () => (
     <SEO
       title="Guia de Retiros na Tailândia — Conteúdo Completo"
       description="60 retiros avaliados, 12 por doação, Vipassana detalhado, preparação e roteiro pós-retiro."
-      noindex
     />
+
 
     {/* HERO */}
     <section className="py-20 px-6 bg-gradient-to-br from-teal-950 via-background to-emerald-950">
