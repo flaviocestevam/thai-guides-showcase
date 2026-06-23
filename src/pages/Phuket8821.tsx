@@ -577,7 +577,7 @@ const Phuket8821 = () => {
             <Card className="border-red-500/30 bg-red-500/5">
               <CardHeader><CardTitle className="text-lg text-red-300">EVITAR</CardTitle></CardHeader>
               <CardContent className="text-sm">
-                <ul className="space-y-2">{BLACKLIST.map((b, i) => <li key={i} className="flex gap-2"><XCircle className="w-4 h-4 text-red-400 shrink-0 mt-0.5" /> {b}</li>)}</ul>
+                <ul className="space-y-2">{BLACKLIST.map((b, i) => <li key={i} className="flex gap-2"><XCircle className="w-4 h-4 text-red-400 shrink-0 mt-0.5" /> <G q={b + " Phuket tour"}>{b}</G></li>)}</ul>
               </CardContent>
             </Card>
             <Card className="border-emerald-500/30 bg-emerald-500/5">
