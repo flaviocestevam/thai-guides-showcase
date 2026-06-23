@@ -726,7 +726,7 @@ const lanta = make(ilhasMeta[6], {
     { title: "Deixou de ver os sunset bars do sul", desc: "Kantiang Bay e Bamboo Bay têm os 3 melhores sunset bars de Lanta. Quem fica no norte nunca chega lá. Perde a melhor parte da ilha." },
   ],
   features: [
-    { title: "9 praias decodificadas", desc: "Klong Dao, Phra Ae, Khlong Khong, Klong Nin, Kantiang, Bamboo Bay — qual é cada uma e pra quem." },
+    { title: "9 praias decodificadas", desc: "Klong Dao, Phra Ae, Klong Khong, Klong Nin, Kantiang, Bamboo Bay — qual é cada uma e pra quem." },
     { title: "Janela climática mês a mês", desc: "Quando ir, quando não ir, o que fecha em cada mês. Pra não pegar ilha vazia." },
     { title: "Scooter loop completo", desc: "Rota de 1 dia rodando Lanta inteira — sunset bars, mirantes, Old Town, praias secretas." },
   ],
