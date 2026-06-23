@@ -502,7 +502,7 @@ const tao = make(ilhasMeta[4], {
     { title: "Ignorou Koh Nang Yuan ao lado", desc: "A ilha-coleção de 3 ilhotas ligadas por banco de areia. Day-trip de 30 min. Quem perde isso perde a foto que mais viraliza de Koh Tao." },
   ],
   features: [
-    { title: "12 escolas de mergulho filtradas", desc: "Critério objetivo (instrutor/aluno, equipamento, segurança, preço) — as 5 que valem, as 7 que não, e por quê." },
+    { title: "10 escolas de mergulho aprovadas", desc: "Critério objetivo (instrutor/aluno, equipamento, segurança, preço) — com Google Maps, site e Instagram de cada uma." },
     { title: "Open Water ao Divemaster", desc: "Roteiro real: 4 dias / 11 dias / 6 meses. Quanto custa, o que esperar, onde dormir grátis durante o Divemaster." },
     { title: "Onde dormir por R$ 50 a R$ 400", desc: "12 hostels e hotéis testados nas 3 baías principais — pra cada perfil de viajante." },
   ],
