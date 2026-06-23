@@ -79,6 +79,8 @@ const cities: CityBlock[] = [
       h("Bangkok", { name: "Suk11 Hostel", area: "Sukhumvit Soi 11", rating: 9.0, price: "฿350–฿900", profiles: ["Mochileiro social"], highlight: "Casa de madeira em jardim escondido entre arranha-céus", tip: "Vibe oásis no caos de Sukhumvit. Reserve com antecedência." }),
       h("Bangkok", { name: "Born Free Hostel", area: "Phra Nakhon (perto do Wat Saket)", rating: 9.4, price: "฿320–฿850", profiles: ["Mochileiro social", "Solo feminino"], highlight: "Pequeno, familiar, café da manhã thai feito na hora", tip: "10min a pé do Golden Mount ao pôr do sol." }),
       h("Bangkok", { name: "Glur Bangkok Hostel", area: "Sukhumvit Soi 38", rating: 9.2, price: "฿380–฿950", profiles: ["Mochileiro social", "Casal"], highlight: "Rua famosa de street food na porta", tip: "Thonglor BTS a 8min — perto da vida noturna fina." }),
+      h("Bangkok", { name: "Revolution Hostel Bangkok", area: "Khao San (Soi Rambuttri)", rating: 9.1, price: "฿320–฿850", profiles: ["Mochileiro social", "Festa"], highlight: "Khao San moderno com cápsula confortável", tip: "Rambuttri é a Khao San silenciosa — só restaurantes e bares calmos." }),
+      h("Bangkok", { name: "Bed Station Hostel Ratchathewi", area: "Ratchathewi (BTS)", rating: 9.3, price: "฿420–฿1.100", profiles: ["Nômade digital", "Casal"], highlight: "BTS na porta + área coworking interna", tip: "Boa base pra quem vai trabalhar e visitar Siam de pé." }),
     ],
   },
   {
@@ -127,6 +129,7 @@ const cities: CityBlock[] = [
       h("Phuket", { name: "Lay Day Hostel", area: "Kata Beach", rating: 9.3, price: "฿400–฿1.100", profiles: ["Mochileiro social", "Casal"], highlight: "Kata sem o caos de Patong, surf na porta", tip: "Praia bem mais limpa e família que Patong." }),
       h("Phuket", { name: "Slumber Party Hostel Phuket", area: "Bangla Rd, Patong", rating: 9.0, price: "฿420–฿1.000", profiles: ["Festa"], highlight: "Pub crawls noturnos inclusos", tip: "Você vem aqui pra Bangla, não pra dormir." }),
       h("Phuket", { name: "Beds Patong", area: "Patong, fora da Bangla", rating: 9.2, price: "฿450–฿1.100", profiles: ["Mochileiro social", "Casal"], highlight: "Patong com decibéis humanos", tip: "10min a pé da praia, 10min de Bangla, equilíbrio bom." }),
+      h("Phuket", { name: "RarinJinda Wellness Hostel", area: "Rawai", rating: 9.3, price: "฿400–฿1.000", profiles: ["Casal", "Silencioso"], highlight: "Sul da ilha, longe da farra, perto de praias locais", tip: "Boa base pra mergulho com saída de Chalong." }),
     ],
   },
   {
@@ -158,6 +161,7 @@ const cities: CityBlock[] = [
       h("Koh Phangan", { name: "Bodega Phangan", area: "Haad Rin", rating: 8.9, price: "฿350–฿950", profiles: ["Festa"], highlight: "Pé na areia de Haad Rin, palco DJ", tip: "Mochileiro festeiro puro. Não é hostel pra dormir." }),
       h("Koh Phangan", { name: "Loyfa Bungalows", area: "Sri Thanu", rating: 9.4, price: "฿450–฿1.200", profiles: ["Casal", "Silencioso"], highlight: "Lado yoga da ilha, pôr do sol épico", tip: "Caminhada pra Secret Beach pela trilha (15min)." }),
       h("Koh Phangan", { name: "B52 Beach Resort", area: "Baan Tai", rating: 9.0, price: "฿380–฿1.000", profiles: ["Mochileiro social", "Casal"], highlight: "Bangalôs pé na areia + bar de praia", tip: "Boa base entre Thong Sala e Haad Rin." }),
+      h("Koh Phangan", { name: "Eden Garden Hostel", area: "Chaloklum (norte)", rating: 9.3, price: "฿400–฿1.100", profiles: ["Casal", "Silencioso"], highlight: "Vila de pescadores tranquila, longe da farra", tip: "Lado familiar de Phangan. Praia particular calma." }),
     ],
   },
   {
@@ -173,6 +177,7 @@ const cities: CityBlock[] = [
       h("Koh Tao", { name: "Bunker Hostel Koh Tao", area: "Sairee", rating: 9.3, price: "฿400–฿1.000", profiles: ["Casal", "Mochileiro social"], highlight: "Cápsula moderna + restaurante elogiado", tip: "Privativos têm padrão hotel boutique." }),
       h("Koh Tao", { name: "Crios Beach Resort", area: "Sairee Beach", rating: 9.2, price: "฿450–฿1.300", profiles: ["Casal", "Mochileiro social"], highlight: "Pé na areia + escola de mergulho associada", tip: "Combo Open Water + 5 noites com desconto." }),
       h("Koh Tao", { name: "Banana Rock Bar Hostel", area: "Chalok Baan Kao", rating: 9.0, price: "฿380–฿950", profiles: ["Mochileiro social", "Casal"], highlight: "Bar de rocha à beira-mar com pôr do sol", tip: "Lado calmo, longe da farra de Sairee." }),
+      h("Koh Tao", { name: "Koh Tao Central Hostel", area: "Mae Haad (porto)", rating: 9.1, price: "฿350–฿900", profiles: ["Mochileiro social", "Solo feminino"], highlight: "Base prática chegando de balsa", tip: "1ª noite ideal pra organizar curso de mergulho." }),
     ],
   },
   {
@@ -187,6 +192,7 @@ const cities: CityBlock[] = [
       h("Koh Samui", { name: "Hotel Coco", area: "Bophut Fisherman's Village", rating: 9.4, price: "฿500–฿1.500", profiles: ["Casal", "Solo feminino"], highlight: "Boutique no coração da vila mais charmosa", tip: "Walking Street toda sexta na porta." }),
       h("Koh Samui", { name: "Bay Inn Hostel", area: "Chaweng Lake", rating: 9.0, price: "฿320–฿850", profiles: ["Mochileiro social"], highlight: "5min a pé de Chaweng + piscina", tip: "Centro de festa de Samui sem pagar caro de pé na areia." }),
       h("Koh Samui", { name: "Maenam Beach Bungalows", area: "Maenam", rating: 9.3, price: "฿450–฿1.200", profiles: ["Casal", "Silencioso"], highlight: "Norte tranquilo, balsa pra Phangan a 5min", tip: "Ideal pra combinar Samui + Full Moon em Phangan." }),
+      h("Koh Samui", { name: "Pinky Bungalows", area: "Bophut", rating: 9.2, price: "฿400–฿1.100", profiles: ["Casal", "Mochileiro social"], highlight: "Bangalôs pé na areia a 5min de Fisherman's Village", tip: "Privativo charme barato — vale 3 noites." }),
     ],
   },
   {
