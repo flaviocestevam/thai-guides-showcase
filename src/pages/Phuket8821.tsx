@@ -466,9 +466,9 @@ const Phuket8821 = () => {
             <Card className="border-emerald-500/30 bg-emerald-500/5">
               <CardHeader><CardTitle className="text-lg">Locadoras testadas</CardTitle></CardHeader>
               <CardContent className="text-sm space-y-2">
-                <p><strong>Cat Motors (Kata, Patong)</strong> — top da Tailândia, contrato em inglês, fotos digitais, sem passaporte.</p>
-                <p><strong>Mr Mechanic (Kata)</strong> — local, honesto, manuten. boa.</p>
-                <p><strong>BB Bikes (Phuket Town)</strong> — para long-stay.</p>
+                <p><strong><G>Cat Motors Phuket</G></strong> (Kata, Patong) — top da Tailândia, contrato em inglês, fotos digitais, sem passaporte.</p>
+                <p><strong><G>Mr Mechanic Kata Phuket</G></strong> — local, honesto, manuten. boa.</p>
+                <p><strong><G>BB Bikes Phuket Town</G></strong> — para long-stay.</p>
                 <p>Diária: 200-300 baht (Honda Click 125). Mensal: 3.500-4.500.</p>
               </CardContent>
             </Card>
