@@ -547,6 +547,28 @@ const KohKood7841 = () => {
             </Reveal>
           </section>
 
+          <section id="booking-timeline">
+            <SectionTitle icon={ClipboardList} kicker="05 — Reserva" title="Quando reservar — timeline por janela" />
+            <Reveal>
+              <div className="pk-card p-0 overflow-hidden">
+                <div className="overflow-x-auto">
+                  <table className="pk-table">
+                    <thead><tr><th>Quando</th><th>Antecedência</th><th>Motivo</th></tr></thead>
+                    <tbody>
+                      {BOOKING_TIMELINE.map((b, i) => (
+                        <tr key={i}>
+                          <td className="font-medium">{b.quando}</td>
+                          <td className="pk-gold-soft font-medium whitespace-nowrap">{b.antecedencia}</td>
+                          <td className="text-sm">{b.motivo}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </Reveal>
+          </section>
+
           <section id="trat">
             <SectionTitle icon={Hotel} kicker="05 — Plano B" title="Trat pit-stop — se perdeu o voo" />
             <Reveal>
