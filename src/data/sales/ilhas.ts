@@ -662,7 +662,7 @@ const chang = make(ilhasMeta[5], {
   ],
   testimonials: [
     { name: "Daniel Krause", city: "Curitiba, PR", text: "Ia reservar White Sand pensando que era \"selvagem\". Mudei pra Lonely Beach pelo guia. Bangalô de R$ 180 a diária pé na areia, bar reggae à noite. Foi a melhor parte da Tailândia." },
-    { name: "Ana Carolina Brito", city: "Recife, PE", text: "Fui no Following Giants pelo guia. Observei elefante comendo, andando livre, sem corrente, sem banho. Chorei. Depois descobri que tinha quase reservado um dos 4 \"santuários\" falsos que o guia denuncia." },
+    { name: "Ana Carolina Brito", city: "Recife, PE", text: "Fui no Ban Kwan Chang pelo guia. Observei o elefante comendo, andando livre na floresta, sem corrente, sem banho, sem foto em cima. Chorei. Depois descobri que tinha quase reservado um dos 'santuários' falsos que o guia denuncia." },
     { name: "Marcos e Renata Lima", city: "Belo Horizonte, MG", text: "Família com 2 crianças (6 e 10). Klong Prao foi perfeita: mar raso, sem ondas fortes, restaurante família. O guia tinha avisado: \"NÃO White Sand com criança\". Tinha razão." },
     { name: "Carolina Ferraz", city: "São Paulo, SP", text: "Fiz Bang Bao + Long Beach no roteiro do sul. Vi 4 pessoas no pôr do sol. QUATRO. Em fevereiro, alta temporada. Ninguém vai porque ninguém sabe. Eu fui." },
     { name: "Henrique Mota", city: "Porto Alegre, RS", text: "Cheguei em Laem Ngop 17h sem ferry. O guia tinha tabela do último horário por mês — eu não respeitei. Dormi 200 baht em pousada do porto. Erro meu, não do guia. Da próxima vou respeitar." },
