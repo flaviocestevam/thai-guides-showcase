@@ -118,6 +118,7 @@ const App = () => (
 
           {/* ===== Categoria Ilhas ===== */}
           <Route path="/ilhas" element={<Ilhas />} />
+          <Route path="/phuket8821" element={<Phuket8821 />} />
           {ilhasMeta.map((ilha) => (
             <Route
               key={ilha.slug}
