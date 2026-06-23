@@ -110,6 +110,8 @@ const categories: Cat[] = [
       op({ name: "Smiley Bungalows", city: "Khao Sok village", activity: "Trek dia inteiro com guia local", level: "Iniciante", risk: "Baixo", season: "Ano todo", price: "฿800–฿1.500 por dia", cert: "Guias locais reconhecidos pelo parque", why: "Base barata e honesta. Bom pra quem quer trek de 1 dia sem pacote fechado." }),
       op({ name: "Greenleaf Tours", city: "Khao Yai NP", activity: "Trek 1–2 dias + watch tower noturno", level: "Iniciante", risk: "Baixo", season: "Nov–Fev", price: "1 dia: ฿1.500 / 2 dias: ฿3.500", cert: "Khao Yai NP licensed", why: "Operadora mais antiga de Khao Yai. Chance real de ver elefante selvagem e gibão." }),
       op({ name: "Chiang Mai Trekking with Piroon", city: "Chiang Mai (Mae Wang/Doi Inthanon)", activity: "Trek 2–3 dias em aldeias Karen", level: "Intermediário", risk: "Baixo", season: "Out–Fev", price: "2 dias 1 noite: ฿2.800", cert: "TAT registered", why: "Sem turismo de aldeia exploratório — Piroon paga as famílias direto e dorme com elas." }),
+      op({ name: "Pooh Eco Trekking", city: "Chiang Mai (Mae Taeng)", activity: "Trek 3 dias com pernoite em aldeia Lahu", level: "Intermediário", risk: "Baixo", season: "Out–Mar", price: "3 dias: ฿3.500", cert: "TAT + parceria comunitária", why: "Trek mais longe da rota turística. Banho de cachoeira, bambu rafting, fogueira com a aldeia." }),
+      op({ name: "Tham Wua Forest Trek", city: "Mae Hong Son", activity: "Trek 4 dias floresta de teca + cavernas", level: "Avançado", risk: "Médio", season: "Nov–Fev", price: "4 dias: ฿6.500", cert: "Guias locais Shan", why: "Trek mais remoto que existe — você não vê outro turista por 3 dias. Para quem quer selva de verdade." }),
     ],
   },
   {
