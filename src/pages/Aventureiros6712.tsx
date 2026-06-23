@@ -72,6 +72,8 @@ const categories: Cat[] = [
       op({ name: "Basecamp Tonsai", city: "Tonsai (Krabi)", activity: "Escalada multi-pitch + DWS", level: "Intermediário", risk: "Médio", season: "Nov–Abr", price: "฿1.200 meio-dia / ฿2.000 dia / DWS ฿1.500", cert: "Guias com cert. internacional", why: "Acesso só por barco — vibe escalador raiz. Melhor pra quem já sabe segurar." }),
       op({ name: "King Climbers", city: "Railay East (Krabi)", activity: "Escalada + cursos 3 dias", level: "Iniciante", risk: "Médio", season: "Nov–Abr", price: "Curso 3 dias: ฿6.000", cert: "Operadora mais antiga de Railay (1990s)", why: "Melhor curso pra quem nunca escalou. Material didático em inglês." }),
       op({ name: "Spider Monkey Climbing", city: "Chiang Mai (Crazy Horse Buttress)", activity: "Escalada esportiva", level: "Iniciante", risk: "Médio", season: "Out–Mar", price: "฿1.500 dia inteiro c/ transporte", cert: "UIAA", why: "Alternativa ao calor de Krabi. Crazy Horse tem 200+ vias em calcário." }),
+      op({ name: "Chiang Mai Rock Climbing Adventures (CMRCA)", city: "Chiang Mai", activity: "Escalada + cursos AMGA + canyoning", level: "Iniciante", risk: "Médio", season: "Out–Mar", price: "Dia inteiro: ฿2.200 / curso 3 dias: ฿7.500", cert: "AMGA-trained, sustainable bolting", why: "Referência ética da Tailândia — financia recolocação de grampos. Único com curso AMGA." }),
+      op({ name: "Hot Rock Climbing School", city: "Railay West (Krabi)", activity: "Escalada esportiva + cursos lead", level: "Intermediário", risk: "Médio", season: "Nov–Abr", price: "Curso lead 2 dias: ฿5.000", cert: "UIAA + local guides 10+ anos", why: "Escola pequena, atendimento personalizado. Melhor pra quem já tem Top Rope e quer evoluir pra lead." }),
     ],
   },
   {
