@@ -21,6 +21,7 @@ type Retreat = {
   city: string;
   address: string;
   mapsUrl: string;
+  website: string;
   type: string;
   level: "Iniciante" | "Intermediário" | "Avançado" | "Todos";
   duration: string;
@@ -47,9 +48,13 @@ const RetreatCard = ({ x }: { x: Retreat }) => (
     <p className="text-sm">💰 <strong>Preço:</strong> {x.price}</p>
     <p className="text-sm">🗣️ <strong>Idioma:</strong> {x.language}</p>
     <p className="text-sm italic">💡 {x.tip}</p>
-    <a href={x.mapsUrl} target="_blank" rel="noopener noreferrer" className="inline-block text-sm text-primary hover:underline">→ Abrir no Google Maps</a>
+    <div className="flex flex-wrap gap-3 pt-1">
+      <a href={x.mapsUrl} target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline">→ Google Maps</a>
+      <a href={x.website} target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline">→ Site oficial</a>
+    </div>
   </Card>
 );
+
 
 const yoga: Retreat[] = [
   r({ name: "Agama Yoga", city: "Koh Phangan", address: "Sri Thanu, oeste da ilha", type: "Tantra yoga, hatha, meditação", level: "Todos", duration: "1 semana a 1 mês", price: "฿18.000–฿55.000 (R$ 2.600–R$ 8.000)", language: "Inglês (tradução pt-br sob demanda)", tip: "Maior escola tantra do mundo. Vá com mente aberta — abordagem inclui sexualidade sagrada.", rating: 9 }),
