@@ -858,6 +858,20 @@ const KohKood7841 = () => {
             </div>
           </section>
 
+          <section id="familia">
+            <SectionTitle icon={Baby} kicker="20 — Família" title="Kood com criança — o que muda" />
+            <div className="grid md:grid-cols-2 gap-5">
+              {FAMILIA.map((x, i) => (
+                <Reveal key={x.titulo} i={i}>
+                  <article className="pk-card pk-card-tight h-full">
+                    <p className="pk-kicker">{x.titulo}</p>
+                    <p className="text-sm mt-2 text-[hsl(var(--pk-muted))]">{x.texto}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
           <section id="combinar">
             <SectionTitle icon={Ship} kicker="14 — Combos" title="Combinar com outras ilhas / países" />
             <div className="space-y-5">
