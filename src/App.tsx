@@ -43,6 +43,7 @@ import Reveillon67729 from "./pages/Reveillon67729.tsx";
 import TopHostels from "./pages/TopHostels.tsx";
 import TopHostels7128 from "./pages/TopHostels7128.tsx";
 import Aventureiros from "./pages/Aventureiros.tsx";
+import Aventureiros6712 from "./pages/Aventureiros6712.tsx";
 import BeachClubs from "./pages/BeachClubs.tsx";
 import BeachClubs8821 from "./pages/BeachClubs8821.tsx";
 import Pets from "./pages/Pets.tsx";
