@@ -778,6 +778,7 @@ const SalesPage = ({ c, extraSection }: { c: SalesContent; extraSection?: React.
         </div>
       </section>
 
+      {extraSection}
       <InternalLinksSection currentPath={`/${c.slug}`} />
       <BackToHomeFooter />
     </main>
