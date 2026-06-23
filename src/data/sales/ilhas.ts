@@ -563,6 +563,12 @@ const tao = make(ilhasMeta[4], {
     { title: "Onde dormir por baía", desc: "Sairee, Mae Haad, Chalok, Tanote, Aow Leuk, Jansom.", bullets: ["Hostels em Sairee", "Boutique em Tanote", "Bangalô em Chalok", "Pool villa em Jansom", "Pacote escola + acomodação"] },
     { title: "Além do mergulho", desc: "Snorkel, viewpoints, Koh Nang Yuan, comida.", bullets: ["Koh Nang Yuan em 30 min", "John-Suwan ao nascer do sol 5h45", "Snorkel sem mergulho", "10 restaurantes testados", "Yoga e wellness"] },
     { title: "Logística e bolso", desc: "Quando ir, como chegar, quanto custa cada coisa.", bullets: ["Tabela de 9 rotas de ferry", "Janela boa (jan-mai) × ruim (out-nov)", "SIM, eSIM e Wi-Fi por região", "ATM, câmbio e cartão sem dor", "Orçamento real em real por dia"] },
+    { title: "Visibilidade granular por dive site", desc: "Tabela mês a mês de Chumphon, Sail Rock, Southwest, Sattakut e mais.", bullets: ["Pontos avançados × iniciante", "Janela de whale shark Fev/Set", "Night dive White Rock", "Sattakut wreck Jan-Mai", "Quando cancelar o dive"] },
+    { title: "Loop scooter e ilha remota", desc: "Mapa completo da ilha com tempo, km e risco — Tanote, Aow Leuk, Sai Nuan.", bullets: ["7 trechos com km/min", "Subidas que matam 110cc", "Onde dormir longe da festa", "Trilha de Sai Nuan", "Bangalô em Tanote"] },
+    { title: "Mês × perfil e comparativo de ilhas", desc: "Quando vir conforme seu perfil + Tao × Phangan × Samui em 7 dimensões.", bullets: ["Open Water iniciante", "Caçador de whale shark", "Festa Full Moon", "Família com kids", "Roteiro combinando 3 ilhas"] },
+    { title: "Liveaboard, pesca e wellness", desc: "Sail Rock noturno, lulada com pescador, spa pós-dive.", bullets: ["Day-trip 3 dives", "Squid fishing tradicional", "Big game charter", "Jamahkiri spa", "Healing Hands Sairee"] },
+    { title: "Família e conservação", desc: "Koh Tao com criança + Save Koh Tao Coral Nursery.", bullets: ["Bubblemaker PADI 8+", "Snorkel Shark Bay", "Coral planting voluntário", "Black tip shark census", "Beach clean-up mensal"] },
+    { title: "Timeline de reserva", desc: "Quanto antes reservar pra cada época do ano.", bullets: ["Réveillon: 4 meses", "Whale shark season: 6-8 semanas", "Alta europeia: 4 semanas", "Baixa: 1 semana", "Nov: véspera"] },
   ],
   bonuses: [
     { title: "Mapa Google interativo com lista pronta", desc: "Cada local com chip 📍 Mapa + tutorial em 3 passos pra salvar offline no celular.", value: "R$ 87" },
@@ -571,6 +577,10 @@ const tao = make(ilhasMeta[4], {
     { title: "Lista de instrutores brasileiros", desc: "6 brasileiros que moram em Koh Tao e dão aula em PT — escola e perfil.", value: "R$ 47" },
     { title: "Checklist + Glossário PADI", desc: "Seguro DAN, regra das 18h e 12 termos do briefing em português.", value: "R$ 37" },
     { title: "Tabela de ferries + erros caros", desc: "9 rotas com horários e os 8 erros que custaram caro de verdade (em R$).", value: "R$ 47" },
+    { title: "Tabela de visibilidade por dive site", desc: "Chumphon, Sail Rock, Southwest, Sattakut, Twins, White Rock × melhor mês.", value: "R$ 77" },
+    { title: "Loop scooter com km/min/risco", desc: "7 trechos da ilha com tempo real e onde 110cc não aguenta dois.", value: "R$ 47" },
+    { title: "Comparativo Tao × Phangan × Samui", desc: "Tabela de 7 dimensões pra decidir qual ilha do Golfo combina com sua viagem.", value: "R$ 57" },
+    { title: "Timeline de reserva ano todo", desc: "Quando travar curso, ferry e hotel pra cada época — sem pagar overprice nem ficar sem vaga.", value: "R$ 37" },
   ],
   testimonials: [
     { name: "Rafael Bittencourt", city: "São Paulo, SP", text: "Tinha pago R$ 1.890 num pacote Open Water online. Cancelei e fiz pelo guia: mesma escola PADI, mesma certificação, R$ 620 no pier. Sobrou R$ 1.270 pra 2 mergulhos avançados em Sail Rock." },
