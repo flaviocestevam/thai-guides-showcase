@@ -60,24 +60,17 @@ const MERGULHO = [
   { ponto: "Shark Island", nivel: "Advanced", oque: "Correntes, tubarões-de-recife, grandes cardumes." },
 ];
 
-const ESCOLAS = [
-  { nome: "Big Blue Diving", oque: "Maior e mais social. Open Water + hospedagem em pacote." },
-  { nome: "Crystal Dive", oque: "5★ PADI Career Development. Inglês cristalino para iniciante." },
-  { nome: "Master Divers", oque: "Boutique, turmas pequenas, ótima para tímido." },
-  { nome: "Roctopus Dive", oque: "Vibe relax, instrutores experientes." },
-  { nome: "New Heaven Reef Conservation", oque: "Ecoconsciente, conservação de coral + mergulho." },
-  { nome: "Ban's Diving Resort", oque: "Grande, eficiente, resort próprio em Sairee." },
-  { nome: "Davy Jones' Locker", oque: "Inglês claro, turma média, bom para Advanced." },
-];
-
-const ESCOLAS_EVITAR = [
-  { nome: "Escola sem nome no banner do pier", motivo: "Quem mais investe em marketing de rua tem instrutor com 60+ alunos/mês — briefing apressado." },
-  { nome: "Pacote 'all-in' de revendedor online", motivo: "R$ 1.800 por algo que custa R$ 600 no pier. Mesma escola, mesma certificação." },
-  { nome: "Curso com promessa de '2 dias Open Water'", motivo: "PADI exige mínimo 3 dias com pool + 4 mergulhos. Atalho = certificação fragilizada." },
-  { nome: "Escola com regulador sem revisão visível", motivo: "Peça o card de manutenção. Se hesitarem, mude de escola — risco real." },
-  { nome: "Operadores sem placa PADI/SSI na fachada", motivo: "Sem afiliação rastreável = sem seguro internacional em caso de acidente." },
-  { nome: "Curso 'fechado' com 8+ alunos por instrutor", motivo: "Ratio aceitável é até 4:1. Acima disso, briefing genérico e sem atenção individual." },
-  { nome: "Aluguel de cilindro 'avulso' sem briefing", motivo: "Mergulho recreativo sem dive leader = ilegal e fora do seguro." },
+const ESCOLAS: { nome: string; oque: string; site?: string; ig?: string }[] = [
+  { nome: "Big Blue Diving", oque: "Maior e mais social. Open Water + hospedagem em pacote.", site: "https://www.bigbluediving.com", ig: "https://instagram.com/bigbluediving" },
+  { nome: "Crystal Dive", oque: "5★ PADI Career Development. Inglês cristalino para iniciante.", site: "https://www.crystaldive.com", ig: "https://instagram.com/crystaldivekohtao" },
+  { nome: "Master Divers", oque: "Boutique, turmas pequenas, ótima para tímido.", site: "https://www.master-divers.com", ig: "https://instagram.com/masterdivers" },
+  { nome: "Roctopus Dive", oque: "Vibe relax, instrutores experientes.", site: "https://www.roctopusdive.com", ig: "https://instagram.com/roctopusdive" },
+  { nome: "New Heaven Reef Conservation", oque: "Ecoconsciente, conservação de coral + mergulho.", site: "https://www.newheavendiveschool.com", ig: "https://instagram.com/newheavenreefconservation" },
+  { nome: "Ban's Diving Resort", oque: "Grande, eficiente, resort próprio em Sairee.", site: "https://www.bansdivingresort.com", ig: "https://instagram.com/bansdivingresort" },
+  { nome: "Davy Jones' Locker", oque: "Inglês claro, turma média, bom para Advanced.", site: "https://www.davyjoneslockerkohtao.com", ig: "https://instagram.com/davyjoneslockerkohtao" },
+  { nome: "Sairee Cottage Diving", oque: "Família, turmas reduzidas, ótimo para iniciante ansioso.", site: "https://www.saireecottagediving.com", ig: "https://instagram.com/saireecottagediving" },
+  { nome: "Phoenix Divers", oque: "Boutique em Sairee, vibe acolhedora, foco em Advanced/Rescue.", site: "https://www.phoenix-divers.com", ig: "https://instagram.com/phoenixdiverskohtao" },
+  { nome: "Black Turtle Dive", oque: "Pequena, instrutor sênior por aluno, ideal para perfeccionista.", site: "https://www.blackturtledive.com", ig: "https://instagram.com/blackturtledive" },
 ];
 
 const INSTRUTORES_BR = [
@@ -351,6 +344,10 @@ const KohTao6294 = () => {
                     <article className="pk-card pk-card-tight pk-tone-ok h-full">
                       <h4 className="pk-h4"><G q={`${e.nome} Koh Tao`}>{e.nome}</G></h4>
                       <p className="text-sm text-[hsl(var(--pk-muted))] mt-2">{e.oque}</p>
+                      <div className="mt-3 flex flex-wrap gap-2 text-xs">
+                        {e.site && <a href={e.site} target="_blank" rel="noreferrer" className="pk-tag-sm inline-flex items-center gap-1">site <ArrowUpRight className="w-3 h-3" /></a>}
+                        {e.ig && <a href={e.ig} target="_blank" rel="noreferrer" className="pk-tag-sm inline-flex items-center gap-1">instagram <ArrowUpRight className="w-3 h-3" /></a>}
+                      </div>
                     </article>
                   </Reveal>
                 ))}
@@ -422,21 +419,8 @@ const KohTao6294 = () => {
                 </article>
               </Reveal>
             </div>
-
-            <Reveal>
-              <div className="mt-8">
-                <p className="pk-kicker mb-4">Escolas para evitar — e o porquê</p>
-                <div className="grid md:grid-cols-2 gap-4">
-                  {ESCOLAS_EVITAR.map((e) => (
-                    <article key={e.nome} className={`pk-card pk-card-tight ${TONE_CLASS.alert} h-full`}>
-                      <h4 className="pk-h4 flex items-start gap-2"><XCircle className="w-4 h-4 mt-1 shrink-0" /> {e.nome}</h4>
-                      <p className="text-sm text-[hsl(var(--pk-muted))] mt-2">{e.motivo}</p>
-                    </article>
-                  ))}
-                </div>
-              </div>
-            </Reveal>
           </section>
+
 
           <section id="clima">
             <SectionTitle icon={Sun} kicker="06 — Janela do mar" title="Visibilidade mês a mês" />
