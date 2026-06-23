@@ -7,7 +7,8 @@ Página de vendas vende — nunca entrega o conteúdo do guia. Listar capítulos
 Rotas `/guiatrilhasthai44`, `/muaythai5645`, `/beachclubs8821`, `/cursosmassagem3367`, `/songkran9482`, `/cafescoworkings7391`, `/voluntariado4827`, `/clubesstrip6644`, `/festas7733`, `/gogobars8855`, `/pets9922`, `/criancas7811`, `/casasmassagem5582`, `/retiros8834`, `/tophostels7128`, `/aventureiros6712` e `/phuket8821` são os GUIAS pagos — nunca linkar/expor em catálogos/sitemap, mas pode atualizar conteúdo quando o usuário pedir explicitamente.
 Cronômetro promocional = **15 minutos (MM:SS)** em todas as páginas de vendas. Nunca usar 24h nem mostrar bloco de "Horas". Não usar "últimas unidades/vagas".
 Páginas de vendas: **nunca incluir ano (2024/2025/2026/2027)** — manter copy atemporal.
-Nos GUIAS pagos: toda menção a região/bairro/praia/hotel/restaurante/locadora/pier/atração deve ser link clicável para Google Maps (`https://www.google.com/maps/search/?api=1&query=...`), abrindo em nova aba.
+Nos GUIAS pagos: toda menção a região/bairro/praia/hotel/restaurante/locadora/pier/atração ganha um botão pequeno `📍 Mapa` ao lado do nome (Google Maps `search/?api=1&query=...`); o nome em si fica texto normal — nunca sublinhado/linkado inline.
+Padrão de links nos GUIAS pagos: TODO link (interno ou externo, exceto âncoras `#id` da própria página e `mailto:`) abre em nova aba via `<a target="_blank" rel="noreferrer">` — nunca usar `<Link>` do react-router pra navegação entre páginas.
 
 ## Memories
 - [Rotas internas protegidas](mem://constraints/rotas-internas-protegidas) — guias pagos protegidos; não expor publicamente, mas conteúdo é atualizável
