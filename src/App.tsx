@@ -56,6 +56,9 @@ import Phuket8821 from "./pages/Phuket8821.tsx";
 import KohSamui7392 from "./pages/KohSamui7392.tsx";
 import KohPhiPhi5128 from "./pages/KohPhiPhi5128.tsx";
 import KohPhangan8463 from "./pages/KohPhangan8463.tsx";
+import KohTao6294 from "./pages/KohTao6294.tsx";
+import KohChang3517 from "./pages/KohChang3517.tsx";
+import KohLanta4831 from "./pages/KohLanta4831.tsx";
 import IlhaPage from "./pages/IlhaPage.tsx";
 import { ilhasMeta } from "./data/sales/ilhas";
 import ExportCopyAuditoria from "./pages/ExportCopyAuditoria.tsx";
@@ -125,6 +128,9 @@ const App = () => (
           <Route path="/kohsamui7392" element={<KohSamui7392 />} />
           <Route path="/kohphiphi5128" element={<KohPhiPhi5128 />} />
           <Route path="/kohphangan8463" element={<KohPhangan8463 />} />
+          <Route path="/kohtao6294" element={<KohTao6294 />} />
+          <Route path="/kohchang3517" element={<KohChang3517 />} />
+          <Route path="/kohlanta4831" element={<KohLanta4831 />} />
           {ilhasMeta.map((ilha) => (
             <Route
               key={ilha.slug}
