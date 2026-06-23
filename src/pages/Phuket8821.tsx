@@ -424,9 +424,9 @@ const Phuket8821 = () => {
           </div>
           <Card className="mt-5 border-red-500/30 bg-red-500/5">
             <CardContent className="p-5 text-sm">
-              <strong className="text-red-300">REJEITADOS:</strong> <G>Patong Beach Hotel</G> (cheiro mofo, mar sujo na frente),
-              <G>Phuket Graceland Resort</G> (avaliações falsas, paredes finas),
-              qualquer hotel na <G q="Soi Bangla Patong">"Soi Bangla"</G> (som de balada 24h).
+              <strong className="text-red-300">REJEITADOS:</strong> Patong Beach Hotel (cheiro mofo, mar sujo na frente),
+              Phuket Graceland (avaliações falsas, paredes finas),
+              qualquer hotel na "Soi Bangla" (som de balada 24h).
             </CardContent>
           </Card>
         </section>
