@@ -109,6 +109,7 @@ const App = () => (
           <Route path="/casasmassagem5582" element={<CasasMassagem5582 />} />
           <Route path="/casas-de-massagem-tailandia" element={<CasasDeMassagem />} />
           <Route path="/retiros-tailandia" element={<Retiros />} />
+          <Route path="/retiros8834" element={<Retiros8834 />} />
 
           {/* ===== Categoria Ilhas ===== */}
           <Route path="/ilhas" element={<Ilhas />} />
