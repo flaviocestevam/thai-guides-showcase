@@ -13,7 +13,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "audit:sales-guide": "node scripts/audit-sales-vs-guide.mjs"
   },
   "dependencies": {
     "@fontsource/dm-serif-display": "^5.2.8",
