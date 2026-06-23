@@ -71,6 +71,16 @@ const cities: CityBlock[] = [
       h("Bangkok", { name: "Niras Bankoc Cultural Hostel", area: "Pak Khlong Talat (mercado das flores)", rating: 9.6, price: "฿550–฿1.400", profiles: ["Casal", "Solo feminino"], highlight: "Casa antiga restaurada — cada quarto é diferente", tip: "Sem grandes dormitórios. Vibe casa de família.", site: "https://nirashostelbangkok.com" }),
       h("Bangkok", { name: "Yim Huai Khwang Hostel", area: "Huai Khwang (MRT)", rating: 9.3, price: "฿320–฿800", profiles: ["Nômade digital", "Casal"], highlight: "Bairro thai 100% local + MRT na porta", tip: "Comida de rua barata 24h em volta. Wi-Fi sólido." }),
       h("Bangkok", { name: "The Yard Hostel", area: "Ari (BTS Ari)", rating: 9.5, price: "฿480–฿1.200", profiles: ["Nômade digital", "Casal"], highlight: "Containers em jardim, bairro hipster, cafés ao redor", tip: "Melhor escolha pra quem vai trabalhar remoto em Bangkok.", site: "https://www.theyardhostel.com" }),
+      h("Bangkok", { name: "Adler Hostel", area: "Chinatown (Yaowarat)", rating: 9.4, price: "฿550–฿1.500", profiles: ["Casal", "Solo feminino"], highlight: "Primeiro 'luxury hostel' da Tailândia — cápsulas com colchão king-size", tip: "Pé na melhor street food de Bangkok à noite." }),
+      h("Bangkok", { name: "Loftel 22 Hostel", area: "Chinatown (Soi Nana)", rating: 9.5, price: "฿420–฿1.100", profiles: ["Casal", "Nômade digital"], highlight: "Loft restaurado em zona de bares speakeasy", tip: "Bairro virou polo de coquetelaria — Tep Bar a 2min." }),
+      h("Bangkok", { name: "Cacha Bed", area: "Sukhumvit Soi 22", rating: 9.3, price: "฿400–฿1.000", profiles: ["Mochileiro social", "Casal"], highlight: "BTS Phrom Phong a 5min + área comum gigante", tip: "Boa base se quer balancear festa Sukhumvit e descanso." }),
+      h("Bangkok", { name: "Bed Station Hostel Khao San", area: "Khao San área (Tanao Rd)", rating: 9.2, price: "฿380–฿950", profiles: ["Mochileiro social", "Festa"], highlight: "Cápsula moderna com cortina, tomada e luz individual", tip: "Khao San moderno — sem mofo dos hostels antigos." }),
+      h("Bangkok", { name: "Silq Hostel", area: "Sathorn", rating: 9.3, price: "฿450–฿1.200", profiles: ["Nômade digital", "Solo feminino"], highlight: "Distrito financeiro, BTS na porta, Wi-Fi enterprise", tip: "Caro pra mochileiro, ótimo pra quem trabalha remoto sério." }),
+      h("Bangkok", { name: "Suk11 Hostel", area: "Sukhumvit Soi 11", rating: 9.0, price: "฿350–฿900", profiles: ["Mochileiro social"], highlight: "Casa de madeira em jardim escondido entre arranha-céus", tip: "Vibe oásis no caos de Sukhumvit. Reserve com antecedência." }),
+      h("Bangkok", { name: "Born Free Hostel", area: "Phra Nakhon (perto do Wat Saket)", rating: 9.4, price: "฿320–฿850", profiles: ["Mochileiro social", "Solo feminino"], highlight: "Pequeno, familiar, café da manhã thai feito na hora", tip: "10min a pé do Golden Mount ao pôr do sol." }),
+      h("Bangkok", { name: "Glur Bangkok Hostel", area: "Sukhumvit Soi 38", rating: 9.2, price: "฿380–฿950", profiles: ["Mochileiro social", "Casal"], highlight: "Rua famosa de street food na porta", tip: "Thonglor BTS a 8min — perto da vida noturna fina." }),
+      h("Bangkok", { name: "Revolution Hostel Bangkok", area: "Khao San (Soi Rambuttri)", rating: 9.1, price: "฿320–฿850", profiles: ["Mochileiro social", "Festa"], highlight: "Khao San moderno com cápsula confortável", tip: "Rambuttri é a Khao San silenciosa — só restaurantes e bares calmos." }),
+      h("Bangkok", { name: "Bed Station Hostel Ratchathewi", area: "Ratchathewi (BTS)", rating: 9.3, price: "฿420–฿1.100", profiles: ["Nômade digital", "Casal"], highlight: "BTS na porta + área coworking interna", tip: "Boa base pra quem vai trabalhar e visitar Siam de pé." }),
     ],
   },
   {
@@ -85,6 +95,10 @@ const cities: CityBlock[] = [
       h("Chiang Mai", { name: "Green Sleep Hostel", area: "Old City, Ratchadamnoen", rating: 9.5, price: "฿280–฿700", profiles: ["Solo feminino", "Mochileiro social"], highlight: "Dormitório feminino exclusivo bem avaliado", tip: "Banheiros impecáveis e silêncio respeitado após 22h." }),
       h("Chiang Mai", { name: "Hostel by Bed", area: "Nimman", rating: 9.3, price: "฿320–฿850", profiles: ["Nômade digital", "Casal"], highlight: "Cápsulas modernas + área coworking interna", tip: "Tomada e cortina em cada cápsula, raro nesse preço." }),
       h("Chiang Mai", { name: "Diva Guesthouse", area: "Old City norte", rating: 9.0, price: "฿220–฿600", profiles: ["Mochileiro social"], highlight: "Mais barato da cidade que ainda é decente", tip: "Vibe simples e honesta. Não espere luxo." }),
+      h("Chiang Mai", { name: "Nap In Chiang Mai", area: "Nimman Soi 11", rating: 9.4, price: "฿320–฿900", profiles: ["Nômade digital", "Solo feminino"], highlight: "Cápsula com cortina + área de trabalho calma", tip: "Café incluso com bom espresso, raro em Nimman." }),
+      h("Chiang Mai", { name: "Mad Monkey Chiang Mai", area: "Old City sul", rating: 9.1, price: "฿320–฿850", profiles: ["Festa", "Mochileiro social"], highlight: "Bar próprio, pub crawls e eventos diários", tip: "Vai pra fazer amigos. Não vai pra dormir cedo.", site: "https://madmonkeyhostels.com/madmonkeychiangmai" }),
+      h("Chiang Mai", { name: "Pak Chiang Mai", area: "Old City oeste", rating: 9.5, price: "฿400–฿1.100", profiles: ["Casal", "Solo feminino"], highlight: "Boutique em casa Lanna restaurada", tip: "Privativos têm qualidade de pousada charme por preço de hostel." }),
+      h("Chiang Mai", { name: "Bed & Terrace Hostel", area: "Nimman Soi 5", rating: 9.3, price: "฿300–฿800", profiles: ["Nômade digital", "Mochileiro social"], highlight: "Terraço com vista do Doi Suthep", tip: "Próximo a One Nimman e Maya Mall." }),
     ],
   },
   {
@@ -96,6 +110,9 @@ const cities: CityBlock[] = [
       h("Pai", { name: "Famous Pai Circus School Hostel", area: "Mae Hi, 2km do centro", rating: 9.3, price: "฿280–฿800", profiles: ["Festa", "Mochileiro social"], highlight: "Aulas grátis de slackline, malabares, aéreo", tip: "Vai dormir tarde — é o ponto de festa de Pai.", site: "https://www.paicircus.com" }),
       h("Pai", { name: "Spicypai Backpackers", area: "Sai Ngam Rd", rating: 9.1, price: "฿200–฿550", profiles: ["Mochileiro social", "Festa"], highlight: "Estrutura bambu, fogueiras à noite", tip: "Não tem ar-condicionado. Confortável só em inverno (nov–fev)." }),
       h("Pai", { name: "Darling View Point", area: "Wiang Tai", rating: 9.4, price: "฿350–฿1.000", profiles: ["Casal", "Solo feminino"], highlight: "Bangalôs com vista do vale", tip: "Privativos com varanda, ótima opção pra casal." }),
+      h("Pai", { name: "Pai Country Hut", area: "Mae Hi", rating: 9.3, price: "฿300–฿850", profiles: ["Casal", "Mochileiro social"], highlight: "Bangalôs simples em meio a arrozais", tip: "Sem ar — confortável só em alta estação (nov–fev)." }),
+      h("Pai", { name: "Tayai Guesthouse", area: "Wiang Tai centro", rating: 9.2, price: "฿250–฿700", profiles: ["Mochileiro social"], highlight: "Família thai, café da manhã caseiro", tip: "5min a pé da Walking Street." }),
+      h("Pai", { name: "Sun Hut Pai", area: "Mae Hi (rio)", rating: 9.5, price: "฿400–฿1.200", profiles: ["Casal", "Solo feminino"], highlight: "Bangalôs à beira do rio Pai", tip: "Acesso fácil aos canyons. Aluga moto na recepção." }),
     ],
   },
   {
@@ -108,6 +125,11 @@ const cities: CityBlock[] = [
       h("Phuket", { name: "Sino Inn Phuket", area: "Phuket Old Town", rating: 9.5, price: "฿380–฿1.100", profiles: ["Casal", "Solo feminino"], highlight: "Boutique sino-portuguesa, café da manhã thai incluso", tip: "Melhor base pra explorar a cultura Peranakan da ilha." }),
       h("Phuket", { name: "Phuvaree Resort", area: "Patong (mas em colina, silencioso)", rating: 9.2, price: "฿520–฿1.500", profiles: ["Casal", "Nômade digital"], highlight: "Patong sem o barulho, piscina infinita", tip: "5min de tuk-tuk até a praia. Vale a pé de subida." }),
       h("Phuket", { name: "Bodega Phuket Party Resort", area: "Patong", rating: 9.0, price: "฿450–฿1.200", profiles: ["Festa"], highlight: "Piscina, palco com DJ, pool parties", tip: "Foco em backpackers jovens. Não é pra quem quer dormir." }),
+      h("Phuket", { name: "Ai Phuket Hostel", area: "Phuket Old Town", rating: 9.5, price: "฿420–฿1.200", profiles: ["Casal", "Solo feminino"], highlight: "Sino-portuguesa, café incluso na padaria do hostel", tip: "Walking street local toda noite na porta." }),
+      h("Phuket", { name: "Lay Day Hostel", area: "Kata Beach", rating: 9.3, price: "฿400–฿1.100", profiles: ["Mochileiro social", "Casal"], highlight: "Kata sem o caos de Patong, surf na porta", tip: "Praia bem mais limpa e família que Patong." }),
+      h("Phuket", { name: "Slumber Party Hostel Phuket", area: "Bangla Rd, Patong", rating: 9.0, price: "฿420–฿1.000", profiles: ["Festa"], highlight: "Pub crawls noturnos inclusos", tip: "Você vem aqui pra Bangla, não pra dormir." }),
+      h("Phuket", { name: "Beds Patong", area: "Patong, fora da Bangla", rating: 9.2, price: "฿450–฿1.100", profiles: ["Mochileiro social", "Casal"], highlight: "Patong com decibéis humanos", tip: "10min a pé da praia, 10min de Bangla, equilíbrio bom." }),
+      h("Phuket", { name: "RarinJinda Wellness Hostel", area: "Rawai", rating: 9.3, price: "฿400–฿1.000", profiles: ["Casal", "Silencioso"], highlight: "Sul da ilha, longe da farra, perto de praias locais", tip: "Boa base pra mergulho com saída de Chalong." }),
     ],
   },
   {
@@ -119,6 +141,9 @@ const cities: CityBlock[] = [
       h("Krabi", { name: "Slumber Party Hostel Ao Nang", area: "Ao Nang", rating: 9.1, price: "฿400–฿1.000", profiles: ["Festa", "Mochileiro social"], highlight: "Pub crawls noturnos inclusos", tip: "Marca conhecida do mochileiro festeiro. Som alto até 1h." }),
       h("Krabi", { name: "Railay Garden View Resort", area: "Railay East", rating: 9.3, price: "฿800–฿2.200", profiles: ["Casal", "Mochileiro social"], highlight: "Bangalôs em frente às paredes de escalada", tip: "Reserva direto economiza 25%. Sem ATM em Railay — leve cash." }),
       h("Krabi", { name: "Glur Hostel", area: "Ao Nang", rating: 9.2, price: "฿380–฿900", profiles: ["Mochileiro social", "Solo feminino"], highlight: "Design moderno + café da manhã sólido", tip: "5min a pé da praia, sem barulho de bar na porta." }),
+      h("Krabi", { name: "Blanco Hostel at Tonsai", area: "Tonsai Beach (acesso só por barco)", rating: 9.4, price: "฿450–฿1.200", profiles: ["Casal", "Mochileiro social"], highlight: "Praia escondida ao lado de Railay, foco em escalada", tip: "Sem ATM em Tonsai — leve cash de Krabi." }),
+      h("Krabi", { name: "Anyaman Hostel Krabi Town", area: "Krabi Town", rating: 9.3, price: "฿300–฿800", profiles: ["Mochileiro social", "Solo feminino"], highlight: "Centro histórico de Krabi, café incluso", tip: "Krabi Town tem mercado noturno melhor que Ao Nang." }),
+      h("Krabi", { name: "Mad Monkey Ao Nang", area: "Ao Nang", rating: 9.0, price: "฿400–฿1.000", profiles: ["Festa", "Mochileiro social"], highlight: "Bar próprio + tour de ilhas com desconto", tip: "Combo hospedagem + 4 islands tour sai 20% mais barato.", site: "https://madmonkeyhostels.com/madmonkeyaonang" }),
     ],
   },
   {
@@ -132,6 +157,11 @@ const cities: CityBlock[] = [
       h("Koh Phangan", { name: "Sanctuary Thailand (Haad Tien)", area: "Haad Tien (só por barco)", rating: 9.6, price: "฿800–฿2.500", profiles: ["Silencioso", "Solo feminino"], highlight: "Centro de yoga e detox histórico, dorms em paraíso", tip: "Vibe wellness séria — não confunda com hostel comum.", site: "https://www.thesanctuarythailand.com" }),
       h("Koh Phangan", { name: "Phangan Arena Hostel", area: "Thong Sala", rating: 9.1, price: "฿320–฿850", profiles: ["Mochileiro social"], highlight: "Centro da ilha, perto do mercado noturno", tip: "Boa base se vai alugar moto e rodar a ilha inteira." }),
       h("Koh Phangan", { name: "Mai Pen Rai Bungalows", area: "Than Sadet", rating: 9.4, price: "฿500–฿1.300", profiles: ["Casal", "Silencioso"], highlight: "Praia isolada no leste, jungle, total desconexão", tip: "Sem Wi-Fi forte. Vá pra esquecer celular." }),
+      h("Koh Phangan", { name: "Slumber Party Hostel Phangan", area: "Baan Tai", rating: 9.1, price: "฿420–฿1.100", profiles: ["Festa", "Mochileiro social"], highlight: "Pub crawls + transfer pra Full Moon", tip: "Reserve com 60 dias na semana da Full Moon." }),
+      h("Koh Phangan", { name: "Bodega Phangan", area: "Haad Rin", rating: 8.9, price: "฿350–฿950", profiles: ["Festa"], highlight: "Pé na areia de Haad Rin, palco DJ", tip: "Mochileiro festeiro puro. Não é hostel pra dormir." }),
+      h("Koh Phangan", { name: "Loyfa Bungalows", area: "Sri Thanu", rating: 9.4, price: "฿450–฿1.200", profiles: ["Casal", "Silencioso"], highlight: "Lado yoga da ilha, pôr do sol épico", tip: "Caminhada pra Secret Beach pela trilha (15min)." }),
+      h("Koh Phangan", { name: "B52 Beach Resort", area: "Baan Tai", rating: 9.0, price: "฿380–฿1.000", profiles: ["Mochileiro social", "Casal"], highlight: "Bangalôs pé na areia + bar de praia", tip: "Boa base entre Thong Sala e Haad Rin." }),
+      h("Koh Phangan", { name: "Eden Garden Hostel", area: "Chaloklum (norte)", rating: 9.3, price: "฿400–฿1.100", profiles: ["Casal", "Silencioso"], highlight: "Vila de pescadores tranquila, longe da farra", tip: "Lado familiar de Phangan. Praia particular calma." }),
     ],
   },
   {
@@ -144,6 +174,10 @@ const cities: CityBlock[] = [
       h("Koh Tao", { name: "Mr. J Bungalow", area: "Chalok Baan Kao", rating: 9.3, price: "฿380–฿1.000", profiles: ["Casal", "Mochileiro social"], highlight: "Lado calmo da ilha, comida thai família", tip: "Bom pra quem mergulha de manhã e quer paz à noite." }),
       h("Koh Tao", { name: "Big Blue Diving Resort", area: "Sairee", rating: 9.2, price: "฿450–฿1.300", profiles: ["Mochileiro social", "Casal"], highlight: "Escola gigante + alojamento próprio", tip: "Padrão pra fazer Open Water. Hostel barato fica grátis se assinar curso." }),
       h("Koh Tao", { name: "Tanote Bay Resort", area: "Tanote Bay (leste)", rating: 9.4, price: "฿500–฿1.500", profiles: ["Casal", "Silencioso"], highlight: "Praia escondida, snorkel da varanda", tip: "Estrada de terra ruim — pegue táxi 4x4 do porto." }),
+      h("Koh Tao", { name: "Bunker Hostel Koh Tao", area: "Sairee", rating: 9.3, price: "฿400–฿1.000", profiles: ["Casal", "Mochileiro social"], highlight: "Cápsula moderna + restaurante elogiado", tip: "Privativos têm padrão hotel boutique." }),
+      h("Koh Tao", { name: "Crios Beach Resort", area: "Sairee Beach", rating: 9.2, price: "฿450–฿1.300", profiles: ["Casal", "Mochileiro social"], highlight: "Pé na areia + escola de mergulho associada", tip: "Combo Open Water + 5 noites com desconto." }),
+      h("Koh Tao", { name: "Banana Rock Bar Hostel", area: "Chalok Baan Kao", rating: 9.0, price: "฿380–฿950", profiles: ["Mochileiro social", "Casal"], highlight: "Bar de rocha à beira-mar com pôr do sol", tip: "Lado calmo, longe da farra de Sairee." }),
+      h("Koh Tao", { name: "Koh Tao Central Hostel", area: "Mae Haad (porto)", rating: 9.1, price: "฿350–฿900", profiles: ["Mochileiro social", "Solo feminino"], highlight: "Base prática chegando de balsa", tip: "1ª noite ideal pra organizar curso de mergulho." }),
     ],
   },
   {
@@ -155,6 +189,10 @@ const cities: CityBlock[] = [
       h("Koh Samui", { name: "MyPlace @ Surat Hostel", area: "Bophut, Fisherman's Village", rating: 9.4, price: "฿400–฿1.100", profiles: ["Casal", "Solo feminino"], highlight: "No coração da vila mais charmosa da ilha", tip: "Walking Street toda sexta na porta." }),
       h("Koh Samui", { name: "Born Lucky Hostel", area: "Chaweng", rating: 9.0, price: "฿350–฿900", profiles: ["Mochileiro social"], highlight: "Barato em Chaweng, raro", tip: "Não espera ar potente — abre janela." }),
       h("Koh Samui", { name: "Spider Monkey Hostel", area: "Lamai", rating: 9.1, price: "฿300–฿800", profiles: ["Mochileiro social", "Solo feminino"], highlight: "Lado mais barato e calmo da ilha", tip: "Boa base pra alugar moto e rodar Samui inteira." }),
+      h("Koh Samui", { name: "Hotel Coco", area: "Bophut Fisherman's Village", rating: 9.4, price: "฿500–฿1.500", profiles: ["Casal", "Solo feminino"], highlight: "Boutique no coração da vila mais charmosa", tip: "Walking Street toda sexta na porta." }),
+      h("Koh Samui", { name: "Bay Inn Hostel", area: "Chaweng Lake", rating: 9.0, price: "฿320–฿850", profiles: ["Mochileiro social"], highlight: "5min a pé de Chaweng + piscina", tip: "Centro de festa de Samui sem pagar caro de pé na areia." }),
+      h("Koh Samui", { name: "Maenam Beach Bungalows", area: "Maenam", rating: 9.3, price: "฿450–฿1.200", profiles: ["Casal", "Silencioso"], highlight: "Norte tranquilo, balsa pra Phangan a 5min", tip: "Ideal pra combinar Samui + Full Moon em Phangan." }),
+      h("Koh Samui", { name: "Pinky Bungalows", area: "Bophut", rating: 9.2, price: "฿400–฿1.100", profiles: ["Casal", "Mochileiro social"], highlight: "Bangalôs pé na areia a 5min de Fisherman's Village", tip: "Privativo charme barato — vale 3 noites." }),
     ],
   },
   {
@@ -165,6 +203,9 @@ const cities: CityBlock[] = [
       h("Koh Lanta", { name: "Hub of Joys Hostel", area: "Long Beach (Phra-Ae)", rating: 9.5, price: "฿380–฿1.000", profiles: ["Mochileiro social", "Casal", "Solo feminino"], highlight: "Família tailandesa, jantar coletivo, vibe acolhedora", tip: "Provável melhor custo-benefício de Lanta." }),
       h("Koh Lanta", { name: "Where The Lost Things Go Hostel", area: "Long Beach", rating: 9.4, price: "฿400–฿1.100", profiles: ["Casal", "Solo feminino"], highlight: "Boutique sob bambu, dorms decorados", tip: "Vibe instagrammer. Quartos privados são lindos." }),
       h("Koh Lanta", { name: "Chill Out House Lanta", area: "Klong Dao", rating: 9.2, price: "฿350–฿950", profiles: ["Mochileiro social"], highlight: "Próximo ao porto, base prática", tip: "Bom pra primeira noite chegando de balsa." }),
+      h("Koh Lanta", { name: "Mango House", area: "Old Town Lanta", rating: 9.5, price: "฿900–฿2.500", profiles: ["Casal"], highlight: "Casas palafita restauradas sobre o mar", tip: "Old Town é o lado mais autêntico de Lanta — vale 2 noites." }),
+      h("Koh Lanta", { name: "Castaway Beach Resort Lanta", area: "Klong Khong", rating: 9.3, price: "฿450–฿1.300", profiles: ["Mochileiro social", "Casal"], highlight: "Praia hippie + bar de fogueira ao pôr do sol", tip: "Klong Khong é o lado alternativo de Lanta." }),
+      h("Koh Lanta", { name: "Pra Nang Beach Resort", area: "Phra-Ae", rating: 9.2, price: "฿400–฿1.100", profiles: ["Casal", "Solo feminino"], highlight: "Bangalôs com jardim a 100m da praia", tip: "Long Beach é a praia mais longa e organizada da ilha." }),
     ],
   },
   {
@@ -174,6 +215,8 @@ const cities: CityBlock[] = [
     hostels: [
       h("Koh Lipe", { name: "Castaway Beach Resort", area: "Sunrise Beach", rating: 9.3, price: "฿900–฿2.500", profiles: ["Casal", "Mochileiro social"], highlight: "Pé na areia da praia mais bonita da ilha", tip: "Não é hostel clássico, mas dorms acessíveis em paraíso real." }),
       h("Koh Lipe", { name: "Forra Dive Resort", area: "Pattaya Beach (Walking Street)", rating: 9.1, price: "฿500–฿1.300", profiles: ["Mochileiro social"], highlight: "Mergulho + hospedagem barata", tip: "Combo curso de mergulho + noites desconta forte." }),
+      h("Koh Lipe", { name: "Mali Resort Sunrise Beach", area: "Sunrise Beach", rating: 9.3, price: "฿1.200–฿3.000", profiles: ["Casal"], highlight: "Bangalôs pé na areia na praia do nascer do sol", tip: "Caro pra hostel — pague o privativo, vale." }),
+      h("Koh Lipe", { name: "Bila Beach Bungalows", area: "Bila Beach (lado oeste)", rating: 9.0, price: "฿600–฿1.500", profiles: ["Mochileiro social", "Casal"], highlight: "Praia menor e mais isolada, pôr do sol épico", tip: "Acesso por trilha curta — vale fugir do centro." }),
     ],
   },
   {
@@ -183,6 +226,7 @@ const cities: CityBlock[] = [
     hostels: [
       h("Ayutthaya", { name: "Baan Are Gong Riverside Homestay", area: "Ilha histórica", rating: 9.6, price: "฿400–฿1.200", profiles: ["Casal", "Solo feminino"], highlight: "Casa de madeira centenária à beira do rio", tip: "Família dona — café da manhã thai legítimo incluso." }),
       h("Ayutthaya", { name: "Stockhome Hostel", area: "Centro histórico", rating: 9.4, price: "฿320–฿850", profiles: ["Mochileiro social"], highlight: "Aluga bicicleta na recepção pra circuito de templos", tip: "Bicicleta é o jeito certo de ver Ayutthaya, não tuk-tuk." }),
+      h("Ayutthaya", { name: "Iudia on the River", area: "Ilha histórica, beira do rio", rating: 9.5, price: "฿900–฿2.400", profiles: ["Casal", "Solo feminino"], highlight: "Casa thai centenária com vista pro Wat Phutthaisawan", tip: "Privativo charme, paga a pena pra 1 noite." }),
     ],
   },
   {
@@ -192,6 +236,7 @@ const cities: CityBlock[] = [
     hostels: [
       h("Sukhothai", { name: "Sukhothai Garden Guesthouse", area: "New Sukhothai", rating: 9.3, price: "฿300–฿800", profiles: ["Mochileiro social", "Casal"], highlight: "Bicicletas grátis e mapa do parque histórico", tip: "Visite parque histórico ao amanhecer pra fugir do calor." }),
       h("Sukhothai", { name: "Old City Guesthouse", area: "Old Sukhothai", rating: 9.2, price: "฿320–฿900", profiles: ["Casal", "Mochileiro social"], highlight: "Dentro do parque histórico — único na vila", tip: "Sai mais caro mas amanhecer no Wat Mahathat vale." }),
+      h("Sukhothai", { name: "TR Room & Bungalow", area: "Old Sukhothai", rating: 9.4, price: "฿400–฿1.000", profiles: ["Casal", "Solo feminino"], highlight: "Bangalôs em jardim a 500m do parque histórico", tip: "Família dona, café incluso, bicicleta grátis." }),
     ],
   },
 ];
