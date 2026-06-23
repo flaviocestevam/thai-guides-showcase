@@ -790,6 +790,56 @@ const KohKood7841 = () => {
             </div>
           </section>
 
+          <section id="spa">
+            <SectionTitle icon={Flower} kicker="16 — Wellness" title="Spa & massagem — premium e local" />
+            <div className="grid md:grid-cols-2 gap-5">
+              {SPA.map((x, i) => (
+                <Reveal key={x.titulo} i={i}>
+                  <article className="pk-card pk-card-tight h-full">
+                    <p className="pk-kicker">{x.titulo}</p>
+                    <p className="text-sm mt-2 text-[hsl(var(--pk-muted))]">{x.texto}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="ao-salat">
+            <SectionTitle icon={Building2} kicker="17 — Cultura" title="Vila Ao Salat — palafitas sobre o mar" />
+            <Reveal>
+              <div className="pk-card pk-card-feature mb-6">
+                <p className="text-lg leading-relaxed">
+                  <strong className="pk-gold">A única &lsquo;cidade&rsquo; de Kood</strong> — comunidade muçulmana de pescadores sobre palafitas no leste da ilha.
+                  Quase nenhum turista vai. Almoço pé no mar por R$ 25.
+                </p>
+              </div>
+            </Reveal>
+            <div className="grid md:grid-cols-2 gap-5">
+              {AO_SALAT.map((x, i) => (
+                <Reveal key={x.titulo} i={i}>
+                  <article className="pk-card pk-card-tight h-full">
+                    <p className="pk-kicker">{x.titulo}</p>
+                    <p className="text-sm mt-2 text-[hsl(var(--pk-muted))]">{x.texto}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="borracha">
+            <SectionTitle icon={Factory} kicker="18 — Eco" title="Plantação de seringueira — tradição centenária" />
+            <div className="grid md:grid-cols-2 gap-5">
+              {BORRACHA.map((x, i) => (
+                <Reveal key={x.titulo} i={i}>
+                  <article className="pk-card pk-card-tight h-full">
+                    <p className="pk-kicker">{x.titulo}</p>
+                    <p className="text-sm mt-2 text-[hsl(var(--pk-muted))]">{x.texto}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
           <section id="comida">
             <SectionTitle icon={UtensilsCrossed} kicker="13 — Mesa" title="Onde comer — 8 testados" />
             <div className="grid md:grid-cols-2 gap-5">
