@@ -16,16 +16,23 @@ import {
 const gmap = (q: string) =>
   `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q + ", Phuket, Thailand")}`;
 
-const G = ({ q, children, className = "" }: { q?: string; children: React.ReactNode; className?: string }) => (
-  <a
-    href={gmap(q ?? (typeof children === "string" ? children : ""))}
-    target="_blank"
-    rel="noreferrer"
-    className={`underline decoration-emerald-400/40 underline-offset-2 hover:decoration-emerald-300 hover:text-emerald-300 transition ${className}`}
-  >
-    {children}
-  </a>
-);
+const G = ({ q, children, className = "" }: { q?: string; children: React.ReactNode; className?: string }) => {
+  const query = q ?? (typeof children === "string" ? children : "");
+  return (
+    <span className={`inline-flex items-baseline gap-1.5 ${className}`}>
+      <span>{children}</span>
+      <a
+        href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query + ", Phuket, Thailand")}`}
+        target="_blank"
+        rel="noreferrer"
+        title={`Abrir ${query} no Google Maps`}
+        className="inline-flex items-center gap-1 text-[10px] font-medium px-1.5 py-0.5 rounded-md border border-emerald-500/30 bg-emerald-500/10 text-emerald-300 hover:bg-emerald-500/20 transition no-underline align-middle"
+      >
+        📍 Mapa
+      </a>
+    </span>
+  );
+};
 
 const TOC = [
   { id: "comeco", label: "Antes de tudo", icon: Compass },
@@ -377,7 +384,7 @@ const Phuket8821 = () => {
           </div>
           <Card className="mt-6 border-amber-500/30 bg-amber-500/5">
             <CardContent className="p-5 text-sm">
-              <strong className="text-amber-300">Bandeira vermelha = NÃO ENTRE.</strong> Maio a outubro a costa oeste tem correntes mortais. Salva-vidas em <G>Karon Beach</G>, <G>Kata Beach</G>, <G>Patong Beach</G> e <G>Surin Beach</G>. Em <G>Bang Tao Beach</G> e <G>Nai Harn Beach</G>, depende do hotel.
+              <strong className="text-amber-300">Bandeira vermelha = NÃO ENTRE.</strong> Maio a outubro a costa oeste tem correntes mortais. Salva-vidas em Karon, Kata, Patong e Surin. Em Bang Tao e Nai Harn, depende do hotel.
             </CardContent>
           </Card>
         </section>
@@ -417,9 +424,9 @@ const Phuket8821 = () => {
           </div>
           <Card className="mt-5 border-red-500/30 bg-red-500/5">
             <CardContent className="p-5 text-sm">
-              <strong className="text-red-300">REJEITADOS:</strong> <G>Patong Beach Hotel</G> (cheiro mofo, mar sujo na frente),
-              <G>Phuket Graceland Resort</G> (avaliações falsas, paredes finas),
-              qualquer hotel na <G q="Soi Bangla Patong">"Soi Bangla"</G> (som de balada 24h).
+              <strong className="text-red-300">REJEITADOS:</strong> Patong Beach Hotel (cheiro mofo, mar sujo na frente),
+              Phuket Graceland (avaliações falsas, paredes finas),
+              qualquer hotel na "Soi Bangla" (som de balada 24h).
             </CardContent>
           </Card>
         </section>
@@ -520,7 +527,7 @@ const Phuket8821 = () => {
                 <CardContent className="p-5">
                   <div className="flex justify-between items-start mb-1">
                     <h3 className="font-display font-bold"><G q={`${c.lugar} ${c.bairro} Phuket`}>{c.lugar}</G></h3>
-                    <Badge variant="outline" className="text-[10px]"><G q={`${c.bairro} Phuket`}>{c.bairro}</G></Badge>
+                    <Badge variant="outline" className="text-[10px]">{c.bairro}</Badge>
                   </div>
                   <p className="text-sm text-muted-foreground mb-2">{c.oque}</p>
                   <p className="text-sm text-emerald-300">{c.preco}</p>
@@ -538,7 +545,7 @@ const Phuket8821 = () => {
         {/* ROTEIROS */}
         <section id="roteiros">
           <h2 className="text-3xl font-display font-bold mb-2 flex items-center gap-3"><Sun className="text-emerald-400" /> Roteiros prontos — 3, 5, 7 e 10 dias</h2>
-          <p className="text-muted-foreground mb-6">Base recomendada: <G>Kata Beach</G> (custo-benefício) ou <G>Bang Tao Beach</G> (premium). Ajuste por bairro de hospedagem.</p>
+          <p className="text-muted-foreground mb-6">Base recomendada: Kata (custo-benefício) ou Bang Tao (premium). Ajuste por bairro de hospedagem.</p>
           <div className="grid md:grid-cols-2 gap-5">
             {ROTEIROS.map((r) => (
               <Card key={r.dias} className="border-emerald-500/20">
