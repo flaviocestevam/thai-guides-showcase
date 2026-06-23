@@ -239,6 +239,132 @@ const COMIDA = [
   { lugar: "Toh Pho Bakery", bairro: "Klong Prao", oque: "Pão sourdough + sanduíches sérios.", preco: "120-280 baht" },
 ];
 
+// 1 — Mapa visual norte → sul (todas no oeste, exceto Salakphet leste)
+const MAPA_PRAIAS: { ordem: string; nome: string; tag: string; tone: Tone; lado: string; }[] = [
+  { ordem: "N1", nome: "White Sand Beach", tag: "AGITO", tone: "warn", lado: "Oeste norte" },
+  { ordem: "N2", nome: "Klong Prao", tag: "FAMÍLIA", tone: "ok", lado: "Oeste centro-norte" },
+  { ordem: "N3", nome: "Kai Bae", tag: "CASAL/SUNSET", tone: "ok", lado: "Oeste centro" },
+  { ordem: "S1", nome: "Lonely Beach", tag: "MOCHILEIRO/FESTA", tone: "info", lado: "Oeste sul" },
+  { ordem: "S2", nome: "Bailan", tag: "ESCONDIDO", tone: "premium", lado: "Oeste sul" },
+  { ordem: "S3", nome: "Bang Bao", tag: "PIER/SUNSET", tone: "info", lado: "Ponta sudoeste" },
+  { ordem: "L1", nome: "Salakphet", tag: "AUTÊNTICO", tone: "info", lado: "Sudeste (leste)" },
+];
+
+// 2 — Clima mês a mês (chuva, vento, mar, viz mergulho, lotação, diária média)
+const CLIMA_MES: { mes: string; chuva: string; vento: string; mar: string; viz: string; lotacao: string; diaria: string; tone: Tone; }[] = [
+  { mes: "Janeiro",   chuva: "Quase zero", vento: "Calmo",   mar: "Liso",       viz: "12-18m", lotacao: "Alta",      diaria: "R$ 280", tone: "premium" },
+  { mes: "Fevereiro", chuva: "Zero",       vento: "Calmo",   mar: "Liso",       viz: "15-20m", lotacao: "Pico",      diaria: "R$ 320", tone: "premium" },
+  { mes: "Março",     chuva: "Baixa",      vento: "Fraco",   mar: "Liso",       viz: "15-20m", lotacao: "Alta",      diaria: "R$ 280", tone: "premium" },
+  { mes: "Abril",     chuva: "Pontual",    vento: "Fraco",   mar: "Calmo",      viz: "10-15m", lotacao: "Média",     diaria: "R$ 230", tone: "ok" },
+  { mes: "Maio",      chuva: "Aumenta",    vento: "SO virando", mar: "Mexe à tarde", viz: "8-12m",  lotacao: "Baixa",     diaria: "R$ 180", tone: "info" },
+  { mes: "Junho",     chuva: "Forte",      vento: "SO forte",mar: "Agitado",    viz: "5-8m",   lotacao: "Muito baixa", diaria: "R$ 150", tone: "warn" },
+  { mes: "Julho",     chuva: "Pico monção",vento: "Forte",   mar: "Agitado",    viz: "4-7m",   lotacao: "Vazia",     diaria: "R$ 140", tone: "alert" },
+  { mes: "Agosto",    chuva: "Forte",      vento: "Forte",   mar: "Agitado",    viz: "4-7m",   lotacao: "Vazia",     diaria: "R$ 140", tone: "alert" },
+  { mes: "Setembro",  chuva: "Pico monção",vento: "Forte",   mar: "Muito agitado", viz: "3-6m",   lotacao: "Mínima",    diaria: "R$ 130", tone: "alert" },
+  { mes: "Outubro",   chuva: "Diminui",    vento: "Vira NE", mar: "Calma volta",viz: "6-10m",  lotacao: "Baixa",     diaria: "R$ 170", tone: "warn" },
+  { mes: "Novembro",  chuva: "Pontual",    vento: "Fraco",   mar: "Liso volta", viz: "10-15m", lotacao: "Média",     diaria: "R$ 220", tone: "ok" },
+  { mes: "Dezembro",  chuva: "Quase zero", vento: "Calmo",   mar: "Liso",       viz: "12-18m", lotacao: "Alta",      diaria: "R$ 290", tone: "premium" },
+];
+
+// 3 — Arquipélago de Trat: Chang vs Mak vs Kood por perfil
+const ARQUIPELAGO = [
+  { ilha: "Koh Chang", tamanho: "Grande (2ª maior da TH)", tom: "Selva + 7 praias + infra completa", perfil: "Base do arquipélago. Família, casal, mochileiro — tem tudo.", dias: "5-7 noites", evite: "Quem busca água azul piscina de cartão postal." },
+  { ilha: "Koh Mak", tamanho: "Médio (16 km²)", tom: "Slow travel real, zero balada", perfil: "Casal recém-formado, leitor, ciclista. Bicicleta resolve a ilha.", dias: "2-3 noites", evite: "Quem precisa de movimento depois das 21h." },
+  { ilha: "Koh Kood", tamanho: "Médio-grande (3ª maior)", tom: "Água mais azul do arquipélago, resort isolado", perfil: "Lua de mel, fotógrafo, resort premium. Cape Kuad + Klong Chao waterfall.", dias: "3-4 noites", evite: "Mochileiro low budget — opções caras." },
+  { ilha: "Koh Wai", tamanho: "Pequena (3 km²)", tom: "Sem energia 24h, snorkel cristalino", perfil: "Day-trip ou 1 noite robinson. Sem ATM, sem 4G.", dias: "1 noite (máx 2)", evite: "Quem precisa de Wi-Fi ou ar condicionado." },
+];
+
+const ARQUIPELAGO_FERRIES = [
+  { rota: "Koh Chang ⇄ Koh Mak", op: "Bang Bao Boat / Boonsiri", saidas: "09h e 13h (nov-mai)", preco: "450 baht" },
+  { rota: "Koh Chang ⇄ Koh Kood", op: "Boonsiri / Bang Bao", saidas: "10h30 e 13h30 (nov-mai)", preco: "650-800 baht" },
+  { rota: "Koh Mak ⇄ Koh Kood", op: "Bang Bao Boat", saidas: "11h e 14h (nov-mai)", preco: "400 baht" },
+  { rota: "Koh Chang ⇄ Koh Wai", op: "Bang Bao Boat", saidas: "09h (nov-mai)", preco: "400 baht" },
+  { rota: "Koh Mak ⇄ Koh Wai", op: "Speedboat local", saidas: "Sob demanda", preco: "300 baht" },
+];
+
+// 4 — Mergulho Koh Rang (parque marinho ao sul de Chang)
+const DIVE_SITES = [
+  { nome: "Hin Luk Bat", nivel: "Open Water+", prof: "8-18 m", oque: "Pinnacle com cardume de barracudas e moray eel. Carro-chefe.", quando: "Fev-mai (visibilidade)" },
+  { nome: "Hin Rap", nivel: "Open Water+", prof: "10-20 m", oque: "Coral hard saudável, polvos, peixe-escorpião. Bom para fotografia.", quando: "Fev-mai" },
+  { nome: "Koh Rang Pinnacle", nivel: "Advanced", prof: "18-30 m", oque: "Parede com gorgônias gigantes. Tubarão-leopardo ocasional.", quando: "Mar-mai (viz pico)" },
+  { nome: "HTMS Chang wreck", nivel: "Advanced/Wreck", prof: "15-30 m", oque: "Naufrágio militar afundado em 2012. 100m de comprimento.", quando: "Fev-abr" },
+  { nome: "Wai Wreck (Koh Wai)", nivel: "Open Water", prof: "10-15 m", oque: "Wreck raso, ótimo segundo dive. Cardumes de yellowtails.", quando: "Fev-mai" },
+];
+
+const MERGULHO_PRECO = [
+  { item: "Fun dive 2 tanques (Koh Rang)", preco: "3.200-3.900 baht (~R$ 530-650)", obs: "Inclui equipamento + almoço. Entrada parque 400 baht à parte." },
+  { item: "Open Water PADI 3-4 dias", preco: "13.500-16.000 baht (~R$ 2.250-2.700)", obs: "Em Koh Tao sai 9.800 baht. Compense pelo deslocamento." },
+  { item: "Advanced Open Water 2 dias", preco: "11.000-13.000 baht (~R$ 1.800-2.150)", obs: "Inclui wreck do HTMS Chang como 1 dos 5 dives." },
+  { item: "Discover Scuba (sem certificação)", preco: "3.800 baht (~R$ 630)", obs: "1 dive raso até 12m. Bom para experimentar antes do OW." },
+];
+
+// 5 — Travessia para Camboja (Hat Lek / Koh Kong)
+const CAMBOJA_PASSOS = [
+  { passo: "1. Saída de Chang", como: "Minivan combinado pela agência (~900 baht) ou songthaew até pier + ferry Centerpoint + minivan Trat → Hat Lek. Saída 7h30." },
+  { passo: "2. Fronteira Hat Lek (TH) → Cham Yeam (KH)", como: "Cruze a pé. Visa-on-arrival cambojano: US$ 30 + foto 3x4. Aceita só dólar, nunca baht ou riel." },
+  { passo: "3. Para Koh Kong (cidade)", como: "Tuk-tuk US$ 5-7 do posto fronteira até o centro (3 km). NÃO pague mais de US$ 10." },
+  { passo: "4. Para Sihanoukville", como: "Bus diário ~6h (US$ 12-15) ou táxi privado US$ 80-100. Saída de manhã, evite noite (estrada ruim)." },
+  { passo: "5. Volta para Chang", como: "Mesmo caminho inverso. Saia de Sihanoukville 7h para chegar Trat antes do último ferry 18h30." },
+];
+
+const CAMBOJA_SCAMS = [
+  { golpe: "Taxa de carimbo extra 100 baht no posto tailandês", resposta: "Não existe. Sair da Tailândia é grátis. Peça recibo oficial." },
+  { golpe: "Visa cambojano por 'US$ 35 + 100 baht processing'", resposta: "É US$ 30 fixo. Pague exatos. Se exigir mais, peça supervisor." },
+  { golpe: "'Médico obrigatório' que cobra US$ 1-2 antes do balcão", resposta: "Falso. Sem teste médico para visa. Ignore e siga até a janela oficial." },
+  { golpe: "Cotação de dólar para riel péssima no posto", resposta: "Use dólar. Em Koh Kong/Sihanoukville, dólar circula como moeda local." },
+  { golpe: "'Bus VIP direto Bangkok-Sihanoukville' que troca van 3 vezes", resposta: "Reserve segmentos separados ou pegue avião Bangkok-Phnom Penh (US$ 80) e ônibus de lá." },
+];
+
+// 6 — Cachoeiras detalhadas (além de Klong Plu)
+const CACHOEIRAS_DETALHE = [
+  { nome: "Klong Plu", taxa: "200 baht", trilha: "20 min, fácil", piscina: "Grande, nada fundo", vale: "Sim, na janela jul-set. Fora dela, fica seca.", tone: "premium" as Tone },
+  { nome: "Than Mayom", taxa: "200 baht", trilha: "45 min até a 4ª queda", piscina: "Pequenas em série", vale: "Sim — menos turista, 4 quedas escalonadas. Visita do rei está marcada na pedra.", tone: "ok" as Tone },
+  { nome: "Klong Nonsi", taxa: "Grátis", trilha: "30 min, leve", piscina: "Naturais menores, intimistas", vale: "Sim — única grátis. Vá de manhã, vazia.", tone: "ok" as Tone },
+  { nome: "Khiri Phet", taxa: "Grátis", trilha: "15 min", piscina: "1 piscina rasa, boa pra criança", vale: "Só se já estiver em Salakphet (sudeste). Não dirija de propósito.", tone: "info" as Tone },
+  { nome: "Klong Nueng", taxa: "200 baht", trilha: "1h30 íngreme", piscina: "Sem piscina pra nadar", vale: "Só hiker hard. Maior queda da ilha (~80m) mas exige preparo.", tone: "warn" as Tone },
+];
+
+// 7 — Sunset spots ranqueados
+const SUNSETS = [
+  { local: "Kai Bae Viewpoint", rank: "★★★★★", horario: "Chegue 17h45 (set 18h20-18h45)", oque: "Mirante com 3 ilhotas (Koh Yuak, Koh Man Nai, Koh Man Nok) recortadas contra o sol.", obs: "Lotado em alta. Estacione scooter na entrada, suba a pé 5 min." },
+  { local: "Bang Bao Pier (ponta)", rank: "★★★★★", horario: "17h30-18h45", oque: "Sol mergulha entre o pier de palafita e o farol vermelho. Jantar seafood logo após.", obs: "Reserve mesa antes no Bang Bao Pier Seafood — depois do sunset enche." },
+  { local: "Klong Kloi Beach", rank: "★★★★", horario: "17h45-18h45", oque: "Última praia da costa oeste, voltada pleno-oeste. Bar Klong Kloi serve drink na areia.", obs: "Para chegar precisa de scooter — sem songthaew aqui." },
+  { local: "Salakphet (deck do mercado)", rank: "★★★★", horario: "17h30-18h30", oque: "Sunset por trás do manguezal, refletido. Único do lado leste que funciona.", obs: "Manhã o leste pega nascer; à tarde, é reflexo, não sol direto." },
+  { local: "Lonely Beach Cliff (norte)", rank: "★★★", horario: "17h45", oque: "Pedra alta entre Lonely e Bailan. Sol direto no horizonte do mar.", obs: "Subida 10 min por trilha estreita. Calçado fechado." },
+  { local: "White Sand Beach (norte)", rank: "★★★", horario: "18h-18h45", oque: "Sol pega na ponta norte da praia, perto do KC Grande Resort. Bom para drink na areia.", obs: "Parte central da praia o sunset some atrás do morro." },
+];
+
+// 8 — Trilha Long Beach (Hat Yao)
+const TRILHA_HATYAO = {
+  resumo: "Single-track de selva fechada que conecta Salakphet (sudeste) à Long Beach (Hat Yao), a praia mais isolada da ilha. Não há outro acesso a Hat Yao além desta trilha ou de barco fretado.",
+  distancia: "2,8 km só ida (5,6 km total)",
+  duracao: "45-60 min só ida (depende do mato)",
+  dificuldade: "Média — sem grandes subidas, mas raízes, lama e mato fechado",
+  inicio: "Após Salakphet, siga a estrada até o fim. Trilha começa em uma placa de madeira escrita 'Long Beach'.",
+  mare: "OBRIGATÓRIO consultar tabela de maré. Maré alta cobre os últimos 200m de praia — você fica preso. Saia da Hat Yao 2h antes da preamar.",
+  levar: [
+    "2 L de água por pessoa (sem reabastecimento na trilha nem na praia)",
+    "Repelente DEET 30%+ (mosquito de selva forte)",
+    "Tênis fechado com sola firme (havaiana = entorse garantido)",
+    "Lanterna headlight (se voltar depois das 17h escurece na mata)",
+    "Snack salgado (não há restaurante na praia)",
+    "Print da tabela de maré daquela semana (offline, sem sinal na trilha)",
+    "Kit primeiros-socorros básico (esparadrapo + álcool gel)",
+  ],
+  recompensa: "Praia de 1,2 km sem absolutamente ninguém. Areia bege, mar com piscinas naturais na maré baixa, palmeiras inclinadas. Selvagem real.",
+  perigo: "Sem sinal de celular em 90% da trilha. Avise hotel a hora de saída e retorno. Cobras (pythons e víboras) já foram avistadas — não saia da trilha marcada.",
+};
+
+// 9 — Vida noturna decodificada
+const NOTURNA = [
+  { local: "Lonely Beach (Stoner Bar / Ting Tong)", vibe: "Reggae + house + bucket de Lao Whisky", quem: "Mochileiro 20-30 anos, festa até 4h, vai descalço", evite: "Casal sossego, família, dia seguinte de mergulho", precos: "Bucket 250-350 baht, cerveja 80, sem cover", endereco: "Rua principal de Lonely Beach, lado da praia" },
+  { local: "Sabay Bar (White Sand)", vibe: "Cover band tailandesa, fire show 22h, mainstream pop", quem: "Família casual e casal jovem, primeira noite na ilha", evite: "Quem busca underground ou música eletrônica de verdade", precos: "Cerveja 100, cocktail 200, sem cover", endereco: "Meio de White Sand, frente para a praia" },
+  { local: "Hippie Bar (Bailan)", vibe: "Bar pirata feito de madeira flutuante, drink ao pôr do sol, eletrônica leve à noite", quem: "Casal alternativo, fotógrafo, instagrammer", evite: "Família com criança após 20h", precos: "Drink 180-250, cerveja 100", endereco: "Lado sul de Bailan beach, ao lado dos resorts isolados" },
+  { local: "15 Palms Beach Bar (Klong Prao)", vibe: "Acústico ao vivo no deck, vista da maré, jantar até 23h", quem: "Casal padrão, jantar romântico, lua de mel acessível", evite: "Quem quer balada ou agito real", precos: "Cocktail 220, cerveja 110, prato 250-400", endereco: "Frente Klong Prao, entre Centara e Awa Resort" },
+  { local: "Oodie's Place (Klong Prao)", vibe: "Bar de mesa, jogo, conversa, banda cover às quintas", quem: "Expat, viajante longo, quem busca papo", evite: "Quem quer dançar", precos: "Cerveja 90, comida 150-250", endereco: "Estrada principal de Klong Prao, perto do Tesco Lotus" },
+  { local: "Bailan Bay Resort Beach Bar", vibe: "Silêncio total, deck sobre água, drink + estrelas", quem: "Casal lua de mel, fim de noite romântico", evite: "Quem busca música", precos: "Cocktail 250-350", endereco: "Dentro do Bailan Bay Resort, acesso a não-hóspedes 18h-22h" },
+];
+
 const KohChang3517 = () => {
   return (
     <>
