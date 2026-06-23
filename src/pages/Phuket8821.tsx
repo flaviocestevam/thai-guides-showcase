@@ -368,7 +368,7 @@ const Phuket8821 = () => {
             {PRAIAS.map((p) => (
               <Card key={p.nome} className="border-emerald-500/15">
                 <CardContent className="p-5 space-y-1.5">
-                  <h3 className="font-display font-bold text-lg">{p.nome}</h3>
+                  <h3 className="font-display font-bold text-lg"><G>{p.nome}</G></h3>
                   <p className="text-sm text-emerald-300">{p.perfil}</p>
                   <p className="text-sm text-muted-foreground">{p.como}</p>
                 </CardContent>
