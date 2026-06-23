@@ -303,6 +303,39 @@ const KohLanta4831 = () => {
             </div>
           </section>
 
+          <section id="clima">
+            <SectionTitle icon={CalendarDays} kicker="04 — Quando ir" title="Clima mês a mês — janela honesta" />
+            <Reveal>
+              <div className="pk-card p-0 overflow-hidden">
+                <div className="overflow-x-auto">
+                  <table className="pk-table">
+                    <thead><tr><th>Mês</th><th>Chuva</th><th>Vento</th><th>Mar (oeste)</th><th>Visi mergulho</th><th>Lotação</th><th>Preço</th><th>Veredito</th></tr></thead>
+                    <tbody>
+                      {CLIMA_MES.map((m) => (
+                        <tr key={m.mes}>
+                          <td className="pk-gold-soft font-semibold">{m.mes}</td>
+                          <td>{m.chuva}</td>
+                          <td>{m.vento}</td>
+                          <td>{m.mar}</td>
+                          <td>{m.visi}</td>
+                          <td>{m.lotacao}</td>
+                          <td className="font-medium">{m.preco}</td>
+                          <td className="text-sm">{m.veredito}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </Reveal>
+            <Reveal>
+              <div className="pk-callout pk-callout-alert mt-6">
+                <AlertTriangle className="w-5 h-5 shrink-0 mt-0.5" />
+                <p><strong>Maio-outubro fecha metade da ilha:</strong> beach bars de Klong Khong, sunset bars de Bamboo, vários restaurantes em Kantiang. Ferry Phi Phi-Lanta reduz. Janela ideal é <strong>nov-mar</strong>.</p>
+              </div>
+            </Reveal>
+          </section>
+
           <section id="hospedagem">
             <SectionTitle icon={Sparkles} kicker="04 — Onde dormir" title="Hospedagem por faixa real" />
             <div className="grid md:grid-cols-3 gap-6">
