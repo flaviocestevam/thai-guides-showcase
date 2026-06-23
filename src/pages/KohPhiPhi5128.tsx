@@ -245,7 +245,7 @@ const BOOKING_PP = [
   { quando: "Mai-Set (monção)", reserva: "Dia anterior", porque: "Tudo vazio e barato. Mas Maya pode fechar por mar agitado — não vá só pela foto." },
 ];
 
-
+const KohPhiPhi5128 = () => {
   return (
     <>
       <style>{PK_STYLES}</style>
