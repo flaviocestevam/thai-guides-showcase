@@ -306,6 +306,53 @@ const Retiros8834 = () => (
       </Section>
     ))}
 
+    {/* 12 POR DOAÇÃO — LISTA AGREGADA */}
+    <Section id="por-doacao" chapter="Lista agregada" title="12 retiros POR DOAÇÃO — todos juntos">
+      <p>Sérios, quase invisíveis no Google. Reserve por e-mail direto ou site oficial. Doação livre cobre alojamento, comida e ensinamento.</p>
+      <div className="grid gap-3">
+        {[
+          { name: "Wat Suan Mokkh", city: "Surat Thani", note: "10 dias Vipassana + Anapanasati, calendário mensal", site: "https://www.suanmokkh-idh.org" },
+          { name: "Wat Pa Tam Wua", city: "Mae Hong Son", note: "Aberto, vagas sempre, monges thai", site: "https://www.watpatamwua.com" },
+          { name: "Dhamma Kamala", city: "Prachinburi", note: "10 dias Goenka, calendário rígido", site: "https://www.kamala.dhamma.org" },
+          { name: "Dhamma Abha", city: "Phitsanulok", note: "Alternativa Goenka, mais vagas", site: "https://www.abha.dhamma.org" },
+          { name: "Wat Pah Nanachat", city: "Ubon Ratchathani", note: "Ajahn Chah, monges ocidentais (avançado)", site: "https://www.watpahnanachat.org" },
+          { name: "Wat Ram Poeng", city: "Chiang Mai", note: "Mahasi tradition, 10 ou 26 dias", site: "https://www.palikanon.com/vipassana/wat_rampoeng" },
+          { name: "Doi Suthep Vipassana", city: "Chiang Mai", note: "3, 10 ou 21 dias, montanha", site: "https://fivethousandyears.org" },
+          { name: "Wat Khao Tham", city: "Koh Phangan", note: "Único Vipassana sério em ilha", site: "https://www.watkowtahm.org" },
+          { name: "Wat Mahathat Section 5", city: "Bangkok", note: "Intro de 3-7 dias no centro", site: "https://www.mahachula.com" },
+          { name: "Plum Village Thailand", city: "Khao Yai", note: "Thich Nhat Hanh, mindfulness", site: "https://thaiplumvillage.org" },
+          { name: "Wat Marp Jan", city: "Rayong", note: "Tradição Ajahn Chah, floresta", site: "https://www.watmarpjan.org" },
+          { name: "Sorn Thawee Meditation Centre", city: "Chachoengsao", note: "Mahasi, 7-30 dias, perto de Bangkok", site: "https://www.sornthawee.org" },
+        ].map((x) => (
+          <Card key={x.name}>
+            <p><strong>{x.name}</strong> — {x.city}</p>
+            <p className="text-sm">{x.note}</p>
+            <div className="flex flex-wrap gap-3 pt-1">
+              <a href={gmaps(`${x.name} ${x.city} Thailand`)} target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline">→ Google Maps</a>
+              <a href={x.site} target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline">→ Site oficial</a>
+            </div>
+          </Card>
+        ))}
+      </div>
+    </Section>
+
+    {/* TOP 10 LUXO */}
+    <Section id="luxo" chapter="Bônus" title="Top 10 retiros de luxo que valem o preço">
+      <p>Quando vale pagar R$ 25k+: programa estruturado, equipe médica, resultado mensurável.</p>
+      <ol className="space-y-3 list-decimal pl-6">
+        <li><strong>Kamalaya (Koh Samui)</strong> — programa Burnout com médico dedicado.</li>
+        <li><strong>RAKxa (Bangkok / Bang Krachao)</strong> — único 'medical wellness' real, exames clínicos inclusos.</li>
+        <li><strong>Chiva-Som (Hua Hin)</strong> — pioneiro asiático, consultor de saúde dedicado.</li>
+        <li><strong>Six Senses Samui</strong> — programa 'Sleep' é o destaque, vilas em colina.</li>
+        <li><strong>Vikasa (Koh Samui)</strong> — yoga em falésia, quarto Cliff vale cada baht.</li>
+        <li><strong>Atmanjai (Phuket)</strong> — detox sério com médico ayurvédico residente.</li>
+        <li><strong>Anantara Golden Triangle (Chiang Rai)</strong> — wellness + elefantes resgatados.</li>
+        <li><strong>Pimalai (Koh Lanta)</strong> — spa em enseada isolada, 5* discreto.</li>
+        <li><strong>Sukko Cultural Spa (Phuket)</strong> — rituais Lanna 3h em vila tradicional.</li>
+        <li><strong>Amatara (Phuket)</strong> — wellness integrativo + medicina chinesa, beira-mar.</li>
+      </ol>
+    </Section>
+
     {/* PREPARAÇÃO */}
     <Section id="preparacao" chapter="Preparação" title="Como se preparar — 21 dias antes">
       <Card>
