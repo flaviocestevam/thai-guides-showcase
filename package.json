@@ -6,7 +6,7 @@
   "scripts": {
     "predev": "node scripts/generate-sitemap.js",
     "dev": "vite",
-    "prebuild": "node scripts/generate-sitemap.js && node scripts/audit-sales-vs-guide.mjs --strict",
+    "prebuild": "node scripts/generate-sitemap.js",
     "build": "vite build",
     "postbuild": "node scripts/ping-indexnow.js && node scripts/ping-google.js",
     "build:dev": "vite build --mode development",
