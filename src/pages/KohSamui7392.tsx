@@ -649,6 +649,217 @@ const KohSamui7392 = () => {
             </div>
           </section>
 
+          {/* ============== EXPANSÃO PADRÃO KOOD/LIPE ============== */}
+
+          <section id="visi-praias">
+            <SectionTitle icon={Waves} kicker="13 — Praias granular" title="Janela de praia × mês — qual rende quando" />
+            <Reveal>
+              <div className="pk-table">
+                <table>
+                  <thead><tr><th>Praia</th><th>Melhor</th><th>Evite</th><th>Mar</th><th>Nota</th></tr></thead>
+                  <tbody>
+                    {VISI_PRAIAS_SAMUI.map((v) => (
+                      <tr key={v.praia}>
+                        <td className="font-semibold"><G q={`${v.praia} Koh Samui`}>{v.praia}</G></td>
+                        <td className="pk-gold">{v.melhor}</td>
+                        <td>{v.evitar}</td>
+                        <td className="text-sm">{v.mar}</td>
+                        <td className="text-sm text-[hsl(var(--pk-muted))]">{v.nota}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </Reveal>
+          </section>
+
+          <section id="mapa-loop">
+            <SectionTitle icon={Footprints} kicker="14 — Loop scooter" title="Distância e tempo real entre pontos da ilha" />
+            <Reveal>
+              <div className="pk-table">
+                <table>
+                  <thead><tr><th>De</th><th>Para</th><th>Km</th><th>Tempo</th><th>Piso</th><th>Risco</th></tr></thead>
+                  <tbody>
+                    {MAPA_LOOP_SAMUI.map((m, i) => (
+                      <tr key={i}>
+                        <td>{m.de}</td>
+                        <td className="font-semibold">{m.para}</td>
+                        <td>{m.km}</td>
+                        <td className="pk-gold">{m.min}</td>
+                        <td className="text-sm">{m.piso}</td>
+                        <td className="text-sm text-[hsl(var(--pk-muted))]">{m.risco}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <p className="text-sm text-[hsl(var(--pk-muted))] mt-4">Sem PID = sem seguro de scooter, regra inegociável. Posto de gasolina rareia a oeste da ilha — abasteça antes.</p>
+            </Reveal>
+          </section>
+
+          <section id="mes-perfil">
+            <SectionTitle icon={CalendarClock} kicker="15 — Quando vir" title="Mês ideal por perfil de viajante" />
+            <div className="grid md:grid-cols-2 gap-6">
+              {MES_PERFIL_SAMUI.map((p, i) => (
+                <Reveal key={p.perfil} i={i}>
+                  <article className="pk-card h-full">
+                    <p className="pk-kicker">Perfil</p>
+                    <h3 className="pk-h3 mt-1">{p.perfil}</h3>
+                    <div className="pk-divider my-4" />
+                    <p className="text-sm"><span className="pk-gold font-semibold">Mês:</span> {p.mes}</p>
+                    <p className="text-sm text-[hsl(var(--pk-muted))] mt-2">{p.porque}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="comparativo">
+            <SectionTitle icon={Scale} kicker="16 — Decisão" title="Koh Samui × Koh Phangan × Koh Tao" />
+            <Reveal>
+              <div className="pk-table">
+                <table>
+                  <thead><tr><th>Dimensão</th><th>Samui</th><th>Phangan</th><th>Tao</th></tr></thead>
+                  <tbody>
+                    {COMPARATIVO_SAMUI.map((c) => (
+                      <tr key={c.dim}>
+                        <td className="font-semibold">{c.dim}</td>
+                        <td>{c.samui}</td>
+                        <td>{c.phangan}</td>
+                        <td>{c.tao}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </Reveal>
+          </section>
+
+          <section id="ang-thong">
+            <SectionTitle icon={Anchor} kicker="17 — Mar" title="Ang Thong, Koh Tan e sunset cruise" />
+            <div className="grid md:grid-cols-2 gap-6">
+              {ANG_THONG_TOURS.map((t, i) => (
+                <Reveal key={t.tour} i={i}>
+                  <article className="pk-card h-full">
+                    <p className="pk-kicker">{t.duracao}</p>
+                    <h3 className="pk-h3 mt-1">{t.tour}</h3>
+                    <div className="pk-divider my-4" />
+                    <p className="text-sm pk-gold">{t.preco}</p>
+                    <p className="text-sm mt-2"><span className="font-semibold">Inclui:</span> {t.inclui}</p>
+                    <p className="text-sm mt-1"><span className="font-semibold">Operadora:</span> {t.operadora}</p>
+                    <p className="text-sm text-[hsl(var(--pk-muted))] mt-2">{t.obs}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="pesca">
+            <SectionTitle icon={Fish} kicker="18 — Cultura local" title="Pesca tradicional e lulada noturna" />
+            <div className="grid md:grid-cols-3 gap-6">
+              {PESCA_SAMUI.map((p, i) => (
+                <Reveal key={p.tipo} i={i}>
+                  <article className="pk-card h-full">
+                    <p className="pk-kicker">Modalidade</p>
+                    <h3 className="pk-h3 mt-1">{p.tipo}</h3>
+                    <div className="pk-divider my-4" />
+                    <p className="text-sm">{p.oque}</p>
+                    <p className="text-sm pk-gold mt-2">{p.preco}</p>
+                    <p className="text-sm text-[hsl(var(--pk-muted))] mt-2">{p.obs}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="spa">
+            <SectionTitle icon={Flower2} kicker="19 — Capital do wellness" title="Spa, retreat e massagem — do Kamalaya ao quiosque" />
+            <div className="grid md:grid-cols-2 gap-6">
+              {SPA_SAMUI.map((s, i) => (
+                <Reveal key={s.lugar} i={i}>
+                  <article className="pk-card h-full">
+                    <p className="pk-kicker">Wellness</p>
+                    <h3 className="pk-h3 mt-1"><G q={`${s.lugar} Koh Samui`}>{s.lugar}</G></h3>
+                    <div className="pk-divider my-4" />
+                    <p className="text-sm">{s.oque}</p>
+                    <p className="text-sm pk-gold mt-2">{s.preco}</p>
+                    <p className="text-sm text-[hsl(var(--pk-muted))] mt-2"><span className="font-semibold">Melhor para:</span> {s.melhor}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="norte-isolado">
+            <SectionTitle icon={Home} kicker="20 — Lado isolado" title="Lipa Noi, Bang Por e Hua Thanon — o Samui sem Chaweng" />
+            <div className="grid md:grid-cols-3 gap-6">
+              {VILAREJO_SAMUI.map((v, i) => (
+                <Reveal key={v.lugar} i={i}>
+                  <article className="pk-card h-full">
+                    <p className="pk-kicker">Refúgio</p>
+                    <h3 className="pk-h3 mt-1"><G q={`${v.lugar} Koh Samui`}>{v.lugar}</G></h3>
+                    <div className="pk-divider my-4" />
+                    <p className="text-sm"><span className="pk-gold">Como chegar:</span> {v.como}</p>
+                    <p className="text-sm mt-2">{v.oque}</p>
+                    <p className="text-sm pk-gold mt-2">{v.quanto}</p>
+                    <p className="text-sm text-[hsl(var(--pk-muted))] mt-2">{v.obs}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="familia">
+            <SectionTitle icon={Baby} kicker="21 — Crianças" title="Samui com kids — o que rola e o que evitar" />
+            <Reveal>
+              <ul className="space-y-3">
+                {FAMILIA_SAMUI.map((f) => (
+                  <li key={f.item} className="pk-card">
+                    <p className="font-semibold pk-gold">{f.item}</p>
+                    <p className="text-sm text-[hsl(var(--pk-muted))] mt-2">{f.detalhe}</p>
+                  </li>
+                ))}
+              </ul>
+            </Reveal>
+          </section>
+
+          <section id="conservacao">
+            <SectionTitle icon={Leaf} kicker="22 — Devolva pra ilha" title="Conservação, santuário ético e eco resort" />
+            <div className="grid md:grid-cols-2 gap-6">
+              {CONSERVACAO_SAMUI.map((c, i) => (
+                <Reveal key={c.iniciativa} i={i}>
+                  <article className="pk-card h-full">
+                    <p className="pk-kicker">Iniciativa</p>
+                    <h3 className="pk-h3 mt-1">{c.iniciativa}</h3>
+                    <div className="pk-divider my-4" />
+                    <p className="text-sm">{c.oque}</p>
+                    <p className="text-sm pk-gold mt-2">{c.como}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="booking">
+            <SectionTitle icon={CalendarClock} kicker="23 — Antecedência" title="Quando reservar voo, resort, Ang Thong e retreat" />
+            <Reveal>
+              <div className="pk-table">
+                <table>
+                  <thead><tr><th>Período</th><th>Reserve com</th><th>Por quê</th></tr></thead>
+                  <tbody>
+                    {BOOKING_SAMUI.map((b) => (
+                      <tr key={b.quando}>
+                        <td className="font-semibold">{b.quando}</td>
+                        <td className="pk-gold">{b.reserva}</td>
+                        <td className="text-sm text-[hsl(var(--pk-muted))]">{b.porque}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </Reveal>
+          </section>
+
           <section className="pt-16 border-t border-[hsl(var(--pk-line))]">
             <p className="pk-kicker">Continue explorando</p>
             <h2 className="pk-h2 mt-2">Outras ilhas e guias</h2>
