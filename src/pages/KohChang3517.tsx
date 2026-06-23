@@ -911,6 +911,319 @@ const KohChang3517 = () => {
             </div>
           </section>
 
+          {/* ===== 1 — Mapa visual das praias norte → sul ===== */}
+          <section id="mapa-praias">
+            <SectionTitle icon={MapIcon} kicker="20 — Visão geral" title="Mapa visual das 7 praias-bairro (norte → sul)" />
+            <Reveal>
+              <p className="text-[hsl(var(--pk-muted))] mb-6 max-w-2xl">A costa oeste concentra 6 das 7 praias-bairro, em fila do norte ao sul. Salakphet é a única do lado leste. Use essa tabela para decidir EM QUE ORDEM dividir suas noites se ficar em 2 bases.</p>
+              <div className="pk-card p-0 overflow-hidden">
+                <div className="overflow-x-auto">
+                  <table className="pk-table">
+                    <thead><tr><th>Ordem</th><th>Praia-bairro</th><th>Tag</th><th>Lado da ilha</th></tr></thead>
+                    <tbody>
+                      {MAPA_PRAIAS.map((m) => (
+                        <tr key={m.nome}>
+                          <td className="pk-gold-soft font-medium">{m.ordem}</td>
+                          <td className="font-semibold"><G>{m.nome}</G></td>
+                          <td><span className={`pk-verdict ${TONE_CLASS[m.tone]}`}>{m.tag}</span></td>
+                          <td>{m.lado}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </Reveal>
+            <Reveal>
+              <div className="pk-callout pk-callout-info mt-6">
+                <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5" />
+                <p><strong>Sugestão de split:</strong> 4 noites no centro-norte (Klong Prao ou Kai Bae) + 2 noites no sul (Bang Bao ou Lonely) cobre 90% do que a ilha tem.</p>
+              </div>
+            </Reveal>
+          </section>
+
+          {/* ===== 6 — Cachoeiras detalhadas ===== */}
+          <section id="cachoeiras-detalhe">
+            <SectionTitle icon={Sun} kicker="21 — Selva avaliada" title="5 cachoeiras avaliadas — qual paga ingresso, qual é grátis" />
+            <div className="pk-card p-0 overflow-hidden">
+              <div className="overflow-x-auto">
+                <table className="pk-table">
+                  <thead><tr><th>Cachoeira</th><th>Taxa</th><th>Trilha</th><th>Piscina</th><th>Vale?</th></tr></thead>
+                  <tbody>
+                    {CACHOEIRAS_DETALHE.map((c) => (
+                      <tr key={c.nome} className={TONE_CLASS[c.tone]}>
+                        <td className="font-semibold"><G>{c.nome} waterfall</G></td>
+                        <td className="pk-gold-soft">{c.taxa}</td>
+                        <td>{c.trilha}</td>
+                        <td>{c.piscina}</td>
+                        <td className="text-sm">{c.vale}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <Reveal>
+              <div className="pk-callout pk-callout-warn mt-6">
+                <AlertTriangle className="w-5 h-5 shrink-0 mt-0.5" />
+                <p>Combine a tabela acima com o calendário mensal (seção <em>Cachoeira mês a mês</em>). Pagar 200 baht em Klong Plu seca em março é o erro mais reportado.</p>
+              </div>
+            </Reveal>
+          </section>
+
+          {/* ===== 7 — Sunset spots ranqueados ===== */}
+          <section id="sunsets">
+            <SectionTitle icon={Sun} kicker="22 — Pôr do sol" title="Sunset spots ranqueados — chegue no horário certo" />
+            <div className="grid md:grid-cols-2 gap-5">
+              {SUNSETS.map((s, i) => (
+                <Reveal key={s.local} i={i}>
+                  <article className="pk-card pk-card-tight h-full">
+                    <div className="flex justify-between items-start gap-3 mb-2">
+                      <h3 className="pk-h4"><G>{s.local}</G></h3>
+                      <span className="pk-tag-sm pk-gold-soft">{s.rank}</span>
+                    </div>
+                    <p className="pk-kicker mt-2">Horário ideal</p>
+                    <p className="text-sm">{s.horario}</p>
+                    <p className="text-sm text-[hsl(var(--pk-muted))] mt-3">{s.oque}</p>
+                    <p className="text-xs text-[hsl(var(--pk-muted))] mt-2 italic">{s.obs}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          {/* ===== 8 — Trilha Long Beach (Hat Yao) ===== */}
+          <section id="trilha-hatyao">
+            <SectionTitle icon={Compass} kicker="23 — Trilha" title="Trilha Long Beach (Hat Yao) — passo a passo" />
+            <Reveal>
+              <div className="pk-card pk-card-feature mb-6">
+                <p className="text-lg leading-relaxed">{TRILHA_HATYAO.resumo}</p>
+              </div>
+            </Reveal>
+            <div className="grid md:grid-cols-3 gap-5 mb-6">
+              <Reveal><article className="pk-card pk-card-tight"><p className="pk-kicker">Distância</p><p className="pk-h4 mt-1">{TRILHA_HATYAO.distancia}</p></article></Reveal>
+              <Reveal i={1}><article className="pk-card pk-card-tight"><p className="pk-kicker">Duração</p><p className="pk-h4 mt-1">{TRILHA_HATYAO.duracao}</p></article></Reveal>
+              <Reveal i={2}><article className="pk-card pk-card-tight"><p className="pk-kicker">Dificuldade</p><p className="pk-h4 mt-1">{TRILHA_HATYAO.dificuldade}</p></article></Reveal>
+            </div>
+            <div className="grid md:grid-cols-2 gap-6">
+              <Reveal>
+                <article className="pk-card pk-tone-ok h-full">
+                  <p className="pk-kicker mb-3">O que levar</p>
+                  <ul className="space-y-2 text-sm">
+                    {TRILHA_HATYAO.levar.map((l) => (
+                      <li key={l} className="flex gap-2.5"><CheckCircle2 className="w-4 h-4 text-[hsl(var(--pk-ok))] shrink-0 mt-0.5" /><span>{l}</span></li>
+                    ))}
+                  </ul>
+                </article>
+              </Reveal>
+              <Reveal i={1}>
+                <article className="pk-card pk-tone-alert h-full">
+                  <p className="pk-kicker mb-3">Atenção crítica</p>
+                  <div className="space-y-4 text-sm">
+                    <div><strong className="pk-gold">Início:</strong> <span className="text-[hsl(var(--pk-muted))]">{TRILHA_HATYAO.inicio}</span></div>
+                    <div><strong className="pk-gold">Maré:</strong> <span className="text-[hsl(var(--pk-muted))]">{TRILHA_HATYAO.mare}</span></div>
+                    <div><strong className="pk-gold">Perigo:</strong> <span className="text-[hsl(var(--pk-muted))]">{TRILHA_HATYAO.perigo}</span></div>
+                    <div><strong className="pk-gold">Recompensa:</strong> <span className="text-[hsl(var(--pk-muted))]">{TRILHA_HATYAO.recompensa}</span></div>
+                  </div>
+                </article>
+              </Reveal>
+            </div>
+          </section>
+
+          {/* ===== 4 — Mergulho Koh Rang ===== */}
+          <section id="mergulho">
+            <SectionTitle icon={Waves} kicker="24 — Fundo do mar" title="Mergulho em Koh Rang — dive sites e preço real" />
+            <Reveal>
+              <div className="pk-card pk-card-feature mb-8">
+                <p className="text-lg leading-relaxed">
+                  <strong className="pk-gold">Koh Rang National Marine Park</strong> fica 1h de speedboat ao sul de Chang.
+                  Visibilidade pico (15-20m) é <strong>fevereiro a maio</strong>. Em monção (jun-set) cai para 4-7m e muitos dive shops fecham.
+                  Não é Koh Tao — visibilidade é menor e fauna é diferente —, mas é o melhor mergulho do leste tailandês.
+                </p>
+              </div>
+            </Reveal>
+            <h3 className="pk-h3 mb-5">5 dive sites principais</h3>
+            <div className="pk-card p-0 overflow-hidden mb-10">
+              <div className="overflow-x-auto">
+                <table className="pk-table">
+                  <thead><tr><th>Dive site</th><th>Nível</th><th>Prof.</th><th>O que tem</th><th>Melhor época</th></tr></thead>
+                  <tbody>
+                    {DIVE_SITES.map((d) => (
+                      <tr key={d.nome}>
+                        <td className="font-semibold">{d.nome}</td>
+                        <td>{d.nivel}</td>
+                        <td className="pk-gold-soft">{d.prof}</td>
+                        <td className="text-sm">{d.oque}</td>
+                        <td className="text-sm whitespace-nowrap">{d.quando}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <h3 className="pk-h3 mb-5">Preço real (reais e baht)</h3>
+            <div className="grid md:grid-cols-2 gap-4">
+              {MERGULHO_PRECO.map((m, i) => (
+                <Reveal key={m.item} i={i}>
+                  <article className="pk-card pk-card-tight h-full">
+                    <h4 className="pk-h4">{m.item}</h4>
+                    <p className="pk-gold-soft font-medium text-sm mt-2">{m.preco}</p>
+                    <p className="text-xs text-[hsl(var(--pk-muted))] mt-2">{m.obs}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+            <Reveal>
+              <div className="pk-callout pk-callout-info mt-6">
+                <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5" />
+                <p><strong>Dica:</strong> só <G q="BB Divers Koh Chang">BB Divers</G> e <G q="Koh Chang Divers Bang Bao">Koh Chang Divers</G> têm reputação consistente. Operadoras "low cost" no White Sand reciclam barco lotado e instrutor sem briefing — risco maior em mergulho que economia de 300 baht justifica.</p>
+              </div>
+            </Reveal>
+          </section>
+
+          {/* ===== 9 — Vida noturna decodificada ===== */}
+          <section id="noturna">
+            <SectionTitle icon={Sparkles} kicker="25 — Noite" title="Vida noturna decodificada — pra quem quer (e pra quem foge)" />
+            <div className="grid md:grid-cols-2 gap-5">
+              {NOTURNA.map((n, i) => (
+                <Reveal key={n.local} i={i}>
+                  <article className="pk-card pk-card-tight h-full">
+                    <h3 className="pk-h4"><G>{n.local}</G></h3>
+                    <p className="pk-gold-soft text-sm mt-2">{n.vibe}</p>
+                    <dl className="pk-dl mt-4">
+                      <div><dt>Pra quem</dt><dd>{n.quem}</dd></div>
+                      <div><dt>Evite se</dt><dd>{n.evite}</dd></div>
+                      <div><dt>Preço</dt><dd className="pk-gold-soft">{n.precos}</dd></div>
+                      <div><dt>Onde</dt><dd className="text-xs italic">{n.endereco}</dd></div>
+                    </dl>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          {/* ===== 3 — Arquipélago de Trat ===== */}
+          <section id="arquipelago">
+            <SectionTitle icon={Ship} kicker="26 — Combo arquipélago" title="Koh Chang + Mak + Kood — qual ilha pra qual perfil" />
+            <Reveal>
+              <p className="text-[hsl(var(--pk-muted))] mb-6 max-w-2xl">As 4 ilhas do arquipélago de Trat se completam. Combinar 2-3 num roteiro de 10 dias é o jeito honesto de aproveitar a região. Use Chang como base e adicione conforme o perfil.</p>
+            </Reveal>
+            <div className="grid md:grid-cols-2 gap-5 mb-10">
+              {ARQUIPELAGO.map((a, i) => (
+                <Reveal key={a.ilha} i={i}>
+                  <article className="pk-card h-full">
+                    <div className="flex justify-between items-start gap-3 mb-3">
+                      <h3 className="pk-h3"><G>{a.ilha}</G></h3>
+                      <span className="pk-tag-sm">{a.dias}</span>
+                    </div>
+                    <p className="pk-kicker">Tamanho</p>
+                    <p className="text-sm mb-3">{a.tamanho}</p>
+                    <p className="pk-kicker">Tom</p>
+                    <p className="text-sm mb-3">{a.tom}</p>
+                    <p className="pk-kicker">Pra quem</p>
+                    <p className="text-sm mb-3">{a.perfil}</p>
+                    <p className="text-sm text-[hsl(var(--pk-alert))]"><strong>Evite se:</strong> {a.evite}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+            <h3 className="pk-h3 mb-5">Ferries entre as 4 ilhas (alta temporada nov-mai)</h3>
+            <div className="pk-card p-0 overflow-hidden">
+              <div className="overflow-x-auto">
+                <table className="pk-table">
+                  <thead><tr><th>Rota</th><th>Operadora</th><th>Saídas</th><th>Preço</th></tr></thead>
+                  <tbody>
+                    {ARQUIPELAGO_FERRIES.map((f) => (
+                      <tr key={f.rota}>
+                        <td className="font-semibold">{f.rota}</td>
+                        <td>{f.op}</td>
+                        <td>{f.saidas}</td>
+                        <td className="pk-gold-soft">{f.preco}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <Reveal>
+              <div className="pk-callout pk-callout-warn mt-6">
+                <AlertTriangle className="w-5 h-5 shrink-0 mt-0.5" />
+                <p><strong>Low season (jun-out):</strong> todos esses ferries inter-ilhas são reduzidos ou cancelados. Saída de Bang Bao pier vira diária única e sujeita ao mar.</p>
+              </div>
+            </Reveal>
+          </section>
+
+          {/* ===== 5 — Travessia Camboja ===== */}
+          <section id="camboja">
+            <SectionTitle icon={MapPin} kicker="27 — Fronteira" title="Travessia para o Camboja — Koh Kong e Sihanoukville" />
+            <Reveal>
+              <div className="pk-card pk-card-feature mb-8">
+                <p className="text-lg leading-relaxed">
+                  Chang é a ilha tailandesa mais próxima do Camboja. A fronteira <strong className="pk-gold">Hat Lek (TH) ⇄ Cham Yeam (KH)</strong> fica a 2h30 da Koh Chang. Combinar 5 dias de Chang + 4 dias de Sihanoukville (praias cambojanas) custa 1/3 de voltar a Bangkok e pegar voo para Phnom Penh.
+                </p>
+              </div>
+            </Reveal>
+            <h3 className="pk-h3 mb-5">Os 5 passos</h3>
+            <ol className="pk-ol mb-10">
+              {CAMBOJA_PASSOS.map((p) => (
+                <li key={p.passo} className="text-sm leading-relaxed"><strong className="pk-gold">{p.passo}:</strong> {p.como}</li>
+              ))}
+            </ol>
+            <h3 className="pk-h3 mb-5">5 scams clássicos na fronteira (e a resposta)</h3>
+            <div className="grid md:grid-cols-2 gap-4">
+              {CAMBOJA_SCAMS.map((s, i) => (
+                <Reveal key={s.golpe} i={i}>
+                  <article className="pk-card pk-card-tight h-full">
+                    <p className="text-sm font-semibold flex gap-2"><AlertTriangle className="w-4 h-4 text-[hsl(var(--pk-alert))] shrink-0 mt-0.5" /> {s.golpe}</p>
+                    <p className="text-sm text-[hsl(var(--pk-muted))] mt-2 flex gap-2"><CheckCircle2 className="w-4 h-4 text-[hsl(var(--pk-ok))] shrink-0 mt-0.5" /> {s.resposta}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+            <Reveal>
+              <div className="pk-callout pk-callout-warn mt-6">
+                <AlertTriangle className="w-5 h-5 shrink-0 mt-0.5" />
+                <p><strong>Documento:</strong> passaporte com 6+ meses de validade obrigatório. Brasileiros têm direito a visa-on-arrival cambojano (US$ 30, 30 dias). Sem comprovar saída em até 30 dias, multa de US$ 10/dia.</p>
+              </div>
+            </Reveal>
+          </section>
+
+          {/* ===== 2 — Clima mês a mês ===== */}
+          <section id="clima">
+            <SectionTitle icon={Sun} kicker="28 — Janela climática" title="Clima mês a mês — quando vir (e quando NÃO vir)" />
+            <Reveal>
+              <p className="text-[hsl(var(--pk-muted))] mb-6 max-w-2xl">Chuva, vento, mar, visibilidade pra mergulho, lotação e diária média de hotel mid-range. Use junto com a tabela de cachoeira mês a mês.</p>
+              <div className="pk-card p-0 overflow-hidden">
+                <div className="overflow-x-auto">
+                  <table className="pk-table">
+                    <thead><tr><th>Mês</th><th>Chuva</th><th>Vento</th><th>Mar</th><th>Viz mergulho</th><th>Lotação</th><th>Diária mid</th></tr></thead>
+                    <tbody>
+                      {CLIMA_MES.map((c) => (
+                        <tr key={c.mes} className={TONE_CLASS[c.tone]}>
+                          <td className="font-semibold">{c.mes}</td>
+                          <td>{c.chuva}</td>
+                          <td>{c.vento}</td>
+                          <td>{c.mar}</td>
+                          <td className="pk-gold-soft">{c.viz}</td>
+                          <td>{c.lotacao}</td>
+                          <td className="pk-gold-soft">{c.diaria}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </Reveal>
+            <Reveal>
+              <div className="pk-callout pk-callout-info mt-6">
+                <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5" />
+                <p><strong>Janela de ouro:</strong> fev-mar (mar liso + viz pico). <strong>Melhor custo-benefício:</strong> nov e início de dez (mar bom, diária 30% mais barata, ainda sem alta). <strong>Não vá em jul-set:</strong> metade dos restaurantes fecha, ferries inter-ilhas cancelam.</p>
+              </div>
+            </Reveal>
+          </section>
+
+
+
           <section className="pt-16 border-t border-[hsl(var(--pk-line))]">
             <p className="pk-kicker">Continue explorando</p>
             <h2 className="pk-h2 mt-2">Outras ilhas e guias</h2>
