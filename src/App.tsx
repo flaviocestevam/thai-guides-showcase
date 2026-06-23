@@ -48,6 +48,7 @@ import Pets from "./pages/Pets.tsx";
 import Criancas from "./pages/Criancas.tsx";
 import CasasDeMassagem from "./pages/CasasDeMassagem.tsx";
 import Retiros from "./pages/Retiros.tsx";
+import Retiros8834 from "./pages/Retiros8834.tsx";
 import Ilhas from "./pages/Ilhas.tsx";
 import IlhaPage from "./pages/IlhaPage.tsx";
 import { ilhasMeta } from "./data/sales/ilhas";
