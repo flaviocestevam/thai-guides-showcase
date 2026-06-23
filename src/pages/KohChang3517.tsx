@@ -11,18 +11,27 @@ const G = makeMapChip("Koh Chang, Thailand");
 
 const TOC = [
   { id: "comeco", label: "Antes de tudo", icon: Compass },
+  { id: "mapa-praias", label: "Mapa das praias", icon: MapIcon },
   { id: "bairros", label: "Praias-bairro", icon: Home },
   { id: "praias", label: "Praias", icon: Waves },
   { id: "selva", label: "Selva", icon: Sun },
+  { id: "cachoeiras-detalhe", label: "Cachoeiras avaliadas", icon: Sun },
+  { id: "sunsets", label: "Sunset spots", icon: Sun },
+  { id: "trilha-hatyao", label: "Trilha Hat Yao", icon: Compass },
   { id: "hospedagem", label: "Hospedagem", icon: Sparkles },
   { id: "transfer", label: "Chegada", icon: MapPin },
   { id: "moto", label: "Scooter", icon: Bike },
   { id: "daytrips", label: "Day-trips", icon: Ship },
+  { id: "mergulho", label: "Mergulho Koh Rang", icon: Waves },
+  { id: "noturna", label: "Vida noturna", icon: Sparkles },
   { id: "comida", label: "Comida", icon: UtensilsCrossed },
   { id: "roteiros", label: "Roteiros", icon: Sun },
+  { id: "arquipelago", label: "Chang + Mak + Kood", icon: Ship },
+  { id: "camboja", label: "Travessia Camboja", icon: MapPin },
   { id: "antigolpe", label: "Anti-golpe", icon: ShieldCheck },
   { id: "blacklist", label: "Lista negra", icon: XCircle },
   { id: "cachoeiras", label: "Cachoeira mês a mês", icon: Sun },
+  { id: "clima", label: "Clima mês a mês", icon: Sun },
   { id: "ferries", label: "Ferries", icon: Ship },
   { id: "checklist", label: "Checklist viagem", icon: ShieldCheck },
   { id: "conectividade", label: "SIM & Wi-Fi", icon: MapPin },
@@ -228,6 +237,132 @@ const COMIDA = [
   { lugar: "Salakphet Seafood Restaurant", bairro: "Salakphet", oque: "Garoupa fresca, vista de manguezal.", preco: "250-600 baht" },
   { lugar: "15 Palms Beach Bar", bairro: "Klong Prao", oque: "Café da manhã + sunset, vista frontal.", preco: "200-380 baht" },
   { lugar: "Toh Pho Bakery", bairro: "Klong Prao", oque: "Pão sourdough + sanduíches sérios.", preco: "120-280 baht" },
+];
+
+// 1 — Mapa visual norte → sul (todas no oeste, exceto Salakphet leste)
+const MAPA_PRAIAS: { ordem: string; nome: string; tag: string; tone: Tone; lado: string; }[] = [
+  { ordem: "N1", nome: "White Sand Beach", tag: "AGITO", tone: "warn", lado: "Oeste norte" },
+  { ordem: "N2", nome: "Klong Prao", tag: "FAMÍLIA", tone: "ok", lado: "Oeste centro-norte" },
+  { ordem: "N3", nome: "Kai Bae", tag: "CASAL/SUNSET", tone: "ok", lado: "Oeste centro" },
+  { ordem: "S1", nome: "Lonely Beach", tag: "MOCHILEIRO/FESTA", tone: "info", lado: "Oeste sul" },
+  { ordem: "S2", nome: "Bailan", tag: "ESCONDIDO", tone: "premium", lado: "Oeste sul" },
+  { ordem: "S3", nome: "Bang Bao", tag: "PIER/SUNSET", tone: "info", lado: "Ponta sudoeste" },
+  { ordem: "L1", nome: "Salakphet", tag: "AUTÊNTICO", tone: "info", lado: "Sudeste (leste)" },
+];
+
+// 2 — Clima mês a mês (chuva, vento, mar, viz mergulho, lotação, diária média)
+const CLIMA_MES: { mes: string; chuva: string; vento: string; mar: string; viz: string; lotacao: string; diaria: string; tone: Tone; }[] = [
+  { mes: "Janeiro",   chuva: "Quase zero", vento: "Calmo",   mar: "Liso",       viz: "12-18m", lotacao: "Alta",      diaria: "R$ 280", tone: "premium" },
+  { mes: "Fevereiro", chuva: "Zero",       vento: "Calmo",   mar: "Liso",       viz: "15-20m", lotacao: "Pico",      diaria: "R$ 320", tone: "premium" },
+  { mes: "Março",     chuva: "Baixa",      vento: "Fraco",   mar: "Liso",       viz: "15-20m", lotacao: "Alta",      diaria: "R$ 280", tone: "premium" },
+  { mes: "Abril",     chuva: "Pontual",    vento: "Fraco",   mar: "Calmo",      viz: "10-15m", lotacao: "Média",     diaria: "R$ 230", tone: "ok" },
+  { mes: "Maio",      chuva: "Aumenta",    vento: "SO virando", mar: "Mexe à tarde", viz: "8-12m",  lotacao: "Baixa",     diaria: "R$ 180", tone: "info" },
+  { mes: "Junho",     chuva: "Forte",      vento: "SO forte",mar: "Agitado",    viz: "5-8m",   lotacao: "Muito baixa", diaria: "R$ 150", tone: "warn" },
+  { mes: "Julho",     chuva: "Pico monção",vento: "Forte",   mar: "Agitado",    viz: "4-7m",   lotacao: "Vazia",     diaria: "R$ 140", tone: "alert" },
+  { mes: "Agosto",    chuva: "Forte",      vento: "Forte",   mar: "Agitado",    viz: "4-7m",   lotacao: "Vazia",     diaria: "R$ 140", tone: "alert" },
+  { mes: "Setembro",  chuva: "Pico monção",vento: "Forte",   mar: "Muito agitado", viz: "3-6m",   lotacao: "Mínima",    diaria: "R$ 130", tone: "alert" },
+  { mes: "Outubro",   chuva: "Diminui",    vento: "Vira NE", mar: "Calma volta",viz: "6-10m",  lotacao: "Baixa",     diaria: "R$ 170", tone: "warn" },
+  { mes: "Novembro",  chuva: "Pontual",    vento: "Fraco",   mar: "Liso volta", viz: "10-15m", lotacao: "Média",     diaria: "R$ 220", tone: "ok" },
+  { mes: "Dezembro",  chuva: "Quase zero", vento: "Calmo",   mar: "Liso",       viz: "12-18m", lotacao: "Alta",      diaria: "R$ 290", tone: "premium" },
+];
+
+// 3 — Arquipélago de Trat: Chang vs Mak vs Kood por perfil
+const ARQUIPELAGO = [
+  { ilha: "Koh Chang", tamanho: "Grande (2ª maior da TH)", tom: "Selva + 7 praias + infra completa", perfil: "Base do arquipélago. Família, casal, mochileiro — tem tudo.", dias: "5-7 noites", evite: "Quem busca água azul piscina de cartão postal." },
+  { ilha: "Koh Mak", tamanho: "Médio (16 km²)", tom: "Slow travel real, zero balada", perfil: "Casal recém-formado, leitor, ciclista. Bicicleta resolve a ilha.", dias: "2-3 noites", evite: "Quem precisa de movimento depois das 21h." },
+  { ilha: "Koh Kood", tamanho: "Médio-grande (3ª maior)", tom: "Água mais azul do arquipélago, resort isolado", perfil: "Lua de mel, fotógrafo, resort premium. Cape Kuad + Klong Chao waterfall.", dias: "3-4 noites", evite: "Mochileiro low budget — opções caras." },
+  { ilha: "Koh Wai", tamanho: "Pequena (3 km²)", tom: "Sem energia 24h, snorkel cristalino", perfil: "Day-trip ou 1 noite robinson. Sem ATM, sem 4G.", dias: "1 noite (máx 2)", evite: "Quem precisa de Wi-Fi ou ar condicionado." },
+];
+
+const ARQUIPELAGO_FERRIES = [
+  { rota: "Koh Chang ⇄ Koh Mak", op: "Bang Bao Boat / Boonsiri", saidas: "09h e 13h (nov-mai)", preco: "450 baht" },
+  { rota: "Koh Chang ⇄ Koh Kood", op: "Boonsiri / Bang Bao", saidas: "10h30 e 13h30 (nov-mai)", preco: "650-800 baht" },
+  { rota: "Koh Mak ⇄ Koh Kood", op: "Bang Bao Boat", saidas: "11h e 14h (nov-mai)", preco: "400 baht" },
+  { rota: "Koh Chang ⇄ Koh Wai", op: "Bang Bao Boat", saidas: "09h (nov-mai)", preco: "400 baht" },
+  { rota: "Koh Mak ⇄ Koh Wai", op: "Speedboat local", saidas: "Sob demanda", preco: "300 baht" },
+];
+
+// 4 — Mergulho Koh Rang (parque marinho ao sul de Chang)
+const DIVE_SITES = [
+  { nome: "Hin Luk Bat", nivel: "Open Water+", prof: "8-18 m", oque: "Pinnacle com cardume de barracudas e moray eel. Carro-chefe.", quando: "Fev-mai (visibilidade)" },
+  { nome: "Hin Rap", nivel: "Open Water+", prof: "10-20 m", oque: "Coral hard saudável, polvos, peixe-escorpião. Bom para fotografia.", quando: "Fev-mai" },
+  { nome: "Koh Rang Pinnacle", nivel: "Advanced", prof: "18-30 m", oque: "Parede com gorgônias gigantes. Tubarão-leopardo ocasional.", quando: "Mar-mai (viz pico)" },
+  { nome: "HTMS Chang wreck", nivel: "Advanced/Wreck", prof: "15-30 m", oque: "Naufrágio militar afundado em 2012. 100m de comprimento.", quando: "Fev-abr" },
+  { nome: "Wai Wreck (Koh Wai)", nivel: "Open Water", prof: "10-15 m", oque: "Wreck raso, ótimo segundo dive. Cardumes de yellowtails.", quando: "Fev-mai" },
+];
+
+const MERGULHO_PRECO = [
+  { item: "Fun dive 2 tanques (Koh Rang)", preco: "3.200-3.900 baht (~R$ 530-650)", obs: "Inclui equipamento + almoço. Entrada parque 400 baht à parte." },
+  { item: "Open Water PADI 3-4 dias", preco: "13.500-16.000 baht (~R$ 2.250-2.700)", obs: "Em Koh Tao sai 9.800 baht. Compense pelo deslocamento." },
+  { item: "Advanced Open Water 2 dias", preco: "11.000-13.000 baht (~R$ 1.800-2.150)", obs: "Inclui wreck do HTMS Chang como 1 dos 5 dives." },
+  { item: "Discover Scuba (sem certificação)", preco: "3.800 baht (~R$ 630)", obs: "1 dive raso até 12m. Bom para experimentar antes do OW." },
+];
+
+// 5 — Travessia para Camboja (Hat Lek / Koh Kong)
+const CAMBOJA_PASSOS = [
+  { passo: "1. Saída de Chang", como: "Minivan combinado pela agência (~900 baht) ou songthaew até pier + ferry Centerpoint + minivan Trat → Hat Lek. Saída 7h30." },
+  { passo: "2. Fronteira Hat Lek (TH) → Cham Yeam (KH)", como: "Cruze a pé. Visa-on-arrival cambojano: US$ 30 + foto 3x4. Aceita só dólar, nunca baht ou riel." },
+  { passo: "3. Para Koh Kong (cidade)", como: "Tuk-tuk US$ 5-7 do posto fronteira até o centro (3 km). NÃO pague mais de US$ 10." },
+  { passo: "4. Para Sihanoukville", como: "Bus diário ~6h (US$ 12-15) ou táxi privado US$ 80-100. Saída de manhã, evite noite (estrada ruim)." },
+  { passo: "5. Volta para Chang", como: "Mesmo caminho inverso. Saia de Sihanoukville 7h para chegar Trat antes do último ferry 18h30." },
+];
+
+const CAMBOJA_SCAMS = [
+  { golpe: "Taxa de carimbo extra 100 baht no posto tailandês", resposta: "Não existe. Sair da Tailândia é grátis. Peça recibo oficial." },
+  { golpe: "Visa cambojano por 'US$ 35 + 100 baht processing'", resposta: "É US$ 30 fixo. Pague exatos. Se exigir mais, peça supervisor." },
+  { golpe: "'Médico obrigatório' que cobra US$ 1-2 antes do balcão", resposta: "Falso. Sem teste médico para visa. Ignore e siga até a janela oficial." },
+  { golpe: "Cotação de dólar para riel péssima no posto", resposta: "Use dólar. Em Koh Kong/Sihanoukville, dólar circula como moeda local." },
+  { golpe: "'Bus VIP direto Bangkok-Sihanoukville' que troca van 3 vezes", resposta: "Reserve segmentos separados ou pegue avião Bangkok-Phnom Penh (US$ 80) e ônibus de lá." },
+];
+
+// 6 — Cachoeiras detalhadas (além de Klong Plu)
+const CACHOEIRAS_DETALHE = [
+  { nome: "Klong Plu", taxa: "200 baht", trilha: "20 min, fácil", piscina: "Grande, nada fundo", vale: "Sim, na janela jul-set. Fora dela, fica seca.", tone: "premium" as Tone },
+  { nome: "Than Mayom", taxa: "200 baht", trilha: "45 min até a 4ª queda", piscina: "Pequenas em série", vale: "Sim — menos turista, 4 quedas escalonadas. Visita do rei está marcada na pedra.", tone: "ok" as Tone },
+  { nome: "Klong Nonsi", taxa: "Grátis", trilha: "30 min, leve", piscina: "Naturais menores, intimistas", vale: "Sim — única grátis. Vá de manhã, vazia.", tone: "ok" as Tone },
+  { nome: "Khiri Phet", taxa: "Grátis", trilha: "15 min", piscina: "1 piscina rasa, boa pra criança", vale: "Só se já estiver em Salakphet (sudeste). Não dirija de propósito.", tone: "info" as Tone },
+  { nome: "Klong Nueng", taxa: "200 baht", trilha: "1h30 íngreme", piscina: "Sem piscina pra nadar", vale: "Só hiker hard. Maior queda da ilha (~80m) mas exige preparo.", tone: "warn" as Tone },
+];
+
+// 7 — Sunset spots ranqueados
+const SUNSETS = [
+  { local: "Kai Bae Viewpoint", rank: "★★★★★", horario: "Chegue 17h45 (set 18h20-18h45)", oque: "Mirante com 3 ilhotas (Koh Yuak, Koh Man Nai, Koh Man Nok) recortadas contra o sol.", obs: "Lotado em alta. Estacione scooter na entrada, suba a pé 5 min." },
+  { local: "Bang Bao Pier (ponta)", rank: "★★★★★", horario: "17h30-18h45", oque: "Sol mergulha entre o pier de palafita e o farol vermelho. Jantar seafood logo após.", obs: "Reserve mesa antes no Bang Bao Pier Seafood — depois do sunset enche." },
+  { local: "Klong Kloi Beach", rank: "★★★★", horario: "17h45-18h45", oque: "Última praia da costa oeste, voltada pleno-oeste. Bar Klong Kloi serve drink na areia.", obs: "Para chegar precisa de scooter — sem songthaew aqui." },
+  { local: "Salakphet (deck do mercado)", rank: "★★★★", horario: "17h30-18h30", oque: "Sunset por trás do manguezal, refletido. Único do lado leste que funciona.", obs: "Manhã o leste pega nascer; à tarde, é reflexo, não sol direto." },
+  { local: "Lonely Beach Cliff (norte)", rank: "★★★", horario: "17h45", oque: "Pedra alta entre Lonely e Bailan. Sol direto no horizonte do mar.", obs: "Subida 10 min por trilha estreita. Calçado fechado." },
+  { local: "White Sand Beach (norte)", rank: "★★★", horario: "18h-18h45", oque: "Sol pega na ponta norte da praia, perto do KC Grande Resort. Bom para drink na areia.", obs: "Parte central da praia o sunset some atrás do morro." },
+];
+
+// 8 — Trilha Long Beach (Hat Yao)
+const TRILHA_HATYAO = {
+  resumo: "Single-track de selva fechada que conecta Salakphet (sudeste) à Long Beach (Hat Yao), a praia mais isolada da ilha. Não há outro acesso a Hat Yao além desta trilha ou de barco fretado.",
+  distancia: "2,8 km só ida (5,6 km total)",
+  duracao: "45-60 min só ida (depende do mato)",
+  dificuldade: "Média — sem grandes subidas, mas raízes, lama e mato fechado",
+  inicio: "Após Salakphet, siga a estrada até o fim. Trilha começa em uma placa de madeira escrita 'Long Beach'.",
+  mare: "OBRIGATÓRIO consultar tabela de maré. Maré alta cobre os últimos 200m de praia — você fica preso. Saia da Hat Yao 2h antes da preamar.",
+  levar: [
+    "2 L de água por pessoa (sem reabastecimento na trilha nem na praia)",
+    "Repelente DEET 30%+ (mosquito de selva forte)",
+    "Tênis fechado com sola firme (havaiana = entorse garantido)",
+    "Lanterna headlight (se voltar depois das 17h escurece na mata)",
+    "Snack salgado (não há restaurante na praia)",
+    "Print da tabela de maré daquela semana (offline, sem sinal na trilha)",
+    "Kit primeiros-socorros básico (esparadrapo + álcool gel)",
+  ],
+  recompensa: "Praia de 1,2 km sem absolutamente ninguém. Areia bege, mar com piscinas naturais na maré baixa, palmeiras inclinadas. Selvagem real.",
+  perigo: "Sem sinal de celular em 90% da trilha. Avise hotel a hora de saída e retorno. Cobras (pythons e víboras) já foram avistadas — não saia da trilha marcada.",
+};
+
+// 9 — Vida noturna decodificada
+const NOTURNA = [
+  { local: "Lonely Beach (Stoner Bar / Ting Tong)", vibe: "Reggae + house + bucket de Lao Whisky", quem: "Mochileiro 20-30 anos, festa até 4h, vai descalço", evite: "Casal sossego, família, dia seguinte de mergulho", precos: "Bucket 250-350 baht, cerveja 80, sem cover", endereco: "Rua principal de Lonely Beach, lado da praia" },
+  { local: "Sabay Bar (White Sand)", vibe: "Cover band tailandesa, fire show 22h, mainstream pop", quem: "Família casual e casal jovem, primeira noite na ilha", evite: "Quem busca underground ou música eletrônica de verdade", precos: "Cerveja 100, cocktail 200, sem cover", endereco: "Meio de White Sand, frente para a praia" },
+  { local: "Hippie Bar (Bailan)", vibe: "Bar pirata feito de madeira flutuante, drink ao pôr do sol, eletrônica leve à noite", quem: "Casal alternativo, fotógrafo, instagrammer", evite: "Família com criança após 20h", precos: "Drink 180-250, cerveja 100", endereco: "Lado sul de Bailan beach, ao lado dos resorts isolados" },
+  { local: "15 Palms Beach Bar (Klong Prao)", vibe: "Acústico ao vivo no deck, vista da maré, jantar até 23h", quem: "Casal padrão, jantar romântico, lua de mel acessível", evite: "Quem quer balada ou agito real", precos: "Cocktail 220, cerveja 110, prato 250-400", endereco: "Frente Klong Prao, entre Centara e Awa Resort" },
+  { local: "Oodie's Place (Klong Prao)", vibe: "Bar de mesa, jogo, conversa, banda cover às quintas", quem: "Expat, viajante longo, quem busca papo", evite: "Quem quer dançar", precos: "Cerveja 90, comida 150-250", endereco: "Estrada principal de Klong Prao, perto do Tesco Lotus" },
+  { local: "Bailan Bay Resort Beach Bar", vibe: "Silêncio total, deck sobre água, drink + estrelas", quem: "Casal lua de mel, fim de noite romântico", evite: "Quem busca música", precos: "Cocktail 250-350", endereco: "Dentro do Bailan Bay Resort, acesso a não-hóspedes 18h-22h" },
 ];
 
 const KohChang3517 = () => {
@@ -775,6 +910,319 @@ const KohChang3517 = () => {
               ))}
             </div>
           </section>
+
+          {/* ===== 1 — Mapa visual das praias norte → sul ===== */}
+          <section id="mapa-praias">
+            <SectionTitle icon={MapIcon} kicker="20 — Visão geral" title="Mapa visual das 7 praias-bairro (norte → sul)" />
+            <Reveal>
+              <p className="text-[hsl(var(--pk-muted))] mb-6 max-w-2xl">A costa oeste concentra 6 das 7 praias-bairro, em fila do norte ao sul. Salakphet é a única do lado leste. Use essa tabela para decidir EM QUE ORDEM dividir suas noites se ficar em 2 bases.</p>
+              <div className="pk-card p-0 overflow-hidden">
+                <div className="overflow-x-auto">
+                  <table className="pk-table">
+                    <thead><tr><th>Ordem</th><th>Praia-bairro</th><th>Tag</th><th>Lado da ilha</th></tr></thead>
+                    <tbody>
+                      {MAPA_PRAIAS.map((m) => (
+                        <tr key={m.nome}>
+                          <td className="pk-gold-soft font-medium">{m.ordem}</td>
+                          <td className="font-semibold"><G>{m.nome}</G></td>
+                          <td><span className={`pk-verdict ${TONE_CLASS[m.tone]}`}>{m.tag}</span></td>
+                          <td>{m.lado}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </Reveal>
+            <Reveal>
+              <div className="pk-callout pk-callout-info mt-6">
+                <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5" />
+                <p><strong>Sugestão de split:</strong> 4 noites no centro-norte (Klong Prao ou Kai Bae) + 2 noites no sul (Bang Bao ou Lonely) cobre 90% do que a ilha tem.</p>
+              </div>
+            </Reveal>
+          </section>
+
+          {/* ===== 6 — Cachoeiras detalhadas ===== */}
+          <section id="cachoeiras-detalhe">
+            <SectionTitle icon={Sun} kicker="21 — Selva avaliada" title="5 cachoeiras avaliadas — qual paga ingresso, qual é grátis" />
+            <div className="pk-card p-0 overflow-hidden">
+              <div className="overflow-x-auto">
+                <table className="pk-table">
+                  <thead><tr><th>Cachoeira</th><th>Taxa</th><th>Trilha</th><th>Piscina</th><th>Vale?</th></tr></thead>
+                  <tbody>
+                    {CACHOEIRAS_DETALHE.map((c) => (
+                      <tr key={c.nome} className={TONE_CLASS[c.tone]}>
+                        <td className="font-semibold"><G>{c.nome} waterfall</G></td>
+                        <td className="pk-gold-soft">{c.taxa}</td>
+                        <td>{c.trilha}</td>
+                        <td>{c.piscina}</td>
+                        <td className="text-sm">{c.vale}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <Reveal>
+              <div className="pk-callout pk-callout-warn mt-6">
+                <AlertTriangle className="w-5 h-5 shrink-0 mt-0.5" />
+                <p>Combine a tabela acima com o calendário mensal (seção <em>Cachoeira mês a mês</em>). Pagar 200 baht em Klong Plu seca em março é o erro mais reportado.</p>
+              </div>
+            </Reveal>
+          </section>
+
+          {/* ===== 7 — Sunset spots ranqueados ===== */}
+          <section id="sunsets">
+            <SectionTitle icon={Sun} kicker="22 — Pôr do sol" title="Sunset spots ranqueados — chegue no horário certo" />
+            <div className="grid md:grid-cols-2 gap-5">
+              {SUNSETS.map((s, i) => (
+                <Reveal key={s.local} i={i}>
+                  <article className="pk-card pk-card-tight h-full">
+                    <div className="flex justify-between items-start gap-3 mb-2">
+                      <h3 className="pk-h4"><G>{s.local}</G></h3>
+                      <span className="pk-tag-sm pk-gold-soft">{s.rank}</span>
+                    </div>
+                    <p className="pk-kicker mt-2">Horário ideal</p>
+                    <p className="text-sm">{s.horario}</p>
+                    <p className="text-sm text-[hsl(var(--pk-muted))] mt-3">{s.oque}</p>
+                    <p className="text-xs text-[hsl(var(--pk-muted))] mt-2 italic">{s.obs}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          {/* ===== 8 — Trilha Long Beach (Hat Yao) ===== */}
+          <section id="trilha-hatyao">
+            <SectionTitle icon={Compass} kicker="23 — Trilha" title="Trilha Long Beach (Hat Yao) — passo a passo" />
+            <Reveal>
+              <div className="pk-card pk-card-feature mb-6">
+                <p className="text-lg leading-relaxed">{TRILHA_HATYAO.resumo}</p>
+              </div>
+            </Reveal>
+            <div className="grid md:grid-cols-3 gap-5 mb-6">
+              <Reveal><article className="pk-card pk-card-tight"><p className="pk-kicker">Distância</p><p className="pk-h4 mt-1">{TRILHA_HATYAO.distancia}</p></article></Reveal>
+              <Reveal i={1}><article className="pk-card pk-card-tight"><p className="pk-kicker">Duração</p><p className="pk-h4 mt-1">{TRILHA_HATYAO.duracao}</p></article></Reveal>
+              <Reveal i={2}><article className="pk-card pk-card-tight"><p className="pk-kicker">Dificuldade</p><p className="pk-h4 mt-1">{TRILHA_HATYAO.dificuldade}</p></article></Reveal>
+            </div>
+            <div className="grid md:grid-cols-2 gap-6">
+              <Reveal>
+                <article className="pk-card pk-tone-ok h-full">
+                  <p className="pk-kicker mb-3">O que levar</p>
+                  <ul className="space-y-2 text-sm">
+                    {TRILHA_HATYAO.levar.map((l) => (
+                      <li key={l} className="flex gap-2.5"><CheckCircle2 className="w-4 h-4 text-[hsl(var(--pk-ok))] shrink-0 mt-0.5" /><span>{l}</span></li>
+                    ))}
+                  </ul>
+                </article>
+              </Reveal>
+              <Reveal i={1}>
+                <article className="pk-card pk-tone-alert h-full">
+                  <p className="pk-kicker mb-3">Atenção crítica</p>
+                  <div className="space-y-4 text-sm">
+                    <div><strong className="pk-gold">Início:</strong> <span className="text-[hsl(var(--pk-muted))]">{TRILHA_HATYAO.inicio}</span></div>
+                    <div><strong className="pk-gold">Maré:</strong> <span className="text-[hsl(var(--pk-muted))]">{TRILHA_HATYAO.mare}</span></div>
+                    <div><strong className="pk-gold">Perigo:</strong> <span className="text-[hsl(var(--pk-muted))]">{TRILHA_HATYAO.perigo}</span></div>
+                    <div><strong className="pk-gold">Recompensa:</strong> <span className="text-[hsl(var(--pk-muted))]">{TRILHA_HATYAO.recompensa}</span></div>
+                  </div>
+                </article>
+              </Reveal>
+            </div>
+          </section>
+
+          {/* ===== 4 — Mergulho Koh Rang ===== */}
+          <section id="mergulho">
+            <SectionTitle icon={Waves} kicker="24 — Fundo do mar" title="Mergulho em Koh Rang — dive sites e preço real" />
+            <Reveal>
+              <div className="pk-card pk-card-feature mb-8">
+                <p className="text-lg leading-relaxed">
+                  <strong className="pk-gold">Koh Rang National Marine Park</strong> fica 1h de speedboat ao sul de Chang.
+                  Visibilidade pico (15-20m) é <strong>fevereiro a maio</strong>. Em monção (jun-set) cai para 4-7m e muitos dive shops fecham.
+                  Não é Koh Tao — visibilidade é menor e fauna é diferente —, mas é o melhor mergulho do leste tailandês.
+                </p>
+              </div>
+            </Reveal>
+            <h3 className="pk-h3 mb-5">5 dive sites principais</h3>
+            <div className="pk-card p-0 overflow-hidden mb-10">
+              <div className="overflow-x-auto">
+                <table className="pk-table">
+                  <thead><tr><th>Dive site</th><th>Nível</th><th>Prof.</th><th>O que tem</th><th>Melhor época</th></tr></thead>
+                  <tbody>
+                    {DIVE_SITES.map((d) => (
+                      <tr key={d.nome}>
+                        <td className="font-semibold">{d.nome}</td>
+                        <td>{d.nivel}</td>
+                        <td className="pk-gold-soft">{d.prof}</td>
+                        <td className="text-sm">{d.oque}</td>
+                        <td className="text-sm whitespace-nowrap">{d.quando}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <h3 className="pk-h3 mb-5">Preço real (reais e baht)</h3>
+            <div className="grid md:grid-cols-2 gap-4">
+              {MERGULHO_PRECO.map((m, i) => (
+                <Reveal key={m.item} i={i}>
+                  <article className="pk-card pk-card-tight h-full">
+                    <h4 className="pk-h4">{m.item}</h4>
+                    <p className="pk-gold-soft font-medium text-sm mt-2">{m.preco}</p>
+                    <p className="text-xs text-[hsl(var(--pk-muted))] mt-2">{m.obs}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+            <Reveal>
+              <div className="pk-callout pk-callout-info mt-6">
+                <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5" />
+                <p><strong>Dica:</strong> só <G q="BB Divers Koh Chang">BB Divers</G> e <G q="Koh Chang Divers Bang Bao">Koh Chang Divers</G> têm reputação consistente. Operadoras "low cost" no White Sand reciclam barco lotado e instrutor sem briefing — risco maior em mergulho que economia de 300 baht justifica.</p>
+              </div>
+            </Reveal>
+          </section>
+
+          {/* ===== 9 — Vida noturna decodificada ===== */}
+          <section id="noturna">
+            <SectionTitle icon={Sparkles} kicker="25 — Noite" title="Vida noturna decodificada — pra quem quer (e pra quem foge)" />
+            <div className="grid md:grid-cols-2 gap-5">
+              {NOTURNA.map((n, i) => (
+                <Reveal key={n.local} i={i}>
+                  <article className="pk-card pk-card-tight h-full">
+                    <h3 className="pk-h4"><G>{n.local}</G></h3>
+                    <p className="pk-gold-soft text-sm mt-2">{n.vibe}</p>
+                    <dl className="pk-dl mt-4">
+                      <div><dt>Pra quem</dt><dd>{n.quem}</dd></div>
+                      <div><dt>Evite se</dt><dd>{n.evite}</dd></div>
+                      <div><dt>Preço</dt><dd className="pk-gold-soft">{n.precos}</dd></div>
+                      <div><dt>Onde</dt><dd className="text-xs italic">{n.endereco}</dd></div>
+                    </dl>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          {/* ===== 3 — Arquipélago de Trat ===== */}
+          <section id="arquipelago">
+            <SectionTitle icon={Ship} kicker="26 — Combo arquipélago" title="Koh Chang + Mak + Kood — qual ilha pra qual perfil" />
+            <Reveal>
+              <p className="text-[hsl(var(--pk-muted))] mb-6 max-w-2xl">As 4 ilhas do arquipélago de Trat se completam. Combinar 2-3 num roteiro de 10 dias é o jeito honesto de aproveitar a região. Use Chang como base e adicione conforme o perfil.</p>
+            </Reveal>
+            <div className="grid md:grid-cols-2 gap-5 mb-10">
+              {ARQUIPELAGO.map((a, i) => (
+                <Reveal key={a.ilha} i={i}>
+                  <article className="pk-card h-full">
+                    <div className="flex justify-between items-start gap-3 mb-3">
+                      <h3 className="pk-h3"><G>{a.ilha}</G></h3>
+                      <span className="pk-tag-sm">{a.dias}</span>
+                    </div>
+                    <p className="pk-kicker">Tamanho</p>
+                    <p className="text-sm mb-3">{a.tamanho}</p>
+                    <p className="pk-kicker">Tom</p>
+                    <p className="text-sm mb-3">{a.tom}</p>
+                    <p className="pk-kicker">Pra quem</p>
+                    <p className="text-sm mb-3">{a.perfil}</p>
+                    <p className="text-sm text-[hsl(var(--pk-alert))]"><strong>Evite se:</strong> {a.evite}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+            <h3 className="pk-h3 mb-5">Ferries entre as 4 ilhas (alta temporada nov-mai)</h3>
+            <div className="pk-card p-0 overflow-hidden">
+              <div className="overflow-x-auto">
+                <table className="pk-table">
+                  <thead><tr><th>Rota</th><th>Operadora</th><th>Saídas</th><th>Preço</th></tr></thead>
+                  <tbody>
+                    {ARQUIPELAGO_FERRIES.map((f) => (
+                      <tr key={f.rota}>
+                        <td className="font-semibold">{f.rota}</td>
+                        <td>{f.op}</td>
+                        <td>{f.saidas}</td>
+                        <td className="pk-gold-soft">{f.preco}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <Reveal>
+              <div className="pk-callout pk-callout-warn mt-6">
+                <AlertTriangle className="w-5 h-5 shrink-0 mt-0.5" />
+                <p><strong>Low season (jun-out):</strong> todos esses ferries inter-ilhas são reduzidos ou cancelados. Saída de Bang Bao pier vira diária única e sujeita ao mar.</p>
+              </div>
+            </Reveal>
+          </section>
+
+          {/* ===== 5 — Travessia Camboja ===== */}
+          <section id="camboja">
+            <SectionTitle icon={MapPin} kicker="27 — Fronteira" title="Travessia para o Camboja — Koh Kong e Sihanoukville" />
+            <Reveal>
+              <div className="pk-card pk-card-feature mb-8">
+                <p className="text-lg leading-relaxed">
+                  Chang é a ilha tailandesa mais próxima do Camboja. A fronteira <strong className="pk-gold">Hat Lek (TH) ⇄ Cham Yeam (KH)</strong> fica a 2h30 da Koh Chang. Combinar 5 dias de Chang + 4 dias de Sihanoukville (praias cambojanas) custa 1/3 de voltar a Bangkok e pegar voo para Phnom Penh.
+                </p>
+              </div>
+            </Reveal>
+            <h3 className="pk-h3 mb-5">Os 5 passos</h3>
+            <ol className="pk-ol mb-10">
+              {CAMBOJA_PASSOS.map((p) => (
+                <li key={p.passo} className="text-sm leading-relaxed"><strong className="pk-gold">{p.passo}:</strong> {p.como}</li>
+              ))}
+            </ol>
+            <h3 className="pk-h3 mb-5">5 scams clássicos na fronteira (e a resposta)</h3>
+            <div className="grid md:grid-cols-2 gap-4">
+              {CAMBOJA_SCAMS.map((s, i) => (
+                <Reveal key={s.golpe} i={i}>
+                  <article className="pk-card pk-card-tight h-full">
+                    <p className="text-sm font-semibold flex gap-2"><AlertTriangle className="w-4 h-4 text-[hsl(var(--pk-alert))] shrink-0 mt-0.5" /> {s.golpe}</p>
+                    <p className="text-sm text-[hsl(var(--pk-muted))] mt-2 flex gap-2"><CheckCircle2 className="w-4 h-4 text-[hsl(var(--pk-ok))] shrink-0 mt-0.5" /> {s.resposta}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+            <Reveal>
+              <div className="pk-callout pk-callout-warn mt-6">
+                <AlertTriangle className="w-5 h-5 shrink-0 mt-0.5" />
+                <p><strong>Documento:</strong> passaporte com 6+ meses de validade obrigatório. Brasileiros têm direito a visa-on-arrival cambojano (US$ 30, 30 dias). Sem comprovar saída em até 30 dias, multa de US$ 10/dia.</p>
+              </div>
+            </Reveal>
+          </section>
+
+          {/* ===== 2 — Clima mês a mês ===== */}
+          <section id="clima">
+            <SectionTitle icon={Sun} kicker="28 — Janela climática" title="Clima mês a mês — quando vir (e quando NÃO vir)" />
+            <Reveal>
+              <p className="text-[hsl(var(--pk-muted))] mb-6 max-w-2xl">Chuva, vento, mar, visibilidade pra mergulho, lotação e diária média de hotel mid-range. Use junto com a tabela de cachoeira mês a mês.</p>
+              <div className="pk-card p-0 overflow-hidden">
+                <div className="overflow-x-auto">
+                  <table className="pk-table">
+                    <thead><tr><th>Mês</th><th>Chuva</th><th>Vento</th><th>Mar</th><th>Viz mergulho</th><th>Lotação</th><th>Diária mid</th></tr></thead>
+                    <tbody>
+                      {CLIMA_MES.map((c) => (
+                        <tr key={c.mes} className={TONE_CLASS[c.tone]}>
+                          <td className="font-semibold">{c.mes}</td>
+                          <td>{c.chuva}</td>
+                          <td>{c.vento}</td>
+                          <td>{c.mar}</td>
+                          <td className="pk-gold-soft">{c.viz}</td>
+                          <td>{c.lotacao}</td>
+                          <td className="pk-gold-soft">{c.diaria}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </Reveal>
+            <Reveal>
+              <div className="pk-callout pk-callout-info mt-6">
+                <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5" />
+                <p><strong>Janela de ouro:</strong> fev-mar (mar liso + viz pico). <strong>Melhor custo-benefício:</strong> nov e início de dez (mar bom, diária 30% mais barata, ainda sem alta). <strong>Não vá em jul-set:</strong> metade dos restaurantes fecha, ferries inter-ilhas cancelam.</p>
+              </div>
+            </Reveal>
+          </section>
+
+
 
           <section className="pt-16 border-t border-[hsl(var(--pk-line))]">
             <p className="pk-kicker">Continue explorando</p>
