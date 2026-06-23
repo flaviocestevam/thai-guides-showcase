@@ -197,6 +197,105 @@ const OLD_TOWN = [
   { titulo: "Onde dormir", texto: "Old Town tem 3 homestays boutique em palafita (R$ 150-250). Vale 1 noite pra ver a vila acordar e dormir." },
 ];
 
+const VISI_DIVE = [
+  { ponto: "Koh Haa (Lagoon, The Chimney)", mes: "Nov-Abr", visi: "20-35 m", marinho: "Tartaruga, peixe-leão, banco de fusiliers, coral mole." },
+  { ponto: "Hin Daeng", mes: "Fev-Abr", visi: "20-30 m", marinho: "Manta ray (sazonal), whale shark, banco de barracuda." },
+  { ponto: "Hin Muang", mes: "Fev-Abr", visi: "15-25 m", marinho: "Coral roxo gigante, manta ray, scorpionfish." },
+  { ponto: "Koh Bida Nok (Phi Phi)", mes: "Nov-Abr", visi: "15-25 m", marinho: "Tubarão-leopardo, tartaruga, jardim de coral." },
+  { ponto: "Koh Rok (snorkel)", mes: "Fev-Abr", visi: "15-25 m", marinho: "Recife raso, peixe-papagaio, polvo." },
+  { ponto: "Emerald Cave (Koh Mook)", mes: "Nov-Abr", visi: "8-12 m (caverna)", marinho: "Praia secreta no fim, sem peixe — experiência cênica." },
+];
+
+const MAPA_LOOP = [
+  { trecho: "Saladan → Klong Dao", min: "10 min", obs: "Plano, asfalto bom." },
+  { trecho: "Saladan → Phra Ae", min: "15 min", obs: "Reta, posto PTT no caminho." },
+  { trecho: "Saladan → Klong Nin", min: "30 min", obs: "Suaves curvas, sem perigo." },
+  { trecho: "Saladan → Kantiang Bay", min: "50 min", obs: "Subida final íngreme, atenção." },
+  { trecho: "Saladan → Bamboo Bay", min: "1h", obs: "Curvas fortes nos últimos 10 km." },
+  { trecho: "Saladan → Mu Ko Lanta NP (Tanod)", min: "1h15", obs: "Última 1 km de terra/pedra." },
+  { trecho: "Klong Nin → Old Town (costa leste)", min: "20 min", obs: "Estrada calma, boa pra iniciante." },
+  { trecho: "Loop completo norte-sul-leste", min: "3h sem paradas", obs: "Reserve dia inteiro com 9 paradas." },
+];
+
+const MES_PERFIL = [
+  { perfil: "Casal slow travel", mes: "Nov-Mar", obs: "Janela perfeita. Klong Nin ou Kantiang. Reserve 45 dias." },
+  { perfil: "Família com criança", mes: "Dez-Fev", obs: "Klong Dao ou Phra Ae, mar raso. Evite Songkran (13-15 Abr)." },
+  { perfil: "Mergulhador (Hin Daeng/Muang)", mes: "Fev-Abr", obs: "Janela de manta ray e visi de 30m+. Koh Haa também no pico." },
+  { perfil: "Lua de mel premium", mes: "Dez-Mar", obs: "Pimalai Kantiang. Reserve 60-90 dias, flash sale em Set-Out." },
+  { perfil: "Mochileiro budget", mes: "Nov + Abr", obs: "Ombro: tudo aberto, preço 25-40% off do pico." },
+  { perfil: "Quem foge de Phi Phi", mes: "Qualquer Nov-Abr", obs: "Lanta tem o mesmo Andaman sem o caos." },
+];
+
+const COMPARATIVO = [
+  { dim: "Vibe principal", lanta: "Slow travel, scooter livre", phiphi: "Festa + cenário épico", krabi: "Continente, base logística" },
+  { dim: "Custo médio/dia (casal)", lanta: "R$ 500-800", phiphi: "R$ 700-1.100", krabi: "R$ 400-700" },
+  { dim: "Vida noturna", lanta: "Beach bar, zero balada", phiphi: "Slinky, Ibiza, Carlitos", krabi: "Ao Nang fim de noite cedo" },
+  { dim: "Praias", lanta: "9 em fila, scooter livre", phiphi: "Maya Bay + 4 baías", krabi: "Railay + Ao Nang" },
+  { dim: "Mergulho", lanta: "Koh Haa, Hin Daeng/Muang", phiphi: "Koh Bida, Shark Point", krabi: "Vai de barco até Phi Phi" },
+  { dim: "Família com kids", lanta: "Excelente, Klong Dao/Phra Ae", phiphi: "Ruim, festa e ruído", krabi: "Boa, Ao Nang infra" },
+  { dim: "Acesso", lanta: "Ferry 2h de Krabi", phiphi: "Ferry 1h30 de Krabi", krabi: "Voo direto KBV" },
+  { dim: "Tempo mínimo", lanta: "5 dias", phiphi: "2 dias (basta)", krabi: "3 dias (Railay)" },
+];
+
+const BARCO_DIA = [
+  { tour: "4 Islands + Emerald Cave (speedboat pequeno)", preco: "1.500-1.800 baht", inclui: "Emerald Cave, Koh Ngai, Koh Chuek, Koh Mook, snorkel, almoço.", obs: "Pague +300 por speedboat pequeno — barco grande fica 20 min na caverna." },
+  { tour: "Koh Rok + Koh Haa snorkel", preco: "1.800-2.500 baht + 400 entrada parque", inclui: "Snorkel em 3 spots, almoço.", obs: "Pico Fev-Abr. Parque fecha Mai-Out." },
+  { tour: "Diving Koh Haa (2 tanques)", preco: "3.500-4.000 baht", inclui: "Equipamento, 2 mergulhos, almoço.", obs: "Boa primeira mergulhada em Lanta. Tartaruga quase garantida." },
+  { tour: "Diving Hin Daeng/Hin Muang (2 tanques)", preco: "4.000-4.800 baht", inclui: "Equipamento, 2 mergulhos avançados.", obs: "Avançado, corrente. Pico de manta Fev-Abr." },
+  { tour: "Koh Phi Phi day-trip (saindo de Lanta)", preco: "1.500-2.000 baht", inclui: "Maya Bay, Pileh Lagoon, Bamboo Island.", obs: "Maya Bay lota 9h-13h. Se foco é Phi Phi, durma lá 1 noite." },
+];
+
+const PESCA = [
+  { tipo: "Pesca tradicional com pescador local (Saladan)", preco: "2.500-3.500 baht/4h (até 4 pessoas)", oque: "Barco de pesca real, linha de mão. Peixe vai pro restaurante local depois.", quando: "Saída 6h ou 16h. Combine no pier de Saladan." },
+  { tipo: "Squid fishing noturno (Phra Ae)", preco: "1.200-1.500 baht/pessoa", oque: "3h noturno com luz atraindo lula. Cozinham a bordo.", quando: "Set-Mar é alta de lula. Sai 18h-19h." },
+  { tipo: "Big game (atum, barracuda) saindo de Saladan", preco: "12.000-16.000 baht/dia", oque: "Trolling em Hin Daeng/Muang. Linha pesada, cadeira de pesca.", quando: "Nov-Abr. Reserve com 7 dias." },
+];
+
+const SPA_LANTA = [
+  { nome: "Oasis Yoga Bungalows", bairro: "Phra Ae", oque: "Drop-in e retiros 5-7d. Hatha e Yin séria.", preco: "Aula R$ 70, retiro 7d R$ 2.500." },
+  { nome: "Sri Lanta Resort Spa", bairro: "Klong Nin", oque: "Spa de resort pé na areia, massagem tailandesa autêntica.", preco: "60 min R$ 180, ritual 2h R$ 450." },
+  { nome: "Layana Resort Spa", bairro: "Phra Ae", oque: "Spa premium adults-only, sinaturas de assinatura.", preco: "60 min R$ 280, ritual R$ 700." },
+  { nome: "Pimalai Spa", bairro: "Kantiang Bay", oque: "Spa do 5★ no penhasco. Não-hóspede entra com agendamento.", preco: "60 min R$ 350, ritual 3h R$ 1.200." },
+  { nome: "Time for Lime", bairro: "Klong Dao", oque: "Cooking class lendária + dinner. Não é spa, mas é o wellness experiencial da ilha.", preco: "Aula R$ 360, jantar incluso." },
+];
+
+const VILAREJO = [
+  { nome: "Bamboo Bay (Klong Jark)", como: "Scooter 1h de Saladan. Curvas finais íngremes.", quanto: "Resort R$ 350-700.", porque: "Praia pequena calma, Why Not Bar com sunset 360° do penhasco." },
+  { nome: "Mai Pai (sul extremo)", como: "Scooter, última antes do parque nacional.", quanto: "Bangalô R$ 200-400.", porque: "Selvagem, quase deserta. Correnteza forte — não nade longe." },
+  { nome: "Mu Ko Lanta NP / Tanod", como: "Scooter 1h15. Última 1 km de terra.", quanto: "Camping no parque 200 baht. Não tem hotel.", porque: "Farol histórico, trilha 2,7 km com macacos, ponta sul." },
+  { nome: "Nui Bay", como: "Trilha curta na Klong Khong sul.", quanto: "Sem hospedagem. Day-trip.", porque: "Escondida, snorkel raso direto da praia." },
+  { nome: "Koh Mook (Emerald Cave village)", como: "Ferry 30 min de Lanta.", quanto: "Bangalô R$ 150-400.", porque: "Vilarejo de pescador, base pra Emerald Cave fora do horário lotado." },
+];
+
+const FAMILIA = [
+  { dim: "Praias OK", oque: "Klong Dao (mar raso 100m), Phra Ae (raso, longa), Klong Nin (calma com restaurante). EVITE Mai Pai (correnteza)." },
+  { dim: "Hospital", oque: "Koh Lanta Hospital (Saladan) — básico, OK pra acidente leve. Caso sério = transfer pra Krabi (2h)." },
+  { dim: "Bairros recomendados", oque: "Klong Dao pra primeira viagem, Phra Ae pra mais vida, Kantiang só pra adolescente+." },
+  { dim: "Mobilidade", oque: "Songthaew funciona mas demora. Carro privado: 1.800-2.500 baht/dia. Scooter c/ criança pequena não vale." },
+  { dim: "Comida", oque: "Resorts grandes em Klong Dao têm kids menu. Cook Kai (Phra Ae) é familiar e barato." },
+  { dim: "Janela ideal", oque: "Dez-Fev. Mar seco, mar calmo. Evite Mai-Out (vento sul forte, metade fechada)." },
+];
+
+const CONSERVACAO = [
+  { regra: "Protetor reef-safe obrigatório em Koh Haa", desc: "Oxybenzone destrói coral. Marcas como Stream2Sea, Banana Boat Reef Friendly. Operadoras sérias checam." },
+  { regra: "Sem âncora em Hin Daeng/Muang", desc: "Tour com âncora em recife está no blacklist. Operadora boa usa boia." },
+  { regra: "Distância de tartaruga e manta", desc: "3 metros. Sem tocar, sem cavalgar, sem flash. Nadar paralelo, não em cima." },
+  { regra: "Lixo no parque nacional", desc: "Tudo o que entra, sai. Macacos atacam sacola de plástico — leve mochila fechada." },
+  { regra: "Plástico de uso único", desc: "Lanta tem ban em sacolas e canudos descartáveis em estabelecimentos certificados." },
+  { regra: "Emerald Cave fora do pico", desc: "Vá às 8h ou 16h pra evitar 50 barcos juntos destruindo a entrada." },
+];
+
+const BOOKING = [
+  { quando: "Pico Dez-Fev (Natal/Ano Novo)", antecedencia: "60-90 dias", onde: "Booking + Agoda comparados. Pimalai e Layana têm wait-list." },
+  { quando: "Janela Nov + Mar-Abr", antecedencia: "30-45 dias", onde: "Agoda costuma ter 10-20% off vs. site do hotel." },
+  { quando: "Ombro Mai + Out", antecedencia: "7-15 dias", onde: "Walk-in funciona. Mas só metade da ilha está aberta." },
+  { quando: "Baixa Jun-Set", antecedencia: "Não vá", onde: "Parque nacional fechado, ferries reduzidos, vento sul." },
+  { quando: "Ferry Krabi/Phi Phi → Lanta", antecedencia: "1-2 dias normal, 3-5 dias em alta", onde: "12go.asia ou direto no pier de Klong Jilad (mesmo preço)." },
+  { quando: "Cooking class Time for Lime", antecedencia: "7-15 dias em alta", onde: "Site direto. Lotado em Dez-Fev." },
+];
+
+
+
 const KohLanta4831 = () => {
   return (
     <>
