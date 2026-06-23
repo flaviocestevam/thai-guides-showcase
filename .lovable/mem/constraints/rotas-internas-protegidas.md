@@ -1,9 +1,9 @@
 ---
 name: Rotas internas protegidas
-description: `/guiatrilhasthai44`, `/muaythai5645`, `/beachclubs8821`, `/cursosmassagem3367`, `/songkran9482`, `/cafescoworkings7391`, `/voluntariado4827`, `/clubesstrip6644`, `/festas7733`, `/gogobars8855`, `/pets9922`, `/criancas7811`, `/casasmassagem5582`, `/retiros8834` e `/tophostels7128` são guias pagos — nunca expor/linkar, mas conteúdo pode ser atualizado quando o usuário pedir explicitamente
+description: `/guiatrilhasthai44`, `/muaythai5645`, `/beachclubs8821`, `/cursosmassagem3367`, `/songkran9482`, `/cafescoworkings7391`, `/voluntariado4827`, `/clubesstrip6644`, `/festas7733`, `/gogobars8855`, `/pets9922`, `/criancas7811`, `/casasmassagem5582`, `/retiros8834`, `/tophostels7128` e `/aventureiros6712` são guias pagos — nunca expor/linkar, mas conteúdo pode ser atualizado quando o usuário pedir explicitamente
 type: constraint
 ---
-Rotas `/guiatrilhasthai44`, `/muaythai5645`, `/beachclubs8821`, `/cursosmassagem3367`, `/songkran9482`, `/cafescoworkings7391`, `/voluntariado4827`, `/clubesstrip6644`, `/festas7733`, `/gogobars8855`, `/pets9922`, `/criancas7811`, `/casasmassagem5582`, `/retiros8834` e `/tophostels7128` são GUIAS PAGOS.
+Rotas `/guiatrilhasthai44`, `/muaythai5645`, `/beachclubs8821`, `/cursosmassagem3367`, `/songkran9482`, `/cafescoworkings7391`, `/voluntariado4827`, `/clubesstrip6644`, `/festas7733`, `/gogobars8855`, `/pets9922`, `/criancas7811`, `/casasmassagem5582`, `/retiros8834`, `/tophostels7128` e `/aventureiros6712` são GUIAS PAGOS.
 
 **Nunca:**
 - Linkar a partir de páginas públicas
