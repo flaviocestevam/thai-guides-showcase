@@ -383,6 +383,29 @@ const KohLipe2947 = () => {
             </Reveal>
           </section>
 
+          <section id="hatyai">
+            <SectionTitle icon={Hotel} kicker="05 — Plano B" title="Hat Yai pit-stop — se você chegou tarde" />
+            <Reveal>
+              <div className="pk-card pk-card-feature mb-6">
+                <p className="text-lg leading-relaxed">
+                  <strong className="pk-gold">Voo de Bangkok depois das 14h?</strong>{" "}
+                  Perdeu a última van pra Pakbara. Vai dormir em Hat Yai e seguir 7h da manhã.
+                  <em> Não é fim do mundo — basta saber onde dormir e onde NÃO se meter.</em>
+                </p>
+              </div>
+            </Reveal>
+            <div className="grid md:grid-cols-2 gap-5">
+              {HAT_YAI_PITSTOP.map((h, i) => (
+                <Reveal key={h.titulo} i={i}>
+                  <article className="pk-card pk-card-tight h-full">
+                    <p className="pk-kicker">{h.titulo}</p>
+                    <p className="text-sm mt-2 text-[hsl(var(--pk-muted))]">{h.texto}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
           <section id="hospedagem">
             <SectionTitle icon={Sparkles} kicker="05 — Onde dormir" title="Hospedagem por faixa real" />
             <div className="grid md:grid-cols-3 gap-6">
