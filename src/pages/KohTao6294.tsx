@@ -25,8 +25,89 @@ const TOC = [
   { id: "roteiros", label: "Roteiros", icon: Sun },
   { id: "antigolpe", label: "Anti-golpe", icon: ShieldCheck },
   { id: "blacklist", label: "Lista negra", icon: XCircle },
+  { id: "checklist", label: "Checklist mergulho", icon: ShieldCheck },
+  { id: "glossario", label: "Glossário PADI", icon: Sparkles },
+  { id: "ferries", label: "Ferries", icon: Ship },
+  { id: "conectividade", label: "SIM & Wi-Fi", icon: MapPin },
+  { id: "dinheiro", label: "ATM & câmbio", icon: Wallet },
+  { id: "erros", label: "Erros caros", icon: AlertTriangle },
   { id: "mapa", label: "Mapa", icon: MapIcon },
   { id: "orcamento", label: "Orçamento", icon: Wallet },
+];
+
+const CHECKLIST_MERGULHO = [
+  { item: "Seguro DAN World (Dive Accident Network)", quando: "Antes de embarcar — US$ 45/ano. Seguro de viagem comum NÃO cobre câmara hiperbárica.", critico: true },
+  { item: "Atestado médico PADI (form completo)", quando: "Obrigatório se >45 anos OU marcar 'sim' em qualquer condição. Resolva no Brasil — clínica em Tao cobra 1.500 baht.", critico: true },
+  { item: "Sem álcool 12h antes de mergulhar", quando: "Mesmo 2 cervejas no jantar afetam o nitrogênio residual. Festa em Sairee = dia perdido.", critico: true },
+  { item: "18 horas sem voar após o último mergulho", quando: "Regra do PADI/DAN. Calcule o voo de saída antes do último dive.", critico: true },
+  { item: "Hidratação dobrada no dia anterior", quando: "Desidratação aumenta risco de bends. Beba 3L de água/dia.", critico: false },
+  { item: "Refeição leve 2h antes (sem fritura)", quando: "Mar agitado + estômago cheio = vomitar dentro da máscara.", critico: false },
+  { item: "Protetor solar reef-safe (sem oxybenzone)", quando: "Tao multa quem usa químico em barco de mergulho. Compre Stream2Sea ou Thinksport antes.", critico: false },
+  { item: "Sapatilha de neoprene leve", quando: "Para subir na escada do barco com corais — corte é comum.", critico: false },
+  { item: "Cópia digital da certificação PADI/SSI", quando: "Foto no celular + e-mail para você mesmo. Escolas pedem antes do fun dive.", critico: false },
+];
+
+const GLOSSARIO = [
+  { termo: "Buoyancy (flutuabilidade)", oque: "Controle de subir/descer com respiração e BCD. É a habilidade #1 — define se você vai 'voar' embaixo d'água ou se debater." },
+  { termo: "BCD", oque: "Buoyancy Control Device — o colete inflável. Você infla pra subir, esvazia pra descer." },
+  { termo: "Surface interval", oque: "Tempo de descanso entre 2 mergulhos. Mínimo 1h. Serve pra liberar nitrogênio." },
+  { termo: "Safety stop", oque: "Parada obrigatória de 3 min a 5m no final do mergulho. Não pule — é segurança real, não burocracia." },
+  { termo: "NDL (No-Decompression Limit)", oque: "Tempo máximo numa profundidade sem precisar de parada descompressiva. Computador de mergulho calcula." },
+  { termo: "Equalizar", oque: "Soltar pressão do ouvido apertando o nariz e soprando suave. Se doer, suba 1m e tente de novo." },
+  { termo: "Octopus", oque: "Segundo regulador (amarelo). Pra emergência ou parceiro sem ar." },
+  { termo: "DSMB", oque: "Boia inflável de superfície. Você lança no fim do mergulho pra avisar o barco onde você vai subir." },
+  { termo: "Nitrox", oque: "Mistura com mais oxigênio (até 32%). Permite mergulho mais longo. Curso à parte." },
+  { termo: "Bends (DCS)", oque: "Doença descompressiva. Nitrogênio formando bolha no sangue. Por isso safety stop e 18h sem voar." },
+  { termo: "Briefing", oque: "Reunião antes do dive: mapa do site, profundidade, fauna esperada, sinais. Preste atenção." },
+  { termo: "Buddy", oque: "Parceiro de mergulho. Vocês cuidam um do outro. Nunca mergulhe sozinho recreativo." },
+];
+
+const FERRIES = [
+  { rota: "Chumphon → Koh Tao", op: "Lomprayah", saidas: "07h / 13h", duracao: "1h45 (catamarã)", preco: "600 baht" },
+  { rota: "Chumphon → Koh Tao", op: "Songserm", saidas: "07h", duracao: "3h (slow boat)", preco: "400 baht" },
+  { rota: "Surat Thani → Koh Tao", op: "Lomprayah (via Samui)", saidas: "08h", duracao: "5h-6h", preco: "1.100 baht" },
+  { rota: "Koh Samui (Bangrak) → Koh Tao", op: "Lomprayah", saidas: "08h / 12h30", duracao: "1h45", preco: "650 baht" },
+  { rota: "Koh Samui (Maenam) → Koh Tao", op: "Seatran Discovery", saidas: "08h / 13h", duracao: "2h", preco: "600 baht" },
+  { rota: "Koh Phangan (Thong Sala) → Koh Tao", op: "Lomprayah", saidas: "08h30 / 13h", duracao: "1h", preco: "500 baht" },
+  { rota: "Koh Phangan → Koh Tao", op: "Seatran Discovery", saidas: "08h30 / 13h30", duracao: "1h15", preco: "450 baht" },
+  { rota: "Koh Tao → Chumphon (volta)", op: "Lomprayah", saidas: "10h15 / 14h45", duracao: "1h45", preco: "600 baht" },
+  { rota: "Koh Tao → Koh Samui", op: "Lomprayah", saidas: "06h / 09h30 / 15h", duracao: "1h45", preco: "650 baht" },
+];
+
+const CONECTIVIDADE = [
+  { onde: "Sairee / Mae Haad", sinal: "5G AIS/True ótimo", obs: "Wi-Fi rápido em todo café. Coffee Boat e Cafe del Sol confiáveis para trabalho remoto." },
+  { onde: "Chalok Baan Kao", sinal: "4G estável", obs: "Wi-Fi médio nos resorts. Suficiente para WhatsApp e e-mail." },
+  { onde: "Tanote Bay / Aow Leuk", sinal: "3G fraco / sem sinal em pontos", obs: "Baixe Maps offline antes. Resorts oferecem Wi-Fi via satélite (lento)." },
+  { onde: "Hin Wong / Leste em geral", sinal: "Quase nada", obs: "Pegue na boa: zona de desconectar. Avise família antes." },
+  { onde: "Dentro d'água nos dive sites", sinal: "—", obs: "Óbvio mas alguém pergunta: sem sinal. Use Garmin inReach se precisar emergência." },
+];
+
+const ESIM_DICAS = [
+  { o_que: "eSIM antes de embarcar (recomendado)", como: "Airalo, Holafly ou Nomad — plano Tailândia 10GB / 30 dias ~ US$ 18. Ativa no avião." },
+  { o_que: "Chip físico AIS Traveller", como: "Comprado no 7-Eleven de Mae Haad ou aeroporto. 299 baht / 8 dias ilimitado. Precisa passaporte." },
+  { o_que: "Chip True Tourist", como: "Mesma faixa de preço. Sinal levemente pior em Tao do que AIS." },
+  { o_que: "Roaming brasileiro", como: "Vivo/Claro/Tim cobram R$ 35-60/dia. Só vale se ficar 1-2 dias." },
+];
+
+const DINHEIRO = [
+  { topico: "Caixa eletrônico (ATM)", detalhe: "Toda ATM tailandesa cobra 220 baht de taxa fixa por saque, independente do valor. Saque uma única vez 20.000 baht no aeroporto/Bangkok antes de chegar." },
+  { topico: "Aeon Bank (a exceção)", detalhe: "Cobra 150 baht (vs 220 dos outros). Em Tao tem um caixa em Mae Haad — sempre cheio, mas economiza." },
+  { topico: "Câmbio em casa", detalhe: "Casas de câmbio em Tao têm taxa 3-5% pior que Bangkok. Traga baht do continente se possível." },
+  { topico: "Cartão Wise / Nomad", detalhe: "Câmbio próximo do oficial + R$ 0 de IOF. Ainda paga a taxa do ATM, mas o spread vale." },
+  { topico: "Dólar em espécie", detalhe: "Aceito em troca, mas note de US$ 100 nova pega câmbio melhor. Notas antigas/marcadas viram desconto." },
+  { topico: "Cartão de crédito", detalhe: "Resorts premium, dive shops grandes e supermercados aceitam. Restaurante local e taxi: só dinheiro." },
+  { topico: "Travel hack", detalhe: "Pague a escola de mergulho no cartão sem juros (parcela em real). Saque o dinheiro só para comida/scooter." },
+];
+
+const ERROS_CAROS = [
+  { erro: "Comprou Open Water online por R$ 1.800", custo: "+R$ 1.200", licao: "Mesma escola cobra R$ 600 no pier. Sempre reserve só a noite 1 e feche na ilha." },
+  { erro: "Confundiu Sairee com Mae Haad ao desembarcar", custo: "+R$ 80", licao: "Taxi-truck cobra 300 baht extra se você não souber que é tabelado em 100/pessoa." },
+  { erro: "Ignorou seguro DAN e teve barotrauma leve", custo: "+R$ 3.500", licao: "Câmara hiperbárica em Koh Samui sai R$ 8.000-12.000. DAN cobre 100%. US$ 45/ano." },
+  { erro: "Reservou em outubro porque era barato", custo: "Viagem perdida", licao: "Monção NE = mar fechado dias seguidos. Pacote 30% mais barato vira 100% perdido." },
+  { erro: "Alugou scooter sem filmar 360°", custo: "+R$ 4.000", licao: "Arranhão prévio vira 8-25k baht na devolução. Filme tudo + use só Oishi/Adventure/Mr Bee." },
+  { erro: "Voou 8h depois do último dive", custo: "Ida ao hospital em Bangkok", licao: "Regra é 18h. Pulmão expande no avião e bolha de nitrogênio mata. Não é folclore." },
+  { erro: "Pagou Nang Yuan day-trip 'all inclusive'", custo: "+R$ 50", licao: "Entrada de 250 baht NUNCA está inclusa. Reserve esse troco no bolso." },
+  { erro: "Sacou 5 vezes no ATM em vez de 1", custo: "+R$ 50", licao: "5 × 220 baht de taxa fixa = 1.100 baht jogados fora. Saque grande, divida com parceiro." },
 ];
 
 const BAIRROS: { nome: string; veredito: string; tone: Tone; perfil: string; evite: string; praia: string; quanto: string; quando: string; }[] = [
@@ -689,19 +770,158 @@ const KohTao6294 = () => {
             </div>
           </section>
 
-          <section id="mapa">
-            <SectionTitle icon={MapIcon} kicker="13 — Mapa" title="Mapa Google interativo (offline)" />
+          <section id="checklist">
+            <SectionTitle icon={ShieldCheck} kicker="13 — Antes do primeiro mergulho" title="Checklist do mergulhador brasileiro" />
+            <div className="grid md:grid-cols-2 gap-4">
+              {CHECKLIST_MERGULHO.map((c, i) => (
+                <Reveal key={c.item} i={i}>
+                  <article className={`pk-card pk-card-tight ${c.critico ? TONE_CLASS.alert : TONE_CLASS.ok} h-full`}>
+                    <h4 className="pk-h4 flex items-start gap-2">
+                      {c.critico ? <AlertTriangle className="w-4 h-4 mt-1 shrink-0" /> : <CheckCircle2 className="w-4 h-4 mt-1 shrink-0" />}
+                      {c.item}
+                    </h4>
+                    <p className="text-sm text-[hsl(var(--pk-muted))] mt-2">{c.quando}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="glossario">
+            <SectionTitle icon={Sparkles} kicker="14 — Briefing destravado" title="Mini-glossário PADI em português" />
+            <div className="grid md:grid-cols-2 gap-4">
+              {GLOSSARIO.map((g, i) => (
+                <Reveal key={g.termo} i={i}>
+                  <article className="pk-card pk-card-tight h-full">
+                    <h4 className="pk-h4">{g.termo}</h4>
+                    <p className="text-sm text-[hsl(var(--pk-muted))] mt-2">{g.oque}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="ferries">
+            <SectionTitle icon={Ship} kicker="15 — Ferries" title="Tabela completa de saídas e preços" />
             <Reveal>
-              <div className="pk-card space-y-4 text-sm leading-relaxed">
-                <p>Cada bairro, praia, dive site, escola e restaurante deste guia tem o chip <span className="pk-map-chip pk-map-chip-inline"><MapPin className="w-3 h-3" /> Mapa</span> ao lado — toque e abre direto no Google Maps.</p>
-                <p>
-                  <strong className="pk-gold">Abrir Koh Tao no Google Maps:</strong>{" "}
-                  <a href="https://www.google.com/maps/place/Ko+Tao,+Thailand" target="_blank" rel="noreferrer" className="pk-link">ver ilha inteira</a>.
-                </p>
-                <p><strong>Como salvar offline:</strong> Google Maps no celular → menu → "Mapas offline" → enquadre Tao + Nang Yuan → baixar. Sinal de 4G é fraco no leste da ilha.</p>
+              <div className="pk-card pk-card-tight overflow-x-auto">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className="text-left text-[hsl(var(--pk-muted))] border-b border-[hsl(var(--pk-line))]">
+                      <th className="py-3 pr-4">Rota</th>
+                      <th className="py-3 pr-4">Operadora</th>
+                      <th className="py-3 pr-4">Saídas</th>
+                      <th className="py-3 pr-4">Duração</th>
+                      <th className="py-3">Preço</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {FERRIES.map((f) => (
+                      <tr key={f.rota + f.op} className="border-b border-[hsl(var(--pk-line))]/40 align-top">
+                        <td className="py-3 pr-4 font-semibold text-[hsl(var(--pk-fg))]">{f.rota}</td>
+                        <td className="py-3 pr-4">{f.op}</td>
+                        <td className="py-3 pr-4 whitespace-nowrap">{f.saidas}</td>
+                        <td className="py-3 pr-4 whitespace-nowrap">{f.duracao}</td>
+                        <td className="py-3 whitespace-nowrap">{f.preco}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </Reveal>
+            <Reveal>
+              <div className="pk-callout pk-callout-warn mt-6">
+                <AlertTriangle className="w-5 h-5 shrink-0 mt-0.5" />
+                <p><strong>Monção pesada (out-nov):</strong> Lomprayah é a única que mantém saídas com mar agitado. Songserm cancela muito. Reserve com 1 dia de folga antes de voo internacional.</p>
               </div>
             </Reveal>
           </section>
+
+          <section id="conectividade">
+            <SectionTitle icon={MapPin} kicker="16 — Sinal" title="SIM, eSIM e Wi-Fi por região" />
+            <div className="grid md:grid-cols-5 gap-6">
+              <div className="md:col-span-3 space-y-3">
+                {CONECTIVIDADE.map((c, i) => (
+                  <Reveal key={c.onde} i={i}>
+                    <article className="pk-card pk-card-tight">
+                      <div className="flex justify-between items-baseline gap-3">
+                        <h4 className="pk-h4">{c.onde}</h4>
+                        <span className="pk-tag-sm">{c.sinal}</span>
+                      </div>
+                      <p className="text-sm text-[hsl(var(--pk-muted))] mt-2">{c.obs}</p>
+                    </article>
+                  </Reveal>
+                ))}
+              </div>
+              <Reveal i={1} className="md:col-span-2">
+                <article className="pk-card pk-tone-premium h-full">
+                  <p className="pk-kicker">Como conectar</p>
+                  <ul className="mt-3 space-y-3 text-sm">
+                    {ESIM_DICAS.map((e) => (
+                      <li key={e.o_que}>
+                        <strong className="text-[hsl(var(--pk-fg))]">{e.o_que}</strong>
+                        <p className="text-[hsl(var(--pk-muted))] mt-0.5">{e.como}</p>
+                      </li>
+                    ))}
+                  </ul>
+                </article>
+              </Reveal>
+            </div>
+          </section>
+
+          <section id="dinheiro">
+            <SectionTitle icon={Wallet} kicker="17 — Bolso" title="ATM, câmbio e cartão sem dor" />
+            <div className="grid md:grid-cols-2 gap-4">
+              {DINHEIRO.map((d, i) => (
+                <Reveal key={d.topico} i={i}>
+                  <article className="pk-card pk-card-tight h-full">
+                    <h4 className="pk-h4">{d.topico}</h4>
+                    <p className="text-sm text-[hsl(var(--pk-muted))] mt-2">{d.detalhe}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="erros">
+            <SectionTitle icon={AlertTriangle} kicker="18 — Aprenda com o erro alheio" title="Erros que custaram caro de verdade" />
+            <div className="grid md:grid-cols-2 gap-4">
+              {ERROS_CAROS.map((e, i) => (
+                <Reveal key={e.erro} i={i}>
+                  <article className={`pk-card pk-card-tight ${TONE_CLASS.alert} h-full`}>
+                    <div className="flex justify-between items-start gap-3">
+                      <h4 className="pk-h4">{e.erro}</h4>
+                      <span className="pk-tag-sm whitespace-nowrap">{e.custo}</span>
+                    </div>
+                    <p className="text-sm text-[hsl(var(--pk-muted))] mt-2"><strong className="pk-gold">Lição:</strong> {e.licao}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="mapa">
+            <SectionTitle icon={MapIcon} kicker="19 — Mapa" title="Mapa Google interativo (offline)" />
+            <Reveal>
+              <div className="pk-card space-y-4 text-sm leading-relaxed">
+                <p>Cada bairro, praia, dive site, escola e restaurante deste guia tem o chip <span className="pk-map-chip pk-map-chip-inline"><MapPin className="w-3 h-3" /> Mapa</span> ao lado — toque e abre direto no Google Maps.</p>
+                <div className="flex flex-wrap gap-3 pt-2">
+                  <a href="https://www.google.com/maps/place/Ko+Tao,+Thailand" target="_blank" rel="noreferrer" className="pk-tag inline-flex items-center gap-2"><MapIcon className="w-4 h-4" /> Abrir Koh Tao no Maps</a>
+                  <a href="https://www.google.com/maps/search/dive+school+Koh+Tao+Thailand" target="_blank" rel="noreferrer" className="pk-tag inline-flex items-center gap-2"><Waves className="w-4 h-4" /> Ver todas as escolas de mergulho</a>
+                  <a href="https://www.google.com/maps/search/beach+Koh+Tao+Thailand" target="_blank" rel="noreferrer" className="pk-tag inline-flex items-center gap-2"><Sun className="w-4 h-4" /> Ver praias da ilha</a>
+                </div>
+                <div className="pk-divider my-2" />
+                <p><strong className="pk-gold">Salvar lista no seu celular (3 passos):</strong></p>
+                <ol className="list-decimal pl-5 space-y-1 text-[hsl(var(--pk-muted))]">
+                  <li>Toque em qualquer chip 📍 <strong>Mapa</strong> deste guia → abre no Google Maps app.</li>
+                  <li>No app, toque em <strong>"Salvar"</strong> → escolha lista <strong>"Quero ir"</strong> ou crie <strong>"Koh Tao 2026"</strong>.</li>
+                  <li>Repita para cada lugar. No fim, abra a lista uma vez online em Wi-Fi para Google cachear offline.</li>
+                </ol>
+                <p><strong>Como salvar mapa offline:</strong> Google Maps → menu → "Mapas offline" → enquadre Tao + Nang Yuan → baixar. Sinal de 4G é fraco no leste da ilha.</p>
+              </div>
+            </Reveal>
+          </section>
+
 
           <section id="orcamento">
             <SectionTitle icon={Wallet} kicker="14 — Bolso" title="Orçamento honesto por dia (em real)" />
