@@ -25,8 +25,89 @@ const TOC = [
   { id: "roteiros", label: "Roteiros", icon: Sun },
   { id: "antigolpe", label: "Anti-golpe", icon: ShieldCheck },
   { id: "blacklist", label: "Lista negra", icon: XCircle },
+  { id: "checklist", label: "Checklist mergulho", icon: ShieldCheck },
+  { id: "glossario", label: "Glossário PADI", icon: Sparkles },
+  { id: "ferries", label: "Ferries", icon: Ship },
+  { id: "conectividade", label: "SIM & Wi-Fi", icon: MapPin },
+  { id: "dinheiro", label: "ATM & câmbio", icon: Wallet },
+  { id: "erros", label: "Erros caros", icon: AlertTriangle },
   { id: "mapa", label: "Mapa", icon: MapIcon },
   { id: "orcamento", label: "Orçamento", icon: Wallet },
+];
+
+const CHECKLIST_MERGULHO = [
+  { item: "Seguro DAN World (Dive Accident Network)", quando: "Antes de embarcar — US$ 45/ano. Seguro de viagem comum NÃO cobre câmara hiperbárica.", critico: true },
+  { item: "Atestado médico PADI (form completo)", quando: "Obrigatório se >45 anos OU marcar 'sim' em qualquer condição. Resolva no Brasil — clínica em Tao cobra 1.500 baht.", critico: true },
+  { item: "Sem álcool 12h antes de mergulhar", quando: "Mesmo 2 cervejas no jantar afetam o nitrogênio residual. Festa em Sairee = dia perdido.", critico: true },
+  { item: "18 horas sem voar após o último mergulho", quando: "Regra do PADI/DAN. Calcule o voo de saída antes do último dive.", critico: true },
+  { item: "Hidratação dobrada no dia anterior", quando: "Desidratação aumenta risco de bends. Beba 3L de água/dia.", critico: false },
+  { item: "Refeição leve 2h antes (sem fritura)", quando: "Mar agitado + estômago cheio = vomitar dentro da máscara.", critico: false },
+  { item: "Protetor solar reef-safe (sem oxybenzone)", quando: "Tao multa quem usa químico em barco de mergulho. Compre Stream2Sea ou Thinksport antes.", critico: false },
+  { item: "Sapatilha de neoprene leve", quando: "Para subir na escada do barco com corais — corte é comum.", critico: false },
+  { item: "Cópia digital da certificação PADI/SSI", quando: "Foto no celular + e-mail para você mesmo. Escolas pedem antes do fun dive.", critico: false },
+];
+
+const GLOSSARIO = [
+  { termo: "Buoyancy (flutuabilidade)", oque: "Controle de subir/descer com respiração e BCD. É a habilidade #1 — define se você vai 'voar' embaixo d'água ou se debater." },
+  { termo: "BCD", oque: "Buoyancy Control Device — o colete inflável. Você infla pra subir, esvazia pra descer." },
+  { termo: "Surface interval", oque: "Tempo de descanso entre 2 mergulhos. Mínimo 1h. Serve pra liberar nitrogênio." },
+  { termo: "Safety stop", oque: "Parada obrigatória de 3 min a 5m no final do mergulho. Não pule — é segurança real, não burocracia." },
+  { termo: "NDL (No-Decompression Limit)", oque: "Tempo máximo numa profundidade sem precisar de parada descompressiva. Computador de mergulho calcula." },
+  { termo: "Equalizar", oque: "Soltar pressão do ouvido apertando o nariz e soprando suave. Se doer, suba 1m e tente de novo." },
+  { termo: "Octopus", oque: "Segundo regulador (amarelo). Pra emergência ou parceiro sem ar." },
+  { termo: "DSMB", oque: "Boia inflável de superfície. Você lança no fim do mergulho pra avisar o barco onde você vai subir." },
+  { termo: "Nitrox", oque: "Mistura com mais oxigênio (até 32%). Permite mergulho mais longo. Curso à parte." },
+  { termo: "Bends (DCS)", oque: "Doença descompressiva. Nitrogênio formando bolha no sangue. Por isso safety stop e 18h sem voar." },
+  { termo: "Briefing", oque: "Reunião antes do dive: mapa do site, profundidade, fauna esperada, sinais. Preste atenção." },
+  { termo: "Buddy", oque: "Parceiro de mergulho. Vocês cuidam um do outro. Nunca mergulhe sozinho recreativo." },
+];
+
+const FERRIES = [
+  { rota: "Chumphon → Koh Tao", op: "Lomprayah", saidas: "07h / 13h", duracao: "1h45 (catamarã)", preco: "600 baht" },
+  { rota: "Chumphon → Koh Tao", op: "Songserm", saidas: "07h", duracao: "3h (slow boat)", preco: "400 baht" },
+  { rota: "Surat Thani → Koh Tao", op: "Lomprayah (via Samui)", saidas: "08h", duracao: "5h-6h", preco: "1.100 baht" },
+  { rota: "Koh Samui (Bangrak) → Koh Tao", op: "Lomprayah", saidas: "08h / 12h30", duracao: "1h45", preco: "650 baht" },
+  { rota: "Koh Samui (Maenam) → Koh Tao", op: "Seatran Discovery", saidas: "08h / 13h", duracao: "2h", preco: "600 baht" },
+  { rota: "Koh Phangan (Thong Sala) → Koh Tao", op: "Lomprayah", saidas: "08h30 / 13h", duracao: "1h", preco: "500 baht" },
+  { rota: "Koh Phangan → Koh Tao", op: "Seatran Discovery", saidas: "08h30 / 13h30", duracao: "1h15", preco: "450 baht" },
+  { rota: "Koh Tao → Chumphon (volta)", op: "Lomprayah", saidas: "10h15 / 14h45", duracao: "1h45", preco: "600 baht" },
+  { rota: "Koh Tao → Koh Samui", op: "Lomprayah", saidas: "06h / 09h30 / 15h", duracao: "1h45", preco: "650 baht" },
+];
+
+const CONECTIVIDADE = [
+  { onde: "Sairee / Mae Haad", sinal: "5G AIS/True ótimo", obs: "Wi-Fi rápido em todo café. Coffee Boat e Cafe del Sol confiáveis para trabalho remoto." },
+  { onde: "Chalok Baan Kao", sinal: "4G estável", obs: "Wi-Fi médio nos resorts. Suficiente para WhatsApp e e-mail." },
+  { onde: "Tanote Bay / Aow Leuk", sinal: "3G fraco / sem sinal em pontos", obs: "Baixe Maps offline antes. Resorts oferecem Wi-Fi via satélite (lento)." },
+  { onde: "Hin Wong / Leste em geral", sinal: "Quase nada", obs: "Pegue na boa: zona de desconectar. Avise família antes." },
+  { onde: "Dentro d'água nos dive sites", sinal: "—", obs: "Óbvio mas alguém pergunta: sem sinal. Use Garmin inReach se precisar emergência." },
+];
+
+const ESIM_DICAS = [
+  { o_que: "eSIM antes de embarcar (recomendado)", como: "Airalo, Holafly ou Nomad — plano Tailândia 10GB / 30 dias ~ US$ 18. Ativa no avião." },
+  { o_que: "Chip físico AIS Traveller", como: "Comprado no 7-Eleven de Mae Haad ou aeroporto. 299 baht / 8 dias ilimitado. Precisa passaporte." },
+  { o_que: "Chip True Tourist", como: "Mesma faixa de preço. Sinal levemente pior em Tao do que AIS." },
+  { o_que: "Roaming brasileiro", como: "Vivo/Claro/Tim cobram R$ 35-60/dia. Só vale se ficar 1-2 dias." },
+];
+
+const DINHEIRO = [
+  { topico: "Caixa eletrônico (ATM)", detalhe: "Toda ATM tailandesa cobra 220 baht de taxa fixa por saque, independente do valor. Saque uma única vez 20.000 baht no aeroporto/Bangkok antes de chegar." },
+  { topico: "Aeon Bank (a exceção)", detalhe: "Cobra 150 baht (vs 220 dos outros). Em Tao tem um caixa em Mae Haad — sempre cheio, mas economiza." },
+  { topico: "Câmbio em casa", detalhe: "Casas de câmbio em Tao têm taxa 3-5% pior que Bangkok. Traga baht do continente se possível." },
+  { topico: "Cartão Wise / Nomad", detalhe: "Câmbio próximo do oficial + R$ 0 de IOF. Ainda paga a taxa do ATM, mas o spread vale." },
+  { topico: "Dólar em espécie", detalhe: "Aceito em troca, mas note de US$ 100 nova pega câmbio melhor. Notas antigas/marcadas viram desconto." },
+  { topico: "Cartão de crédito", detalhe: "Resorts premium, dive shops grandes e supermercados aceitam. Restaurante local e taxi: só dinheiro." },
+  { topico: "Travel hack", detalhe: "Pague a escola de mergulho no cartão sem juros (parcela em real). Saque o dinheiro só para comida/scooter." },
+];
+
+const ERROS_CAROS = [
+  { erro: "Comprou Open Water online por R$ 1.800", custo: "+R$ 1.200", licao: "Mesma escola cobra R$ 600 no pier. Sempre reserve só a noite 1 e feche na ilha." },
+  { erro: "Confundiu Sairee com Mae Haad ao desembarcar", custo: "+R$ 80", licao: "Taxi-truck cobra 300 baht extra se você não souber que é tabelado em 100/pessoa." },
+  { erro: "Ignorou seguro DAN e teve barotrauma leve", custo: "+R$ 3.500", licao: "Câmara hiperbárica em Koh Samui sai R$ 8.000-12.000. DAN cobre 100%. US$ 45/ano." },
+  { erro: "Reservou em outubro porque era barato", custo: "Viagem perdida", licao: "Monção NE = mar fechado dias seguidos. Pacote 30% mais barato vira 100% perdido." },
+  { erro: "Alugou scooter sem filmar 360°", custo: "+R$ 4.000", licao: "Arranhão prévio vira 8-25k baht na devolução. Filme tudo + use só Oishi/Adventure/Mr Bee." },
+  { erro: "Voou 8h depois do último dive", custo: "Ida ao hospital em Bangkok", licao: "Regra é 18h. Pulmão expande no avião e bolha de nitrogênio mata. Não é folclore." },
+  { erro: "Pagou Nang Yuan day-trip 'all inclusive'", custo: "+R$ 50", licao: "Entrada de 250 baht NUNCA está inclusa. Reserve esse troco no bolso." },
+  { erro: "Sacou 5 vezes no ATM em vez de 1", custo: "+R$ 50", licao: "5 × 220 baht de taxa fixa = 1.100 baht jogados fora. Saque grande, divida com parceiro." },
 ];
 
 const BAIRROS: { nome: string; veredito: string; tone: Tone; perfil: string; evite: string; praia: string; quanto: string; quando: string; }[] = [
