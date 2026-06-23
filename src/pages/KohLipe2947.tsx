@@ -509,6 +509,39 @@ const KohLipe2947 = () => {
             </div>
           </section>
 
+          <section id="ferries-arq">
+            <SectionTitle icon={Anchor} kicker="06 — Arquipélago" title="Ferries Lipe ⇄ Lanta / Phi Phi / Phuket / Langkawi" />
+            <Reveal>
+              <div className="pk-card pk-card-feature mb-6">
+                <p className="text-lg leading-relaxed">
+                  <strong className="pk-gold">Lipe é um hub melhor do que parece.</strong>{" "}
+                  Combinar com Lanta, Phi Phi ou cruzar pra Langkawi (Malásia) é speedboat direto — <em>só de nov-mai</em>. Em monção: nenhuma das rotas abaixo funciona.
+                </p>
+              </div>
+            </Reveal>
+            <Reveal>
+              <div className="pk-card p-0 overflow-hidden">
+                <div className="overflow-x-auto">
+                  <table className="pk-table">
+                    <thead><tr><th>Rota</th><th>Barco / Operadora</th><th>Janela</th><th>Saída</th><th>Tempo</th><th>Preço</th></tr></thead>
+                    <tbody>
+                      {FERRIES_ARQ.map((f, i) => (
+                        <tr key={i}>
+                          <td className="font-medium">{f.rota}</td>
+                          <td>{f.barco}</td>
+                          <td className="whitespace-nowrap">{f.janela}</td>
+                          <td className="whitespace-nowrap">{f.saida}</td>
+                          <td className="whitespace-nowrap">{f.tempo}</td>
+                          <td className="pk-gold-soft font-medium whitespace-nowrap">{f.preco}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </Reveal>
+          </section>
+
           <section id="hospedagem">
             <SectionTitle icon={Sparkles} kicker="05 — Onde dormir" title="Hospedagem por faixa real" />
             <div className="grid md:grid-cols-3 gap-6">
