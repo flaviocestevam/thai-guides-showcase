@@ -544,9 +544,13 @@ const KohSamui7392 = () => {
             <p className="text-[hsl(var(--pk-muted))] mt-3 mb-8 max-w-2xl">Cada ilha tem o seu guia, mesma profundidade. Compre só o que vai usar.</p>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {[
-                { nome: "Phuket", path: "/phuket8821" },
-                { nome: "Koh Phi Phi", path: "/kohphiphi5128" },
-                { nome: "Koh Phangan", path: "/kohphangan8463" },
+                { nome: "Koh Phangan (ilha vizinha)", path: "/koh-phangan-tailandia" },
+                { nome: "Koh Tao (ilha vizinha)", path: "/koh-tao-tailandia" },
+                { nome: "Koh Phi Phi", path: "/koh-phi-phi-tailandia" },
+                { nome: "Lua de Mel na Tailândia", path: "/lua-de-mel-tailandia" },
+                { nome: "Beach Clubs", path: "/beach-clubs-tailandia" },
+                { nome: "Retiros & wellness", path: "/retiros-tailandia" },
+                { nome: "Catálogo das ilhas", path: "/ilhas" },
                 { nome: "Catálogo geral", path: "/" },
               ].map((g, i) => (
                 <Reveal key={g.path} i={i}>
