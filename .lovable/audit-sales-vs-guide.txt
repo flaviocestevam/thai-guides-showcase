@@ -1,9 +1,9 @@
 ================================================================
- AUDITORIA VENDA × GUIA  —  2026-06-23T19:40:47.394Z
+ AUDITORIA VENDA × GUIA  —  2026-06-23T19:49:44.554Z
 ================================================================
 
-✅ koh-tao-tailandia  →  src/pages/KohTao6294.tsx
-   Cobertura: 45/45 (100%)
+✅ koh-phi-phi-tailandia  →  src/pages/KohPhiPhi5128.tsx
+   Cobertura: 33/33 (100%)
 
 ----------------------------------------------------------------
  Total de gaps: 0
