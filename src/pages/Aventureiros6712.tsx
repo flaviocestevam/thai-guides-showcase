@@ -241,6 +241,14 @@ const Aventureiros6712 = () => (
             <p className="font-semibold text-foreground text-sm">Protocolo de emergência</p>
             <p className="text-xs text-muted-foreground">Heli, hospitais, embaixada</p>
           </a>
+          <a href="#pagamento" className="block bg-card border border-border rounded-lg p-3 hover:border-primary transition">
+            <p className="font-semibold text-foreground text-sm">Como pagar cada operadora</p>
+            <p className="text-xs text-muted-foreground">Método seguro por tipo</p>
+          </a>
+          <a href="#familia" className="block bg-card border border-border rounded-lg p-3 hover:border-primary transition">
+            <p className="font-semibold text-foreground text-sm">Aventura em família</p>
+            <p className="text-xs text-muted-foreground">O que rola com criança 8+</p>
+          </a>
           <a href="#khao-sok" className="block bg-card border border-border rounded-lg p-3 hover:border-primary transition">
             <p className="font-semibold text-foreground text-sm">Khao Sok Jungle Trek</p>
             <p className="text-xs text-muted-foreground">Roteiro 4 dias completo</p>
@@ -347,6 +355,54 @@ const Aventureiros6712 = () => (
         <p>• Skydive precisa ser declarado ANTES da compra em quase todos os planos</p>
         <p>• Moto sem CNH internacional = seguro nulo (todos os planos)</p>
         <p>• Mergulho sem certificação PADI/SSI = nulo</p>
+      </Card>
+      <Card>
+        <p><strong>✅ Checklist do seguro antes de fechar:</strong></p>
+        <p>• Plano cobre TODAS as modalidades da sua viagem (skydive/bungee/escalada exigem add-on)</p>
+        <p>• Limite médico ≥ US$ 100.000 e resgate ≥ US$ 250.000</p>
+        <p>• Resgate por helicóptero incluso (não só transporte terrestre)</p>
+        <p>• Atendimento 24h em PT ou EN com hospital pagando direto</p>
+        <p>• Apólice declara CNH internacional pra moto e certificação pra mergulho</p>
+        <p>• Cobertura mínima de 30 dias após o retorno (sequelas)</p>
+        <p>• Bagagem + cancelamento de voo inclusos (perda em conexão asiática é comum)</p>
+      </Card>
+    </Section>
+
+    {/* COMO PAGAR */}
+    <Section id="pagamento" chapter="Bônus" title="Como pagar cada operadora — método seguro">
+      <Card>
+        <p><strong>Reserva online (PADI 5-star, Real Rocks, Flight of the Gibbon, Thai Sky):</strong> cartão internacional no site oficial. Confirme o domínio antes — evite intermediários como Klook/GetYourGuide pra aventura (cobram 15–25% a mais e não respondem em emergência).</p>
+      </Card>
+      <Card>
+        <p><strong>Pequenas operadoras (Smiley, Cave Lodge, Piroon, Cat Motors):</strong> reserva por WhatsApp/e-mail + pagamento em cash na chegada (THB). Nunca PIX/transferência internacional antes — golpe comum.</p>
+      </Card>
+      <Card>
+        <p><strong>Aluguel de moto:</strong> NUNCA deixe passaporte como caução. Use cópia autenticada + ฿5.000 cash. Tony's e Cat Motors aceitam esse esquema; quem recusa = sinal vermelho.</p>
+      </Card>
+      <Card>
+        <p><strong>Liveaboard mergulho (Wicked, Big Blue):</strong> sinal de 25% via cartão, saldo em cash THB no embarque. Guarde recibo físico — útil em caso de cancelamento por clima.</p>
+      </Card>
+    </Section>
+
+    {/* FAMÍLIA */}
+    <Section id="familia" chapter="Bônus" title="Aventura em família — o que rola com criança 8+">
+      <Card>
+        <p><strong>Seguras com criança 8+:</strong></p>
+        <p>• Tirolesa Pongyang ou Tree Top Krabi (com adulto na linha)</p>
+        <p>• Bamboo rafting Phang Nga (Siam Adventures) — sem corredeira</p>
+        <p>• Kayak em Ao Thalane (Krabi) — mangue calmo</p>
+        <p>• Caverna Phraya Nakhon (Sam Roi Yot) — trek curto + foto clássica</p>
+        <p>• Trek 1 dia Khao Yai (Greenleaf) — chance de elefante selvagem</p>
+      </Card>
+      <Card>
+        <p><strong>Adolescente 14+ (com responsável):</strong></p>
+        <p>• Open Water Junior PADI em Koh Tao (Crystal Dive, Master Divers)</p>
+        <p>• Escalada Top Rope em Railay (Real Rocks, King Climbers)</p>
+        <p>• ATV duplo em Chiang Mai (X-Centre, instrutor dirige)</p>
+        <p>• Tirolesa Flight of the Gibbon (peso mínimo 25kg)</p>
+      </Card>
+      <Card>
+        <p><strong>❌ Evite com criança:</strong> rafting Pai (classe 3–4), Khao Sok Nam Talu, skydive, bungee, mergulho de naufrágio, Mae Hong Son Loop de moto.</p>
       </Card>
     </Section>
 
