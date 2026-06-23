@@ -497,7 +497,7 @@ const Phuket8821 = () => {
               <Card key={d.tour} className="border-emerald-500/20">
                 <CardContent className="p-5 grid md:grid-cols-5 gap-3 text-sm">
                   <div className="md:col-span-2">
-                    <h3 className="font-display font-bold text-lg mb-1">{d.tour}</h3>
+                    <h3 className="font-display font-bold text-lg mb-1"><G q={d.tour + " Thailand"}>{d.tour}</G></h3>
                     <p className="text-emerald-300 text-xs">{d.barco}</p>
                   </div>
                   <div><strong className="text-xs text-muted-foreground">Quando</strong><p>{d.quando}</p></div>
