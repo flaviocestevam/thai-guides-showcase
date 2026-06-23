@@ -299,7 +299,7 @@ const buildJsonLd = (c: SalesContent) => {
   ];
 };
 
-const SalesPage = ({ c }: { c: SalesContent }) => (
+const SalesPage = ({ c, extraSection }: { c: SalesContent; extraSection?: React.ReactNode }) => (
   <div className="min-h-screen bg-background text-foreground overflow-x-hidden antialiased selection:bg-primary/30">
     <SEO
       title={c.seoTitle}
