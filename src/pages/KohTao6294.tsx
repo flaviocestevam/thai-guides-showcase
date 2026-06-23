@@ -419,21 +419,8 @@ const KohTao6294 = () => {
                 </article>
               </Reveal>
             </div>
-
-            <Reveal>
-              <div className="mt-8">
-                <p className="pk-kicker mb-4">Escolas para evitar — e o porquê</p>
-                <div className="grid md:grid-cols-2 gap-4">
-                  {ESCOLAS_EVITAR.map((e) => (
-                    <article key={e.nome} className={`pk-card pk-card-tight ${TONE_CLASS.alert} h-full`}>
-                      <h4 className="pk-h4 flex items-start gap-2"><XCircle className="w-4 h-4 mt-1 shrink-0" /> {e.nome}</h4>
-                      <p className="text-sm text-[hsl(var(--pk-muted))] mt-2">{e.motivo}</p>
-                    </article>
-                  ))}
-                </div>
-              </div>
-            </Reveal>
           </section>
+
 
           <section id="clima">
             <SectionTitle icon={Sun} kicker="06 — Janela do mar" title="Visibilidade mês a mês" />
