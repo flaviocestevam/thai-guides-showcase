@@ -644,9 +644,10 @@ const Phuket8821 = () => {
               { nome: "Catálogo das ilhas", path: "/ilhas" },
               { nome: "Catálogo geral", path: "/" },
             ].map((g) => (
-              <Link key={g.path} to={g.path} className="block p-4 rounded-xl border border-emerald-500/20 hover:bg-emerald-500/10 text-sm">
+              <a key={g.path} href={g.path} target="_blank" rel="noreferrer" className="block p-4 rounded-xl border border-emerald-500/20 hover:bg-emerald-500/10 text-sm">
                 <span className="font-semibold">{g.nome}</span>
-              </Link>
+                <span className="block text-[10px] text-muted-foreground mt-1">abre em nova aba ↗</span>
+              </a>
             ))}
           </div>
         </section>
