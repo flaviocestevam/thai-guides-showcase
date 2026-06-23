@@ -770,19 +770,158 @@ const KohTao6294 = () => {
             </div>
           </section>
 
-          <section id="mapa">
-            <SectionTitle icon={MapIcon} kicker="13 — Mapa" title="Mapa Google interativo (offline)" />
+          <section id="checklist">
+            <SectionTitle icon={ShieldCheck} kicker="13 — Antes do primeiro mergulho" title="Checklist do mergulhador brasileiro" />
+            <div className="grid md:grid-cols-2 gap-4">
+              {CHECKLIST_MERGULHO.map((c, i) => (
+                <Reveal key={c.item} i={i}>
+                  <article className={`pk-card pk-card-tight ${c.critico ? TONE_CLASS.alert : TONE_CLASS.ok} h-full`}>
+                    <h4 className="pk-h4 flex items-start gap-2">
+                      {c.critico ? <AlertTriangle className="w-4 h-4 mt-1 shrink-0" /> : <CheckCircle2 className="w-4 h-4 mt-1 shrink-0" />}
+                      {c.item}
+                    </h4>
+                    <p className="text-sm text-[hsl(var(--pk-muted))] mt-2">{c.quando}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="glossario">
+            <SectionTitle icon={Sparkles} kicker="14 — Briefing destravado" title="Mini-glossário PADI em português" />
+            <div className="grid md:grid-cols-2 gap-4">
+              {GLOSSARIO.map((g, i) => (
+                <Reveal key={g.termo} i={i}>
+                  <article className="pk-card pk-card-tight h-full">
+                    <h4 className="pk-h4">{g.termo}</h4>
+                    <p className="text-sm text-[hsl(var(--pk-muted))] mt-2">{g.oque}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="ferries">
+            <SectionTitle icon={Ship} kicker="15 — Ferries" title="Tabela completa de saídas e preços" />
             <Reveal>
-              <div className="pk-card space-y-4 text-sm leading-relaxed">
-                <p>Cada bairro, praia, dive site, escola e restaurante deste guia tem o chip <span className="pk-map-chip pk-map-chip-inline"><MapPin className="w-3 h-3" /> Mapa</span> ao lado — toque e abre direto no Google Maps.</p>
-                <p>
-                  <strong className="pk-gold">Abrir Koh Tao no Google Maps:</strong>{" "}
-                  <a href="https://www.google.com/maps/place/Ko+Tao,+Thailand" target="_blank" rel="noreferrer" className="pk-link">ver ilha inteira</a>.
-                </p>
-                <p><strong>Como salvar offline:</strong> Google Maps no celular → menu → "Mapas offline" → enquadre Tao + Nang Yuan → baixar. Sinal de 4G é fraco no leste da ilha.</p>
+              <div className="pk-card pk-card-tight overflow-x-auto">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className="text-left text-[hsl(var(--pk-muted))] border-b border-[hsl(var(--pk-line))]">
+                      <th className="py-3 pr-4">Rota</th>
+                      <th className="py-3 pr-4">Operadora</th>
+                      <th className="py-3 pr-4">Saídas</th>
+                      <th className="py-3 pr-4">Duração</th>
+                      <th className="py-3">Preço</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {FERRIES.map((f) => (
+                      <tr key={f.rota + f.op} className="border-b border-[hsl(var(--pk-line))]/40 align-top">
+                        <td className="py-3 pr-4 font-semibold text-[hsl(var(--pk-fg))]">{f.rota}</td>
+                        <td className="py-3 pr-4">{f.op}</td>
+                        <td className="py-3 pr-4 whitespace-nowrap">{f.saidas}</td>
+                        <td className="py-3 pr-4 whitespace-nowrap">{f.duracao}</td>
+                        <td className="py-3 whitespace-nowrap">{f.preco}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </Reveal>
+            <Reveal>
+              <div className="pk-callout pk-callout-warn mt-6">
+                <AlertTriangle className="w-5 h-5 shrink-0 mt-0.5" />
+                <p><strong>Monção pesada (out-nov):</strong> Lomprayah é a única que mantém saídas com mar agitado. Songserm cancela muito. Reserve com 1 dia de folga antes de voo internacional.</p>
               </div>
             </Reveal>
           </section>
+
+          <section id="conectividade">
+            <SectionTitle icon={MapPin} kicker="16 — Sinal" title="SIM, eSIM e Wi-Fi por região" />
+            <div className="grid md:grid-cols-5 gap-6">
+              <div className="md:col-span-3 space-y-3">
+                {CONECTIVIDADE.map((c, i) => (
+                  <Reveal key={c.onde} i={i}>
+                    <article className="pk-card pk-card-tight">
+                      <div className="flex justify-between items-baseline gap-3">
+                        <h4 className="pk-h4">{c.onde}</h4>
+                        <span className="pk-tag-sm">{c.sinal}</span>
+                      </div>
+                      <p className="text-sm text-[hsl(var(--pk-muted))] mt-2">{c.obs}</p>
+                    </article>
+                  </Reveal>
+                ))}
+              </div>
+              <Reveal i={1} className="md:col-span-2">
+                <article className="pk-card pk-tone-premium h-full">
+                  <p className="pk-kicker">Como conectar</p>
+                  <ul className="mt-3 space-y-3 text-sm">
+                    {ESIM_DICAS.map((e) => (
+                      <li key={e.o_que}>
+                        <strong className="text-[hsl(var(--pk-fg))]">{e.o_que}</strong>
+                        <p className="text-[hsl(var(--pk-muted))] mt-0.5">{e.como}</p>
+                      </li>
+                    ))}
+                  </ul>
+                </article>
+              </Reveal>
+            </div>
+          </section>
+
+          <section id="dinheiro">
+            <SectionTitle icon={Wallet} kicker="17 — Bolso" title="ATM, câmbio e cartão sem dor" />
+            <div className="grid md:grid-cols-2 gap-4">
+              {DINHEIRO.map((d, i) => (
+                <Reveal key={d.topico} i={i}>
+                  <article className="pk-card pk-card-tight h-full">
+                    <h4 className="pk-h4">{d.topico}</h4>
+                    <p className="text-sm text-[hsl(var(--pk-muted))] mt-2">{d.detalhe}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="erros">
+            <SectionTitle icon={AlertTriangle} kicker="18 — Aprenda com o erro alheio" title="Erros que custaram caro de verdade" />
+            <div className="grid md:grid-cols-2 gap-4">
+              {ERROS_CAROS.map((e, i) => (
+                <Reveal key={e.erro} i={i}>
+                  <article className={`pk-card pk-card-tight ${TONE_CLASS.alert} h-full`}>
+                    <div className="flex justify-between items-start gap-3">
+                      <h4 className="pk-h4">{e.erro}</h4>
+                      <span className="pk-tag-sm whitespace-nowrap">{e.custo}</span>
+                    </div>
+                    <p className="text-sm text-[hsl(var(--pk-muted))] mt-2"><strong className="pk-gold">Lição:</strong> {e.licao}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="mapa">
+            <SectionTitle icon={MapIcon} kicker="19 — Mapa" title="Mapa Google interativo (offline)" />
+            <Reveal>
+              <div className="pk-card space-y-4 text-sm leading-relaxed">
+                <p>Cada bairro, praia, dive site, escola e restaurante deste guia tem o chip <span className="pk-map-chip pk-map-chip-inline"><MapPin className="w-3 h-3" /> Mapa</span> ao lado — toque e abre direto no Google Maps.</p>
+                <div className="flex flex-wrap gap-3 pt-2">
+                  <a href="https://www.google.com/maps/place/Ko+Tao,+Thailand" target="_blank" rel="noreferrer" className="pk-cta-secondary inline-flex items-center gap-2"><MapIcon className="w-4 h-4" /> Abrir Koh Tao no Maps</a>
+                  <a href="https://www.google.com/maps/search/dive+school+Koh+Tao+Thailand" target="_blank" rel="noreferrer" className="pk-cta-secondary inline-flex items-center gap-2"><Waves className="w-4 h-4" /> Ver todas as escolas de mergulho</a>
+                  <a href="https://www.google.com/maps/search/beach+Koh+Tao+Thailand" target="_blank" rel="noreferrer" className="pk-cta-secondary inline-flex items-center gap-2"><Sun className="w-4 h-4" /> Ver praias da ilha</a>
+                </div>
+                <div className="pk-divider my-2" />
+                <p><strong className="pk-gold">Salvar lista no seu celular (3 passos):</strong></p>
+                <ol className="list-decimal pl-5 space-y-1 text-[hsl(var(--pk-muted))]">
+                  <li>Toque em qualquer chip 📍 <strong>Mapa</strong> deste guia → abre no Google Maps app.</li>
+                  <li>No app, toque em <strong>"Salvar"</strong> → escolha lista <strong>"Quero ir"</strong> ou crie <strong>"Koh Tao 2026"</strong>.</li>
+                  <li>Repita para cada lugar. No fim, abra a lista uma vez online em Wi-Fi para Google cachear offline.</li>
+                </ol>
+                <p><strong>Como salvar mapa offline:</strong> Google Maps → menu → "Mapas offline" → enquadre Tao + Nang Yuan → baixar. Sinal de 4G é fraco no leste da ilha.</p>
+              </div>
+            </Reveal>
+          </section>
+
 
           <section id="orcamento">
             <SectionTitle icon={Wallet} kicker="14 — Bolso" title="Orçamento honesto por dia (em real)" />
