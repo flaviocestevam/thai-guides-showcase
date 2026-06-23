@@ -1,4 +1,5 @@
 // internal links open in new tab (padrão dos guias pagos)
+import type { ReactNode } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
@@ -12,11 +13,7 @@ import {
 // Rota privada: /phuket8821
 // ============================================================================
 
-// Helper: link para Google Maps de qualquer lugar/região citado
-const gmap = (q: string) =>
-  `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q + ", Phuket, Thailand")}`;
-
-const G = ({ q, children, className = "" }: { q?: string; children: React.ReactNode; className?: string }) => {
+const G = ({ q, children, className = "" }: { q?: string; children: ReactNode; className?: string }) => {
   const query = q ?? (typeof children === "string" ? children : "");
   return (
     <span className={`inline-flex items-baseline gap-1.5 ${className}`}>
@@ -486,7 +483,7 @@ const Phuket8821 = () => {
                   <li>Filme volta de 360° na hora, com áudio narrando cada arranhão.</li>
                   <li>Tire 8-12 fotos com data ativada no celular.</li>
                   <li>Exija o contrato em inglês com cláusulas de dano descritas.</li>
-                  <li>NUNCA deixe passaporte como caução — só dinheiro (₿2.000-5.000) ou cópia autenticada.</li>
+                  <li>NUNCA deixe passaporte como caução — só dinheiro (฿2.000-5.000 / R$ 300-750) ou cópia autenticada.</li>
                   <li>Leve PID (Permissão Internacional para Dirigir) categoria A. Sem ela, polícia local multa 1.000 baht e seguro não cobre.</li>
                   <li>Use capacete sempre. Multa por falta de capacete é alvo fácil.</li>
                 </ol>
