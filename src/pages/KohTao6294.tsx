@@ -906,9 +906,9 @@ const KohTao6294 = () => {
               <div className="pk-card space-y-4 text-sm leading-relaxed">
                 <p>Cada bairro, praia, dive site, escola e restaurante deste guia tem o chip <span className="pk-map-chip pk-map-chip-inline"><MapPin className="w-3 h-3" /> Mapa</span> ao lado — toque e abre direto no Google Maps.</p>
                 <div className="flex flex-wrap gap-3 pt-2">
-                  <a href="https://www.google.com/maps/place/Ko+Tao,+Thailand" target="_blank" rel="noreferrer" className="pk-cta-secondary inline-flex items-center gap-2"><MapIcon className="w-4 h-4" /> Abrir Koh Tao no Maps</a>
-                  <a href="https://www.google.com/maps/search/dive+school+Koh+Tao+Thailand" target="_blank" rel="noreferrer" className="pk-cta-secondary inline-flex items-center gap-2"><Waves className="w-4 h-4" /> Ver todas as escolas de mergulho</a>
-                  <a href="https://www.google.com/maps/search/beach+Koh+Tao+Thailand" target="_blank" rel="noreferrer" className="pk-cta-secondary inline-flex items-center gap-2"><Sun className="w-4 h-4" /> Ver praias da ilha</a>
+                  <a href="https://www.google.com/maps/place/Ko+Tao,+Thailand" target="_blank" rel="noreferrer" className="pk-tag inline-flex items-center gap-2"><MapIcon className="w-4 h-4" /> Abrir Koh Tao no Maps</a>
+                  <a href="https://www.google.com/maps/search/dive+school+Koh+Tao+Thailand" target="_blank" rel="noreferrer" className="pk-tag inline-flex items-center gap-2"><Waves className="w-4 h-4" /> Ver todas as escolas de mergulho</a>
+                  <a href="https://www.google.com/maps/search/beach+Koh+Tao+Thailand" target="_blank" rel="noreferrer" className="pk-tag inline-flex items-center gap-2"><Sun className="w-4 h-4" /> Ver praias da ilha</a>
                 </div>
                 <div className="pk-divider my-2" />
                 <p><strong className="pk-gold">Salvar lista no seu celular (3 passos):</strong></p>
