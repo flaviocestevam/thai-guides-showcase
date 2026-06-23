@@ -3,7 +3,7 @@
 import {
   MapPin, AlertTriangle, CheckCircle2, XCircle, Bike, Ship, UtensilsCrossed,
   Compass, Wallet, ShieldCheck, Map as MapIcon, Sun, Waves, Sparkles, Home,
-  ArrowUpRight,
+  ArrowUpRight, Footprints, Fish, Baby, Scale, Leaf, CalendarClock, Anchor, Flower2,
 } from "lucide-react";
 import { PK_STYLES, Reveal, SectionTitle, TONE_CLASS, makeMapChip, type Tone } from "@/components/guides/premiumShell";
 
@@ -31,6 +31,17 @@ const TOC = [
   { id: "conectividade", label: "SIM & Wi-Fi", icon: MapPin },
   { id: "dinheiro", label: "ATM & câmbio", icon: Wallet },
   { id: "erros", label: "Erros caros", icon: AlertTriangle },
+  { id: "visi-pontos", label: "Visi por ponto", icon: Waves },
+  { id: "mapa-scooter", label: "Loop scooter", icon: Footprints },
+  { id: "mes-perfil", label: "Mês × perfil", icon: CalendarClock },
+  { id: "comparativo", label: "Tao×Phangan×Samui", icon: Scale },
+  { id: "liveaboard", label: "Liveaboard", icon: Anchor },
+  { id: "pesca", label: "Lula noturna", icon: Fish },
+  { id: "spa", label: "Spa pós-dive", icon: Flower2 },
+  { id: "vilarejo", label: "Tanote remoto", icon: Home },
+  { id: "familia", label: "Família/kids", icon: Baby },
+  { id: "conservacao", label: "Save Koh Tao", icon: Leaf },
+  { id: "booking", label: "Quando reservar", icon: CalendarClock },
   { id: "mapa", label: "Mapa", icon: MapIcon },
   { id: "orcamento", label: "Orçamento", icon: Wallet },
 ];
@@ -283,6 +294,100 @@ const COMIDA = [
   { lugar: "Taste of Home", bairro: "Sairee", oque: "Café da manhã ocidental de verdade.", preco: "180-320 baht" },
   { lugar: "New Heaven Bakery", bairro: "Chalok", oque: "Pão fresco, sanduíches honestos.", preco: "70-180 baht" },
 ];
+
+// === EXPANSÃO PADRÃO KOOD/LIPE ===
+
+const VISI_PONTOS = [
+  { ponto: "Chumphon Pinnacle", prof: "14-36 m", melhor: "Fev-Abr / Set", evitar: "Out-Nov", nota: "Barracuda gigante, grouper. Cuidado com corrente forte." },
+  { ponto: "Sail Rock", prof: "10-40 m", melhor: "Fev-Mar (whale shark)", evitar: "Nov", nota: "Chaminé vertical lendária. Mergulhe cedo, 7h saída." },
+  { ponto: "Southwest Pinnacle", prof: "10-30 m", melhor: "Fev-Maio", evitar: "Out-Dez", nota: "Pelágicos. Avançado, corrente imprevisível." },
+  { ponto: "Twins / Japanese Gardens", prof: "5-18 m", melhor: "Ano todo", evitar: "Nov pico", nota: "Open Water clássico. Tartarugas residentes." },
+  { ponto: "White Rock", prof: "5-22 m", melhor: "Ano todo", evitar: "—", nota: "Night dive top. Polvo, lula e siri agressivo." },
+  { ponto: "Shark Bay (snorkel)", prof: "1-5 m", melhor: "Out-Mar", evitar: "Maré baixa", nota: "Black tip reef shark filhote. Calmo, kids OK." },
+  { ponto: "HTMS Sattakut (naufrágio)", prof: "18-30 m", melhor: "Jan-Maio", evitar: "Monção SW", nota: "Wreck dive Advanced. Exige certificação Wreck." },
+  { ponto: "Aow Leuk reef", prof: "3-12 m", melhor: "Ano todo", evitar: "Ventos N", nota: "Snorkel da praia, sem barco. Levou bóia." },
+];
+
+const MAPA_SCOOTER = [
+  { de: "Mae Haad pier", para: "Sairee Beach centro", km: "2,1 km", min: "6 min", piso: "Asfalto bom", risco: "Movimento; pedestres saindo de bar à noite." },
+  { de: "Sairee", para: "Chalok Baan Kao", km: "4,8 km", min: "12 min", piso: "Asfalto + 1 subida íngreme", risco: "Curva cega no topo do morro. Reduza." },
+  { de: "Chalok", para: "Sai Nuan (praia escondida)", km: "1,5 km", min: "5 min + 8 min a pé", piso: "Trilha após estacionar", risco: "Trilha lamacenta na chuva." },
+  { de: "Mae Haad", para: "Tanote Bay", km: "5,2 km", min: "18 min", piso: "Asfalto + 3 subidas pesadas", risco: "Mata de scooter iniciante. Considere táxi 400 baht." },
+  { de: "Tanote", para: "Aow Leuk", km: "2,8 km", min: "10 min", piso: "Asfalto recente", risco: "OK; trecho mais tranquilo da ilha." },
+  { de: "Sairee", para: "John-Suwan viewpoint (base)", km: "5,5 km", min: "16 min + 25 min trekking", piso: "Asfalto + trilha", risco: "Pedra escorregadia. Tênis, nunca chinelo." },
+  { de: "Mae Haad", para: "Sairee Hill (Banyan Tree view)", km: "3,4 km", min: "11 min", piso: "Asfalto íngreme", risco: "Subida 18%. Scooter 110cc com 2 pessoas pode falhar." },
+];
+
+const MES_PERFIL = [
+  { perfil: "Open Water iniciante (1ª vez)", mes: "Mar-Mai / Set-Out início", porque: "Mar liso, visibilidade 15-25 m, escolas com vaga, preço médio." },
+  { perfil: "Advanced / Wreck", mes: "Jan-Abr", porque: "Sattakut com visi 20m+. Resto do ano vira aposta." },
+  { perfil: "Caçador de whale shark", mes: "Fev-Mar e Set", porque: "Sail Rock recebe tubarões-baleia. Reserve fun dive 2 semanas antes." },
+  { perfil: "Fun diver experiente", mes: "Fev / Set", porque: "Visi pico, sem multidão de curso, preço de fun dive cai 10%." },
+  { perfil: "Festa + Half/Full Moon Phangan", mes: "Lua cheia qualquer mês exceto nov", porque: "Ferry 1h para Phangan. Mergulhe Tao de dia, festa Phangan à noite." },
+  { perfil: "Casal sem mergulho", mes: "Jan-Mar", porque: "Snorkel Nang Yuan, Shark Bay, John-Suwan no clima seco." },
+  { perfil: "Família com kids 6-12", mes: "Fev-Abr", porque: "Mar calmo pra snorkel. Bubblemaker PADI (8+) disponível." },
+  { perfil: "Mochileiro orçamento mínimo", mes: "Jun-Ago", porque: "Curso Open Water cai pra R$ 1.500. Aceita visi 10-15m? Vale." },
+];
+
+const COMPARATIVO_ILHAS = [
+  { dim: "Mergulho/certificação", tao: "Capital mundial — escola a cada 50 m", phangan: "1 boa escola (Chaloklum)", samui: "Caro, foco em fun dive de luxo" },
+  { dim: "Vida noturna", tao: "Sairee tem bar/festa, sem rave", phangan: "Half/Full Moon mensal", samui: "Chaweng = clubes grandes" },
+  { dim: "Praias", tao: "Pequenas, ótimas para snorkel", phangan: "Bottle Beach, Thong Nai Pan = top 5 Tailândia", samui: "Lamai e Maenam decentes" },
+  { dim: "Preço médio/dia casal", tao: "R$ 900-1.200", phangan: "R$ 800-1.100", samui: "R$ 1.400-2.500" },
+  { dim: "Acesso", tao: "Ferry 1h45 de Samui / 1h de Phangan", phangan: "Ferry 30 min de Samui", samui: "Voo direto BKK 1h" },
+  { dim: "Para quem é", tao: "Mergulhador / quer certificar barato", phangan: "Festeiro + praias paradisíacas", samui: "Família, conforto, voo direto" },
+  { dim: "Evite se", tao: "Não curte barco, enjoa fácil", phangan: "Vai em data de Full Moon e quer paz", samui: "Procura ilha 'rústica'" },
+];
+
+const LIVEABOARD = [
+  { tipo: "Day-trip Sail Rock + Chumphon", duracao: "1 dia (3 dives)", quando: "Saída 7h, retorno 17h", preco: "3.500-4.200 baht", inclui: "3 cilindros, almoço, fruta", obs: "Melhor custo×benefício pra Advanced." },
+  { tipo: "Night dive White Rock", duracao: "1 noite (1 dive)", quando: "Saída 18h30, retorno 21h", preco: "1.800-2.200 baht", inclui: "Lanterna + cilindro", obs: "Reservar 24h antes. Mar tem que estar limpo." },
+  { tipo: "Liveaboard 3 dias Similan style (raro em Tao)", duracao: "3 dias / 8 dives", quando: "Apenas alta temporada Fev-Abr", preco: "18.000-24.000 baht", inclui: "Cabine, refeições, todos os dives", obs: "Só Master Divers e Crystal operam. Reservar 1 mês antes." },
+];
+
+const PESCA = [
+  { tipo: "Squid fishing tradicional (lulada noturna)", oque: "Sai com pescadores de Mae Haad às 18h, volta 23h. Lula viva no convés, jantada no barco.", preco: "1.200-1.800 baht/pessoa", obs: "Comunidade local, parte da renda. Pergunte 'squid boat tour' no pier." },
+  { tipo: "Pesca de costa com chumbinho", oque: "Manhã cedo em rocha de Chalok ou Aow Leuk. Vara emprestada de pousada local.", preco: "Grátis (vara) + isca 100 baht", obs: "Pesque-e-solte; raça e cavala da costa." },
+  { tipo: "Big game (atum, dourado)", oque: "Charter privado de Mae Haad, 5h-13h. Vara, isca e bebida inclusos.", preco: "12.000-18.000 baht (até 4 pessoas)", obs: "Janeiro-Abril é a janela. Reserve por Big Blue ou Crystal." },
+];
+
+const SPA_TAO = [
+  { lugar: "Jamahkiri Spa & Resort", oque: "Spa de luxo no penhasco de Chalok, vista oceano.", preco: "1.800-3.500 baht / 60 min", melhor: "Pós Open Water — alongamento e tailandesa profunda." },
+  { lugar: "Healing Hands Sairee", oque: "Massagem honesta, terapeuta sênior, preço justo.", preco: "350-550 baht / 60 min", melhor: "Pós day-trip de scooter. Foco lombar." },
+  { lugar: "Ban's Diving Spa", oque: "Spa anexo a escola, foco em descompressão de ombro/pescoço.", preco: "500-700 baht / 60 min", melhor: "Mergulhador com torcicolo de regulador." },
+  { lugar: "Sairee Cottage Spa", oque: "Pé na areia, óleo de coco local.", preco: "400-600 baht", melhor: "Casal — cabine dupla disponível." },
+];
+
+const VILAREJO_TAO = [
+  { lugar: "Tanote Bay", como: "Scooter via estrada do leste (18 min) ou táxi 400 baht.", oque: "Praia em U com rocha gigante no meio. Snorkel direto da areia, peixe-anjo e tartaruga residente.", quanto: "Almoço 150-250 baht. Bangalô 800-1.500 baht.", obs: "Sem ATM, sem 7-Eleven. Leve dinheiro. Bar fecha 22h." },
+  { lugar: "Aow Leuk", como: "10 min de Tanote ou 20 min de Sairee.", oque: "Baía rasa, areia branca. Snorkel ok, raras pessoas. Bar com balanço.", quanto: "Espreguiçadeira 100 baht. Refeição 120-200 baht.", obs: "Mais calmo que Tanote. Estaciona scooter na entrada (50 baht)." },
+  { lugar: "Sai Nuan", como: "Estacione em Chalok e ande 8 min pela trilha.", oque: "Praia escondida só com hammock no coqueiro. Quase sempre vazia.", quanto: "Smoothie 80 baht, sem restaurante real.", obs: "Leve água. Trilha lamacenta na chuva — chinelo de borracha." },
+];
+
+const FAMILIA_TAO = [
+  { item: "PADI Bubblemaker (8+ anos)", detalhe: "Mergulho raso (2 m) na piscina + 1 mergulho em Shark Bay com instrutor 1:1. Crystal e Big Blue oferecem." },
+  { item: "Snorkel Shark Bay", detalhe: "Filhote de black tip reef shark visível da superfície, água até a cintura. Saída de Sairee/Chalok com longtail 300 baht." },
+  { item: "Banyan Tree Mountain View jantar", detalhe: "Restaurante com playground informal e vista 360°. Kids menu disponível." },
+  { item: "Hospedagem sem escada", detalhe: "Sensi Paradise e Charm Churee Village têm bangalô térreo — Tao é morro, evite Sairee Hill com criança." },
+  { item: "Não faça", detalhe: "Trilha John-Suwan com kids <8: pedra escorregadia perigosa. Scooter com kid no colo: ilegal e fatal aqui." },
+];
+
+const CONSERVACAO_TAO = [
+  { iniciativa: "Save Koh Tao Coral Nursery", oque: "Mergulho voluntário 1h plantando coral. Sem custo extra para dive certificado.", como: "Reserve em New Heaven Reef Conservation (Chalok)." },
+  { iniciativa: "Black Tip Shark Census", oque: "Snorkel guiado contando filhotes em Shark Bay (dados pra ciência cidadã).", como: "Master Divers todo sábado, 400 baht/pessoa." },
+  { iniciativa: "Beach clean-up Mae Haad/Sairee", oque: "Todo 1º domingo do mês, 7h. Café da manhã free pra quem participar.", como: "Save Koh Tao Facebook." },
+  { iniciativa: "Reef-safe sunscreen check", oque: "Barco recusa embarque se trouxer protetor com oxybenzone/octinoxate. Compre Stream2Sea no pier (220 baht/100ml)." },
+];
+
+const BOOKING_TAO = [
+  { quando: "Réveillon, Chinese NY, Songkran", reserva: "4 meses antes", porque: "Escolas + pousadas em Sairee esgotam. Ferry Lomprayah 2 meses antes." },
+  { quando: "Fev-Mar (whale shark season)", reserva: "6-8 semanas antes", porque: "Curso Advanced e fun dive em Sail Rock voam." },
+  { quando: "Jul-Ago (alta europeia)", reserva: "4 semanas antes", porque: "Dorms ok, mas curso bom esgota." },
+  { quando: "Mai / Set-início", reserva: "1 semana antes", porque: "Janela boa, baixa demanda. Negocie 10-15%." },
+  { quando: "Nov (mar fechado)", reserva: "Dia anterior", porque: "Tudo vazio. Mas reveja viagem — mergulho é loteria." },
+];
+
+
 
 const KohTao6294 = () => {
   return (
@@ -950,6 +1055,221 @@ const KohTao6294 = () => {
                 </Reveal>
               ))}
             </div>
+          </section>
+
+          {/* ============== EXPANSÃO PADRÃO KOOD/LIPE ============== */}
+
+          <section id="visi-pontos">
+            <SectionTitle icon={Waves} kicker="15 — Visibilidade granular" title="Visibilidade por ponto de mergulho × mês" />
+            <Reveal>
+              <div className="pk-table">
+                <table>
+                  <thead>
+                    <tr><th>Ponto</th><th>Profundidade</th><th>Melhor janela</th><th>Evite</th><th>Nota</th></tr>
+                  </thead>
+                  <tbody>
+                    {VISI_PONTOS.map((v) => (
+                      <tr key={v.ponto}>
+                        <td className="font-semibold"><G q={`${v.ponto} dive site Koh Tao`}>{v.ponto}</G></td>
+                        <td>{v.prof}</td>
+                        <td className="pk-gold">{v.melhor}</td>
+                        <td>{v.evitar}</td>
+                        <td className="text-sm text-[hsl(var(--pk-muted))]">{v.nota}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <p className="text-sm text-[hsl(var(--pk-muted))] mt-4">Visi geral da ilha por mês está na seção "Janela do mar". Esta tabela é o detalhe por ponto — útil pra fechar fun dive específico.</p>
+            </Reveal>
+          </section>
+
+          <section id="mapa-scooter">
+            <SectionTitle icon={Footprints} kicker="16 — Loop de scooter" title="Distância e tempo real entre pontos da ilha" />
+            <Reveal>
+              <div className="pk-table">
+                <table>
+                  <thead><tr><th>De</th><th>Para</th><th>Km</th><th>Tempo</th><th>Piso</th><th>Risco</th></tr></thead>
+                  <tbody>
+                    {MAPA_SCOOTER.map((m, i) => (
+                      <tr key={i}>
+                        <td>{m.de}</td>
+                        <td className="font-semibold">{m.para}</td>
+                        <td>{m.km}</td>
+                        <td className="pk-gold">{m.min}</td>
+                        <td className="text-sm">{m.piso}</td>
+                        <td className="text-sm text-[hsl(var(--pk-muted))]">{m.risco}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <p className="text-sm text-[hsl(var(--pk-muted))] mt-4">Tao é morro. Scooter 110cc sofre com 2 pessoas em subida — alugue 125cc+ se forem dois adultos. Sem PID, sem seguro — não importa o que disserem.</p>
+            </Reveal>
+          </section>
+
+          <section id="mes-perfil">
+            <SectionTitle icon={CalendarClock} kicker="17 — Quando vir" title="Mês ideal por perfil de viajante" />
+            <div className="grid md:grid-cols-2 gap-6">
+              {MES_PERFIL.map((p, i) => (
+                <Reveal key={p.perfil} i={i}>
+                  <article className="pk-card h-full">
+                    <p className="pk-kicker">Perfil</p>
+                    <h3 className="pk-h3 mt-1">{p.perfil}</h3>
+                    <div className="pk-divider my-4" />
+                    <p className="text-sm"><span className="pk-gold font-semibold">Mês:</span> {p.mes}</p>
+                    <p className="text-sm text-[hsl(var(--pk-muted))] mt-2">{p.porque}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="comparativo">
+            <SectionTitle icon={Scale} kicker="18 — Decisão" title="Koh Tao × Koh Phangan × Koh Samui" />
+            <Reveal>
+              <div className="pk-table">
+                <table>
+                  <thead><tr><th>Dimensão</th><th>Koh Tao</th><th>Koh Phangan</th><th>Koh Samui</th></tr></thead>
+                  <tbody>
+                    {COMPARATIVO_ILHAS.map((c) => (
+                      <tr key={c.dim}>
+                        <td className="font-semibold">{c.dim}</td>
+                        <td>{c.tao}</td>
+                        <td>{c.phangan}</td>
+                        <td>{c.samui}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <p className="text-sm text-[hsl(var(--pk-muted))] mt-4">Resumo: vai certificar = Tao. Vai festa + praia = Phangan. Vai conforto e voo direto = Samui. Quer os 3? Roteiro de 10 dias está acima.</p>
+            </Reveal>
+          </section>
+
+          <section id="liveaboard">
+            <SectionTitle icon={Anchor} kicker="19 — Além do day-trip" title="Liveaboard e night dives" />
+            <div className="grid md:grid-cols-3 gap-6">
+              {LIVEABOARD.map((l, i) => (
+                <Reveal key={l.tipo} i={i}>
+                  <article className="pk-card h-full">
+                    <p className="pk-kicker">{l.duracao}</p>
+                    <h3 className="pk-h3 mt-1">{l.tipo}</h3>
+                    <div className="pk-divider my-4" />
+                    <p className="text-sm"><span className="pk-gold">Quando:</span> {l.quando}</p>
+                    <p className="text-sm mt-1"><span className="pk-gold">Preço:</span> {l.preco}</p>
+                    <p className="text-sm mt-1"><span className="pk-gold">Inclui:</span> {l.inclui}</p>
+                    <p className="text-sm text-[hsl(var(--pk-muted))] mt-3">{l.obs}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="pesca">
+            <SectionTitle icon={Fish} kicker="20 — Cultura local" title="Pesca tradicional e lulada noturna" />
+            <div className="grid md:grid-cols-3 gap-6">
+              {PESCA.map((p, i) => (
+                <Reveal key={p.tipo} i={i}>
+                  <article className="pk-card h-full">
+                    <p className="pk-kicker">Modalidade</p>
+                    <h3 className="pk-h3 mt-1">{p.tipo}</h3>
+                    <div className="pk-divider my-4" />
+                    <p className="text-sm">{p.oque}</p>
+                    <p className="text-sm pk-gold mt-2">{p.preco}</p>
+                    <p className="text-sm text-[hsl(var(--pk-muted))] mt-2">{p.obs}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="spa">
+            <SectionTitle icon={Flower2} kicker="21 — Pós-mergulho" title="Spa e recuperação muscular" />
+            <div className="grid md:grid-cols-2 gap-6">
+              {SPA_TAO.map((s, i) => (
+                <Reveal key={s.lugar} i={i}>
+                  <article className="pk-card h-full">
+                    <p className="pk-kicker">Spa</p>
+                    <h3 className="pk-h3 mt-1"><G q={`${s.lugar} Koh Tao`}>{s.lugar}</G></h3>
+                    <div className="pk-divider my-4" />
+                    <p className="text-sm">{s.oque}</p>
+                    <p className="text-sm pk-gold mt-2">{s.preco}</p>
+                    <p className="text-sm text-[hsl(var(--pk-muted))] mt-2"><span className="font-semibold">Melhor para:</span> {s.melhor}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="vilarejo">
+            <SectionTitle icon={Home} kicker="22 — Lado isolado" title="Tanote, Aow Leuk e Sai Nuan — o Tao remoto" />
+            <div className="grid md:grid-cols-3 gap-6">
+              {VILAREJO_TAO.map((v, i) => (
+                <Reveal key={v.lugar} i={i}>
+                  <article className="pk-card h-full">
+                    <p className="pk-kicker">Refúgio</p>
+                    <h3 className="pk-h3 mt-1"><G q={`${v.lugar} Koh Tao`}>{v.lugar}</G></h3>
+                    <div className="pk-divider my-4" />
+                    <p className="text-sm"><span className="pk-gold">Como chegar:</span> {v.como}</p>
+                    <p className="text-sm mt-2">{v.oque}</p>
+                    <p className="text-sm pk-gold mt-2">{v.quanto}</p>
+                    <p className="text-sm text-[hsl(var(--pk-muted))] mt-2">{v.obs}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="familia">
+            <SectionTitle icon={Baby} kicker="23 — Crianças" title="Koh Tao com kids — o que rola e o que evitar" />
+            <Reveal>
+              <ul className="space-y-3">
+                {FAMILIA_TAO.map((f) => (
+                  <li key={f.item} className="pk-card">
+                    <p className="font-semibold pk-gold">{f.item}</p>
+                    <p className="text-sm text-[hsl(var(--pk-muted))] mt-2">{f.detalhe}</p>
+                  </li>
+                ))}
+              </ul>
+            </Reveal>
+          </section>
+
+          <section id="conservacao">
+            <SectionTitle icon={Leaf} kicker="24 — Devolva pra ilha" title="Save Koh Tao e voluntariado de mergulho" />
+            <div className="grid md:grid-cols-2 gap-6">
+              {CONSERVACAO_TAO.map((c, i) => (
+                <Reveal key={c.iniciativa} i={i}>
+                  <article className="pk-card h-full">
+                    <p className="pk-kicker">Iniciativa</p>
+                    <h3 className="pk-h3 mt-1">{c.iniciativa}</h3>
+                    <div className="pk-divider my-4" />
+                    <p className="text-sm">{c.oque}</p>
+                    <p className="text-sm pk-gold mt-2">{c.como}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="booking">
+            <SectionTitle icon={CalendarClock} kicker="25 — Antecedência" title="Quando reservar curso, ferry e hotel" />
+            <Reveal>
+              <div className="pk-table">
+                <table>
+                  <thead><tr><th>Período</th><th>Reserve com</th><th>Por quê</th></tr></thead>
+                  <tbody>
+                    {BOOKING_TAO.map((b) => (
+                      <tr key={b.quando}>
+                        <td className="font-semibold">{b.quando}</td>
+                        <td className="pk-gold">{b.reserva}</td>
+                        <td className="text-sm text-[hsl(var(--pk-muted))]">{b.porque}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </Reveal>
           </section>
 
           <section className="pt-16 border-t border-[hsl(var(--pk-line))]">
