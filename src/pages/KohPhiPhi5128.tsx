@@ -648,6 +648,217 @@ const KohPhiPhi5128 = () => {
             </div>
           </section>
 
+          {/* ============== EXPANSÃO PADRÃO KOOD/LIPE ============== */}
+
+          <section id="visi-snorkel">
+            <SectionTitle icon={Waves} kicker="13 — Mar granular" title="Visibilidade por ponto de snorkel/dive × mês" />
+            <Reveal>
+              <div className="pk-table">
+                <table>
+                  <thead><tr><th>Ponto</th><th>Profundidade</th><th>Melhor</th><th>Evite</th><th>Nota</th></tr></thead>
+                  <tbody>
+                    {VISI_SNORKEL.map((v) => (
+                      <tr key={v.ponto}>
+                        <td className="font-semibold"><G q={`${v.ponto} Koh Phi Phi`}>{v.ponto}</G></td>
+                        <td>{v.prof}</td>
+                        <td className="pk-gold">{v.melhor}</td>
+                        <td>{v.evitar}</td>
+                        <td className="text-sm text-[hsl(var(--pk-muted))]">{v.nota}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </Reveal>
+          </section>
+
+          <section id="mapa-pe">
+            <SectionTitle icon={Footprints} kicker="14 — Sem carro, sem scooter" title="Mapa a pé e de longtail — tempo real entre pontos" />
+            <Reveal>
+              <div className="pk-table">
+                <table>
+                  <thead><tr><th>De</th><th>Para</th><th>Distância</th><th>Tempo</th><th>Piso/meio</th><th>Risco</th></tr></thead>
+                  <tbody>
+                    {MAPA_PE.map((m, i) => (
+                      <tr key={i}>
+                        <td>{m.de}</td>
+                        <td className="font-semibold">{m.para}</td>
+                        <td>{m.km}</td>
+                        <td className="pk-gold">{m.min}</td>
+                        <td className="text-sm">{m.piso}</td>
+                        <td className="text-sm text-[hsl(var(--pk-muted))]">{m.risco}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <p className="text-sm text-[hsl(var(--pk-muted))] mt-4">Phi Phi Don não tem rua de carro. Tudo é a pé ou longtail. Bagagem grande sofre — leve mochila ou mala pequena.</p>
+            </Reveal>
+          </section>
+
+          <section id="mes-perfil">
+            <SectionTitle icon={CalendarClock} kicker="15 — Quando vir" title="Mês ideal por perfil de viajante" />
+            <div className="grid md:grid-cols-2 gap-6">
+              {MES_PERFIL_PP.map((p, i) => (
+                <Reveal key={p.perfil} i={i}>
+                  <article className="pk-card h-full">
+                    <p className="pk-kicker">Perfil</p>
+                    <h3 className="pk-h3 mt-1">{p.perfil}</h3>
+                    <div className="pk-divider my-4" />
+                    <p className="text-sm"><span className="pk-gold font-semibold">Mês:</span> {p.mes}</p>
+                    <p className="text-sm text-[hsl(var(--pk-muted))] mt-2">{p.porque}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="comparativo">
+            <SectionTitle icon={Scale} kicker="16 — Decisão" title="Phi Phi × Koh Lanta × Krabi (Ao Nang/Railay)" />
+            <Reveal>
+              <div className="pk-table">
+                <table>
+                  <thead><tr><th>Dimensão</th><th>Phi Phi</th><th>Koh Lanta</th><th>Krabi</th></tr></thead>
+                  <tbody>
+                    {COMPARATIVO_PP.map((c) => (
+                      <tr key={c.dim}>
+                        <td className="font-semibold">{c.dim}</td>
+                        <td>{c.pp}</td>
+                        <td>{c.lanta}</td>
+                        <td>{c.krabi}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </Reveal>
+          </section>
+
+          <section id="barco-dia">
+            <SectionTitle icon={Anchor} kicker="17 — Mar" title="Day-trips de barco + camping em Maya Bay" />
+            <div className="grid md:grid-cols-2 gap-6">
+              {BARCO_DIA_PP.map((b, i) => (
+                <Reveal key={b.tour} i={i}>
+                  <article className="pk-card h-full">
+                    <p className="pk-kicker">{b.duracao}</p>
+                    <h3 className="pk-h3 mt-1">{b.tour}</h3>
+                    <div className="pk-divider my-4" />
+                    <p className="text-sm pk-gold">{b.preco}</p>
+                    <p className="text-sm mt-2"><span className="font-semibold">Inclui:</span> {b.inclui}</p>
+                    <p className="text-sm mt-1"><span className="font-semibold">Operadora:</span> {b.operadora}</p>
+                    <p className="text-sm text-[hsl(var(--pk-muted))] mt-2">{b.obs}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="pesca">
+            <SectionTitle icon={Fish} kicker="18 — Cultura local" title="Pesca tradicional e lulada noturna" />
+            <div className="grid md:grid-cols-3 gap-6">
+              {PESCA_PP.map((p, i) => (
+                <Reveal key={p.tipo} i={i}>
+                  <article className="pk-card h-full">
+                    <p className="pk-kicker">Modalidade</p>
+                    <h3 className="pk-h3 mt-1">{p.tipo}</h3>
+                    <div className="pk-divider my-4" />
+                    <p className="text-sm">{p.oque}</p>
+                    <p className="text-sm pk-gold mt-2">{p.preco}</p>
+                    <p className="text-sm text-[hsl(var(--pk-muted))] mt-2">{p.obs}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="spa">
+            <SectionTitle icon={Flower2} kicker="19 — Wellness" title="Spa e massagem — do resort ao pé-na-areia" />
+            <div className="grid md:grid-cols-2 gap-6">
+              {SPA_PP.map((s, i) => (
+                <Reveal key={s.lugar} i={i}>
+                  <article className="pk-card h-full">
+                    <p className="pk-kicker">Spa</p>
+                    <h3 className="pk-h3 mt-1"><G q={`${s.lugar} Koh Phi Phi`}>{s.lugar}</G></h3>
+                    <div className="pk-divider my-4" />
+                    <p className="text-sm">{s.oque}</p>
+                    <p className="text-sm pk-gold mt-2">{s.preco}</p>
+                    <p className="text-sm text-[hsl(var(--pk-muted))] mt-2"><span className="font-semibold">Melhor para:</span> {s.melhor}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="vilarejo">
+            <SectionTitle icon={Home} kicker="20 — Norte isolado" title="Loh Bagao, Laem Tong e Long Beach — Phi Phi sem festa" />
+            <div className="grid md:grid-cols-3 gap-6">
+              {VILAREJO_PP.map((v, i) => (
+                <Reveal key={v.lugar} i={i}>
+                  <article className="pk-card h-full">
+                    <p className="pk-kicker">Refúgio</p>
+                    <h3 className="pk-h3 mt-1"><G q={`${v.lugar} Koh Phi Phi`}>{v.lugar}</G></h3>
+                    <div className="pk-divider my-4" />
+                    <p className="text-sm"><span className="pk-gold">Como chegar:</span> {v.como}</p>
+                    <p className="text-sm mt-2">{v.oque}</p>
+                    <p className="text-sm pk-gold mt-2">{v.quanto}</p>
+                    <p className="text-sm text-[hsl(var(--pk-muted))] mt-2">{v.obs}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="familia">
+            <SectionTitle icon={Baby} kicker="21 — Crianças" title="Phi Phi com kids — o que rola e o que evitar" />
+            <Reveal>
+              <ul className="space-y-3">
+                {FAMILIA_PP.map((f) => (
+                  <li key={f.item} className="pk-card">
+                    <p className="font-semibold pk-gold">{f.item}</p>
+                    <p className="text-sm text-[hsl(var(--pk-muted))] mt-2">{f.detalhe}</p>
+                  </li>
+                ))}
+              </ul>
+            </Reveal>
+          </section>
+
+          <section id="conservacao">
+            <SectionTitle icon={Leaf} kicker="22 — Maya Bay viva" title="Conservação, cota e regras que você precisa cumprir" />
+            <div className="grid md:grid-cols-2 gap-6">
+              {CONSERVACAO_PP.map((c, i) => (
+                <Reveal key={c.iniciativa} i={i}>
+                  <article className="pk-card h-full">
+                    <p className="pk-kicker">Iniciativa</p>
+                    <h3 className="pk-h3 mt-1">{c.iniciativa}</h3>
+                    <div className="pk-divider my-4" />
+                    <p className="text-sm">{c.oque}</p>
+                    <p className="text-sm pk-gold mt-2">{c.como}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="booking">
+            <SectionTitle icon={CalendarClock} kicker="23 — Antecedência" title="Quando reservar ferry, hotel, Maya Bay e camping" />
+            <Reveal>
+              <div className="pk-table">
+                <table>
+                  <thead><tr><th>Período</th><th>Reserve com</th><th>Por quê</th></tr></thead>
+                  <tbody>
+                    {BOOKING_PP.map((b) => (
+                      <tr key={b.quando}>
+                        <td className="font-semibold">{b.quando}</td>
+                        <td className="pk-gold">{b.reserva}</td>
+                        <td className="text-sm text-[hsl(var(--pk-muted))]">{b.porque}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </Reveal>
+          </section>
+
           <section className="pt-16 border-t border-[hsl(var(--pk-line))]">
             <p className="pk-kicker">Continue explorando</p>
             <h2 className="pk-h2 mt-2">Outras ilhas e guias</h2>
