@@ -134,6 +134,7 @@ const App = () => (
           <Route path="/kohchang3517" element={<KohChang3517 />} />
           <Route path="/kohlanta4831" element={<KohLanta4831 />} />
           <Route path="/kohlipe2947" element={<KohLipe2947 />} />
+          <Route path="/kohkood7841" element={<KohKood7841 />} />
           {ilhasMeta.map((ilha) => (
             <Route
               key={ilha.slug}
