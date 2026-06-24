@@ -360,7 +360,7 @@ const GuiaLuaDeMel = () => {
             <p className="text-center text-gray-500 mb-16">Sem custo extra. Já vêm junto com o PDF.</p>
             <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
               {[
-                { icon: BookOpen, title: "Planilha de Orçamento (Excel)", value: "R$57" },
+                { icon: BookOpen, title: "Tabela de Orçamento Detalhada", value: "R$57" },
                 { icon: Gift, title: "Templates de surpresa para o(a) cônjuge", value: "R$47" },
               ].map((b, i) => (
                 <div key={i} className="bg-gradient-to-br from-white to-[#FFF7F9] p-8 rounded-3xl shadow-lg border-2 border-pink-100 text-center">
