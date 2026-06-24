@@ -54,7 +54,7 @@ export const beachClubs: SalesContent = {
   },
   modules: [
     {
-      title: "Top 40 Beach Clubs",
+      title: "Top 30 Beach Clubs",
       desc: "Phuket, Samui, Phangan, Krabi.",
       bullets: ["Catch, Cafe del Mar, Xana", "Coco Tam's, Nikki Beach", "Beachhouse, Sunset Bar", "Phi Phi e Lanta"],
     },
