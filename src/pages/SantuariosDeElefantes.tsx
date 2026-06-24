@@ -4,7 +4,8 @@ import { Header } from "@/components/Header";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Footer } from "@/components/Footer";
 import { BackToHome, BackToHomeFooter } from "@/components/NavigationButtons";
-import { InternalLinksSection, ConversionBlock } from "@/components/ConversionSections";
+import { ConversionBlock } from "@/components/ConversionSections";
+import RelatedSalesGrid from "@/components/RelatedSalesGrid";
 import { Check, Shield, Clock, Star, MapPin, AlertTriangle, ChevronDown, Users, BookOpen, Zap, Heart, ArrowRight, Eye, TrendingUp, X, ThumbsDown, ThumbsUp, Quote, Sparkles, Ban, CircleCheck } from "lucide-react";
 
 import { useState, useEffect, useCallback } from "react";
@@ -821,7 +822,7 @@ const SantuariosDeElefantes = () => {
         title="Garanta sua experiência ética"
         subtitle="Não arrisque financiar maus-tratos. Saiba exatamente onde ir com nosso guia testado."
       />
-      <InternalLinksSection currentPath="/santuariosdeelefantes" />
+      <RelatedSalesGrid currentPath="/santuariosdeelefantes" />
       <BackToHomeFooter />
       </main>
       <Footer />

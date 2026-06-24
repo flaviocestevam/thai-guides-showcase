@@ -5,7 +5,8 @@ import { Header } from "@/components/Header";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Footer } from "@/components/Footer";
 import { BackToHome, BackToHomeFooter } from "@/components/NavigationButtons";
-import { InternalLinksSection, ConversionBlock } from "@/components/ConversionSections";
+import { ConversionBlock } from "@/components/ConversionSections";
+import RelatedSalesGrid from "@/components/RelatedSalesGrid";
 import {
   Check, Shield, Clock, Star, MapPin, AlertTriangle, ChevronDown,
   Users, BookOpen, Zap, Heart, ArrowRight, TrendingUp, X,
@@ -941,7 +942,7 @@ const GuiaTrilhasThai = () => {
         title="Explore a Tailândia que ninguém vê"
         subtitle="Saia do roteiro comum. Receba 30+ trilhas detalhadas com mapas e custos reais."
       />
-      <InternalLinksSection currentPath="/guiatrilhasthai" />
+      <RelatedSalesGrid currentPath="/guiatrilhasthai" />
       <BackToHomeFooter />
       </main>
       <Footer />
