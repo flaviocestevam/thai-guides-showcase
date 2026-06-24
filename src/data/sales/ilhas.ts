@@ -1032,19 +1032,18 @@ const kood = make(ilhasMeta[8], {
     { title: "Foi pro Soneva Kiri achando que era único", desc: "Soneva é US$ 1.500/noite. Existe boutique de R$ 800 a diária com mesma água e praia mais bonita. Guia compara." },
   ],
   features: [
-    { title: "Rota inteligente Bangkok → Kood (4h)", desc: "Voo + speedboat em 4h, sem ônibus noturno. Operadoras e horários." },
-    { title: "12 resorts: boutique real vs. marketing", desc: "Testados — qual é luxo real, qual é Booking inflado, com Soneva comparado." },
-    { title: "7 praias decodificadas", desc: "Klong Chao, Bang Bao, Tapao, Ngamkho, Klong Yai Kee, Ao Phrao, Khlong Hin — qual é qual." },
-    { title: "Mapa scooter com tempos reais", desc: "Quantos minutos entre cada praia, qual estrada, onde tem terra batida." },
-    { title: "Visibilidade por ponto, mês a mês", desc: "Tabela em metros pra Klong Yai Kee, Bang Bao, Koh Rang, HTMS Chang." },
-    { title: "Mergulho decodificado (Open Water → Advanced)", desc: "BB Divers, Paradise Divers, sites por nível, Open R$ 1.500." },
-    { title: "Mês ideal por perfil", desc: "Lua de mel, mergulho, família, mochileiro — cada um tem o mês certo." },
-    { title: "Booking timeline (quando reservar)", desc: "Dez/jan = 5 meses, fev = 4, nov/abr = 2, mai = 1 semana." },
-    { title: "Pesca local + vila Ao Salat", desc: "Longtail tradicional com pescador, palafitas sobre o mar, almoço por R$ 25." },
-    { title: "Spa & wellness — premium e local", desc: "Six Senses, Shantaa, Tinkerbell e massagem de rua por 300 baht." },
-    { title: "Família com criança (kids-friendly)", desc: "Praia ideal, hotéis com berço, atividades seguras, posto de saúde." },
-    { title: "Kood × Mak × Chang — comparativo", desc: "Tabela final pra escolher entre as 3 ilhas do leste tailandês." },
-    { title: "8 golpes com resposta pronta", desc: "Speedboat 'cancelado', scooter com arranhão, songthaew dobrado — script exato." },
+    { title: "Chegue em Kood em 4h (não em 14h)", desc: "Voo Bangkok → Trat + speedboat com operadora e horário — a rota do ônibus noturno custa 1 dia inteiro da sua viagem." },
+    { title: "Não pague R$ 4.000 num resort que cabe em R$ 1.200", desc: "12 resorts testados lado a lado: qual é luxo real, qual é Booking inflado, e a boutique com a mesma praia do Soneva." },
+    { title: "Não vá em jun-out (mar marrom, ferry cancela)", desc: "Janela ideal nov-abr com visibilidade por ponto em metros, mês a mês." },
+    { title: "Veja as 7 praias, não só a do hotel", desc: "Mapa scooter com tempos reais entre Klong Chao, Bang Bao, Tapao, Ngamkho, Ao Phrao — loop de 60km em 6-7h." },
+    { title: "Faça snorkel grátis (sem pagar R$ 300 no tour)", desc: "Klong Yai Kee e Bang Bao têm coral vivo a 10m da areia — o tour com 20 pessoas é desnecessário." },
+    { title: "PADI Open Water sem cair em escola turística", desc: "BB Divers e Paradise Divers, sites por nível, Open R$ 1.500, HTMS Chang wreck no Advanced." },
+    { title: "Reserve no mês certo antes de tudo esgotar", desc: "Booking timeline: dez/jan = 5 meses antes, fev = 4, nov/abr = 2, mai = 1 semana. Quem reserva tarde paga 60% a mais." },
+    { title: "Coma na vila Ao Salat por R$ 25 (não R$ 250 no resort)", desc: "Palafitas sobre o mar, longtail com pescador às 05h30, mini-fábrica de borracha tradicional." },
+    { title: "Faça spa real, não armação de praia", desc: "Six Senses, Shantaa, Tinkerbell + a massagem de rua de 300 baht que vale mais que tour pago." },
+    { title: "Família com criança sem improvisar", desc: "Praia ideal Klong Chao, resorts com berço/kids club, posto de saúde — e o que NÃO fazer." },
+    { title: "Escolha entre Kood, Mak e Chang sem chutar", desc: "Tabela final lado a lado: tamanho, preço, perfil, snorkel — veredito por tipo de viajante." },
+    { title: "8 golpes de Kood com resposta pronta", desc: "Speedboat \"cancelado\", scooter com arranhão, songthaew dobrado — script exato pra cada um." },
   ],
   comparison: {
     theirs: [
@@ -1120,7 +1119,7 @@ const kood = make(ilhasMeta[8], {
   ],
   finalCTA: {
     title: "Kood é o luxo que não precisa de Maldivas — nem do preço delas",
-    subtitle: "Por R$ 67 você compra a rota inteligente, os resorts que valem e as 7 praias. O segredo da Tailândia premium do leste em um único PDF.",
+    subtitle: "Por R$ 67 você compra a rota de 4h, a boutique que entrega a praia do Soneva por 1/4 do preço e as 7 praias pelo scooter loop. Casal que seguiu economizou R$ 16.000 em 7 noites.",
   },
 });
 

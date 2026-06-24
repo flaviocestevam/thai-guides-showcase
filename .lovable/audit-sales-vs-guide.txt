@@ -1,9 +1,9 @@
 ================================================================
- AUDITORIA VENDA × GUIA  —  2026-06-24T06:35:10.363Z
+ AUDITORIA VENDA × GUIA  —  2026-06-24T06:40:44.013Z
 ================================================================
 
-✅ koh-lipe-tailandia  →  src/pages/KohLipe2947.tsx
-   Cobertura: 33/33 (100%)
+✅ koh-kood-tailandia  →  src/pages/KohKood7841.tsx
+   Cobertura: 34/34 (100%)
 
 ----------------------------------------------------------------
  Total de gaps: 0
