@@ -297,7 +297,7 @@ const GuiaVoluntariado = () => {
                 { icon: Heart, title: "Saúde e vacinas", desc: "Checklist oficial" },
                 { icon: GraduationCap, title: "Etiqueta cultural", desc: "O que NÃO fazer no projeto" },
                 { icon: Sparkles, title: "Pós-projeto", desc: "Roteiro de turismo bônus" },
-                { icon: Calendar, title: "Quando ir", desc: "Calendário por área" },
+                
               ].map((item, i) => (
                 <div key={i} className="text-center p-8 rounded-3xl bg-white hover:shadow-lg transition border border-green-100">
                   <div className="inline-flex items-center justify-center w-20 h-20 rounded-full mb-6" style={{ backgroundColor: `${GREEN}1A`, color: GREEN }}>
