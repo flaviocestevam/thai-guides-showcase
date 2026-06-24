@@ -81,7 +81,7 @@ export const topHostels: SalesContent = {
   ],
   bonuses: [
     { title: "Lista de 30 hostels boutique sub-R$ 80", desc: "Hostels lindos por preço de albergue comum.", value: "R$ 87" },
-    { title: "Mapa Google Maps com todos", desc: "100 hostels pinados com nota e perfil.", value: "R$ 67" },
+    { title: "Mapa Google Maps com todos", desc: "97 hostels pinados com nota e perfil.", value: "R$ 67" },
     { title: "Guia de hostels para solo feminino", desc: "Os 25 mais seguros, com avaliação de mulheres reais.", value: "R$ 87" },
     { title: "Top 10 hostels de festa", desc: "Os endereços onde a noite começa dentro do próprio hostel.", value: "R$ 57" },
     { title: "Modelos de mensagem para reserva direta", desc: "Templates em inglês para conseguir desconto direto.", value: "R$ 47" },
