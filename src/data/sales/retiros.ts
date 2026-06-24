@@ -61,7 +61,7 @@ export const retiros: SalesContent = {
     {
       title: "Por modalidade",
       desc: "Encontre o caminho certo.",
-      bullets: ["Hatha, Vinyasa, Yin", "Vipassana e Zen", "Detox raw food", "Plant medicine legal"],
+      bullets: ["Hatha, Vinyasa, Yin", "Vipassana e Zen", "Detox raw food", "Dança e expressão"],
     },
     {
       title: "Por nível",
