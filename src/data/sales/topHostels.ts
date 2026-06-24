@@ -54,7 +54,7 @@ export const topHostels: SalesContent = {
   },
   modules: [
     {
-      title: "Top 100 Hostels por cidade",
+      title: "Top 97 Hostels por cidade",
       desc: "Ranking dos melhores em cada cidade pelas notas reais — sem cota fixa por destino.",
       bullets: ["Bangkok", "Chiang Mai", "Ilhas (Phangan, Tao, Lanta, Samui, Phuket, Krabi)", "Pai e norte"],
     },
