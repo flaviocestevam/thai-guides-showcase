@@ -32,6 +32,7 @@ import petsImg from "@/assets/generated/pets-hero.png.asset.json";
 import criancasImg from "@/assets/generated/criancas-hero.png.asset.json";
 import casasMassagemImg from "@/assets/sales/casas-massagem.webp";
 import retirosImg from "@/assets/sales/retiros.webp";
+import ilhasImg from "@/assets/generated/ilhas-similan-hero.png.asset.json";
 
 interface ProductCard {
   title: string;
