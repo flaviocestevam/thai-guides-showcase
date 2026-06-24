@@ -5,7 +5,8 @@ import { Header } from "@/components/Header";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Footer } from "@/components/Footer";
 import { BackToHome, BackToHomeFooter } from "@/components/NavigationButtons";
-import { InternalLinksSection, ConversionBlock } from "@/components/ConversionSections";
+import { ConversionBlock } from "@/components/ConversionSections";
+import RelatedSalesGrid from "@/components/RelatedSalesGrid";
 import { ArrowDown, Flame, ShieldAlert, Sparkles, Gem, Clock, Ban, CheckCircle, Wallet, PartyPopper, AlertTriangle, Beer, Smartphone, Ghost, EyeOff, MapPinOff, MapPin, Star } from "lucide-react";
 import heroImg from "@/assets/generated/festas-hero.png.asset.json";
 import { cities, survivalTips } from "@/data/festas";
@@ -647,7 +648,7 @@ const Festas = () => {
             </div>
           </div>
         </section>
-      <InternalLinksSection currentPath="/festas" />
+      <RelatedSalesGrid currentPath="/festas" />
       <BackToHomeFooter />
       </main>
       <Footer />

@@ -4,7 +4,8 @@ import { Header } from "@/components/Header";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Footer } from "@/components/Footer";
 import { BackToHome, BackToHomeFooter } from "@/components/NavigationButtons";
-import { InternalLinksSection, ConversionBlock } from "@/components/ConversionSections";
+import { ConversionBlock } from "@/components/ConversionSections";
+import RelatedSalesGrid from "@/components/RelatedSalesGrid";
 import HeroSection from "@/components/festival/HeroSection";
 import SocialProofPopup from "@/components/festival/SocialProofPopup";
 import VideoSection from "@/components/festival/VideoSection";
@@ -70,7 +71,7 @@ const FestivalDasLanternas = () => {
         <PricingSection />
         <FAQSection />
         <FinalCTASection />
-        <InternalLinksSection currentPath="/festivaldaslanternas" />
+        <RelatedSalesGrid currentPath="/festivaldaslanternas" />
         <BackToHomeFooter />
       </main>
       <Footer />
