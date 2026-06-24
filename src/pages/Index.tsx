@@ -68,6 +68,22 @@ const salesPages: ProductCard[] = [
     viewers: 23,
   },
   {
+    title: "Guias das Ilhas da Tailândia",
+    subtitle: "14 ilhas decifradas — Phuket, Samui, Phi Phi, Phangan, Tao, Lanta, Lipe, Kood e mais",
+    description:
+      "Catálogo completo das ilhas que importam. Praia certa, ferry certo, mês certo, hospedagem testada e os golpes mapeados — um guia por ilha, em português.",
+    path: "/ilhas",
+    emoji: "🏝️",
+    badge: "🏝️ CATÁLOGO",
+    image: ilhasImg.url,
+    urgency: "Ilha errada = viagem perdida. 14 guias prontos.",
+    socialProof: "Mais de 7.000 viajantes nas ilhas",
+    originalPrice: "R$ 197",
+    price: "R$ 67",
+    highlight: "14 ilhas mapeadas (cada guia individual)",
+    viewers: 34,
+  },
+  {
     title: "Santuários de Elefantes",
     subtitle: "Experiências éticas na Tailândia",
     description:
