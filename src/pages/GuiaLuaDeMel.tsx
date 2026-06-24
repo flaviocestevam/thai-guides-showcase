@@ -326,7 +326,7 @@ const GuiaLuaDeMel = () => {
               { icon: Utensils, title: "Restaurantes top", desc: "Romance garantido" },
               { icon: Plane, title: "3 Roteiros Prontos", desc: "10, 14 e 21 dias" },
               { icon: Heart, title: "Surpresas para o par", desc: "Pedidos, decoração, jantares" },
-              { icon: DollarSign, title: "Orçamento real", desc: "Em R$ e ฿ — planilha inclusa" },
+              { icon: DollarSign, title: "Orçamento real", desc: "Em R$ e ฿ — 3 cenários completos" },
               { icon: Calendar, title: "Quando ir", desc: "Mês a mês, ilha a ilha" },
               { icon: Map, title: "Transfers entre ilhas", desc: "Lancha, ferry e voo doméstico" },
               { icon: Camera, title: "Spots de foto", desc: "Para o ensaio dos sonhos" },
