@@ -1010,7 +1010,7 @@ const lipe = make(ilhasMeta[7], {
   ],
   finalCTA: {
     title: "Lipe é a Tailândia que parece Maldivas — mas só pra quem chegar lá inteiro",
-    subtitle: "Por R$ 67 você compra a rota dos 4 trechos, a janela climática certa e os resorts que valem. Pra desistir no meio do caminho, basta ir sem plano.",
+    subtitle: "Por R$ 67 você compra os 4 trechos certos, a janela dez-mar e o resort de R$ 1.800 que entrega o que o de R$ 3.000 promete. Baixa agora, lê em 1 hora, economiza R$ 1.200 no primeiro hotel.",
   },
 });
 
