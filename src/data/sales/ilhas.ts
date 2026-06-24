@@ -896,7 +896,7 @@ const lanta = make(ilhasMeta[6], {
   ],
   finalCTA: {
     title: "Lanta é a ilha que cura quem chegou na Tailândia cansado",
-    subtitle: "Por R$ 67 você compra o mapa que evita o erro do norte, da janela errada e do scooter sem rota. Slow travel só funciona com critério.",
+    subtitle: "A Cláudia chegou de Phi Phi extenuada, leu o guia no ferry e foi direto pra Klong Nin num bangalô de R$ 220 — recuperou a fé na viagem em 2 dias. Por R$ 67 (12x R$ 6,71) você compra o mapa que evita o erro do norte, da janela errada e do scooter sem rota. Baixa agora, lê em 1 hora, embarca sabendo qual praia é sua.",
   },
 });
 
