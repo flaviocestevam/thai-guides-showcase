@@ -23,6 +23,38 @@ import criancasImg from "@/assets/generated/criancas-hero.png.asset.json";
 import casasMassagemImg from "@/assets/sales/casas-massagem.webp";
 import retirosImg from "@/assets/sales/retiros.webp";
 import ilhasImg from "@/assets/generated/ilhas-similan-hero.png.asset.json";
+import { ilhasMeta } from "@/data/sales/ilhas";
+import phuketImg from "@/assets/generated/phuket-hero.png.asset.json";
+import samuiImg from "@/assets/generated/koh-samui-hero.png.asset.json";
+import phiphiImg from "@/assets/hero-firepoi-phiphi.png.asset.json";
+import phanganImg from "@/assets/generated/koh-phangan-hero.png.asset.json";
+import taoImg from "@/assets/generated/koh-tao-hero.png.asset.json";
+import changImg from "@/assets/ilhas/chang.webp";
+import lantaImg from "@/assets/generated/koh-lanta-hero.png.asset.json";
+import lipeImg from "@/assets/generated/koh-lipe-hero-v2.png.asset.json";
+import koodImg from "@/assets/generated/koh-kood-hero.png.asset.json";
+import yaoImg from "@/assets/generated/koh-yao-hero.png.asset.json";
+import makImg from "@/assets/generated/koh-mak-hero.png.asset.json";
+import larnImg from "@/assets/generated/koh-larn-hero.png.asset.json";
+import similanImg from "@/assets/generated/ilhas-similan-hero.png.asset.json";
+import rachaImg from "@/assets/generated/koh-racha-hero.png.asset.json";
+
+const ilhaImagesBySlug: Record<string, string> = {
+  "phuket-tailandia": phuketImg.url,
+  "koh-samui-tailandia": samuiImg.url,
+  "koh-phi-phi-tailandia": phiphiImg.url,
+  "koh-phangan-tailandia": phanganImg.url,
+  "koh-tao-tailandia": taoImg.url,
+  "koh-chang-tailandia": changImg,
+  "koh-lanta-tailandia": lantaImg.url,
+  "koh-lipe-tailandia": lipeImg.url,
+  "koh-kood-tailandia": koodImg.url,
+  "koh-yao-tailandia": yaoImg.url,
+  "koh-mak-tailandia": makImg.url,
+  "koh-larn-tailandia": larnImg.url,
+  "ilhas-similan-tailandia": similanImg.url,
+  "koh-racha-tailandia": rachaImg.url,
+};
 
 export interface ProductCard {
   title: string;
@@ -452,6 +484,24 @@ export const salesPages: ProductCard[] = [
     tags: ["bem-estar", "natureza", "cultura"],
   },
 ];
+
+/** Páginas de vendas individuais de cada ilha — geradas a partir de ilhasMeta. */
+export const ilhaSalesPages: ProductCard[] = ilhasMeta.map((i) => ({
+  title: `Guia ${i.nome}`,
+  subtitle: i.cardSubtitle,
+  description: i.cardDescription,
+  path: `/${i.slug}`,
+  emoji: i.emoji,
+  badge: i.cardBadge,
+  image: ilhaImagesBySlug[i.slug],
+  urgency: "Hospedagem boa esgota meses antes!",
+  socialProof: "Mais de 7.000 viajantes nas ilhas",
+  originalPrice: "R$ 197",
+  price: "R$ 67",
+  highlight: i.perfil,
+  viewers: 12,
+  tags: ["praia", "ilhas"],
+}));
 
 /**
  * Retorna até `limit` páginas relacionadas à `currentPath`.
