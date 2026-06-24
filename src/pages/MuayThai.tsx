@@ -5,6 +5,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Footer } from "@/components/Footer";
 import { BackToHome, BackToHomeFooter } from "@/components/NavigationButtons";
 import { InternalLinksSection, ConversionBlock } from "@/components/ConversionSections";
+import RelatedSalesGrid from "@/components/RelatedSalesGrid";
 import TopBar from "@/components/muaythai/TopBar";
 import HeroSection from "@/components/muaythai/HeroSection";
 import ProblemSection from "@/components/muaythai/ProblemSection";
@@ -64,6 +65,7 @@ const MuayThai = () => {
         <ForYouSection />
         <FAQSection />
         <FinalCTA />
+        <RelatedSalesGrid currentPath="/muaythai" />
         <InternalLinksSection currentPath="/muaythai" />
         <BackToHomeFooter />
       </main>
