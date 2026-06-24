@@ -190,7 +190,7 @@ const GuiaLuaDeMel = () => {
                 { icon: Utensils, title: "Jantar Pé na Areia", desc: "Os melhores endereços à beira-mar, com mesa privativa e velas." },
                 { icon: Sparkles, title: "Spa Tradicional Thai", desc: "Spas premiados que cabem no bolso — e os que valem o luxo." },
                 { icon: Camera, title: "Ensaio Fotográfico", desc: "Fotógrafos brasileiros e tailandeses para registrar a viagem." },
-                { icon: Palmtree, title: "Ilha Privativa", desc: "Como ter uma praia inteira só para vocês dois por algumas horas." },
+                { icon: Sun, title: "Pôr do Sol em Long-Tail", desc: "Como reservar um barco tradicional só para o casal e ver o sunset no mar." },
                 { icon: Heart, title: "Renovação de Votos", desc: "Cerimônia simbólica em templos e resorts — passo a passo." },
                 { icon: Sun, title: "Passeio em James Bond", desc: "A baía mais cinematográfica do país, sem cair em tour cheio." },
               ].map((item, i) => (
