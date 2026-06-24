@@ -5,6 +5,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { BackToHome, BackToHomeFooter } from "@/components/NavigationButtons";
+import RelatedSalesGrid from "@/components/RelatedSalesGrid";
 import { ilhasMeta } from "@/data/sales/ilhas";
 
 const tierLabel: Record<number, string> = {
@@ -95,7 +96,11 @@ const Ilhas = () => {
               </div>
             </section>
           ))}
+        </div>
 
+        <RelatedSalesGrid currentPath="/ilhas" />
+
+        <div className="max-w-6xl mx-auto px-4">
           <BackToHomeFooter />
         </div>
       </main>
