@@ -21,7 +21,7 @@ export const retiros: SalesContent = {
   ],
   features: [
     { title: "60 retiros avaliados", desc: "Cada um com tipo, duração, nível (iniciante/intermediário/avançado), preço real e perfil ideal." },
-    { title: "Por modalidade", desc: "Yoga, Vipassana, mindfulness, detox, jejum, plant medicine legal, silêncio, dança." },
+    { title: "Por modalidade", desc: "Yoga, Vipassana, mindfulness, detox, jejum, silêncio e dança." },
     { title: "Retiros gratuitos ou doação", desc: "12 templos e ashrams que oferecem retiros sérios por doação — quase nunca aparecem em busca." },
   ],
   comparison: {
@@ -61,7 +61,7 @@ export const retiros: SalesContent = {
     {
       title: "Por modalidade",
       desc: "Encontre o caminho certo.",
-      bullets: ["Hatha, Vinyasa, Yin", "Vipassana e Zen", "Detox raw food", "Plant medicine legal"],
+      bullets: ["Hatha, Vinyasa, Yin", "Vipassana e Zen", "Detox raw food", "Dança e expressão"],
     },
     {
       title: "Por nível",

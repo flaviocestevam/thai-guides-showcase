@@ -2,12 +2,12 @@ import type { SalesContent } from "@/components/sales/SalesPage";
 
 export const topHostels: SalesContent = {
   slug: "top-hostels-tailandia",
-  seoTitle: "Top Hostels Tailândia — Os 100 Melhores Avaliados",
+  seoTitle: "Top Hostels Tailândia — Os 97 Melhores Avaliados",
   seoDescription: "Os melhores hostels da Tailândia testados: Bangkok, Chiang Mai, Phuket, Koh Phangan e mais. Wi-Fi, segurança, vibe social e preço real.",
-  heroBadge: "🛏️ Top 100 Hostels",
+  heroBadge: "🛏️ Top 97 Hostels",
   heroTitle: "Os melhores hostels da",
   heroHighlight: "Tailândia testados",
-  heroSubtitle: "100 hostels avaliados em 12 cidades — Bangkok, Chiang Mai, Pai, Phuket, Krabi, Koh Phangan, Koh Tao, Koh Lanta. Wi-Fi medido, segurança avaliada, vibe social descrita e preço real de cada quarto.",
+  heroSubtitle: "97 hostels avaliados em 12 cidades — Bangkok, Chiang Mai, Pai, Phuket, Krabi, Koh Phangan, Koh Tao, Koh Lanta. Wi-Fi medido, segurança avaliada, vibe social descrita e preço real de cada quarto.",
   heroWarning: "90% dos turistas reservam hostel por foto bonita do Booking e descobrem na chegada que o quarto é barulhento, sem tomada, com Wi-Fi de 2Mbps. Existe um filtro que ninguém te conta.",
   heroBgGradient: "bg-gradient-to-br from-amber-950 via-background to-orange-950",
   heroEmoji: "🛏️",
@@ -20,7 +20,7 @@ export const topHostels: SalesContent = {
     { title: "Localização ruim que destrói a viagem", desc: "Hostel barato a 40 min do centro vira pesadelo de Grab a R$ 80 todo dia." },
   ],
   features: [
-    { title: "100 hostels testados", desc: "Cada um avaliado pessoalmente em 12 quesitos: limpeza, Wi-Fi, vibe, segurança, café, banho, ar." },
+    { title: "97 hostels testados", desc: "Cada um avaliado pessoalmente em 12 quesitos: limpeza, Wi-Fi, vibe, segurança, café, banho, ar." },
     { title: "Filtro por perfil de viagem", desc: "Festeiro, mochileiro silencioso, nômade digital, casal, solo feminino — cada perfil tem ranking diferente." },
     { title: "Preço real (não anunciado)", desc: "O que você de fato paga depois de taxas e o que reservar fora do Booking para ficar 30% mais barato." },
   ],
@@ -41,20 +41,20 @@ export const topHostels: SalesContent = {
     ],
   },
   authority: {
-    title: "100 hostels em 18 meses de testes",
+    title: "97 hostels em 18 meses de testes",
     paragraphs: [
-      "Dormi em 100 hostels diferentes em 12 cidades da Tailândia ao longo de 18 meses, com avaliação honesta de cada um.",
+      "Dormi em 97 hostels diferentes em 12 cidades da Tailândia ao longo de 18 meses, com avaliação honesta de cada um.",
       "Esse guia é exatamente o filtro que eu queria ter tido quando perdi noites em hostels horríveis no início. Honesto, prático e sem propaganda paga.",
     ],
     bullets: [
-      "100 hostels avaliados pessoalmente",
+      "97 hostels avaliados pessoalmente",
       "12 cidades cobertas",
       "Já ajudou 800+ mochileiros",
     ],
   },
   modules: [
     {
-      title: "Top 100 Hostels por cidade",
+      title: "Top 97 Hostels por cidade",
       desc: "Ranking dos melhores em cada cidade pelas notas reais — sem cota fixa por destino.",
       bullets: ["Bangkok", "Chiang Mai", "Ilhas (Phangan, Tao, Lanta, Samui, Phuket, Krabi)", "Pai e norte"],
     },
@@ -81,7 +81,7 @@ export const topHostels: SalesContent = {
   ],
   bonuses: [
     { title: "Lista de 30 hostels boutique sub-R$ 80", desc: "Hostels lindos por preço de albergue comum.", value: "R$ 87" },
-    { title: "Mapa Google Maps com todos", desc: "100 hostels pinados com nota e perfil.", value: "R$ 67" },
+    { title: "Mapa Google Maps com todos", desc: "97 hostels pinados com nota e perfil.", value: "R$ 67" },
     { title: "Guia de hostels para solo feminino", desc: "Os 25 mais seguros, com avaliação de mulheres reais.", value: "R$ 87" },
     { title: "Top 10 hostels de festa", desc: "Os endereços onde a noite começa dentro do próprio hostel.", value: "R$ 57" },
     { title: "Modelos de mensagem para reserva direta", desc: "Templates em inglês para conseguir desconto direto.", value: "R$ 47" },
@@ -101,7 +101,7 @@ export const topHostels: SalesContent = {
     priceCents: "00",
     installments: "12x de R$ 6,71",
     includes: [
-      "Top 100 hostels avaliados",
+      "Top 97 hostels avaliados",
       "12 cidades cobertas",
       "Filtro por perfil de viagem",
       "Mapa Google Maps incluso",
@@ -124,6 +124,6 @@ export const topHostels: SalesContent = {
   ],
   finalCTA: {
     title: "Pare de jogar dinheiro fora em hostels ruins",
-    subtitle: "100 hostels testados, filtros honestos, preço real. Sua próxima viagem começa com a hospedagem certa.",
+    subtitle: "97 hostels testados, filtros honestos, preço real. Sua próxima viagem começa com a hospedagem certa.",
   },
 };

@@ -2,12 +2,12 @@ import type { SalesContent } from "@/components/sales/SalesPage";
 
 export const beachClubs: SalesContent = {
   slug: "beach-clubs-tailandia",
-  seoTitle: "Beach Clubs Tailândia — Top 40 com Preços, Vibes e Como Reservar",
-  seoDescription: "Os melhores beach clubs da Tailândia: Phuket, Koh Samui, Phangan, Krabi. Day pass, DJs, dress code, custo real e como reservar com desconto.",
-  heroBadge: "🌅 Top 40 Beach Clubs",
+  seoTitle: "Beach Clubs Tailândia — Top 30 com Preços, Vibes e Como Reservar",
+  seoDescription: "Os melhores beach clubs da Tailândia: Phuket, Koh Samui, Phangan, Krabi, Phi Phi e Koh Lanta. Day pass, DJs, dress code, custo real e como reservar com desconto.",
+  heroBadge: "🌅 Top 30 Beach Clubs",
   heroTitle: "Pôr do sol e champagne",
   heroHighlight: "nos melhores beach clubs",
-  heroSubtitle: "40 beach clubs avaliados em Phuket, Koh Samui, Koh Phangan, Krabi e Phi Phi. Day pass, mínimos de consumo, line-up de DJs, dress code e como reservar com até 40% de desconto.",
+  heroSubtitle: "30 beach clubs avaliados em Phuket, Koh Samui, Koh Phangan, Krabi, Phi Phi e Koh Lanta. Day pass, mínimos de consumo, line-up de DJs, dress code e como reservar com até 40% de desconto.",
   heroWarning: "Beach club errado em Phuket pode custar R$ 1.200 num dia em consumo mínimo escondido. O guia mostra os 3 que cobram entrada zero e o que pedir pra ter o melhor lugar.",
   heroBgGradient: "bg-gradient-to-br from-rose-950 via-background to-orange-950",
   heroEmoji: "🌅",
@@ -20,7 +20,7 @@ export const beachClubs: SalesContent = {
     { title: "DJ ruim no dia errado", desc: "Você gasta o dia inteiro num beach club que tem set acústico, perdendo o DJ internacional ao lado." },
   ],
   features: [
-    { title: "40 beach clubs testados", desc: "Cada um com day pass, mínimo, vibe, melhor horário e dress code descritos com honestidade." },
+    { title: "30 beach clubs testados", desc: "Cada um com day pass, mínimo, vibe, melhor horário e dress code descritos com honestidade." },
     { title: "Calendário de DJs e eventos", desc: "Lineup mensal dos principais beach clubs — para você cair no dia bom." },
     { title: "Como reservar com 40% off", desc: "Templates de DM no Instagram e contatos de promoters que conseguem mesa com desconto real." },
   ],
@@ -43,18 +43,18 @@ export const beachClubs: SalesContent = {
   authority: {
     title: "100+ pôr do sol em beach clubs",
     paragraphs: [
-      "Já fui em 40 beach clubs diferentes na Tailândia, alguns 5+ vezes pra testar dias e horários. Cobri Phuket, Koh Samui, Phangan, Krabi, Phi Phi e Koh Lanta.",
+      "Já fui em 30 beach clubs diferentes na Tailândia, alguns 5+ vezes pra testar dias e horários. Cobri Phuket, Koh Samui, Phangan, Krabi, Phi Phi e Koh Lanta.",
       "Esse guia é o ranking real do que vale a pena — com preço, vibe e estratégia de reserva. Nada de lista paga ou influencer falando que tudo é incrível.",
     ],
     bullets: [
-      "40 beach clubs avaliados",
+      "30 beach clubs avaliados",
       "100+ visitas testadas",
       "Já economizou R$ 500.000+ a brasileiros",
     ],
   },
   modules: [
     {
-      title: "Top 40 Beach Clubs",
+      title: "Top 30 Beach Clubs",
       desc: "Phuket, Samui, Phangan, Krabi.",
       bullets: ["Catch, Cafe del Mar, Xana", "Coco Tam's, Nikki Beach", "Beachhouse, Sunset Bar", "Phi Phi e Lanta"],
     },
@@ -101,7 +101,7 @@ export const beachClubs: SalesContent = {
     priceCents: "00",
     installments: "12x de R$ 6,71",
     includes: [
-      "Top 40 beach clubs avaliados",
+      "Top 30 beach clubs avaliados",
       "Calendário 12 meses de eventos",
       "Contatos diretos de promoters",
       "Estrutura de preço explicada",
@@ -124,6 +124,6 @@ export const beachClubs: SalesContent = {
   ],
   finalCTA: {
     title: "Vista o pôr do sol perfeito na Tailândia",
-    subtitle: "40 beach clubs testados, calendário de eventos, contatos pra descontos. Seu próximo sunset começa aqui.",
+    subtitle: "30 beach clubs testados, calendário de eventos, contatos pra descontos. Seu próximo sunset começa aqui.",
   },
 };
