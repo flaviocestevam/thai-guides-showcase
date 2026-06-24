@@ -101,7 +101,7 @@ export const topHostels: SalesContent = {
     priceCents: "00",
     installments: "12x de R$ 6,71",
     includes: [
-      "Top 100 hostels avaliados",
+      "Top 97 hostels avaliados",
       "12 cidades cobertas",
       "Filtro por perfil de viagem",
       "Mapa Google Maps incluso",
