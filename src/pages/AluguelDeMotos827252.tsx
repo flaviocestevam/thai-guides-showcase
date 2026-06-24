@@ -486,6 +486,21 @@ const AluguelDeMotos827252 = () => {
                 "Phuket → Phang Nga ida e volta (180 km): ~170 THB ≈ R$ 31",
               ]} />
             </Card>
+
+            <Card>
+              <h3 className="font-display text-xl text-foreground mb-2 flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-primary" />Bônus 3 — Checklist de vistoria 12 pontos</h3>
+              <p className="text-sm">Passo a passo que torna o golpe da "moto arranhada" impossível — completo no <strong className="text-foreground">Capítulo 7</strong>. Use na hora da retirada e grave em vídeo cada item.</p>
+            </Card>
+
+            <Card>
+              <h3 className="font-display text-xl text-foreground mb-2 flex items-center gap-2"><ShieldAlert className="w-5 h-5 text-primary" />Bônus 4 — Protocolo anti-golpe da caução</h3>
+              <p className="text-sm">Vídeo de entrega, o que assinar, o que NÃO entregar e o que fotografar — combinado nos <strong className="text-foreground">Capítulos 4, 5 e 6</strong>. Caução em dinheiro com recibo, passaporte nunca fica.</p>
+            </Card>
+
+            <Card>
+              <h3 className="font-display text-xl text-foreground mb-2 flex items-center gap-2"><Smartphone className="w-5 h-5 text-primary" />Bônus 5 — Lista de apps offline indispensáveis</h3>
+              <p className="text-sm">Navegação (Google Maps + Maps.me/Organic), tradução (Google Translate offline), postos (PTT/Bangchak) e emergência — lista completa no <strong className="text-foreground">Capítulo 17</strong>. Baixe antes de pegar a estrada.</p>
+            </Card>
           </div>
 
           <Card className="mt-8 border-primary/40 bg-primary/5">
