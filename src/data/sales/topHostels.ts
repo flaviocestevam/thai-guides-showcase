@@ -41,13 +41,13 @@ export const topHostels: SalesContent = {
     ],
   },
   authority: {
-    title: "100 hostels em 18 meses de testes",
+    title: "97 hostels em 18 meses de testes",
     paragraphs: [
-      "Dormi em 100 hostels diferentes em 12 cidades da Tailândia ao longo de 18 meses, com avaliação honesta de cada um.",
+      "Dormi em 97 hostels diferentes em 12 cidades da Tailândia ao longo de 18 meses, com avaliação honesta de cada um.",
       "Esse guia é exatamente o filtro que eu queria ter tido quando perdi noites em hostels horríveis no início. Honesto, prático e sem propaganda paga.",
     ],
     bullets: [
-      "100 hostels avaliados pessoalmente",
+      "97 hostels avaliados pessoalmente",
       "12 cidades cobertas",
       "Já ajudou 800+ mochileiros",
     ],
