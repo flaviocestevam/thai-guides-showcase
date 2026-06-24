@@ -101,7 +101,7 @@ export const beachClubs: SalesContent = {
     priceCents: "00",
     installments: "12x de R$ 6,71",
     includes: [
-      "Top 40 beach clubs avaliados",
+      "Top 30 beach clubs avaliados",
       "Calendário 12 meses de eventos",
       "Contatos diretos de promoters",
       "Estrutura de preço explicada",
