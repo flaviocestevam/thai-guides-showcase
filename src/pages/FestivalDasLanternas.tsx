@@ -30,8 +30,10 @@ const FestivalDasLanternas = () => {
     "@context": "https://schema.org",
     "@type": "Product",
     "name": "Guia do Festival das Lanternas",
+    "description": "Guia completo para o Festival das Lanternas (Yi Peng e Loy Krathong) em Chiang Mai: ingressos oficiais, melhores pontos para assistir, roteiro dia a dia e dicas de hospedagem.",
+    "image": ["https://guiastailandia.com.br/og-image.jpg"],
     "brand": { "@type": "Brand", "name": "Guia Tailândia" },
-    "offers": { "@type": "Offer", "price": "47.00", "priceCurrency": "BRL" }
+    "offers": { "@type": "Offer", "price": "47.00", "priceCurrency": "BRL", "availability": "https://schema.org/InStock" }
   };
 
   return (
