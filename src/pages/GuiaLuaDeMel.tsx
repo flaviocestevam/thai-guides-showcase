@@ -409,11 +409,11 @@ const GuiaLuaDeMel = () => {
             <div className="bg-white p-12 md:p-20 rounded-[3rem] shadow-2xl text-center relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 rounded-full -mr-16 -mt-16" style={{ backgroundColor: `${GOLD}1A` }}></div>
               <h2 className="text-3xl font-bold mb-4">Garantir Meu Guia Agora</h2>
-              <p className="text-gray-600 mb-10 text-lg">PDF completo, mapas, planilha e roteiros prontos para vocês.</p>
+              <p className="text-gray-600 mb-10 text-lg">PDF completo, mapas e roteiros prontos para vocês.</p>
 
               <div className="bg-[#FFF7F9] p-6 rounded-2xl mb-8 text-left text-sm space-y-2">
                 <div className="flex justify-between"><span>Guia Lua de Mel (120+ páginas)</span><span className="font-bold">R$197</span></div>
-                <div className="flex justify-between text-gray-500"><span>+ Planilha de orçamento</span><span>R$57</span></div>
+                <div className="flex justify-between text-gray-500"><span>+ Tabela de orçamento detalhada</span><span>R$57</span></div>
                 <div className="flex justify-between text-gray-500"><span>+ Templates de surpresa</span><span>R$47</span></div>
                 <div className="border-t border-pink-200 pt-2 flex justify-between font-bold"><span>Valor real</span><span className="line-through">R$301</span></div>
               </div>
