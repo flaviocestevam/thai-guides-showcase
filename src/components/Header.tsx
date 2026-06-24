@@ -38,17 +38,19 @@ export const Header = () => {
   ];
 
 
+  const solid = isScrolled || isMobileMenuOpen;
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${
-        isScrolled
+        solid
           ? "bg-background/95 backdrop-blur-md border-b border-border py-3"
           : "bg-transparent py-5"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 group">
-          <span className={`text-xl md:text-2xl font-display font-black tracking-tighter ${isScrolled ? "" : "text-white drop-shadow-md"}`}>
+          <span className={`text-xl md:text-2xl font-display font-black tracking-tighter ${solid ? "" : "text-white drop-shadow-md"}`}>
             GUIAS <span className="text-primary group-hover:text-gradient-gold transition-all duration-300">TAILANDIA</span>
           </span>
         </Link>
@@ -64,7 +66,7 @@ export const Header = () => {
           <button
             aria-label="Abrir menu"
             className={`inline-flex items-center justify-center min-h-11 min-w-11 p-2 rounded-md transition-colors ${
-              isScrolled
+              solid
                 ? "text-foreground hover:bg-muted"
                 : "text-white drop-shadow-md hover:bg-white/10"
             }`}
@@ -74,6 +76,7 @@ export const Header = () => {
           </button>
         </div>
       </div>
+
 
       {/* Menu */}
       {isMobileMenuOpen && (
