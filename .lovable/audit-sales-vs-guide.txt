@@ -1,6 +1,27 @@
 ================================================================
- AUDITORIA VENDA × GUIA  —  2026-06-24T07:23:07.824Z
+ AUDITORIA VENDA × GUIA  —  2026-06-24T07:37:13.442Z
 ================================================================
+
+✅ koh-lipe-tailandia  →  src/pages/KohLipe2947.tsx
+   Cobertura: 33/33 (100%)
+
+✅ koh-kood-tailandia  →  src/pages/KohKood7841.tsx
+   Cobertura: 34/34 (100%)
+
+✅ koh-samui-tailandia  →  src/pages/KohSamui7392.tsx
+   Cobertura: 33/33 (100%)
+
+✅ koh-phi-phi-tailandia  →  src/pages/KohPhiPhi5128.tsx
+   Cobertura: 33/33 (100%)
+
+✅ koh-phangan-tailandia  →  src/pages/KohPhangan8463.tsx
+   Cobertura: 33/33 (100%)
+
+✅ koh-tao-tailandia  →  src/pages/KohTao6294.tsx
+   Cobertura: 44/44 (100%)
+
+✅ koh-chang-tailandia  →  src/pages/KohChang3517.tsx
+   Cobertura: 41/41 (100%)
 
 ✅ koh-lanta-tailandia  →  src/pages/KohLanta4831.tsx
    Cobertura: 35/35 (100%)
