@@ -23,7 +23,7 @@ interface RelatedSalesGridProps {
 export const RelatedSalesGrid = ({
   currentPath,
   relatedPaths,
-  limit = 10,
+  limit = 8,
   title = "Outros guias que combinam com o seu",
   subtitle = "Selecionados por afinidade de experiência. Cada guia é independente — leve só o que faz sentido pra sua viagem.",
   variant = "muted",
@@ -47,7 +47,7 @@ export const RelatedSalesGrid = ({
           <p className="text-muted-foreground font-body text-sm max-w-xl mx-auto">{subtitle}</p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {pages.map((page) => (
             <Link
               key={page.path}
