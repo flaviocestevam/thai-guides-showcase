@@ -461,7 +461,7 @@ const GuiaLuaDeMel = () => {
             <AccordionItem value="item-2" className="border rounded-2xl px-8 py-2">
               <AccordionTrigger className="text-lg font-bold hover:no-underline">Quanto custa, em média, uma lua de mel na Tailândia?</AccordionTrigger>
               <AccordionContent className="text-gray-600 text-lg leading-relaxed">
-                A partir de R$18.000 o casal para 14 dias (passagens + hotéis 4★ + passeios), e a partir de R$35.000 para versão luxo em resorts 5★. O guia traz três orçamentos detalhados, com planilha em Excel.
+                A partir de R$18.000 o casal para 14 dias (passagens + hotéis 4★ + passeios), e a partir de R$35.000 para versão luxo em resorts 5★. O guia traz três orçamentos detalhados em tabela completa dentro do PDF.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-3" className="border rounded-2xl px-8 py-2">
