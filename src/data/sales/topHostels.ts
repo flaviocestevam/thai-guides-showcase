@@ -124,6 +124,6 @@ export const topHostels: SalesContent = {
   ],
   finalCTA: {
     title: "Pare de jogar dinheiro fora em hostels ruins",
-    subtitle: "100 hostels testados, filtros honestos, preço real. Sua próxima viagem começa com a hospedagem certa.",
+    subtitle: "97 hostels testados, filtros honestos, preço real. Sua próxima viagem começa com a hospedagem certa.",
   },
 };
