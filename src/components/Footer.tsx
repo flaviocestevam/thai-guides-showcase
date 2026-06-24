@@ -13,10 +13,10 @@ export const Footer = () => {
             O guia mais completo em português para viajantes brasileiros que querem explorar a Tailândia com autenticidade, economia e segurança.
           </p>
           <div className="flex items-center gap-4 pt-2">
-            <a href="#" className="p-2 bg-primary/10 rounded-full text-primary hover:bg-primary hover:text-white transition-all">
+            <a href="#" aria-label="Instagram" className="inline-flex items-center justify-center min-h-11 min-w-11 bg-primary/10 rounded-full text-primary hover:bg-primary hover:text-white transition-all">
               <Instagram className="w-5 h-5" />
             </a>
-            <a href="mailto:contato@guiastailandia.com.br" className="p-2 bg-primary/10 rounded-full text-primary hover:bg-primary hover:text-white transition-all">
+            <a href="mailto:contato@guiastailandia.com.br" aria-label="Email" className="inline-flex items-center justify-center min-h-11 min-w-11 bg-primary/10 rounded-full text-primary hover:bg-primary hover:text-white transition-all">
               <Mail className="w-5 h-5" />
             </a>
           </div>

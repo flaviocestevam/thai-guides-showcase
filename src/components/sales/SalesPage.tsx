@@ -339,8 +339,8 @@ const SalesPage = ({ c, extraSection }: { c: SalesContent; extraSection?: React.
         )}
         {/* Mesh + orbs */}
         <div className="absolute inset-0 bg-mesh" />
-        <div className="orb w-[520px] h-[520px] -top-40 -left-40" style={{ background: "hsl(var(--primary) / 0.5)" }} />
-        <div className="orb w-[420px] h-[420px] top-1/3 -right-32" style={{ background: "hsl(var(--accent) / 0.45)" }} />
+        <div className="orb w-[min(80vw,520px)] aspect-square -top-40 -left-40" style={{ background: "hsl(var(--primary) / 0.5)" }} />
+        <div className="orb w-[min(70vw,420px)] aspect-square top-1/3 -right-32" style={{ background: "hsl(var(--accent) / 0.45)" }} />
         {!c.heroImage && (
           <div className="absolute inset-0 opacity-[0.07] text-[28rem] flex items-center justify-center pointer-events-none select-none">
             {c.heroEmoji}
@@ -751,7 +751,7 @@ const SalesPage = ({ c, extraSection }: { c: SalesContent; extraSection?: React.
       {/* ============== FINAL CTA ============== */}
       <section className="py-28 md:py-40 px-4 relative overflow-hidden">
         <div className="absolute inset-0 bg-mesh" />
-        <div className="orb w-[420px] h-[420px] -bottom-32 left-1/4" style={{ background: "hsl(var(--primary) / 0.4)" }} />
+        <div className="orb w-[min(70vw,420px)] aspect-square -bottom-32 left-1/4" style={{ background: "hsl(var(--primary) / 0.4)" }} />
         <div className="relative max-w-3xl mx-auto text-center space-y-8">
           <Reveal>
             <h2 className="text-4xl md:text-6xl font-display font-bold tracking-editorial leading-[1.05] text-balance">

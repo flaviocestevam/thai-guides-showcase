@@ -121,7 +121,7 @@ const HeroSection = () => {
             { name: "André M.", city: "Curitiba", time: "45 min" },
             { name: "Rafael T.", city: "Salvador", time: "52 min" },
           ].map((person, i) => (
-            <span key={i} className="mx-6 text-sm text-muted-foreground">
+            <span key={i} className="mx-3 text-sm text-muted-foreground">
               <strong className="text-foreground">{person.name}</strong> comprou há {person.time} — {person.city}
             </span>
           ))}

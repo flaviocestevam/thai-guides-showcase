@@ -59,6 +59,11 @@
     @apply border-border;
   }
 
+  html, body {
+    /* Bloqueia scroll horizontal em todas as páginas (mobile-first safety net) */
+    overflow-x: clip;
+  }
+
   body {
     @apply bg-background text-foreground font-body;
   }
