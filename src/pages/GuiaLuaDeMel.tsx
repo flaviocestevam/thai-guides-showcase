@@ -204,14 +204,14 @@ const GuiaLuaDeMel = () => {
           </div>
         </section>
 
-        {/* SEÇÃO 6: FAIXAS DE ORÇAMENTO — sem entregar a planilha */}
+        {/* SEÇÃO 6: FAIXAS DE ORÇAMENTO */}
         <section className="py-24 px-6 bg-white">
           <div className="container mx-auto max-w-5xl">
             <h2 className="text-3xl md:text-5xl font-bold text-center mb-4">
               Quanto <span style={{ color: ROSE }}>Custa</span> de Verdade
             </h2>
             <p className="text-center text-gray-500 mb-16">
-              Três faixas reais para 14 dias, o casal — passagens, hospedagem e passeios. A planilha detalhada por dia vem dentro do guia.
+              Três faixas reais para 14 dias, o casal — passagens, hospedagem e passeios. Os orçamentos detalhados por dia vêm dentro do guia.
             </p>
             <div className="grid md:grid-cols-3 gap-8">
               {[
@@ -227,7 +227,7 @@ const GuiaLuaDeMel = () => {
               ))}
             </div>
             <p className="text-center text-gray-400 mt-8 text-sm flex items-center justify-center gap-2">
-              <DollarSign className="w-4 h-4" /> Planilha Excel editável dentro do guia, para vocês ajustarem ao seu orçamento.
+              <DollarSign className="w-4 h-4" /> Tabela de orçamento detalhada dentro do PDF, com 3 cenários completos por dia.
             </p>
           </div>
         </section>
