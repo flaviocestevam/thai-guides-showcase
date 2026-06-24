@@ -26,8 +26,10 @@ const MuayThai = () => {
     "@context": "https://schema.org",
     "@type": "Product",
     "name": "Guia Muay Thai na Tailândia",
+    "description": "Guia completo dos melhores camps de Muay Thai na Tailândia: custos reais, perfil de cada academia, roteiros para iniciantes e avançados, e dicas para evitar academias turísticas.",
+    "image": ["https://guiastailandia.com.br/og-image.jpg"],
     "brand": { "@type": "Brand", "name": "Guia Tailândia" },
-    "offers": { "@type": "Offer", "price": "97.00", "priceCurrency": "BRL" }
+    "offers": { "@type": "Offer", "price": "97.00", "priceCurrency": "BRL", "availability": "https://schema.org/InStock" }
   };
 
   return (

@@ -478,8 +478,8 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Guias de Viagem Tailândia — Explore como um Local"
-        description="Encontre os melhores guias de viagem para a Tailândia. Festival das Lanternas, Muay Thai, Santuários de Elefantes, Trilhas e Vida Noturna. Planeje sua viagem sem perrengues."
+        title="Guias da Tailândia — Explore como um Local"
+        description="Guias de viagem para a Tailândia: Festival das Lanternas, Muay Thai, Elefantes, Trilhas e Vida Noturna. Planeje sem perrengues."
         canonicalPath="/"
       />
       <StructuredData data={webSiteSchema} />
