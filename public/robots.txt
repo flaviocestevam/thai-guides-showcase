@@ -1,7 +1,37 @@
 User-agent: *
 Allow: /
+
+# Guias pagos — nunca indexar
 Disallow: /muaythai5645
 Disallow: /guiatrilhasthai44
+Disallow: /festas7733
+Disallow: /voluntariado4827
+Disallow: /tailandia-para-gays0325257
+Disallow: /songkran9482
+Disallow: /lua-de-mel-tailandia8272524
+Disallow: /cursosmassagem3367
+Disallow: /aluguel-de-motos-tailandia827252
+Disallow: /mergulho-tailandia465355
+Disallow: /cafescoworkings7391
+Disallow: /clubesstrip6644
+Disallow: /gogobars8855
+Disallow: /reveillon-tailandia67729
+Disallow: /tophostels7128
+Disallow: /aventureiros6712
+Disallow: /beachclubs8821
+Disallow: /pets9922
+Disallow: /criancas7811
+Disallow: /casasmassagem5582
+Disallow: /retiros8834
+Disallow: /phuket8821
+Disallow: /kohsamui7392
+Disallow: /kohphiphi5128
+Disallow: /kohphangan8463
+Disallow: /kohtao6294
+Disallow: /kohchang3517
+Disallow: /kohlanta4831
+Disallow: /kohlipe2947
+Disallow: /kohkood7841
 Disallow: /export-copy-auditoria
 
 Sitemap: https://guiastailandia.com.br/sitemap.xml
