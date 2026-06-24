@@ -20,7 +20,7 @@ export const topHostels: SalesContent = {
     { title: "Localização ruim que destrói a viagem", desc: "Hostel barato a 40 min do centro vira pesadelo de Grab a R$ 80 todo dia." },
   ],
   features: [
-    { title: "100 hostels testados", desc: "Cada um avaliado pessoalmente em 12 quesitos: limpeza, Wi-Fi, vibe, segurança, café, banho, ar." },
+    { title: "97 hostels testados", desc: "Cada um avaliado pessoalmente em 12 quesitos: limpeza, Wi-Fi, vibe, segurança, café, banho, ar." },
     { title: "Filtro por perfil de viagem", desc: "Festeiro, mochileiro silencioso, nômade digital, casal, solo feminino — cada perfil tem ranking diferente." },
     { title: "Preço real (não anunciado)", desc: "O que você de fato paga depois de taxas e o que reservar fora do Booking para ficar 30% mais barato." },
   ],
