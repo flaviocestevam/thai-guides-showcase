@@ -81,7 +81,7 @@ export const beachClubs: SalesContent = {
   ],
   bonuses: [
     { title: "Calendário 12 meses de eventos", desc: "Todos os white parties e DJs internacionais marcados.", value: "R$ 87" },
-    { title: "Contatos diretos de promoters", desc: "Lista verificada com WhatsApp e descontos reais.", value: "R$ 97" },
+    { title: "Contatos diretos de promoters", desc: "Lista verificada com Instagram dos promoters e descontos reais.", value: "R$ 97" },
     { title: "Top 10 beach clubs gratuitos", desc: "Que cobram zero e te deixam ficar o dia inteiro.", value: "R$ 67" },
     { title: "Guia de instagram-worthy spots", desc: "Os ângulos de foto que viralizam em cada club.", value: "R$ 47" },
     { title: "Combo beach club + hotel walking distance", desc: "Hotéis a 5 min a pé dos top beach clubs.", value: "R$ 57" },

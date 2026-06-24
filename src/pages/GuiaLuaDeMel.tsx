@@ -190,7 +190,7 @@ const GuiaLuaDeMel = () => {
                 { icon: Utensils, title: "Jantar Pé na Areia", desc: "Os melhores endereços à beira-mar, com mesa privativa e velas." },
                 { icon: Sparkles, title: "Spa Tradicional Thai", desc: "Spas premiados que cabem no bolso — e os que valem o luxo." },
                 { icon: Camera, title: "Ensaio Fotográfico", desc: "Fotógrafos brasileiros e tailandeses para registrar a viagem." },
-                { icon: Palmtree, title: "Ilha Privativa", desc: "Como ter uma praia inteira só para vocês dois por algumas horas." },
+                { icon: Sun, title: "Pôr do Sol em Long-Tail", desc: "Como reservar um barco tradicional só para o casal e ver o sunset no mar." },
                 { icon: Heart, title: "Renovação de Votos", desc: "Cerimônia simbólica em templos e resorts — passo a passo." },
                 { icon: Sun, title: "Passeio em James Bond", desc: "A baía mais cinematográfica do país, sem cair em tour cheio." },
               ].map((item, i) => (
@@ -204,14 +204,14 @@ const GuiaLuaDeMel = () => {
           </div>
         </section>
 
-        {/* SEÇÃO 6: FAIXAS DE ORÇAMENTO — sem entregar a planilha */}
+        {/* SEÇÃO 6: FAIXAS DE ORÇAMENTO */}
         <section className="py-24 px-6 bg-white">
           <div className="container mx-auto max-w-5xl">
             <h2 className="text-3xl md:text-5xl font-bold text-center mb-4">
               Quanto <span style={{ color: ROSE }}>Custa</span> de Verdade
             </h2>
             <p className="text-center text-gray-500 mb-16">
-              Três faixas reais para 14 dias, o casal — passagens, hospedagem e passeios. A planilha detalhada por dia vem dentro do guia.
+              Três faixas reais para 14 dias, o casal — passagens, hospedagem e passeios. Os orçamentos detalhados por dia vêm dentro do guia.
             </p>
             <div className="grid md:grid-cols-3 gap-8">
               {[
@@ -227,7 +227,7 @@ const GuiaLuaDeMel = () => {
               ))}
             </div>
             <p className="text-center text-gray-400 mt-8 text-sm flex items-center justify-center gap-2">
-              <DollarSign className="w-4 h-4" /> Planilha Excel editável dentro do guia, para vocês ajustarem ao seu orçamento.
+              <DollarSign className="w-4 h-4" /> Tabela de orçamento detalhada dentro do PDF, com 3 cenários completos por dia.
             </p>
           </div>
         </section>
@@ -318,7 +318,7 @@ const GuiaLuaDeMel = () => {
             <h2 className="text-3xl md:text-5xl font-bold text-center mb-4">
               O Que <span style={{ color: ROSE }}>Vem no Guia</span>
             </h2>
-            <p className="text-center text-gray-500 mb-16 max-w-2xl mx-auto">PDF de 180+ páginas com mapas, links clicáveis, planilha de orçamento, templates de e-mail prontos e atualizações grátis vitalícias.</p>
+            <p className="text-center text-gray-500 mb-16 max-w-2xl mx-auto">PDF de 180+ páginas com mapas, links clicáveis, tabela de orçamento detalhada, templates de e-mail prontos e atualizações grátis vitalícias.</p>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
               {[
               { icon: Hotel, title: "40+ Resorts", desc: "Selecionados para casais" },
@@ -326,7 +326,7 @@ const GuiaLuaDeMel = () => {
               { icon: Utensils, title: "Restaurantes top", desc: "Romance garantido" },
               { icon: Plane, title: "3 Roteiros Prontos", desc: "10, 14 e 21 dias" },
               { icon: Heart, title: "Surpresas para o par", desc: "Pedidos, decoração, jantares" },
-              { icon: DollarSign, title: "Orçamento real", desc: "Em R$ e ฿ — planilha inclusa" },
+              { icon: DollarSign, title: "Orçamento real", desc: "Em R$ e ฿ — 3 cenários completos" },
               { icon: Calendar, title: "Quando ir", desc: "Mês a mês, ilha a ilha" },
               { icon: Map, title: "Transfers entre ilhas", desc: "Lancha, ferry e voo doméstico" },
               { icon: Camera, title: "Spots de foto", desc: "Para o ensaio dos sonhos" },
@@ -360,7 +360,7 @@ const GuiaLuaDeMel = () => {
             <p className="text-center text-gray-500 mb-16">Sem custo extra. Já vêm junto com o PDF.</p>
             <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
               {[
-                { icon: BookOpen, title: "Planilha de Orçamento (Excel)", value: "R$57" },
+                { icon: BookOpen, title: "Tabela de Orçamento Detalhada", value: "R$57" },
                 { icon: Gift, title: "Templates de surpresa para o(a) cônjuge", value: "R$47" },
               ].map((b, i) => (
                 <div key={i} className="bg-gradient-to-br from-white to-[#FFF7F9] p-8 rounded-3xl shadow-lg border-2 border-pink-100 text-center">
@@ -409,11 +409,11 @@ const GuiaLuaDeMel = () => {
             <div className="bg-white p-12 md:p-20 rounded-[3rem] shadow-2xl text-center relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 rounded-full -mr-16 -mt-16" style={{ backgroundColor: `${GOLD}1A` }}></div>
               <h2 className="text-3xl font-bold mb-4">Garantir Meu Guia Agora</h2>
-              <p className="text-gray-600 mb-10 text-lg">PDF completo, mapas, planilha e roteiros prontos para vocês.</p>
+              <p className="text-gray-600 mb-10 text-lg">PDF completo, mapas e roteiros prontos para vocês.</p>
 
               <div className="bg-[#FFF7F9] p-6 rounded-2xl mb-8 text-left text-sm space-y-2">
                 <div className="flex justify-between"><span>Guia Lua de Mel (120+ páginas)</span><span className="font-bold">R$197</span></div>
-                <div className="flex justify-between text-gray-500"><span>+ Planilha de orçamento</span><span>R$57</span></div>
+                <div className="flex justify-between text-gray-500"><span>+ Tabela de orçamento detalhada</span><span>R$57</span></div>
                 <div className="flex justify-between text-gray-500"><span>+ Templates de surpresa</span><span>R$47</span></div>
                 <div className="border-t border-pink-200 pt-2 flex justify-between font-bold"><span>Valor real</span><span className="line-through">R$301</span></div>
               </div>
@@ -461,7 +461,7 @@ const GuiaLuaDeMel = () => {
             <AccordionItem value="item-2" className="border rounded-2xl px-8 py-2">
               <AccordionTrigger className="text-lg font-bold hover:no-underline">Quanto custa, em média, uma lua de mel na Tailândia?</AccordionTrigger>
               <AccordionContent className="text-gray-600 text-lg leading-relaxed">
-                A partir de R$18.000 o casal para 14 dias (passagens + hotéis 4★ + passeios), e a partir de R$35.000 para versão luxo em resorts 5★. O guia traz três orçamentos detalhados, com planilha em Excel.
+                A partir de R$18.000 o casal para 14 dias (passagens + hotéis 4★ + passeios), e a partir de R$35.000 para versão luxo em resorts 5★. O guia traz três orçamentos detalhados em tabela completa dentro do PDF.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-3" className="border rounded-2xl px-8 py-2">
@@ -485,7 +485,7 @@ const GuiaLuaDeMel = () => {
             <AccordionItem value="item-6" className="border rounded-2xl px-8 py-2">
               <AccordionTrigger className="text-lg font-bold hover:no-underline">Como recebo o guia depois da compra?</AccordionTrigger>
               <AccordionContent className="text-gray-600 text-lg leading-relaxed">
-                Após o pagamento confirmado, o PDF + a planilha chegam no e-mail em até 5 minutos. Acesso vitalício e atualizações grátis vitalícias.
+                Após o pagamento confirmado, o PDF chega no e-mail em até 5 minutos. Acesso vitalício e atualizações grátis vitalícias.
               </AccordionContent>
             </AccordionItem>
           </Accordion>
