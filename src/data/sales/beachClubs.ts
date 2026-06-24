@@ -43,11 +43,11 @@ export const beachClubs: SalesContent = {
   authority: {
     title: "100+ pôr do sol em beach clubs",
     paragraphs: [
-      "Já fui em 40 beach clubs diferentes na Tailândia, alguns 5+ vezes pra testar dias e horários. Cobri Phuket, Koh Samui, Phangan, Krabi, Phi Phi e Koh Lanta.",
+      "Já fui em 30 beach clubs diferentes na Tailândia, alguns 5+ vezes pra testar dias e horários. Cobri Phuket, Koh Samui, Phangan, Krabi, Phi Phi e Koh Lanta.",
       "Esse guia é o ranking real do que vale a pena — com preço, vibe e estratégia de reserva. Nada de lista paga ou influencer falando que tudo é incrível.",
     ],
     bullets: [
-      "40 beach clubs avaliados",
+      "30 beach clubs avaliados",
       "100+ visitas testadas",
       "Já economizou R$ 500.000+ a brasileiros",
     ],
