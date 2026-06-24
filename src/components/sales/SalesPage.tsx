@@ -18,7 +18,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { BackToHome, BackToHomeFooter } from "@/components/NavigationButtons";
-import { InternalLinksSection } from "@/components/ConversionSections";
+import RelatedSalesGrid from "@/components/RelatedSalesGrid";
 
 
 export type SalesContent = {
@@ -779,7 +779,7 @@ const SalesPage = ({ c, extraSection }: { c: SalesContent; extraSection?: React.
       </section>
 
       {extraSection}
-      <InternalLinksSection currentPath={`/${c.slug}`} />
+      <RelatedSalesGrid currentPath={`/${c.slug}`} />
       <BackToHomeFooter />
     </main>
     <Footer />
