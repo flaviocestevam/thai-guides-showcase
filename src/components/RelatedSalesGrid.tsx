@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Clock, TrendingUp, Users, Plus } from "lucide-react";
-import { getRelatedSalesPages, salesPages } from "@/data/salesCatalog";
+import { getRelatedSalesPages, salesPages, ilhaSalesPages } from "@/data/salesCatalog";
 
 interface RelatedSalesGridProps {
   /** Caminho da página atual — será excluída da grade. */
@@ -34,9 +34,12 @@ export const RelatedSalesGrid = ({
     const related = getRelatedSalesPages(currentPath, batchSize, relatedPaths);
     const taken = new Set(related.map((p) => p.path));
     if (currentPath) taken.add(currentPath);
-    // 2) Restante em qualquer ordem (mantém ordem do catálogo) — só páginas ainda não usadas
+    // 2) Restante do catálogo principal em qualquer ordem
     const rest = salesPages.filter((p) => !taken.has(p.path));
-    return [...related, ...rest];
+    rest.forEach((p) => taken.add(p.path));
+    // 3) Depois, todas as ilhas individuais (para a pessoa poder ver tudo)
+    const ilhas = ilhaSalesPages.filter((p) => !taken.has(p.path));
+    return [...related, ...rest, ...ilhas];
   }, [currentPath, relatedPaths, batchSize]);
 
   const [visible, setVisible] = useState(batchSize);
