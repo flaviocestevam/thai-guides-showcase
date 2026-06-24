@@ -20,7 +20,7 @@ export const beachClubs: SalesContent = {
     { title: "DJ ruim no dia errado", desc: "Você gasta o dia inteiro num beach club que tem set acústico, perdendo o DJ internacional ao lado." },
   ],
   features: [
-    { title: "40 beach clubs testados", desc: "Cada um com day pass, mínimo, vibe, melhor horário e dress code descritos com honestidade." },
+    { title: "30 beach clubs testados", desc: "Cada um com day pass, mínimo, vibe, melhor horário e dress code descritos com honestidade." },
     { title: "Calendário de DJs e eventos", desc: "Lineup mensal dos principais beach clubs — para você cair no dia bom." },
     { title: "Como reservar com 40% off", desc: "Templates de DM no Instagram e contatos de promoters que conseguem mesa com desconto real." },
   ],
