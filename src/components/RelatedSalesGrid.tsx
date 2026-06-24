@@ -1,14 +1,15 @@
+import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, Clock, TrendingUp, Users } from "lucide-react";
-import { getRelatedSalesPages } from "@/data/salesCatalog";
+import { ArrowRight, Clock, TrendingUp, Users, Plus } from "lucide-react";
+import { getRelatedSalesPages, salesPages } from "@/data/salesCatalog";
 
 interface RelatedSalesGridProps {
   /** Caminho da página atual — será excluída da grade. */
   currentPath?: string;
   /** Caminhos curados manualmente. Se omitido, usa tags + popularidade. */
   relatedPaths?: string[];
-  /** Quantas páginas exibir (default 10). */
-  limit?: number;
+  /** Tamanho do lote inicial e de cada "ver mais" (default 8). */
+  batchSize?: number;
   title?: string;
   subtitle?: string;
   /** Variante visual. "muted" usa fundo levemente destacado. */
@@ -17,18 +18,31 @@ interface RelatedSalesGridProps {
 
 /**
  * Grade de páginas de vendas relacionadas — mesmo layout do catálogo da Index,
- * mas com thumbnail na metade do tamanho (h-24 md:h-28).
- * Reutilizável em todas as páginas de vendas e de guias entregues.
+ * com thumbnail metade do tamanho. As primeiras 8 são relacionadas por tag/curadoria;
+ * o botão "Ver mais experiências" revela mais 8 em qualquer ordem.
  */
 export const RelatedSalesGrid = ({
   currentPath,
   relatedPaths,
-  limit = 8,
+  batchSize = 8,
   title = "Outros guias que combinam com o seu",
   subtitle = "Selecionados por afinidade de experiência. Cada guia é independente — leve só o que faz sentido pra sua viagem.",
   variant = "muted",
 }: RelatedSalesGridProps) => {
-  const pages = getRelatedSalesPages(currentPath, limit, relatedPaths);
+  const allPages = useMemo(() => {
+    // 1) Primeiras N relacionadas
+    const related = getRelatedSalesPages(currentPath, batchSize, relatedPaths);
+    const taken = new Set(related.map((p) => p.path));
+    if (currentPath) taken.add(currentPath);
+    // 2) Restante em qualquer ordem (mantém ordem do catálogo) — só páginas ainda não usadas
+    const rest = salesPages.filter((p) => !taken.has(p.path));
+    return [...related, ...rest];
+  }, [currentPath, relatedPaths, batchSize]);
+
+  const [visible, setVisible] = useState(batchSize);
+  const pages = allPages.slice(0, visible);
+  const hasMore = visible < allPages.length;
+
   if (!pages.length) return null;
 
   return (
@@ -118,6 +132,19 @@ export const RelatedSalesGrid = ({
             </Link>
           ))}
         </div>
+
+        {hasMore && (
+          <div className="mt-10 flex justify-center">
+            <button
+              type="button"
+              onClick={() => setVisible((v) => v + batchSize)}
+              className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 transition-colors font-body font-semibold text-sm px-6 py-3 rounded-full shadow-premium"
+            >
+              <Plus className="w-4 h-4" />
+              Ver mais experiências
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );
