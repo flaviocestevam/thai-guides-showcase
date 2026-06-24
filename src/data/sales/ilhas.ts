@@ -1119,7 +1119,7 @@ const kood = make(ilhasMeta[8], {
   ],
   finalCTA: {
     title: "Kood é o luxo que não precisa de Maldivas — nem do preço delas",
-    subtitle: "Por R$ 67 você compra a rota inteligente, os resorts que valem e as 7 praias. O segredo da Tailândia premium do leste em um único PDF.",
+    subtitle: "Por R$ 67 você compra a rota de 4h, a boutique que entrega a praia do Soneva por 1/4 do preço e as 7 praias pelo scooter loop. Casal que seguiu economizou R$ 16.000 em 7 noites.",
   },
 });
 
