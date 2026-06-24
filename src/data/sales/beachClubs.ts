@@ -2,12 +2,12 @@ import type { SalesContent } from "@/components/sales/SalesPage";
 
 export const beachClubs: SalesContent = {
   slug: "beach-clubs-tailandia",
-  seoTitle: "Beach Clubs Tailândia — Top 40 com Preços, Vibes e Como Reservar",
-  seoDescription: "Os melhores beach clubs da Tailândia: Phuket, Koh Samui, Phangan, Krabi. Day pass, DJs, dress code, custo real e como reservar com desconto.",
-  heroBadge: "🌅 Top 40 Beach Clubs",
+  seoTitle: "Beach Clubs Tailândia — Top 30 com Preços, Vibes e Como Reservar",
+  seoDescription: "Os melhores beach clubs da Tailândia: Phuket, Koh Samui, Phangan, Krabi, Phi Phi e Koh Lanta. Day pass, DJs, dress code, custo real e como reservar com desconto.",
+  heroBadge: "🌅 Top 30 Beach Clubs",
   heroTitle: "Pôr do sol e champagne",
   heroHighlight: "nos melhores beach clubs",
-  heroSubtitle: "40 beach clubs avaliados em Phuket, Koh Samui, Koh Phangan, Krabi e Phi Phi. Day pass, mínimos de consumo, line-up de DJs, dress code e como reservar com até 40% de desconto.",
+  heroSubtitle: "30 beach clubs avaliados em Phuket, Koh Samui, Koh Phangan, Krabi, Phi Phi e Koh Lanta. Day pass, mínimos de consumo, line-up de DJs, dress code e como reservar com até 40% de desconto.",
   heroWarning: "Beach club errado em Phuket pode custar R$ 1.200 num dia em consumo mínimo escondido. O guia mostra os 3 que cobram entrada zero e o que pedir pra ter o melhor lugar.",
   heroBgGradient: "bg-gradient-to-br from-rose-950 via-background to-orange-950",
   heroEmoji: "🌅",
