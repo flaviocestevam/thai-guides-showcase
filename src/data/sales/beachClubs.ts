@@ -124,6 +124,6 @@ export const beachClubs: SalesContent = {
   ],
   finalCTA: {
     title: "Vista o pôr do sol perfeito na Tailândia",
-    subtitle: "40 beach clubs testados, calendário de eventos, contatos pra descontos. Seu próximo sunset começa aqui.",
+    subtitle: "30 beach clubs testados, calendário de eventos, contatos pra descontos. Seu próximo sunset começa aqui.",
   },
 };
