@@ -86,7 +86,7 @@ export const ConversionBlock = ({
             {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 fill-primary text-primary" />)}
           </div>
           
-          <h2 className="text-3xl md:text-5xl font-display font-bold">{title}</h2>
+          <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground">{title}</h2>
           <p className="text-lg md:text-xl text-muted-foreground font-body max-w-2xl mx-auto leading-relaxed">
             {subtitle}
           </p>
@@ -94,19 +94,19 @@ export const ConversionBlock = ({
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left max-w-xl mx-auto py-6">
             <div className="flex items-start gap-2">
               <CheckCircle2 className="w-5 h-5 text-primary shrink-0" />
-              <span className="text-sm font-body">Evite erros de planejamento</span>
+              <span className="text-sm font-body text-foreground">Evite erros de planejamento</span>
             </div>
             <div className="flex items-start gap-2">
               <CheckCircle2 className="w-5 h-5 text-primary shrink-0" />
-              <span className="text-sm font-body">Veja onde se hospedar</span>
+              <span className="text-sm font-body text-foreground">Veja onde se hospedar</span>
             </div>
             <div className="flex items-start gap-2">
               <CheckCircle2 className="w-5 h-5 text-primary shrink-0" />
-              <span className="text-sm font-body">Como se locomover com segurança</span>
+              <span className="text-sm font-body text-foreground">Como se locomover com segurança</span>
             </div>
             <div className="flex items-start gap-2">
               <CheckCircle2 className="w-5 h-5 text-primary shrink-0" />
-              <span className="text-sm font-body">Quanto gastar em cada lugar</span>
+              <span className="text-sm font-body text-foreground">Quanto gastar em cada lugar</span>
             </div>
           </div>
           
