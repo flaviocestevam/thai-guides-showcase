@@ -455,19 +455,19 @@ const phangan = make(ilhasMeta[3], {
     { title: "Saiu da ilha sem ver Bottle Beach, Than Sadet e Mae Haad", desc: "As 3 praias mais bonitas estão fora dos roteiros padrão. Quem fica preso no Haad Rin vê só a pior parte de Phangan." },
   ],
   features: [
-    { title: "Calendário Full Moon 24 meses", desc: "Datas oficiais das próximas 24 Full Moon, Half Moon e Black Moon Parties — pra planejar com 2 anos de antecedência." },
-    { title: "Os 2 lados da ilha decodificados", desc: "Haad Rin (festa) vs. Sri Thanu/Chaloklum (calma/wellness). Quem deve ficar em cada um e quando combinar os dois." },
-    { title: "Protocolo anti-roubo Full Moon", desc: "Bebida segura, balde proibido, dinheiro escondido, hotel certo pra dormir — 8 regras que evitam o pior." },
-    { title: "Visibilidade real em Sail Rock e Chumphon Pinnacle", desc: "Tabela mês-a-mês de visibilidade, vida marinha e janela de whale shark — pra quem mergulha sério." },
-    { title: "Mapa de scooter — 8 trechos cronometrados", desc: "Tempo real entre Thong Sala, Sri Thanu, Haad Rin, Thong Nai Pan, Chaloklum, Bottle, Than Sadet." },
-    { title: "Mês × perfil de viajante", desc: "Tabela cruzada: Full Moon, wellness, mochileiro, lua de mel, mergulhador, família — quando ir." },
-    { title: "Comparativo Phangan × Tao × Samui (8 dimensões)", desc: "Decisão clara entre as 3 ilhas do Golfo, com custo, vibe, mergulho, família e tempo mínimo." },
-    { title: "Ang Thong e barco-dia com camping", desc: "Operadoras autorizadas pra Ang Thong saindo direto de Phangan, inclusive overnight em Koh Wua Talab." },
-    { title: "Pesca tradicional em Chaloklum", desc: "Como contratar pescador local, squid fishing noturno e game fishing — preços reais." },
-    { title: "5 spas e retiros sérios mapeados", desc: "Orion Healing, Agama, Pyramid, The Sanctuary e Wat Pho — preços de programas e drop-in." },
-    { title: "Praias remotas: Bottle, Than Sadet, Mae Haad", desc: "Como chegar, quanto custa, e por que ir nas 5 praias isoladas que ninguém te conta." },
-    { title: "Família com kids — sem ilusão", desc: "Bairros OK, hospital, praias seguras, datas a evitar." },
-    { title: "Conservação: reef-safe, tartaruga, Trash Hero", desc: "6 regras locais pra não destruir coral e participar de limpeza pós-Full Moon." },
+    { title: "Vá na Full Moon exata (não na semana errada)", desc: "Datas oficiais das próximas 24 Full Moon, Half Moon e Black Moon — chegue no dia certo e não pague preço de festa a semana toda." },
+    { title: "Não confunda Haad Rin com Sri Thanu", desc: "Os 2 lados da ilha decodificados: festa vs. wellness. Saiba em qual ficar e quando combinar — sem cair na pior por engano." },
+    { title: "Saia da Full Moon inteiro (e com a carteira)", desc: "Protocolo anti-roubo e anti-metanol: bebida segura, balde proibido, dinheiro escondido, hotel certo — 8 regras que evitam hospital e BO." },
+    { title: "Mergulhe Sail Rock no mês de visibilidade real", desc: "Tabela mês-a-mês de visibilidade, vida marinha e janela whale shark — pra não pagar dive em mar fechado." },
+    { title: "Rode Phangan sem se perder na estrada da morte", desc: "Mapa scooter com 8 trechos cronometrados (Thong Sala, Sri Thanu, Haad Rin, Thong Nai Pan, Chaloklum, Bottle, Than Sadet) — e os trechos perigosos marcados." },
+    { title: "Vá no mês exato pro SEU perfil", desc: "Tabela cruzada mês × perfil: Full Moon, wellness, mochileiro, lua de mel, mergulhador, família — sem chutar." },
+    { title: "Escolha entre Phangan, Tao e Samui sem chutar", desc: "Comparativo de 8 dimensões (custo, vibe, mergulho, família, tempo mínimo) — decisão clara entre as 3 ilhas do Golfo." },
+    { title: "Veja Ang Thong saindo de Phangan (sem voltar pra Samui)", desc: "Operadoras autorizadas direto de Phangan, inclusive overnight com camping em Koh Wua Talab." },
+    { title: "Pesque com pescador local em Chaloklum", desc: "Como contratar direto, squid fishing noturno e game fishing — preços reais, sem intermediário inflando." },
+    { title: "Faça retiro wellness sério (não enrolação de Sri Thanu)", desc: "Orion Healing, Agama, Pyramid, The Sanctuary e Wat Pho mapeados — preços de programas e drop-in, sem cair em 'cura milagrosa'." },
+    { title: "Chegue em Bottle, Than Sadet e Mae Haad", desc: "As 5 praias remotas que ninguém te conta: como chegar, quanto custa, onde dormir — desertas em alta temporada." },
+    { title: "Família com criança sem improvisar", desc: "Bairros OK, hospital, praias seguras, datas a evitar — sem expor criança ao caos de Haad Rin." },
+    { title: "Não destrua o que veio ver", desc: "6 regras locais: reef-safe, distância de tartaruga e whale shark, Trash Hero pós-Full Moon, operadoras eco-certificadas." },
   ],
   comparison: {
     theirs: [
@@ -540,7 +540,7 @@ const phangan = make(ilhasMeta[3], {
   ],
   finalCTA: {
     title: "Phangan pode ser a melhor festa da sua vida — ou a pior história de viagem",
-    subtitle: "A diferença está em saber a data, o bar, o hotel e o protocolo. Por R$ 67 você compra os 3 anos que eu levei pra aprender tudo isso na pele.",
+    subtitle: "A Larissa pagou R$ 67, seguiu o protocolo dos 3 bares e voltou inteira. A amiga dela não leu e acordou no hospital com lavagem estomacal. Por R$ 67 (12x R$ 6,71) você compra os 3 anos que eu levei pra aprender Phangan na pele — baixa agora, lê em 1 hora, embarca sem virar estatística.",
   },
 });
 
