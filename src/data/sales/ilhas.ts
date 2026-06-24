@@ -327,7 +327,7 @@ const samui = make(ilhasMeta[1], {
   ],
   finalCTA: {
     title: "Sua lua de mel ou férias em Samui dependem de UMA decisão: o bairro",
-    subtitle: "Por menos do que custa uma diária inflada em Chaweng, você acerta o bairro, o resort, o ferry e ganha 7 a 10 dias de viagem que você vai contar pra sempre.",
+    subtitle: "Por R$ 67 você acerta o bairro, o resort, o ferry e ganha 3 ilhas no preço de 1. Leitora de Goiânia economizou R$ 2.160 em 6 noites só trocando Chaweng por Maenam — mesma estrutura.",
   },
 });
 
