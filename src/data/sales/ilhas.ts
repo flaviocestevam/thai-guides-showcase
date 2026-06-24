@@ -787,7 +787,7 @@ const chang = make(ilhasMeta[5], {
   ],
   finalCTA: {
     title: "Koh Chang é a Tailândia que ninguém te mostrou — porque dá trabalho ir",
-    subtitle: "Por R$ 67 você compra o atalho. Praia selvagem, elefante ético, cachoeira na janela certa e zero turistada. A Tailândia que vai virar memória, não selfie.",
+    subtitle: "O Daniel ia reservar White Sand achando que era \"selvagem\". Trocou por Lonely Beach pelo guia, pagou R$ 180 a diária pé na areia e disse que foi a melhor parte da Tailândia inteira. Por R$ 67 (12x R$ 6,71) você compra o atalho dos 8 dias rodando a ilha — praia certa, elefante ético, cachoeira na janela certa, ferry sem perder. Baixa agora, lê em 1 hora, embarca sabendo onde dormir.",
   },
 });
 
