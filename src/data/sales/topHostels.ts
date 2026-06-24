@@ -2,12 +2,12 @@ import type { SalesContent } from "@/components/sales/SalesPage";
 
 export const topHostels: SalesContent = {
   slug: "top-hostels-tailandia",
-  seoTitle: "Top Hostels Tailândia — Os 100 Melhores Avaliados",
+  seoTitle: "Top Hostels Tailândia — Os 97 Melhores Avaliados",
   seoDescription: "Os melhores hostels da Tailândia testados: Bangkok, Chiang Mai, Phuket, Koh Phangan e mais. Wi-Fi, segurança, vibe social e preço real.",
-  heroBadge: "🛏️ Top 100 Hostels",
+  heroBadge: "🛏️ Top 97 Hostels",
   heroTitle: "Os melhores hostels da",
   heroHighlight: "Tailândia testados",
-  heroSubtitle: "100 hostels avaliados em 12 cidades — Bangkok, Chiang Mai, Pai, Phuket, Krabi, Koh Phangan, Koh Tao, Koh Lanta. Wi-Fi medido, segurança avaliada, vibe social descrita e preço real de cada quarto.",
+  heroSubtitle: "97 hostels avaliados em 12 cidades — Bangkok, Chiang Mai, Pai, Phuket, Krabi, Koh Phangan, Koh Tao, Koh Lanta. Wi-Fi medido, segurança avaliada, vibe social descrita e preço real de cada quarto.",
   heroWarning: "90% dos turistas reservam hostel por foto bonita do Booking e descobrem na chegada que o quarto é barulhento, sem tomada, com Wi-Fi de 2Mbps. Existe um filtro que ninguém te conta.",
   heroBgGradient: "bg-gradient-to-br from-amber-950 via-background to-orange-950",
   heroEmoji: "🛏️",
