@@ -64,6 +64,7 @@ import KohKood7841 from "./pages/KohKood7841.tsx";
 import IlhaPage from "./pages/IlhaPage.tsx";
 import { ilhasMeta } from "./data/sales/ilhas";
 import ExportCopyAuditoria from "./pages/ExportCopyAuditoria.tsx";
+import MetaRemarketing from "./pages/MetaRemarketing.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -144,6 +145,7 @@ const App = () => (
           ))}
 
           <Route path="/export-copy-auditoria" element={<ExportCopyAuditoria />} />
+          <Route path="/meta-remarketing" element={<MetaRemarketing />} />
 
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
