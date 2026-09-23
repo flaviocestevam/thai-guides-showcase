@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Meta Remarketing — Guias Tailândia</title>
+<style>
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:#f7f7f8;color:#111;margin:0}
+main{max-width:840px;margin:40px auto;padding:0 18px}
+.card{background:#fff;border:1px solid #ddd;border-radius:16px;padding:22px;margin:18px 0}
+button{background:#111;color:#fff;border:0;border-radius:10px;padding:12px 16px;font-weight:700;cursor:pointer}
+.ok{background:#ecfdf3;border:1px solid #a7f3d0;color:#166534;padding:14px;border-radius:10px}
+.err{background:#fef2f2;border:1px solid #fecaca;color:#b91c1c;padding:14px;border-radius:10px;white-space:pre-wrap}
+.muted{color:#666}
+</style>
+</head>
+<body>
+<main>
+<h1>Meta Remarketing — Guias Tailândia</h1>
+<p class="muted">GT1 • Pixel 1543028960501772</p>
+<div class="card"><h2>Conexão</h2><p id="conn">Verificando...</p><button id="connect" style="display:none">Conectar Facebook/Meta</button></div>
+<div class="card"><h2>Configuração</h2><p id="status">Aguardando autenticação...</p><div id="result"></div></div>
+<script>
+const APP_ID='1578474360745868', AD='1644852740094318', PIXEL='1543028960501772', V='v26.0';
+const REDIRECT=location.origin+location.pathname;
+const TK='meta_access_token', AK='meta_oauth_attempted';
+const $=id=>document.getElementById(id);
+function oauth(){const p=new URLSearchParams({client_id:APP_ID,redirect_uri:REDIRECT,response_type:'token',scope:'ads_management,business_management',state:'gt-rmk'});return 'https://www.facebook.com/'+V+'/dialog/oauth?'+p}
+async function graph(path,token,method='GET',body){
+ let url='https://graph.facebook.com/'+V+'/'+path, opts={method};
+ if(method==='GET') url+=(url.includes('?')?'&':'?')+'access_token='+encodeURIComponent(token);
+ else {const f=new URLSearchParams(); f.set('access_token',token); for(const [k,v] of Object.entries(body||{})) f.set(k,typeof v==='string'?v:JSON.stringify(v)); opts.body=f}
+ const r=await fetch(url,opts), j=await r.json(); if(!r.ok||j.error) throw new Error(j?.error?.error_user_msg||j?.error?.message||('HTTP '+r.status)); return j;
+}
+function rule(filters,days){return {inclusions:{operator:'or',rules:[{event_sources:[{id:PIXEL,type:'pixel'}],retention_seconds:days*86400,filter:{operator:'and',filters}}]}}}
+const specs=[
+ {name:'RMK - Festival - Visitou Pagina 7D',description:'Visitou /festivaldaslanternas nos últimos 7 dias.',retention_days:7,rule:rule([{field:'url',operator:'i_contains',value:'festivaldaslanternas'}],7)},
+ {name:'RMK - Festival - InitiateCheckout 7D',description:'Iniciou checkout nos últimos 7 dias.',retention_days:7,rule:rule([{field:'event',operator:'eq',value:'InitiateCheckout'}],7)},
+ {name:'RMK - Compradores Festival 180D',description:'Compradores Purchase nos últimos 180 dias.',retention_days:180,rule:rule([{field:'event',operator:'eq',value:'Purchase'}],180)}
+];
+async function list(token){return (await graph('act_'+AD+'/customaudiences?fields=id,name,retention_days&limit=200',token)).data||[]}
+async function create(token,s){return graph('act_'+AD+'/customaudiences',token,'POST',{name:s.name,description:s.description,pixel_id:PIXEL,retention_days:s.retention_days,prefill:true,rule:s.rule})}
+async function run(token){
+ $('conn').textContent='Conectado nesta sessão'; $('status').textContent='Validando GT1 e Pixel...'; $('result').innerHTML='';
+ try{
+  await Promise.all([graph('me?fields=id,name',token),graph('act_'+AD+'?fields=id,name,account_status,currency',token),graph(PIXEL+'?fields=id,name,last_fired_time',token)]);
+  $('status').textContent='Verificando públicos existentes...';
+  let existing=await list(token); const names=new Set(existing.map(a=>a.name)); const made=[];
+  for(const s of specs){if(names.has(s.name)) continue; $('status').textContent='Criando: '+s.name; const r=await create(token,s); made.push({name:s.name,id:r.id})}
+  existing=await list(token); const wanted=existing.filter(a=>specs.some(s=>s.name===a.name));
+  $('status').textContent='Configuração concluída';
+  $('result').innerHTML='<div class="ok"><b>Configuração concluída</b><br><br>'+wanted.map(a=>a.name+' — ID '+a.id).join('<br>')+(made.length?'<br><br>Criados agora: '+made.length:'<br><br>Nenhum duplicado criado.')+'</div>';
+ }catch(e){$('status').textContent='Erro'; $('result').innerHTML='<div class="err">'+String(e.message||e)+'</div>'}
+}
+(function(){
+ const h=new URLSearchParams(location.hash.slice(1)), th=h.get('access_token');
+ if(th){sessionStorage.setItem(TK,th);sessionStorage.removeItem(AK);history.replaceState(null,'',REDIRECT);run(th);return}
+ const t=sessionStorage.getItem(TK); if(t){run(t);return}
+ $('conn').textContent='Não conectado'; $('connect').style.display='inline-block'; $('connect').onclick=()=>location.href=oauth();
+ if(!sessionStorage.getItem(AK)){sessionStorage.setItem(AK,'1');setTimeout(()=>location.href=oauth(),500)}
+})();
+</script>
+</main>
+</body>
+</html>
